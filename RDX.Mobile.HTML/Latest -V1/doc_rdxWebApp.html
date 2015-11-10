@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <title>Retail Demo Mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        .hubButton_windows {
+    background-color: #00BCF2;
+}
+.hubButton_windows.active:after {
+    border-bottom-color: #00BCF2;
+}
+.indicator-0.active:before {
+    background-color: #00BCF2;
+}
+.hubButton_apps {
+    background-color: #008A00;
+}
+.hubButton_apps.active:after {
+    border-bottom-color: #008A00;
+}
+.indicator-1.active:before {
+    background-color: #008A00;
+}
+
+    </style>
+</head>
+<body>
+    <div class="control-app">
+        <div class="app-content">
+            <div class="control-page">
+                <div class="page-body">
+                    <div class="carousel-controls">
+                        <div class="sideNav leftNav">
+                            <div class="slideNav-directionIndicator directionIndicator-prev" onclick="pagePrev()"></div>
+                        </div>
+                        <div class="sideNav rightNav">
+                            <div class="slideNav-directionIndicator directionIndicator-next" onclick="pageNext()"></div>
+                        </div>
+                    </div>
+
+                    <div class="template-pageIndicator">
+                        <nav class="pageIndicator-layoutRoot">
+                            <a class="layoutRoot-indicatorContainer">
+                                <div class="indicatorContainer-indicator" onclick="navigateToPage(0)"></div>
+                            </a>
+                            <a class="layoutRoot-indicatorContainer">
+                                <div class=" indicatorContainer-indicator" onclick="navigateToPage(1)"></div>
+                            </a>
+                            <a class="layoutRoot-indicatorContainer">
+                                <div class="indicatorContainer-indicator" onclick="navigateToPage(2)"></div>
+                            </a>
+                            <a class="layoutRoot-indicatorContainer">
+                                <div class="indicatorContainer-indicator" onclick="navigateToPage(3)"></div>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <section class="content-carousel">
+                        <div id="slider">
+                            <div id="0-0" class="template-contentCard contentCard-ctaTitle">
+    <div class="modal-container" style="display: none;">
+    <div class="modal-shade"></div>
+    <div class="modal-window">
+        <div class="modal-close" onclick="hideModal(event)">
+            <span class="close-button"></span>
+        </div>
+        <div class="textBlock-modal">
+            <span class="textBlock-title text-subTitle"></span>
+            <span class="textBlock-body text-caption">Cortana available in select global markets at launch, experience may vary by region and device.</span>
+        </div>
+    </div>
+</div>
+
+    <div class="contentCard-graphicContainer">
+        <div class="header">
+            <img class="img-gif" src="windows_assets/Devices_cropped_mobile_0000_Cortana.gif" />
+        </div>
+        <div class="textBlock">
+            <span class="textBlock-title">Cortana is your truly personal assistant, providing help and reminders across your day.*</span>
+            <a href="#" class="modal-link" onclick="showModal(event)">Learn More</a>
+        </div>
+    </div>
+</div>
+<div id="0-1" class="template-contentCard contentCard-specs">
+    <div class="contentCard-graphicContainer">
+        <div class="textBlock">
+            <span class="textBlock-description description-1 text-body">
+                Hi
+            </span>
+            <span class="textBlock-title title-1 text-subheader">
+                There
+            </span>
+            <span class="textBlock-description description-2 text-body">
+	        I'm
+            </span>
+            <span class="textBlock-title title-2 text-subheader">
+                Kevin
+            </span>
+            <span class="textBlock-description description-3 text-body">
+                How
+            </span>
+            <span class="textBlock-title title-3 text-subheader">
+                Are you?
+            </span>
+            <span class="textBlock-description description-4 text-body">
+                Just testing
+            </span>
+            <span class="textBlock-title title-4 text-subheader">
+                So good
+            </span>
+            <span class="textBlock-description description-5 text-body">
+
+            </span>
+            <span class="textBlock-title title-5 text-subheader">
+
+            </span>
+        </div>
+    </div>
+</div>
+<div id="0-2" class="template-contentCard contentCard-ctaTitle">
+    
+    <div class="contentCard-graphicContainer">
+        <div class="header">
+            <img src="windows_assets/Devices_cropped_mobile_0002_Just-Works.png" />
+        </div>
+        <div class="textBlock">
+            <span class="textBlock-title">More built-in security protections, and new features are now delivered through updates.</span>
+            
+        </div>
+    </div>
+</div>
+<div id="0-3" class="template-contentCard contentCard-ctaTitle">
+    
+    <div class="contentCard-graphicContainer">
+        <div class="header">
+            <img src="windows_assets/Devices_cropped_mobile_0001_OneDrive.png" />
+        </div>
+        <div class="textBlock">
+            <span class="textBlock-title">Easily access and share your photos and files with your free 15GB of OneDrive online storage.</span>
+            
+        </div>
+    </div>
+</div>
+<div id="1-0" class="template-contentCard contentCard-ctaTitle">
+    <div class="modal-container" style="display: none;">
+    <div class="modal-shade"></div>
+    <div class="modal-window">
+        <div class="modal-close" onclick="hideModal(event)">
+            <span class="close-button"></span>
+        </div>
+        <div class="textBlock-modal">
+            <span class="textBlock-title text-subTitle"></span>
+            <span class="textBlock-body text-caption">Some apps and content sold separately. Feature and app availability may vary by market and device.</span>
+        </div>
+    </div>
+</div>
+
+    <div class="contentCard-graphicContainer">
+        <div class="header">
+            <img src="apps_assets/Mobile_Store_Large Selection.png" />
+        </div>
+        <div class="textBlock">
+            <span class="textBlock-title">Discover thousands of free apps and games, and music, movies and TV shows–all in one place.</span>
+            <a href="#" class="modal-link" onclick="showModal(event)">Learn More</a>
+        </div>
+    </div>
+</div>
+<div id="1-1" class="template-contentCard contentCard-ctaTitle">
+    <div class="modal-container" style="display: none;">
+    <div class="modal-shade"></div>
+    <div class="modal-window">
+        <div class="modal-close" onclick="hideModal(event)">
+            <span class="close-button"></span>
+        </div>
+        <div class="textBlock-modal">
+            <span class="textBlock-title text-subTitle"></span>
+            <span class="textBlock-body text-caption">Features vary by market.</span>
+        </div>
+    </div>
+</div>
+
+    <div class="contentCard-graphicContainer">
+        <div class="header">
+            <img src="apps_assets/Mobile_Store_Universal Apps.png" />
+        </div>
+        <div class="textBlock">
+            <span class="textBlock-title">Most of the content in the new Store will work across all your compatible devices.</span>
+            <a href="#" class="modal-link" onclick="showModal(event)">Learn More</a>
+        </div>
+    </div>
+</div>
+<div id="1-2" class="template-contentCard contentCard-ctaTitle">
+    
+    <div class="contentCard-graphicContainer">
+        <div class="header">
+            <img src="apps_assets/Mobile_Store_Trustworthy.png" />
+        </div>
+        <div class="textBlock">
+            <span class="textBlock-title">All content is certified by Microsoft to help keep your devices safer.</span>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </section>
+                    
+                    <nav class="hubStrip-container">
+                        <div class="template-hubStrip">
+                            <div class="template-hubButton hubButton_windows" onclick="navigateToSection(0)">
+    <div class="hubButton-content">
+        <div class="content-graphicContainer">
+            <img class="graphicContainer-graphic" src="windows_assets/GSA_nav_100x100_0006_Windows-LO.png" />
+            <span class="text-captionAlt">Windows</span>
+        </div>
+    </div>
+</div>
+<div class="template-hubButton hubButton_apps" onclick="navigateToSection(1)">
+    <div class="hubButton-content">
+        <div class="content-graphicContainer">
+            <img class="graphicContainer-graphic" src="apps_assets/GSA_nav_100x100_0008_Store-LO.png" />
+            <span class="text-captionAlt">Store</span>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageCounts" style="display: none;">
+        <div>4</div><div>3</div>
+    </div>
+    <script type="text/javascript" src="retailDemo.js"></script>
+</body>
+</html>
+
