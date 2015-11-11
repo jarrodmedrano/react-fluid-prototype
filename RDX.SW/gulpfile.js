@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename');
 
 gulp.task('watch', function () {
-    gulp.watch('css/**/*.less', ['less']);
+    gulp.watch('src/**/*.less', ['less']);
 });
 
 gulp.task('less', function () {
