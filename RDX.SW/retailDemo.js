@@ -106,6 +106,7 @@ function setActiveHubButton() {
     for (var i = 0; i < hubButtons.length; i++) {
         if (i === currentSection) {
           hubButtons[i].classList.add("active");
+          console.log(hubButtons[i]);
         } else {
           hubButtons[i].classList.remove("active");
         }

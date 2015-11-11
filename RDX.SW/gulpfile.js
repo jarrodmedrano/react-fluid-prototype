@@ -19,6 +19,7 @@ gulp.task('serve', ['less'], function () {
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
     gulp.watch('src/less/**/*.less', ['less']);
+    gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 gulp.task('less', function () {
@@ -33,7 +34,8 @@ gulp.task('less', function () {
         .pipe(concat('styles.css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('default', ['less', 'watch']);

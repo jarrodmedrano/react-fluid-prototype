@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Retail Demo Mode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,517 +9,541 @@
 
     <style>
         .oem-hubButton {
-  background-color: #E2231A;
-}
-.template-hubButton.oem-hubButton:after {
-  border-top-color: #E2231A;
-}
-.indicator-0.active:before {
-  background-color: #E2231A;
-}
-.oem-card .text-header {
-  color: #E2231A;
-}
-        
-.layout-specifications .text-header {
-  color: #E2231A;
-}
-.oem-card button {
-  background: #E2231A;
-}
-.windows-hubButton {
-  background-color: #00BCF2;
-}
-.template-hubButton.windows-hubButton:after {
-  border-top-color: #00BCF2;
-}
-.indicator-1.active:before {
-  background-color: #00BCF2;
-}
-.windows-card .text-header {
-  color: #00BCF2;
-}
-.windows-card button {
-  background: #00BCF2;
-}
-.office-hubButton {
-  background-color: #DC3C00;
-}
-.template-hubButton.office-hubButton:after {
-  border-top-color: #DC3C00;
-}
-.indicator-2.active:before {
-  background-color: #DC3C00;
-}
-.office-card .text-header {
-  color: #DC3C00;
-}
-.office-card button {
-  background: #DC3C00;
-}
-.retailer-hubButton {
-  background-color: #003B67;
-}
-.template-hubButton.retailer-hubButton:after {
-  border-top-color: #003B67;
-}
-.indicator-3.active:before {
-  background-color: #003B67;
-}
-.retailer-card .text-header {
-  color: #003B67;
-}
-.retailer-card button {
-  background: #003B67;
-}
-.processor-hubButton {
-  background-color: #0071c5;
-}
-.template-hubButton.processor-hubButton:after {
-  border-top-color: #0071c5;
-}
-.indicator-4.active:before {
-  background-color: #0071c5;
-}
-.processor-card .text-header {
-  color: #0071c5;
-}
-.processor-card button {
-  background: #0071c5;
-}
+            background-color: #E2231A;
+        }
+
+        .template-hubButton.oem-hubButton:after {
+            border-top-color: #E2231A;
+        }
+
+        .indicator-0.active:before {
+            background-color: #E2231A;
+        }
+
+        .oem-card .text-header {
+            color: #E2231A;
+        }
+
+        .layout-specifications .text-header {
+            color: #E2231A;
+        }
+
+        .oem-card button {
+            background: #E2231A;
+        }
+
+        .windows-hubButton {
+            background-color: #00BCF2;
+        }
+
+        .template-hubButton.windows-hubButton:after {
+            border-top-color: #00BCF2;
+        }
+
+        .indicator-1.active:before {
+            background-color: #00BCF2;
+        }
+
+        .windows-card .text-header {
+            color: #00BCF2;
+        }
+
+        .windows-card button {
+            background: #00BCF2;
+        }
+
+        .office-hubButton {
+            background-color: #DC3C00;
+        }
+
+        .template-hubButton.office-hubButton:after {
+            border-top-color: #DC3C00;
+        }
+
+        .indicator-2.active:before {
+            background-color: #DC3C00;
+        }
+
+        .office-card .text-header {
+            color: #DC3C00;
+        }
+
+        .office-card button {
+            background: #DC3C00;
+        }
+
+        .retailer-hubButton {
+            background-color: #003B67;
+        }
+
+        .template-hubButton.retailer-hubButton:after {
+            border-top-color: #003B67;
+        }
+
+        .indicator-3.active:before {
+            background-color: #003B67;
+        }
+
+        .retailer-card .text-header {
+            color: #003B67;
+        }
+
+        .retailer-card button {
+            background: #003B67;
+        }
+
+        .processor-hubButton {
+            background-color: #0071c5;
+        }
+
+        .template-hubButton.processor-hubButton:after {
+            border-top-color: #0071c5;
+        }
+
+        .indicator-4.active:before {
+            background-color: #0071c5;
+        }
+
+        .processor-card .text-header {
+            color: #0071c5;
+        }
+
+        .processor-card button {
+            background: #0071c5;
+        }
 
     </style>
 </head>
 <body>
-    <div class="control-app">
-        <div class="app-content">
-            <div class="control-page">
-                <div class="page-body content-bottom">
-                    <section class="control-carousel">
-                        <div class="carousel-controls">
-                            <div class="sideNav leftNav" onclick="pagePrev()">
-                                <div class="slideNav-directionIndicator directionIndicator-prev"></div>
-                            </div>
-                            <div class="sideNav rightNav" onclick="pageNext()">
-                                <div class="slideNav-directionIndicator directionIndicator-next"></div>
-                            </div>
+<div class="control-app">
+    <div class="app-content">
+        <div class="control-page">
+            <div class="page-body content-bottom">
+                <section class="control-carousel">
+                    <div class="carousel-controls">
+                        <div class="sideNav leftNav" onclick="pagePrev()">
+                            <div class="slideNav-directionIndicator directionIndicator-prev"></div>
                         </div>
+                        <div class="sideNav rightNav" onclick="pageNext()">
+                            <div class="slideNav-directionIndicator directionIndicator-next"></div>
+                        </div>
+                    </div>
 
-                        <div id="slider" class="carousel-slideContainer">
-                            <div id="0-0" class="template-contentCard content-left layout-ksp oem-card" style="">
-    <div class="main-content">
-        <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png" />
-        <div class="headingBox">
-            <span class="text-header">Lenovo<sup>&trade;</sup> YOGA 3 Pro The world’s thinnest convertible laptop</span>
-        </div>
+                    <div id="slider" class="carousel-slideContainer">
+                        <div id="0-0" class="template-contentCard content-left layout-ksp oem-card" style="">
+                            <div class="main-content">
+                                <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png" />
+                                <div class="headingBox">
+                                    <span class="text-header">Lenovo<sup>&trade;</sup> YOGA 3 Pro The world’s thinnest convertible laptop</span>
+                                </div>
 
-        <div class="card-content">
-            <div class="icon icon1">
-                <img src="oem_assets/icon1_yoga_3_pro.png" />
-            </div>
+                                <div class="card-content">
+                                    <div class="icon icon1">
+                                        <img src="oem_assets/icon1_yoga_3_pro.png" />
+                                    </div>
             <span class="list-text">
                 <span class="text-subtitle">360 degrees of flexibility</span>
                 <span class="text-body">This ultra-light, pencil thin device does the lot</span>
             </span>
 
-            <div class="icon icon2">
-                <img src="oem_assets/icon2_yoga_3_pro.png" />
-            </div>
+                                    <div class="icon icon2">
+                                        <img src="oem_assets/icon2_yoga_3_pro.png" />
+                                    </div>
             <span class="list-text text2">
                 <span class="text-subtitle">YOGA adapts to you</span>
                 <span class="text-body">Intelligent software optimizes system settings</span>
             </span>
-        </div>
-        
-        <div class="text-legal"></div>
+                                </div>
 
-        <a onclick="navigateToPage(3)">
-            <button type="submit">SEE SPECS</button>
-        </a>
-    </div>
+                                <div class="text-legal"></div>
 
-    <div class="hero-img">
-        <img src="oem_assets/ksp_yoga_3_pro.png" />
-    </div>
-</div>
-<div id="0-1" class="template-contentCard content-left layout-feature oem-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="oem_assets/feature1_logo_yoga_3_pro.png" />
-            <div class="headingBox">
-                <span class="text-header">Choose Laptop, Stand, Tent or Tablet mode</span>
-            </div>
+                                <a onclick="navigateToPage(3)">
+                                    <button type="submit">SEE SPECS</button>
+                                </a>
+                            </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">There’s a mode for everything</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
+                            <div class="hero-img">
+                                <img src="oem_assets/ksp_yoga_3_pro.png" />
+                            </div>
+                        </div>
+                        <div id="0-1" class="template-contentCard content-left layout-feature oem-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="oem_assets/feature1_logo_yoga_3_pro.png" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Choose Laptop, Stand, Tent or Tablet mode</span>
+                                    </div>
 
-            <div class="text-legal"></div>
-        </div>
-    </div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">There’s a mode for everything</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
 
-    <div class="hero-img">
-        <img src="oem_assets/feature1_yoga_3_pro.png" />
-    </div>
-</div>
-<div id="0-2" class="template-contentCard content-left layout-feature oem-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="oem_assets/feature2_logo_yoga_3_pro.png" />
-            <div class="headingBox">
-                <span class="text-header">Innovative ‘watchband’ design</span>
-            </div>
+                                    <div class="text-legal"></div>
+                                </div>
+                            </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Hand-assembled from more than 800 pieces</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
-            
-            <div class="text-legal"></div>
+                            <div class="hero-img">
+                                <img src="oem_assets/feature1_yoga_3_pro.png" />
+                            </div>
+                        </div>
+                        <div id="0-2" class="template-contentCard content-left layout-feature oem-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="oem_assets/feature2_logo_yoga_3_pro.png" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Innovative ‘watchband’ design</span>
+                                    </div>
 
-            <a onclick="navigateToPage(3)">
-    <button type="submit">SEE SPECS</button>
-</a>
-        </div>
-    </div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Hand-assembled from more than 800 pieces</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
 
-    <div class="hero-img">
-        <img src="oem_assets/feature2_yoga_3_pro.png" />
-    </div>
-</div>
-                            
-<div id="0-3" class="template-contentCard content-left layout-specifications" style="">
-     <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Specifications</span>
-            </div>
+                                    <div class="text-legal"></div>
 
-            <div class="card-content">
-               
-                <ul>
-                    <li class="col1">
-                         <span class="text-base label">Operating System</span>
-                         <span class="text-title spec">Windows 10</span>
-                    </li>
-                    <li class="col1">
-                        <span class="text-base label">Display Resolution</span>
-                        <span class="text-title spec">3200x1800</span>
-                    </li>
-                    <li class="col1">
-                        <span class="text-base label">Screen Size</span>
-                        <span class="text-title spec">13.2 inches</span>
-                    </li>
-                    <li class="col2">
-                        <span class="text-base label">Processor</span>
-                        <span class="text-title spec">Intel(R) Processor i7-5650U @ 1.10GHz</span>
-                    </li class="col2">
-                    <li>
-                        <span class="text-base label">System Memory (RAM)</span>
-                        <span class="text-title spec">8.00 GB</span>
-                    </li>
-                    <li class="col2">
-                        <span class="text-base label">Hard drive Capacity</span>
-                        <span class="text-title spec">512 GB</span>
-                    </li>
-                </ul>
-            </div>
+                                    <a onclick="navigateToPage(3)">
+                                        <button type="submit">SEE SPECS</button>
+                                    </a>
+                                </div>
+                            </div>
 
-            <div class="text-legal"><p>*Some apps and content sold separately. Feature and app availability may vary by market [and device].</p></div>
-        </div>
-    </div>
+                            <div class="hero-img">
+                                <img src="oem_assets/feature2_yoga_3_pro.png" />
+                            </div>
+                        </div>
 
-    <div class="hero-img">
-        <img src="windows_assets/Devices_cropped_0005_Just-Works-Cortana.png" />
-    </div>
-     
-</div> 
-                            
-                            <div id="0-4" class="template-contentCard content-left layout-specifications" style="">
-     <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Specifications</span>
-            </div>
+                        <div id="0-3" class="template-contentCard content-left layout-specifications" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Specifications</span>
+                                    </div>
 
-            <div class="card-content">
-               
-                <ul>
-                    <li class="col1">
-                         <span class="text-base label">Operating System</span>
-                         <span class="text-title spec">Windows 10</span>
-                    </li>
-                    <li class="col1">
-                        <span class="text-base label">Display Resolution</span>
-                        <span class="text-title spec">3200x1800</span>
-                    </li>
-                    <li class="col1">
-                        <span class="text-base label">Screen Size</span>
-                        <span class="text-title spec">13.2 inches</span>
-                    </li>
-                    <li class="col2">
-                        <span class="text-base label">Processor</span>
-                        <span class="text-title spec">Intel(R) Processor i7-5650U @ 1.10GHz</span>
-                    </li class="col2">
-                    <li>
-                        <span class="text-base label">System Memory (RAM)</span>
-                        <span class="text-title spec">8.00 GB</span>
-                    </li>
-                    <li class="col2">
-                        <span class="text-base label">Hard drive Capacity</span>
-                        <span class="text-title spec">512 GB</span>
-                    </li>
-                </ul>
-            </div>
+                                    <div class="card-content">
 
-            <div class="text-legal"><p>*Some apps and content sold separately. Feature and app availability may vary by market [and device].</p></div>
-        </div>
-    </div>
+                                        <ul>
+                                            <li class="col1">
+                                                <span class="text-base label">Operating System</span>
+                                                <span class="text-title spec">Windows 10</span>
+                                            </li>
+                                            <li class="col1">
+                                                <span class="text-base label">Display Resolution</span>
+                                                <span class="text-title spec">3200x1800</span>
+                                            </li>
+                                            <li class="col1">
+                                                <span class="text-base label">Screen Size</span>
+                                                <span class="text-title spec">13.2 inches</span>
+                                            </li>
+                                            <li class="col2">
+                                                <span class="text-base label">Processor</span>
+                                                <span class="text-title spec">Intel(R) Processor i7-5650U @ 1.10GHz</span>
+                                            </li class="col2">
+                                            <li>
+                                                <span class="text-base label">System Memory (RAM)</span>
+                                                <span class="text-title spec">8.00 GB</span>
+                                            </li>
+                                            <li class="col2">
+                                                <span class="text-base label">Hard drive Capacity</span>
+                                                <span class="text-title spec">512 GB</span>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-    <div class="hero-img">
-        <img src="windows_assets/Devices_cropped_0005_Just-Works-Cortana.png" />
-    </div>
-     
-</div> 
-                   
-                            
-<div id="1-0" class="template-contentCard content-left layout-feature windows-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">More protection. Prompt updates.</span>
-            </div>
+                                    <div class="text-legal"><p>*Some apps and content sold separately. Feature and app availability may vary by market [and device].</p></div>
+                                </div>
+                            </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Windows 10 has more built-in security protections, and new features are now delivered through updates to help you to stay current.</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
+                            <div class="hero-img">
+                                <img src="windows_assets/Devices_cropped_0005_Just-Works-Cortana.png" />
+                            </div>
 
-            <div class="text-legal"></div>
-        </div>
-    </div>
+                        </div>
 
-    <div class="hero-img">
-        <img src="windows_assets/Devices_cropped_0005_Just-Works-Cortana.png" />
-    </div>
-</div>
-<div id="1-1" class="template-contentCard content-left layout-feature windows-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Mark up and share webpages.</span>
-            </div>
+                        <div id="0-4" class="template-contentCard content-left layout-specifications" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Specifications</span>
+                                    </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Get a better web experience with the all-new browser: distraction-free articles and the ability to write on webpages for sharing with friends.</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
-            
-            <div class="text-legal"></div>
+                                    <div class="card-content">
 
-            <a href="Microsoft-edge:about:demo">
-    <button type="submit">Try Microsoft Edge</button>
-</a>
-        </div>
-    </div>
+                                        <ul>
+                                            <li class="col1">
+                                                <span class="text-base label">Operating System</span>
+                                                <span class="text-title spec">Windows 10</span>
+                                            </li>
+                                            <li class="col1">
+                                                <span class="text-base label">Display Resolution</span>
+                                                <span class="text-title spec">3200x1800</span>
+                                            </li>
+                                            <li class="col1">
+                                                <span class="text-base label">Screen Size</span>
+                                                <span class="text-title spec">13.2 inches</span>
+                                            </li>
+                                            <li class="col2">
+                                                <span class="text-base label">Processor</span>
+                                                <span class="text-title spec">Intel(R) Processor i7-5650U @ 1.10GHz</span>
+                                            </li class="col2">
+                                            <li>
+                                                <span class="text-base label">System Memory (RAM)</span>
+                                                <span class="text-title spec">8.00 GB</span>
+                                            </li>
+                                            <li class="col2">
+                                                <span class="text-base label">Hard drive Capacity</span>
+                                                <span class="text-title spec">512 GB</span>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-    <div class="hero-img">
-        <img src="windows_assets/Devices_cropped_0002_Spartan.png" />
-    </div>
-</div>
-<div id="1-2" class="template-contentCard content-left layout-feature windows-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Meet Cortana, your truly personal assistant.</span>
-            </div>
+                                    <div class="text-legal"><p>*Some apps and content sold separately. Feature and app availability may vary by market [and device].</p></div>
+                                </div>
+                            </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Cortana is great at reminders, delivering them at the right time and place, so you forget less and do more.*</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
+                            <div class="hero-img">
+                                <img src="windows_assets/Devices_cropped_0005_Just-Works-Cortana.png" />
+                            </div>
 
-              <div class="text-legal"><p>*Cortana available in select markets at launch, experience may vary by region and device.</p></div>
-            
-            <a href="ms-cortana://">
-    <button type="submit">Try Cortana</button>
-</a>
-         
-        </div>
-    </div>
+                        </div>
 
-    <div class="hero-img">
-        <img class="img-gif" src="windows_assets/Devices_cropped_0000_Cortana.gif" />
 
-    </div>
-</div>
-<div id="1-3" class="template-contentCard content-left layout-feature windows-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Do more with the new Windows Store.</span>
-            </div>
+                        <div id="1-0" class="template-contentCard content-left layout-feature windows-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">More protection. Prompt updates.</span>
+                                    </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Introducing the new Windows Store, a unified shopping experience for your apps, games, music and video content, across every Windows 10 device.*</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
-            
-             <div class="text-legal"><p>*Some apps and content sold separately. Feature and app availability may vary by market [and device].</p></div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Windows 10 has more built-in security protections, and new features are now delivered through updates to help you to stay current.</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
 
-            <a href="ms-windows-store://home">
-    <button type="submit">Go to app</button>
-</a>
-           
-        </div>
-    </div>
+                                    <div class="text-legal"></div>
+                                </div>
+                            </div>
 
-    <div class="hero-img">
-        <img src="windows_assets/Devices_cropped_0004_Store.png" />
-    </div>
-</div>
-<div id="2-0" class="template-contentCard content-left layout-feature office-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Make this device more productive. Buy Office 365.</span>
-            </div>
+                            <div class="hero-img">
+                                <img src="windows_assets/Devices_cropped_0005_Just-Works-Cortana.png" />
+                            </div>
+                        </div>
+                        <div id="1-1" class="template-contentCard content-left layout-feature windows-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Mark up and share webpages.</span>
+                                    </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Get the applications you know and trust, including Word, Excel, & PowerPoint, for this device and more, with an Office 365 subscription.*</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Get a better web experience with the all-new browser: distraction-free articles and the ability to write on webpages for sharing with friends.</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
 
-            <div class="text-legal"><p>*Check the PC spec on this device to see if 1-year Office 365 is included.</p></div>
-        </div>
-    </div>
+                                    <div class="text-legal"></div>
 
-    <div class="hero-img">
-        <img src="office_assets/Office_Buy Office 365.png" />
-    </div>
-</div>
-<div id="2-1" class="template-contentCard content-left layout-feature office-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">The applications you know, across the devices you love.</span>
-            </div>
+                                    <a href="Microsoft-edge:about:demo">
+                                        <button type="submit">Try Microsoft Edge</button>
+                                    </a>
+                                </div>
+                            </div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">With Office 365, install the full, Office applications you know across your devices—-PC, Mac, tablets & phones. Upgrades always included.*</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
+                            <div class="hero-img">
+                                <img src="windows_assets/Devices_cropped_0002_Spartan.png" />
+                            </div>
+                        </div>
+                        <div id="1-2" class="template-contentCard content-left layout-feature windows-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Meet Cortana, your truly personal assistant.</span>
+                                    </div>
 
-            <div class="text-legal"><p>*Check the PC spec on this device to see if 1-year Office 365 is included.</p></div>
-        </div>
-    </div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Cortana is great at reminders, delivering them at the right time and place, so you forget less and do more.*</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
 
-    <div class="hero-img">
-        <img src="office_assets/Office_Across all devices.png" />
-    </div>
-</div>
-<div id="2-2" class="template-contentCard content-left layout-feature office-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Access your docs from anywhere with cloud storage.</span>
-            </div>
+                                    <div class="text-legal"><p>*Cortana available in select markets at launch, experience may vary by region and device.</p></div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">An Office 365 subscription includes enough cloud storage for you to access & share your docs, photos, and personal videos from anywhere.*</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
+                                    <a href="ms-cortana://">
+                                        <button type="submit">Try Cortana</button>
+                                    </a>
 
-            <div class="text-legal"><p>*Check the PC spec on this device to see if 1-year Office 365 is included.</p></div>
-        </div>
-    </div>
+                                </div>
+                            </div>
 
-    <div class="hero-img">
-        <img src="office_assets/Office_Upgrade.png" />
-    </div>
-</div>
-<div id="3-0" class="template-contentCard content-left layout-feature retailer-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Get Help at the Answer Desk</span>
-            </div>
+                            <div class="hero-img">
+                                <img class="img-gif" src="windows_assets/Devices_cropped_0000_Cortana.gif" />
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Free one-on-one appointments available so you can get the help you need.</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
-            
-            <div class="text-legal"><p>Ask an associate for details.</p></div>
+                            </div>
+                        </div>
+                        <div id="1-3" class="template-contentCard content-left layout-feature windows-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Do more with the new Windows Store.</span>
+                                    </div>
 
-            <a href="http://www.microsoftstore.com/store/msusa/en_US/cat/Answer-Desk/categoryID.63433500">
-    <button type="submit">Learn More</button>
-</a>
-        </div>
-    </div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Introducing the new Windows Store, a unified shopping experience for your apps, games, music and video content, across every Windows 10 device.*</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
 
-    <div class="hero-img">
-        <img src="retailer_assets/msstore1.png" />
-    </div>
-</div>
-<div id="3-1" class="template-contentCard content-left layout-feature retailer-card" style="">
-    <div class="main-content">
-        <div class="content">
-            <img class="logo" src="" />
-            <div class="headingBox">
-                <span class="text-header">Get Personal Training</span>
-            </div>
+                                    <div class="text-legal"><p>*Some apps and content sold separately. Feature and app availability may vary by market [and device].</p></div>
 
-            <div class="card-content">
-                <span class="text-title list-text text1">Learn from our experts with one-hour long single courses and year-long memberships.</span>
-                <span class="text-title list-text text2"></span>
-                <span class="text-title list-text text3"></span>
-            </div>
-            
-            <div class="text-legal"><p>Ask an associate for details</p></div>
+                                    <a href="ms-windows-store://home">
+                                        <button type="submit">Go to app</button>
+                                    </a>
 
-            <a href="http://www.microsoft.com/en-us/store/locations/personal-training">
-    <button type="submit">Learn More</button>
-</a>
-        </div>
-    </div>
+                                </div>
+                            </div>
 
-    <div class="hero-img">
-        <img src="retailer_assets/msstore2.png" />
-    </div>
-</div>
-<div id="4-0" class="template-contentCard content-left layout-ksp processor-card" style="">
-    <div class="main-content">
-        <img class="logo" src="processor_assets/Core_I7_946x220-test.png" />
-        <div class="headingBox">
-            <span class="text-header">5TH Gen INTEL<sup>®</sup> CORE™ i7 PROCESSOR</span>
-        </div>
+                            <div class="hero-img">
+                                <img src="windows_assets/Devices_cropped_0004_Store.png" />
+                            </div>
+                        </div>
+                        <div id="2-0" class="template-contentCard content-left layout-feature office-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Make this device more productive. Buy Office 365.</span>
+                                    </div>
 
-        <div class="card-content">
-            <div class="icon icon1">
-                <img src="processor_assets/Intel turbo boost 2.0.png" />
-            </div>
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Get the applications you know and trust, including Word, Excel, & PowerPoint, for this device and more, with an Office 365 subscription.*</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
+
+                                    <div class="text-legal"><p>*Check the PC spec on this device to see if 1-year Office 365 is included.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="hero-img">
+                                <img src="office_assets/Office_Buy Office 365.png" />
+                            </div>
+                        </div>
+                        <div id="2-1" class="template-contentCard content-left layout-feature office-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">The applications you know, across the devices you love.</span>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">With Office 365, install the full, Office applications you know across your devices—-PC, Mac, tablets & phones. Upgrades always included.*</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
+
+                                    <div class="text-legal"><p>*Check the PC spec on this device to see if 1-year Office 365 is included.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="hero-img">
+                                <img src="office_assets/Office_Across all devices.png" />
+                            </div>
+                        </div>
+                        <div id="2-2" class="template-contentCard content-left layout-feature office-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Access your docs from anywhere with cloud storage.</span>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">An Office 365 subscription includes enough cloud storage for you to access & share your docs, photos, and personal videos from anywhere.*</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
+
+                                    <div class="text-legal"><p>*Check the PC spec on this device to see if 1-year Office 365 is included.</p></div>
+                                </div>
+                            </div>
+
+                            <div class="hero-img">
+                                <img src="office_assets/Office_Upgrade.png" />
+                            </div>
+                        </div>
+                        <div id="3-0" class="template-contentCard content-left layout-feature retailer-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Get Help at the Answer Desk</span>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Free one-on-one appointments available so you can get the help you need.</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
+
+                                    <div class="text-legal"><p>Ask an associate for details.</p></div>
+
+                                    <a href="http://www.microsoftstore.com/store/msusa/en_US/cat/Answer-Desk/categoryID.63433500">
+                                        <button type="submit">Learn More</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="hero-img">
+                                <img src="retailer_assets/msstore1.png" />
+                            </div>
+                        </div>
+                        <div id="3-1" class="template-contentCard content-left layout-feature retailer-card" style="">
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Get Personal Training</span>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <span class="text-title list-text text1">Learn from our experts with one-hour long single courses and year-long memberships.</span>
+                                        <span class="text-title list-text text2"></span>
+                                        <span class="text-title list-text text3"></span>
+                                    </div>
+
+                                    <div class="text-legal"><p>Ask an associate for details</p></div>
+
+                                    <a href="http://www.microsoft.com/en-us/store/locations/personal-training">
+                                        <button type="submit">Learn More</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="hero-img">
+                                <img src="retailer_assets/msstore2.png" />
+                            </div>
+                        </div>
+                        <div id="4-0" class="template-contentCard content-left layout-ksp processor-card" style="">
+                            <div class="main-content">
+                                <img class="logo" src="processor_assets/Core_I7_946x220-test.png" />
+                                <div class="headingBox">
+                                    <span class="text-header">5TH Gen INTEL<sup>®</sup> CORE™ i7 PROCESSOR</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="icon icon1">
+                                        <img src="processor_assets/Intel turbo boost 2.0.png" />
+                                    </div>
             <span class="list-text">
                 <span class="text-subtitle">INTEL<sup>®</sup> TURBO BOOST TECHNOLOGY 2.0
 
@@ -527,98 +551,97 @@
                 <span class="text-body">Get an extra boost of speed when you need it</span>
             </span>
 
-            <div class="icon icon2">
-                <img src="processor_assets/Immersive 3D.png" />
-            </div>
+                                    <div class="icon icon2">
+                                        <img src="processor_assets/Immersive 3D.png" />
+                                    </div>
             <span class="list-text text2">
                 <span class="text-subtitle">IMMERSIVE 3D GRAPHICS</span>
                 <span class="text-body">Bring games and video to life in vivid detail</span>
             </span>
-        </div>
-        
-        <div class="text-legal"><p><sup>©</sup> 2015 Intel Corporation. Intel, the Intel logo, Intel Core, and Intel Inside are trademarks of Intel Corporation in the U.S. and/or other countries.</p>              </div>
+                                </div>
 
-        <a href="http://shoppercampaigns.intel.com/preview/Intel_Digital_Tearsheet/tearsheet_en-us.png">
-    <button type="submit">Learn more</button>
-</a>
+                                <div class="text-legal"><p><sup>©</sup> 2015 Intel Corporation. Intel, the Intel logo, Intel Core, and Intel Inside are trademarks of Intel Corporation in the U.S. and/or other countries.</p>              </div>
 
-    </div>
+                                <a href="http://shoppercampaigns.intel.com/preview/Intel_Digital_Tearsheet/tearsheet_en-us.png">
+                                    <button type="submit">Learn more</button>
+                                </a>
 
-    <div class="hero-img video">
-        <video src="processor_assets/i7.mp4" loop></video>
-    </div>
-</div>
+                            </div>
 
+                            <div class="hero-img video">
+                                <video src="processor_assets/i7.mp4" loop></video>
+                            </div>
                         </div>
-                    </section>
 
-                    <div class="template-pageIndicator theme-dark">
-                        <nav class="pageIndicator-layoutRoot">
-                            <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(0)">
-                                <div class="indicatorContainer-indicator"></div>
+                    </div>
+                </section>
+
+                <div class="template-pageIndicator">
+                    <nav class="pageIndicator-layoutRoot">
+                        <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(0)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </a>
+                        <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(1)">
+                            <div class=" indicatorContainer-indicator"></div>
+                        </a>
+                        <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(2)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </a>
+                        <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(3)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </a>
+                        <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(4)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </a>
+                    </nav>
+                </div>
+
+                <section class="template-hubStrip">
+                    <div class="template-hubButton oem-hubButton" onclick="navigateToSection(0)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png" />
                             </a>
-                            <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(1)">
-                                <div class=" indicatorContainer-indicator"></div>
+                        </div>
+                    </div>
+                    <div class="template-hubButton windows-hubButton" onclick="navigateToSection(1)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="windows_assets/GSA_nav_946x220_0004_Windows-LO.png" />
                             </a>
-                            <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(2)">
-                                <div class="indicatorContainer-indicator"></div>
+                        </div>
+                    </div>
+                    <div class="template-hubButton office-hubButton" onclick="navigateToSection(2)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="office_assets/GSA_nav_946x220_0005_Office-LO.png" />
                             </a>
-                            <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(3)">
-                                <div class="indicatorContainer-indicator"></div>
+                        </div>
+                    </div>
+                    <div class="template-hubButton retailer-hubButton" onclick="navigateToSection(3)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="retailer_assets/ms-logo.png" />
                             </a>
-                              <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(4)">
-                                <div class="indicatorContainer-indicator"></div>
+                        </div>
+                    </div>
+                    <div class="template-hubButton processor-hubButton" onclick="navigateToSection(4)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="processor_assets/Intel_Logo_White_946x220.png" />
                             </a>
-                        </nav>
+                        </div>
                     </div>
 
-                    <section class="template-hubStrip">
-                        <div class="template-hubButton oem-hubButton" onclick="navigateToSection(0)">
-    <div class="hubButton-content">
-        <a class="content-graphicContainer">
-            <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png" />
-        </a>
-    </div>
-</div>
-<div class="template-hubButton windows-hubButton" onclick="navigateToSection(1)">
-    <div class="hubButton-content">
-        <a class="content-graphicContainer">
-            <img class="graphicContainer-graphic" src="windows_assets/GSA_nav_946x220_0004_Windows-LO.png" />
-        </a>
-    </div>
-</div>
-<div class="template-hubButton office-hubButton" onclick="navigateToSection(2)">
-    <div class="hubButton-content">
-        <a class="content-graphicContainer">
-            <img class="graphicContainer-graphic" src="office_assets/GSA_nav_946x220_0005_Office-LO.png" />
-        </a>
-    </div>
-</div>
-<div class="template-hubButton retailer-hubButton" onclick="navigateToSection(3)">
-    <div class="hubButton-content">
-        <a class="content-graphicContainer">
-            <img class="graphicContainer-graphic" src="retailer_assets/ms-logo.png" />
-        </a>
-    </div>
-</div>
-<div class="template-hubButton processor-hubButton" onclick="navigateToSection(4)">
-    <div class="hubButton-content">
-        <a class="content-graphicContainer">
-            <img class="graphicContainer-graphic" src="processor_assets/Intel_Logo_White_946x220.png" />
-        </a>
-    </div>
-</div>
-
-                    </section>
-                </div>
+                </section>
             </div>
         </div>
     </div>
+</div>
 
-    <div id="pageCounts" style="display: none;">
-        <div>5</div><div>4</div><div>3</div><div>2</div><div>1</div>
-    </div>
-    <script type="text/javascript" src="retailDemo.js"></script>
+<div id="pageCounts" style="display: none;">
+    <div>5</div><div>4</div><div>3</div><div>2</div><div>1</div>
+</div>
+<script type="text/javascript" src="retailDemo.js"></script>
 </body>
 </html>
- 
