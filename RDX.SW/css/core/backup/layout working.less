@@ -1,0 +1,1059 @@
+//-----------------------------------------------------------------------------//
+// LAYOUT                                                                      //
+//-----------------------------------------------------------------------------//
+
+// Spacing Reset
+* {
+ vertical-align: baseline;
+ font-weight: inherit;
+ font-family: inherit;
+ font-style: inherit;
+ font-size: 100%;
+ border: 0 none;
+ outline: 0;
+ padding: 0;
+ margin: 0;
+ } 
+
+body {
+    height: 100%;
+}
+
+.control-app { 
+    height: 100%;
+    width: 100%;
+    min-width: @app-min-width;
+    max-width: @app-max-width;
+    margin: 0 auto;
+}
+
+//-----------------------------------------------------------------------------//
+// Page Layout and hubStrip orientation                                        //
+//-----------------------------------------------------------------------------//
+
+// Full page containing page content and template-hubStrip
+.page-body {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    height: 100vh;
+    min-height: @app-min-height;
+    overflow-x: hidden;
+
+    // Setting [page-body] - Content top / template-hubStrip bottom
+    &.content-top {
+        -ms-grid-rows: 1fr auto;
+
+        .control-carousel { -ms-grid-row: 1; }
+        .template-hubStrip { -ms-grid-row: 2; }
+        
+        .template-pageIndicator {
+            bottom: (@brandBar-height / 1.5) + (@design-unit * 3);
+            
+            @media screen and @mediaQueryBreakpointMd {
+                bottom: @brandBar-height + (@design-unit * 3);
+            }
+        }
+    }
+    
+    &.content-bottom {
+        -ms-grid-rows: auto 1fr 44px;
+
+        .control-carousel { -ms-grid-row: 2; }
+        .template-hubStrip { -ms-grid-row: 1; }
+        .template-pageIndicator { -ms-grid-row: 3; }
+    }
+
+//-----------------------------------------------------------------------------//
+// Content card structure                                                      //
+//-----------------------------------------------------------------------------//    
+    
+    // Page content containing card containers and indicators
+    .control-carousel {
+
+        -ms-grid-column: 1;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        
+        .carousel-slideContainer {
+            display: flex;
+            height: 100%;
+            
+            &#slider {
+              width: 100%;
+              margin-left: 0%;
+              -webkit-transition: 1.3s;
+              -moz-transition: 1.3s;
+              transition: 1.3s;
+            }
+
+        .template-contentCard {
+            display: none;
+            flex-shrink: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            transition: 1s linear;
+            margin: auto;
+
+            .hero-img {
+                -ms-grid-row-align: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .main-content {
+                -ms-grid-row-align: center;
+                width: 100%;
+
+
+                @media screen and @mediaQueryBreakpointMd {
+                    width: 400px;
+                }
+/*
+                 @media screen and @mediaQueryBreakpointLg {
+                    width: 500px;
+                }
+*/
+                .text-header {
+                    display: block;
+                }
+            }
+
+//-----------------------------------------------------------------------------//
+// Content card page layouts                                                   //
+//-----------------------------------------------------------------------------//
+
+            // Required Setting [template-contentCard] - Content center / no hero
+            &.content-center {
+                -ms-grid-columns: 1fr auto 1fr;
+                -ms-grid-rows: 1fr auto 1fr;
+
+                .main-content {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 2;
+                    position: relative;
+                    width: auto;
+                }
+            }
+
+            // Required Setting [template-contentCard] - Content left / hero-img right
+            &.content-left {
+                -ms-grid-columns: @page-margin auto 60% @page-margin;
+                -ms-grid-rows: 1fr auto auto 1fr;
+
+                .main-content {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 3;
+                    -ms-grid-column-span: 2;
+                }
+
+                .hero-img {
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 4;
+                    -ms-grid-row: 2;
+                    
+                    &.fit-height {
+                        -ms-grid-row: 1;
+                        -ms-grid-row-span: 3;
+                        -ms-grid-row-align: stretch;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                            float: right;
+                        }
+                    }
+                }
+                
+                @media screen and @mediaQueryVerticalBreakpointXSm {
+                    -ms-grid-columns: @page-margin auto 40% @page-margin;
+                }
+
+                @media @mediaQueryBreakpointMd {
+                    -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 60%;
+                    -ms-grid-rows: 1fr auto 1fr;
+
+                    .main-content {
+                        -ms-grid-column: 3;
+                        -ms-grid-column-span: 1;
+                        -ms-grid-row: 2;
+                    }
+
+                    .hero-img {
+                        -ms-grid-column: 6;
+                        -ms-grid-column-span: 1;
+                        -ms-grid-row: 2;
+                    }
+                    
+                    @media screen and @mediaQueryVerticalBreakpointSm {
+                        -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 40%;
+                    }
+                }
+            }
+
+            // Required Setting [template-contentCard] - Content right / hero-img left
+            &.content-right {
+                -ms-grid-columns: 50% @padding-unit auto @page-margin;
+                -ms-grid-rows: 1fr auto 1fr;
+
+               .main-content {
+                    -ms-grid-column: 3;
+                    -ms-grid-row: 2;
+                }
+                
+                @media screen and @mediaQueryVerticalBreakpointXSm {
+                    -ms-grid-columns: 40% @padding-unit auto @page-margin;                
+                }
+                
+                @media @mediaQueryBreakpointMd {
+                    -ms-grid-columns: 50% @padding-unit 1fr auto 1fr @page-margin;
+                    -ms-grid-rows: 1fr auto 1fr;
+
+                   .main-content {
+                        -ms-grid-column: 4;
+                        -ms-grid-row: 2;
+                    }
+                    .hero-img {
+                        -ms-grid-column: 1;
+                        -ms-grid-row: 2;
+                    }
+                    
+                    @media screen and @mediaQueryVerticalBreakpointSm {
+                        -ms-grid-columns: 40% @padding-unit 1fr auto 1fr @page-margin;
+                    }
+
+                }
+
+            }
+
+            // Required Setting [template-contentCard] - 3 col layout with header for title/logo and sub-content boxes
+            &.page-content-fourColumn {
+                -ms-grid-rows: @padding-unit 1fr;
+                -ms-grid-columns: @padding-unit 1fr 1fr 1fr 1fr @padding-unit;
+
+                .column {
+                    display: -ms-grid;
+                    -ms-grid-columns: 1fr auto 1fr;
+
+                    &.col1 { -ms-grid-column: 2; -ms-grid-row: 2; }
+                    &.col2 { -ms-grid-column: 3; -ms-grid-row: 2; }
+                    &.col3 { -ms-grid-column: 4; -ms-grid-row: 2; }
+                    &.col4 { -ms-grid-column: 5; -ms-grid-row: 2; }
+
+                    .title-box { -ms-grid-column: 2; -ms-grid-row: 1; }
+
+                    // Required Sub-setting [Fourcol > Column] - Logo and 2 Containers of content centered
+                    &.fourColumn-LogoList {
+                        -ms-grid-rows: 1fr auto 96px auto 48px auto 1fr;
+
+                        .graphicContainer-graphic,
+                        .headingBox {
+                            -ms-grid-column: 2;
+                            -ms-grid-row: 2;
+                        }
+
+                        .subcontent-box1 {
+                            -ms-grid-column: 2;
+                            -ms-grid-row: 4;
+                        }
+
+                        .subcontent-box2 {
+                            -ms-grid-column: 2;
+                            -ms-grid-row: 6;
+                        }
+                    }
+                }
+            }
+
+            // Required Sub-setting [Threecol > Column] - Logo and 2 Containers of content centered
+            &.page-content-threeColumn {
+                -ms-grid-rows: @padding-unit 1fr;
+                -ms-grid-columns: @padding-unit 1fr 1fr 1fr @padding-unit;
+
+                 // Optional Sub-setting [template-contentCard] - Extra wide center column instead of default equal columns - only works with three-col
+                &.wide-center {
+                    -ms-grid-columns: @padding-unit 1fr auto 1fr @padding-unit;
+                }
+
+                .column {
+                    display: -ms-grid;
+                    -ms-grid-columns: 1fr auto 1fr;
+
+                    &.col1 { -ms-grid-column: 2; -ms-grid-row: 2; }
+                    &.col2 { -ms-grid-column: 3; -ms-grid-row: 2; }
+                    &.col3 { -ms-grid-column: 4; -ms-grid-row: 2; }
+
+                    // Required Sub-setting [Threecol > Column] - Logo and 2 Containers of content centered
+                    &.threeColumn-logoList {
+                        -ms-grid-rows: 1fr 12px 110px 100px 36px 100px 1fr;
+
+                        .graphicContainer-graphic,
+                        .headingBox {
+                            -ms-grid-column: 2;
+                            -ms-grid-row: 2;
+                        }
+
+                        .subcontent-box1 {
+                            -ms-grid-column: 2;
+                            -ms-grid-row: 4;
+                        }
+
+                        .subcontent-box2 {
+                            -ms-grid-column: 2;
+                            -ms-grid-row: 6;
+                        }
+                    }
+                }
+            }
+
+            button {
+                height: (@design-unit * 11);
+                padding: 0 (@design-unit * 4);
+                margin-top: (@design-unit * 7) !important;
+                min-width: 140px;
+
+                // less margin on smaller screen heights
+                @media screen and @mediaQueryVerticalBreakpointSm {
+                    margin-top: (@design-unit * 4) !important;
+                }
+            }
+        }
+    }
+        
+//-----------------------------------------------------------------------------//
+//   sideNav Prev and Next Arrows                                              //
+//-----------------------------------------------------------------------------//
+        
+        .carousel-controls {
+            width: 100%;
+            position: fixed;
+            top: 50%;
+            -ms-grid-rows: 1fr 36px 1fr;
+
+            .sideNav {
+                display: none;
+                -ms-grid-rows: 1fr auto @brandBar-height 1fr;
+                -ms-grid-columns: 1fr auto 1fr;
+                
+                -ms-grid-row: 2;
+                height: @flipview-height;
+                width: @flipview-width;
+                background: fade(@black, 20%);
+                color: fade(@white, 90%);
+                font-weight: bold;
+                margin-bottom: @brandBar-height;
+                font-family: 'Segoe MDL2 Assets';
+                
+                &:hover {
+                    background: fade(@black, 40%);
+                    display: -ms-grid !important;
+                }
+                
+                .slideNav-directionIndicator {
+                    -ms-grid-row: 2;
+                    -ms-grid-column: 2;
+                }
+            }
+
+            .leftNav {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                
+                .directionIndicator-prev {
+                    &:after { content: '\E76B'; }
+                    font-size: 11pt;
+                    position: absolute;
+                    top: 8px;
+                    right: 3px;
+                }
+            }
+
+            .rightNav {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                
+                .directionIndicator-next {
+                    &:after { content: '\E76C'; }
+                    font-size: 11pt;
+                    position: absolute;
+                    top: 8px;
+                    left: 3px;
+                }
+            }
+        }
+    }
+}
+
+// Active state for hubButton shading
+.active {
+    position: relative;
+    
+    &.template-hubButton:after {
+        border-top-color: @dark-grey; 
+        
+        @media screen and (-ms-high-contrast: active) {
+            border-left-color: transparent !important;
+            border-right-color: transparent !important;   
+        }
+    }
+    
+    &:after {
+        content: ' ';
+        position: absolute;
+        left: 45%;
+        bottom: -(@design-unit * 4.2);
+        width: 0; 
+        height: 0; 
+        border-left: 17px solid transparent;
+        border-right: 17px solid transparent;
+        border-top: 17px solid transparent;
+        z-index: 3;
+    }
+    
+}
+
+//-----------------------------------------------------------------------------//
+//   Indicators                                                                //
+//-----------------------------------------------------------------------------//
+
+// Centered circle page indicators
+.template-pageIndicator {
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr (@indicator-size * 2) auto @indicator-size 1fr;
+    z-index: 2000;
+    
+    @media screen and (max-height: (@app-min-height - 100)) {
+        bottom: 20px !important;
+    }
+    
+     // Round Page indicator/nav bar
+    .pageIndicator-layoutRoot {
+        -ms-grid-column: 3;
+        display: inline-flex;
+        
+        a {
+            margin: 0;
+        }
+    }
+    
+    // Individual indicator circle link
+    .indicatorContainer-indicator {
+        width: @indicator-size * 6.5;
+        height: @indicator-size * 2;
+        text-align: center;
+        padding-top: 10px;
+        -ms-grid-row-align: end;
+        
+            @media screen and (-ms-high-contrast: active) {
+                -ms-high-contrast-adjust: none;
+                
+                 &.active:before {
+                    background-color: yellow;
+                }
+            }
+        
+            @media screen and (-ms-high-contrast: black-on-white) {
+                &.active:before {
+                    background-color: black;
+                }
+            }
+
+            @media screen and (-ms-high-contrast: white-on-black) {
+                &.active:before {
+                    background-color: white;
+                }
+            }
+        
+        &:before {
+            content:' ';
+            width: @indicator-size;
+            height: @indicator-size;
+            border-radius: 50%;
+            background-color: fade(@dark-grey, 40%);
+            display: inline-block;
+            
+            @media screen and (-ms-high-contrast: active) {
+                background-color: fade(@white, 40%);
+            }
+            
+            @media screen and (-ms-high-contrast: black-on-white) {
+                background-color: fade(@black, 40%);
+            }
+            
+            @media screen and (-ms-high-contrast: white-on-black) {
+                background-color: fade(@white, 40%);
+            }
+        }
+        
+        &:hover:before {
+            background-color: fade(@dark-grey, 60%);
+            
+            @media screen and (-ms-high-contrast: active) {
+                background-color: fade(@white, 80%);
+            }
+            
+            @media screen and (-ms-high-contrast: black-on-white) {
+                background-color: fade(@black, 80%);
+            }
+        }
+    }
+    
+    // Prev / Next buttons on either side of indicators
+    .indicatorContainer-directionNav {
+        line-height: 1;
+        height: @indicator-size;
+        width: @indicator-size;
+        font-family: 'Segoe MDL2 Assets';
+        opacity: .6;
+        
+        &:hover {
+            opacity: .9;
+            font-weight: bold;
+        }
+    }
+    
+    // Previous directionNav Arrow
+    .directionNav-prev {
+        -ms-grid-column: 2;
+        -ms-grid-column-align: end;
+        -ms-grid-row-align: center;
+        display: none;
+        
+        &:after { content: '\E76B'; }
+    }
+    
+    // Next directionNav Arrow
+    .directionNav-next {
+        -ms-grid-column: 4;
+        -ms-grid-column-align: end;
+        -ms-grid-row-align: center;
+        display: none;
+        
+         &:after { content: '\E76C'; }
+    }
+}
+
+//-----------------------------------------------------------------------------//
+//   Hubstrip                                                                  //
+//-----------------------------------------------------------------------------//
+
+// Brand link bar
+.template-hubStrip {
+    display: flex;
+    -ms-grid-column: 1;
+    background-color: @dark-grey;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    border-top: 3px solid @dark-grey;
+    
+    // Individual brand box
+    .template-hubButton {
+        display: -ms-grid;
+        -ms-grid-rows: 1fr auto 1fr; // Center Content
+        -ms-grid-columns: 1fr auto 1fr; // Center Content
+        -ms-grid-row: 2;
+        flex: 1;
+        flex-shrink: 1;
+        
+            @media screen and (-ms-high-contrast: active) {
+                border-bottom: 3px yellow solid;
+            
+                &:last-of-type {
+                    border-right: 3px yellow solid;
+                }
+            }
+        
+            @media screen and (-ms-high-contrast: black-on-white) {
+                background-color: black;
+                border-bottom: none;
+                border-right: 3px white solid;
+            
+                &:last-of-type {
+                    border-right: none;
+                }
+            }
+        
+           @media screen and (-ms-high-contrast: white-on-black) {
+                background-color: black;
+                border-bottom: 3px white solid;
+                border-right: 3px white solid;
+            
+                &:last-of-type {
+                    border-right: 3px white solid;
+                }
+            }
+        
+        max-width: @max-brandBar-width;
+        height: @brandBar-height;
+        position: relative;
+        border-left: 3px solid @dark-grey;
+
+        .hubButton-content {
+            -ms-grid-row: 2;
+            -ms-grid-column: 2;
+            
+            .graphicContainer-graphic {
+                max-width: 150px;
+                max-height: 60px;
+                width: 80%;
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------//
+//  Inputs                                                                     //
+//-----------------------------------------------------------------------------//
+
+button {
+    background: @accent-color;
+    color: @white;
+
+    &:hover {
+        background:  fade(@accent-color, 85%);
+    }
+    
+    &:hover:active {
+        background: darken(@accent-color, 10%);
+    }
+    
+        @media screen and (-ms-high-contrast: active) {
+            background: yellow;
+            color: black;
+        }
+
+        @media screen and (-ms-high-contrast: black-on-white) {
+            background: black;
+            color: white;
+        }
+    
+        @media screen and (-ms-high-contrast: white-on-black) {
+            background: white;
+            color: black;
+        }
+}
+
+
+//-----------------------------------------------------------------------------//
+//  Type                                                                       //
+//-----------------------------------------------------------------------------//
+
+.text-legal {
+    .text-captionAlt();
+    opacity: .6;
+}
+
+/* Legal text added after the card-content, with or
+without a button or link preceeding will have extra spacing */
+
+.card-content + .text-legal,
+.card-content + a + .text-legal,
+.card-content + button + .text-legal {
+    margin-top: 20px;
+}
+
+//-----------------------------------------------------------------------------//
+//  LAYOUT KSP                                                                 //
+//-----------------------------------------------------------------------------//
+.layout-ksp {
+    
+    .logo {
+        max-width: 200px;
+        max-height: 120px;
+    }
+        
+    .hero-img {
+        video {
+            max-width: 100%;
+        }
+    }
+
+    .headingBox {
+        clear: both;
+        margin: (@design-unit * 2) 0;
+
+        // Lessen headingBox margin on small screens
+        @media screen and @mediaQueryVerticalBreakpointSm {
+            margin: (@design-unit * 3) 0;
+        }
+
+        @media screen and @mediaQueryBreakpointMd {
+            margin: (@design-unit * 6) 0;
+        }
+    }
+    
+    &.template-contentCard {
+        overflow-y: visible;
+        
+        @media screen and @mediaQueryBreakpointMd { 
+            overflow: hidden;
+        }
+    }
+    
+    // Main content component - List text with or without icons
+    .card-content {
+        display: -ms-grid;
+        -ms-grid-columns: auto 1fr;
+        position: relative;
+
+        .icon {
+            -ms-grid-column: 1;
+            -ms-grid-row-align: center;
+            padding-top: (@design-unit * 2);
+            padding-bottom: (@design-unit);
+            margin-top: (@design-unit * 2);
+
+            @media screen and @mediaQueryBreakpointMd {
+                padding: (@design-unit * 3) (@design-unit * 3) (@design-unit * 4) 0;
+            }
+
+            img {
+                max-width: 45px;
+            }
+
+            &.icon1 { -ms-grid-row: 1; }
+            &.icon2 { -ms-grid-row: 2; }
+            &.icon3 { -ms-grid-row: 3; }
+            &.icon4 { -ms-grid-row: 4; }
+        }
+
+        .list-text {
+            -ms-grid-column: 2;
+            display: block;
+            padding-top: (@design-unit * 2);
+            padding-bottom: (@design-unit);
+            margin: (@design-unit / 2) 0;
+
+             @media screen and @mediaQueryBreakpointMd {
+                padding: (@design-unit * 3) 0;
+            }
+
+            &.text1 { -ms-grid-row: 1; }
+            &.text2 { -ms-grid-row: 2; }
+            &.text3 { -ms-grid-row: 3; }
+            &.text4 { -ms-grid-row: 4; }
+
+            &.text-body,
+            .text-body,
+            .text-caption {
+                display: block;
+                margin: (@design-unit) 0;
+            }
+        }
+
+        .icon,
+        .list-text {
+
+            // Lessen margin on small height screens
+            @media screen and @mediaQueryVerticalBreakpointSm {
+                padding-top: (@design-unit * 2);
+                padding-bottom: (@design-unit);
+            }
+        }
+    }
+    
+    .template-videoPlayer {
+    
+        .videoPlayer-backgroundGraphic {
+
+            &.custom-backgroundGraphic { 
+                position: relative;
+                height: 0px;
+            }
+        }
+
+        video {
+            position: absolute;
+            top: 44px;
+            left: 90px;
+            width: 510px;
+            z-index: 0;
+        }
+    }
+}
+
+//-----------------------------------------------------------------------------//
+//  LAYOUT FEATURE                                                             //
+//-----------------------------------------------------------------------------//
+.layout-feature {
+    
+    .logo {
+        max-width: 200px;
+        max-height: 120px;
+    }
+      
+    .hero-img {
+        video {
+            max-width: 100%;
+        }
+    }
+    
+    .headingBox {
+        clear: both;
+        margin: (@design-unit * 2) 0;
+
+        // Lessen headingBox margin on small screens
+        @media screen and @mediaQueryVerticalBreakpointSm {
+            margin: (@design-unit * 3) 0;
+        }
+
+        @media screen and @mediaQueryBreakpointMd {
+            margin: (@design-unit * 6) 0;
+        }
+    }
+    
+    &.template-contentCard {
+        overflow-y: visible;
+        
+        @media screen and @mediaQueryBreakpointMd { 
+            overflow: hidden;
+        }
+    }
+       
+    // Main content component - List text with or without icons
+    .card-content {
+        display: -ms-grid;
+        -ms-grid-columns: auto 1fr;
+        position: relative;
+
+        .icon {
+            -ms-grid-column: 1;
+            -ms-grid-row-align: center;
+            padding-top: (@design-unit * 2);
+            padding-bottom: (@design-unit);
+            margin-top: (@design-unit * 2);
+
+            @media screen and @mediaQueryBreakpointMd {
+                padding: 0 (@design-unit * 3) (@design-unit * 4) 0;
+
+            }
+
+            img {
+                max-width: 45px;
+            }
+
+            &.icon1 { -ms-grid-row: 1; }
+
+        }
+
+        .list-text {
+            -ms-grid-column: 2;
+            display: block;
+            padding-top: (@design-unit * 2);
+            padding-bottom: (@design-unit);
+            margin: (@design-unit / 2) 0;
+
+            &.text1 { -ms-grid-row: 1; }
+
+            &.text-body,
+            .text-body,
+            .text-caption {
+                display: block;
+                margin: (@design-unit) 0;
+            }
+        }
+
+        .icon,
+        .list-text {
+
+            // Lessen margin on small height screens
+            @media screen and @mediaQueryVerticalBreakpointSm {
+                padding-top: (@design-unit * 2);
+                padding-bottom: (@design-unit);
+            }
+        }
+    }
+    
+    .template-videoPlayer {
+    
+        .videoPlayer-backgroundGraphic {
+
+            &.custom-backgroundGraphic { 
+                position: relative;
+                height: 0px;
+            }
+        }
+
+        video {
+            position: absolute;
+            top: 59px;
+            left: 120px;
+            width: 677px;
+            z-index: 0;
+        }
+    }
+}
+
+//-----------------------------------------------------------------------------//
+//  LAYOUT FEATURE WITH CTA                                                    //
+//-----------------------------------------------------------------------------//
+.layout-featureCta {
+    
+    .logo {
+        max-width: 200px;
+        max-height: 120px;
+    }
+    
+    .hero-img {
+        video {
+            max-width: 100%;
+        }
+    }
+    
+    .headingBox {
+        clear: both;
+        margin: (@design-unit * 2) 0;
+
+        // Lessen headingBox margin on small screens
+        @media screen and @mediaQueryVerticalBreakpointSm {
+            margin: (@design-unit * 3) 0;
+        }
+
+        @media screen and @mediaQueryBreakpointMd {
+            margin: (@design-unit * 6) 0;
+        }
+    }
+    
+    &.template-contentCard {
+        overflow-y: visible;
+        
+        @media screen and @mediaQueryBreakpointMd { 
+            overflow: hidden;
+        }
+    }
+    
+    // Main content component - List text with or without icons
+    .card-content {
+        display: -ms-grid;
+        -ms-grid-columns: auto 1fr;
+        position: relative;
+
+        .icon {
+            -ms-grid-column: 1;
+            -ms-grid-row-align: center;
+            padding-top: (@design-unit * 2);
+            padding-bottom: (@design-unit);
+            margin-top: (@design-unit * 2);
+
+            @media screen and @mediaQueryBreakpointMd {
+                padding: 0 (@design-unit * 3) (@design-unit * 4) 0;
+
+            }
+
+            img {
+                max-width: 45px;
+            }
+
+            &.icon1 { -ms-grid-row: 1; }
+
+        }
+
+        .list-text {
+            -ms-grid-column: 2;
+            display: block;
+            padding-top: (@design-unit * 2);
+            padding-bottom: (@design-unit);
+            margin: (@design-unit / 2) 0;
+
+            &.text1 { -ms-grid-row: 1; }
+
+            &.text-body,
+            .text-body,
+            .text-caption {
+                display: block;
+                margin: (@design-unit) 0;
+            }
+        }
+
+        .icon,
+        .list-text {
+
+            // Lessen margin on small height screens
+            @media screen and @mediaQueryVerticalBreakpointSm {
+                padding-top: (@design-unit * 2);
+                padding-bottom: (@design-unit);
+            }
+        }
+    }
+    
+    .template-videoPlayer {
+    
+        .videoPlayer-backgroundGraphic {
+
+            &.custom-backgroundGraphic { 
+                position: relative;
+                height: 0px;
+            }
+        }
+
+        video {
+            position: absolute;
+            top: 44px;
+            left: 90px;
+            width: 510px;
+            z-index: 0;
+        }
+    }
+}
+
+//-----------------------------------------------------------------------------//
+//  LAYOUT SPECS                                                               //
+//-----------------------------------------------------------------------------//
+
+.layout-specs {
+    
+    .column {
+
+        .text-base {
+            color: @black;
+        }
+
+        .text-body {
+            color: fade(@black, 60%);
+        }
+
+        .text-subheader {
+            display: block;
+            margin: 0;
+
+            sup {
+                font-size: 20pt;
+            }
+        }
+    }
+    
+    &.template-contentCard {
+        overflow-y: visible;
+        
+        @media screen and @mediaQueryBreakpointMd { 
+            overflow: hidden;
+        }
+    }
+    
+    // Main content component - List text with or without icons
+    .card-content {
+        display: -ms-grid;
+        -ms-grid-columns: auto 1fr;
+        position: relative;
+
+        .icon,
+        .list-text {
+
+            // Lessen margin on small height screens
+            @media screen and @mediaQueryVerticalBreakpointSm {
+                padding-top: (@design-unit * 2);
+                padding-bottom: (@design-unit);
+            }
+        }
+    }
+}
+
+
+
