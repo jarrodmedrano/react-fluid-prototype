@@ -7,8 +7,8 @@
 var slider = document.getElementById('slider');
 var sliderElementStyles = slider.style;
 
-var currentlyShowingSlide
-var currentlyShowingSlideID
+var currentlyShowingSlide;
+var currentlyShowingSlideID;
 var leftSideID = "";
 var rightSideID = "";
 
@@ -21,12 +21,12 @@ var buildingJustOneSide = false;
 var buildJustThisSide = "";
 
 // Array of Slide IDs info
-var arrayOfSlideIDsLength
-var lastSlideIDin_ArrayOfSlideIDs 
-var secondToLastSlideIDin_ArrayOfSlideIDs
+var arrayOfSlideIDsLength;
+var lastSlideIDin_ArrayOfSlideIDs;
+var secondToLastSlideIDin_ArrayOfSlideIDs;
 
-var carouselWidth
-var thePointerType
+var carouselWidth;
+var thePointerType;
 var directionSliderMoving = "";
 
 var sliderTransitionSpeed = "1s";
@@ -47,19 +47,19 @@ var oneFifthOriginalCarouselWidth;
 var movedX = 0;
 
 // goForwardOrBack() Variables
-var currentlyShowingPageIDIndex
+var currentlyShowingPageIDIndex;
 
 var increaseFlipperZIndexFired = false;
 
 // Locks
 var isBuilt = false;
 var isAnimating = false;
-var pointerType
+var pointerType;
 
 // Variables generated on window.load by generateArraysOfSlideIDs()
 var arrayOfSlideIDs = [];
 var arrayOfSections = [];
-var lastSection
+var lastSection;
 
 //*******************************************************************
 // Carousel state
@@ -106,7 +106,6 @@ function setActiveHubButton() {
     for (var i = 0; i < hubButtons.length; i++) {
         if (i === currentSection) {
           hubButtons[i].classList.add("active");
-          console.log(hubButtons[i]);
         } else {
           hubButtons[i].classList.remove("active");
         }
