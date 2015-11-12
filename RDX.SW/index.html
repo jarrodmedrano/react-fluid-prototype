@@ -35,35 +35,38 @@
         .sw-card {
             background-color: #000;
         }
+
         .sw-card {
-            background-size: 100% auto;
+            background-size: cover;
             background-repeat: no-repeat;
+            background-position: center center fixed;
         }
 
         .sw-card-0 {
-            background: #000 url('sw_assets/bg-slide-0.jpg');
+            background-image: url('sw_assets/bg-slide-0.jpg');
+
         }
 
         .sw-card-1 {
-            background: #000 url('sw_assets/bg-slide-1.jpg');
+            background-image: url('sw_assets/bg-slide-1.jpg');
+
         }
 
         .sw-card-2 {
-            background: #000 url('sw_assets/bg-slide-2.jpg');
+            background-image: url('sw_assets/bg-slide-2.jpg');
         }
 
         .sw-card-3 {
-            background: #000 url('sw_assets/bg-slide-3.jpg');
+            background-image: url('sw_assets/bg-slide-3.jpg');
         }
 
         .sw-card-4 {
-            background: #000 url('sw_assets/bg-slide-4.jpg');
+            background-image: url('sw_assets/bg-slide-4.jpg');
         }
 
         .sw-card-5 {
             background: #000 url('sw_assets/bg-slide-5.jpg');
         }
-
 
         .sw-card button {
             background: transparent;
@@ -193,86 +196,64 @@
 
                     <div id="slider" class="carousel-slideContainer">
                         <div id="0-0" class="template-contentCard content-center layout-ksp sw-card sw-card-0" style="">
-                            <div class="main-content">
-                                <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png"/>
+                            <div class="main-content text-center">
 
 
-                                <div class="main-content text-center">
 <span class="text-header">Star Wars VII: The Force Awakens
 Check out Edge and watch the new trailer</span>
 
-                                    <a onclick="navigateToPage(3)">
-                                        <button type="submit"><span>Watch the trailer</span></button>
-                                    </a>
-                                </div>
-
-
-
+                                <a onclick="navigateToPage(3)">
+                                    <button type="submit"><span>Watch the trailer</span></button>
+                                </a>
                             </div>
                         </div>
                         <div id="0-1" class="template-contentCard content-center layout-ksp sw-card sw-card-1" style="">
-                            <div class="main-content">
-                                <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png"/>
+                            <div class="main-content text-center">
 
-
-                                <div class="main-content text-center">
-<span class="text-header">Get Star Wars: Commander
-from OneStore today</span>
-
-                                    <a onclick="navigateToPage(3)">
-                                        <button type="submit"><span>Launch the store</span></button>
-                                    </a>
+                                <div class="video text-center">
+                                    <video src="sw_assets/trailer-small.mp4" width="480" height="270" loop muted></video>
                                 </div>
 
+                                <span class="text-header">Get Star Wars: Commander
+                                from OneStore today</span>
 
-
+                                <a onclick="navigateToPage(3)">
+                                    <button type="submit"><span>Launch the store</span></button>
+                                </a>
                             </div>
                         </div>
                         <div id="0-2" class="template-contentCard content-center layout-ksp sw-card sw-card-2" style="">
-                            <div class="main-content">
-                                <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png"/>
+                            <div class="main-content text-center">
 
+                                <span class="text-header">Curious to where they will go?
+                                See the maps of Tantooine,
+                                Hoth, and the Death Star.</span>
 
-                                <div class="main-content text-center">
-<span class="text-header">Curious to where they will go?
-See the maps of Tantooine,
-Hoth, and the Death Star.</span>
-
-                                    <a onclick="navigateToPage(3)">
-                                        <button type="submit"><span>Watch the trailer</span></button>
-                                    </a>
-                                </div>
-
-
-
+                                <a onclick="navigateToPage(3)">
+                                    <button type="submit"><span>Watch the trailer</span></button>
+                                </a>
                             </div>
+
                         </div>
 
                         <div id="0-3" class="template-contentCard content-center layout-ksp sw-card sw-card-3" style="">
-                            <div class="main-content">
-                                <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png"/>
-
-
-                                <div class="main-content text-center">
+                            <div class="main-content text-center">
+                                <div class="video text-center">
+                                    <video src="sw_assets/trailer-small.mp4" width="480" height="270" loop muted></video>
+                                </div>
 <span class="text-header">Star Wars VII: The Force Awakens
 Check out some stuff about it here</span>
 
                                     <a onclick="navigateToPage(3)">
                                         <button type="submit"><span>Watch the trailer</span></button>
                                     </a>
-                                </div>
-
-
-
                             </div>
                         </div>
 
                         <div id="0-4" class="template-contentCard content-center layout-ksp sw-card sw-card-4" style="">
-                            <div class="main-content">
-                                <img class="logo hide" src="oem_assets/logo_yoga_3_pro.png"/>
+                            <div class="main-content text-center">
 
 
-                                <div class="main-content text-center">
 <span class="text-header">Star Wars VII: The Force Awakens
 Check out some stuff about it here</span>
 
@@ -281,9 +262,6 @@ Check out some stuff about it here</span>
                                     </a>
                                 </div>
 
-
-
-                            </div>
                         </div>
 
 
