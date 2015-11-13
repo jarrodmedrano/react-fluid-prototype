@@ -139,26 +139,25 @@ body {
     // Content card page layouts                                                   //
     //-----------------------------------------------------------------------------//
 
+
                 // Required Setting [template-contentCard] - Content center / no hero
                 &.content-center {
-                    -ms-grid-columns: 1fr auto 1fr;
-                    -ms-grid-rows: 1fr;
+                    -ms-grid-columns: 1fr 100% 1fr;
+                    -ms-grid-rows: 1fr auto;
 
                     .main-content {
                         -ms-grid-column: 2;
                         -ms-grid-row: 2;
                         position: relative;
                         width: auto;
-
-                        &.text-center {
-                            text-align: center;
-                            margin: 0 auto;
-                        }
+                        text-align: center;
+                        margin: 0 auto;
                     }
 
-                    .video {
+                    video {
                         margin-bottom: 23px;
                     }
+
                 }
 
                 // Required Setting [template-contentCard] - Content left / hero-img right
