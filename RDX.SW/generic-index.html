@@ -17,7 +17,7 @@
         }
 
         .indicator-0.active:before {
-            background-color: #F6E934;
+            background-color: #E2231A;
         }
 
         .oem-card .text-header {
@@ -32,70 +32,7 @@
             background: #E2231A;
         }
 
-        .sw-card {
-            background-color: #000;
-        }
-
-        .sw-card {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        .sw-card-0 {
-            background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%),
-            url('sw_assets/bg-slide-0.jpg');
-        }
-
-        .sw-card-1 {
-            background-image:
-                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-1.jpg');
-        }
-
-        .sw-card-2 {
-            background-image:
-                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-2.jpg');
-        }
-
-        .sw-card-3 {
-            background-image:
-                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-3.jpg');
-        }
-
-        .sw-card-4 {
-            background-image:
-                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-4.jpg');
-        }
-
-        .sw-card button {
-            background: transparent;
-            border: 2px solid #fff;
-            text-transform: uppercase;
-            margin-bottom: 65px;
-        }
-
-        .sw-card button:hover {
-            background: #fff;
-            color: #000;
-            opacity: 1;
-        }
-
-        .sw-card button span:after {
-            font-family: 'Segoe MDL2 Assets';
-            content: "\E76C";
-            display: inline-block;
-            font-size: 11px;
-            padding-left: 10px;
-        }
-
-        .sw-card .text-header {
-            color: #fff;
-            max-width: 70%;
-            margin: 0 auto;
-        }
-
         .sw-hubButton {
-            background: #000000 url('sw_assets/button-bg.png');
             background-size: cover;
         }
 
@@ -183,6 +120,80 @@
             background: #0071c5;
         }
 
+        /* ===========================================================================
+        NEW CARD STYLES 
+        =========================================================================== */
+
+        .centered-card {
+            background-color: #000;
+        }
+
+        .centered-card {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* Solid color Background */
+
+        .centered-card-0 {
+            background: #7f3979;
+        }
+
+        /* No Gradient */
+
+        .centered-card-1 {
+            background-image: url('sw_assets/bg-slide-1.jpg');
+        }
+
+        /* To change background image, edit the url. You can add a gradient or leave it out. */
+
+        .centered-card-2 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-2.jpg');
+        }
+
+        .centered-card-3 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-3.jpg');
+        }
+
+        .centered-card-4 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-4.jpg');
+        }
+
+        .centered-card button {
+            background: transparent;
+            border: 2px solid #fff;
+            text-transform: uppercase;
+            margin-bottom: 65px;
+        }
+
+        .centered-card button:hover {
+            background: #fff;
+            color: #000;
+            opacity: 1;
+        }
+
+        .centered-card button span:after {
+            font-family: 'Segoe MDL2 Assets';
+            content: "\E76C";
+            display: inline-block;
+            font-size: 11px;
+            padding-left: 10px;
+        }
+
+        .centered-card .text-header {
+            color: #fff;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        /* ===========================================================================
+        END NEW CARD STYLES
+        =========================================================================== */
+
     </style>
 </head>
 <body>
@@ -201,19 +212,28 @@
                     </div>
 
                     <div id="slider" class="carousel-slideContainer">
-                        <div id="0-0" class="template-contentCard content-center layout-ksp sw-card sw-card-0" style="">
+                        <!-----------------------------------------------------------------------------
+                        // Start centered cards
+                        //---------------------------------------------------------------------------->
+
+                        <!-- Card 1 -->
+                        <div id="0-0" class="template-contentCard content-center layout-ksp centered-card centered-card-0" style="">
                             <div class="main-content">
 
-                            <span class="text-header">Star Wars VII: The Force Awakens
-                            Check out Edge and watch the new trailer</span>
+                                <div class="hero">
+                                    <img src="generic_assets/logo_onenote.png" alt="OneNote" />
+                                </div>
+
+                                <span class="text-header">Headline 1 goes here</span>
 
                                 <a onclick="navigateToPage(3)">
-                                    <button type="submit"><span>Watch the trailer</span></button>
+                                    <button type="submit"><span>Button Text 1 goes here</span></button>
                                 </a>
                             </div>
                         </div>
+                        <!-- Card 2 -->
                         <div id="0-1"
-                             class="template-contentCard content-center layout-ksp sw-card sw-card-1"
+                             class="template-contentCard content-center layout-ksp centered-card centered-card-1"
                              style="">
                             <div class="main-content">
 
@@ -221,54 +241,50 @@
                                     <video src="sw_assets/trailer-small.mp4" width="480" height="270" loop muted poster="trailer-image.jpg"></video>
                                 </div>
 
-                                <span class="text-header">Get Star Wars: Commander
-                                from OneStore today</span>
+                                <span class="text-header">Headline 2 goes here</span>
 
                                 <a onclick="navigateToPage(3)">
-                                    <button type="submit"><span>Launch the store</span></button>
+                                    <button type="submit"><span>Button Text 2 goes here</span></button>
                                 </a>
                             </div>
                         </div>
-                        <div id="0-2" class="template-contentCard content-center layout-ksp sw-card sw-card-2" style="">
+                        <!-- Card 3 -->
+                        <div id="0-2" class="template-contentCard content-center layout-ksp centered-card centered-card-2" style="">
                             <div class="main-content">
 
-                                <span class="text-header">Curious to where they will go?
-                                See the maps of Tantooine,
-                                Hoth, and the Death Star.</span>
+                                <span class="text-header">Headline 3 goes here</span>
 
                                 <a onclick="navigateToPage(3)">
-                                    <button type="submit"><span>Watch the trailer</span></button>
+                                    <button type="submit"><span>Button Text 3 goes here</span></button>
                                 </a>
                             </div>
                         </div>
-
-                        <div id="0-3" class="template-contentCard content-center layout-ksp sw-card sw-card-3" style="">
+                        <!-- Card 4 -->
+                        <div id="0-3" class="template-contentCard content-center layout-ksp centered-card centered-card-3" style="">
                             <div class="main-content">
-                                <div class="video">
-                                    <video src="sw_assets/trailer-small.mp4" width="480" height="270" loop muted ></video>
-                                </div>
 
-                                <span class="text-header">Star Wars VII: The Force Awakens
-                                Check out some stuff about it here</span>
+
+                                <span class="text-header">Headline 4 goes here</span>
 
                                 <a onclick="navigateToPage(3)">
-                                    <button type="submit"><span>Watch the trailer</span></button>
+                                    <button type="submit"><span>Button Text 4 goes here</span></button>
                                 </a>
                             </div>
                         </div>
-
-                        <div id="0-4" class="template-contentCard content-center layout-ksp sw-card sw-card-4" style="">
+                        <!-- Card 5 -->
+                        <div id="0-4" class="template-contentCard content-center layout-ksp centered-card centered-card-4" style="">
                             <div class="main-content">
 
-                                    <span class="text-header">Star Wars VII: The Force Awakens
-                                    Check out some stuff about it here</span>
+                                <span class="text-header">Headline 5 goes here</span>
 
-                                    <a onclick="navigateToPage(3)">
-                                        <button type="submit"><span>Watch the trailer</span></button>
-                                    </a>
+                                <a onclick="navigateToPage(3)">
+                                    <button type="submit"><span>Button Text 5 goes here</span></button>
+                                </a>
                             </div>
                         </div>
-
+                        <!-----------------------------------------------------------------------------
+                        // End centered cards
+                        //---------------------------------------------------------------------------->
 
                         <div id="1-0" class="template-contentCard content-left layout-feature windows-card" style="">
                             <div class="main-content">
@@ -550,7 +566,7 @@
                     </div>
                 </section>
 
-                <div class="template-pageIndicator theme-dark">
+                <div class="template-pageIndicator">
                     <nav class="pageIndicator-layoutRoot">
                         <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(0)">
                             <div class="indicatorContainer-indicator"></div>
@@ -571,10 +587,10 @@
                 </div>
 
                 <section class="template-hubStrip">
-                    <div class="template-hubButton sw-hubButton" onclick="navigateToSection(0)">
+                    <div class="template-hubButton oem-hubButton" onclick="navigateToSection(0)">
                         <div class="hubButton-content">
                             <a class="content-graphicContainer">
-                                <img class="graphicContainer-graphic" src="sw_assets/star-wars-logo.png"/>
+                                <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png" />
                             </a>
                         </div>
                     </div>

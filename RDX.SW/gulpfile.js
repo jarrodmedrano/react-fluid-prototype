@@ -32,7 +32,7 @@ gulp.task('less', function () {
             console.log(err);
         }))
         .pipe(concat('styles.css'))
-        .pipe(rename({suffix: '.min'}))
+        //.pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
