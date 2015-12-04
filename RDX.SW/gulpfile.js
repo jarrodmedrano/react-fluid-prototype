@@ -38,4 +38,4 @@ gulp.task('less', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['less', 'watch']);
+gulp.task('default', ['less']);

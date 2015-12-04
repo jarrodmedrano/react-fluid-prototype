@@ -117,18 +117,28 @@ function pauseOrPlay() {
     var currentVideo = document.getElementsByTagName("video")[i];
     var SecondUpID = currentVideo.parentNode.parentNode.id;
     var ThirdUpID = currentVideo.parentNode.parentNode.parentNode.id;
+    var SecondUp = document.getElementById(SecondUpID);
+    var ThirdUp = document.getElementById(ThirdUpID);
     if (SecondUpID.length === 3 && typeof parseInt(SecondUpID.slice(0, 1)) === "number") {
-      if (document.getElementById(SecondUpID).style.display === "none") {
+      if (SecondUp.style.display === "none") {
         currentVideo.pause();
+        document.exitFullscreen();
+
       } else {
-        currentVideo.play();
+        if(!SecondUp.classList.contains('noautoplay')) {
+          currentVideo.play();
+        }
       };
     };
     if (ThirdUpID.length === 3 && typeof parseInt(ThirdUpID.slice(0, 1)) === "number") {
       if (document.getElementById(ThirdUpID).style.display === "none") {
         currentVideo.pause();
+        document.exitFullscreen();
+
       } else {
-        currentVideo.play();
+        if(!ThirdUp.classList.contains('noautoplay')) {
+          currentVideo.play();
+        }
       };
     };
   };
@@ -389,6 +399,15 @@ function setShowingSlideToClientWidth(showingSlideID) {
 
 //*******************************************************************
 // moving
+document.addEventListener('fullscreeneventchange', function(e) {
+  if (document.isFullScreen) {
+    /* make it look good for fullscreen */
+    alert('test');
+  } else {
+    alert('false');
+    /* return to the normal state in page */
+  }
+}, true);
 
 var moving = function(event) {
     if (event.isPrimary === true && 
@@ -410,7 +429,7 @@ var moving = function(event) {
         oneFifthOriginalCarouselWidth = (carouselWidth / 5);
         if (absoluteDiffrerence > oneFifthOriginalCarouselWidth && difference > 0) {
           isAnimating = true;
-          var oldPage = currentID();  
+          var oldPage = currentID();
           updatePage(1);
           //WinGS.LogBI("Swipe", "{'direction':'previous','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
           slideSlider(leftString);
@@ -430,9 +449,9 @@ var moving = function(event) {
 var end = function(event) {
   if (event.isPrimary === true) {
     if (!isAnimating) {
-      isAnimating = true; 
+      isAnimating = true;
       reCentering(event);
-      isAnimating = false; 
+      isAnimating = false;
       InitialXPoint = undefined;
     };
   };
@@ -466,7 +485,7 @@ function slideSlider(directionMoving) {
   } else {
     document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
   }
-  setTimeout(function(){ 
+  setTimeout(function(){
     disassemble();
     isAnimating = false;
     isBuilt = false;
@@ -575,24 +594,25 @@ function resetBooleansAndLogicValues() {
 // section sliding
 //  possible bug - will there ever be only 1 section?
 
-// Fired ONLY on initial page load at 5000 millisecond intervals 
+// Fired ONLY on initial page load at 5000 millisecond intervals
 var isNewSlideToNextSectionRightExecuting = false;
 
 function newSlideToNextSectionRight() {
-  var isNextSectionHigher = false; 
+
+  var isNextSectionHigher = false;
   isNewSlideToNextSectionRightExecuting = true;
   var nextSection = currentSection;
   nextSection = nextSection + 1;
   for (var i = 0; i < arrayOfSections.length; i++) {
     if (nextSection === arrayOfSections[i]) {
-      isNextSectionHigher = true; 
+      isNextSectionHigher = true;
       goToArbitrarySection(nextSection);
     };
   };
   if (isNextSectionHigher === false) {
     goToArbitrarySection(0);
   };
-  isNextSectionHigher = false; 
+  isNextSectionHigher = false;
 };
 
 
@@ -601,6 +621,7 @@ function newSlideToNextSectionRight() {
 
 function goToArbitrarySection(sectionNumber) {
   if (!isAnimating) {
+
     isAnimating = true;
     ifIsBuiltIsTrue_Dissassemble();
     determingShowingSlide();
@@ -741,15 +762,16 @@ document.body.addEventListener("mousemove", function () {
 
 // Left + right arrow key functionality
 document.onkeydown = function (evt) {
+
     evt = evt || window.event;
     switch (evt.keyCode) {
         case 37:
-            var oldPage = currentID();    
+            var oldPage = currentID();
             toThePreviousPage();
             //WinGS.LogBI("KeyPress", "{'direction':'left','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
             break;
         case 39:
-            var oldPage = currentID();    
+            var oldPage = currentID();
             toTheNextPage();
             //WinGS.LogBI("KeyPress", "{'direction':'right','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
             break;
