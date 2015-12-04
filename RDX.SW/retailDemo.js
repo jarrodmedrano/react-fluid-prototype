@@ -399,21 +399,17 @@ function setShowingSlideToClientWidth(showingSlideID) {
 
 //*******************************************************************
 // moving
-document.addEventListener('fullscreeneventchange', function(e) {
-  if (document.isFullScreen) {
-    /* make it look good for fullscreen */
-    alert('test');
-  } else {
-    alert('false');
-    /* return to the normal state in page */
-  }
-}, true);
+
+
 
 var moving = function(event) {
-    if (event.isPrimary === true && 
+
+  var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) ||  (document.mozFullScreen || document.webkitIsFullScreen);
+
+    if (event.isPrimary === true &&
       pointerType       === event.pointerType && 
       isAnimating       === false && 
-      isBuilt           === true) {
+      isBuilt           === true && isInFullScreen === false) {
       var midX = event.clientX;
       var movedX = 0;
       var absoluteDiffrerence = Math.abs(Math.abs(InitialXPoint) - Math.abs(midX));
