@@ -1,0 +1,142 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  align-items: stretch;
+  position: relative;
+  color: @dark-grey;
+
+  header {
+
+    h1 {
+      margin-bottom: 0;
+      font-size: @fontSizeSubheader;
+      line-height: @lineHeightSubheader;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .expander {
+    //display: flex; // set the context
+    //flex: 1; // flex an equal amt of space yo!
+    //align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    //justify-content: start;
+    //padding: 0 10px;
+    width: 100%;
+    margin-top: 0;
+    transition: all 0.2s ease-in-out;
+    max-height: 33px;
+
+
+    .expanded-list {
+      //transform: scale(1, 0);
+      //display: flex;
+      //flex-direction: column;
+      //min-height: calc(100% - 33px);
+      display: none;
+    }
+
+    .animate-body {
+      transform: translateY(100px);
+      transition: transform .5s cubic-bezier(1, 0, 0, 1);
+    }
+
+    &.open {
+      z-index: 9999;
+      vertical-align: top;
+      background: #ececec;
+      color: #000;
+      max-height: 100%;
+
+      .animate-body {
+        transform: translateY(0);
+      }
+
+      button.btn-expand {
+        background: transparent;
+        color: #505050;
+        border-top: 0;
+
+        span::after {
+          content: '\E019';
+        }
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+      .expanded-list {
+        transform: scale(1, 1);
+      }
+    }
+
+    button.btn-expand {
+      border: 0;
+      border-top: 1px solid #737373;
+      color: #505050;
+      //background: #1c87bd;
+      padding-top: 10px;
+      margin: 0;
+      display: block;
+      width: 100%;
+      font-size: 11px;
+
+      span::after {
+        content: '\E018';
+        vertical-align: top;
+      }
+
+      &:hover {
+        background: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .spec-list {
+    //display: flex;
+    //flex: 1;
+
+    ul {
+      list-style-type: none;
+      margin-left: 1.8em;
+      padding-left: 1.8em;
+      text-indent: -1.8em;
+
+      li {
+        text-align: left;
+      }
+
+      li.icon::before {
+        font-family: 'Segoe MDL2 Assets';
+        float: left;
+        display: block;
+        padding-right: 1.8em;
+      }
+
+      li.icon.icon-software::before {
+        content: '\E7F8';
+      }
+
+      li.icon.icon-display::before {
+        content: '\E7FA';
+      }
+
+      li.icon.icon-hardware::before {
+        content: '\E212';
+      }
+    }
+
+    h2 {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+  }
+}

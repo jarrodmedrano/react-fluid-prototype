@@ -30,6 +30,31 @@ body {
 }
 
 //-----------------------------------------------------------------------------//
+// Facts Pane structure                                                      //
+//-----------------------------------------------------------------------------//
+.factsGrid {
+  display: -ms-grid;
+  -ms-grid-columns: auto 1fr;
+  height: 100vh;
+}
+
+.factsGrid .sidebar {
+  -ms-grid-column: 1;
+  background: #ececec;
+  width: 30vw;
+  height: 100vh;
+}
+
+.factsGrid .partnerSections {
+  -ms-grid-column: 2;
+  height: 100vh;
+
+  .page-body .control-carousel .carousel-controls .rightNav {
+    right: 30vw;
+  }
+}
+
+//-----------------------------------------------------------------------------//
 // Page Layout and hubStrip orientation                                        //
 //-----------------------------------------------------------------------------//
 

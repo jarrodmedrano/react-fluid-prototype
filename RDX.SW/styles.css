@@ -21,6 +21,24 @@ body {
   max-width: 100vw;
   margin: 0 auto;
 }
+.factsGrid {
+  display: -ms-grid;
+  -ms-grid-columns: auto 1fr;
+  height: 100vh;
+}
+.factsGrid .sidebar {
+  -ms-grid-column: 1;
+  background: #ececec;
+  width: 30vw;
+  height: 100vh;
+}
+.factsGrid .partnerSections {
+  -ms-grid-column: 2;
+  height: 100vh;
+}
+.factsGrid .partnerSections .page-body .control-carousel .carousel-controls .rightNav {
+  right: 30vw;
+}
 .page-body {
   display: -ms-grid;
   -ms-grid-columns: 1fr;
@@ -1039,6 +1057,108 @@ button:hover:active {
   display: -ms-grid;
   -ms-grid-columns: auto 1fr;
   position: relative;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  align-items: stretch;
+  position: relative;
+  color: #171717;
+}
+.sidebar header h1 {
+  margin-bottom: 0;
+  font-size: 34px;
+  line-height: 40px;
+}
+.sidebar header p {
+  margin-top: 0;
+}
+.sidebar .expander {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 0;
+  transition: all 0.2s ease-in-out;
+  max-height: 33px;
+}
+.sidebar .expander .expanded-list {
+  display: none;
+}
+.sidebar .expander .animate-body {
+  transform: translateY(100px);
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.sidebar .expander.open {
+  z-index: 9999;
+  vertical-align: top;
+  background: #ececec;
+  color: #000;
+  max-height: 100%;
+}
+.sidebar .expander.open .animate-body {
+  transform: translateY(0);
+}
+.sidebar .expander.open button.btn-expand {
+  background: transparent;
+  color: #505050;
+  border-top: 0;
+}
+.sidebar .expander.open button.btn-expand span::after {
+  content: '\E019';
+}
+.sidebar .expander.open button.btn-expand:hover {
+  color: #000;
+}
+.sidebar .expander.open .expanded-list {
+  transform: scale(1, 1);
+}
+.sidebar .expander button.btn-expand {
+  border: 0;
+  border-top: 1px solid #737373;
+  color: #505050;
+  padding-top: 10px;
+  margin: 0;
+  display: block;
+  width: 100%;
+  font-size: 11px;
+}
+.sidebar .expander button.btn-expand span::after {
+  content: '\E018';
+  vertical-align: top;
+}
+.sidebar .expander button.btn-expand:hover {
+  background: transparent;
+  cursor: pointer;
+}
+.sidebar .spec-list ul {
+  list-style-type: none;
+  margin-left: 1.8em;
+  padding-left: 1.8em;
+  text-indent: -1.8em;
+}
+.sidebar .spec-list ul li {
+  text-align: left;
+}
+.sidebar .spec-list ul li.icon::before {
+  font-family: 'Segoe MDL2 Assets';
+  float: left;
+  display: block;
+  padding-right: 1.8em;
+}
+.sidebar .spec-list ul li.icon.icon-software::before {
+  content: '\E7F8';
+}
+.sidebar .spec-list ul li.icon.icon-display::before {
+  content: '\E7FA';
+}
+.sidebar .spec-list ul li.icon.icon-hardware::before {
+  content: '\E212';
+}
+.sidebar .spec-list h2 {
+  font-size: 15px;
+  margin-bottom: 0;
 }
 @font-face {
   font-family: 'Segoe UI Webfont';
