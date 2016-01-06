@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create();
 
 // use default task to launch Browsersync and watch JS files
-gulp.task('serve', ['less'], function () {
+    gulp.task('serve', ['less'], function () {
 
     // Serve files from the root of this project
     browserSync.init({
