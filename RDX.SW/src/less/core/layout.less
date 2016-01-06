@@ -99,23 +99,11 @@ body {
             margin: auto;
 
                 .hero-img {
-                    -ms-grid-column-align: end;
                     -ms-grid-row-align: center;
-                    max-width: 100%;
-                    
-
-                    @media screen and (min-width: 750px) and (max-width: 1200px) {
-                        &.full-width-video {
-                            display: -ms-grid;
-                            -ms-grid-column-align: center;   
-                            -ms-grid-row-align: center;
-                            -ms-grid-columns: 40vw 48px; 
-                        }
-                    }
                     
                     img {
-                        width: auto;
-                        height: 80vh;
+                        width: 100%;
+                        height: auto;
                     }
                     
                 }
@@ -124,11 +112,10 @@ body {
                     -ms-grid-row-align: center;
                     width: 100%;
 
-                    /* Cap all images width
                     @media screen and @mediaQueryBreakpointMd {
-                        width: 440px;
-                    } */
-                    
+                        width: 400px;
+                    }
+
                     .text-header {
                         display: block;
                         padding: 0;
