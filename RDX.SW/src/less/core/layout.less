@@ -903,19 +903,18 @@ button {
 //  Type                                                                       //
 //-----------------------------------------------------------------------------//
 
-.text-legal p {
+.text-legal {
     .text-captionAlt();
     opacity: .6;
     font-size: 10pt !important;
     line-height: 12pt;
-    margin: 0;
+    margin: 0 24px;
 }
 
 .card-content + .text-legal p,
 .card-content + a + .text-legal p,
 .card-content + button + .text-legal p {
-    padding: (@design-unit * 2.5) 0;
-    height: auto;
+    margin-top: 12px;
 }
 
 //-----------------------------------------------------------------------------//
@@ -931,16 +930,11 @@ button {
     .hero-img {
         
         &.video {
-            -ms-grid-column-align: center !important;
             width: 100%;
-            padding-right: 48px;
-            padding-left: 48px;
         }
         
         video {
             max-width: 100%;
-            width: 100%;
-            
         }
         
     }
@@ -1126,134 +1120,6 @@ button {
     }
 }
 
-
-//-----------------------------------------------------------------------------//
-//  LAYOUT SPECIFICATIONS (NEW SPECS)                                          //
-//-----------------------------------------------------------------------------//
-.layout-specifications {
-    
-    .layout-feature();
-    
-    .main-content {
-        width: 100% !important
-    }
-    
-    .hero-img {
-        -ms-grid-column-align: start !important;
-        max-width: 100%;
-        
-        @media all and (min-width: 775px) {
-            img {
-               /* max-width: 100% !important;
-                height: auto !important; */
-            }
-        }
-    }
-    
-    .card-content + .text-legal p,
-    .card-content + a + .text-legal p,
-    .card-content + button + .text-legal p {
-        padding: 0;
-    }
-   
-   ul {        
-        
-        li {
-            display: -ms-grid;
-            -ms-grid-columns: 1fr 2fr;
-            background-color: rgba(0,0,0,.1);
-            margin-bottom: 20px;
-            padding: 0 20px;
-            
-            .label {
-                -ms-grid-column: 1;
-                display: block;
-                -ms-grid-column-align: start;
-                -ms-grid-row-align: center;
-            }
-
-            .spec {
-                -ms-grid-column: 2;
-                display: block;
-                margin: 10px 0;
-                -ms-grid-column-align: end;
-                -ms-grid-row-align: center;
-                text-align: right;
-            }
-            
-            @media all and (max-width: 1080px), all and (max-height: 700px) {
-                & {
-                    padding: 10px 20px;
-                    margin: 10px 0;
-                }
-                
-                .label {
-                    margin: 0 !important;
-                }
-                
-                .spec {
-                    .text-subtitle();
-                    font-weight: 100;
-                    margin: 0;
-                }
-            }
-        }
-   }
-    
-    
-    /*-------------------------------side by side-----------------------------------*/
-    
-    /*
-     ul {        
-        
-        li {
-            display: -ms-grid;
-            -ms-grid-columns: 1fr 1fr;
-            background-color: rgba(0,0,0,.1);
-            margin-bottom: 20px;
-            padding: 0 20px;
-            
-            .label {
-                -ms-grid-column: 1;
-                display: block;
-                -ms-grid-column-align: start;
-            }
-
-            .spec {
-                -ms-grid-column: 2;
-                display: block;
-                -ms-grid-column-align: end;
-                .text-body() !important;
-            }
-        }
-   } */
-    
-/*----------------------------------Top Down-------------------------------------*/
-/*
-    
-  ul {        
-        
-        li {
-            display: -ms-grid;
-            -ms-grid-rows: 20px 50px 20px;
-
-            .label {
-                -ms-grid-row: 1;
-                display: block;
-            }
-
-            .spec {
-                -ms-grid-row: 2;
-                display: block;
-            }
-        }
-   } 
-
-    */
-}
-
-
-
 //-----------------------------------------------------------------------------//
 //  LAYOUT SPECS                                                               //
 //-----------------------------------------------------------------------------//
@@ -1318,8 +1184,4 @@ button {
 //-----------------------------------------------------------------------------//
 // Page Layout and hubStrip orientation                                        //
 //-----------------------------------------------------------------------------//
-
-.hide {
-    display: none;
-}
 
