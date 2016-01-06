@@ -14,14 +14,14 @@
  padding: 0;
  margin: 0;
  -ms-user-select: none;
- } 
+ }
 
 body {
     height: 100%;
     touch-action: none;
 }
 
-.control-app { 
+.control-app {
     height: 100%;
     width: 100%;
     min-width: @app-min-width;
@@ -47,16 +47,16 @@ body {
 
         .control-carousel { -ms-grid-row: 1; }
         .template-hubStrip { -ms-grid-row: 2; }
-        
+
         .template-pageIndicator {
             bottom: (@brandBar-height / 1.5) + (@design-unit * 3);
-            
+
             @media screen and @mediaQueryBreakpointMd {
                 bottom: @brandBar-height + (@design-unit * 3);
             }
         }
     }
-    
+
     &.content-bottom {
         -ms-grid-rows: auto 1fr 44px;
 
@@ -67,8 +67,8 @@ body {
 
 //-----------------------------------------------------------------------------//
 // Content card structure                                                      //
-//-----------------------------------------------------------------------------//    
-    
+//-----------------------------------------------------------------------------//
+
     // Page content containing card containers and indicators
     .control-carousel {
 
@@ -76,11 +76,11 @@ body {
         overflow: hidden;
         position: relative;
         width: 100%;
-        
+
         .carousel-slideContainer {
             display: flex;
             height: 100%;
-            
+
             &#slider {
               width: 100%;
               margin-left: 0%;
@@ -100,12 +100,12 @@ body {
 
                 .hero-img {
                     -ms-grid-row-align: center;
-                    
+
                     img {
                         width: 100%;
                         height: auto;
                     }
-                    
+
                 }
 
                 .main-content {
@@ -219,7 +219,7 @@ body {
                     }
 
                     @media screen and @mediaQueryVerticalBreakpointXSm {
-                        -ms-grid-columns: 40% @padding-unit auto @page-margin;              
+                        -ms-grid-columns: 40% @padding-unit auto @page-margin;
                     }
 
                     @media @mediaQueryBreakpointMd {
@@ -246,11 +246,11 @@ body {
                 }
 
                 // Required Setting [template-contentCard] - 3 col layout with header for title/logo and sub-content boxes
-            
+
                 &.page-content-fourColumn {
                     -ms-grid-rows: @padding-unit 1fr;
                     -ms-grid-columns: @padding-unit 1fr 1fr 1fr 1fr @padding-unit;
-                
+
                     .column {
                         display: -ms-grid;
                         -ms-grid-columns: 1fr auto 1fr;
@@ -289,13 +289,13 @@ body {
                 &.page-content-threeColumn {
                     -ms-grid-rows: @padding-unit 1fr;
                     -ms-grid-columns: 1fr 1fr 1fr;
-                
+
                     @media all and (min-width: 640px) and (max-width: 1100px) {
                         -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
                         -ms-grid-columns: @padding-unit 1fr @padding-unit;
                         max-height: 650px;
                     }
-                    
+
                     @media all and (max-width: 640px) {
                         -ms-grid-columns: @padding-unit 1fr @padding-unit;
                         -ms-grid-rows: 1fr auto 14px auto 14px auto 1fr;
@@ -314,13 +314,13 @@ body {
                                  -ms-grid-row: 2;
                                  -ms-grid-columns: 100px auto;
                         }
-                        
+
                         &.col2 { -ms-grid-column: 2;
                                  -ms-grid-row: 2;
                                  -ms-grid-columns: (@padding-unit*2) auto (@padding-unit*2);
-                                  
+
                         }
-                        
+
                         &.col3 { -ms-grid-column: 3;
                                  -ms-grid-row: 2;
                                  -ms-grid-columns: auto 100px;
@@ -333,12 +333,12 @@ body {
                             @media all and (min-width: 640px) and (max-width: 1100px) {
                              -ms-grid-rows: 1fr 90px 40px 1fr 1fr 100px 1fr 1fr 1fr;
                             }
-                            
+
                             .graphicContainer-graphic,
                             .headingBox {
-                                -ms-grid-row: 2;   
+                                -ms-grid-row: 2;
                             }
-                            
+
                             @media all and (max-width: 1100px) {
                                 .graphicContainer-graphic,
                                 .headingBox {
@@ -356,7 +356,7 @@ body {
                                 -ms-grid-row: 5;
                                 -ms-grid-column: 1;
                             }
-                            
+
                              .label2 {
                                 -ms-grid-row: 7;
                                 -ms-grid-column: 1;
@@ -367,8 +367,8 @@ body {
                                 -ms-grid-row: 8;
                                 -ms-grid-column: 1;
                             }
-                            
-                            // Col 1 grid exception to allow for desktop padding // 
+
+                            // Col 1 grid exception to allow for desktop padding //
                             @media all and (min-width: 1100px) {
                                 &.col1, &.col2 {
                                      .graphicContainer-graphic,
@@ -393,15 +393,15 @@ body {
                                     }
                                 }
                             }
-                            
+
                             @media all and (min-width: 640px) and (max-width: 1100px) {
                                 -ms-grid-rows: 1fr 70px 20px auto auto 36px auto auto 36px auto 1fr;
                                 -ms-grid-columns: @padding-unit 1fr 36px 1fr @padding-unit;
-                                                
+
                                 &.col1 { -ms-grid-column: 2; -ms-grid-row: 2; }
                                 &.col2 { -ms-grid-column: 2; -ms-grid-row: 4; }
                                 &.col3 { -ms-grid-column: 2; -ms-grid-row: 6; }
-                                
+
                                 .graphicContainer-graphic,
                                 .headingBox {
                                     -ms-grid-row: 2 !important;
@@ -412,7 +412,7 @@ body {
                                     -ms-grid-column: 2;
                                     margin-bottom: 0;
                                 }
-                                
+
                                 .spec1 {
                                     -ms-grid-row: 5 !important;
                                     -ms-grid-column: 2;
@@ -423,17 +423,17 @@ body {
                                     -ms-grid-column: 4;
                                     margin-bottom: 0;
                                 }
-                                
+
                                 .spec2 {
                                     -ms-grid-row: 5 !important;
                                     -ms-grid-column: 4;
                                 }
                             }
-                            
+
                            @media all and (max-width: 640px) {
                                 -ms-grid-rows: auto auto auto 48px auto auto;
                                 -ms-grid-columns: @padding-unit 1fr @padding-unit;
-                                                
+
                                 &.col1 { -ms-grid-column: 2; -ms-grid-row: 2; }
                                 &.col2 { -ms-grid-column: 2; -ms-grid-row: 4; }
                                 &.col3 { -ms-grid-column: 2; -ms-grid-row: 6; }
@@ -441,7 +441,7 @@ body {
                                  .graphicContainer-graphic,
                                  .headingBox {
                                     -ms-grid-row: 1 !important;
-                                     
+
                                      .text-header {
                                         margin-top: 28px;
                                         margin-bottom: 0;
@@ -483,11 +483,11 @@ body {
                 }
             }
         }
-        
+
 //-----------------------------------------------------------------------------//
 //   sideNav Prev and Next Arrows                                              //
 //-----------------------------------------------------------------------------//
-        
+
         .carousel-controls {
             width: 100%;
             position: fixed;
@@ -498,7 +498,7 @@ body {
                 display: -ms-grid !important;
                 -ms-grid-rows: 1fr auto @brandBar-height 1fr;
                 -ms-grid-columns: 1fr auto 1fr;
-                
+
                 -ms-grid-row: 2;
                 height: @flipview-height;
                 width: @flipview-width;
@@ -507,12 +507,12 @@ body {
                 font-weight: bold;
                 margin-bottom: @brandBar-height;
                 font-family: 'Segoe MDL2 Assets';
-                
+
                 &:hover {
                     background: fade(@black, 40%);
                     display: -ms-grid !important;
                 }
-                
+
                 .slideNav-directionIndicator {
                     -ms-grid-row: 2;
                     -ms-grid-column: 2;
@@ -523,7 +523,7 @@ body {
                 position: absolute;
                 left: 0;
                 top: 50%;
-                
+
                 .directionIndicator-prev {
                     &:after { content: '\E76B'; }
                     font-size: 11pt;
@@ -537,7 +537,7 @@ body {
                 position: absolute;
                 right: 0;
                 top: 50%;
-                
+
                 .directionIndicator-next {
                     &:after { content: '\E76C'; }
                     font-size: 11pt;
@@ -553,28 +553,28 @@ body {
 // Active state for hubButton shading
 .active {
     position: relative;
-    
+
     &.template-hubButton:after {
-        border-top-color: @dark-grey; 
-        
+        border-top-color: @dark-grey;
+
         @media screen and (-ms-high-contrast: active) {
             border-left-color: transparent !important;
-            border-right-color: transparent !important;   
+            border-right-color: transparent !important;
         }
     }
-    
+
     &:after {
         content: ' ';
         position: absolute;
         left: 44%;
         bottom: -(@design-unit * 3);
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-top: 12px solid transparent;
         z-index: 3;
-        
+
         @media screen and @mediaQueryBreakpointMd {
             left: 45%;
             bottom: -(@design-unit * 4.2);
@@ -584,7 +584,7 @@ body {
             border-top: 17px solid transparent;
         }
     }
-    
+
 }
 
 //-----------------------------------------------------------------------------//
@@ -597,21 +597,21 @@ body {
     display: -ms-grid;
     -ms-grid-columns: 1fr (@indicator-size * 2) auto @indicator-size 1fr;
     z-index: 2000;
-    
+
     @media screen and (max-height: (@app-min-height - 100)) {
         bottom: 20px !important;
     }
-    
+
      // Round Page indicator/nav bar
     .pageIndicator-layoutRoot {
         -ms-grid-column: 3;
         display: inline-flex;
-        
+
         a {
             margin: 0;
         }
     }
-    
+
     // Individual indicator circle link
     .indicatorContainer-indicator {
         width: @indicator-size * 6.5;
@@ -743,7 +743,7 @@ body {
     }
 
 
-    
+
     // Prev / Next buttons on either side of indicators
     .indicatorContainer-directionNav {
         line-height: 1;
@@ -751,38 +751,38 @@ body {
         width: @indicator-size;
         font-family: 'Segoe MDL2 Assets';
         opacity: .6;
-        
+
         &:hover {
             opacity: .9;
             font-weight: bold;
         }
     }
-    
+
     // Previous directionNav Arrow
     .directionNav-prev {
         -ms-grid-column: 2;
         -ms-grid-column-align: end;
         -ms-grid-row-align: center;
         display: none;
-        
+
         &:focus {
             outline: 1px dotted white;
         }
-        
+
         &:after { content: '\E76B'; }
     }
-    
+
     // Next directionNav Arrow
     .directionNav-next {
         -ms-grid-column: 4;
         -ms-grid-column-align: end;
         -ms-grid-row-align: center;
         display: none;
-        
+
         &:focus {
             outline: 1px dotted white;
         }
-        
+
          &:after { content: '\E76C'; }
     }
 }
@@ -811,37 +811,37 @@ body {
         flex: 1;
         flex-shrink: 1;
         height: 200px;
-        
+
         &:focus {
             outline: 1px dotted white;
         }
 
-        
+
             @media screen and (-ms-high-contrast: active) {
                 border-bottom: 2px yellow solid;
             }
-        
+
             @media screen and (-ms-high-contrast: black-on-white) {
                 background-color: black;
                 border-bottom: none;
                 border-right: 2px white solid;
-            
+
                 &:last-of-type {
                     border-right: none;
                 }
             }
-        
+
            @media screen and (-ms-high-contrast: white-on-black) {
                 background-color: black;
                 border-bottom: 3px white solid;
                 border-right: 3px white solid;
             }
-        
+
         max-width: @max-brandBar-width;
         height: @brandBar-height;
         position: relative;
         border-left: 2px solid @dark-grey;
-        
+
             &:first-of-type {
                 border: none;
             }
@@ -849,12 +849,12 @@ body {
         .hubButton-content {
             -ms-grid-row: 2;
             -ms-grid-column: 2;
-            
+
             .graphicContainer-graphic {
                 max-width: 150px;
                 max-height: 60px;
                 width: 60%;
-                
+
                 @media screen and @mediaQueryBreakpointMd {
                     width: 80%;
                 }
@@ -872,11 +872,11 @@ button {
     &:hover {
         opacity: .85;
     }
-    
+
     &:hover:active {
         opacity: .7;
     }
-    
+
         @media screen and (-ms-high-contrast: active) {
             background: yellow;
             color: black;
@@ -886,7 +886,7 @@ button {
             background: black;
             color: white;
         }
-    
+
         @media screen and (-ms-high-contrast: white-on-black) {
             background: white;
             color: black;
@@ -916,33 +916,33 @@ button {
 //  LAYOUT KSP                                                                 //
 //-----------------------------------------------------------------------------//
 .layout-ksp {
-    
+
     .logo {
         max-width: 200px;
         max-height: 120px;
     }
-        
+
     .hero-img {
 
         video {
             max-width: 100%;
         }
-        
+
     }
 
     .headingBox {
         clear: both;
         margin: (@design-unit * 5) 0;
     }
-    
+
     &.template-contentCard {
         overflow-y: visible;
-        
-        @media screen and @mediaQueryBreakpointMd { 
+
+        @media screen and @mediaQueryBreakpointMd {
             overflow: hidden;
         }
     }
-    
+
     // Main content component - List text with or without icons
     .card-content {
         display: -ms-grid;
@@ -983,12 +983,12 @@ button {
             }
         }
     }
-    
+
     .template-videoPlayer {
-    
+
         .videoPlayer-backgroundGraphic {
 
-            &.custom-backgroundGraphic { 
+            &.custom-backgroundGraphic {
                 position: relative;
                 height: 0px;
             }
@@ -1009,45 +1009,45 @@ button {
 //-----------------------------------------------------------------------------//
 .layout-feature,
 .layout-featureCta {
-    
+
     .logo {
         max-width: 200px;
         max-height: 120px;
     }
-      
+
     .hero-img {
         video,
         .img-gif {
             width: 100%;
-            
+
             @media all and (min-width: 901px) and (max-width: 1100px) {
                 width: 85% !important;
             }
-                     
+
             @media all and (min-width: 768px) and (max-width: 900px) {
                 width: 70% !important;
             }
         }
     }
-    
+
        .headingBox {
         clear: both;
         margin: (@design-unit * 4) 0;
-                
+
         .text-subheader + .text-body {
             margin-top: (@design-unit * 8);
             display: block;
         }
     }
-    
+
     &.template-contentCard {
         overflow-y: visible;
-        
-        @media screen and @mediaQueryBreakpointMd { 
+
+        @media screen and @mediaQueryBreakpointMd {
             overflow: hidden;
         }
     }
-       
+
     // Main content component - List text with or without icons
     .card-content {
         display: -ms-grid;
@@ -1090,12 +1090,12 @@ button {
             }
         }
     }
-    
+
     .template-videoPlayer {
-    
+
         .videoPlayer-backgroundGraphic {
 
-            &.custom-backgroundGraphic { 
+            &.custom-backgroundGraphic {
                 position: relative;
                 height: 0px;
             }
@@ -1116,7 +1116,7 @@ button {
 //-----------------------------------------------------------------------------//
 
 .layout-specs {
-    
+
     .column {
 
         .text-base {
@@ -1130,7 +1130,7 @@ button {
         .text-subheader {
             display: block;
             margin: 0;
-            
+
                 @media screen and (max-width: 640px) {
                     .text-title();
                     margin: 0;
@@ -1141,11 +1141,11 @@ button {
             }
         }
     }
-    
+
     .text-legal {
         -ms-grid-row: 10;
         -ms-grid-column: 2;
-        
+
         @media all and (min-width: 1100px) {
             -ms-grid-column: 1;
             -ms-grid-column-span: 3;
@@ -1155,15 +1155,15 @@ button {
             margin-right: 100px;
         }
     }
-    
+
     &.template-contentCard {
         overflow-y: visible;
-        
-        @media screen and @mediaQueryBreakpointMd { 
+
+        @media screen and @mediaQueryBreakpointMd {
             overflow: hidden;
         }
     }
-    
+
     // Main content component - List text with or without icons
     .card-content {
         display: -ms-grid;
