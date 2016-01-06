@@ -28,9 +28,9 @@ gulp.task('less', function () {
         .pipe(less().on('error', function (err) {
             console.log(err);
         }))
-        //.pipe(cssmin().on('error', function(err) {
-        //    console.log(err);
-        //}))
+        .pipe(cssmin().on('error', function(err) {
+            console.log(err);
+        }))
         .pipe(concat('styles.css'))
         //.pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('./maps'))
