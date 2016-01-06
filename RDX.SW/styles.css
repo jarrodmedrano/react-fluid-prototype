@@ -132,6 +132,16 @@ body {
   -ms-grid-column-span: 4;
   -ms-grid-row: 2;
 }
+.page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .hero-img.fit-height {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-row-align: stretch;
+}
+.page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .hero-img.fit-height img {
+  width: auto;
+  height: 100%;
+  float: right;
+}
 @media screen and (max-height: 540px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
     -ms-grid-columns: 48px auto 40% 48px;

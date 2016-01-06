@@ -161,6 +161,18 @@ body {
                         -ms-grid-column: 1;
                         -ms-grid-column-span: 4;
                         -ms-grid-row: 2;
+
+                        &.fit-height {
+                            -ms-grid-row: 1;
+                            -ms-grid-row-span: 3;
+                            -ms-grid-row-align: stretch;
+
+                            img {
+                                width: auto;
+                                height: 100%;
+                                float: right;
+                            }
+                        }
                     }
 
                     @media screen and @mediaQueryVerticalBreakpointXSm {
