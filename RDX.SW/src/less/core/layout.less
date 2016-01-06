@@ -680,69 +680,6 @@ body {
         }
     }
 
-    &.theme-dark  {
-
-        background: @black;
-
-        .indicatorContainer-indicator {
-
-            @media screen and (-ms-high-contrast: active) {
-                -ms-high-contrast-adjust: none;
-
-                &.active:before {
-                    background-color: yellow;
-                }
-            }
-
-            @media screen and (-ms-high-contrast: black-on-white) {
-                &.active:before {
-                    background-color: black;
-                }
-            }
-
-            @media screen and (-ms-high-contrast: white-on-black) {
-                &.active:before {
-                    background-color: white;
-                }
-            }
-
-            &:before {
-                background-color: fade(@indicator-color-dark, 40%);
-
-                @media screen and (-ms-high-contrast: active) {
-                    background-color: fade(@white, 40%);
-                }
-
-                @media screen and (-ms-high-contrast: black-on-white) {
-                    background-color: fade(@black, 40%);
-                }
-
-                @media screen and (-ms-high-contrast: white-on-black) {
-                    background-color: fade(@white, 40%);
-                }
-            }
-
-            &.indicator-0 {
-                &.active:before {
-                    background-color: #F6E934;
-                }
-            }
-
-            &:hover:before {
-                background-color: fade(@indicator-color-dark, 60%);
-
-                @media screen and (-ms-high-contrast: active) {
-                    background-color: fade(@white, 80%);
-                }
-
-                @media screen and (-ms-high-contrast: black-on-white) {
-                    background-color: fade(@black, 80%);
-                }
-            }
-        }
-    }
-
-
 
     // Prev / Next buttons on either side of indicators
     .indicatorContainer-directionNav {

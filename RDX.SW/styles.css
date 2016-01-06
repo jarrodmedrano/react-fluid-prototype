@@ -612,61 +612,6 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
-.template-pageIndicator.theme-dark {
-  background: #000000;
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator {
-    -ms-high-contrast-adjust: none;
-  }
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
-    background-color: yellow;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
-    background-color: black;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
-    background-color: white;
-  }
-}
-.template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-}
-.template-pageIndicator.theme-dark .indicatorContainer-indicator.indicator-0.active:before {
-  background-color: #F6E934;
-}
-.template-pageIndicator.theme-dark .indicatorContainer-indicator:hover:before {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:hover:before {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:hover:before {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
 .template-pageIndicator .indicatorContainer-directionNav {
   line-height: 1;
   height: 8px;
