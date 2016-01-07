@@ -1066,6 +1066,7 @@ button:hover:active {
   align-items: stretch;
   position: relative;
   color: #171717;
+  overflow: hidden;
 }
 .sidebar header h1 {
   margin-bottom: 0;
@@ -1078,12 +1079,13 @@ button:hover:active {
 .sidebar label.btn-expand {
   border: 0;
   border-top: 1px solid #737373;
+  z-index: 9999;
   color: #505050;
-  padding-top: 10px;
   margin: 0;
   display: block;
   width: 100%;
   font-size: 11px;
+  line-height: 33px;
   position: absolute;
   bottom: 0;
 }
@@ -1092,7 +1094,7 @@ button:hover:active {
   vertical-align: top;
 }
 .sidebar label.btn-expand:hover {
-  background: transparent;
+  background: blue;
   cursor: pointer;
 }
 .sidebar #menu-toggle {
@@ -1100,14 +1102,14 @@ button:hover:active {
   /* hide the checkbox */
 }
 .sidebar #menu-toggle:checked + .expander {
-  z-index: 9999;
+  z-index: 2;
   vertical-align: top;
   background: red;
   color: #000;
   max-height: 100%;
 }
 .sidebar #menu-toggle:checked + .expander .animate-body {
-  transform: translateY(0);
+  transform: translateY(33px);
 }
 .sidebar #menu-toggle:checked + .expander button.btn-expand {
   background: transparent;
@@ -1125,6 +1127,7 @@ button:hover:active {
 }
 .sidebar .expander {
   position: absolute;
+  bottom: 33px;
   width: 100%;
   margin-top: 0;
   transition: all 0.2s ease-in-out;

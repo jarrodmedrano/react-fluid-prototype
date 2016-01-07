@@ -6,6 +6,7 @@
   align-items: stretch;
   position: relative;
   color: @dark-grey;
+  overflow: hidden;
 
   header {
 
@@ -23,13 +24,16 @@
   label.btn-expand {
     border: 0;
     border-top: 1px solid #737373;
+    z-index: 9999;
     color: #505050;
+
     //background: #1c87bd;
-    padding-top: 10px;
+    //padding-top: 10px;
     margin: 0;
     display: block;
     width: 100%;
     font-size: 11px;
+    line-height: 33px;
     position: absolute;
     bottom: 0;
 
@@ -39,7 +43,7 @@
     }
 
     &:hover {
-      background: transparent;
+      background: blue;
       cursor: pointer;
     }
   }
@@ -49,14 +53,14 @@
   }
 
   #menu-toggle:checked + .expander {
-    z-index: 9999;
+    z-index: 2;
     vertical-align: top;
     background: red;
     color: #000;
     max-height: 100%;
 
     .animate-body {
-      transform: translateY(0);
+      transform: translateY(0 + 33px);
     }
 
     button.btn-expand {
@@ -83,7 +87,7 @@
     //flex: 1; // flex an equal amt of space yo!
     //align-items: flex-end;
     position: absolute;
-    //bottom: 0;
+    bottom: 33px;
     //justify-content: start;
     //padding: 0 10px;
     width: 100%;
