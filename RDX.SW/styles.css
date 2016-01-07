@@ -1075,84 +1075,71 @@ button:hover:active {
 .sidebar header p {
   margin-top: 0;
 }
-.sidebar .expander {
-  width: 100%;
-  margin-top: 0;
-  transition: all 0.2s ease-in-out;
-  height: 100%;
-  position: absolute;
-}
-.sidebar .expander .animate-body {
-  transform: translateY(100px);
-  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
-}
-.sidebar .expander.open {
-  z-index: 9999;
-  vertical-align: top;
-  background: #ececec;
-  color: #000;
-  max-height: 100%;
-}
-.sidebar .expander.open .animate-body {
-  transform: translateY(0);
-}
-.sidebar .expander.open button.btn-expand {
-  background: transparent;
-  color: #505050;
-  border-top: 0;
-}
-.sidebar .expander.open button.btn-expand span::after {
-  content: '\E019';
-}
-.sidebar .expander.open button.btn-expand:hover {
-  color: #000;
-}
-.sidebar .expander.open .expanded-list {
-  transform: scale(1, 1);
-}
-.sidebar .expander label {
-  cursor: pointer;
-}
-.sidebar .expander #menu-toggle {
-  display: none;
-  /* hide the checkbox */
-}
-.sidebar .expander #menu {
-  max-height: 0;
-  overflow: hidden;
-}
-.sidebar .expander #menu .animate-body {
-  transform: translateY(500px);
-  background: red;
-  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
-}
-.sidebar .expander #menu-toggle:checked + #menu {
-  max-height: 100%;
-  height: 100%;
-}
-.sidebar .expander #menu-toggle:checked + #menu .animate-body {
-  transform: translateY(0);
-}
-.sidebar .expander label.btn-expand {
-  position: absolute;
-  bottom: 0;
+.sidebar label.btn-expand {
   border: 0;
+  border-top: 1px solid #737373;
   color: #505050;
+  padding-top: 10px;
   margin: 0;
   display: block;
   width: 100%;
   font-size: 11px;
-  text-transform: uppercase;
-  line-height: 33px;
-  vertical-align: middle;
+  position: absolute;
+  bottom: 0;
 }
-.sidebar .expander label.btn-expand span::after {
+.sidebar label.btn-expand span::after {
   content: '\E018';
   vertical-align: top;
 }
-.sidebar .expander label.btn-expand:hover {
+.sidebar label.btn-expand:hover {
   background: transparent;
   cursor: pointer;
+}
+.sidebar #menu-toggle {
+  display: none;
+  /* hide the checkbox */
+}
+.sidebar #menu-toggle:checked + .expander {
+  z-index: 9999;
+  vertical-align: top;
+  background: red;
+  color: #000;
+  max-height: 100%;
+}
+.sidebar #menu-toggle:checked + .expander .animate-body {
+  transform: translateY(0);
+}
+.sidebar #menu-toggle:checked + .expander button.btn-expand {
+  background: transparent;
+  color: #505050;
+  border-top: 0;
+}
+.sidebar #menu-toggle:checked + .expander button.btn-expand span::after {
+  content: '\E019';
+}
+.sidebar #menu-toggle:checked + .expander button.btn-expand:hover {
+  color: #000;
+}
+.sidebar #menu-toggle:checked + .expander .expanded-list {
+  transform: scale(1, 1);
+}
+.sidebar .expander {
+  position: absolute;
+  width: 100%;
+  margin-top: 0;
+  transition: all 0.2s ease-in-out;
+  max-height: 33px;
+  height: 100%;
+}
+.sidebar .expander .expanded-list {
+  transform: scale(1, 0);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(67%);
+}
+.sidebar .expander .animate-body {
+  transform: translateY(100px);
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
 }
 .sidebar .spec-list ul {
   list-style-type: none;
