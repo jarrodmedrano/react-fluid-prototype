@@ -1076,15 +1076,11 @@ button:hover:active {
   margin-top: 0;
 }
 .sidebar .expander {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   margin-top: 0;
   transition: all 0.2s ease-in-out;
-  max-height: 33px;
-}
-.sidebar .expander .expanded-list {
-  display: none;
+  height: 100%;
+  position: absolute;
 }
 .sidebar .expander .animate-body {
   transform: translateY(100px);
@@ -1114,7 +1110,32 @@ button:hover:active {
 .sidebar .expander.open .expanded-list {
   transform: scale(1, 1);
 }
-.sidebar .expander button.btn-expand {
+.sidebar .expander label {
+  cursor: pointer;
+}
+.sidebar .expander #menu-toggle {
+  display: none;
+  /* hide the checkbox */
+}
+.sidebar .expander #menu {
+  max-height: 0;
+  overflow: hidden;
+}
+.sidebar .expander #menu .animate-body {
+  transform: translateY(500px);
+  background: red;
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.sidebar .expander #menu-toggle:checked + #menu {
+  max-height: 100%;
+  height: 100%;
+}
+.sidebar .expander #menu-toggle:checked + #menu .animate-body {
+  transform: translateY(0);
+}
+.sidebar .expander label.btn-expand {
+  position: absolute;
+  bottom: 0;
   border: 0;
   color: #505050;
   margin: 0;
@@ -1125,11 +1146,11 @@ button:hover:active {
   line-height: 33px;
   vertical-align: middle;
 }
-.sidebar .expander button.btn-expand span::after {
+.sidebar .expander label.btn-expand span::after {
   content: '\E018';
   vertical-align: top;
 }
-.sidebar .expander button.btn-expand:hover {
+.sidebar .expander label.btn-expand:hover {
   background: transparent;
   cursor: pointer;
 }
