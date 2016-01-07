@@ -82,11 +82,13 @@
       border-top: 1px solid #737373;
       color: #505050;
       //background: #1c87bd;
-      padding-top: 10px;
       margin: 0;
       display: block;
       width: 100%;
       font-size: 11px;
+      text-transform: uppercase;
+      line-height: 33px;
+      vertical-align: middle;
 
       span::after {
         content: '\E018';
@@ -135,7 +137,9 @@
     }
 
     h2 {
-      font-size: 15px;
+      font-size: @fontSizeBase;
+      line-height: @lineHeightBase;
+      padding-top: 0;
       margin-bottom: 0;
     }
   }

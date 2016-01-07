@@ -1118,11 +1118,13 @@ button:hover:active {
   border: 0;
   border-top: 1px solid #737373;
   color: #505050;
-  padding-top: 10px;
   margin: 0;
   display: block;
   width: 100%;
   font-size: 11px;
+  text-transform: uppercase;
+  line-height: 33px;
+  vertical-align: middle;
 }
 .sidebar .expander button.btn-expand span::after {
   content: '\E018';
@@ -1158,6 +1160,8 @@ button:hover:active {
 }
 .sidebar .spec-list h2 {
   font-size: 15px;
+  line-height: 20px;
+  padding-top: 0;
   margin-bottom: 0;
 }
 @font-face {
