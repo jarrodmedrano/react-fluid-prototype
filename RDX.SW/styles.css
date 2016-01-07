@@ -1116,7 +1116,6 @@ button:hover:active {
 }
 .sidebar .expander button.btn-expand {
   border: 0;
-  border-top: 1px solid #737373;
   color: #505050;
   margin: 0;
   display: block;
