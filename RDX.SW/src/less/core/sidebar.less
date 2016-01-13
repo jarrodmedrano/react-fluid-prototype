@@ -126,37 +126,30 @@
   }
 
   .spec-list {
-    //display: flex;
-    //flex: 1;
+
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
 
     ul {
-      list-style-type: none;
-      margin-left: 1.8em;
-      padding-left: 1.8em;
-      text-indent: -1.8em;
+      margin: 2em 0;
+      text-align: left;
+    }
 
-      li {
-        text-align: left;
-      }
+    li {
+      margin: 1em;
+      margin-left: 3em;
+    }
 
-      li.icon::before {
-        font-family: 'Segoe MDL2 Assets';
-        float: left;
-        display: block;
-        padding-right: 1.8em;
-      }
-
-      li.icon.icon-software::before {
-        content: '\E7F8';
-      }
-
-      li.icon.icon-display::before {
-        content: '\E7FA';
-      }
-
-      li.icon.icon-hardware::before {
-        content: '\E212';
-      }
+    li:before {
+      content: '\E7F8';
+      font-family: 'Segoe MDL2 Assets';
+      float: left;
+      margin-left: -1.5em;
+      font-size: @fontSizeIcon;
     }
 
     h2 {
