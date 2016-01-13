@@ -28,8 +28,7 @@ body {
 }
 .factsGrid .sidebar {
   -ms-grid-column: 1;
-  background: #ececec;
-  width: 30vw;
+  width: 25vw;
   height: 100vh;
 }
 .factsGrid .partnerSections {
@@ -1059,14 +1058,12 @@ button:hover:active {
   position: relative;
 }
 .sidebar {
-  display: flex;
-  flex-direction: column;
   color: #fff;
   text-align: center;
-  align-items: stretch;
   position: relative;
-  color: #171717;
   overflow: hidden;
+  background: url('generic_assets/sidbarbg.png') 0 0 no-repeat;
+  background-size: cover;
 }
 .sidebar header h1 {
   margin-bottom: 0;
