@@ -1066,6 +1066,8 @@ button:hover:active {
   overflow: hidden;
   background: url('generic_assets/sidbarbg.png') 0 0 no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 .sidebar .sidebar-header {
   height: 80px;
@@ -1182,6 +1184,11 @@ button:hover:active {
   transform: translateY(100px);
   transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
 }
+.sidebar .spec-list {
+  padding: 16px;
+  text-align: left;
+  overflow: auto;
+}
 .sidebar .spec-list ul,
 .sidebar .spec-list li {
   padding: 0;
@@ -1210,7 +1217,6 @@ button:hover:active {
   margin-bottom: 0;
 }
 .sidebar .bundles {
-  position: absolute;
   bottom: 0;
   background: green;
   width: 100%;

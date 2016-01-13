@@ -8,6 +8,9 @@
   background: url('generic_assets/sidbarbg.png') 0 0 no-repeat;
   background-size: cover;
 
+  display: flex;
+  flex-direction: column;
+
   .sidebar-header {
     height: @brandBar-height;
     .textbase-subheader(true);
@@ -127,6 +130,10 @@
 
   .spec-list {
 
+    padding: @design-unit * 4;
+    text-align: left;
+    overflow: auto;
+
     ul,
     li {
       padding: 0;
@@ -161,7 +168,6 @@
   }
 
   .bundles {
-    position: absolute;
     bottom: 0;
     background: green;
     width: 100%;
