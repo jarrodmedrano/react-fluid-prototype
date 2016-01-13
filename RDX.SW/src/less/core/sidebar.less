@@ -1,12 +1,25 @@
 .sidebar {
-
   color: #fff;
   text-align: center;
+  align-items: stretch;
   position: relative;
+  color: @dark-grey;
   overflow: hidden;
   background: url('generic_assets/sidbarbg.png') 0 0 no-repeat;
   background-size: cover;
 
+  .sidebar-header {
+    height: @brandBar-height;
+    .textbase-subheader(true);
+    line-height: @brandBar-height;
+    padding: 0;
+    vertical-align: middle;
+    color: #fff;
+    background: gray;
+    display: block;
+    border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
+  }
 
   header {
 
@@ -151,6 +164,31 @@
       line-height: @lineHeightBase;
       padding-top: 0;
       margin-bottom: 0;
+    }
+  }
+
+  .bundles {
+    position: absolute;
+    bottom: 0;
+    background: green;
+    width: 100%;
+    height: 160px;
+    border-top: 12px solid #505050;
+    border-bottom: 12px solid #505050;
+    padding: @design-unit * 4;
+
+    .bundle-img {
+      margin-right: @design-unit * 4;
+      float: left;
+      overflow: hidden;
+    }
+
+    div {
+      h4 {
+        margin-top: 0;
+      }
+      overflow: hidden;
+      text-align: left;
     }
   }
 }
