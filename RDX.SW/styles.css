@@ -530,23 +530,16 @@ body {
 .active:after {
   content: ' ';
   position: absolute;
-  left: 44%;
-  bottom: -12px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 100%;
   width: 0;
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid transparent;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid transparent;
   z-index: 3;
-}
-@media screen and (min-width: 768px) {
-  .active:after {
-    left: 45%;
-    bottom: -16.8px;
-    border-left: 17px solid transparent;
-    border-right: 17px solid transparent;
-    border-top: 17px solid transparent;
-  }
 }
 .template-pageIndicator {
   width: 100%;
@@ -1064,11 +1057,12 @@ button:hover:active {
   overflow: hidden;
   background: #fff;
   background-size: cover;
+  border-right: 2px solid #000;
   display: flex;
   flex-direction: column;
 }
 .sidebar .sidebar-header {
-  height: 80px;
+  height: 82px;
   font-size: 24px;
   line-height: 28px;
   font-size: 1.5rem;
@@ -1088,7 +1082,6 @@ button:hover:active {
   background: #0089cf;
   display: block;
   border-top: 1px solid #000;
-  border-bottom: 2px solid #000;
 }
 .sidebar .sidebar-header .sidebar-header-text {
   padding: 12px;

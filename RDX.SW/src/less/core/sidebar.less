@@ -5,12 +5,12 @@
   overflow: hidden;
   background: #fff;
   background-size: cover;
-
+  border-right: 2px solid #000;
   display: flex;
   flex-direction: column;
 
   .sidebar-header {
-    height: @brandBar-height;
+    height: @brandBar-height + 2;
     .textbase-title();
     .setMaxLinesSimple(3, @lineHeightTitle, @fontSizeTitle);
     padding: 0;
@@ -20,7 +20,6 @@
     background: #0089cf;
     display: block;
     border-top: 1px solid #000;
-    border-bottom: 2px solid #000;
     .sidebar-header-text {
       padding: @sidebar-spacing;
       display: block;
