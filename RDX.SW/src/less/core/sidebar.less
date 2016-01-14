@@ -36,6 +36,7 @@
       width: 100%;
       th, td {
         .setMaxLinesSimple(1, @lineHeightCaption, @fontSizeCaption);
+        white-space: nowrap;
       }
       th {
         font-weight: bold;
@@ -47,9 +48,12 @@
       display: block;
       margin: @sidebar-spacing 0;
       .textbase-caption(true);
+      white-space: nowrap;
+
       a {
         .textbase-caption(true);
       }
+
       .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
     }
 
@@ -125,6 +129,7 @@
         display: block;
         margin: 0 0 @sidebar-spacing;
         .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
+        white-space: nowrap;
       }
 
       .bundle-body-text {

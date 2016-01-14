@@ -1101,6 +1101,7 @@ button:hover:active {
   box-sizing: content-box;
   max-height: 14px;
   padding-bottom: 1.1816px;
+  white-space: nowrap;
 }
 .sidebar .spec-list table th {
   font-weight: bold;
@@ -1118,6 +1119,7 @@ button:hover:active {
   padding-bottom: 0.07385rem;
   padding-top: 0.07385rem;
   font-weight: 400;
+  white-space: nowrap;
   overflow: hidden;
   box-sizing: content-box;
   max-height: 20px;
@@ -1293,6 +1295,7 @@ button:hover:active {
   box-sizing: content-box;
   max-height: 20px;
   padding-bottom: 0.227px;
+  white-space: nowrap;
 }
 .sidebar .bundles .bundle-text .bundle-body-text {
   display: block;
