@@ -5,7 +5,7 @@
   position: relative;
   color: @dark-grey;
   overflow: hidden;
-  background: url('generic_assets/sidbarbg.png') 0 0 no-repeat;
+  background: #fff;
   background-size: cover;
 
   display: flex;
@@ -13,15 +13,19 @@
 
   .sidebar-header {
     height: @brandBar-height;
-    .textbase-subheader(true);
-    line-height: @brandBar-height;
+    .textbase-title();
     padding: 0;
+    text-align: left;
     vertical-align: middle;
     color: #fff;
-    background: gray;
+    background: #0089cf;
     display: block;
     border-top: 1px solid #000;
     border-bottom: 2px solid #000;
+    .sidebar-header-text {
+      padding: @sidebar-spacing;
+      display: block;
+    }
   }
 
   header {
@@ -100,40 +104,12 @@
     }
   }
 
-  .expander {
-    //display: flex; // set the context
-    //flex: 1; // flex an equal amt of space yo!
-    //align-items: flex-end;
-    position: absolute;
-    bottom: 33px;
-    //justify-content: start;
-    //padding: 0 10px;
-    width: 100%;
-    margin-top: 0;
-    transition: all 0.2s ease-in-out;
-    max-height: 33px;
-    height: 100%;
-
-    .expanded-list {
-      transform: scale(1, 0);
-      display: flex;
-      flex-direction: column;
-      min-height: calc(100% - 33px);
-    }
-
-    .animate-body {
-      transform: translateY(100px);
-      transition: transform .5s cubic-bezier(1, 0, 0, 1);
-    }
-
-  }
-
   .spec-list {
 
-    padding: @sidebar-spacing;
     text-align: left;
     overflow: auto;
     flex: 1;
+    padding: @sidebar-spacing;
 
     ul,
     li {
@@ -144,12 +120,13 @@
 
     ul {
       margin: 2em 0;
+      padding: 0;
       text-align: left;
     }
 
     li {
-      margin: 1em;
       .setMaxLinesSimple(3, @lineHeightBase, @fontSizeBase);
+      margin-bottom: @sidebar-spacing2x;
     }
 
     .icon:before {
@@ -158,14 +135,15 @@
       float: left;
       overflow: hidden;
       font-size: @fontSizeIcon;
+      line-height: @fontSizeIcon;
+      margin-right: @sidebar-spacing2x;
+      text-align: center;
     }
 
-    span {
+    .sidebar-list-text {
       overflow: hidden;
       display: block;
     }
-
-
 
     h2 {
       font-size: @fontSizeBase;
@@ -178,10 +156,8 @@
   .bundles {
     bottom: 0;
     background: #d8d9db;
-    width: 100%;
     height: 160px;
-    border-top: 12px solid #505050;
-    border-bottom: 12px solid #505050;
+    border-top: 12px solid #0089cf;
     padding: @sidebar-spacing2x;
     overflow: hidden;
 
@@ -190,12 +166,20 @@
       overflow: hidden;
     }
 
-    div {
+    .bundle-text {
       padding: @sidebar-spacing2x;
       padding-top: 0;
+      display: block;
 
-      h4 {
-        margin: 0;
+      .bundle-header-text {
+        display: block;
+        margin: 0 0 @sidebar-spacing;
+        .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
+      }
+
+      .bundle-body-text {
+        display: block;
+        .setMaxLinesSimple(4, @lineHeightBase, @fontSizeBase);
       }
 
       overflow: hidden;

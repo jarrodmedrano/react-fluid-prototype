@@ -1064,48 +1064,34 @@ button:hover:active {
   position: relative;
   color: #171717;
   overflow: hidden;
-  background: url('generic_assets/sidbarbg.png') 0 0 no-repeat;
+  background: #fff;
   background-size: cover;
   display: flex;
   flex-direction: column;
 }
 .sidebar .sidebar-header {
   height: 80px;
-  font-size: 34px;
-  line-height: 40px;
-  font-size: 2.125rem;
-  line-height: 2.5rem;
-  padding-bottom: 3.1812px;
-  padding-top: 3.1812px;
-  padding-bottom: 0.198825rem;
-  padding-top: 0.198825rem;
-  font-weight: 200;
-  line-height: 80px;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-bottom: 2.3632px;
+  padding-top: 2.3632px;
+  padding-bottom: 0.1477rem;
+  padding-top: 0.1477rem;
+  font-weight: 300;
   padding: 0;
+  text-align: left;
   vertical-align: middle;
   color: #fff;
-  background: gray;
+  background: #0089cf;
   display: block;
   border-top: 1px solid #000;
   border-bottom: 2px solid #000;
 }
-.sidebar .sidebar-header.textType_maxLinesOne {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-height: 40px;
-  max-height: 2.5rem;
-}
-.sidebar .sidebar-header.textType_maxLinesTwo {
-  max-height: 80px;
-  max-height: 5rem;
-}
-.sidebar .sidebar-header.textType_maxLinesThree {
-  max-height: 120px;
-  max-height: 7.5rem;
-}
-.sidebar .sidebar-header.textType_maxLinesFour {
-  max-height: 160px;
-  max-height: 10rem;
+.sidebar .sidebar-header .sidebar-header-text {
+  padding: 12px;
+  display: block;
 }
 .sidebar header h1 {
   margin-bottom: 0;
@@ -1165,30 +1151,11 @@ button:hover:active {
 .sidebar #menu-toggle:checked + .expander .expanded-list {
   transform: scale(1, 1);
 }
-.sidebar .expander {
-  position: absolute;
-  bottom: 33px;
-  width: 100%;
-  margin-top: 0;
-  transition: all 0.2s ease-in-out;
-  max-height: 33px;
-  height: 100%;
-}
-.sidebar .expander .expanded-list {
-  transform: scale(1, 0);
-  display: flex;
-  flex-direction: column;
-  min-height: calc(67%);
-}
-.sidebar .expander .animate-body {
-  transform: translateY(100px);
-  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
-}
 .sidebar .spec-list {
-  padding: 12px;
   text-align: left;
   overflow: auto;
   flex: 1;
+  padding: 12px;
 }
 .sidebar .spec-list ul,
 .sidebar .spec-list li {
@@ -1198,14 +1165,15 @@ button:hover:active {
 }
 .sidebar .spec-list ul {
   margin: 2em 0;
+  padding: 0;
   text-align: left;
 }
 .sidebar .spec-list li {
-  margin: 1em;
   overflow: hidden;
   box-sizing: content-box;
   max-height: 60px;
   padding-bottom: 0.227px;
+  margin-bottom: 24px;
 }
 .sidebar .spec-list .icon:before {
   content: '\E7F8';
@@ -1213,8 +1181,11 @@ button:hover:active {
   float: left;
   overflow: hidden;
   font-size: 24px;
+  line-height: 24px;
+  margin-right: 24px;
+  text-align: center;
 }
-.sidebar .spec-list span {
+.sidebar .spec-list .sidebar-list-text {
   overflow: hidden;
   display: block;
 }
@@ -1227,10 +1198,8 @@ button:hover:active {
 .sidebar .bundles {
   bottom: 0;
   background: #d8d9db;
-  width: 100%;
   height: 160px;
-  border-top: 12px solid #505050;
-  border-bottom: 12px solid #505050;
+  border-top: 12px solid #0089cf;
   padding: 24px;
   overflow: hidden;
 }
@@ -1238,14 +1207,27 @@ button:hover:active {
   float: left;
   overflow: hidden;
 }
-.sidebar .bundles div {
+.sidebar .bundles .bundle-text {
   padding: 24px;
   padding-top: 0;
+  display: block;
   overflow: hidden;
   text-align: left;
 }
-.sidebar .bundles div h4 {
-  margin: 0;
+.sidebar .bundles .bundle-text .bundle-header-text {
+  display: block;
+  margin: 0 0 12px;
+  overflow: hidden;
+  box-sizing: content-box;
+  max-height: 20px;
+  padding-bottom: 0.227px;
+}
+.sidebar .bundles .bundle-text .bundle-body-text {
+  display: block;
+  overflow: hidden;
+  box-sizing: content-box;
+  max-height: 80px;
+  padding-bottom: 0.227px;
 }
 @font-face {
   font-family: 'Segoe UI Webfont';
