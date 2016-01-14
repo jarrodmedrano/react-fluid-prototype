@@ -189,7 +189,7 @@ function updatePage(num) {
 function generateArraysOfSlideIDs() {
   var sliderParentDiv = document.getElementById("slider");
   var sliderDivChildren = sliderParentDiv.getElementsByTagName("div");
-  for (i=0; i < sliderDivChildren.length; i++) { 
+  for (i=0; i < sliderDivChildren.length; i++) {
     if (sliderDivChildren[i].parentNode === sliderParentDiv) {
       arrayOfSlideIDs.push(sliderDivChildren[i].id);
     };
@@ -248,7 +248,7 @@ var begin = function(event) {
 //*******************************************************************
 // begin RELATED FUNCTIONS
 
-function build(onThisSide,offScreenSlideID,showingSlideID) { 
+function build(onThisSide,offScreenSlideID,showingSlideID) {
   var showingSlideIDStyles = document.getElementById(showingSlideID).style;
   sliderElementStyles.transition = "all";
   builtOffSCreenOnThisSide = onThisSide;
@@ -274,8 +274,8 @@ function build(onThisSide,offScreenSlideID,showingSlideID) {
     firstSlideStyles.marginLeft = '100%';
     firstSlideStyles.display = MsGrid;
   } else {
-    showingSlideIDStyles.float = sideOfScreenWithNoSlide;  
-    sliderElementStyles.vw = "200";  
+    showingSlideIDStyles.float = sideOfScreenWithNoSlide;
+    sliderElementStyles.vw = "200";
     fabricate([offScreenSlideID,onThisSide]);
   };
   function showingSlidePositionAndSliderWidth() {
@@ -308,8 +308,8 @@ function buildLandR(left,right,showing) {
 };
 
 /////////////////////////////////
-// increaseFlipperZIndex() and resetFlipperZIndex() are needed 
-// to get flippers to display on First and Last slide, since since the touch transitions 
+// increaseFlipperZIndex() and resetFlipperZIndex() are needed
+// to get flippers to display on First and Last slide, since since the touch transitions
 // for those slides use different positioning JS than the others
 function increaseFlipperZIndex() {
   increaseFlipperZIndexFired = true;
@@ -407,8 +407,8 @@ var moving = function(event) {
   var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) ||  (document.mozFullScreen || document.webkitIsFullScreen);
 
     if (event.isPrimary === true &&
-      pointerType       === event.pointerType && 
-      isAnimating       === false && 
+      pointerType       === event.pointerType &&
+      isAnimating       === false &&
       isBuilt           === true && isInFullScreen === false) {
       var midX = event.clientX;
       var movedX = 0;
@@ -431,7 +431,7 @@ var moving = function(event) {
           slideSlider(leftString);
         } else if (absoluteDiffrerence > oneFifthOriginalCarouselWidth && difference < 0) {
           isAnimating = true;
-          var oldPage = currentID();  
+          var oldPage = currentID();
           updatePage(-1);
           //WinGS.LogBI("Swipe", "{'direction':'next','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
           slideSlider(rightString);

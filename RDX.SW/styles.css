@@ -101,20 +101,25 @@ body {
   margin: auto;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img {
+  -ms-grid-column-align: end;
   -ms-grid-row-align: center;
+  max-width: 100%;
+}
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+  .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img.full-width-video {
+    display: -ms-grid;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    -ms-grid-columns: 40vw 48px;
+  }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 80vh;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .main-content {
   -ms-grid-row-align: center;
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard .main-content {
-    width: 400px;
-  }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .main-content .text-header {
   display: block;
