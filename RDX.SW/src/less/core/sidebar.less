@@ -1,9 +1,7 @@
 .sidebar {
-  color: #fff;
   text-align: center;
   align-items: stretch;
   position: relative;
-  color: @dark-grey;
   overflow: hidden;
   background: #fff;
   background-size: cover;
@@ -29,7 +27,6 @@
     }
   }
 
-
   .spec-list {
 
     text-align: left;
@@ -39,6 +36,9 @@
 
     table {
       width: 100%;
+      th, td {
+        .setMaxLinesSimple(1, @lineHeightCaption, @fontSizeCaption);
+      }
       th {
         font-weight: bold;
         padding-bottom: @sidebar-spacing;
@@ -52,7 +52,7 @@
       a {
         .textbase-caption(true);
       }
-      .setMaxLinesSimple(1, @lineHeightCaption, @fontSizeCaption);
+      .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
     }
 
     .sidebar-text-footnote {
