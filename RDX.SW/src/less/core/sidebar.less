@@ -48,7 +48,20 @@
     .sidebar-text-additional {
       display: block;
       margin: @sidebar-spacing 0;
-      .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
+      .textbase-caption(true);
+      a {
+        .textbase-caption(true);
+      }
+      .setMaxLinesSimple(1, @lineHeightCaption, @fontSizeCaption);
+    }
+
+    .sidebar-text-footnote {
+      display: block;
+      margin: @sidebar-spacing 0;
+      .textbase-caption(true);
+      a {
+        .textbase-caption(true);
+      }
     }
 
     ul,

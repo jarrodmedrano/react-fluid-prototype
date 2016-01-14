@@ -1112,10 +1112,125 @@ button:hover:active {
 .sidebar .spec-list .sidebar-text-additional {
   display: block;
   margin: 12px 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-top: 1.1816px;
+  padding-bottom: 0.07385rem;
+  padding-top: 0.07385rem;
+  font-weight: 400;
   overflow: hidden;
   box-sizing: content-box;
-  max-height: 20px;
-  padding-bottom: 0.227px;
+  max-height: 14px;
+  padding-bottom: 1.1816px;
+}
+.sidebar .spec-list .sidebar-text-additional.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 14px;
+  max-height: 0.875rem;
+}
+.sidebar .spec-list .sidebar-text-additional.textType_maxLinesTwo {
+  max-height: 28px;
+  max-height: 1.75rem;
+}
+.sidebar .spec-list .sidebar-text-additional.textType_maxLinesThree {
+  max-height: 42px;
+  max-height: 2.625rem;
+}
+.sidebar .spec-list .sidebar-text-additional.textType_maxLinesFour {
+  max-height: 56px;
+  max-height: 3.5rem;
+}
+.sidebar .spec-list .sidebar-text-additional a {
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-bottom: 1.1816px;
+  padding-top: 1.1816px;
+  padding-bottom: 0.07385rem;
+  padding-top: 0.07385rem;
+  font-weight: 400;
+}
+.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 14px;
+  max-height: 0.875rem;
+}
+.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesTwo {
+  max-height: 28px;
+  max-height: 1.75rem;
+}
+.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesThree {
+  max-height: 42px;
+  max-height: 2.625rem;
+}
+.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesFour {
+  max-height: 56px;
+  max-height: 3.5rem;
+}
+.sidebar .spec-list .sidebar-text-footnote {
+  display: block;
+  margin: 12px 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-bottom: 1.1816px;
+  padding-top: 1.1816px;
+  padding-bottom: 0.07385rem;
+  padding-top: 0.07385rem;
+  font-weight: 400;
+}
+.sidebar .spec-list .sidebar-text-footnote.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 14px;
+  max-height: 0.875rem;
+}
+.sidebar .spec-list .sidebar-text-footnote.textType_maxLinesTwo {
+  max-height: 28px;
+  max-height: 1.75rem;
+}
+.sidebar .spec-list .sidebar-text-footnote.textType_maxLinesThree {
+  max-height: 42px;
+  max-height: 2.625rem;
+}
+.sidebar .spec-list .sidebar-text-footnote.textType_maxLinesFour {
+  max-height: 56px;
+  max-height: 3.5rem;
+}
+.sidebar .spec-list .sidebar-text-footnote a {
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-bottom: 1.1816px;
+  padding-top: 1.1816px;
+  padding-bottom: 0.07385rem;
+  padding-top: 0.07385rem;
+  font-weight: 400;
+}
+.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 14px;
+  max-height: 0.875rem;
+}
+.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesTwo {
+  max-height: 28px;
+  max-height: 1.75rem;
+}
+.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesThree {
+  max-height: 42px;
+  max-height: 2.625rem;
+}
+.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesFour {
+  max-height: 56px;
+  max-height: 3.5rem;
 }
 .sidebar .spec-list ul,
 .sidebar .spec-list li {
