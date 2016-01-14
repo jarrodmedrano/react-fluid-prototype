@@ -1075,11 +1075,14 @@ button:hover:active {
   line-height: 28px;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  padding-bottom: 2.3632px;
   padding-top: 2.3632px;
   padding-bottom: 0.1477rem;
   padding-top: 0.1477rem;
   font-weight: 300;
+  overflow: hidden;
+  box-sizing: content-box;
+  max-height: 84px;
+  padding-bottom: 2.3632px;
   padding: 0;
   text-align: left;
   vertical-align: middle;
@@ -1093,69 +1096,26 @@ button:hover:active {
   padding: 12px;
   display: block;
 }
-.sidebar header h1 {
-  margin-bottom: 0;
-  font-size: 34px;
-  line-height: 40px;
-}
-.sidebar header p {
-  margin-top: 0;
-}
-.sidebar label.btn-expand {
-  border: 0;
-  border-top: 1px solid #737373;
-  background: blue;
-  z-index: 9999;
-  color: #fff;
-  margin: 0;
-  display: block;
-  width: 100%;
-  font-size: 11px;
-  line-height: 33px;
-  position: absolute;
-  bottom: 0;
-}
-.sidebar label.btn-expand span::after {
-  content: '\E018';
-  vertical-align: top;
-}
-.sidebar label.btn-expand:hover {
-  background: blue;
-  cursor: pointer;
-}
-.sidebar #menu-toggle {
-  display: none;
-  /* hide the checkbox */
-}
-.sidebar #menu-toggle:checked + .expander {
-  z-index: 2;
-  vertical-align: top;
-  background: red;
-  color: #000;
-  max-height: 100%;
-}
-.sidebar #menu-toggle:checked + .expander .animate-body {
-  transform: translateY(33px);
-}
-.sidebar #menu-toggle:checked + .expander button.btn-expand {
-  background: transparent;
-  color: #505050;
-  border-top: 0;
-}
-.sidebar #menu-toggle:checked + .expander button.btn-expand span::after {
-  content: '\E019';
-}
-.sidebar #menu-toggle:checked + .expander button.btn-expand:hover {
-  color: #000;
-}
-.sidebar #menu-toggle:checked + .expander .expanded-list {
-  transform: scale(1, 1);
-}
 .sidebar .spec-list {
   text-align: left;
   overflow: auto;
   flex: 1;
   padding: 12px;
+}
+.sidebar .spec-list table {
+  width: 100%;
+}
+.sidebar .spec-list table th {
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+.sidebar .spec-list .sidebar-text-additional {
+  display: block;
+  margin: 12px 0;
+  overflow: hidden;
+  box-sizing: content-box;
+  max-height: 20px;
+  padding-bottom: 0.227px;
 }
 .sidebar .spec-list ul,
 .sidebar .spec-list li {
@@ -1175,14 +1135,12 @@ button:hover:active {
   padding-bottom: 0.227px;
   margin-bottom: 24px;
 }
-.sidebar .spec-list .icon:before {
-  content: '\E7F8';
-  font-family: 'Segoe MDL2 Assets';
+.sidebar .spec-list .icon {
   float: left;
   overflow: hidden;
   font-size: 24px;
   line-height: 24px;
-  margin-right: 24px;
+  margin-right: 12px;
   text-align: center;
 }
 .sidebar .spec-list .sidebar-list-text {
@@ -1198,7 +1156,7 @@ button:hover:active {
 .sidebar .bundles {
   bottom: 0;
   background: #d8d9db;
-  height: 160px;
+  max-height: 160px;
   border-top: 12px solid #0089cf;
   padding: 24px;
   overflow: hidden;
@@ -1210,6 +1168,7 @@ button:hover:active {
 .sidebar .bundles .bundle-text {
   padding: 24px;
   padding-top: 0;
+  padding-bottom: 0;
   display: block;
   overflow: hidden;
   text-align: left;

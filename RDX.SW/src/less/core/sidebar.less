@@ -14,6 +14,7 @@
   .sidebar-header {
     height: @brandBar-height;
     .textbase-title();
+    .setMaxLinesSimple(3, @lineHeightTitle, @fontSizeTitle);
     padding: 0;
     text-align: left;
     vertical-align: middle;
@@ -28,81 +29,6 @@
     }
   }
 
-  header {
-
-    h1 {
-      margin-bottom: 0;
-      font-size: @fontSizeSubheader;
-      line-height: @lineHeightSubheader;
-    }
-
-    p {
-      margin-top: 0;
-    }
-  }
-
-  label.btn-expand {
-    border: 0;
-    border-top: 1px solid #737373;
-    background: blue;
-
-    z-index: 9999;
-    color: #fff;
-
-    //background: #1c87bd;
-    //padding-top: 10px;
-    margin: 0;
-    display: block;
-    width: 100%;
-    font-size: 11px;
-    line-height: 33px;
-    position: absolute;
-    bottom: 0;
-
-    span::after {
-      content: '\E018';
-      vertical-align: top;
-    }
-
-    &:hover {
-      background: blue;
-      cursor: pointer;
-    }
-  }
-
-  #menu-toggle {
-    display: none; /* hide the checkbox */
-  }
-
-  #menu-toggle:checked + .expander {
-    z-index: 2;
-    vertical-align: top;
-    background: red;
-    color: #000;
-    max-height: 100%;
-
-    .animate-body {
-      transform: translateY(0 + 33px);
-    }
-
-    button.btn-expand {
-      background: transparent;
-      color: #505050;
-      border-top: 0;
-
-      span::after {
-        content: '\E019';
-      }
-
-      &:hover {
-        color: #000;
-      }
-    }
-
-    .expanded-list {
-      transform: scale(1, 1);
-    }
-  }
 
   .spec-list {
 
@@ -110,6 +36,20 @@
     overflow: auto;
     flex: 1;
     padding: @sidebar-spacing;
+
+    table {
+      width: 100%;
+      th {
+        font-weight: bold;
+        padding-bottom: @sidebar-spacing;
+      }
+    }
+
+    .sidebar-text-additional {
+      display: block;
+      margin: @sidebar-spacing 0;
+      .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
+    }
 
     ul,
     li {
@@ -129,14 +69,12 @@
       margin-bottom: @sidebar-spacing2x;
     }
 
-    .icon:before {
-      content: '\E7F8';
-      font-family: 'Segoe MDL2 Assets';
+    .icon {
       float: left;
       overflow: hidden;
       font-size: @fontSizeIcon;
       line-height: @fontSizeIcon;
-      margin-right: @sidebar-spacing2x;
+      margin-right: @sidebar-spacing;
       text-align: center;
     }
 
@@ -156,7 +94,7 @@
   .bundles {
     bottom: 0;
     background: #d8d9db;
-    height: 160px;
+    max-height: 160px;
     border-top: 12px solid #0089cf;
     padding: @sidebar-spacing2x;
     overflow: hidden;
@@ -169,6 +107,7 @@
     .bundle-text {
       padding: @sidebar-spacing2x;
       padding-top: 0;
+      padding-bottom: 0;
       display: block;
 
       .bundle-header-text {
