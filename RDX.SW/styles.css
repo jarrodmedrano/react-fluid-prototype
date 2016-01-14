@@ -1062,7 +1062,7 @@ button:hover:active {
   flex-direction: column;
 }
 .sidebar .sidebar-header {
-  height: 82px;
+  height: 83px;
   font-size: 24px;
   line-height: 28px;
   font-size: 1.5rem;
@@ -1081,7 +1081,6 @@ button:hover:active {
   color: #fff;
   background: #0089cf;
   display: block;
-  border-top: 1px solid #000;
 }
 .sidebar .sidebar-header .sidebar-header-text {
   padding: 12px;
