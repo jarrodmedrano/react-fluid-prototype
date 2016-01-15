@@ -1072,14 +1072,11 @@ button:hover:active {
   line-height: 28px;
   font-size: 1.5rem;
   line-height: 1.75rem;
+  padding-bottom: 2.3632px;
   padding-top: 2.3632px;
   padding-bottom: 0.1477rem;
   padding-top: 0.1477rem;
   font-weight: 300;
-  overflow: hidden;
-  box-sizing: content-box;
-  max-height: 84px;
-  padding-bottom: 2.3632px;
   padding: 0;
   text-align: left;
   vertical-align: middle;
@@ -1100,14 +1097,6 @@ button:hover:active {
 .sidebar .spec-list table {
   width: 100%;
 }
-.sidebar .spec-list table th,
-.sidebar .spec-list table td {
-  overflow: hidden;
-  box-sizing: content-box;
-  max-height: 14px;
-  padding-bottom: 1.1816px;
-  white-space: nowrap;
-}
 .sidebar .spec-list table th {
   font-weight: bold;
   padding-bottom: 12px;
@@ -1124,11 +1113,6 @@ button:hover:active {
   padding-bottom: 0.07385rem;
   padding-top: 0.07385rem;
   font-weight: 400;
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: content-box;
-  max-height: 20px;
-  padding-bottom: 0.227px;
 }
 .sidebar .spec-list .sidebar-text-additional.textType_maxLinesOne {
   white-space: nowrap;
@@ -1249,10 +1233,6 @@ button:hover:active {
   text-align: left;
 }
 .sidebar .spec-list li {
-  overflow: hidden;
-  box-sizing: content-box;
-  max-height: 60px;
-  padding-bottom: 0.227px;
   margin-bottom: 24px;
 }
 .sidebar .spec-list .icon {
@@ -1296,18 +1276,9 @@ button:hover:active {
 .sidebar .bundles .bundle-text .bundle-header-text {
   display: block;
   margin: 0 0 12px;
-  overflow: hidden;
-  box-sizing: content-box;
-  max-height: 20px;
-  padding-bottom: 0.227px;
-  white-space: nowrap;
 }
 .sidebar .bundles .bundle-text .bundle-body-text {
   display: block;
-  overflow: hidden;
-  box-sizing: content-box;
-  max-height: 80px;
-  padding-bottom: 0.227px;
 }
 @font-face {
   font-family: 'Segoe UI Webfont';

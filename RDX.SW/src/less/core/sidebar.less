@@ -12,7 +12,6 @@
   .sidebar-header {
     height: @brandBar-height + 3;
     .textbase-title();
-    .setMaxLinesSimple(3, @lineHeightTitle, @fontSizeTitle);
     padding: 0;
     text-align: left;
     vertical-align: middle;
@@ -34,10 +33,7 @@
 
     table {
       width: 100%;
-      th, td {
-        .setMaxLinesSimple(1, @lineHeightCaption, @fontSizeCaption);
-        white-space: nowrap;
-      }
+
       th {
         font-weight: bold;
         padding-bottom: @sidebar-spacing;
@@ -48,13 +44,10 @@
       display: block;
       margin: @sidebar-spacing 0;
       .textbase-caption(true);
-      white-space: nowrap;
 
       a {
         .textbase-caption(true);
       }
-
-      .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
     }
 
     .sidebar-text-footnote {
@@ -80,7 +73,6 @@
     }
 
     li {
-      .setMaxLinesSimple(3, @lineHeightBase, @fontSizeBase);
       margin-bottom: @sidebar-spacing2x;
     }
 
@@ -128,13 +120,10 @@
       .bundle-header-text {
         display: block;
         margin: 0 0 @sidebar-spacing;
-        .setMaxLinesSimple(1, @lineHeightBase, @fontSizeBase);
-        white-space: nowrap;
       }
 
       .bundle-body-text {
         display: block;
-        .setMaxLinesSimple(4, @lineHeightBase, @fontSizeBase);
       }
 
       overflow: hidden;
