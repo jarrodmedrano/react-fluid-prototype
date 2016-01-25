@@ -769,7 +769,7 @@ button:hover:active {
   opacity: .6;
   font-size: 10pt !important;
   line-height: 12pt;
-  margin: 0 24px;
+  margin: 0 24px 0 0;
 }
 .text-legal.textType_maxLinesOne {
   white-space: nowrap;
@@ -980,6 +980,221 @@ button:hover:active {
   left: 120px;
   width: 677px;
   z-index: 0;
+}
+.layout-specifications {
+  /*-------------------------------side by side-----------------------------------*/
+  /*
+   ul {
+
+      li {
+          display: -ms-grid;
+          -ms-grid-columns: 1fr 1fr;
+          background-color: rgba(0,0,0,.1);
+          margin-bottom: 20px;
+          padding: 0 20px;
+
+          .label {
+              -ms-grid-column: 1;
+              display: block;
+              -ms-grid-column-align: start;
+          }
+
+          .spec {
+              -ms-grid-column: 2;
+              display: block;
+              -ms-grid-column-align: end;
+              .text-body() !important;
+          }
+      }
+ } */
+  /*----------------------------------Top Down-------------------------------------*/
+  /*
+
+    ul {
+
+          li {
+              display: -ms-grid;
+              -ms-grid-rows: 20px 50px 20px;
+
+              .label {
+                  -ms-grid-row: 1;
+                  display: block;
+              }
+
+              .spec {
+                  -ms-grid-row: 2;
+                  display: block;
+              }
+          }
+     }
+
+      */
+}
+.layout-specifications .logo {
+  max-width: 200px;
+  max-height: 120px;
+}
+.layout-specifications .hero-img video,
+.layout-specifications .hero-img .img-gif {
+  width: 100%;
+}
+@media all and (min-width: 901px) and (max-width: 1100px) {
+  .layout-specifications .hero-img video,
+  .layout-specifications .hero-img .img-gif {
+    width: 85% !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 900px) {
+  .layout-specifications .hero-img video,
+  .layout-specifications .hero-img .img-gif {
+    width: 70% !important;
+  }
+}
+.layout-specifications .headingBox {
+  clear: both;
+  margin: 16px 0;
+}
+.layout-specifications .headingBox .text-subheader + .text-body {
+  margin-top: 32px;
+  display: block;
+}
+.layout-specifications.template-contentCard {
+  overflow-y: visible;
+}
+@media screen and (min-width: 768px) {
+  .layout-specifications.template-contentCard {
+    overflow: hidden;
+  }
+}
+.layout-specifications .card-content {
+  display: -ms-grid;
+  -ms-grid-columns: auto 1fr;
+  position: relative;
+}
+.layout-specifications .card-content .icon {
+  -ms-grid-column: 1;
+  -ms-grid-row-align: center;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  margin-top: 8px;
+}
+@media screen and (min-width: 768px) {
+  .layout-specifications .card-content .icon {
+    padding: 0 12px 16px 0;
+  }
+}
+.layout-specifications .card-content .icon img {
+  max-width: 45px;
+}
+.layout-specifications .card-content .icon.icon1 {
+  -ms-grid-row: 1;
+}
+.layout-specifications .card-content .list-text {
+  -ms-grid-column: 2;
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+}
+.layout-specifications .card-content .list-text.text1 {
+  -ms-grid-row: 1;
+}
+.layout-specifications .card-content .list-text.text-body,
+.layout-specifications .card-content .list-text .text-body,
+.layout-specifications .card-content .list-text .text-caption {
+  display: block;
+  margin: 4px 0;
+}
+.layout-specifications .template-videoPlayer .videoPlayer-backgroundGraphic.custom-backgroundGraphic {
+  position: relative;
+  height: 0px;
+}
+.layout-specifications .template-videoPlayer video {
+  position: absolute;
+  top: 59px;
+  left: 120px;
+  width: 677px;
+  z-index: 0;
+}
+.layout-specifications .main-content {
+  width: 100% !important;
+}
+.layout-specifications .hero-img {
+  -ms-grid-column-align: start !important;
+  max-width: 100%;
+}
+@media all and (min-width: 775px) {
+  .layout-specifications .hero-img img {
+    /* max-width: 100% !important;
+         height: auto !important; */
+  }
+}
+.layout-specifications .card-content + .text-legal p,
+.layout-specifications .card-content + a + .text-legal p,
+.layout-specifications .card-content + button + .text-legal p {
+  padding: 0;
+}
+.layout-specifications ul li {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 2fr;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.layout-specifications ul li .label {
+  -ms-grid-column: 1;
+  display: block;
+  -ms-grid-column-align: start;
+  -ms-grid-row-align: center;
+}
+.layout-specifications ul li .spec {
+  -ms-grid-column: 2;
+  display: block;
+  margin: 10px 0;
+  -ms-grid-column-align: end;
+  -ms-grid-row-align: center;
+  text-align: right;
+}
+@media all and (max-width: 1080px), all and (max-height: 700px) {
+  .layout-specifications ul li {
+    padding: 10px 20px;
+    margin: 10px 0;
+  }
+  .layout-specifications ul li .label {
+    margin: 0 !important;
+  }
+  .layout-specifications ul li .spec {
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 15px;
+    line-height: 20px;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    padding-bottom: 0.227px;
+    padding-top: 0.227px;
+    padding-bottom: 0.0141875rem;
+    padding-top: 0.0141875rem;
+    font-weight: 600;
+    font-weight: 100;
+    margin: 0;
+  }
+  .layout-specifications ul li .spec.textType_maxLinesOne {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 20px;
+    max-height: 1.25rem;
+  }
+  .layout-specifications ul li .spec.textType_maxLinesTwo {
+    max-height: 40px;
+    max-height: 2.5rem;
+  }
+  .layout-specifications ul li .spec.textType_maxLinesThree {
+    max-height: 60px;
+    max-height: 3.75rem;
+  }
+  .layout-specifications ul li .spec.textType_maxLinesFour {
+    max-height: 80px;
+    max-height: 5rem;
+  }
 }
 .layout-specs .column .text-base {
   color: #000000;
@@ -1501,37 +1716,39 @@ h3.textType_maxLinesFour {
 }
 .text-subtitle,
 h4 {
-  font-size: 20px;
-  line-height: 24px;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  padding-bottom: 1.636px;
-  padding-top: 1.636px;
-  padding-bottom: 0.10225rem;
-  padding-top: 0.10225rem;
-  font-weight: 400;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.227px;
+  padding-top: 0.227px;
+  padding-bottom: 0.0141875rem;
+  padding-top: 0.0141875rem;
+  font-weight: 600;
 }
 .text-subtitle.textType_maxLinesOne,
 h4.textType_maxLinesOne {
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-height: 24px;
-  max-height: 1.5rem;
+  max-height: 20px;
+  max-height: 1.25rem;
 }
 .text-subtitle.textType_maxLinesTwo,
 h4.textType_maxLinesTwo {
-  max-height: 48px;
-  max-height: 3rem;
+  max-height: 40px;
+  max-height: 2.5rem;
 }
 .text-subtitle.textType_maxLinesThree,
 h4.textType_maxLinesThree {
-  max-height: 72px;
-  max-height: 4.5rem;
+  max-height: 60px;
+  max-height: 3.75rem;
 }
 .text-subtitle.textType_maxLinesFour,
 h4.textType_maxLinesFour {
-  max-height: 96px;
-  max-height: 6rem;
+  max-height: 80px;
+  max-height: 5rem;
 }
 .text-caption,
 h5 {
