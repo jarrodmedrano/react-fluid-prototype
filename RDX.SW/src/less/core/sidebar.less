@@ -10,17 +10,29 @@
   flex-direction: column;
 
   .sidebar-header {
-    height: @brandBar-height + 3;
+    height: @brandBar-height;
     .textbase-title();
     padding: 0;
     text-align: left;
     vertical-align: middle;
     color: #fff;
-    background: #0089cf;
+    background: @dark-grey;
     display: block;
-    .sidebar-header-text {
-      padding: @sidebar-spacing;
-      display: block;
+    border-top: 1px solid @dark-grey;
+    border-bottom: 1px solid #CCC;
+
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+  }
+
+  .sidebar-header-text {
+    padding: @sidebar-spacing;
+    display: block;
+    text-align: left;
+
+    h1, h2 {
+      margin: 0;
     }
   }
 
