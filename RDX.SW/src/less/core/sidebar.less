@@ -110,7 +110,7 @@
     bottom: 0;
     background: #d8d9db;
     max-height: 160px;
-    border-top: 12px solid #0089cf;
+    border-top: 2px solid #0089cf;
     padding: @sidebar-spacing;
     overflow: hidden;
 
@@ -120,14 +120,20 @@
     }
 
     .bundle-text {
-      padding: @sidebar-spacing2x;
+      padding: @sidebar-spacing;
       padding-top: 0;
       padding-bottom: 0;
       display: block;
 
       .bundle-header-text {
         display: block;
-        margin: 0 0 @sidebar-spacing;
+        .textbase-subtitle();
+        margin: 0 0;
+      }
+
+      .bundle-subheader-text {
+        display: block;
+        margin: 0 0 @sidebar-spacing 0;
       }
 
       .bundle-body-text {

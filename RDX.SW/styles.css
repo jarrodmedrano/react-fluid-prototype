@@ -1293,7 +1293,7 @@ button:hover:active {
   bottom: 0;
   background: #d8d9db;
   max-height: 160px;
-  border-top: 12px solid #0089cf;
+  border-top: 2px solid #0089cf;
   padding: 28px;
   overflow: hidden;
 }
@@ -1302,7 +1302,7 @@ button:hover:active {
   overflow: hidden;
 }
 .sidebar .bundles .bundle-text {
-  padding: 56px;
+  padding: 28px;
   padding-top: 0;
   padding-bottom: 0;
   display: block;
@@ -1311,7 +1311,20 @@ button:hover:active {
 }
 .sidebar .bundles .bundle-text .bundle-header-text {
   display: block;
-  margin: 0 0 28px;
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.636px;
+  padding-top: 1.636px;
+  padding-bottom: 0.10225rem;
+  padding-top: 0.10225rem;
+  font-weight: 400;
+  margin: 0 0;
+}
+.sidebar .bundles .bundle-text .bundle-subheader-text {
+  display: block;
+  margin: 0 0 28px 0;
 }
 .sidebar .bundles .bundle-text .bundle-body-text {
   display: block;
