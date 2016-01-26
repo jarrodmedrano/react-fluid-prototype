@@ -34,18 +34,35 @@ body {
 //-----------------------------------------------------------------------------//
 .factsGrid {
   display: -ms-grid;
-  -ms-grid-columns: auto 1fr;
+  -ms-grid-columns: 1fr auto;
   height: 100vh;
 }
 
 .factsGrid .sidebar {
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   width: 25vw;
   height: 100vh;
+  background: #e8e8e8;
+
+  .sidebar-header {
+    background: @dark-grey;
+  }
+
+  .sidebar-header-text {
+    text-align: left;
+    padding: 0 @sidebar-spacing;
+
+    h1 {
+      margin-bottom: 0;
+    }
+    h2 {
+      margin-top: 0;
+    }
+  }
 }
 
 .factsGrid .partnerSections {
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   height: 100vh;
 
   .page-body .control-carousel .carousel-controls .rightNav {

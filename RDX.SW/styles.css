@@ -23,16 +23,30 @@ body {
 }
 .factsGrid {
   display: -ms-grid;
-  -ms-grid-columns: auto 1fr;
+  -ms-grid-columns: 1fr auto;
   height: 100vh;
 }
 .factsGrid .sidebar {
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   width: 25vw;
   height: 100vh;
+  background: #e8e8e8;
+}
+.factsGrid .sidebar .sidebar-header {
+  background: #171717;
+}
+.factsGrid .sidebar .sidebar-header-text {
+  text-align: left;
+  padding: 0 28px;
+}
+.factsGrid .sidebar .sidebar-header-text h1 {
+  margin-bottom: 0;
+}
+.factsGrid .sidebar .sidebar-header-text h2 {
+  margin-top: 0;
 }
 .factsGrid .partnerSections {
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   height: 100vh;
 }
 .factsGrid .partnerSections .page-body .control-carousel .carousel-controls .rightNav {
@@ -1085,52 +1099,73 @@ button:hover:active {
   display: block;
 }
 .sidebar .sidebar-header .sidebar-header-text {
-  padding: 12px;
+  padding: 28px;
   display: block;
 }
 .sidebar .spec-list {
   text-align: left;
   overflow: auto;
   flex: 1;
-  padding: 12px;
+  padding: 0 28px;
 }
 .sidebar .spec-list table {
   width: 100%;
 }
 .sidebar .spec-list table th {
+  padding-bottom: 28px;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-bottom: 2.3632px;
+  padding-top: 2.3632px;
+  padding-bottom: 0.1477rem;
+  padding-top: 0.1477rem;
+  font-weight: 300;
   font-weight: bold;
-  padding-bottom: 12px;
+  padding-bottom: .5em;
+}
+.sidebar .spec-list table td {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.636px;
+  padding-top: 1.636px;
+  padding-bottom: 0.10225rem;
+  padding-top: 0.10225rem;
+  font-weight: 400;
 }
 .sidebar .spec-list .sidebar-text-additional {
   display: block;
-  margin: 12px 0;
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 0.75rem;
-  line-height: 0.875rem;
-  padding-bottom: 1.1816px;
-  padding-top: 1.1816px;
-  padding-bottom: 0.07385rem;
-  padding-top: 0.07385rem;
+  margin: 28px 0;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.227px;
+  padding-top: 0.227px;
+  padding-bottom: 0.0141875rem;
+  padding-top: 0.0141875rem;
   font-weight: 400;
 }
 .sidebar .spec-list .sidebar-text-additional.textType_maxLinesOne {
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-height: 14px;
-  max-height: 0.875rem;
+  max-height: 20px;
+  max-height: 1.25rem;
 }
 .sidebar .spec-list .sidebar-text-additional.textType_maxLinesTwo {
-  max-height: 28px;
-  max-height: 1.75rem;
+  max-height: 40px;
+  max-height: 2.5rem;
 }
 .sidebar .spec-list .sidebar-text-additional.textType_maxLinesThree {
-  max-height: 42px;
-  max-height: 2.625rem;
+  max-height: 60px;
+  max-height: 3.75rem;
 }
 .sidebar .spec-list .sidebar-text-additional.textType_maxLinesFour {
-  max-height: 56px;
-  max-height: 3.5rem;
+  max-height: 80px;
+  max-height: 5rem;
 }
 .sidebar .spec-list .sidebar-text-additional a {
   font-size: 12px;
@@ -1163,7 +1198,7 @@ button:hover:active {
 }
 .sidebar .spec-list .sidebar-text-footnote {
   display: block;
-  margin: 12px 0;
+  margin: 28px 0;
   font-size: 12px;
   line-height: 14px;
   font-size: 0.75rem;
@@ -1233,15 +1268,16 @@ button:hover:active {
   text-align: left;
 }
 .sidebar .spec-list li {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .sidebar .spec-list .icon {
   float: left;
   overflow: hidden;
   font-size: 24px;
   line-height: 24px;
-  margin-right: 12px;
+  margin-right: 28px;
   text-align: center;
+  vertical-align: middle;
 }
 .sidebar .spec-list .sidebar-list-text {
   overflow: hidden;
@@ -1258,7 +1294,7 @@ button:hover:active {
   background: #d8d9db;
   max-height: 160px;
   border-top: 12px solid #0089cf;
-  padding: 24px;
+  padding: 28px;
   overflow: hidden;
 }
 .sidebar .bundles .bundle-img {
@@ -1266,7 +1302,7 @@ button:hover:active {
   overflow: hidden;
 }
 .sidebar .bundles .bundle-text {
-  padding: 24px;
+  padding: 56px;
   padding-top: 0;
   padding-bottom: 0;
   display: block;
@@ -1275,7 +1311,7 @@ button:hover:active {
 }
 .sidebar .bundles .bundle-text .bundle-header-text {
   display: block;
-  margin: 0 0 12px;
+  margin: 0 0 28px;
 }
 .sidebar .bundles .bundle-text .bundle-body-text {
   display: block;

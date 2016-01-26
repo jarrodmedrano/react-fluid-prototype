@@ -25,25 +25,31 @@
   }
 
   .spec-list {
-
     text-align: left;
     overflow: auto;
     flex: 1;
-    padding: @sidebar-spacing;
+    padding: 0 @sidebar-spacing;
 
     table {
       width: 100%;
 
       th {
-        font-weight: bold;
         padding-bottom: @sidebar-spacing;
+        .textbase-title();
+        font-weight: bold;
+        padding-bottom: .5em;
       }
+
+      td {
+        .textbase-subtitle();
+      }
+
     }
 
     .sidebar-text-additional {
       display: block;
       margin: @sidebar-spacing 0;
-      .textbase-caption(true);
+      .textbase-body(true);
 
       a {
         .textbase-caption(true);
@@ -54,6 +60,7 @@
       display: block;
       margin: @sidebar-spacing 0;
       .textbase-caption(true);
+
       a {
         .textbase-caption(true);
       }
@@ -73,7 +80,7 @@
     }
 
     li {
-      margin-bottom: @sidebar-spacing2x;
+      margin-bottom: @sidebar-spacing;
     }
 
     .icon {
@@ -83,6 +90,7 @@
       line-height: @fontSizeIcon;
       margin-right: @sidebar-spacing;
       text-align: center;
+      vertical-align: middle;
     }
 
     .sidebar-list-text {
@@ -103,7 +111,7 @@
     background: #d8d9db;
     max-height: 160px;
     border-top: 12px solid #0089cf;
-    padding: @sidebar-spacing2x;
+    padding: @sidebar-spacing;
     overflow: hidden;
 
     .bundle-img {
