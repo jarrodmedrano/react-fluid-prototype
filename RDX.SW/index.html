@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 
     <style>
-        /*.oem-hubButton {*/
-        /*background-color: #E2231A;*/
-        /*}*/
+        .oem-hubButton.active {
+        background-color: #E2231A;
+        }
 
         .template-hubButton.oem-hubButton:after {
             border-top-color: #E2231A;
@@ -32,9 +32,9 @@
             background: #E2231A;
         }
 
-        /*.windows-hubButton {*/
-        /*background-color: #00BCF2;*/
-        /*}*/
+        .windows-hubButton.active {
+        background-color: #00BCF2;
+        }
 
         .template-hubButton.windows-hubButton:after {
             border-top-color: #00BCF2;
@@ -52,9 +52,9 @@
             background: #00BCF2;
         }
 
-        /*.office-hubButton {*/
-        /*background-color: #DC3C00;*/
-        /*}*/
+        .office-hubButton.active {
+        background-color: #DC3C00;
+        }
 
         .template-hubButton.office-hubButton:after {
             border-top-color: #DC3C00;
@@ -72,9 +72,9 @@
             background: #DC3C00;
         }
 
-        /*.retailer-hubButton {*/
-        /*background-color: #003B67;*/
-        /*}*/
+        .retailer-hubButton.active {
+        background-color: #003B67;
+        }
 
         .template-hubButton.retailer-hubButton:after {
             border-top-color: #003B67;
@@ -92,9 +92,9 @@
             background: #003B67;
         }
 
-        /*.processor-hubButton {*/
-        /*background-color: #0071c5;*/
-        /*}*/
+        .processor-hubButton.active {
+            background-color: #0071c5;
+        }
 
         .template-hubButton.processor-hubButton:after {
             border-top-color: #0071c5;
@@ -648,16 +648,13 @@
                             <div class="template-hubButton oem-hubButton" onclick="navigateToSection(0)">
                                 <div class="hubButton-content">
                                     <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic hidden" src="oem_assets/logo_lenovo.png" />
-                                        <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png"/>
+                                        <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png" />
                                     </a>
                                 </div>
                             </div>
                             <div class="template-hubButton windows-hubButton" onclick="navigateToSection(1)">
                                 <div class="hubButton-content">
                                     <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic hidden"
-                                             src="windows_assets/GSA_nav_946x220_0004_Windows-LO.png"/>
                                         <img class="graphicContainer-graphic"
                                              src="windows_assets/GSA_nav_946x220_0004_Windows-LO.png"/>
                                     </a>
@@ -666,8 +663,6 @@
                             <div class="template-hubButton office-hubButton" onclick="navigateToSection(2)">
                                 <div class="hubButton-content">
                                     <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic hidden"
-                                             src="office_assets/GSA_nav_946x220_0005_Office-LO.png"/>
                                         <img class="graphicContainer-graphic"
                                              src="office_assets/GSA_nav_946x220_0005_Office-LO.png"/>
                                     </a>
@@ -676,16 +671,13 @@
                             <div class="template-hubButton retailer-hubButton" onclick="navigateToSection(3)">
                                 <div class="hubButton-content">
                                     <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic hidden" src="retailer_assets/ms-logo.png"/>
-                                        <img class="graphicContainer-graphic" src="retailer_assets/ms-logo-white.png"/>
+                                        <img class="graphicContainer-graphic" src="retailer_assets/ms-logo.png"/>
                                     </a>
                                 </div>
                             </div>
                             <div class="template-hubButton processor-hubButton" onclick="navigateToSection(4)">
                                 <div class="hubButton-content">
                                     <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic hidden"
-                                             src="processor_assets/Intel_Logo_White_946x220.png"/>
                                         <img class="graphicContainer-graphic"
                                              src="processor_assets/Intel_Logo_White_946x220.png"/>
                                     </a>

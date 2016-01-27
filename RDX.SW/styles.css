@@ -157,7 +157,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 1fr auto 1fr 24px 60%;
+    -ms-grid-columns: 48px 1fr auto 1fr 24px auto;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .main-content {
@@ -173,7 +173,7 @@ body {
 }
 @media (min-width: 768px) and screen and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 1fr auto 1fr 24px 40%;
+    -ms-grid-columns: 48px 1fr auto 1fr 24px auto;
   }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
@@ -679,9 +679,6 @@ body {
   max-height: 60px;
   width: 60%;
 }
-.template-hubStrip .template-hubButton .hubButton-content .graphicContainer-graphic.hidden {
-  display: none;
-}
 @media screen and (min-width: 768px) {
   .template-hubStrip .template-hubButton .hubButton-content .graphicContainer-graphic {
     width: 80%;
@@ -689,7 +686,6 @@ body {
 }
 .template-hubStrip .template-hubButton.active {
   position: relative;
-  border-bottom: 4px solid #0083ca;
 }
 .template-hubStrip .template-hubButton.active.template-hubButton:after {
   border-bottom-color: #171717;
@@ -699,12 +695,6 @@ body {
     border-left-color: transparent !important;
     border-right-color: transparent !important;
   }
-}
-.template-hubStrip .template-hubButton.active .graphicContainer-graphic {
-  display: none;
-}
-.template-hubStrip .template-hubButton.active .graphicContainer-graphic.hidden {
-  display: inline-block !important;
 }
 button {
   color: #ffffff;
@@ -1271,7 +1261,7 @@ button:hover:active {
   flex-direction: column;
 }
 .sidebar .sidebar-header {
-  height: 84px;
+  height: 80px;
   padding: 0;
   text-align: left;
   vertical-align: middle;
