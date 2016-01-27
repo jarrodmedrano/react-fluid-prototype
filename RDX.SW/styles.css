@@ -679,6 +679,9 @@ body {
   max-height: 60px;
   width: 60%;
 }
+.template-hubStrip .template-hubButton .hubButton-content .graphicContainer-graphic.hidden {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .template-hubStrip .template-hubButton .hubButton-content .graphicContainer-graphic {
     width: 80%;
@@ -696,6 +699,12 @@ body {
     border-left-color: transparent !important;
     border-right-color: transparent !important;
   }
+}
+.template-hubStrip .template-hubButton.active .graphicContainer-graphic {
+  display: none;
+}
+.template-hubStrip .template-hubButton.active .graphicContainer-graphic.hidden {
+  display: inline-block !important;
 }
 button {
   color: #ffffff;
