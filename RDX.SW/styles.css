@@ -157,7 +157,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 1fr auto 1fr 24px auto;
+    -ms-grid-columns: 48px 1fr auto 1fr 24px 60%;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .main-content {
@@ -169,11 +169,6 @@ body {
     -ms-grid-column: 6;
     -ms-grid-column-span: 1;
     -ms-grid-row: 2;
-  }
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .hero-img img,
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .hero-img video {
-    max-width: 1000px;
-    height: auto;
   }
 }
 @media (min-width: 768px) and screen and (max-height: 768px) {
