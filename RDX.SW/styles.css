@@ -1263,15 +1263,6 @@ button:hover:active {
 }
 .sidebar .sidebar-header {
   height: 84px;
-  font-size: 24px;
-  line-height: 28px;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  padding-bottom: 2.3632px;
-  padding-top: 2.3632px;
-  padding-bottom: 0.1477rem;
-  padding-top: 0.1477rem;
-  font-weight: 300;
   padding: 0;
   text-align: left;
   vertical-align: middle;
@@ -1286,9 +1277,29 @@ button:hover:active {
   display: block;
   text-align: left;
 }
-.sidebar .sidebar-header-text h1,
-.sidebar .sidebar-header-text h2 {
-  margin: 0;
+.sidebar .sidebar-header-text .sidebar-headline {
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-bottom: 2.3632px;
+  padding-top: 2.3632px;
+  padding-bottom: 0.1477rem;
+  padding-top: 0.1477rem;
+  font-weight: 300;
+  display: block;
+  font-weight: 400;
+}
+.sidebar .sidebar-header-text .sidebar-subheadline {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.636px;
+  padding-top: 1.636px;
+  padding-bottom: 0.10225rem;
+  padding-top: 0.10225rem;
+  font-weight: 400;
 }
 .sidebar .spec-list {
   text-align: left;
@@ -1301,27 +1312,27 @@ button:hover:active {
 }
 .sidebar .spec-list table th {
   padding-bottom: 28px;
-  font-size: 24px;
-  line-height: 28px;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  padding-bottom: 2.3632px;
-  padding-top: 2.3632px;
-  padding-bottom: 0.1477rem;
-  padding-top: 0.1477rem;
-  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.227px;
+  padding-top: 0.227px;
+  padding-bottom: 0.0141875rem;
+  padding-top: 0.0141875rem;
+  font-weight: 400;
   font-weight: bold;
   padding-bottom: .5em;
 }
 .sidebar .spec-list table td {
-  font-size: 20px;
-  line-height: 24px;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  padding-bottom: 1.636px;
-  padding-top: 1.636px;
-  padding-bottom: 0.10225rem;
-  padding-top: 0.10225rem;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.227px;
+  padding-top: 0.227px;
+  padding-bottom: 0.0141875rem;
+  padding-top: 0.0141875rem;
   font-weight: 400;
 }
 .sidebar .spec-list .sidebar-text-additional {

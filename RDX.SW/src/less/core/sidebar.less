@@ -11,7 +11,6 @@
 
   .sidebar-header {
     height: @brandBar-height + 4;
-    .textbase-title();
     padding: 0;
     text-align: left;
     vertical-align: middle;
@@ -31,8 +30,14 @@
     display: block;
     text-align: left;
 
-    h1, h2 {
-      margin: 0;
+    .sidebar-headline {
+      .textbase-title();
+      display: block;
+      font-weight: 400;
+    }
+
+    .sidebar-subheadline {
+      .textbase-subtitle();
     }
   }
 
@@ -47,13 +52,13 @@
 
       th {
         padding-bottom: @sidebar-spacing;
-        .textbase-title();
+        .textbase-body();
         font-weight: bold;
         padding-bottom: .5em;
       }
 
       td {
-        .textbase-subtitle();
+        .textbase-body();
       }
 
     }
