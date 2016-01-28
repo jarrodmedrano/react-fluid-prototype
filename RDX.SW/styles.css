@@ -206,7 +206,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
-    -ms-grid-columns: 50% 24px 1fr auto 1fr 48px;
+    -ms-grid-columns: auto 24px 1fr auto 1fr 48px;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right .main-content {
@@ -218,6 +218,10 @@ body {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
     -ms-grid-column-span: 1;
+  }
+  .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right .hero-img img {
+    max-width: 500px;
+    height: auto;
   }
 }
 @media (min-width: 768px) and screen and (max-height: 768px) {
@@ -1485,8 +1489,9 @@ button:hover:active {
   margin-right: 28px;
   text-align: center;
   vertical-align: top;
-  width: 44px;
-  max-width: 44px;
+  width: 24px;
+  max-width: 24px;
+  height: auto;
 }
 .sidebar .spec-list .sidebar-list-text {
   overflow: hidden;
