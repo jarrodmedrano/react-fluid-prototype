@@ -752,6 +752,7 @@ body {
         flex: 1;
         flex-shrink: 1;
         height: 200px;
+        border-bottom: 4px solid transparent;
 
         &:focus {
             outline: 1px dotted white;
@@ -779,9 +780,9 @@ body {
             }
 
         max-width: @max-brandBar-width;
-        height: @brandBar-height;
+        height: @brandBar-height - 4px;
         position: relative;
-        border-left: 2px solid @dark-grey;
+        //border-left: 2px solid @dark-grey;
 
             &:first-of-type {
                 //border: none;
@@ -806,9 +807,9 @@ body {
       // Active state for hubButton shading
       &.active {
         position: relative;
+        background:rgba(255,255,255,0.1);
 
         &.template-hubButton:after {
-          border-bottom-color: @dark-grey;
 
           @media screen and (-ms-high-contrast: active) {
             border-left-color: transparent !important;

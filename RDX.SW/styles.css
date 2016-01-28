@@ -653,10 +653,10 @@ body {
   flex: 1;
   flex-shrink: 1;
   height: 200px;
+  border-bottom: 4px solid transparent;
   max-width: 240px;
-  height: 80px;
+  height: 76px;
   position: relative;
-  border-left: 2px solid #171717;
 }
 .template-hubStrip .template-hubButton:focus {
   outline: 1px dotted white;
@@ -699,9 +699,7 @@ body {
 }
 .template-hubStrip .template-hubButton.active {
   position: relative;
-}
-.template-hubStrip .template-hubButton.active.template-hubButton:after {
-  border-bottom-color: #171717;
+  background: rgba(255, 255, 255, 0.1);
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubStrip .template-hubButton.active.template-hubButton:after {
