@@ -1259,7 +1259,6 @@ button:hover:active {
   display: none;
 }
 .sidebar {
-  text-align: center;
   align-items: stretch;
   position: relative;
   overflow: hidden;
@@ -1296,7 +1295,7 @@ button:hover:active {
   padding-top: 0.1477rem;
   font-weight: 300;
   display: block;
-  font-weight: 400;
+  margin-bottom: 1rem;
 }
 .sidebar .sidebar-header-text .sidebar-subheadline {
   font-size: 20px;
@@ -1317,6 +1316,7 @@ button:hover:active {
 }
 .sidebar .spec-list table {
   width: 100%;
+  margin-bottom: 1rem;
 }
 .sidebar .spec-list table th {
   padding-bottom: 28px;
@@ -1330,7 +1330,6 @@ button:hover:active {
   padding-top: 0.0141875rem;
   font-weight: 400;
   font-weight: bold;
-  padding-bottom: .5em;
 }
 .sidebar .spec-list table td {
   font-size: 15px;
@@ -1345,7 +1344,7 @@ button:hover:active {
 }
 .sidebar .spec-list .sidebar-text-additional {
   display: block;
-  margin: 28px 0;
+  margin: 0 0 1rem 0;
   font-size: 15px;
   line-height: 20px;
   font-size: 0.9375rem;
@@ -1466,25 +1465,28 @@ button:hover:active {
 .sidebar .spec-list ul,
 .sidebar .spec-list li {
   padding: 0;
-  margin: 0;
   list-style: none;
 }
 .sidebar .spec-list ul {
-  margin: 2em 0;
+  margin: 2rem 0;
   padding: 0;
-  text-align: left;
 }
 .sidebar .spec-list li {
-  margin-bottom: 28px;
+  margin-bottom: 1rem;
+  display: block;
+  clear: both;
+  overflow: auto;
 }
 .sidebar .spec-list .icon {
   float: left;
   overflow: hidden;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 44px;
+  line-height: 44px;
   margin-right: 28px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
+  width: 44px;
+  max-width: 44px;
 }
 .sidebar .spec-list .sidebar-list-text {
   overflow: hidden;
@@ -1498,9 +1500,8 @@ button:hover:active {
 }
 .sidebar .bundles {
   bottom: 0;
-  background: #d8d9db;
+  background: #505050;
   max-height: 160px;
-  border-top: 2px solid #0089cf;
   padding: 28px;
   overflow: hidden;
 }
@@ -1510,6 +1511,7 @@ button:hover:active {
 }
 .sidebar .bundles .bundle-text {
   padding: 28px;
+  color: #ffffff;
   padding-top: 0;
   padding-bottom: 0;
   display: block;
@@ -1531,10 +1533,64 @@ button:hover:active {
 }
 .sidebar .bundles .bundle-text .bundle-subheader-text {
   display: block;
-  margin: 0 0 28px 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-bottom: 1.1816px;
+  padding-top: 1.1816px;
+  padding-bottom: 0.07385rem;
+  padding-top: 0.07385rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.sidebar .bundles .bundle-text .bundle-subheader-text.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 14px;
+  max-height: 0.875rem;
+}
+.sidebar .bundles .bundle-text .bundle-subheader-text.textType_maxLinesTwo {
+  max-height: 28px;
+  max-height: 1.75rem;
+}
+.sidebar .bundles .bundle-text .bundle-subheader-text.textType_maxLinesThree {
+  max-height: 42px;
+  max-height: 2.625rem;
+}
+.sidebar .bundles .bundle-text .bundle-subheader-text.textType_maxLinesFour {
+  max-height: 56px;
+  max-height: 3.5rem;
 }
 .sidebar .bundles .bundle-text .bundle-body-text {
   display: block;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-bottom: 1.1816px;
+  padding-top: 1.1816px;
+  padding-bottom: 0.07385rem;
+  padding-top: 0.07385rem;
+  font-weight: 400;
+}
+.sidebar .bundles .bundle-text .bundle-body-text.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 14px;
+  max-height: 0.875rem;
+}
+.sidebar .bundles .bundle-text .bundle-body-text.textType_maxLinesTwo {
+  max-height: 28px;
+  max-height: 1.75rem;
+}
+.sidebar .bundles .bundle-text .bundle-body-text.textType_maxLinesThree {
+  max-height: 42px;
+  max-height: 2.625rem;
+}
+.sidebar .bundles .bundle-text .bundle-body-text.textType_maxLinesFour {
+  max-height: 56px;
+  max-height: 3.5rem;
 }
 @font-face {
   font-family: 'Segoe UI Webfont';
