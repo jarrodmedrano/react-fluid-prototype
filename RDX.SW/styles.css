@@ -115,8 +115,7 @@ body {
   }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img img {
-  width: auto;
-  height: 80vh;
+  max-width: 945px;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .main-content {
   -ms-grid-row-align: center;
