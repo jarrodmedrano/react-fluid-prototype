@@ -699,7 +699,7 @@ body {
 }
 .template-hubStrip .template-hubButton.active {
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubStrip .template-hubButton.active.template-hubButton:after {
@@ -1281,6 +1281,9 @@ button:hover:active {
   border-top: 1px solid #171717;
   border-bottom: 1px solid #CCC;
 }
+.sidebar a {
+  font-weight: 400;
+}
 .sidebar .sidebar-header-text {
   padding: 28px;
   display: block;
@@ -1309,6 +1312,8 @@ button:hover:active {
   padding-bottom: 0.10225rem;
   padding-top: 0.10225rem;
   font-weight: 400;
+  font-weight: 700;
+  opacity: .6;
 }
 .sidebar .spec-list {
   text-align: left;
@@ -1375,35 +1380,6 @@ button:hover:active {
   max-height: 80px;
   max-height: 5rem;
 }
-.sidebar .spec-list .sidebar-text-additional a {
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 0.75rem;
-  line-height: 0.875rem;
-  padding-bottom: 1.1816px;
-  padding-top: 1.1816px;
-  padding-bottom: 0.07385rem;
-  padding-top: 0.07385rem;
-  font-weight: 400;
-}
-.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesOne {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-height: 14px;
-  max-height: 0.875rem;
-}
-.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesTwo {
-  max-height: 28px;
-  max-height: 1.75rem;
-}
-.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesThree {
-  max-height: 42px;
-  max-height: 2.625rem;
-}
-.sidebar .spec-list .sidebar-text-additional a.textType_maxLinesFour {
-  max-height: 56px;
-  max-height: 3.5rem;
-}
 .sidebar .spec-list .sidebar-text-footnote {
   display: block;
   margin: 28px 0;
@@ -1432,35 +1408,6 @@ button:hover:active {
   max-height: 2.625rem;
 }
 .sidebar .spec-list .sidebar-text-footnote.textType_maxLinesFour {
-  max-height: 56px;
-  max-height: 3.5rem;
-}
-.sidebar .spec-list .sidebar-text-footnote a {
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 0.75rem;
-  line-height: 0.875rem;
-  padding-bottom: 1.1816px;
-  padding-top: 1.1816px;
-  padding-bottom: 0.07385rem;
-  padding-top: 0.07385rem;
-  font-weight: 400;
-}
-.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesOne {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-height: 14px;
-  max-height: 0.875rem;
-}
-.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesTwo {
-  max-height: 28px;
-  max-height: 1.75rem;
-}
-.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesThree {
-  max-height: 42px;
-  max-height: 2.625rem;
-}
-.sidebar .spec-list .sidebar-text-footnote a.textType_maxLinesFour {
   max-height: 56px;
   max-height: 3.5rem;
 }
@@ -1505,7 +1452,7 @@ button:hover:active {
   bottom: 0;
   background: #505050;
   max-height: 160px;
-  padding: 28px;
+  padding: 28px 28px 28px 12px;
   overflow: hidden;
 }
 .sidebar .bundles .bundle-img {
@@ -1523,16 +1470,36 @@ button:hover:active {
 }
 .sidebar .bundles .bundle-text .bundle-header-text {
   display: block;
-  font-size: 20px;
-  line-height: 24px;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  padding-bottom: 1.636px;
-  padding-top: 1.636px;
-  padding-bottom: 0.10225rem;
-  padding-top: 0.10225rem;
-  font-weight: 400;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.227px;
+  padding-top: 0.227px;
+  padding-bottom: 0.0141875rem;
+  padding-top: 0.0141875rem;
+  font-weight: 600;
   margin: 0 0;
+}
+.sidebar .bundles .bundle-text .bundle-header-text.textType_maxLinesOne {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 20px;
+  max-height: 1.25rem;
+}
+.sidebar .bundles .bundle-text .bundle-header-text.textType_maxLinesTwo {
+  max-height: 40px;
+  max-height: 2.5rem;
+}
+.sidebar .bundles .bundle-text .bundle-header-text.textType_maxLinesThree {
+  max-height: 60px;
+  max-height: 3.75rem;
+}
+.sidebar .bundles .bundle-text .bundle-header-text.textType_maxLinesFour {
+  max-height: 80px;
+  max-height: 5rem;
 }
 .sidebar .bundles .bundle-text .bundle-subheader-text {
   display: block;
@@ -1545,7 +1512,8 @@ button:hover:active {
   padding-bottom: 0.07385rem;
   padding-top: 0.07385rem;
   font-weight: 400;
-  margin: 1rem 0;
+  margin: .5rem 0;
+  opacity: .6;
 }
 .sidebar .bundles .bundle-text .bundle-subheader-text.textType_maxLinesOne {
   white-space: nowrap;
@@ -1564,6 +1532,9 @@ button:hover:active {
 .sidebar .bundles .bundle-text .bundle-subheader-text.textType_maxLinesFour {
   max-height: 56px;
   max-height: 3.5rem;
+}
+.sidebar .bundles .bundle-text .bundle-price {
+  float: right;
 }
 .sidebar .bundles .bundle-text .bundle-body-text {
   display: block;
