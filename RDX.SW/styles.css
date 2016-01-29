@@ -1450,7 +1450,7 @@ button:hover:active {
 }
 .sidebar .bundles {
   bottom: 0;
-  background: #505050;
+  background: #0089d0 ;
   max-height: 160px;
   padding: 28px 28px 28px 12px;
   overflow: hidden;
