@@ -1603,6 +1603,7 @@ body {
   font-weight: 400;
 }
 a {
+  color: #0083ca;
   text-decoration: none;
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
@@ -1633,6 +1634,13 @@ a.textType_maxLinesThree {
 a.textType_maxLinesFour {
   max-height: 80px;
   max-height: 5rem;
+}
+a:visited {
+  color: #0083ca;
+}
+a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
 }
 h1,
 h2,
@@ -1886,6 +1894,10 @@ h6.textType_maxLinesThree {
 h6.textType_maxLinesFour {
   max-height: 48px;
   max-height: 3rem;
+}
+sup {
+  vertical-align: top;
+  line-height: 1;
 }
 .text-subcaption {
   font-size: 8px;
