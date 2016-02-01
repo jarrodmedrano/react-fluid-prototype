@@ -55,8 +55,17 @@ body {
 // Anchor Definition
 //-----------------------------------------------------------------------------
 a {
+    color: @accent-color;
     text-decoration: none; // Remove underline from links by default
     .text-base();
+
+    &:visited {
+      color: @accent-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
 }
 
 //-----------------------------------------------------------------------------
@@ -99,7 +108,6 @@ h2 {
     .textbase-subheader(true);
 }
 
-
 .text-title,
 h3 {
     .textbase-title(true);
@@ -118,6 +126,11 @@ h5 {
 .text-captionAlt,
 h6 {
   .textbase-captionAlt(true);
+}
+
+sup {
+  vertical-align: top;
+  line-height: 1;
 }
 
 //-----------------------------------------------------------------------------
