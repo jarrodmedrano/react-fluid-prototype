@@ -11,7 +11,7 @@
 //-----------------------------------------------------------------------------
 // Sets vertical padding so that the effective line-height to font-size ratio of the last line is 1.3636.
 // This prevents descender clipping when overflow: hidden is set on the element.
-.applyAscenderDescenderAdjustment(@applyAdjustment, @fontSize, @lineHeight) when (@applyAdjustment = true) and ((unit(@lineHeight) / unit(@fontSize)) < 1.3636) {
+.applyAscenderDescenderAdjustment(@applyAdjustment, @fontSize, @lineHeight) when (@applyAdjustment = true) {
     @requiredLineHeight: @fontSize * 1.3636;
     @adjustmentSize: (@requiredLineHeight - @lineHeight) / 2;
 
