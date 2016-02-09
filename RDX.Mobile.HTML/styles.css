@@ -250,6 +250,13 @@ body {
 .page-body .content-carousel .template-contentCard .contentCard-graphicContainer {
   height: 100%;
 }
+.page-body .content-carousel .template-contentCard .contentCard-graphicContainer .header {
+  display: flex;
+  align-items: center;
+}
+.page-body .content-carousel .template-contentCard .contentCard-graphicContainer .header video {
+  max-width: 100%;
+}
 .page-body .content-carousel .template-contentCard .contentCard-graphicContainer .header.fullWidth-photo {
   overflow: hidden;
   height: 100%;
