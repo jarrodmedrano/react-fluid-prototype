@@ -102,17 +102,9 @@ body {
   margin: auto;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img {
-  -ms-grid-column-align: end;
   -ms-grid-row-align: center;
+  -ms-grid-column-align: end;
   max-width: 100%;
-}
-@media screen and (min-width: 750px) and (max-width: 1200px) {
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img.full-width-video {
-    display: -ms-grid;
-    -ms-grid-column-align: center;
-    -ms-grid-row-align: center;
-    -ms-grid-columns: 40vw 48px;
-  }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img img {
   width: auto;
@@ -172,7 +164,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 0 auto 1fr 24px auto;
+    -ms-grid-columns: 48px 1fr auto 1fr 24px 60%;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .main-content {
@@ -185,19 +177,10 @@ body {
     -ms-grid-column-span: 1;
     -ms-grid-row: 2;
   }
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .hero-img img {
-    max-width: 500px;
-    height: auto;
-  }
 }
 @media (min-width: 768px) and screen and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 1fr auto 1fr 24px auto;
-  }
-}
-@media screen and (min-width: 1700px) {
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .hero-img img {
-    max-width: 800px;
+    -ms-grid-columns: 48px 1fr auto 1fr 24px 40%;
   }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
@@ -221,7 +204,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
-    -ms-grid-columns: auto 24px 1fr auto 1fr 48px;
+    -ms-grid-columns: 50% 24px 1fr auto 1fr 48px;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right .main-content {
@@ -233,10 +216,6 @@ body {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
     -ms-grid-column-span: 1;
-  }
-  .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right .hero-img img {
-    max-width: 500px;
-    height: auto;
   }
 }
 @media (min-width: 768px) and screen and (max-height: 768px) {
@@ -328,7 +307,7 @@ body {
   -ms-grid-columns: auto 100px;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList {
-  -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto;
+  -ms-grid-rows: 1fr 104px 40px 40px 40px minmax(0, 1fr) 40px 40px 1fr auto;
 }
 @media all and (min-width: 640px) and (max-width: 1100px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList {
@@ -476,7 +455,7 @@ body {
 .page-body .control-carousel .carousel-slideContainer .template-contentCard button {
   height: 44px;
   padding: 0 16px;
-  margin-top: 38px;
+  margin-top: 10px;
   min-width: 140px;
 }
 .page-body .control-carousel .carousel-controls {

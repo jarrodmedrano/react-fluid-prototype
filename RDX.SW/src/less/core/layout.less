@@ -124,33 +124,20 @@ body {
             margin: auto;
 
                 .hero-img {
-                  -ms-grid-column-align: end;
-                  -ms-grid-row-align: center;
-                  max-width: 100%;
+                    -ms-grid-row-align: center;
+                    -ms-grid-column-align: end;
+                    max-width: 100%;
 
-                  @media screen and (min-width: 750px) and (max-width: 1200px) {
-                    &.full-width-video {
-                      display: -ms-grid;
-                      -ms-grid-column-align: center;
-                      -ms-grid-row-align: center;
-                      -ms-grid-columns: 40vw 48px;
+                    img {
+                        width: auto;
+                        height: 80vh;
                     }
-                  }
-
-                  img {
-                    width: auto;
-                    height: 80vh;
-                  }
 
                 }
 
                 .main-content {
                     -ms-grid-row-align: center;
                     width: 100%;
-
-                    //@media screen and @mediaQueryBreakpointMd {
-                    //    min-width: 400px;
-                    //}
 
                     .text-header {
                         display: block;
@@ -216,7 +203,7 @@ body {
                     }
 
                     @media @mediaQueryBreakpointMd {
-                        -ms-grid-columns: @page-margin 0 auto 1fr @padding-unit auto;
+                        -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 60%;
                         -ms-grid-rows: 1fr auto 1fr;
 
                         .main-content {
@@ -229,24 +216,11 @@ body {
                             -ms-grid-column: 6;
                             -ms-grid-column-span: 1;
                             -ms-grid-row: 2;
-
-                            img {
-                              max-width: 500px;
-                              height: auto;
-                            }
                         }
 
                         @media screen and @mediaQueryVerticalBreakpointSm {
-                            -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit auto;
+                            -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 40%;
                         }
-                    }
-
-                    @media screen and @mediaQueryBreakpointXXl {
-                      .hero-img {
-                        img {
-                          max-width: 800px;
-                        }
-                      }
                     }
                 }
 
@@ -272,7 +246,7 @@ body {
                     }
 
                     @media @mediaQueryBreakpointMd {
-                        -ms-grid-columns: auto @padding-unit 1fr auto 1fr @page-margin;
+                        -ms-grid-columns: 50% @padding-unit 1fr auto 1fr @page-margin;
                         -ms-grid-rows: 1fr auto 1fr;
 
                        .main-content {
@@ -285,11 +259,6 @@ body {
                             -ms-grid-column: 1;
                             -ms-grid-row: 2;
                             -ms-grid-column-span: 1;
-
-                            img {
-                              max-width: 500px;
-                              height: auto;
-                            }
                         }
 
                         @media screen and @mediaQueryVerticalBreakpointSm {
@@ -383,8 +352,8 @@ body {
                         }
 
                         // Required Sub-setting [Threecol > Column] - Logo and 2 Containers of content centered
-                        &.threeColumn-logoList { 
-                            -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto; 
+                        &.threeColumn-logoList {
+                            -ms-grid-rows: 1fr 104px 40px 40px 40px minmax(0, 1fr) 40px 40px 1fr auto;
                             @media all and (min-width: 640px) and (max-width: 1100px) {
                              -ms-grid-rows: 1fr 90px 40px 1fr 1fr 100px 1fr 1fr 1fr;
                             }
@@ -533,7 +502,7 @@ body {
                 button {
                     height: (@design-unit * 11);
                     padding: 0 (@design-unit * 4);
-                    margin-top: (@design-unit * 9.5);
+                    margin-top: (@design-unit * 2.5);
                     min-width: 140px;
                 }
             }
