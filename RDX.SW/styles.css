@@ -107,8 +107,13 @@ body {
   max-width: 100%;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img img {
-  width: auto;
-  height: 80vh;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .page-body .control-carousel .carousel-slideContainer .template-contentCard .hero-img img {
+    width: auto;
+    height: 80vh;
+  }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard .main-content {
   -ms-grid-row-align: center;
@@ -164,7 +169,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 1fr auto 1fr 24px 60%;
+    -ms-grid-columns: 48px 0 auto 1fr 24px auto;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left .main-content {
@@ -180,7 +185,7 @@ body {
 }
 @media (min-width: 768px) and screen and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
-    -ms-grid-columns: 48px 1fr auto 1fr 24px 40%;
+    -ms-grid-columns: 48px 1fr auto 1fr 24px auto;
   }
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
@@ -204,7 +209,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
-    -ms-grid-columns: 50% 24px 1fr auto 1fr 48px;
+    -ms-grid-columns: auto 24px 1fr auto 1fr 48px;
     -ms-grid-rows: 1fr auto 1fr;
   }
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right .main-content {
@@ -1912,6 +1917,7 @@ h6.textType_maxLinesFour {
 sup {
   vertical-align: top;
   line-height: 1;
+  font-size: 11px;
 }
 .text-subcaption {
   font-size: 8px;

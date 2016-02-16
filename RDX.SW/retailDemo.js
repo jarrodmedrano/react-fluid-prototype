@@ -7,8 +7,8 @@
 var slider = document.getElementById('slider');
 var sliderElementStyles = slider.style;
 
-var currentlyShowingSlide;
-var currentlyShowingSlideID;
+var currentlyShowingSlide
+var currentlyShowingSlideID
 var leftSideID = "";
 var rightSideID = "";
 
@@ -21,16 +21,16 @@ var buildingJustOneSide = false;
 var buildJustThisSide = "";
 
 // Array of Slide IDs info
-var arrayOfSlideIDsLength;
-var lastSlideIDin_ArrayOfSlideIDs;
-var secondToLastSlideIDin_ArrayOfSlideIDs;
+var arrayOfSlideIDsLength
+var lastSlideIDin_ArrayOfSlideIDs 
+var secondToLastSlideIDin_ArrayOfSlideIDs
 
-var carouselWidth;
-var thePointerType;
+var carouselWidth
+var thePointerType
 var directionSliderMoving = "";
 
-var sliderTransitionSpeed = "1s";
-var sliderTransitionSpeedTimeout = 1050;
+var sliderTransitionSpeed = "300ms";
+var sliderTransitionSpeedTimeout = 310;
 
 var buildLandRExecuted = false;
 var buildExecuted = false;
@@ -47,19 +47,20 @@ var oneFifthOriginalCarouselWidth;
 var movedX = 0;
 
 // goForwardOrBack() Variables
-var currentlyShowingPageIDIndex;
+var currentlyShowingPageIDIndex
 
 var increaseFlipperZIndexFired = false;
 
 // Locks
 var isBuilt = false;
 var isAnimating = false;
-var pointerType;
+var pointerType
 
 // Variables generated on window.load by generateArraysOfSlideIDs()
 var arrayOfSlideIDs = [];
 var arrayOfSections = [];
-var lastSection;
+var lastSection
+
 
 //*******************************************************************
 // Carousel state
@@ -67,6 +68,12 @@ var lastSection;
 var currentSection = 0;
 var currentPage = 0;
 var pageCounts = [];
+
+// Grab page counts embedded in HTML
+var pageCountsElems = document.getElementById("pageCounts").children;
+for (var i = 0; i < pageCountsElems.length; i++) {
+    pageCounts[i] = parseInt(pageCountsElems[i].innerHTML);
+}
 
 function currentID() {
     return currentSection.toString() + "-" + currentPage.toString();
@@ -116,33 +123,26 @@ function pauseOrPlay() {
   for (var i = 0; i < document.getElementsByTagName("video").length; i++) {
     var currentVideo = document.getElementsByTagName("video")[i];
     var SecondUpID = currentVideo.parentNode.parentNode.id;
-    var ThirdUpID = currentVideo.parentNode.parentNode.parentNode.id;
-    var SecondUp = document.getElementById(SecondUpID);
-    var ThirdUp = document.getElementById(ThirdUpID);
     if (SecondUpID.length === 3 && typeof parseInt(SecondUpID.slice(0, 1)) === "number") {
-      if (SecondUp.style.display === "none") {
+      var secondUpParent = document.getElementById(SecondUpID);
+      if ((secondUpParent.style.display === "none") || (secondUpParent.style.display === "")) {
         currentVideo.pause();
-        document.exitFullscreen();
-
       } else {
-        if(!SecondUp.classList.contains('noautoplay')) {
+        currentVideo.play();
+      }
+    } else {
+      var ThirdUpID = currentVideo.parentNode.parentNode.parentNode.id;
+      if (ThirdUpID.length === 3 && typeof parseInt(ThirdUpID.slice(0, 1)) === "number") {
+        var thirdUpParent = document.getElementById(ThirdUpID);
+        if ((thirdUpParent.style.display === "none") || (thirdUpParent.style.display === "")) {
+          currentVideo.pause();
+        } else {
           currentVideo.play();
         }
-      };
-    };
-    if (ThirdUpID.length === 3 && typeof parseInt(ThirdUpID.slice(0, 1)) === "number") {
-      if (document.getElementById(ThirdUpID).style.display === "none") {
-        currentVideo.pause();
-        document.exitFullscreen();
-
-      } else {
-        if(!ThirdUp.classList.contains('noautoplay')) {
-          currentVideo.play();
-        }
-      };
-    };
-  };
-};
+      }
+    }
+  }
+}
 
 //*******************************************************************
 
@@ -189,7 +189,7 @@ function updatePage(num) {
 function generateArraysOfSlideIDs() {
   var sliderParentDiv = document.getElementById("slider");
   var sliderDivChildren = sliderParentDiv.getElementsByTagName("div");
-  for (i=0; i < sliderDivChildren.length; i++) {
+  for (i=0; i < sliderDivChildren.length; i++) { 
     if (sliderDivChildren[i].parentNode === sliderParentDiv) {
       arrayOfSlideIDs.push(sliderDivChildren[i].id);
     };
@@ -213,20 +213,53 @@ function generateArraysOfSlideIDs() {
 // window.OnLoad
 
 window.addEventListener('load', function(){
+  // Show 0-0 card and set controls for initial use
+  document.getElementById("0-0").style.display = MsGrid;
+  onSectionChange();
+  setActivePageIndicator();
+
   generateArraysOfSlideIDs();
   pauseOrPlay();
+
+  // Sliding event listeners
+  if (document.getElementsByClassName("mobileSlider").length === 0) {
   slider.addEventListener('pointerdown', function(e){
-    begin(e);
     e.preventDefault();
+    if (e.pointerType === "touch") {
+      begin(e);
+    }
   }, false)
   slider.addEventListener('pointermove', function(e){
-    moving(e);
     e.preventDefault();
+    if (e.pointerType === "touch") {
+      moving(e);
+    }
   }, false)
   slider.addEventListener('pointerup', function(e){
-    end(e);
     e.preventDefault();
+    if (e.pointerType === "touch") {
+      end(e);
+    }
   }, false)
+
+  // Left + right arrow key functionality
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    switch (evt.keyCode) {
+        case 37:
+            var oldPage = currentID();    
+            toThePreviousPage();
+            //WinGS.LogBI("KeyPress", "{'direction':'left','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+            break;
+        case 39:
+            var oldPage = currentID();    
+            toTheNextPage();
+            //WinGS.LogBI("KeyPress", "{'direction':'right','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+            break;
+    }
+  }
+
+  }
 }, false)
 
 //*******************************************************************
@@ -248,7 +281,7 @@ var begin = function(event) {
 //*******************************************************************
 // begin RELATED FUNCTIONS
 
-function build(onThisSide,offScreenSlideID,showingSlideID) {
+function build(onThisSide,offScreenSlideID,showingSlideID) { 
   var showingSlideIDStyles = document.getElementById(showingSlideID).style;
   sliderElementStyles.transition = "all";
   builtOffSCreenOnThisSide = onThisSide;
@@ -274,8 +307,8 @@ function build(onThisSide,offScreenSlideID,showingSlideID) {
     firstSlideStyles.marginLeft = '100%';
     firstSlideStyles.display = MsGrid;
   } else {
-    showingSlideIDStyles.float = sideOfScreenWithNoSlide;
-    sliderElementStyles.vw = "200";
+    showingSlideIDStyles.float = sideOfScreenWithNoSlide;  
+    sliderElementStyles.vw = "200";  
     fabricate([offScreenSlideID,onThisSide]);
   };
   function showingSlidePositionAndSliderWidth() {
@@ -308,8 +341,8 @@ function buildLandR(left,right,showing) {
 };
 
 /////////////////////////////////
-// increaseFlipperZIndex() and resetFlipperZIndex() are needed
-// to get flippers to display on First and Last slide, since since the touch transitions
+// increaseFlipperZIndex() and resetFlipperZIndex() are needed 
+// to get flippers to display on First and Last slide, since since the touch transitions 
 // for those slides use different positioning JS than the others
 function increaseFlipperZIndex() {
   increaseFlipperZIndexFired = true;
@@ -400,16 +433,11 @@ function setShowingSlideToClientWidth(showingSlideID) {
 //*******************************************************************
 // moving
 
-
-
 var moving = function(event) {
-
-  var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) ||  (document.mozFullScreen || document.webkitIsFullScreen);
-
-    if (event.isPrimary === true &&
-      pointerType       === event.pointerType &&
-      isAnimating       === false &&
-      isBuilt           === true && isInFullScreen === false) {
+    if (event.isPrimary === true && 
+      pointerType       === event.pointerType && 
+      isAnimating       === false && 
+      isBuilt           === true) {
       var midX = event.clientX;
       var movedX = 0;
       var absoluteDiffrerence = Math.abs(Math.abs(InitialXPoint) - Math.abs(midX));
@@ -425,13 +453,13 @@ var moving = function(event) {
         oneFifthOriginalCarouselWidth = (carouselWidth / 5);
         if (absoluteDiffrerence > oneFifthOriginalCarouselWidth && difference > 0) {
           isAnimating = true;
-          var oldPage = currentID();
+          var oldPage = currentID();  
           updatePage(1);
           //WinGS.LogBI("Swipe", "{'direction':'previous','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
           slideSlider(leftString);
         } else if (absoluteDiffrerence > oneFifthOriginalCarouselWidth && difference < 0) {
           isAnimating = true;
-          var oldPage = currentID();
+          var oldPage = currentID();  
           updatePage(-1);
           //WinGS.LogBI("Swipe", "{'direction':'next','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
           slideSlider(rightString);
@@ -445,9 +473,9 @@ var moving = function(event) {
 var end = function(event) {
   if (event.isPrimary === true) {
     if (!isAnimating) {
-      isAnimating = true;
+      isAnimating = true; 
       reCentering(event);
-      isAnimating = false;
+      isAnimating = false; 
       InitialXPoint = undefined;
     };
   };
@@ -481,7 +509,7 @@ function slideSlider(directionMoving) {
   } else {
     document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
   }
-  setTimeout(function(){
+  setTimeout(function(){ 
     disassemble();
     isAnimating = false;
     isBuilt = false;
@@ -590,25 +618,24 @@ function resetBooleansAndLogicValues() {
 // section sliding
 //  possible bug - will there ever be only 1 section?
 
-// Fired ONLY on initial page load at 5000 millisecond intervals
+// Fired ONLY on initial page load at 5000 millisecond intervals 
 var isNewSlideToNextSectionRightExecuting = false;
 
 function newSlideToNextSectionRight() {
-
-  var isNextSectionHigher = false;
+  var isNextSectionHigher = false; 
   isNewSlideToNextSectionRightExecuting = true;
   var nextSection = currentSection;
   nextSection = nextSection + 1;
   for (var i = 0; i < arrayOfSections.length; i++) {
     if (nextSection === arrayOfSections[i]) {
-      isNextSectionHigher = true;
+      isNextSectionHigher = true; 
       goToArbitrarySection(nextSection);
     };
   };
   if (isNextSectionHigher === false) {
     goToArbitrarySection(0);
   };
-  isNextSectionHigher = false;
+  isNextSectionHigher = false; 
 };
 
 
@@ -617,7 +644,6 @@ function newSlideToNextSectionRight() {
 
 function goToArbitrarySection(sectionNumber) {
   if (!isAnimating) {
-
     isAnimating = true;
     ifIsBuiltIsTrue_Dissassemble();
     determingShowingSlide();
@@ -727,52 +753,7 @@ function ifIsBuiltIsTrue_Dissassemble(){
 //*******************************************************************
 // Business logic
 
-// Grab page counts embedded in HTML
-var pageCountsElems = document.getElementById("pageCounts").children;
-for (var i = 0; i < pageCountsElems.length; i++) {
-    pageCounts[i] = parseInt(pageCountsElems[i].innerHTML);
-}
 
-// Show 0-0 card and set controls for initial use
-document.getElementById("0-0").style.display = MsGrid;
-onSectionChange();
-setActivePageIndicator();
-
-// Rotate through sections every 5 seconds until user breaks interaction
-// Subsequently show flippers whenever the mouse moves
-/*
-var timer;
-document.body.addEventListener("mousemove", function () {
-    clearTimeout(timer);
-    var flippers = document.getElementsByClassName("sideNav")
-    flippers[0].style.display = MsGrid;
-    flippers[1].style.display = MsGrid;
-
-    function hideFlippers() {
-        flippers[0].style.display = "none";
-        flippers[1].style.display = "none";
-    }
-    timer = setInterval(hideFlippers, 300);
-});
-*/
-
-// Left + right arrow key functionality
-document.onkeydown = function (evt) {
-
-    evt = evt || window.event;
-    switch (evt.keyCode) {
-        case 37:
-            var oldPage = currentID();
-            toThePreviousPage();
-            //WinGS.LogBI("KeyPress", "{'direction':'left','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
-            break;
-        case 39:
-            var oldPage = currentID();
-            toTheNextPage();
-            //WinGS.LogBI("KeyPress", "{'direction':'right','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
-            break;
-    }
-};
 
 //*******************************************************************
 // Wrappers for HTML events
@@ -803,6 +784,53 @@ function navigateToSection(section) {
     var oldPage = currentID();
     goToArbitrarySection(section);
     //WinGS.LogBI("Click", "{'target':'hubButton','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+}
+
+function showPageNext() {
+    var oldPage = currentID();
+    updatePage(1);
+    document.getElementById(oldPage).style.display = "none";
+    var target = document.getElementById(currentID());
+    target.style.display = MsGrid;
+    if (target.classList.contains("contentCard-specs")) {
+    document.getElementsByClassName("template-pageIndicator")[0].classList.add("indicators-bottom");
+  } else {
+    document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
+  }
+    //WinGS.LogBI("Click", "{'target':'rightNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+}
+
+function showPagePrev() {
+    var oldPage = currentID();
+    updatePage(-1);
+    document.getElementById(oldPage).style.display = "none";
+    var target = document.getElementById(currentID());
+    target.style.display = MsGrid;
+    if (target.classList.contains("contentCard-specs")) {
+    document.getElementsByClassName("template-pageIndicator")[0].classList.add("indicators-bottom");
+  } else {
+    document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
+  }
+    //WinGS.LogBI("Click", "{'target':'leftNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+}
+
+function showArbitrarySection(section) {
+    if (section !== currentSection) {
+        var oldPage = currentID();
+        currentSection = section;
+        currentPage = 0;
+        onSectionChange();
+        setActivePageIndicator();
+        document.getElementById(oldPage).style.display = "none";
+        var target = document.getElementById(currentID());
+        target.style.display = MsGrid;
+        if (target.classList.contains("contentCard-specs")) {
+            document.getElementsByClassName("template-pageIndicator")[0].classList.add("indicators-bottom");
+        } else {
+            document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
+        }
+    //WinGS.LogBI("Click", "{'target':'hubButton','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    }
 }
 
 //*******************************************************************
