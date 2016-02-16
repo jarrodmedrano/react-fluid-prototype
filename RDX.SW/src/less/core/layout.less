@@ -545,6 +545,13 @@ body {
                 .slideNav-directionIndicator {
                     -ms-grid-row: 2;
                     -ms-grid-column: 2;
+                    background: transparent;
+                    padding: 0;
+                    line-height: 1.25rem;
+
+                    &:focus {
+                      outline: 1px dotted white;
+                    }
                 }
             }
 
@@ -633,8 +640,13 @@ body {
         -ms-grid-column: 3;
         display: inline-flex;
 
-        a {
+        button {
             margin: 0;
+            background: transparent;
+
+            &:focus {
+              outline: 1px dotted grey;
+            }
         }
     }
 
@@ -765,6 +777,18 @@ body {
     border-top: 1px solid @dark-grey;
     border-bottom: 2px solid @dark-grey;
 
+    button.template-hubButton {
+      color: @white;
+      font-weight: normal;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:hover:active {
+        opacity: 1;
+      }
+    }
     // Individual brand box
     .template-hubButton {
         display: -ms-grid;
@@ -839,6 +863,21 @@ button {
 
     &:hover:active {
         opacity: .7;
+    }
+
+    &:focus {
+      outline: 1px dotted grey;
+    }
+
+    span.arrow-right {
+      &:after {
+        content: '\E09B';
+        padding-left: .75em;
+        font-weight: normal;
+        vertical-align: top;
+        display: inline-block;
+        margin-top: -1px;
+      }
     }
 
         @media screen and (-ms-high-contrast: active) {

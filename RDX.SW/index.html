@@ -121,26 +121,17 @@
 <div class="control-app">
     <div class="app-content">
         <div class="control-page">
-                    <div class="page-body content-bottom">
-                        <section class="control-carousel">
-                            <div class="carousel-controls">
-                                <div class="sideNav leftNav" onclick="pagePrev()">
-                                    <div class="slideNav-directionIndicator directionIndicator-prev"></div>
-                                </div>
-                                <div class="sideNav rightNav" onclick="pageNext()">
-                                    <div class="slideNav-directionIndicator directionIndicator-next"></div>
-                                </div>
-                            </div>
-
-                            <div id="slider" class="carousel-slideContainer">
-                                <div id="0-0" class="template-contentCard content-left layout-feature oem-card"
-                                     style="">
-                                    <div class="main-content">
-                                        <div class="content">
-                                            <img class="logo" src="oem_assets/logo_yoga_3_pro.png" />
-                                            <div class="headingBox">
-                                                <span class="text-header">Discover the potential of Surface for creating.</span>
-                                            </div>
+            <div class="page-body content-bottom">
+                <section class="control-carousel" role="main">
+                    <div id="slider" class="carousel-slideContainer" >
+                        <div id="0-0" class="template-contentCard content-left layout-feature oem-card" style=""
+                             tabindex="-1" >
+                            <div class="main-content">
+                                <div class="content">
+                                    <img class="logo" src="oem_assets/logo_yoga_3_pro.png" />
+                                    <div class="headingBox">
+                                        <span class="text-header">Discover the potential of Surface for creating.</span>
+                                    </div>
 
                                             <div class="card-content">
                                                 <span class="text-title list-text text1">Surface Book packs the power you need to edit photos, make music, and create videos. Use tools like Adobe® Creative Cloud with Surface Pen.</span>
@@ -641,74 +632,90 @@
                                     </div>
                                 </div>
 
-                            </div>
-                        </section>
-
-                        <div class="template-pageIndicator">
-                            <nav class="pageIndicator-layoutRoot">
-                                <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(0)">
-                                    <div class="indicatorContainer-indicator"></div>
-                                </a>
-                                <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(1)">
-                                    <div class=" indicatorContainer-indicator"></div>
-                                </a>
-                                <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(2)">
-                                    <div class="indicatorContainer-indicator"></div>
-                                </a>
-                                <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(3)">
-                                    <div class="indicatorContainer-indicator"></div>
-                                </a>
-                                <a class="layoutRoot-indicatorContainer" onclick="navigateToPage(4)">
-                                    <div class="indicatorContainer-indicator"></div>
-                                </a>
-                            </nav>
-                        </div>
-
-                        <section class="template-hubStrip">
-                            <div class="template-hubButton oem-hubButton" onclick="navigateToSection(0)">
-                                <div class="hubButton-content">
-                                    <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="template-hubButton windows-hubButton" onclick="navigateToSection(1)">
-                                <div class="hubButton-content">
-                                    <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic"
-                                             src="windows_assets/GSA_nav_946x220_0004_Windows-LO.png"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="template-hubButton office-hubButton" onclick="navigateToSection(2)">
-                                <div class="hubButton-content">
-                                    <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic"
-                                             src="office_assets/GSA_nav_946x220_0005_Office-LO.png"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="template-hubButton retailer-hubButton" onclick="navigateToSection(3)">
-                                <div class="hubButton-content">
-                                    <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic" src="retailer_assets/ms-logo.png"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="template-hubButton processor-hubButton" onclick="navigateToSection(4)">
-                                <div class="hubButton-content">
-                                    <a class="content-graphicContainer">
-                                        <img class="graphicContainer-graphic"
-                                             src="processor_assets/Intel_Logo_White_946x220.png"/>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </section>
                     </div>
+                    <div class="carousel-controls">
+                        <div class="sideNav leftNav" onclick="pagePrev()">
+                            <button aria-label="previous slide"
+                                    class="slideNav-directionIndicator directionIndicator-prev" >
+                            </button>
+                        </div>
+                        <div class="sideNav rightNav" onclick="pageNext()" >
+                            <button  aria-label="next slide"
+                                     class="slideNav-directionIndicator directionIndicator-next"></button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="template-pageIndicator">
+                    <nav class="pageIndicator-layoutRoot">
+                        <button  aria-label="slide 1" class="layoutRoot-indicatorContainer" onclick="navigateToPage(0)" >
+                            <div class="indicatorContainer-indicator"></div>
+                        </button>
+                        <button  aria-label="slide 2" class="layoutRoot-indicatorContainer" onclick="navigateToPage(1)">
+                            <div class=" indicatorContainer-indicator"></div>
+                        </button>
+                        <button  aria-label="slide 3" class="layoutRoot-indicatorContainer" onclick="navigateToPage(2)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </button>
+                        <button  aria-label="slide 4" class="layoutRoot-indicatorContainer" onclick="navigateToPage(3)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </button>
+                        <button  aria-label="slide 5" class="layoutRoot-indicatorContainer" onclick="navigateToPage(4)">
+                            <div class="indicatorContainer-indicator"></div>
+                        </button>
+                    </nav>
+                </div>
+
+                <div class="template-hubStrip">
+                    <button aria-label="OEM" class="template-hubButton oem-hubButton"
+                            onclick="navigateToSection(0)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="oem_assets/logo_lenovo.png"/>
+                            </a>
+                        </div>
+                    </button>
+                    <button aria-label="Windows" class="template-hubButton windows-hubButton"
+                            onclick="navigateToSection(1)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic"
+                                     src="windows_assets/GSA_nav_946x220_0004_Windows-LO.png"/>
+                            </a>
+                        </div>
+                    </button>
+                    <button aria-label="Office" class="template-hubButton office-hubButton"
+                            onclick="navigateToSection(2)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic"
+                                     src="office_assets/GSA_nav_946x220_0005_Office-LO.png"/>
+                            </a>
+                        </div>
+                    </button>
+                    <button aria-label="Microsoft" class="template-hubButton retailer-hubButton"
+                            onclick="navigateToSection(3)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic" src="retailer_assets/ms-logo.png"/>
+                            </a>
+                        </div>
+                    </button>
+                    <button aria-label="Intel" class="template-hubButton processor-hubButton"
+                            onclick="navigateToSection(4)">
+                        <div class="hubButton-content">
+                            <a class="content-graphicContainer">
+                                <img class="graphicContainer-graphic"
+                                     src="processor_assets/Intel_Logo_White_946x220.png"/>
+                            </a>
+                        </div>
+                    </button>
+
                 </div>
             </div>
         </div>
+    </div>
+</div>
 <div id="pageCounts" style="display: none;">
     <div>5</div>
     <div>4</div>

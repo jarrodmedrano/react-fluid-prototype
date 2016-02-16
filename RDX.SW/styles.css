@@ -489,6 +489,12 @@ body {
 .page-body .control-carousel .carousel-controls .sideNav .slideNav-directionIndicator {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
+  background: transparent;
+  padding: 0;
+  line-height: 1.25rem;
+}
+.page-body .control-carousel .carousel-controls .sideNav .slideNav-directionIndicator:focus {
+  outline: 1px dotted white;
 }
 .page-body .control-carousel .carousel-controls .leftNav {
   position: absolute;
@@ -559,8 +565,12 @@ body {
   -ms-grid-column: 3;
   display: inline-flex;
 }
-.template-pageIndicator .pageIndicator-layoutRoot a {
+.template-pageIndicator .pageIndicator-layoutRoot button {
   margin: 0;
+  background: transparent;
+}
+.template-pageIndicator .pageIndicator-layoutRoot button:focus {
+  outline: 1px dotted grey;
 }
 .template-pageIndicator .indicatorContainer-indicator {
   width: 52px;
@@ -670,6 +680,16 @@ body {
   border-top: 1px solid #171717;
   border-bottom: 2px solid #171717;
 }
+.template-hubStrip button.template-hubButton {
+  color: #ffffff;
+  font-weight: normal;
+}
+.template-hubStrip button.template-hubButton:hover {
+  opacity: 1;
+}
+.template-hubStrip button.template-hubButton:hover:active {
+  opacity: 1;
+}
 .template-hubStrip .template-hubButton {
   display: -ms-grid;
   -ms-grid-rows: 1fr auto 1fr;
@@ -733,6 +753,17 @@ button:hover {
 }
 button:hover:active {
   opacity: .7;
+}
+button:focus {
+  outline: 1px dotted grey;
+}
+button span.arrow-right:after {
+  content: '\E09B';
+  padding-left: .75em;
+  font-weight: normal;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: -1px;
 }
 @media screen and (-ms-high-contrast: active) {
   button {
