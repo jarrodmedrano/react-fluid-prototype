@@ -534,6 +534,32 @@ body {
 .page-body .control-carousel .carousel-controls .rightNav .directionIndicator-next:after {
   content: '\E76C';
 }
+.active {
+  position: relative;
+}
+.active.template-hubButton:after {
+  border-top-color: #171717;
+}
+@media screen and (-ms-high-contrast: active) {
+  .active.template-hubButton:after {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+  }
+}
+.active:after {
+  content: ' ';
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid transparent;
+  z-index: 3;
+}
 .template-pageIndicator {
   width: 100%;
   display: -ms-grid;
@@ -658,7 +684,7 @@ body {
   text-align: center;
   margin: 0 auto;
   border-top: 1px solid #171717;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 2px solid #171717;
 }
 .template-hubStrip .template-hubButton {
   display: -ms-grid;
@@ -668,10 +694,10 @@ body {
   flex: 1;
   flex-shrink: 1;
   height: 200px;
-  border-bottom: 4px solid transparent;
   max-width: 240px;
-  height: 76px;
+  height: 80px;
   position: relative;
+  border-left: 2px solid #171717;
 }
 .template-hubStrip .template-hubButton:focus {
   outline: 1px dotted white;
@@ -698,6 +724,9 @@ body {
     border-right: 3px white solid;
   }
 }
+.template-hubStrip .template-hubButton:first-of-type {
+  border: none;
+}
 .template-hubStrip .template-hubButton .hubButton-content {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -710,16 +739,6 @@ body {
 @media screen and (min-width: 768px) {
   .template-hubStrip .template-hubButton .hubButton-content .graphicContainer-graphic {
     width: 80%;
-  }
-}
-.template-hubStrip .template-hubButton.active {
-  position: relative;
-  background: rgba(255, 255, 255, 0.15);
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-hubStrip .template-hubButton.active.template-hubButton:after {
-    border-left-color: transparent !important;
-    border-right-color: transparent !important;
   }
 }
 button {
