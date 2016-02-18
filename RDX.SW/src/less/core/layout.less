@@ -124,10 +124,20 @@ body {
             margin: auto;
 
                 .hero-img {
+                    -ms-grid-column-align: end;
                     -ms-grid-row-align: center;
                     -ms-grid-column-align: end;
                     max-width: 100%;
 
+                    @media screen and (min-width: 750px) and (max-width: 1200px) {
+                        &.full-width-video {
+                            display: -ms-grid;
+                            -ms-grid-column-align: center;   
+                            -ms-grid-row-align: center;
+                            -ms-grid-columns: 40vw 48px; 
+                        }
+                    }
+                    
                     img {
                         width: 100%;
 
@@ -207,7 +217,7 @@ body {
                     }
 
                     @media @mediaQueryBreakpointMd {
-                        -ms-grid-columns: @page-margin 0 auto 1fr @padding-unit auto;
+                        -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 60%;
                         -ms-grid-rows: 1fr auto 1fr;
 
                         .main-content {
@@ -223,7 +233,7 @@ body {
                         }
 
                         @media screen and @mediaQueryVerticalBreakpointSm {
-                            -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit auto;
+                            -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 40%;
                         }
                     }
 
@@ -231,7 +241,7 @@ body {
 
                 // Required Setting [template-contentCard] - Content right / hero-img left
                 &.content-right {
-                    -ms-grid-columns: @page-margin 50% auto @page-margin;
+                    -ms-grid-columns: @page-margin 50% auto @page-margin;;
                     -ms-grid-rows: 1fr auto auto 1fr;
 
                    .main-content {
@@ -251,7 +261,7 @@ body {
                     }
 
                     @media @mediaQueryBreakpointMd {
-                        -ms-grid-columns: auto @padding-unit 1fr auto 1fr @page-margin;
+                        -ms-grid-columns: 50% @padding-unit 1fr auto 1fr @page-margin;
                         -ms-grid-rows: 1fr auto 1fr;
 
                        .main-content {
@@ -357,8 +367,8 @@ body {
                         }
 
                         // Required Sub-setting [Threecol > Column] - Logo and 2 Containers of content centered
-                        &.threeColumn-logoList {
-                            -ms-grid-rows: 1fr 104px 40px 40px 40px minmax(0, 1fr) 40px 40px 1fr auto;
+                        &.threeColumn-logoList { 
+                            -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto; 
                             @media all and (min-width: 640px) and (max-width: 1100px) {
                              -ms-grid-rows: 1fr 90px 40px 1fr 1fr 100px 1fr 1fr 1fr;
                             }
@@ -718,7 +728,70 @@ body {
         }
     }
 
+    &.theme-dark  {
 
+        background: @black;
+
+        .indicatorContainer-indicator {
+
+            @media screen and (-ms-high-contrast: active) {
+                -ms-high-contrast-adjust: none;
+
+                &.active:before {
+                    background-color: yellow;
+                }
+            }
+
+            @media screen and (-ms-high-contrast: black-on-white) {
+                &.active:before {
+                    background-color: black;
+                }
+            }
+
+            @media screen and (-ms-high-contrast: white-on-black) {
+                &.active:before {
+                    background-color: white;
+                }
+            }
+
+            &:before {
+                background-color: fade(@indicator-color-dark, 40%);
+
+                @media screen and (-ms-high-contrast: active) {
+                    background-color: fade(@white, 40%);
+                }
+
+                @media screen and (-ms-high-contrast: black-on-white) {
+                    background-color: fade(@black, 40%);
+                }
+
+                @media screen and (-ms-high-contrast: white-on-black) {
+                    background-color: fade(@white, 40%);
+                }
+            }
+
+            &.indicator-0 {
+                &.active:before {
+                    background-color: #F6E934;
+                }
+            }
+
+            &:hover:before {
+                background-color: fade(@indicator-color-dark, 60%);
+
+                @media screen and (-ms-high-contrast: active) {
+                    background-color: fade(@white, 80%);
+                }
+
+                @media screen and (-ms-high-contrast: black-on-white) {
+                    background-color: fade(@black, 80%);
+                }
+            }
+        }
+    }
+
+
+    
     // Prev / Next buttons on either side of indicators
     .indicatorContainer-directionNav {
         line-height: 1;
@@ -901,18 +974,19 @@ button {
 //  Type                                                                       //
 //-----------------------------------------------------------------------------//
 
-.text-legal {
+.text-legal p {
     .text-captionAlt();
     opacity: .6;
     font-size: 10pt !important;
     line-height: 12pt;
-    margin: 0 24px 0 0;
+    margin: 0;
 }
 
-.card-content + .text-legal,
-.card-content + a + .text-legal,
-.card-content + button + .text-legal {
-    margin-top: 12px;
+.card-content + .text-legal p,
+.card-content + a + .text-legal p,
+.card-content + button + .text-legal p {
+    padding: (@design-unit * 2.5) 0;
+    height: auto;
 }
 
 //-----------------------------------------------------------------------------//
