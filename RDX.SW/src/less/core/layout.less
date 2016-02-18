@@ -142,8 +142,14 @@ body {
                         width: 100%;
 
                         @media @mediaQueryBreakpointMd {
-                          width: auto;
-                          height: 80vh;
+                          width: 100%;
+                          height: auto;
+                        }
+
+                        @media @mediaQueryBreakpointXXl {
+
+                            width: auto;
+                            height: 80vh;
                         }
                     }
 
@@ -609,7 +615,7 @@ body {
         }
     }
 
-    &:after {
+    &.template-hubButton:after {
         content: ' ';
         position: absolute;
         margin: 0 auto;
@@ -622,10 +628,6 @@ body {
         border-right: @caret-width solid transparent;
         border-top: @caret-width solid transparent;
         z-index: 3;
-
-        @media screen and @mediaQueryBreakpointMd {
-            //bottom: -(@design-unit * 4.2);
-        }
     }
 
 }
@@ -649,7 +651,9 @@ body {
     .pageIndicator-layoutRoot {
         -ms-grid-column: 3;
         display: inline-flex;
-
+	a {
+		margin: 0;
+	}
         button {
             margin: 0;
             background: transparent;
