@@ -768,6 +768,7 @@ body {
 .template-hubStrip button.template-hubButton:hover,
 .template-hubStrip button.template-hubButton:focus {
   opacity: 1 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), inherit;
 }
 .template-hubStrip button.template-hubButton:hover:active,
 .template-hubStrip button.template-hubButton:focus:active {
