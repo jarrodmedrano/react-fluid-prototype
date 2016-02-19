@@ -553,7 +553,7 @@ body {
                 margin-bottom: @brandBar-height;
                 font-family: 'Segoe MDL2 Assets';
 
-                &:hover {
+                &:hover, &:focus {
                     background: fade(@black, 40%);
                     display: -ms-grid !important;
                 }
@@ -564,10 +564,6 @@ body {
                     background: transparent;
                     padding: 0;
                     line-height: 1.25rem;
-
-                    &:focus {
-                      outline: 1px dotted white;
-                    }
                 }
             }
 
@@ -603,19 +599,16 @@ body {
 }
 
 // Active state for hubButton shading
-.active {
+.template-hubButton.active {
     position: relative;
 
-    &.template-hubButton:after {
+    &:after {
         border-top-color: @dark-grey;
 
         @media screen and (-ms-high-contrast: active) {
             border-left-color: transparent !important;
             border-right-color: transparent !important;
         }
-    }
-
-    &.template-hubButton:after {
         content: ' ';
         position: absolute;
         margin: 0 auto;
@@ -630,6 +623,9 @@ body {
         z-index: 3;
     }
 
+    //&:hover:after, &:focus:after {
+    //    opacity: .85;
+    //}
 }
 
 //-----------------------------------------------------------------------------//
@@ -651,15 +647,30 @@ body {
     .pageIndicator-layoutRoot {
         -ms-grid-column: 3;
         display: inline-flex;
-	a {
-		margin: 0;
-	}
+
+        a {
+            margin: 0;
+        }
+
         button {
             margin: 0;
             background: transparent;
 
             &:focus {
               outline: 1px dotted grey;
+
+                .indicatorContainer-indicator:before {
+                    background-color: fade(@indicator-color, 60%);
+
+                    @media screen and (-ms-high-contrast: active) {
+                        background-color: fade(@white, 80%);
+                    }
+
+                    @media screen and (-ms-high-contrast: black-on-white) {
+                        background-color: fade(@black, 80%);
+                    }
+                }
+
             }
         }
     }
@@ -858,12 +869,12 @@ body {
       color: @white;
       font-weight: normal;
 
-      &:hover {
-        opacity: 1;
+      &:hover, &:focus {
+        opacity: 1 !important;
       }
 
-      &:hover:active {
-        opacity: 1;
+      &:hover:active, &:focus:active {
+        opacity: 1 !important;
       }
     }
     // Individual brand box
@@ -934,7 +945,7 @@ body {
 button {
     color: @white;
 
-    &:hover {
+    &:hover, &:focus {
         opacity: .85;
     }
 

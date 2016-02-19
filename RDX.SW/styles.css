@@ -496,7 +496,8 @@ body {
   margin-bottom: 80px;
   font-family: 'Segoe MDL2 Assets';
 }
-.page-body .control-carousel .carousel-controls .sideNav:hover {
+.page-body .control-carousel .carousel-controls .sideNav:hover,
+.page-body .control-carousel .carousel-controls .sideNav:focus {
   background: rgba(0, 0, 0, 0.4);
   display: -ms-grid !important;
 }
@@ -506,9 +507,6 @@ body {
   background: transparent;
   padding: 0;
   line-height: 1.25rem;
-}
-.page-body .control-carousel .carousel-controls .sideNav .slideNav-directionIndicator:focus {
-  outline: 1px dotted white;
 }
 .page-body .control-carousel .carousel-controls .leftNav {
   position: absolute;
@@ -538,19 +536,11 @@ body {
 .page-body .control-carousel .carousel-controls .rightNav .directionIndicator-next:after {
   content: '\E76C';
 }
-.active {
+.template-hubButton.active {
   position: relative;
 }
-.active.template-hubButton:after {
+.template-hubButton.active:after {
   border-top-color: #171717;
-}
-@media screen and (-ms-high-contrast: active) {
-  .active.template-hubButton:after {
-    border-left-color: transparent !important;
-    border-right-color: transparent !important;
-  }
-}
-.active.template-hubButton:after {
   content: ' ';
   position: absolute;
   margin: 0 auto;
@@ -563,6 +553,12 @@ body {
   border-right: 18px solid transparent;
   border-top: 18px solid transparent;
   z-index: 3;
+}
+@media screen and (-ms-high-contrast: active) {
+  .template-hubButton.active:after {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+  }
 }
 .template-pageIndicator {
   width: 100%;
@@ -588,6 +584,19 @@ body {
 }
 .template-pageIndicator .pageIndicator-layoutRoot button:focus {
   outline: 1px dotted grey;
+}
+.template-pageIndicator .pageIndicator-layoutRoot button:focus .indicatorContainer-indicator:before {
+  background-color: rgba(23, 23, 23, 0.6);
+}
+@media screen and (-ms-high-contrast: active) {
+  .template-pageIndicator .pageIndicator-layoutRoot button:focus .indicatorContainer-indicator:before {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+@media screen and (-ms-high-contrast: black-on-white) {
+  .template-pageIndicator .pageIndicator-layoutRoot button:focus .indicatorContainer-indicator:before {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
 .template-pageIndicator .indicatorContainer-indicator {
   width: 52px;
@@ -756,11 +765,13 @@ body {
   color: #ffffff;
   font-weight: normal;
 }
-.template-hubStrip button.template-hubButton:hover {
-  opacity: 1;
+.template-hubStrip button.template-hubButton:hover,
+.template-hubStrip button.template-hubButton:focus {
+  opacity: 1 !important;
 }
-.template-hubStrip button.template-hubButton:hover:active {
-  opacity: 1;
+.template-hubStrip button.template-hubButton:hover:active,
+.template-hubStrip button.template-hubButton:focus:active {
+  opacity: 1 !important;
 }
 .template-hubStrip .template-hubButton {
   display: -ms-grid;
@@ -820,7 +831,8 @@ body {
 button {
   color: #ffffff;
 }
-button:hover {
+button:hover,
+button:focus {
   opacity: .85;
 }
 button:hover:active {
