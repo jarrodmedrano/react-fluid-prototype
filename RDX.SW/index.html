@@ -112,6 +112,78 @@
             background: #0071c5;
         }
 
+        .sw-card {
+            background-color: #000;
+        }
+
+        .sw-card {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .sw-card-0 {
+            background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%),
+            url('sw_assets/bg-slide-0.jpg');
+        }
+
+        .sw-card-1 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-1.jpg');
+        }
+
+        .sw-card-2 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-2.jpg');
+        }
+
+        .sw-card-3 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-3.jpg');
+        }
+
+        .sw-card-4 {
+            background-image:
+                    linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.65) 100%), url('sw_assets/bg-slide-4.jpg');
+        }
+
+        .sw-card button {
+            background: transparent;
+            border: 2px solid #fff;
+            text-transform: uppercase;
+            margin-bottom: 65px;
+        }
+
+        .sw-card button:hover {
+            background: #fff;
+            color: #000;
+            opacity: 1;
+        }
+
+        .sw-card button span:after {
+            font-family: 'Segoe MDL2 Assets';
+            content: "\E76C";
+            display: inline-block;
+            font-size: 11px;
+            padding-left: 10px;
+        }
+
+        .sw-card .text-header {
+            color: #fff;
+        }
+
+        .sw-card .text-subheader {
+            color: #fff;
+        }
+
+        .sw-hubButton {
+            background: #000000 url('sw_assets/button-bg.png');
+            background-size: cover;
+        }
+
+        .sw-hubButton:after {
+            border-top-color: #000000;
+        }
     </style>
 
     <meta name="robots" content="noindex, nofollow">
@@ -124,29 +196,44 @@
             <div class="page-body content-bottom">
                 <section class="control-carousel" role="main">
                     <div id="slider" class="carousel-slideContainer" >
-                        <div id="0-0" class="template-contentCard content-left layout-feature oem-card" style=""
-                             tabindex="-1" >
+                        <div class="template-contentCard content-center layout-ksp sw-card sw-card-0 noautoplay" id="0-0">
                             <div class="main-content">
-                                <div class="content">
-                                    <img class="logo" src="oem_assets/logo_yoga_3_pro.png" />
-                                    <div class="headingBox">
-                                        <span class="text-header">Discover the potential of Surface for creating.</span>
-                                    </div>
 
-                                            <div class="card-content">
-                                                <span class="text-title list-text text1">Surface Book packs the power you need to edit photos, make music, and create videos. Use tools like Adobe® Creative Cloud with Surface Pen.</span>
-                                                <span class="text-title list-text text2"></span>
-                                                <span class="text-title list-text text3"></span>
-                                            </div>
 
-                                            <div class="text-legal">Adobe® Creative Cloud sold separately.</div>
-                                        </div>
-                                    </div>
 
-                                    <div class="hero-img">
-                                        <img src="oem_assets/ksp_yoga_3_pro.png" />
-                                    </div>
-                                </div>
+                            <span class="text-header">Star Wars VII: The Force Awakens
+                            Check out Edge and watch the new trailer</span>
+
+                                <span class="text-subheader">Subheader</span>
+
+                                <a onclick="navigateToPage(3)">
+                                    <button type="submit"><span>Watch the trailer</span></button>
+                                </a>
+                            </div>
+                        </div>
+                        <!--<div id="0-0" class="template-contentCard content-left layout-feature oem-card" style=""-->
+                             <!--tabindex="-1" >-->
+                            <!--<div class="main-content">-->
+                                <!--<div class="content">-->
+                                    <!--<img class="logo" src="oem_assets/logo_yoga_3_pro.png" />-->
+                                    <!--<div class="headingBox">-->
+                                        <!--<span class="text-header">Discover the potential of Surface for creating.</span>-->
+                                    <!--</div>-->
+
+                                            <!--<div class="card-content">-->
+                                                <!--<span class="text-title list-text text1">Surface Book packs the power you need to edit photos, make music, and create videos. Use tools like Adobe® Creative Cloud with Surface Pen.</span>-->
+                                                <!--<span class="text-title list-text text2"></span>-->
+                                                <!--<span class="text-title list-text text3"></span>-->
+                                            <!--</div>-->
+
+                                            <!--<div class="text-legal">Adobe® Creative Cloud sold separately.</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="hero-img">-->
+                                        <!--<img src="oem_assets/ksp_yoga_3_pro.png" />-->
+                                    <!--</div>-->
+                                <!--</div>-->
                                 <!--<div id="0-0" class="template-contentCard content-left layout-ksp oem-card" style="">-->
                                 <!--<div class="main-content">-->
                                 <!--<img class="logo" src="oem_assets/logo_yoga_3_pro.png"/>-->
