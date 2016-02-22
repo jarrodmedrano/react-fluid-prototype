@@ -486,6 +486,10 @@ body {
   margin-top: 10px;
   min-width: 140px;
 }
+.page-body .control-carousel .carousel-slideContainer .template-contentCard button.btn-xl {
+  height: 56px;
+  padding: 0 24px;
+}
 .page-body .control-carousel .carousel-controls {
   width: 100%;
   position: fixed;
