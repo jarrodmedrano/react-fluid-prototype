@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            $('.launch').click(function(e) {
+                e.preventDefault();
+                var href = $(this).attr('href');
+                var rex_popup = window.open(href, 'rex_popup', 'width=1082,height=616');
+            });
+        });
+    </script>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div id="app">
+        <div class="grid">
+            <div class="main-container">
+                <div class="center">
+                <button class="launch" href="app.html">Launch REX Prototype</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

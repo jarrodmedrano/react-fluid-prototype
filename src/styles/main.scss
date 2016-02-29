@@ -1,0 +1,114 @@
+#app {
+    font-family: 'Segoe UI Light', 'Segoe UI', 'Selawik Light';
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+
+  //height: 100%;
+}
+
+.main-container {
+  height: 100vh;
+}
+
+.main-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100vw;
+  //height: 100%;
+}
+
+/*
+ * BackButton
+ *  Ensure it's the same size as the SplitViewPaneToggle
+*/
+.win-backbutton {
+    height: 48px;
+    width: 48px;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+}
+.win-backbutton::before {
+    font-size: 24px;
+    line-height: 1.333;
+    vertical-align: baseline;
+}
+
+.win-flipview .win-navbutton {
+  background: transparent;
+  font-size: 24px;
+}
+
+button {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  min-width: 170px;
+  font-size: 13px;
+  margin-top: 10px;
+
+  &:hover {
+    background: #fff;
+    color: #7DA5AF;
+  }
+}
+
+button span::after {
+  font-family: 'Segoe MDL2 Assets';
+  content: '\E76C';
+  display: inline-block;
+  font-size: 11px;
+  padding-left: 10px;
+}
+
+button span::before {
+  font-family: 'Segoe MDL2 Assets';
+}
+
+div.bg-page {
+  flex: 1;
+  height: 100vh;
+}
+
+div.sub-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+$time: .3s;
+$easing: ease-in-out;
+
+.page-transition-enter {
+  opacity: 0;
+  transform:   translate(-250px,0);
+  transform: translate3d(-250px,0,0);
+}
+.page-transition-enter.page-transition-enter-active {
+  opacity: 1;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.page-transition-leave {
+  opacity: 1;
+  transform:   translate(0,0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.page-transition-leave.page-transition-leave-active {
+  opacity: 0;
+  transform:   translate(250px,0);
+  transform: translate3d(250px,0,0);
+}

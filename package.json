@@ -1,0 +1,40 @@
+{
+  "name": "REX-prototype",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --progress --colors --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jarrod Medrano",
+  "license": "",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.5.1",
+    "react": "^0.13.3",
+    "react-winjs": "^2.4.0"
+  },
+  "jspm": {
+    "dependencies": {
+      "classnames": "npm:classnames@^2.2.1",
+      "css": "github:systemjs/plugin-css@^0.1.19",
+      "history": "npm:history@^1.17.0",
+      "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
+      "lodash": "npm:lodash@^3.10.1",
+      "react": "npm:react@0.13.3",
+      "react-router": "npm:react-router@^1.0.2",
+      "react-winjs": "npm:react-winjs@^2.4.0",
+      "scss": "github:theefer/plugin-sass@master",
+      "winjs": "npm:winjs@^4.4.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "gulp-load-plugins": "^1.1.0"
+  }
+}
