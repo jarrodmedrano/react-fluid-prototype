@@ -1,15 +1,16 @@
-.sub-linkband {
-  &.win-linkband {
+nav.sub-linkband {
+  &.c-link-navigation {
     background: #3d4041;
     ul {
-      display: flex;
-      flex: 1;
-      align-items: center;
-      justify-content: center;
+      //display: flex;
+      //flex: 1;
+      //align-items: center;
+      //justify-content: center;
       list-style: none;
-      margin: 0 0;
+      //margin: 0 0;
 
       li {
+        position: relative;
 
         .ghost {
           font-weight: bold;
@@ -26,12 +27,17 @@
 
         a, .ghost {
           display: block;
-          padding: 10px 15px;
           text-decoration: none;
           color: #aaaaaa;
           font-size: 12px;
 
+          @media only screen and (max-width: 767px) {
+            padding: 12px;
+          }
 
+          @media only screen and (min-width: 768px) {
+            margin: 10px 15px;
+          }
 
           &:hover, &.active {
             color: #fff;
