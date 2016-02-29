@@ -12,6 +12,7 @@ import OfficePage from 'src/js/components/pages/OfficePage.jsx!';
 import SideBar from 'src/js/components/sidebar/SideBar.jsx!';
 import { Router, DefaultRoute, Route, Link, IndexRoute, BrowserHistory } from 'react-router';
 import 'src/styles/main.scss!';
+import 'src/styles/mwf_en-us_default.min.css!';
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 
