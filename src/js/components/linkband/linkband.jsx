@@ -27,14 +27,14 @@ var Linkband = React.createClass({
 
         return (
             <div className="win-type-body">
-                <div className="win-linkband">
+                <nav className="c-link-navigation">
                    <ul>
-                       <li><IndexLink to={rootRoute.path} activeClassName="active">{rootRoute.indexRoute.title}</IndexLink><span
+                       <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active">{rootRoute.indexRoute.title}</IndexLink><span
                            className="ghost">
                                {rootRoute.indexRoute.title}
                            </span></li>
                        {rootRouteChildren.map((item, index) =>
-                       <li key={index}>
+                       <li className="c-hyperlink" key={index}>
                            <Link
                                activeClassName="active"
                                to={item.path || ''}>
@@ -48,7 +48,7 @@ var Linkband = React.createClass({
                        </li>
                        )}
                    </ul>
-                </div>
+                </nav>
                 {innerRouteChildren != null ? <div className="win-linkband sub-linkband">
                     <ul>
                         <li><IndexLink to={innerRoute.path} activeClassName="active">{innerRoute.indexRoute.title}</IndexLink><span className="ghost">

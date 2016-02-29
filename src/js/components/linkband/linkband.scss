@@ -1,13 +1,14 @@
 
-.win-linkband {
+nav.c-link-navigation {
   background: #2B2B2B;
+  margin-top: 0;
 
   ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin: 0 0;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //list-style: none;
+    //margin: 0 0;
 
     li {
       position: relative;
@@ -27,7 +28,14 @@
 
       a, .ghost {
         display: block;
-        padding: 20px 15px;
+        //padding: 20px 15px;
+
+        @media only screen and (max-width: 767px) {
+          padding: 12px;
+        }
+        @media only screen and (min-width: 768px) {
+          margin: 20px 18px;
+        }
         text-decoration: none;
         color: #aaaaaa;
         font-size: 18px;
