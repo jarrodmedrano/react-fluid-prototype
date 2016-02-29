@@ -40,10 +40,7 @@ var Linkband = React.createClass({
                                to={item.path || ''}>
                                {item.title}
                            </Link>
-                           <span
-                               className="ghost">
-                               {item.title}
-                           </span>
+                           <span className="ghost">{item.title}</span>
                            {(index + 1) < depth}
                        </li>
                        )}
