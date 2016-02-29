@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactWinJS from 'react-winjs';
+
 import 'src/js/components/speclist/SpecList.scss!';
 import { Router, Route, Link } from 'react-router';
 

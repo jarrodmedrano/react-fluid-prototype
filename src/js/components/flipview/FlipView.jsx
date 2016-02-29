@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactWinJS from 'react-winjs';
+
 import { Router, Route, Link } from 'react-router';
 import 'src/js/components/flipview/FlipView.scss!';
 

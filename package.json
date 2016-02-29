@@ -24,9 +24,7 @@
       "lodash": "npm:lodash@^3.10.1",
       "react": "npm:react@0.13.3",
       "react-router": "npm:react-router@^1.0.2",
-      "react-winjs": "npm:react-winjs@^2.4.0",
       "scss": "github:theefer/plugin-sass@master",
-      "winjs": "npm:winjs@^4.4.0",
       "picturefill": "npm:picturefill@^3.0.2"
     },
     "devDependencies": {

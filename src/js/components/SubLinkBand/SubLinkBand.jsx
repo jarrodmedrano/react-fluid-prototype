@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactWinJS from 'react-winjs';
+
 import 'src/js/components/SubLinkBand/SubLinkBand.scss!';
 import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
 import _ from 'lodash';

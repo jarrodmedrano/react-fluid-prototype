@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactWinJS from 'react-winjs';
+//
 import Linkband from 'src/js/components/linkband/linkband.jsx!';
 import HomePage from 'src/js/components/pages/HomePage.jsx!';
 import SurfacePage from 'src/js/components/pages/SurfacePage/SurfacePage.jsx!';

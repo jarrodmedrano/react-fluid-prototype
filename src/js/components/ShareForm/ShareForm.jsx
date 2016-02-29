@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactWinJS from 'react-winjs';
+
 import 'src/js/components/ShareForm/ShareForm.scss!';
 import SpecList from 'src/js/components/speclist/SpecList.jsx!';
 import { Router, Route, Link } from 'react-router';
