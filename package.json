@@ -17,7 +17,7 @@
   },
   "jspm": {
     "dependencies": {
-      "classnames": "npm:classnames@^2.2.1",
+      "classnames": "npm:classnames@^2.2.3",
       "css": "github:systemjs/plugin-css@^0.1.19",
       "history": "npm:history@^1.17.0",
       "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
@@ -26,7 +26,8 @@
       "react-router": "npm:react-router@^1.0.2",
       "react-winjs": "npm:react-winjs@^2.4.0",
       "scss": "github:theefer/plugin-sass@master",
-      "winjs": "npm:winjs@^4.4.0"
+      "winjs": "npm:winjs@^4.4.0",
+      "picturefill": "npm:picturefill@^3.0.2"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
