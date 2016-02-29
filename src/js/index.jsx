@@ -45,7 +45,7 @@ React.render((
         <Route path="/" component={App}>
             <IndexRoute component={HomePage} title="Welcome"/>
             <Route path="surface" component={SurfacePage} title="Surface">
-                <IndexRoute component={SurfacePage} title="Exceptional Performance"/>
+                <IndexRoute component={PerformancePage} title="Exceptional Performance"/>
                 <Route path="/surface/rotate" component={RotatePage} title="Light and Powerful"/>
                 <Route path="/surface/apps" component={AccessoriesPage} title="Limitless Apps"/>
                 <Route path="/surface/accessories" component={AccessoriesPage} title="Accessories"/>
