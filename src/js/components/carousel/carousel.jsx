@@ -1,16 +1,44 @@
 import React from 'react';
+import CarouselSlide from 'src/js/components/carousel/carousel-slide.jsx!';
 
 var Carousel = React.createClass({
 
-
-
   render(){
 
+    var slides = [
+      {
+        type: "item",
+        title: "Tom Clancy's The Division",
+        subtitle: "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
+        buttonText: "Pre-order today",
+        bg: "url(img/slide-christmas.jpg)"
+      },
+      {
+        type: "item",
+        title: "Guided Stories",
+        text: "Lorem ipsum dolor sit amet adipscing elit, lorem ipsum",
+        buttonText: "Try it out",
+        bg: "#7DA5AF",
+        icon: "img/slide-logo.png"
+      },
+      {
+        type: "item",
+        title: "Start the school year right with up to $150 off select Surface Pro 4 models",
+        buttonText: "Shop Now",
+        bg: "url(img/slide-surface.jpg)"
+      },
+      {
+        type: "item",
+        title: "Learn how to draw in Windows 10 with Edge and OneNote",
+        buttonText: "Reserve now",
+        bg: "url(img/slide-store.jpg)"
+      }
+    ];
     let carousel_style = {
-      "touch-action": "pan-y",
-      "-webkit-user-select": "none",
-      "-webkit-user-drag": "none",
-      "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)"
+      "TouchAction": "pan-y",
+      "WebkitUserSelect": "none",
+      "WebkitUserDrag": "none",
+      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)"
     };
 
     return(
@@ -21,107 +49,8 @@ var Carousel = React.createClass({
           <button className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
-              <li id="hero-slide-one" data-f-theme="dark" className="f-active">
-                <article className="c-hero f-medium f-x-left f-y-center theme-dark">
-                  <div>
-                    <div className="context-accessory">
-                      <h1 className="c-heading">Tom Clancy's The Division</h1>
-                      <p className="c-subheading">Take back New York in Tom Clancy's The Division open beta. Early access
-                        available only on Xbox One, February 18th.</p>
-
-
-                      <div className="hero-link-container">
-                        <a href="#" className="c-call-to-action c-glyph"><span>Pre-order today</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <picture>
-                    <source srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg"
-                            media="(min-width:1084px)" />
-                      <source srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
-                              media="(min-width:768px)" />
-                        <source srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg"
-                                media="(min-width:540px)" />
-                          <source
-                            srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
-                            media="(min-width:0)" />
-                            <img srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
-                                 src="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
-                                 alt="Tom Clancy's The Division" />
-                  </picture>
-                </article>
-              </li>
-              <li id="hero-slide-two" data-f-theme="dark">
-                <article className="c-hero f-medium f-x-left f-y-center theme-dark">
-                  <div>
-                    <div className="context-accessory">
-                      <h1 className="c-heading">Excepteur sint occaecat cupidatat</h1>
-                      <p className="c-subheading">Sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-                      <div>
-                        <div className="c-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                          <meta itemprop="priceCurrency" content="GMD" />$
-                            <span itemprop="price">69,018</span>
-                            <link itemprop="availability" href="http://schema.org/InStock" />
-                        </div>
-                      </div>
-
-                      <div className="hero-link-container">
-                        <a href="#" className="c-call-to-action c-glyph"><span>Lorem ipsum dolor sit amet</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <picture>
-                    <source srcset="http://www.getmwf.com/images/components/uber-vp5.jpg" media="(min-width:1084px)" />
-                      <source srcset="http://www.getmwf.com/images/components/uber-vp4.jpg" media="(min-width:768px)" />
-                        <source srcset="http://www.getmwf.com/images/components/uber-vp3.jpg" media="(min-width:540px)" />
-                          <source srcset="http://www.getmwf.com/images/components/uber-vp3.jpg" media="(min-width:0)" />
-                            <img srcset="http://www.getmwf.com/images/components/uber-vp4.jpg"
-                                 src="http://www.getmwf.com/images/components/uber-vp4.jpg" alt="Placeholder" />
-                  </picture>
-                </article>
-              </li>
-              <li id="hero-slide-three" data-f-theme="dark">
-                <article className="c-hero f-medium f-x-left f-y-center theme-dark">
-                  <div>
-                    <div className="context-accessory">
-                      <h1 className="c-heading">Sed ut perspiciatis unde omnis</h1>
-                      <p className="c-subheading">Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
-
-                      <div>
-                        <div className="c-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                          <meta itemprop="priceCurrency" content="AFN" />kr
-                            <span itemprop="price">61,628</span>
-                            <link itemprop="availability" href="http://schema.org/InStock" />
-                        </div>
-                      </div>
-
-                      <div className="hero-link-container">
-                        <a href="#" className="c-call-to-action c-glyph"><span>Lorem ipsum dolor sit amet</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <picture>
-                    <source srcset="http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg"
-                            media="(min-width:1084px)" />
-                      <source srcset="http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg"
-                              media="(min-width:768px)" />
-                        <source srcset="http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg"
-                                media="(min-width:540px)" />
-                          <source srcset="http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
-                                  media="(min-width:0)" />
-                            <img srcset="http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg"
-                                 src="http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg"
-                                 alt="Martian poster" />
-                  </picture>
-                </article>
-              </li>
+              <CarouselSlide isActive="f-active" />
             </ul>
-
-
           </div>
 
           <div className="c-sequence-indicator" role="radiogroup">
