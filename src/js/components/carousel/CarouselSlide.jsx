@@ -4,11 +4,11 @@ var CarouselSlide = React.createClass({
     render() {
 
       return(
-        <li id="hero-slide-one" data-f-theme="dark" className={this.props.myKey === this.props.activeSlide ? 'f-active': ''}>
+        <li id="hero-slide-one" data-f-theme="dark" className={this.props.myKey === this.props.activeSlide ? 'f-active f-animate-next': ''}>
           <article className="c-hero f-medium f-x-left f-y-center theme-dark">
             <div>
               <div className="context-accessory">
-                <h1 className="c-heading">{this.props.slideTitle}</h1>
+                <span className="c-heading"><cite>{this.props.slideTitle}</cite></span>
                 <p className="c-subheading">{this.props.slideSubTitle}</p>
 
 
