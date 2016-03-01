@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselSlide from 'src/js/components/carousel/CarouselSlide.jsx!';
-
+import SequenceIndicator from 'src/js/components/carousel/SequenceIndicator.jsx!';
 var Carousel = React.createClass({
   getInitialState () {
     return {
@@ -31,12 +31,27 @@ var Carousel = React.createClass({
           vp2: "http://www.getmwf.com/images/components/uber-vp2.jpg"
         }
       ]
-  }
+    }
+  },
+
+  updateSlide(index) {
+    this.setState({ activeSlide: index });
+  },
+
+  nextSlide(index, dir) {
+    console.log(this.state.slides.length);
+
+    if(this.state.activeSlide < this.state.slides.length-1 && dir === 'next') {
+      this.setState({ activeSlide: index + 1 });
+    }
+
+    if(this.state.activeSlide > 0 && dir === 'previous') {
+      this.setState({ activeSlide: index - 1 });
+    }
   },
 
   render(){
 
-    
 
     let carousel_style = {
       "TouchAction": "pan-y",
@@ -49,8 +64,8 @@ var Carousel = React.createClass({
           <div className="c-carousel f-multi-slide theme-dark f-scrollable-previous f-scrollable-next" role="region"
              aria-label="New Products"
              style={carousel_style}>
-          <button className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
-          <button className="c-flipper f-right" aria-label="View next" title="View next"></button>
+          <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
+          <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
               {this.state.slides.map(function(result, id) {
@@ -71,12 +86,19 @@ var Carousel = React.createClass({
           </div>
 
           <div className="c-sequence-indicator" role="radiogroup">
-            <button role="radio" aria-checked="true" aria-label="View slide one" aria-controls="hero-slide-one"
-                    title="Slide one"></button>
-            <button role="radio" aria-checked="false" aria-label="View slide two" aria-controls="hero-slide-two"
-                    title="Slide two"></button>
-            <button role="radio" aria-checked="false" aria-label="View slide three" aria-controls="hero-slide-three"
-                    title="Slide three"></button>
+
+            {this.state.slides.map(function(result, id) {
+                return (
+                <SequenceIndicator
+                    key={result.id}
+                    slideTitle={result.title}
+                    activeSlide={this.state.activeSlide}
+                    myKey={id}
+                    updateSlide={this.updateSlide}
+                />
+                    )
+            }, this)}
+
           </div>
       </div>
     )
