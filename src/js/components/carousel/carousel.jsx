@@ -53,10 +53,14 @@ var Carousel = React.createClass({
 
     if(this.state.activeSlide < this.state.slides.length-1 && dir === 'next') {
       this.setState({ activeSlide: index + 1 });
+    } else if(this.state.activeSlide === this.state.slides.length-1 && dir === 'next') {
+      this.setState({ activeSlide: 0 });
     }
 
     if(this.state.activeSlide > 0 && dir === 'previous') {
       this.setState({ activeSlide: index - 1 });
+    } else if(this.state.activeSlide === 0 && dir === 'previous') {
+      this.setState({ activeSlide: this.state.slides.length-1 });
     }
   },
 
