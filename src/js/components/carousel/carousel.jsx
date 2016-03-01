@@ -1,6 +1,9 @@
 import React from 'react';
 import CarouselSlide from 'src/js/components/carousel/CarouselSlide.jsx!';
 import SequenceIndicator from 'src/js/components/carousel/SequenceIndicator.jsx!';
+import 'src/js/components/carousel/Carousel.scss!';
+import classNames from 'classnames'
+
 var Carousel = React.createClass({
   getInitialState () {
     return {
@@ -56,7 +59,6 @@ var Carousel = React.createClass({
   },
 
   nextSlide(index, dir) {
-    console.log(this.state.slides.length);
 
     this.setState({ slideDirection: dir });
 
@@ -73,6 +75,10 @@ var Carousel = React.createClass({
     }
   },
 
+  isFullScreen() {
+    return this.props.fullscreen === 'true' ? 'f-fullscreen': ''
+  },
+
   render(){
 
 
@@ -83,8 +89,10 @@ var Carousel = React.createClass({
       "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)"
     };
 
+    let carouselClass = classNames(this.isFullScreen(), 'c-carousel f-multi-slide theme-dark f-scrollable-previous f-scrollable-next');
+
     return(
-          <div className="c-carousel f-multi-slide theme-dark f-scrollable-previous f-scrollable-next" role="region"
+          <div className={carouselClass} role="region"
              aria-label="New Products"
              style={carousel_style}>
           <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
