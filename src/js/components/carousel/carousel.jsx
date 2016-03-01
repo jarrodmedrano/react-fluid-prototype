@@ -46,12 +46,19 @@ var Carousel = React.createClass({
       ]
     }
   },
+
   updateSlide(index) {
-    this.setState({ activeSlide: index });
+    this.setState(
+        {
+          activeSlide: index
+        }
+    );
   },
 
   nextSlide(index, dir) {
     console.log(this.state.slides.length);
+
+    this.setState({ slideDirection: dir });
 
     if(this.state.activeSlide < this.state.slides.length-1 && dir === 'next') {
       this.setState({ activeSlide: index + 1 });

@@ -7,9 +7,13 @@ var CarouselSlide = React.createClass({
       return this.props.myKey === this.props.activeSlide ? 'f-active': ''
     },
 
+    getSlideDirection() {
+      return this.props.slideDirection === 'next' ? 'f-animate-next': 'f-animate-previous'
+    },
+
     render() {
 
-      let slideClass = classNames(this.getActiveSlide(), 'f-animate-next');
+      let slideClass = classNames(this.getActiveSlide(), this.getSlideDirection());
 
       return(
         <li id="hero-slide-one" data-f-theme="dark" className={slideClass}>
