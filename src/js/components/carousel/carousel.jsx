@@ -5,7 +5,7 @@ var Carousel = React.createClass({
   getInitialState () {
     return {
 
-      isActive: 0,
+      activeSlide: 0,
 
       slides: [
         {
@@ -36,7 +36,7 @@ var Carousel = React.createClass({
 
   render(){
 
-
+    
 
     let carousel_style = {
       "TouchAction": "pan-y",
@@ -54,7 +54,18 @@ var Carousel = React.createClass({
           <div>
             <ul>
               {this.state.slides.map(function(result, id) {
-                return <CarouselSlide key={result.id} slideTitle={result.title} slideSubTitle={result.subTitle} vp4={result.vp4} vp3={result.vp3} vp2={result.vp2} slideButton={result.buttonText} isActive={this.state.isActive} myKey={id} />;
+                return (
+                  <CarouselSlide
+                      key={result.id}
+                      slideTitle={result.title}
+                      slideSubTitle={result.subTitle}
+                      vp4={result.vp4}
+                      vp3={result.vp3}
+                      vp2={result.vp2}
+                      slideButton={result.buttonText}
+                      activeSlide={this.state.activeSlide}
+                      myKey={id} />
+                    )
               }, this)}
             </ul>
           </div>
