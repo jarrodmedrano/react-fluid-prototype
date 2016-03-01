@@ -21,4 +21,13 @@
     height: calc(100vh - 100px);
   }
 
+  li .c-hero picture img {
+    height: calc(100vh - 100px);
+    width: auto;
+  }
+
+  .f-y-center > div > div {
+    top: calc(50% - 120px);
+    transform: translateY(calc(-50% - 120px));
+  }
 }
