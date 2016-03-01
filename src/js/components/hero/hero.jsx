@@ -3,9 +3,6 @@ import classNames from 'classnames';
 
 var Hero = React.createClass({
 
-    componentDidUpdate() {
-        picturefill();
-    },
 
     render() {
         return (
