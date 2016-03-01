@@ -1,12 +1,19 @@
 import React from 'react';
 import classNames from 'classnames';
+import 'src/js/components/hero/Hero.scss!';
 
 var Hero = React.createClass({
 
+    isFullScreen() {
+        return this.props.fullscreen === 'true' ? 'f-fullscreen': ''
+    },
 
     render() {
+
+        let heroClass = classNames(this.isFullScreen(), 'c-hero f-medium f-x-center f-y-center theme-dark');
+
         return (
-            <article className="c-hero f-medium f-x-center f-y-center theme-dark">
+            <article className={heroClass}>
                 <div>
                     <div className="context-game">
                         <dl>
