@@ -1,16 +1,15 @@
 import React from 'react'
+import Hero from 'src/js/components/hero/hero.jsx!';
+import MosaicContainer from 'src/js/components/mosaic/MosaicContainer.jsx!';
 
 var WindowsPage = React.createClass({
 
     render() {
-        let slideBG = {
-            background: "url(img/Windows_Mosaic_2x.png)",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat'
-        };
 
         return (
-            <div style={slideBG} className="bg-page">
+            <div>
+                <Hero />
+                <MosaicContainer containerSize="f-vp1-whole f-vp4-whole" />
             </div>
         );
     }
