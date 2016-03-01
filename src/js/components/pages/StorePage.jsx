@@ -7,7 +7,7 @@ var StorePage = React.createClass({
     render() {
         return (
             <div>
-                <Hero fullscreen="true" fY="f-y-bottom" heroSrc="" />
+                <Hero fullscreen="true" fY="f-y-bottom" heroSrc="img/Tomb_Raider_Cave_1344x728" />
             </div>
         );
     }

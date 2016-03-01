@@ -9,7 +9,6 @@ var Hero = React.createClass({
     },
 
     render() {
-        console.log(this.props.fY);
 
         let heroClass = classNames(this.isFullScreen(), 'c-hero f-medium f-x-center theme-dark', this.props.fY != null ? this.props.fY: 'f-y-center');
 
@@ -31,21 +30,21 @@ var Hero = React.createClass({
                 </div>
                 <picture>
                     <source
-                        srcSet="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg"
+                        srcSet={`${this.props.heroSrc}-vp5.jpg`}
                         media="(min-width:1084px)"/>
                     <source
-                        srcSet="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
+                        srcSet={`${this.props.heroSrc}-vp4.jpg`}
                         media="(min-width:768px)"/>
                     <source
-                        srcSet="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg"
+                        srcSet={`${this.props.heroSrc}-vp3.jpg`}
                         media="(min-width:540px)"/>
                     <source
-                        srcSet="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+                        srcSet={`${this.props.heroSrc}-vp2.jpg`}
                         media="(min-width:0)"/>
 
                     <img
-                        srcSet="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
-                        src="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
+                        srcSet={`${this.props.heroSrc}-vp4.jpg`}
+                        src={`${this.props.heroSrc}-vp4.jpg`}
                         alt="Martian poster"/>
                 </picture>
             </article>

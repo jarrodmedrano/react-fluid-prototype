@@ -8,7 +8,7 @@ var WindowsPage = React.createClass({
 
         return (
             <div>
-                <Hero />
+                <Hero heroSrc="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background" />
                 <MosaicContainer containerSize="f-vp1-whole f-vp4-whole" />
             </div>
         );
