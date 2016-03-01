@@ -4,7 +4,6 @@ import Carousel from 'src/js/components/carousel/Carousel.jsx!';
 
 var PerformancePage = React.createClass({
     render() {
-        {console.log('performance page')}
 
         return (
             <div>

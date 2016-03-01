@@ -26,7 +26,7 @@ var Linkband = React.createClass({
 
 
         return (
-            <div className="win-type-body">
+            <div className={innerRouteChildren != null ? 'sub-route': ''}>
                 <nav className="c-link-navigation">
                    <ul>
                        <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active">{rootRoute.indexRoute.title}</IndexLink><span

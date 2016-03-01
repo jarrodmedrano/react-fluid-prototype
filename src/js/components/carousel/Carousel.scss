@@ -1,14 +1,27 @@
-.c-carousel {
-  .c-flipper + div {
-    height: 100vh;
-  }
-
+.c-carousel.f-fullscreen {
   .f-medium {
-    height: 100vh;
+    height: calc(100vh - 64px);
   }
 
   li .c-hero picture img {
-    height: 100vh;
+    height: calc(100vh - 64px);
+  }
+
+  .f-y-center > div > div {
+    top: calc(50% - 120px);
+    transform: translateY(calc(-50% - 120px));
+  }
+}
+
+
+.sub-route + .main-container .c-carousel.f-fullscreen {
+
+  .f-medium {
+    height: calc(100vh - 100px);
+  }
+
+  li .c-hero picture img {
+    height: calc(100vh - 100px);
   }
 
   .f-y-center > div > div {
