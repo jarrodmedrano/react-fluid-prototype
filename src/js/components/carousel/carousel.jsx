@@ -28,12 +28,22 @@ var Carousel = React.createClass({
           vp5: "http://www.getmwf.com/images/components/uber-vp5.jpg",
           vp4: "http://www.getmwf.com/images/components/uber-vp4.jpg",
           vp3: "http://www.getmwf.com/images/components/uber-vp3.jpg",
-          vp2: "http://www.getmwf.com/images/components/uber-vp2.jpg"
+          vp2: "http://www.getmwf.com/images/components/uber-vp3.jpg"
+        },
+        {
+          id: 2,
+          type: "item",
+          title: "Excepteur sint occaecat cupidatat",
+          subTitle: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+          buttonText: "Pre-order today",
+          vp5: "http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg",
+          vp4: "http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg",
+          vp3: "http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg",
+          vp2: "http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
         }
       ]
     }
   },
-
   updateSlide(index) {
     this.setState({ activeSlide: index });
   },
