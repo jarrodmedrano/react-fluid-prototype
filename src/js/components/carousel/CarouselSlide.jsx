@@ -4,7 +4,7 @@ var CarouselSlide = React.createClass({
     render() {
 
       return(
-        <li id="hero-slide-one" data-f-theme="dark" className={this.props.isActive}>
+        <li id="hero-slide-one" data-f-theme="dark" className={this.props.myKey === this.props.isActive ? 'f-active': ''}>
           <article className="c-hero f-medium f-x-left f-y-center theme-dark">
             <div>
               <div className="context-accessory">

@@ -1,5 +1,5 @@
 import React from 'react';
-import CarouselSlide from 'src/js/components/carousel/carousel-slide.jsx!';
+import CarouselSlide from 'src/js/components/carousel/CarouselSlide.jsx!';
 
 var Carousel = React.createClass({
   getInitialState () {
@@ -9,6 +9,7 @@ var Carousel = React.createClass({
 
       slides: [
         {
+          id: 0,
           type: "item",
           title: "Tom Clancy's The Division",
           subTitle: "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
@@ -17,6 +18,17 @@ var Carousel = React.createClass({
           vp4: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
           vp3: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
           vp2: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+        },
+        {
+          id: 1,
+          type: "item",
+          title: "Excepteur sint occaecat cupidatat",
+          subTitle: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+          buttonText: "Pre-order today",
+          vp5: "http://www.getmwf.com/images/components/uber-vp5.jpg",
+          vp4: "http://www.getmwf.com/images/components/uber-vp4.jpg",
+          vp3: "http://www.getmwf.com/images/components/uber-vp3.jpg",
+          vp2: "http://www.getmwf.com/images/components/uber-vp2.jpg"
         }
       ]
   }
@@ -42,8 +54,8 @@ var Carousel = React.createClass({
           <div>
             <ul>
               {this.state.slides.map(function(result, id) {
-                return <CarouselSlide key={result.id} slideTitle={result.title} slideSubTitle={result.subTitle} vp4={result.vp4} vp3={result.vp3} vp2={result.vp2} slideButton={result.buttonText} isActive="f-active" />;
-              })}
+                return <CarouselSlide key={result.id} slideTitle={result.title} slideSubTitle={result.subTitle} vp4={result.vp4} vp3={result.vp3} vp2={result.vp2} slideButton={result.buttonText} isActive={this.state.isActive} myKey={id} />;
+              }, this)}
             </ul>
           </div>
 
