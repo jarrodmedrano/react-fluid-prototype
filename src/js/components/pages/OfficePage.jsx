@@ -1,17 +1,14 @@
 import React from 'react'
+import Hero from 'src/js/components/hero/hero.jsx!';
+import MosaicContainer from 'src/js/components/mosaic/MosaicContainer.jsx!';
 
 var OfficePage = React.createClass({
 
     render() {
-        let slideBG = {
-            background: "#eb3d01",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat'
-        };
-
         return (
-            <div style={slideBG} className="bg-page">
-                {this.props.children}
+            <div>
+                <Hero />
+                <MosaicContainer containerSize="f-vp1-whole f-vp4-whole" />
             </div>
         );
     }

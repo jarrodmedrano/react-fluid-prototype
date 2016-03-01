@@ -22,6 +22,7 @@ System.config({
     "history": "npm:history@1.17.0",
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
     "lodash": "npm:lodash@3.10.1",
+    "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@0.13.3",
     "react-router": "npm:react-router@1.0.2",
     "react-winjs": "npm:react-winjs@2.4.0",
@@ -408,6 +409,9 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:picturefill@3.0.2": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0"
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
