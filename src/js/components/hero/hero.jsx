@@ -9,8 +9,9 @@ var Hero = React.createClass({
     },
 
     render() {
+        console.log(this.props.fY);
 
-        let heroClass = classNames(this.isFullScreen(), 'c-hero f-medium f-x-center f-y-center theme-dark');
+        let heroClass = classNames(this.isFullScreen(), 'c-hero f-medium f-x-center theme-dark', this.props.fY != null ? this.props.fY: 'f-y-center');
 
         return (
             <article className={heroClass}>
@@ -18,7 +19,7 @@ var Hero = React.createClass({
                     <div className="context-game">
                         <dl>
                             <dt className="x-screen-reader">Media Title</dt>
-                            <dd className="c-heading">Tom Clancy's The Division</dd>
+                            <dd className="c-heading"><cite>Tom Clancy's The Division</cite></dd>
                             <dt className="x-screen-reader">Media Tagline</dt>
                             <div className="c-subheading">Take back New York in Tom Clancy's The Division open
                                 beta. Early access available only on Xbox One, February 18th.</div>

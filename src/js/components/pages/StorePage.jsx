@@ -7,7 +7,7 @@ var StorePage = React.createClass({
     render() {
         return (
             <div>
-                <Hero fullscreen="true" />
+                <Hero fullscreen="true" fY="f-y-bottom" heroSrc="" />
             </div>
         );
     }

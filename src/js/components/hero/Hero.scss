@@ -5,9 +5,11 @@
     height: calc(100vh - 64px);
   }
 
-  .context-game {
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  .f-y-center {
+    .context-game {
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 }
 
@@ -18,8 +20,10 @@
     height: calc(100vh - 100px);
   }
 
-  .context-game {
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  .f-y-center {
+    .context-game {
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 }
