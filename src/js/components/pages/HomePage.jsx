@@ -10,6 +10,7 @@ var HomePage = React.createClass({
         return (
             <div>
                 <Carousel />
+                <MosaicContainer containerSize="f-vp1-whole f-vp4-whole" />
             </div>
         );
     }

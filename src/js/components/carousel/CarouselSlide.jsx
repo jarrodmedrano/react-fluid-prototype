@@ -1,10 +1,18 @@
 import React from 'react'
+import classNames from 'classnames'
 
 var CarouselSlide = React.createClass({
+
+    getActiveSlide() {
+      return this.props.myKey === this.props.activeSlide ? 'f-active': ''
+    },
+
     render() {
 
+      let slideClass = classNames(this.getActiveSlide(), 'f-animate-next');
+
       return(
-        <li id="hero-slide-one" data-f-theme="dark" className={this.props.myKey === this.props.activeSlide ? 'f-active f-animate-next': ''}>
+        <li id="hero-slide-one" data-f-theme="dark" className={slideClass}>
           <article className="c-hero f-medium f-x-left f-y-center theme-dark">
             <div>
               <div className="context-accessory">
