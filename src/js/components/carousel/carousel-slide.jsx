@@ -19,18 +19,18 @@ var CarouselSlide = React.createClass({
 
             </div>
             <picture>
-              <source srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg"
+              <source srcSet={this.props.vp5}
                       media="(min-width:1084px)" />
-              <source srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
+              <source srcSet={this.props.vp4}
                       media="(min-width:768px)" />
-              <source srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg"
+              <source srcSet={this.props.vp3}
                       media="(min-width:540px)" />
               <source
-                srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+                srcSet={this.props.vp2}
                 media="(min-width:0)" />
-              <img srcset="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
-                   src="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg"
-                   alt="Tom Clancy's The Division" />
+              <img srcSet={this.props.vp4}
+                   src={this.props.vp4}
+                   alt={this.props.slideTitle} />
             </picture>
           </article>
         </li>

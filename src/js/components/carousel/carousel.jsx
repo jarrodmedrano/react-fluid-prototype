@@ -2,38 +2,30 @@ import React from 'react';
 import CarouselSlide from 'src/js/components/carousel/carousel-slide.jsx!';
 
 var Carousel = React.createClass({
+  getInitialState () {
+    return {
+
+      isActive: 0,
+
+      slides: [
+        {
+          type: "item",
+          title: "Tom Clancy's The Division",
+          subTitle: "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
+          buttonText: "Pre-order today",
+          vp5: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg",
+          vp4: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
+          vp3: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
+          vp2: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+        }
+      ]
+  }
+  },
 
   render(){
 
-    var slides = [
-      {
-        type: "item",
-        title: "Tom Clancy's The Division",
-        subtitle: "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
-        buttonText: "Pre-order today",
-        bg: "url(img/slide-christmas.jpg)"
-      },
-      {
-        type: "item",
-        title: "Guided Stories",
-        text: "Lorem ipsum dolor sit amet adipscing elit, lorem ipsum",
-        buttonText: "Try it out",
-        bg: "#7DA5AF",
-        icon: "img/slide-logo.png"
-      },
-      {
-        type: "item",
-        title: "Start the school year right with up to $150 off select Surface Pro 4 models",
-        buttonText: "Shop Now",
-        bg: "url(img/slide-surface.jpg)"
-      },
-      {
-        type: "item",
-        title: "Learn how to draw in Windows 10 with Edge and OneNote",
-        buttonText: "Reserve now",
-        bg: "url(img/slide-store.jpg)"
-      }
-    ];
+
+
     let carousel_style = {
       "TouchAction": "pan-y",
       "WebkitUserSelect": "none",
@@ -49,7 +41,9 @@ var Carousel = React.createClass({
           <button className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
-              <CarouselSlide isActive="f-active" />
+              {this.state.slides.map(function(result, id) {
+                return <CarouselSlide key={result.id} slideTitle={result.title} slideSubTitle={result.subTitle} vp4={result.vp4} vp3={result.vp3} vp2={result.vp2} slideButton={result.buttonText} isActive="f-active" />;
+              })}
             </ul>
           </div>
 
