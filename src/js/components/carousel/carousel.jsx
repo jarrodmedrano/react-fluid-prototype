@@ -7,6 +7,8 @@ var Carousel = React.createClass({
 
       activeSlide: 0,
 
+      slideDirection: 'next',
+
       slides: [
         {
           id: 0,
@@ -93,7 +95,9 @@ var Carousel = React.createClass({
                       vp2={result.vp2}
                       slideButton={result.buttonText}
                       activeSlide={this.state.activeSlide}
-                      myKey={id} />
+                      myKey={id}
+                      slideDirection={this.state.slideDirection}
+                  />
                     )
               }, this)}
             </ul>
