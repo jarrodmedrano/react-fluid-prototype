@@ -24,9 +24,11 @@ System.config({
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
     "lodash": "npm:lodash@3.10.1",
     "picturefill": "npm:picturefill@3.0.2",
-    "react": "npm:react@0.13.3",
+    "react": "npm:react@0.14.7",
+    "react-dom": "npm:react-dom@0.14.7",
     "react-redux": "npm:react-redux@4.4.0",
     "react-router": "npm:react-router@1.0.2",
+    "react-router-redux": "npm:react-router-redux@4.0.0",
     "react-winjs": "npm:react-winjs@2.4.0",
     "redux": "npm:redux@3.3.1",
     "scss": "github:theefer/plugin-sass@master",
@@ -486,6 +488,9 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:react-dom@0.14.7": {
+      "react": "npm:react@0.14.7"
     },
     "npm:react-redux@4.4.0": {
       "hoist-non-react-statics": "npm:hoist-non-react-statics@1.0.5",

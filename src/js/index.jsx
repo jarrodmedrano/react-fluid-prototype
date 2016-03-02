@@ -1,13 +1,12 @@
 import React from 'react'
-
-//Router
-import { Router, DefaultRoute, Route, Link, IndexRoute, BrowserHistory } from 'react-router';
+import ReactDOM from 'react-dom'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import { Router, DefaultRoute, Route, Link, IndexRoute, BrowserHistory } from 'react-router'
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
-//Redux
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from 'src/js/reducers/index.jsx!';
+import reducers from './reducers/index.jsx!';
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband.jsx!';
@@ -19,7 +18,6 @@ import RotatePage from 'src/js/components/pages/SurfacePage/RotatePage.jsx!';
 import WindowsPage from 'src/js/components/pages/WindowsPage/WindowsPage.jsx!';
 import StorePage from 'src/js/components/pages/StorePage.jsx!';
 import OfficePage from 'src/js/components/pages/OfficePage.jsx!';
-import SideBar from 'src/js/components/sidebar/SideBar.jsx!';
 
 //Styles
 import 'src/styles/main.scss!';
@@ -45,7 +43,7 @@ var App = React.createClass({
     }
 });
 
-React.render((
+ReactDOM.render(
     <Router history={BrowserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={HomePage} title="Welcome"/>
@@ -66,5 +64,5 @@ React.render((
             <Route path="store" component={StorePage} title="Microsoft Store"/>
             <Route path="office" component={OfficePage} title="Office"/>
         </Route>
-    </Router>
-), document.getElementById('app'))
+    </Router>, document.getElementById('app')
+);
