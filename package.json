@@ -12,12 +12,12 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-shell": "^0.5.1",
-    "react": "^0.13.3",
-    "react-winjs": "^2.4.0"
+    "react": "^0.13.3"
   },
   "jspm": {
     "dependencies": {
       "classnames": "npm:classnames@^2.2.3",
+      "clean-css": "npm:clean-css@^3.4.10",
       "css": "github:systemjs/plugin-css@^0.1.19",
       "history": "npm:history@^1.17.0",
       "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
