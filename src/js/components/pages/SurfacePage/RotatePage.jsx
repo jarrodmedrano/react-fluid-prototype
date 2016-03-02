@@ -8,7 +8,7 @@ var RotatePage = React.createClass({
 
         return (
             <div >
-                <Hero fullscreen="true" fY="f-y-bottom" heroSrc="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background" />
+                <Hero fullscreen="true" fY="f-y-bottom" heroSrc="img/Tomb_Raider_Cave_1344x728" />
             </div>
         );
     }
