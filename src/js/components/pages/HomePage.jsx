@@ -33,7 +33,9 @@ var HomePage = React.createClass({
         return (
             <div>
                 <Carousel />
-                <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
+                <div className="c-mosaic">
+                    <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
+                </div>
             </div>
         );
     }
