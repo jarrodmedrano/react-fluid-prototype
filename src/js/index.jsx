@@ -1,5 +1,15 @@
 import React from 'react'
-//
+
+//Router
+import { Router, DefaultRoute, Route, Link, IndexRoute, BrowserHistory } from 'react-router';
+import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+
+//Redux
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from 'src/js/reducers/index.jsx!';
+
+//Components
 import Linkband from 'src/js/components/linkband/linkband.jsx!';
 import HomePage from 'src/js/components/pages/HomePage.jsx!';
 import SurfacePage from 'src/js/components/pages/SurfacePage/SurfacePage.jsx!';
@@ -10,20 +20,15 @@ import WindowsPage from 'src/js/components/pages/WindowsPage/WindowsPage.jsx!';
 import StorePage from 'src/js/components/pages/StorePage.jsx!';
 import OfficePage from 'src/js/components/pages/OfficePage.jsx!';
 import SideBar from 'src/js/components/sidebar/SideBar.jsx!';
-import { Router, DefaultRoute, Route, Link, IndexRoute, BrowserHistory } from 'react-router';
+
+//Styles
 import 'src/styles/main.scss!';
 import 'src/styles/mwf_en-us_default.min.css!';
-import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 var App = React.createClass({
 
-    componentWillMount() {
-        window.addEventListener("resize", this.handleResize);
-    },
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.handleResize);
-    },
 
     render() {
         return (

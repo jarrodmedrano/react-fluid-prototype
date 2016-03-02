@@ -24,7 +24,9 @@
       "lodash": "npm:lodash@^3.10.1",
       "picturefill": "npm:picturefill@^3.0.2",
       "react": "npm:react@0.13.3",
+      "react-redux": "npm:react-redux@^4.4.0",
       "react-router": "npm:react-router@^1.0.2",
+      "redux": "npm:redux@^3.3.1",
       "scss": "github:theefer/plugin-sass@master"
     },
     "devDependencies": {
