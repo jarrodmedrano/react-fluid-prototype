@@ -8,6 +8,14 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 import reducers from './reducers/index.jsx!';
 
+// Add the reducer to your store on the `routing` key
+const store = createStore(
+    combineReducers({
+        ...reducers,
+        routing: routerReducer
+    })
+)
+
 //Components
 import Linkband from 'src/js/components/linkband/linkband.jsx!';
 import HomePage from 'src/js/components/pages/HomePage.jsx!';
@@ -44,25 +52,27 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-    <Router history={BrowserHistory}>
-        <Route path="/" component={App}>
-            <IndexRoute component={HomePage} title="Welcome"/>
-            <Route path="surface" component={SurfacePage} title="Surface">
-                <IndexRoute component={PerformancePage} title="Exceptional Performance"/>
-                <Route path="/surface/rotate" component={RotatePage} title="Light and Powerful"/>
-                <Route path="/surface/apps" component={AccessoriesPage} title="Limitless Apps"/>
-                <Route path="/surface/accessories" component={AccessoriesPage} title="Accessories"/>
-                <Route path="/surface/tech-specs" component={AccessoriesPage} title="Tech Specs"/>
+    <Provider store={store}>
+        <Router history={BrowserHistory}>
+            <Route path="/" component={App}>
+                <IndexRoute component={HomePage} title="Welcome"/>
+                <Route path="surface" component={SurfacePage} title="Surface">
+                    <IndexRoute component={PerformancePage} title="Exceptional Performance"/>
+                    <Route path="/surface/rotate" component={RotatePage} title="Light and Powerful"/>
+                    <Route path="/surface/apps" component={AccessoriesPage} title="Limitless Apps"/>
+                    <Route path="/surface/accessories" component={AccessoriesPage} title="Accessories"/>
+                    <Route path="/surface/tech-specs" component={AccessoriesPage} title="Tech Specs"/>
+                </Route>
+                <Route path="windows" component={WindowsPage} title="Windows">
+                    <IndexRoute component={WindowsPage} title="Achieve More"/>
+                    <Route path="/windows/productivity" component={RotatePage} title="Ultimate Productivity"/>
+                    <Route path="/windows/universal-store" component={AccessoriesPage} title="Universal Store"/>
+                    <Route path="/windows/cortana" component={AccessoriesPage} title="Cortana and Windows"/>
+                    <Route path="/windows/interactive-guides" component={AccessoriesPage} title="Interactive Guides"/>
+                </Route>
+                <Route path="store" component={StorePage} title="Microsoft Store"/>
+                <Route path="office" component={OfficePage} title="Office"/>
             </Route>
-            <Route path="windows" component={WindowsPage} title="Windows">
-                <IndexRoute component={WindowsPage} title="Achieve More"/>
-                <Route path="/windows/productivity" component={RotatePage} title="Ultimate Productivity"/>
-                <Route path="/windows/universal-store" component={AccessoriesPage} title="Universal Store"/>
-                <Route path="/windows/cortana" component={AccessoriesPage} title="Cortana and Windows"/>
-                <Route path="/windows/interactive-guides" component={AccessoriesPage} title="Interactive Guides"/>
-            </Route>
-            <Route path="store" component={StorePage} title="Microsoft Store"/>
-            <Route path="office" component={OfficePage} title="Office"/>
-        </Route>
-    </Router>, document.getElementById('app')
+        </Router>
+    </Provider>, document.getElementById('app')
 );
