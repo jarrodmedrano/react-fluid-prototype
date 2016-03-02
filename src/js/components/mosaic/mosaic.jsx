@@ -18,7 +18,7 @@ var Mosaic = React.createClass({
                         <dt className="x-screen-reader">Game Title</dt>
                         <dd><cite>{this.props.mosaic.mosaicTitle}</cite></dd>
                         <div className="c-group">
-                            <a href="/components/items/mosaic.html" className="c-call-to-action c-glyph"><span>Buy now</span></a>
+                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph"><span>Buy now</span></a>
                         </div>
                       </dl>
                     </div>

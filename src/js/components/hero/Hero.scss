@@ -1,9 +1,14 @@
+.c-hero.theme-dark {
+  background: #000;
+}
+
 .c-hero.f-fullscreen {
   height: calc(100vh - 64px);
 
+
   img {
     height: calc(100vh - 64px);
-    width: auto;
+    min-width: auto;
   }
 
   .f-y-center {
@@ -19,7 +24,7 @@
 
   img {
     height: calc(100vh - 100px);
-    width: auto;
+    min-width: auto;
   }
 
   .f-y-center {

@@ -24,7 +24,7 @@ var Hero = React.createClass({
                                 beta. Early access available only on Xbox One, February 18th.</div>
                         </dl>
                         <div className="hero-link-container p-t-xs">
-                            <a href="#" className="c-call-to-action c-glyph"><span>Pre-order today</span></a>
+                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph"><span>Pre-order today</span></a>
                         </div>
                     </div>
                 </div>

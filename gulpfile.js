@@ -16,7 +16,7 @@ gulp.task('move', function() {
     gulp.src('./img/**/*.{gif,png,jpg,svg}')
         .pipe(gulp.dest('./build/img'));
     gulp.src('./src/fonts/*')
-        .pipe(gulp.dest('./build/src/fonts'));
+        .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('build', ['bundle', 'move']);
