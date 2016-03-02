@@ -9,7 +9,7 @@ gulp.task('bundle', plugins.shell.task([
 ]));
 
 gulp.task('deploy', plugins.shell.task([
-    'git subtree push --prefix build origin gh-pages'
+    'git subtree push --prefix build websites master'
 ]));
 
 gulp.task('move', function() {
