@@ -55,7 +55,7 @@ var App = React.createClass({
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router history={browserHistory}>
+        <Router history={history}>
             <Route path="/" component={App}>
                 <IndexRoute component={HomePage} title="Welcome"/>
                 <Route path="surface" component={SurfacePage} title="Surface">
