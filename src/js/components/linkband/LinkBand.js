@@ -46,27 +46,6 @@ var Linkband = React.createClass({
                        )}
                    </ul>
                 </nav>
-                {innerRouteChildren != null ? <nav className="c-link-navigation sub-linkband">
-                    <ul>
-                        <li className="c-hyperlink"><IndexLink to={innerRoute.path} activeClassName="active">{innerRoute.indexRoute.title}</IndexLink><span className="ghost">
-                               {innerRoute.indexRoute.title}
-                           </span></li>
-                        {innerRouteChildren.map((item, index) =>
-                        <li className="c-hyperlink" key={index}>
-                            <Link
-                                activeClassName="active"
-                                to={item.path || ''}>
-                                {item.title}
-                            </Link>
-                           <span
-                               className="ghost">
-                               {item.title}
-                           </span>
-                            {(index + 1) < depth}
-                        </li>
-                            )}
-                    </ul>
-                </nav> : null}
             </div>
 
         );

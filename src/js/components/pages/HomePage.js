@@ -16,7 +16,7 @@ var HomePage = React.createClass({
                 mosaicImage: "img/for-school.jpg"
             },
             {
-                mosaicTitle: "For Art",
+                mosaicTitle: "For Play",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
                 mosaicImage: "img/art.jpg"
             },
