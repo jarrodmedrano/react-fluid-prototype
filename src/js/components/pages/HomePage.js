@@ -6,12 +6,12 @@ var HomePage = React.createClass({
     render() {
         let defaultMosaic = [
             {
-                mosaicTitle: "Rise of the Tomb Raider",
+                mosaicTitle: "Work",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
                 mosaicImage: "http://www.getmwf.com/images/components/placement-background-tombraider.jpg"
             },
             {
-                mosaicTitle: "Forza Horizon 2",
+                mosaicTitle: "School",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
                 mosaicImage: "http://www.getmwf.com/images/components/placement-background-forza.jpg"
             },
@@ -29,7 +29,7 @@ var HomePage = React.createClass({
 
         return (
             <div>
-                <Hero heroTitle="What are you using your Surface for?" heroSrc="Surface_Book_Laptop_01" heroFileType="png" heroSize="f-medium"  />
+                <Hero heroStyle={{'height': '50%'}} heroTitle="What are you using your Surface for?" heroSrc="Surface_Book_Laptop_01" heroFileType="png" heroSize="f-medium"  />
                 <div className="c-mosaic">
                     <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
                 </div>

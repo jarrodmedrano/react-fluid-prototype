@@ -18,7 +18,6 @@ body {
 
 .main-container {
   flex: 1;
-  background: red;
   display: flex;
 }
 
@@ -28,11 +27,10 @@ body {
   //flex-direction: column;
   //align-items: stretch;
   width: 100vw;
-  background: green;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  //align-items: stretch;
 
   .c-mosaic {
     display: flex;
@@ -43,10 +41,14 @@ body {
   .c-mosaic > div {
     background: yellow;
     flex: 1;
-    height: 100%;
+    //height: 100%;
 
     > div {
       height: 100%;
+
+      img {
+        height: 100%;
+      }
     }
 
   }
