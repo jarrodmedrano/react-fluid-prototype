@@ -12,6 +12,16 @@ var Hero = React.createClass({
 
 
     render() {
+
+        let heroProps = {
+            heroSrc: this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} /> : null,
+            heroCta: this.props.ctaButton ? <div className="hero-link-container p-t-xs">
+                <a href={this.props.ctaLink} className="c-call-to-action c-glyph"><span>{this.props.ctaText}</span></a>
+            </div> : null,
+            heroTitle: this.props.heroTitle ? <dd className="c-heading"><cite>{this.props.heroTitle}</cite></dd> : null,
+            heroSubTitle: this.props.heroSubTitle ? <div className="c-subheading">{this.props.heroSubTitle}</div> : null,
+        };
+
         let heroClass = classNames(
             this.isFullScreen(),
             'c-hero f-x-center theme-dark',
@@ -25,18 +35,14 @@ var Hero = React.createClass({
                     <div className="context-game">
                         <dl>
                             <dt className="x-screen-reader">Media Title</dt>
-                            <dd className="c-heading"><cite>Tom Clancy's The Division</cite></dd>
+                            {heroProps.heroTitle}
                             <dt className="x-screen-reader">Media Tagline</dt>
-                            <div className="c-subheading">Take back New York in Tom Clancy's The Division open
-                                beta. Early access available only on Xbox One, February 18th.</div>
+                            {heroProps.heroSubTitle}
                         </dl>
-                        {this.props.ctaButton ? <div className="hero-link-container p-t-xs">
-                            <a href={this.props.ctaLink} className="c-call-to-action c-glyph"><span>{this.props.ctaText}</span></a>
-                        </div> : null}
-
+                        {heroProps.heroCta}
                     </div>
                 </div>
-                {this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} /> : null}
+                {heroProps.heroSrc}
             </article>
         )
     }

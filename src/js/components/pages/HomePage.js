@@ -29,7 +29,7 @@ var HomePage = React.createClass({
 
         return (
             <div>
-                <Hero />
+                <Hero heroTitle="What are you using your Surface for?" heroSize="f-medium" />
                 <div className="c-mosaic">
                     <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
                 </div>
