@@ -6,7 +6,7 @@ import { Router, DefaultRoute, Route, Link, IndexRoute, browserHistory } from 'r
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
-import reducers from './reducers/index.jsx!';
+import reducers from './reducers/index';
 
 // Add the reducer to your store on the `routing` key
 const store = createStore(
@@ -17,15 +17,15 @@ const store = createStore(
 )
 
 //Components
-import Linkband from 'src/js/components/linkband/linkband.jsx!';
-import HomePage from 'src/js/components/pages/HomePage.jsx!';
-import SurfacePage from 'src/js/components/pages/SurfacePage/SurfacePage.jsx!';
-import PerformancePage from 'src/js/components/pages/SurfacePage/PerformancePage.jsx!';
-import AccessoriesPage from 'src/js/components/pages/SurfacePage/AccessoriesPage.jsx!';
-import RotatePage from 'src/js/components/pages/SurfacePage/RotatePage.jsx!';
-import WindowsPage from 'src/js/components/pages/WindowsPage/WindowsPage.jsx!';
-import StorePage from 'src/js/components/pages/StorePage.jsx!';
-import OfficePage from 'src/js/components/pages/OfficePage.jsx!';
+import Linkband from 'src/js/components/linkband/linkband';
+import HomePage from 'src/js/components/pages/HomePage';
+import SurfacePage from 'src/js/components/pages/SurfacePage/SurfacePage';
+import PerformancePage from 'src/js/components/pages/SurfacePage/PerformancePage';
+import AccessoriesPage from 'src/js/components/pages/SurfacePage/AccessoriesPage';
+import RotatePage from 'src/js/components/pages/SurfacePage/RotatePage';
+import WindowsPage from 'src/js/components/pages/WindowsPage/WindowsPage';
+import StorePage from 'src/js/components/pages/StorePage';
+import OfficePage from 'src/js/components/pages/OfficePage';
 
 //Styles
 import 'src/styles/main.scss!';

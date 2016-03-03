@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Router, Route, Link } from 'react-router';
-import 'src/js/components/flipview/FlipView.scss!';
+import 'src/js/components/flipview/FlipView.scss';
 
 
 var FlipView = React.createClass({
