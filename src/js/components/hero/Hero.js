@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
+import HeroPicture from 'src/js/components/hero/HeroPicture';
 import 'src/js/components/hero/Hero.scss!';
+
 
 var Hero = React.createClass({
 
@@ -8,9 +10,14 @@ var Hero = React.createClass({
         return this.props.fullscreen === 'true' ? 'f-fullscreen': ''
     },
 
-    render() {
 
-        let heroClass = classNames(this.isFullScreen(), 'c-hero f-medium f-x-center theme-dark', this.props.fY != null ? this.props.fY: 'f-y-center');
+    render() {
+        let heroClass = classNames(
+            this.isFullScreen(),
+            'c-hero f-x-center theme-dark',
+            this.props.fY ? this.props.fY : 'f-y-center',
+            this.props.heroSize ? this.props.heroSize : 'f-medium'
+        );
 
         return (
             <article className={heroClass}>
@@ -23,30 +30,13 @@ var Hero = React.createClass({
                             <div className="c-subheading">Take back New York in Tom Clancy's The Division open
                                 beta. Early access available only on Xbox One, February 18th.</div>
                         </dl>
-                        <div className="hero-link-container p-t-xs">
-                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph"><span>Pre-order today</span></a>
-                        </div>
+                        {this.props.ctaButton ? <div className="hero-link-container p-t-xs">
+                            <a href={this.props.ctaLink} className="c-call-to-action c-glyph"><span>{this.props.ctaText}</span></a>
+                        </div> : null}
+
                     </div>
                 </div>
-                <picture>
-                    <source
-                        srcSet={`${this.props.heroSrc}-vp5.jpg`}
-                        media="(min-width:1084px)"/>
-                    <source
-                        srcSet={`${this.props.heroSrc}-vp4.jpg`}
-                        media="(min-width:768px)"/>
-                    <source
-                        srcSet={`${this.props.heroSrc}-vp3.jpg`}
-                        media="(min-width:540px)"/>
-                    <source
-                        srcSet={`${this.props.heroSrc}-vp2.jpg`}
-                        media="(min-width:0)"/>
-
-                    <img
-                        srcSet={`${this.props.heroSrc}-vp4.jpg`}
-                        src={`${this.props.heroSrc}-vp4.jpg`}
-                        alt="Martian poster"/>
-                </picture>
+                {this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} /> : null}
             </article>
         )
     }

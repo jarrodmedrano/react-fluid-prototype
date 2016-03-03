@@ -21,6 +21,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.19",
     "history": "npm:history@1.17.0",
+    "jsx": "github:floatdrop/plugin-jsx@1.2.1",
     "lodash": "npm:lodash@3.10.1",
     "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@0.14.7",
@@ -31,6 +32,9 @@ System.config({
     "react-winjs": "npm:react-winjs@2.4.0",
     "redux": "npm:redux@3.3.1",
     "scss": "github:theefer/plugin-sass@master",
+    "github:floatdrop/plugin-jsx@1.2.1": {
+      "react-tools": "npm:react-tools@0.13.3"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -306,11 +310,6 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:envify@3.4.0": {
-      "jstransform": "npm:jstransform@10.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "through": "npm:through@2.3.8"
-    },
     "npm:esprima-fb@13001.1001.0-dev-harmony-fb": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -511,6 +510,12 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "warning": "npm:warning@2.1.0"
     },
+    "npm:react-tools@0.13.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "commoner": "npm:commoner@0.10.4",
+      "jstransform": "npm:jstransform@10.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:react@0.14.7": {
       "fbjs": "npm:fbjs@0.6.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -578,10 +583,6 @@ System.config({
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:through@2.3.8": {
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "stream": "github:jspm/nodelibs-stream@0.1.0"
-    },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "punycode": "npm:punycode@1.3.2",
@@ -597,9 +598,6 @@ System.config({
     },
     "npm:warning@2.1.0": {
       "loose-envify": "npm:loose-envify@1.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:winjs@4.4.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }

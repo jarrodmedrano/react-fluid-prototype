@@ -1,9 +1,6 @@
 import React from 'react'
-//import FlipView from 'src/js/components/flipview/FlipView';
-//import SideBar from 'src/js/components/sidebar/SideBar';
 import Hero from 'src/js/components/hero/hero';
 import MosaicContainer from 'src/js/components/mosaic/MosaicContainer';
-import Carousel from 'src/js/components/carousel/carousel';
 
 var HomePage = React.createClass({
     render() {
@@ -32,7 +29,7 @@ var HomePage = React.createClass({
 
         return (
             <div>
-                <Carousel />
+                <Hero />
                 <div className="c-mosaic">
                     <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
                 </div>
