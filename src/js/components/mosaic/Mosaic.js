@@ -7,7 +7,7 @@ var Mosaic = React.createClass({
 
         return(
             <div className="theme-dark" data-f-mosaic={this.props.mosaic.mosaicSize}>
-                <article className="c-placement context-accessory f-width-small f-height-large">
+                <article className="c-placement context-music-album f-width-small f-height-large">
                     <picture>
                         <img srcSet={this.props.mosaic.mosaicImage} src={this.props.mosaic.mosaicImage} alt={this.props.mosaic.mosaicTitle} />
                     </picture>

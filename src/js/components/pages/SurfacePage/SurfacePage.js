@@ -1,12 +1,13 @@
 import React from 'react'
-import { Router, Route, RouteHandler, Link, IndexRoute } from 'react-router';
+import Carousel from 'src/js/components/carousel/Carousel';
 
 var SurfacePage = React.createClass({
 
     render() {
+
         return (
             <div>
-                {this.props.children}
+                <Carousel fullscreen="true" />
             </div>
         );
     }

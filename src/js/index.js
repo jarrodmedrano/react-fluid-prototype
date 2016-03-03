@@ -58,20 +58,8 @@ ReactDOM.render(
         <Router history={history}>
             <Route path="/" component={App}>
                 <IndexRoute component={HomePage} title="Welcome"/>
-                <Route path="surface" component={SurfacePage} title="Surface">
-                    <IndexRoute component={PerformancePage} title="Exceptional Performance"/>
-                    <Route path="/surface/rotate" component={RotatePage} title="Light and Powerful"/>
-                    <Route path="/surface/apps" component={AccessoriesPage} title="Limitless Apps"/>
-                    <Route path="/surface/accessories" component={AccessoriesPage} title="Accessories"/>
-                    <Route path="/surface/tech-specs" component={AccessoriesPage} title="Tech Specs"/>
-                </Route>
-                <Route path="windows" component={WindowsPage} title="Windows">
-                    <IndexRoute component={WindowsPage} title="Achieve More"/>
-                    <Route path="/windows/productivity" component={RotatePage} title="Ultimate Productivity"/>
-                    <Route path="/windows/universal-store" component={AccessoriesPage} title="Universal Store"/>
-                    <Route path="/windows/cortana" component={AccessoriesPage} title="Cortana and Windows"/>
-                    <Route path="/windows/interactive-guides" component={AccessoriesPage} title="Interactive Guides"/>
-                </Route>
+                <Route path="surface" component={SurfacePage} title="Surface" />
+                <Route path="windows" component={WindowsPage} title="Windows" />
                 <Route path="store" component={StorePage} title="Microsoft Store"/>
                 <Route path="office" component={OfficePage} title="Office"/>
             </Route>

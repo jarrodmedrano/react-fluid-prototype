@@ -38,8 +38,19 @@ body {
     flex: 1;
   }
 
+  //.c-hero.f-y-center.f-x-center > picture img {
+  //  min-width: auto;
+  //  max-height: 100%;
+  //}
+
+  @media only screen and (min-width: 1084px) {
+    .c-hero.f-medium {
+      height: 380px;
+    }
+  }
+
+
   .c-mosaic > div {
-    background: yellow;
     flex: 1;
     //height: 100%;
 

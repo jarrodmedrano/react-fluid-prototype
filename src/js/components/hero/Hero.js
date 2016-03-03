@@ -24,8 +24,9 @@ var Hero = React.createClass({
 
         let heroClass = classNames(
             this.isFullScreen(),
-            'c-hero f-x-center theme-dark',
+            'c-hero theme-dark',
             this.props.fY ? this.props.fY : 'f-y-center',
+            this.props.fX ? this.props.fX : 'f-x-center',
             this.props.heroSize ? this.props.heroSize : 'f-medium'
         );
 

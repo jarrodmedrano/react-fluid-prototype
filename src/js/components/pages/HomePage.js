@@ -6,30 +6,30 @@ var HomePage = React.createClass({
     render() {
         let defaultMosaic = [
             {
-                mosaicTitle: "Work",
+                mosaicTitle: "For Business",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-tombraider.jpg"
+                mosaicImage: "img/work.jpg"
             },
             {
-                mosaicTitle: "School",
+                mosaicTitle: "For School",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-forza.jpg"
+                mosaicImage: "img/for-school.jpg"
             },
             {
-                mosaicTitle: "Xbox One Elite bundle",
+                mosaicTitle: "For Art",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-xboxcontroller.jpg"
+                mosaicImage: "img/art.jpg"
             },
             {
-                mosaicTitle: "Halo 5",
+                mosaicTitle: "On the Go",
                 mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-halo.jpg"
+                mosaicImage: "img/on-the-go.jpg"
             }
         ];
 
         return (
             <div>
-                <Hero heroStyle={{'height': '50%'}} heroTitle="What are you using your Surface for?" heroSrc="Surface_Book_Laptop_01" heroFileType="png" heroSize="f-medium"  />
+                <Hero heroTitle="What are you using your Surface for?" heroSrc="en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop" heroSize="f-medium" fX="f-x-left" />
                 <div className="c-mosaic">
                     <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
                 </div>
