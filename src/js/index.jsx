@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import { Router, DefaultRoute, Route, Link, IndexRoute, BrowserHistory } from 'react-router'
+import { Router, DefaultRoute, Route, Link, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
@@ -31,6 +31,8 @@ import OfficePage from 'src/js/components/pages/OfficePage.jsx!';
 import 'src/styles/main.scss!';
 import 'src/styles/mwf_en-us_default.min.css!';
 
+
+const history = syncHistoryWithStore(browserHistory, store);
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 var App = React.createClass({
@@ -53,7 +55,7 @@ var App = React.createClass({
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router history={BrowserHistory}>
+        <Router history={browserHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={HomePage} title="Welcome"/>
                 <Route path="surface" component={SurfacePage} title="Surface">
