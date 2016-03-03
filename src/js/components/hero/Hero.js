@@ -14,7 +14,7 @@ var Hero = React.createClass({
     render() {
 
         let heroProps = {
-            heroSrc: this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} /> : null,
+            heroSrc: this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} heroFileType={this.props.heroFileType ? this.props.heroFileType : 'jpg'} /> : null,
             heroCta: this.props.ctaButton ? <div className="hero-link-container p-t-xs">
                 <a href={this.props.ctaLink} className="c-call-to-action c-glyph"><span>{this.props.ctaText}</span></a>
             </div> : null,
@@ -30,7 +30,7 @@ var Hero = React.createClass({
         );
 
         return (
-            <article className={heroClass}>
+            <article style={this.props.heroStyle} className={heroClass}>
                 <div>
                     <div className="context-game">
                         <dl>

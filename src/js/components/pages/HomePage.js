@@ -29,8 +29,8 @@ var HomePage = React.createClass({
 
         return (
             <div>
-                <Hero heroTitle="What are you using your Surface for?" heroSize="f-medium" />
-                <div className="c-mosaic">
+                <Hero heroTitle="What are you using your Surface for?" heroSrc="Surface_Book_Laptop_01" heroFileType="png" heroSize="f-medium" heroStyle={{'height': '30vh'}} />
+                <div className="c-mosaic" style={{'height': '70vh'}}>
                     <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
                 </div>
             </div>
