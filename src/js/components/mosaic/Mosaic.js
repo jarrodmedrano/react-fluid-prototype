@@ -4,6 +4,11 @@ import 'src/js/components/mosaic/mosaic.scss!';
 
 var Mosaic = React.createClass({
 
+    handleClick(event) {
+        event.preventDefault()
+        this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
+    },
+
     render() {
 
         let mosaicClass = classNames(
@@ -13,8 +18,10 @@ var Mosaic = React.createClass({
 
         let { logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
 
+
+
         return(
-            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle}>
+            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this.handleClick}>
                 <article className={mosaicClass}>
                     {mosaicImage ? <picture>
                         <img srcSet={mosaicImage} src={mosaicImage}
@@ -32,7 +39,7 @@ var Mosaic = React.createClass({
                         <h1 className="c-heading">{ mosaicTitle }</h1>
 
                         <div class="c-group">
-                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>Call to action</span></a>
+                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>Buy Now</span></a>
                         </div>
                     </div>) : null}
                     {mosaicHeading ? null : <div>
