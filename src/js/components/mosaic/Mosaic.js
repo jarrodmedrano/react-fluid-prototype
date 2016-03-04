@@ -39,7 +39,7 @@ var Mosaic = React.createClass({
                         <h1 className="c-heading">{ mosaicTitle }</h1>
 
                         <div class="c-group">
-                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>Buy Now</span></a>
+                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
                         </div>
                     </div>) : null}
                     {mosaicHeading ? null : <div>
