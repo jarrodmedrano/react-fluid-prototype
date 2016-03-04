@@ -17,7 +17,6 @@ import 'src/styles/main.scss!';
 import 'src/styles/mwf_en-us_default.min.css!';
 
 
-
 var App = React.createClass({
 
 

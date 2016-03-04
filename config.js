@@ -26,11 +26,7 @@ System.config({
     "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@0.14.7",
     "react-dom": "npm:react-dom@0.14.7",
-    "react-redux": "npm:react-redux@4.4.0",
-    "react-router": "npm:react-router@2.0.0",
-    "react-router-redux": "npm:react-router-redux@4.0.0",
-    "react-winjs": "npm:react-winjs@2.4.0",
-    "redux": "npm:redux@3.3.1",
+    "react-router": "npm:react-router@1.0.2",
     "scss": "github:theefer/plugin-sass@master",
     "github:floatdrop/plugin-jsx@1.2.1": {
       "react-tools": "npm:react-tools@0.13.3"
@@ -353,6 +349,15 @@ System.config({
     "npm:hash.js@1.0.3": {
       "inherits": "npm:inherits@2.0.1"
     },
+    "npm:history@1.13.1": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "deep-equal": "npm:deep-equal@1.0.1",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "invariant": "npm:invariant@2.2.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "qs": "npm:qs@4.0.0",
+      "warning": "npm:warning@2.1.0"
+    },
     "npm:history@1.17.0": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "deep-equal": "npm:deep-equal@1.0.1",
@@ -360,13 +365,6 @@ System.config({
       "invariant": "npm:invariant@2.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "query-string": "npm:query-string@3.0.0",
-      "warning": "npm:warning@2.1.0"
-    },
-    "npm:history@2.0.1": {
-      "deep-equal": "npm:deep-equal@1.0.1",
-      "invariant": "npm:invariant@2.2.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "query-string": "npm:query-string@3.0.1",
       "warning": "npm:warning@2.1.0"
     },
     "npm:https-browserify@0.0.0": {
@@ -400,10 +398,6 @@ System.config({
       "source-map": "npm:source-map@0.1.31"
     },
     "npm:lodash@3.10.1": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:lodash@4.6.1": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:loose-envify@1.1.0": {
@@ -480,9 +474,6 @@ System.config({
     "npm:query-string@3.0.0": {
       "strict-uri-encode": "npm:strict-uri-encode@1.1.0"
     },
-    "npm:query-string@3.0.1": {
-      "strict-uri-encode": "npm:strict-uri-encode@1.1.0"
-    },
     "npm:randombytes@2.0.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
@@ -491,19 +482,10 @@ System.config({
     "npm:react-dom@0.14.7": {
       "react": "npm:react@0.14.7"
     },
-    "npm:react-redux@4.4.0": {
-      "hoist-non-react-statics": "npm:hoist-non-react-statics@1.0.5",
-      "invariant": "npm:invariant@2.2.0",
-      "lodash": "npm:lodash@4.6.1",
-      "loose-envify": "npm:loose-envify@1.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "react": "npm:react@0.14.7",
-      "redux": "npm:redux@3.3.1"
-    },
-    "npm:react-router@2.0.0": {
+    "npm:react-router@1.0.2": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "history": "npm:history@2.0.1",
+      "history": "npm:history@1.13.1",
       "invariant": "npm:invariant@2.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "warning": "npm:warning@2.1.0"
@@ -536,12 +518,6 @@ System.config({
       "private": "npm:private@0.1.6",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "source-map": "npm:source-map@0.5.3"
-    },
-    "npm:redux@3.3.1": {
-      "lodash": "npm:lodash@4.6.1",
-      "lodash-es": "npm:lodash-es@4.6.1",
-      "loose-envify": "npm:loose-envify@1.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
