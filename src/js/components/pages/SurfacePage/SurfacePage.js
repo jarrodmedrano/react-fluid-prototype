@@ -7,27 +7,27 @@ var SurfacePage = React.createClass({
 
         let defaultMosaic = [
             {
-                mosaicTitle: "Forza Horizon 2",
+                mosaicTitle: "Surface Pens",
                 mosaicSize: "f-vp1-whole f-vp2-half f-height-small",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-forza.jpg"
+                mosaicImage: "img/surface-pen.jpg"
             },
             {
-                mosaicTitle: "Xbox One Elite bundle",
+                mosaicTitle: "The Surface Dock",
                 mosaicSize: "f-vp1-whole f-vp2-half f-height-small",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-xboxcontroller.jpg"
+                mosaicImage: "img/surface-dock.jpg"
             },
             {
-                mosaicTitle: "Halo 5",
+                mosaicTitle: "Type covers in your favorite colors to fit your style",
                 mosaicSize: "f-vp1-whole f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-halo.jpg"
+                mosaicImage: "img/surface-keyboard.jpg"
             }
         ];
 
         let largeMosaic = [
             {
-                mosaicTitle: "Rise of the Tomb Raider",
+                mosaicTitle: "Surface Pro 4",
                 mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-tombraider.jpg"
+                mosaicImage: "img/surfacepro.jpg"
             }
         ];
 
