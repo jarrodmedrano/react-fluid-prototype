@@ -474,21 +474,24 @@ $__System.register('4', ['5', '6', '7'], function (_export) {
                         context: 'context-app',
                         logo: 'img/word-logo.svg',
                         mosaicStyle: { 'background': '#2b5796' },
-                        mosaicHeading: true
+                        mosaicHeading: true,
+                        mosaicCta: 'Buy Now'
                     }, {
                         mosaicTitle: "PowerPoint",
                         mosaicSize: "f-vp1-whole f-vp2-half f-height-medium",
                         context: 'context-app',
                         logo: 'img/powerpoint-logo.svg',
                         mosaicStyle: { 'background': '#d04525' },
-                        mosaicHeading: true
+                        mosaicHeading: true,
+                        mosaicCta: 'Buy Now'
                     }, {
                         mosaicTitle: "Excel",
                         mosaicSize: "f-vp1-whole f-height-small",
                         context: 'context-app',
                         logo: 'img/excel-logo.svg',
                         mosaicStyle: { 'background': '#1d7044' },
-                        mosaicHeading: true
+                        mosaicHeading: true,
+                        mosaicCta: 'Buy Now'
                     }];
 
                     var largeMosaic = [{
@@ -497,7 +500,8 @@ $__System.register('4', ['5', '6', '7'], function (_export) {
                         mosaicStyle: { 'background': '#7e3878' },
                         context: 'context-app',
                         logo: 'img/onenote-logo.svg',
-                        mosaicHeading: true
+                        mosaicHeading: true,
+                        mosaicCta: 'Buy Now'
                     }];
 
                     return React.createElement(
@@ -1137,17 +1141,20 @@ $__System.register('15', ['5', '6', '7'], function (_export) {
                         mosaicStyle: { 'background': '#7DA4AE' },
                         mosaicHeading: true,
                         context: 'context-app',
-                        logo: 'img/windows-hello.svg'
+                        logo: 'img/windows-hello.svg',
+                        mosaicCta: 'Buy Now'
                     }, {
                         mosaicTitle: "Try Out Inking in Edge",
                         mosaicSize: "f-vp1-whole f-height-small",
-                        mosaicStyle: { 'background': '#0063AF' }
+                        mosaicStyle: { 'background': '#0063AF' },
+                        mosaicCta: 'Buy Now'
                     }];
 
                     var largeMosaic = [{
                         mosaicTitle: "The Pen is mightier in Windows",
                         mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                        mosaicImage: "img/windows-pen.jpg"
+                        mosaicImage: "img/windows-pen.jpg",
+                        mosaicCta: 'Buy Now'
                     }];
 
                     return React.createElement(
@@ -1182,21 +1189,25 @@ $__System.register('16', ['5', '7'], function (_export) {
                     var defaultMosaic = [{
                         mosaicTitle: "Surface Pens",
                         mosaicSize: "f-vp1-whole f-vp2-half f-height-small",
-                        mosaicImage: "img/surface-pen.jpg"
+                        mosaicImage: "img/surface-pen.jpg",
+                        mosaicCta: 'Buy Now'
                     }, {
                         mosaicTitle: "The Surface Dock",
                         mosaicSize: "f-vp1-whole f-vp2-half f-height-small",
-                        mosaicImage: "img/surface-dock.jpg"
+                        mosaicImage: "img/surface-dock.jpg",
+                        mosaicCta: 'Buy Now'
                     }, {
                         mosaicTitle: "Type covers in your favorite colors to fit your style",
                         mosaicSize: "f-vp1-whole f-height-medium",
-                        mosaicImage: "img/surface-keyboard.jpg"
+                        mosaicImage: "img/surface-keyboard.jpg",
+                        mosaicCta: 'Buy Now'
                     }];
 
                     var largeMosaic = [{
                         mosaicTitle: "Surface Pro 4",
                         mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                        mosaicImage: "img/surfacepro.jpg"
+                        mosaicImage: "img/surfacepro.jpg",
+                        mosaicCta: 'Show me more'
                     }];
 
                     return React.createElement(
@@ -1238,6 +1249,8 @@ $__System.register('18', ['5', '17', 'b'], function (_export) {
                     var mosaicClass = classNames(this.props.mosaic.context ? this.props.mosaic.context : 'context-music-album', 'c-placement f-width-small f-height-large');
 
                     var _props$mosaic = this.props.mosaic;
+                    var mosaicCta = _props$mosaic.mosaicCta;
+                    var ctaURL = _props$mosaic.ctaURL;
                     var logo = _props$mosaic.logo;
                     var mosaicTitle = _props$mosaic.mosaicTitle;
                     var mosaicSize = _props$mosaic.mosaicSize;
@@ -1305,19 +1318,19 @@ $__System.register('18', ['5', '17', 'b'], function (_export) {
                                             mosaicTitle
                                         )
                                     ),
-                                    React.createElement(
+                                    mosaicCta ? React.createElement(
                                         'div',
                                         { className: 'c-group' },
                                         React.createElement(
                                             'a',
-                                            { href: 'http://www.microsoftstore.com/', className: 'c-call-to-action c-glyph c-glyph-go' },
+                                            { href: ctaURL, className: 'c-call-to-action c-glyph c-glyph-go' },
                                             React.createElement(
                                                 'span',
                                                 null,
-                                                'Buy now'
+                                                mosaicCta
                                             )
                                         )
-                                    )
+                                    ) : null
                                 )
                             )
                         )

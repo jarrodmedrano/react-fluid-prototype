@@ -16,7 +16,7 @@ var Mosaic = React.createClass({
             'c-placement f-width-small f-height-large'
         );
 
-        let { logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
+        let { mosaicCta, ctaURL, logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
 
 
 
@@ -46,9 +46,10 @@ var Mosaic = React.createClass({
                             <dl>
                                 <dt className="x-screen-reader">Game Title</dt>
                                 <dd><cite>{mosaicTitle}</cite></dd>
+                                {mosaicCta ?
                                 <div className="c-group">
-                                    <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>Buy now</span></a>
-                                </div>
+                                    <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
+                                </div> : null }
                             </dl>
                     </div>}
                 </article>

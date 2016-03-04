@@ -13,12 +13,14 @@ var WindowsPage = React.createClass({
                 mosaicStyle: {'background': '#7DA4AE'},
                 mosaicHeading: true,
                 context: 'context-app',
-                logo: 'img/windows-hello.svg'
+                logo: 'img/windows-hello.svg',
+                mosaicCta: 'Buy Now'
             },
             {
                 mosaicTitle: "Try Out Inking in Edge",
                 mosaicSize: "f-vp1-whole f-height-small",
-                mosaicStyle: {'background': '#0063AF'}
+                mosaicStyle: {'background': '#0063AF'},
+                mosaicCta: 'Buy Now'
             }
         ];
 
@@ -26,7 +28,8 @@ var WindowsPage = React.createClass({
             {
                 mosaicTitle: "The Pen is mightier in Windows",
                 mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                mosaicImage: "img/windows-pen.jpg"
+                mosaicImage: "img/windows-pen.jpg",
+                mosaicCta: 'Buy Now'
             }
         ];
 

@@ -13,7 +13,8 @@ var OfficePage = React.createClass({
                 context: 'context-app',
                 logo: 'img/word-logo.svg',
                 mosaicStyle: {'background': '#2b5796'},
-                mosaicHeading: true
+                mosaicHeading: true,
+                mosaicCta: 'Buy Now'
             },
             {
                 mosaicTitle: "PowerPoint",
@@ -21,7 +22,8 @@ var OfficePage = React.createClass({
                 context: 'context-app',
                 logo: 'img/powerpoint-logo.svg',
                 mosaicStyle: {'background': '#d04525'},
-                mosaicHeading: true
+                mosaicHeading: true,
+                mosaicCta: 'Buy Now'
             },
             {
                 mosaicTitle: "Excel",
@@ -29,7 +31,8 @@ var OfficePage = React.createClass({
                 context: 'context-app',
                 logo: 'img/excel-logo.svg',
                 mosaicStyle: {'background': '#1d7044'},
-                mosaicHeading: true
+                mosaicHeading: true,
+                mosaicCta: 'Buy Now'
             }
         ];
 
@@ -40,7 +43,8 @@ var OfficePage = React.createClass({
                 mosaicStyle: {'background': '#7e3878'},
                 context: 'context-app',
                 logo: 'img/onenote-logo.svg',
-                mosaicHeading: true
+                mosaicHeading: true,
+                mosaicCta: 'Buy Now'
             }
         ];
 

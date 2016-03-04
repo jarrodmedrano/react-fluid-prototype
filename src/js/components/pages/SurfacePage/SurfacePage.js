@@ -9,17 +9,20 @@ var SurfacePage = React.createClass({
             {
                 mosaicTitle: "Surface Pens",
                 mosaicSize: "f-vp1-whole f-vp2-half f-height-small",
-                mosaicImage: "img/surface-pen.jpg"
+                mosaicImage: "img/surface-pen.jpg",
+                mosaicCta: 'Buy Now'
             },
             {
                 mosaicTitle: "The Surface Dock",
                 mosaicSize: "f-vp1-whole f-vp2-half f-height-small",
-                mosaicImage: "img/surface-dock.jpg"
+                mosaicImage: "img/surface-dock.jpg",
+                mosaicCta: 'Buy Now'
             },
             {
                 mosaicTitle: "Type covers in your favorite colors to fit your style",
                 mosaicSize: "f-vp1-whole f-height-medium",
-                mosaicImage: "img/surface-keyboard.jpg"
+                mosaicImage: "img/surface-keyboard.jpg",
+                mosaicCta: 'Buy Now'
             }
         ];
 
@@ -27,7 +30,8 @@ var SurfacePage = React.createClass({
             {
                 mosaicTitle: "Surface Pro 4",
                 mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                mosaicImage: "img/surfacepro.jpg"
+                mosaicImage: "img/surfacepro.jpg",
+                mosaicCta: 'Show me more'
             }
         ];
 
