@@ -11,7 +11,7 @@ var Mosaic = React.createClass({
             'c-placement f-width-small f-height-large'
         );
 
-        let { mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
+        let { logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
 
         return(
             <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle}>
@@ -24,12 +24,15 @@ var Mosaic = React.createClass({
 
                     <div className="c-image-overlay" aria-hidden="true"></div>
 
-                    {mosaicHeading ? (<div><h1 className="c-heading">{ mosaicTitle }</h1>
+                    {mosaicHeading ? (<div>
                         <div className="c-image-container">
-
+                            {logo ? <img src={logo} className="c-image" /> : null }
                         </div>
+
+                        <h1 className="c-heading">{ mosaicTitle }</h1>
+
                         <div class="c-group">
-                            <a href="http://www.microsoftstore.com/" class="c-call-to-action c-glyph"><span>Call to action</span></a>
+                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>Call to action</span></a>
                         </div>
                     </div>) : null}
                     {mosaicHeading ? null : <div>
@@ -37,7 +40,7 @@ var Mosaic = React.createClass({
                                 <dt className="x-screen-reader">Game Title</dt>
                                 <dd><cite>{mosaicTitle}</cite></dd>
                                 <div className="c-group">
-                                    <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph"><span>Buy now</span></a>
+                                    <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>Buy now</span></a>
                                 </div>
                             </dl>
                     </div>}

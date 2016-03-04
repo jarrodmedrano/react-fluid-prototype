@@ -8,22 +8,39 @@ var OfficePage = React.createClass({
 
         let defaultMosaic = [
             {
-                mosaicTitle: "A more personal, more secure way to unlock your Windows device",
-                mosaicSize: "f-vp1-whole f-height-medium",
-                mosaicStyle: {'background': '#7DA4AE'}
+                mosaicTitle: "Microsoft Word",
+                mosaicSize: "f-vp1-whole f-vp2-half f-height-medium",
+                context: 'context-app',
+                logo: 'img/word-logo.png',
+                mosaicStyle: {'background': '#2b5796'},
+                mosaicHeading: true
             },
             {
-                mosaicTitle: "Try Out Inking in Edge",
+                mosaicTitle: "PowerPoint",
+                mosaicSize: "f-vp1-whole f-vp2-half f-height-medium",
+                context: 'context-app',
+                logo: 'img/powerpoint-logo.png',
+                mosaicStyle: {'background': '#d04525'},
+                mosaicHeading: true
+            },
+            {
+                mosaicTitle: "Excel",
                 mosaicSize: "f-vp1-whole f-height-small",
-                mosaicStyle: {'background': '#0063AF'}
+                context: 'context-app',
+                logo: 'img/excel-logo.png',
+                mosaicStyle: {'background': '#1d7044'},
+                mosaicHeading: true
             }
         ];
 
         let largeMosaic = [
             {
-                mosaicTitle: "The Pen is mightier in Windows",
+                mosaicTitle: "Microsoft OneNote",
                 mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                mosaicImage: "img/windows-pen.jpg"
+                mosaicStyle: {'background': '#7e3878'},
+                context: 'context-app',
+                logo: 'img/onenote-logo.png',
+                mosaicHeading: true
             }
         ];
 

@@ -33,9 +33,17 @@ body {
   height: calc(100vh - 64px);
   //align-items: stretch;
 
+  &.surface-mosaic {
+    .context-app .c-image-overlay {
+      opacity: 0;
+    }
+  }
+
   @media only screen and (min-width: 1084px) {
     &.surface-mosaic {
       flex-direction: row;
+
+
 
       [data-f-mosaic~='f-height-large'] {
         height: 100%;
@@ -58,6 +66,10 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
+  }
+
+  .c-call-to-action.c-glyph-go:after {
+    content: '\E8AD';
   }
 
   //.c-hero.f-y-center.f-x-center > picture img {
