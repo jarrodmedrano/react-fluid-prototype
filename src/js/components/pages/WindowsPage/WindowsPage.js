@@ -12,7 +12,8 @@ var WindowsPage = React.createClass({
                 mosaicSize: "f-vp1-whole f-height-medium",
                 mosaicStyle: {'background': '#7DA4AE'},
                 mosaicHeading: true,
-                context: 'context-app'
+                context: 'context-app',
+                logo: 'img/windows-hello.svg'
             },
             {
                 mosaicTitle: "Try Out Inking in Edge",
