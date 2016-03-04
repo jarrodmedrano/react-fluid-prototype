@@ -10,7 +10,9 @@ var WindowsPage = React.createClass({
             {
                 mosaicTitle: "A more personal, more secure way to unlock your Windows device",
                 mosaicSize: "f-vp1-whole f-height-medium",
-                mosaicStyle: {'background': '#7DA4AE'}
+                mosaicStyle: {'background': '#7DA4AE'},
+                mosaicHeading: true,
+                context: 'context-app'
             },
             {
                 mosaicTitle: "Try Out Inking in Edge",

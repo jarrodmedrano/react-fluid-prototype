@@ -6,9 +6,6 @@ import 'src/js/components/hero/Hero.scss!';
 
 var Hero = React.createClass({
 
-    isFullScreen() {
-        return this.props.fullscreen === 'true' ? 'f-fullscreen': ''
-    },
 
 
     render() {
@@ -23,7 +20,7 @@ var Hero = React.createClass({
         };
 
         let heroClass = classNames(
-            this.isFullScreen(),
+            this.props.fullscreen === 'true' ? 'f-fullscreen': '',
             'c-hero theme-dark',
             this.props.fY ? this.props.fY : 'f-y-center',
             this.props.fX ? this.props.fX : 'f-x-center',
