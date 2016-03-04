@@ -6,11 +6,13 @@ var Mosaic = React.createClass({
     render() {
 
         return(
-            <div className="theme-dark" data-f-mosaic={this.props.mosaic.mosaicSize}>
+            <div className="theme-dark" data-f-mosaic={this.props.mosaic.mosaicSize} style={this.props.mosaic.mosaicStyle}>
                 <article className="c-placement context-music-album f-width-small f-height-large">
-                    <picture>
-                        <img srcSet={this.props.mosaic.mosaicImage} src={this.props.mosaic.mosaicImage} alt={this.props.mosaic.mosaicTitle} />
-                    </picture>
+                    {this.props.mosaic.mosaicImage ? <picture>
+                        <img srcSet={this.props.mosaic.mosaicImage} src={this.props.mosaic.mosaicImage}
+                             alt={this.props.mosaic.mosaicTitle}/>
+                    </picture> : null
+                    }
 
                     <div className="c-image-overlay" aria-hidden="true"></div>
                     <div>

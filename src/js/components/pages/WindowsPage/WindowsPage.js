@@ -8,33 +8,29 @@ var WindowsPage = React.createClass({
 
         let defaultMosaic = [
             {
-                mosaicTitle: "Rise of the Tomb Raider",
-                mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-tombraider.jpg"
+                mosaicTitle: "A more personal, more secure way to unlock your Windows device",
+                mosaicSize: "f-vp1-whole f-height-medium",
+                mosaicStyle: {'background': '#7DA4AE'}
             },
             {
-                mosaicTitle: "Forza Horizon 2",
-                mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-forza.jpg"
-            },
+                mosaicTitle: "Try Out Inking in Edge",
+                mosaicSize: "f-vp1-whole f-height-small",
+                mosaicStyle: {'background': '#0063AF'}
+            }
+        ];
+
+        let largeMosaic = [
             {
-                mosaicTitle: "Xbox One Elite bundle",
-                mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-xboxcontroller.jpg"
-            },
-            {
-                mosaicTitle: "Halo 5",
-                mosaicSize: "f-vp1-whole f-vp2-half f-vp3-quarter f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-halo.jpg"
+                mosaicTitle: "The Pen is mightier in Windows",
+                mosaicSize: "c-placement context-accessory f-width-large f-height-large",
+                mosaicImage: "img/windows-pen.jpg"
             }
         ];
 
         return (
-            <div>
-                <Hero heroSrc="http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background" />
-                <div className="c-mosaic">
-                    <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-whole" />
-                </div>
+            <div className="c-mosaic surface-mosaic">
+                <MosaicContainer mosaic={largeMosaic} containerSize="f-vp1-whole f-vp4-half f-height-large" />
+                <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-half" />
             </div>
         );
     }

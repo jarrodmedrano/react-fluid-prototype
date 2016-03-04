@@ -17,7 +17,7 @@ var CarouselSlide = React.createClass({
 
       return(
         <li id="hero-slide-one" data-f-theme="dark" className={slideClass}>
-          <article className="c-hero f-medium f-x-left f-y-center theme-dark">
+          <article className="c-hero f-x-left f-y-center theme-dark">
             <div>
               <div className="context-accessory">
                 <span className="c-heading"><cite>{this.props.slideTitle}</cite></span>

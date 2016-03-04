@@ -6,6 +6,7 @@
 body {
   padding: 0;
   background: #000;
+  overflow-x: hidden;
 }
 
 .grid {
@@ -32,22 +33,24 @@ body {
   height: calc(100vh - 64px);
   //align-items: stretch;
 
-  &.surface-mosaic {
-    flex-direction: row;
+  @media only screen and (min-width: 1084px) {
+    &.surface-mosaic {
+      flex-direction: row;
 
-    [data-f-mosaic~='f-height-large'] {
-      height: 100%;
-      img {
+      [data-f-mosaic~='f-height-large'] {
         height: 100%;
+        img {
+          height: 100%;
+        }
       }
-    }
 
-    [data-f-mosaic~='f-height-small'] {
-      height: 40%;
-    }
+      [data-f-mosaic~='f-height-small'] {
+        height: 40%;
+      }
 
-    [data-f-mosaic~='f-height-medium'] {
-      height: 60%;
+      [data-f-mosaic~='f-height-medium'] {
+        height: 60%;
+      }
     }
   }
 
@@ -62,7 +65,14 @@ body {
   //  max-height: 100%;
   //}
 
+
   @media only screen and (min-width: 1084px) {
+
+    .c-hero {
+        height: calc(100vh - 64px);
+    }
+
+
     .c-hero.f-medium {
       height: 380px;
     }

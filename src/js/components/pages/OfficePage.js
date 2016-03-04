@@ -8,32 +8,27 @@ var OfficePage = React.createClass({
 
         let defaultMosaic = [
             {
-                mosaicTitle: "Forza Horizon 2",
-                mosaicSize: "f-vp1-whole f-vp2-half f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-forza.jpg"
-            },
-            {
-                mosaicTitle: "Xbox One Elite bundle",
-                mosaicSize: "f-vp1-whole f-vp2-half f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-xboxcontroller.jpg"
-            },
-            {
-                mosaicTitle: "Halo 5",
+                mosaicTitle: "A more personal, more secure way to unlock your Windows device",
                 mosaicSize: "f-vp1-whole f-height-medium",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-halo.jpg"
+                mosaicStyle: {'background': '#7DA4AE'}
+            },
+            {
+                mosaicTitle: "Try Out Inking in Edge",
+                mosaicSize: "f-vp1-whole f-height-small",
+                mosaicStyle: {'background': '#0063AF'}
             }
         ];
 
         let largeMosaic = [
             {
-                mosaicTitle: "Rise of the Tomb Raider",
+                mosaicTitle: "The Pen is mightier in Windows",
                 mosaicSize: "c-placement context-accessory f-width-large f-height-large",
-                mosaicImage: "http://www.getmwf.com/images/components/placement-background-tombraider.jpg"
+                mosaicImage: "img/windows-pen.jpg"
             }
         ];
 
         return (
-            <div className="c-mosaic">
+            <div className="c-mosaic surface-mosaic">
                 <MosaicContainer mosaic={largeMosaic} containerSize="f-vp1-whole f-vp4-half f-height-large" />
                 <MosaicContainer mosaic={defaultMosaic} containerSize="f-vp1-whole f-vp4-half" />
             </div>

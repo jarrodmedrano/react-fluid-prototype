@@ -27,7 +27,7 @@ var Hero = React.createClass({
             'c-hero theme-dark',
             this.props.fY ? this.props.fY : 'f-y-center',
             this.props.fX ? this.props.fX : 'f-x-center',
-            this.props.heroSize ? this.props.heroSize : 'f-medium'
+            this.props.heroSize ? this.props.heroSize : null
         );
 
         return (
