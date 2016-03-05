@@ -1266,7 +1266,7 @@ $__System.register('18', ['5', '17', 'b'], function (_export) {
 
                     return React.createElement(
                         'div',
-                        { className: 'theme-dark', 'data-f-mosaic': mosaicSize, style: mosaicStyle, onClick: this.handleClick },
+                        { className: 'theme-dark', 'data-f-mosaic': mosaicSize, style: mosaicStyle, onClick: this.handleClick, onTouchEnd: this.handleClick },
                         React.createElement(
                             'article',
                             { className: mosaicClass },
@@ -1295,7 +1295,7 @@ $__System.register('18', ['5', '17', 'b'], function (_export) {
                                     { 'class': 'c-group' },
                                     React.createElement(
                                         'a',
-                                        { href: 'http://www.microsoftstore.com/', className: 'c-call-to-action c-glyph c-glyph-go' },
+                                        { href: ctaURL, className: 'c-call-to-action c-glyph c-glyph-go' },
                                         React.createElement(
                                             'span',
                                             null,
