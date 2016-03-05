@@ -536,6 +536,8 @@ $__System.register('9', ['5'], function (_export) {
 
                     return React.createElement('button', { role: 'radio', 'aria-checked': this.props.myKey === this.props.activeSlide ? 'true' : 'false', 'aria-label': this.props.slideTitle, 'aria-controls': 'hero-slide-one', title: this.props.slideTitle, onClick: function () {
                             return _this.props.updateSlide(_this.props.myKey);
+                        }, onTouchEnd: function () {
+                            return _this.props.updateSlide(_this.props.myKey);
                         } });
                 }
             });
@@ -741,8 +743,12 @@ $__System.register('c', ['5', '8', '9', 'a', 'b'], function (_export) {
               style: carousel_style },
             React.createElement('button', { onClick: function () {
                 return _this.nextSlide(_this.state.activeSlide, 'previous');
+              }, onTouchEnd: function () {
+                return _this.nextSlide(_this.state.activeSlide, 'previous');
               }, className: 'c-flipper f-left', 'aria-label': 'View previous', title: 'View previous' }),
             React.createElement('button', { onClick: function () {
+                return _this.nextSlide(_this.state.activeSlide, 'next');
+              }, onTouchEnd: function () {
                 return _this.nextSlide(_this.state.activeSlide, 'next');
               }, className: 'c-flipper f-right', 'aria-label': 'View next', title: 'View next' }),
             React.createElement(

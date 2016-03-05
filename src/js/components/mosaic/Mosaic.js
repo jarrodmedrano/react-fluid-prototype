@@ -21,7 +21,7 @@ var Mosaic = React.createClass({
 
 
         return(
-            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this.handleClick}>
+            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this.handleClick} onTouchEnd={this.handleClick}>
                 <article className={mosaicClass}>
                     {mosaicImage ? <picture>
                         <img srcSet={mosaicImage} src={mosaicImage}
@@ -39,7 +39,7 @@ var Mosaic = React.createClass({
                         <h1 className="c-heading">{ mosaicTitle }</h1>
 
                         <div class="c-group">
-                            <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
+                            <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
                         </div>
                     </div>) : null}
                     {mosaicHeading ? null : <div>
@@ -48,7 +48,7 @@ var Mosaic = React.createClass({
                                 <dd><cite>{mosaicTitle}</cite></dd>
                                 {mosaicCta ?
                                 <div className="c-group">
-                                    <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
+                                    <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
                                 </div> : null }
                             </dl>
                     </div>}
