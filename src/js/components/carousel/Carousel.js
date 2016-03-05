@@ -95,8 +95,8 @@ var Carousel = React.createClass({
           <div className={carouselClass} role="region"
              aria-label="New Products"
              style={carousel_style}>
-          <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
-          <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
+          <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
+          <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
               {this.state.slides.map(function(result, id) {
