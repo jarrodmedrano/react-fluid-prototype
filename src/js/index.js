@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, DefaultRoute, Route, Link, IndexRoute, browserHistory } from 'react-router'
+import { Router, DefaultRoute, Route, Link, IndexRoute, browserHistory, IndexLink } from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+import createBrowserHistory from 'history/lib/createBrowserHistory'
 
 
 //Components
@@ -15,6 +16,7 @@ import OfficePage from 'src/js/components/pages/OfficePage';
 //Styles
 import 'src/styles/main.scss!';
 import 'src/styles/mwf_en-us_default.min.css!';
+
 
 
 var App = React.createClass({
@@ -36,7 +38,7 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-        <Router history={browserHistory}>
+        <Router history={createBrowserHistory()}>
             <Route path="/" component={App}>
                 <IndexRoute component={HomePage} title="Welcome"/>
                 <Route path="surface" component={SurfacePage} title="Surface" />
