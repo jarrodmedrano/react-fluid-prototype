@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, DefaultRoute, Route, Link, IndexRoute, hashHistory} from 'react-router'
+import { Router, DefaultRoute, Route, Link, IndexRoute, hashHistory, useRouterHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
-
-
+import { createHashHistory } from 'history';
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
@@ -23,6 +23,8 @@ var App = React.createClass({
 
 
     render() {
+
+
         return (
             <div className="grid">
                 <Linkband routes={this.props.routes} params={this.props.params}/>
@@ -37,8 +39,10 @@ var App = React.createClass({
     }
 });
 
+
 ReactDOM.render(
-        <Router history={hashHistory}>
+
+        <Router history={appHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={HomePage} title="Welcome"/>
                 <Route path="surface" component={SurfacePage} title="Surface" />
