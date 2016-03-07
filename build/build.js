@@ -6102,794 +6102,13 @@ $__System.register('23', ['5', '10', '21', '22', '1f'], function (_export) {
         }
     };
 });
-$__System.registerDynamic("24", [], true, function($__require, exports, module) {
+$__System.registerDynamic("24", ["25"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  exports.__esModule = true;
-  function deprecate(fn) {
-    return fn;
-  }
-  exports["default"] = deprecate;
-  module.exports = exports["default"];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("25", ["26", "1e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    exports.__esModule = true;
-    function _interopRequireDefault(obj) {
-      return obj && obj.__esModule ? obj : {'default': obj};
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    function runTransitionHook(hook, location, callback) {
-      var result = hook(location, callback);
-      if (hook.length < 2) {
-        callback(result);
-      } else {
-        process.env.NODE_ENV !== 'production' ? _warning2['default'](result === undefined, 'You should not "return" in a transition hook with a callback argument; call the callback instead') : undefined;
-      }
-    }
-    exports['default'] = runTransitionHook;
-    module.exports = exports['default'];
-  })($__require('1e'));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("27", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  function extractPath(string) {
-    var match = string.match(/^https?:\/\/[^\/]*/);
-    if (match == null)
-      return string;
-    return string.substring(match[0].length);
-  }
-  exports["default"] = extractPath;
-  module.exports = exports["default"];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("28", ["26", "27", "1e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    exports.__esModule = true;
-    function _interopRequireDefault(obj) {
-      return obj && obj.__esModule ? obj : {'default': obj};
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    var _extractPath = $__require('27');
-    var _extractPath2 = _interopRequireDefault(_extractPath);
-    function parsePath(path) {
-      var pathname = _extractPath2['default'](path);
-      var search = '';
-      var hash = '';
-      process.env.NODE_ENV !== 'production' ? _warning2['default'](path === pathname, 'A path must be pathname + search + hash only, not a fully qualified URL like "%s"', path) : undefined;
-      var hashIndex = pathname.indexOf('#');
-      if (hashIndex !== -1) {
-        hash = pathname.substring(hashIndex);
-        pathname = pathname.substring(0, hashIndex);
-      }
-      var searchIndex = pathname.indexOf('?');
-      if (searchIndex !== -1) {
-        search = pathname.substring(searchIndex);
-        pathname = pathname.substring(0, searchIndex);
-      }
-      if (pathname === '')
-        pathname = '/';
-      return {
-        pathname: pathname,
-        search: search,
-        hash: hash
-      };
-    }
-    exports['default'] = parsePath;
-    module.exports = exports['default'];
-  })($__require('1e'));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("29", ["2a", "28"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var _extends = Object.assign || function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
-  }
-  var _Actions = $__require('2a');
-  var _parsePath = $__require('28');
-  var _parsePath2 = _interopRequireDefault(_parsePath);
-  function createLocation() {
-    var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
-    var action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
-    var key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
-    var _fourthArg = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
-    if (typeof location === 'string')
-      location = _parsePath2['default'](location);
-    if (typeof action === 'object') {
-      location = _extends({}, location, {state: action});
-      action = key || _Actions.POP;
-      key = _fourthArg;
-    }
-    var pathname = location.pathname || '/';
-    var search = location.search || '';
-    var hash = location.hash || '';
-    var state = location.state || null;
-    return {
-      pathname: pathname,
-      search: search,
-      hash: hash,
-      state: state,
-      action: action,
-      key: key
-    };
-  }
-  exports['default'] = createLocation;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2b", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  exports.loopAsync = loopAsync;
-  function loopAsync(turns, work, callback) {
-    var currentTurn = 0;
-    var isDone = false;
-    function done() {
-      isDone = true;
-      callback.apply(this, arguments);
-    }
-    function next() {
-      if (isDone)
-        return;
-      if (currentTurn < turns) {
-        work.call(this, currentTurn++, next, done);
-      } else {
-        done.apply(this, arguments);
-      }
-    }
-    next();
-  }
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2c", ["2d", "2b", "2a", "29", "25", "28", "24"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var _extends = Object.assign || function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
-  }
-  var _deepEqual = $__require('2d');
-  var _deepEqual2 = _interopRequireDefault(_deepEqual);
-  var _AsyncUtils = $__require('2b');
-  var _Actions = $__require('2a');
-  var _createLocation2 = $__require('29');
-  var _createLocation3 = _interopRequireDefault(_createLocation2);
-  var _runTransitionHook = $__require('25');
-  var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-  var _parsePath = $__require('28');
-  var _parsePath2 = _interopRequireDefault(_parsePath);
-  var _deprecate = $__require('24');
-  var _deprecate2 = _interopRequireDefault(_deprecate);
-  function createRandomKey(length) {
-    return Math.random().toString(36).substr(2, length);
-  }
-  function locationsAreEqual(a, b) {
-    return a.pathname === b.pathname && a.search === b.search && a.key === b.key && _deepEqual2['default'](a.state, b.state);
-  }
-  var DefaultKeyLength = 6;
-  function createHistory() {
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-    var getCurrentLocation = options.getCurrentLocation;
-    var finishTransition = options.finishTransition;
-    var saveState = options.saveState;
-    var go = options.go;
-    var keyLength = options.keyLength;
-    var getUserConfirmation = options.getUserConfirmation;
-    if (typeof keyLength !== 'number')
-      keyLength = DefaultKeyLength;
-    var transitionHooks = [];
-    function listenBefore(hook) {
-      transitionHooks.push(hook);
-      return function() {
-        transitionHooks = transitionHooks.filter(function(item) {
-          return item !== hook;
-        });
-      };
-    }
-    var allKeys = [];
-    var changeListeners = [];
-    var location = undefined;
-    function getCurrent() {
-      if (pendingLocation && pendingLocation.action === _Actions.POP) {
-        return allKeys.indexOf(pendingLocation.key);
-      } else if (location) {
-        return allKeys.indexOf(location.key);
-      } else {
-        return -1;
-      }
-    }
-    function updateLocation(newLocation) {
-      var current = getCurrent();
-      location = newLocation;
-      if (location.action === _Actions.PUSH) {
-        allKeys = [].concat(allKeys.slice(0, current + 1), [location.key]);
-      } else if (location.action === _Actions.REPLACE) {
-        allKeys[current] = location.key;
-      }
-      changeListeners.forEach(function(listener) {
-        listener(location);
-      });
-    }
-    function listen(listener) {
-      changeListeners.push(listener);
-      if (location) {
-        listener(location);
-      } else {
-        var _location = getCurrentLocation();
-        allKeys = [_location.key];
-        updateLocation(_location);
-      }
-      return function() {
-        changeListeners = changeListeners.filter(function(item) {
-          return item !== listener;
-        });
-      };
-    }
-    function confirmTransitionTo(location, callback) {
-      _AsyncUtils.loopAsync(transitionHooks.length, function(index, next, done) {
-        _runTransitionHook2['default'](transitionHooks[index], location, function(result) {
-          if (result != null) {
-            done(result);
-          } else {
-            next();
-          }
-        });
-      }, function(message) {
-        if (getUserConfirmation && typeof message === 'string') {
-          getUserConfirmation(message, function(ok) {
-            callback(ok !== false);
-          });
-        } else {
-          callback(message !== false);
-        }
-      });
-    }
-    var pendingLocation = undefined;
-    function transitionTo(nextLocation) {
-      if (location && locationsAreEqual(location, nextLocation))
-        return;
-      pendingLocation = nextLocation;
-      confirmTransitionTo(nextLocation, function(ok) {
-        if (pendingLocation !== nextLocation)
-          return;
-        if (ok) {
-          if (nextLocation.action === _Actions.PUSH) {
-            var prevPath = createPath(location);
-            var nextPath = createPath(nextLocation);
-            if (nextPath === prevPath)
-              nextLocation.action = _Actions.REPLACE;
-          }
-          if (finishTransition(nextLocation) !== false)
-            updateLocation(nextLocation);
-        } else if (location && nextLocation.action === _Actions.POP) {
-          var prevIndex = allKeys.indexOf(location.key);
-          var nextIndex = allKeys.indexOf(nextLocation.key);
-          if (prevIndex !== -1 && nextIndex !== -1)
-            go(prevIndex - nextIndex);
-        }
-      });
-    }
-    function push(location) {
-      transitionTo(createLocation(location, _Actions.PUSH, createKey()));
-    }
-    function replace(location) {
-      transitionTo(createLocation(location, _Actions.REPLACE, createKey()));
-    }
-    function goBack() {
-      go(-1);
-    }
-    function goForward() {
-      go(1);
-    }
-    function createKey() {
-      return createRandomKey(keyLength);
-    }
-    function createPath(location) {
-      if (location == null || typeof location === 'string')
-        return location;
-      var pathname = location.pathname;
-      var search = location.search;
-      var hash = location.hash;
-      var result = pathname;
-      if (search)
-        result += search;
-      if (hash)
-        result += hash;
-      return result;
-    }
-    function createHref(location) {
-      return createPath(location);
-    }
-    function createLocation(location, action) {
-      var key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
-      if (typeof action === 'object') {
-        if (typeof location === 'string')
-          location = _parsePath2['default'](location);
-        location = _extends({}, location, {state: action});
-        action = key;
-        key = arguments[3] || createKey();
-      }
-      return _createLocation3['default'](location, action, key);
-    }
-    function setState(state) {
-      if (location) {
-        updateLocationState(location, state);
-        updateLocation(location);
-      } else {
-        updateLocationState(getCurrentLocation(), state);
-      }
-    }
-    function updateLocationState(location, state) {
-      location.state = _extends({}, location.state, state);
-      saveState(location.key, location.state);
-    }
-    function registerTransitionHook(hook) {
-      if (transitionHooks.indexOf(hook) === -1)
-        transitionHooks.push(hook);
-    }
-    function unregisterTransitionHook(hook) {
-      transitionHooks = transitionHooks.filter(function(item) {
-        return item !== hook;
-      });
-    }
-    function pushState(state, path) {
-      if (typeof path === 'string')
-        path = _parsePath2['default'](path);
-      push(_extends({state: state}, path));
-    }
-    function replaceState(state, path) {
-      if (typeof path === 'string')
-        path = _parsePath2['default'](path);
-      replace(_extends({state: state}, path));
-    }
-    return {
-      listenBefore: listenBefore,
-      listen: listen,
-      transitionTo: transitionTo,
-      push: push,
-      replace: replace,
-      go: go,
-      goBack: goBack,
-      goForward: goForward,
-      createKey: createKey,
-      createPath: createPath,
-      createHref: createHref,
-      createLocation: createLocation,
-      setState: _deprecate2['default'](setState, 'setState is deprecated; use location.key to save state instead'),
-      registerTransitionHook: _deprecate2['default'](registerTransitionHook, 'registerTransitionHook is deprecated; use listenBefore instead'),
-      unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead'),
-      pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
-      replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
-    };
-  }
-  exports['default'] = createHistory;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2e", ["2f", "30", "31", "2c", "1e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    exports.__esModule = true;
-    var _extends = Object.assign || function(target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-      return target;
-    };
-    function _interopRequireDefault(obj) {
-      return obj && obj.__esModule ? obj : {'default': obj};
-    }
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
-    var _ExecutionEnvironment = $__require('30');
-    var _DOMUtils = $__require('31');
-    var _createHistory = $__require('2c');
-    var _createHistory2 = _interopRequireDefault(_createHistory);
-    function createDOMHistory(options) {
-      var history = _createHistory2['default'](_extends({getUserConfirmation: _DOMUtils.getUserConfirmation}, options, {go: _DOMUtils.go}));
-      function listen(listener) {
-        !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'DOM history needs a DOM') : _invariant2['default'](false) : undefined;
-        return history.listen(listener);
-      }
-      return _extends({}, history, {listen: listen});
-    }
-    exports['default'] = createDOMHistory;
-    module.exports = exports['default'];
-  })($__require('1e'));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("32", ["26", "1e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    exports.__esModule = true;
-    exports.saveState = saveState;
-    exports.readState = readState;
-    function _interopRequireDefault(obj) {
-      return obj && obj.__esModule ? obj : {'default': obj};
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    var KeyPrefix = '@@History/';
-    var QuotaExceededError = 'QuotaExceededError';
-    var SecurityError = 'SecurityError';
-    function createKey(key) {
-      return KeyPrefix + key;
-    }
-    function saveState(key, state) {
-      try {
-        window.sessionStorage.setItem(createKey(key), JSON.stringify(state));
-      } catch (error) {
-        if (error.name === SecurityError) {
-          process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available due to security settings') : undefined;
-          return;
-        }
-        if (error.name === QuotaExceededError && window.sessionStorage.length === 0) {
-          process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : undefined;
-          return;
-        }
-        throw error;
-      }
-    }
-    function readState(key) {
-      var json = undefined;
-      try {
-        json = window.sessionStorage.getItem(createKey(key));
-      } catch (error) {
-        if (error.name === SecurityError) {
-          process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to read state; sessionStorage is not available due to security settings') : undefined;
-          return null;
-        }
-      }
-      if (json) {
-        try {
-          return JSON.parse(json);
-        } catch (error) {}
-      }
-      return null;
-    }
-  })($__require('1e'));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("31", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  exports.addEventListener = addEventListener;
-  exports.removeEventListener = removeEventListener;
-  exports.getHashPath = getHashPath;
-  exports.replaceHashPath = replaceHashPath;
-  exports.getWindowPath = getWindowPath;
-  exports.go = go;
-  exports.getUserConfirmation = getUserConfirmation;
-  exports.supportsHistory = supportsHistory;
-  exports.supportsGoWithoutReloadUsingHash = supportsGoWithoutReloadUsingHash;
-  function addEventListener(node, event, listener) {
-    if (node.addEventListener) {
-      node.addEventListener(event, listener, false);
-    } else {
-      node.attachEvent('on' + event, listener);
-    }
-  }
-  function removeEventListener(node, event, listener) {
-    if (node.removeEventListener) {
-      node.removeEventListener(event, listener, false);
-    } else {
-      node.detachEvent('on' + event, listener);
-    }
-  }
-  function getHashPath() {
-    return window.location.href.split('#')[1] || '';
-  }
-  function replaceHashPath(path) {
-    window.location.replace(window.location.pathname + window.location.search + '#' + path);
-  }
-  function getWindowPath() {
-    return window.location.pathname + window.location.search + window.location.hash;
-  }
-  function go(n) {
-    if (n)
-      window.history.go(n);
-  }
-  function getUserConfirmation(message, callback) {
-    callback(window.confirm(message));
-  }
-  function supportsHistory() {
-    var ua = navigator.userAgent;
-    if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) {
-      return false;
-    }
-    if (ua.indexOf('CriOS') !== -1) {
-      return false;
-    }
-    return window.history && 'pushState' in window.history;
-  }
-  function supportsGoWithoutReloadUsingHash() {
-    var ua = navigator.userAgent;
-    return ua.indexOf('Firefox') === -1;
-  }
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("30", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-  exports.canUseDOM = canUseDOM;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2a", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var PUSH = 'PUSH';
-  exports.PUSH = PUSH;
-  var REPLACE = 'REPLACE';
-  exports.REPLACE = REPLACE;
-  var POP = 'POP';
-  exports.POP = POP;
-  exports['default'] = {
-    PUSH: PUSH,
-    REPLACE: REPLACE,
-    POP: POP
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("33", ["2f", "2a", "30", "31", "32", "2e", "28", "1e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    exports.__esModule = true;
-    var _extends = Object.assign || function(target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-      return target;
-    };
-    function _interopRequireDefault(obj) {
-      return obj && obj.__esModule ? obj : {'default': obj};
-    }
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
-    var _Actions = $__require('2a');
-    var _ExecutionEnvironment = $__require('30');
-    var _DOMUtils = $__require('31');
-    var _DOMStateStorage = $__require('32');
-    var _createDOMHistory = $__require('2e');
-    var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
-    var _parsePath = $__require('28');
-    var _parsePath2 = _interopRequireDefault(_parsePath);
-    function createBrowserHistory() {
-      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-      !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'Browser history needs a DOM') : _invariant2['default'](false) : undefined;
-      var forceRefresh = options.forceRefresh;
-      var isSupported = _DOMUtils.supportsHistory();
-      var useRefresh = !isSupported || forceRefresh;
-      function getCurrentLocation(historyState) {
-        historyState = historyState || window.history.state || {};
-        var path = _DOMUtils.getWindowPath();
-        var _historyState = historyState;
-        var key = _historyState.key;
-        var state = undefined;
-        if (key) {
-          state = _DOMStateStorage.readState(key);
-        } else {
-          state = null;
-          key = history.createKey();
-          if (isSupported)
-            window.history.replaceState(_extends({}, historyState, {key: key}), null, path);
-        }
-        var location = _parsePath2['default'](path);
-        return history.createLocation(_extends({}, location, {state: state}), undefined, key);
-      }
-      function startPopStateListener(_ref) {
-        var transitionTo = _ref.transitionTo;
-        function popStateListener(event) {
-          if (event.state === undefined)
-            return;
-          transitionTo(getCurrentLocation(event.state));
-        }
-        _DOMUtils.addEventListener(window, 'popstate', popStateListener);
-        return function() {
-          _DOMUtils.removeEventListener(window, 'popstate', popStateListener);
-        };
-      }
-      function finishTransition(location) {
-        var basename = location.basename;
-        var pathname = location.pathname;
-        var search = location.search;
-        var hash = location.hash;
-        var state = location.state;
-        var action = location.action;
-        var key = location.key;
-        if (action === _Actions.POP)
-          return;
-        _DOMStateStorage.saveState(key, state);
-        var path = (basename || '') + pathname + search + hash;
-        var historyState = {key: key};
-        if (action === _Actions.PUSH) {
-          if (useRefresh) {
-            window.location.href = path;
-            return false;
-          } else {
-            window.history.pushState(historyState, null, path);
-          }
-        } else {
-          if (useRefresh) {
-            window.location.replace(path);
-            return false;
-          } else {
-            window.history.replaceState(historyState, null, path);
-          }
-        }
-      }
-      var history = _createDOMHistory2['default'](_extends({}, options, {
-        getCurrentLocation: getCurrentLocation,
-        finishTransition: finishTransition,
-        saveState: _DOMStateStorage.saveState
-      }));
-      var listenerCount = 0,
-          stopPopStateListener = undefined;
-      function listenBefore(listener) {
-        if (++listenerCount === 1)
-          stopPopStateListener = startPopStateListener(history);
-        var unlisten = history.listenBefore(listener);
-        return function() {
-          unlisten();
-          if (--listenerCount === 0)
-            stopPopStateListener();
-        };
-      }
-      function listen(listener) {
-        if (++listenerCount === 1)
-          stopPopStateListener = startPopStateListener(history);
-        var unlisten = history.listen(listener);
-        return function() {
-          unlisten();
-          if (--listenerCount === 0)
-            stopPopStateListener();
-        };
-      }
-      function registerTransitionHook(hook) {
-        if (++listenerCount === 1)
-          stopPopStateListener = startPopStateListener(history);
-        history.registerTransitionHook(hook);
-      }
-      function unregisterTransitionHook(hook) {
-        history.unregisterTransitionHook(hook);
-        if (--listenerCount === 0)
-          stopPopStateListener();
-      }
-      return _extends({}, history, {
-        listenBefore: listenBefore,
-        listen: listen,
-        registerTransitionHook: registerTransitionHook,
-        unregisterTransitionHook: unregisterTransitionHook
-      });
-    }
-    exports['default'] = createBrowserHistory;
-    module.exports = exports['default'];
-  })($__require('1e'));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("34", ["35"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var ExecutionEnvironment = $__require('35');
+  var ExecutionEnvironment = $__require('25');
   var EVENT_NAME_MAP = {
     transitionend: {
       'transition': 'transitionend',
@@ -6959,14 +6178,14 @@ $__System.registerDynamic("34", ["35"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("36", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("26", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var CSSCore = {
       addClass: function(element, className) {
         !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.addClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : undefined;
@@ -7007,17 +6226,17 @@ $__System.registerDynamic("36", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("38", ["39", "3a", "36", "34", "3b"], true, function($__require, exports, module) {
+$__System.registerDynamic("28", ["29", "2a", "26", "24", "2b"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var React = $__require('39');
-  var ReactDOM = $__require('3a');
-  var CSSCore = $__require('36');
-  var ReactTransitionEvents = $__require('34');
-  var onlyChild = $__require('3b');
+  var React = $__require('29');
+  var ReactDOM = $__require('2a');
+  var CSSCore = $__require('26');
+  var ReactTransitionEvents = $__require('24');
+  var onlyChild = $__require('2b');
   var TICK = 17;
   var ReactCSSTransitionGroupChild = React.createClass({
     displayName: 'ReactCSSTransitionGroupChild',
@@ -7128,13 +6347,13 @@ $__System.registerDynamic("38", ["39", "3a", "36", "34", "3b"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("3c", ["3d"], true, function($__require, exports, module) {
+$__System.registerDynamic("2c", ["2d"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var flattenChildren = $__require('3d');
+  var flattenChildren = $__require('2d');
   var ReactTransitionChildMapping = {
     getChildMapping: function(children) {
       if (!children) {
@@ -7186,16 +6405,16 @@ $__System.registerDynamic("3c", ["3d"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("3e", ["39", "3c", "3f", "40"], true, function($__require, exports, module) {
+$__System.registerDynamic("2e", ["29", "2c", "2f", "30"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var React = $__require('39');
-  var ReactTransitionChildMapping = $__require('3c');
-  var assign = $__require('3f');
-  var emptyFunction = $__require('40');
+  var React = $__require('29');
+  var ReactTransitionChildMapping = $__require('2c');
+  var assign = $__require('2f');
+  var emptyFunction = $__require('30');
   var ReactTransitionGroup = React.createClass({
     displayName: 'ReactTransitionGroup',
     propTypes: {
@@ -7335,16 +6554,16 @@ $__System.registerDynamic("3e", ["39", "3c", "3f", "40"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("41", ["39", "3f", "3e", "38"], true, function($__require, exports, module) {
+$__System.registerDynamic("31", ["29", "2f", "2e", "28"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var React = $__require('39');
-  var assign = $__require('3f');
-  var ReactTransitionGroup = $__require('3e');
-  var ReactCSSTransitionGroupChild = $__require('38');
+  var React = $__require('29');
+  var assign = $__require('2f');
+  var ReactTransitionGroup = $__require('2e');
+  var ReactCSSTransitionGroupChild = $__require('28');
   function createTransitionTimeoutPropValidator(transitionType) {
     var timeoutPropName = 'transition' + transitionType + 'Timeout';
     var enabledPropName = 'transition' + transitionType;
@@ -7396,131 +6615,51 @@ $__System.registerDynamic("41", ["39", "3f", "3e", "38"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("42", ["43", "44", "45", "46"], true, function($__require, exports, module) {
+$__System.registerDynamic("32", ["33", "34"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
-  var _extends = Object.assign || function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {'default': obj};
   }
-  function _objectWithoutProperties(obj, keys) {
-    var target = {};
-    for (var i in obj) {
-      if (keys.indexOf(i) >= 0)
-        continue;
-      if (!Object.prototype.hasOwnProperty.call(obj, i))
-        continue;
-      target[i] = obj[i];
-    }
-    return target;
-  }
-  var _ExecutionEnvironment = $__require('43');
-  var _runTransitionHook = $__require('44');
-  var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-  var _extractPath = $__require('45');
-  var _extractPath2 = _interopRequireDefault(_extractPath);
-  var _parsePath = $__require('46');
-  var _parsePath2 = _interopRequireDefault(_parsePath);
-  function useBasename(createHistory) {
-    return function() {
-      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-      var basename = options.basename;
-      var historyOptions = _objectWithoutProperties(options, ['basename']);
-      var history = createHistory(historyOptions);
-      if (basename == null && _ExecutionEnvironment.canUseDOM) {
-        var base = document.getElementsByTagName('base')[0];
-        if (base)
-          basename = _extractPath2['default'](base.href);
-      }
-      function addBasename(location) {
-        if (basename && location.basename == null) {
-          if (location.pathname.indexOf(basename) === 0) {
-            location.pathname = location.pathname.substring(basename.length);
-            location.basename = basename;
-            if (location.pathname === '')
-              location.pathname = '/';
-          } else {
-            location.basename = '';
-          }
-        }
-        return location;
-      }
-      function prependBasename(path) {
-        if (!basename)
-          return path;
-        if (typeof path === 'string')
-          path = _parsePath2['default'](path);
-        var pname = path.pathname;
-        var normalizedBasename = basename.slice(-1) === '/' ? basename : basename + '/';
-        var normalizedPathname = pname.charAt(0) === '/' ? pname.slice(1) : pname;
-        var pathname = normalizedBasename + normalizedPathname;
-        return _extends({}, path, {pathname: pathname});
-      }
-      function listenBefore(hook) {
-        return history.listenBefore(function(location, callback) {
-          _runTransitionHook2['default'](hook, addBasename(location), callback);
-        });
-      }
-      function listen(listener) {
-        return history.listen(function(location) {
-          listener(addBasename(location));
-        });
-      }
-      function pushState(state, path) {
-        history.pushState(state, prependBasename(path));
-      }
-      function push(path) {
-        pushState(null, path);
-      }
-      function replaceState(state, path) {
-        history.replaceState(state, prependBasename(path));
-      }
-      function replace(path) {
-        replaceState(null, path);
-      }
-      function createPath(path) {
-        return history.createPath(prependBasename(path));
-      }
-      function createHref(path) {
-        return history.createHref(prependBasename(path));
-      }
-      function createLocation() {
-        return addBasename(history.createLocation.apply(history, arguments));
-      }
-      return _extends({}, history, {
-        listenBefore: listenBefore,
-        listen: listen,
-        pushState: pushState,
-        push: push,
-        replaceState: replaceState,
-        replace: replace,
-        createPath: createPath,
-        createHref: createHref,
-        createLocation: createLocation
-      });
-    };
-  }
-  exports['default'] = useBasename;
+  var _historyLibCreateHashHistory = $__require('33');
+  var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
+  var _createRouterHistory = $__require('34');
+  var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
+  exports['default'] = _createRouterHistory2['default'](_historyLibCreateHashHistory2['default']);
   module.exports = exports['default'];
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("47", ["2f", "48", "49", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("34", ["35"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  exports.__esModule = true;
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {'default': obj};
+  }
+  var _useRouterHistory = $__require('35');
+  var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
+  var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+  exports['default'] = function(createHistory) {
+    var history = undefined;
+    if (canUseDOM)
+      history = _useRouterHistory2['default'](createHistory)();
+    return history;
+  };
+  module.exports = exports['default'];
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("36", ["37", "38", "39", "3a", "3b", "3c", "3d", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7542,10 +6681,206 @@ $__System.registerDynamic("47", ["2f", "48", "49", "1e"], true, function($__requ
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _invariant = $__require('2f');
+    var _invariant = $__require('37');
     var _invariant2 = _interopRequireDefault(_invariant);
-    var _Actions = $__require('48');
-    var _createHistory = $__require('49');
+    var _Actions = $__require('38');
+    var _PathUtils = $__require('39');
+    var _ExecutionEnvironment = $__require('3a');
+    var _DOMUtils = $__require('3b');
+    var _DOMStateStorage = $__require('3c');
+    var _createDOMHistory = $__require('3d');
+    var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
+    function createBrowserHistory() {
+      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'Browser history needs a DOM') : _invariant2['default'](false) : undefined;
+      var forceRefresh = options.forceRefresh;
+      var isSupported = _DOMUtils.supportsHistory();
+      var useRefresh = !isSupported || forceRefresh;
+      function getCurrentLocation(historyState) {
+        historyState = historyState || window.history.state || {};
+        var path = _DOMUtils.getWindowPath();
+        var _historyState = historyState;
+        var key = _historyState.key;
+        var state = undefined;
+        if (key) {
+          state = _DOMStateStorage.readState(key);
+        } else {
+          state = null;
+          key = history.createKey();
+          if (isSupported)
+            window.history.replaceState(_extends({}, historyState, {key: key}), null, path);
+        }
+        var location = _PathUtils.parsePath(path);
+        return history.createLocation(_extends({}, location, {state: state}), undefined, key);
+      }
+      function startPopStateListener(_ref) {
+        var transitionTo = _ref.transitionTo;
+        function popStateListener(event) {
+          if (event.state === undefined)
+            return;
+          transitionTo(getCurrentLocation(event.state));
+        }
+        _DOMUtils.addEventListener(window, 'popstate', popStateListener);
+        return function() {
+          _DOMUtils.removeEventListener(window, 'popstate', popStateListener);
+        };
+      }
+      function finishTransition(location) {
+        var basename = location.basename;
+        var pathname = location.pathname;
+        var search = location.search;
+        var hash = location.hash;
+        var state = location.state;
+        var action = location.action;
+        var key = location.key;
+        if (action === _Actions.POP)
+          return;
+        _DOMStateStorage.saveState(key, state);
+        var path = (basename || '') + pathname + search + hash;
+        var historyState = {key: key};
+        if (action === _Actions.PUSH) {
+          if (useRefresh) {
+            window.location.href = path;
+            return false;
+          } else {
+            window.history.pushState(historyState, null, path);
+          }
+        } else {
+          if (useRefresh) {
+            window.location.replace(path);
+            return false;
+          } else {
+            window.history.replaceState(historyState, null, path);
+          }
+        }
+      }
+      var history = _createDOMHistory2['default'](_extends({}, options, {
+        getCurrentLocation: getCurrentLocation,
+        finishTransition: finishTransition,
+        saveState: _DOMStateStorage.saveState
+      }));
+      var listenerCount = 0,
+          stopPopStateListener = undefined;
+      function listenBefore(listener) {
+        if (++listenerCount === 1)
+          stopPopStateListener = startPopStateListener(history);
+        var unlisten = history.listenBefore(listener);
+        return function() {
+          unlisten();
+          if (--listenerCount === 0)
+            stopPopStateListener();
+        };
+      }
+      function listen(listener) {
+        if (++listenerCount === 1)
+          stopPopStateListener = startPopStateListener(history);
+        var unlisten = history.listen(listener);
+        return function() {
+          unlisten();
+          if (--listenerCount === 0)
+            stopPopStateListener();
+        };
+      }
+      function registerTransitionHook(hook) {
+        if (++listenerCount === 1)
+          stopPopStateListener = startPopStateListener(history);
+        history.registerTransitionHook(hook);
+      }
+      function unregisterTransitionHook(hook) {
+        history.unregisterTransitionHook(hook);
+        if (--listenerCount === 0)
+          stopPopStateListener();
+      }
+      return _extends({}, history, {
+        listenBefore: listenBefore,
+        listen: listen,
+        registerTransitionHook: registerTransitionHook,
+        unregisterTransitionHook: unregisterTransitionHook
+      });
+    }
+    exports['default'] = createBrowserHistory;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("3e", ["36", "34"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  exports.__esModule = true;
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {'default': obj};
+  }
+  var _historyLibCreateBrowserHistory = $__require('36');
+  var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
+  var _createRouterHistory = $__require('34');
+  var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
+  exports['default'] = _createRouterHistory2['default'](_historyLibCreateBrowserHistory2['default']);
+  module.exports = exports['default'];
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("35", ["3f", "40"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  exports.__esModule = true;
+  exports['default'] = useRouterHistory;
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {'default': obj};
+  }
+  var _historyLibUseQueries = $__require('3f');
+  var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
+  var _historyLibUseBasename = $__require('40');
+  var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
+  function useRouterHistory(createHistory) {
+    return function(options) {
+      var history = _historyLibUseQueries2['default'](_historyLibUseBasename2['default'](createHistory))(options);
+      history.__v2_compatible__ = true;
+      return history;
+    };
+  }
+  module.exports = exports['default'];
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("41", ["42", "37", "39", "38", "43", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _warning = $__require('42');
+    var _warning2 = _interopRequireDefault(_warning);
+    var _invariant = $__require('37');
+    var _invariant2 = _interopRequireDefault(_invariant);
+    var _PathUtils = $__require('39');
+    var _Actions = $__require('38');
+    var _createHistory = $__require('43');
     var _createHistory2 = _interopRequireDefault(_createHistory);
     function createStateStorage(entries) {
       return entries.filter(function(entry) {
@@ -7601,20 +6936,22 @@ $__System.registerDynamic("47", ["2f", "48", "49", "1e"], true, function($__requ
       }
       function getCurrentLocation() {
         var entry = entries[current];
-        var key = entry.key;
         var basename = entry.basename;
         var pathname = entry.pathname;
         var search = entry.search;
         var path = (basename || '') + pathname + (search || '');
-        var state = undefined;
-        if (key) {
+        var key = undefined,
+            state = undefined;
+        if (entry.key) {
+          key = entry.key;
           state = readState(key);
         } else {
-          state = null;
           key = history.createKey();
+          state = null;
           entry.key = key;
         }
-        return history.createLocation(path, state, undefined, key);
+        var location = _PathUtils.parsePath(path);
+        return history.createLocation(_extends({}, location, {state: state}), undefined, key);
       }
       function canGo(n) {
         var index = current + n;
@@ -7622,7 +6959,10 @@ $__System.registerDynamic("47", ["2f", "48", "49", "1e"], true, function($__requ
       }
       function go(n) {
         if (n) {
-          !canGo(n) ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'Cannot go(%s) there is not enough history', n) : _invariant2['default'](false) : undefined;
+          if (!canGo(n)) {
+            process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'Cannot go(%s) there is not enough history', n) : undefined;
+            return;
+          }
           current += n;
           var currentLocation = getCurrentLocation();
           history.transitionTo(_extends({}, currentLocation, {action: _Actions.POP}));
@@ -7652,7 +6992,158 @@ $__System.registerDynamic("47", ["2f", "48", "49", "1e"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("4a", ["2f", "47", "42", "4b", "4c", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("40", ["3a", "39", "44", "45"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  exports.__esModule = true;
+  var _extends = Object.assign || function(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {'default': obj};
+  }
+  var _ExecutionEnvironment = $__require('3a');
+  var _PathUtils = $__require('39');
+  var _runTransitionHook = $__require('44');
+  var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+  var _deprecate = $__require('45');
+  var _deprecate2 = _interopRequireDefault(_deprecate);
+  function useBasename(createHistory) {
+    return function() {
+      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var history = createHistory(options);
+      var basename = options.basename;
+      if (basename == null && _ExecutionEnvironment.canUseDOM) {
+        var base = document.getElementsByTagName('base')[0];
+        if (base)
+          basename = _PathUtils.extractPath(base.href);
+      }
+      function addBasename(location) {
+        if (basename && location.basename == null) {
+          if (location.pathname.indexOf(basename) === 0) {
+            location.pathname = location.pathname.substring(basename.length);
+            location.basename = basename;
+            if (location.pathname === '')
+              location.pathname = '/';
+          } else {
+            location.basename = '';
+          }
+        }
+        return location;
+      }
+      function prependBasename(location) {
+        if (!basename)
+          return location;
+        if (typeof location === 'string')
+          location = _PathUtils.parsePath(location);
+        var pname = location.pathname;
+        var normalizedBasename = basename.slice(-1) === '/' ? basename : basename + '/';
+        var normalizedPathname = pname.charAt(0) === '/' ? pname.slice(1) : pname;
+        var pathname = normalizedBasename + normalizedPathname;
+        return _extends({}, location, {pathname: pathname});
+      }
+      function listenBefore(hook) {
+        return history.listenBefore(function(location, callback) {
+          _runTransitionHook2['default'](hook, addBasename(location), callback);
+        });
+      }
+      function listen(listener) {
+        return history.listen(function(location) {
+          listener(addBasename(location));
+        });
+      }
+      function push(location) {
+        history.push(prependBasename(location));
+      }
+      function replace(location) {
+        history.replace(prependBasename(location));
+      }
+      function createPath(location) {
+        return history.createPath(prependBasename(location));
+      }
+      function createHref(location) {
+        return history.createHref(prependBasename(location));
+      }
+      function createLocation(location) {
+        for (var _len = arguments.length,
+            args = Array(_len > 1 ? _len - 1 : 0),
+            _key = 1; _key < _len; _key++) {
+          args[_key - 1] = arguments[_key];
+        }
+        return addBasename(history.createLocation.apply(history, [prependBasename(location)].concat(args)));
+      }
+      function pushState(state, path) {
+        if (typeof path === 'string')
+          path = _PathUtils.parsePath(path);
+        push(_extends({state: state}, path));
+      }
+      function replaceState(state, path) {
+        if (typeof path === 'string')
+          path = _PathUtils.parsePath(path);
+        replace(_extends({state: state}, path));
+      }
+      return _extends({}, history, {
+        listenBefore: listenBefore,
+        listen: listen,
+        push: push,
+        replace: replace,
+        createPath: createPath,
+        createHref: createHref,
+        createLocation: createLocation,
+        pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
+        replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
+      });
+    };
+  }
+  exports['default'] = useBasename;
+  module.exports = exports['default'];
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("46", ["3f", "40", "41"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  exports.__esModule = true;
+  exports['default'] = createMemoryHistory;
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {'default': obj};
+  }
+  var _historyLibUseQueries = $__require('3f');
+  var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
+  var _historyLibUseBasename = $__require('40');
+  var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
+  var _historyLibCreateMemoryHistory = $__require('41');
+  var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
+  function createMemoryHistory(options) {
+    var memoryHistory = _historyLibCreateMemoryHistory2['default'](options);
+    var createHistory = function createHistory() {
+      return memoryHistory;
+    };
+    var history = _historyLibUseQueries2['default'](_historyLibUseBasename2['default'](createHistory))(options);
+    history.__v2_compatible__ = true;
+    return history;
+  }
+  module.exports = exports['default'];
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("47", ["37", "46", "48", "49", "4a", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7674,33 +7165,56 @@ $__System.registerDynamic("4a", ["2f", "47", "42", "4b", "4c", "1e"], true, func
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _invariant = $__require('2f');
+    function _objectWithoutProperties(obj, keys) {
+      var target = {};
+      for (var i in obj) {
+        if (keys.indexOf(i) >= 0)
+          continue;
+        if (!Object.prototype.hasOwnProperty.call(obj, i))
+          continue;
+        target[i] = obj[i];
+      }
+      return target;
+    }
+    var _invariant = $__require('37');
     var _invariant2 = _interopRequireDefault(_invariant);
-    var _historyLibCreateMemoryHistory = $__require('47');
-    var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
-    var _historyLibUseBasename = $__require('42');
-    var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
-    var _RouteUtils = $__require('4b');
-    var _useRoutes = $__require('4c');
-    var _useRoutes2 = _interopRequireDefault(_useRoutes);
-    var createHistory = _useRoutes2['default'](_historyLibUseBasename2['default'](_historyLibCreateMemoryHistory2['default']));
+    var _createMemoryHistory = $__require('46');
+    var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
+    var _createTransitionManager = $__require('48');
+    var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+    var _RouteUtils = $__require('49');
+    var _RouterUtils = $__require('4a');
     function match(_ref, callback) {
+      var history = _ref.history;
       var routes = _ref.routes;
       var location = _ref.location;
-      var parseQueryString = _ref.parseQueryString;
-      var stringifyQuery = _ref.stringifyQuery;
-      var basename = _ref.basename;
-      !location ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'match needs a location') : _invariant2['default'](false) : undefined;
-      var history = createHistory({
-        routes: _RouteUtils.createRoutes(routes),
-        parseQueryString: parseQueryString,
-        stringifyQuery: stringifyQuery,
-        basename: basename
-      });
-      if (typeof location === 'string')
+      var options = _objectWithoutProperties(_ref, ['history', 'routes', 'location']);
+      !(history || location) ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'match needs a history or a location') : _invariant2['default'](false) : undefined;
+      history = history ? history : _createMemoryHistory2['default'](options);
+      var transitionManager = _createTransitionManager2['default'](history, _RouteUtils.createRoutes(routes));
+      var unlisten = undefined;
+      if (location) {
         location = history.createLocation(location);
-      history.match(location, function(error, redirectLocation, nextState) {
-        callback(error, redirectLocation, nextState && _extends({}, nextState, {history: history}));
+      } else {
+        unlisten = history.listen(function(historyLocation) {
+          location = historyLocation;
+        });
+      }
+      var router = _RouterUtils.createRouterObject(history, transitionManager);
+      history = _RouterUtils.createRoutingHistory(history, transitionManager);
+      transitionManager.match(location, function(error, redirectLocation, nextState) {
+        callback(error, redirectLocation, nextState && _extends({}, nextState, {
+          history: history,
+          router: router,
+          matchContext: {
+            history: history,
+            transitionManager: transitionManager,
+            router: router
+          }
+        }));
+        if (unlisten) {
+          unlisten();
+        }
       });
     }
     exports['default'] = match;
@@ -7710,33 +7224,7 @@ $__System.registerDynamic("4a", ["2f", "47", "42", "4b", "4c", "1e"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("4d", ["5"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
-  }
-  var _react = $__require('5');
-  var _react2 = _interopRequireDefault(_react);
-  var object = _react2['default'].PropTypes.object;
-  var RouteContext = {
-    propTypes: {route: object.isRequired},
-    childContextTypes: {route: object.isRequired},
-    getChildContext: function getChildContext() {
-      return {route: this.props.route};
-    }
-  };
-  exports['default'] = RouteContext;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4e", ["5", "2f", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("4b", ["5", "4c", "4d", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7749,7 +7237,132 @@ $__System.registerDynamic("4e", ["5", "2f", "1e"], true, function($__require, ex
     }
     var _react = $__require('5');
     var _react2 = _interopRequireDefault(_react);
-    var _invariant = $__require('2f');
+    var _RouterContext = $__require('4c');
+    var _RouterContext2 = _interopRequireDefault(_RouterContext);
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var RoutingContext = _react2['default'].createClass({
+      displayName: 'RoutingContext',
+      componentWillMount: function componentWillMount() {
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, '`RoutingContext` has been renamed to `RouterContext`. Please use `import { RouterContext } from \'react-router\'`. http://tiny.cc/router-routercontext') : undefined;
+      },
+      render: function render() {
+        return _react2['default'].createElement(_RouterContext2['default'], this.props);
+      }
+    });
+    exports['default'] = RoutingContext;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4e", ["3f", "48", "4d", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    function _objectWithoutProperties(obj, keys) {
+      var target = {};
+      for (var i in obj) {
+        if (keys.indexOf(i) >= 0)
+          continue;
+        if (!Object.prototype.hasOwnProperty.call(obj, i))
+          continue;
+        target[i] = obj[i];
+      }
+      return target;
+    }
+    var _historyLibUseQueries = $__require('3f');
+    var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
+    var _createTransitionManager = $__require('48');
+    var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    function useRoutes(createHistory) {
+      process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, '`useRoutes` is deprecated. Please use `createTransitionManager` instead.') : undefined;
+      return function() {
+        var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+        var routes = _ref.routes;
+        var options = _objectWithoutProperties(_ref, ['routes']);
+        var history = _historyLibUseQueries2['default'](createHistory)(options);
+        var transitionManager = _createTransitionManager2['default'](history, routes);
+        return _extends({}, history, transitionManager);
+      };
+    }
+    exports['default'] = useRoutes;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4f", ["4d", "5", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _react = $__require('5');
+    var _react2 = _interopRequireDefault(_react);
+    var object = _react2['default'].PropTypes.object;
+    var RouteContext = {
+      propTypes: {route: object.isRequired},
+      childContextTypes: {route: object.isRequired},
+      getChildContext: function getChildContext() {
+        return {route: this.props.route};
+      },
+      componentWillMount: function componentWillMount() {
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'The `RouteContext` mixin is deprecated. You can provide `this.props.route` on context with your own `contextTypes`. http://tiny.cc/router-routecontextmixin') : undefined;
+      }
+    };
+    exports['default'] = RouteContext;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("50", ["4d", "5", "37", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _react = $__require('5');
+    var _react2 = _interopRequireDefault(_react);
+    var _invariant = $__require('37');
     var _invariant2 = _interopRequireDefault(_invariant);
     var object = _react2['default'].PropTypes.object;
     var Lifecycle = {
@@ -7759,6 +7372,7 @@ $__System.registerDynamic("4e", ["5", "2f", "1e"], true, function($__require, ex
       },
       propTypes: {route: object},
       componentDidMount: function componentDidMount() {
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'the `Lifecycle` mixin is deprecated, please use `context.router.setRouteLeaveHook(route, hook)`. http://tiny.cc/router-lifecyclemixin') : undefined;
         !this.routerWillLeave ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'The Lifecycle mixin requires you to define a routerWillLeave method') : _invariant2['default'](false) : undefined;
         var route = this.props.route || this.context.route;
         !route ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'The Lifecycle mixin must be used on either a) a <Route component> or ' + 'b) a descendant of a <Route component> that uses the RouteContext mixin') : _invariant2['default'](false) : undefined;
@@ -7776,27 +7390,7 @@ $__System.registerDynamic("4e", ["5", "2f", "1e"], true, function($__require, ex
   return module.exports;
 });
 
-$__System.registerDynamic("4f", ["50"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var _PropTypes = $__require('50');
-  var History = {
-    contextTypes: {history: _PropTypes.history},
-    componentWillMount: function componentWillMount() {
-      this.history = this.context.history;
-    }
-  };
-  exports['default'] = History;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("51", ["2f", "5", "4b", "50", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("51", ["4d", "52", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7807,52 +7401,57 @@ $__System.registerDynamic("51", ["2f", "5", "4b", "50", "1e"], true, function($_
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _classCallCheck(instance, Constructor) {
-      if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _PropTypes = $__require('52');
+    var History = {
+      contextTypes: {history: _PropTypes.history},
+      componentWillMount: function componentWillMount() {
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'the `History` mixin is deprecated, please access `context.router` with your own `contextTypes`. http://tiny.cc/router-historymixin') : undefined;
+        this.history = this.context.history;
       }
+    };
+    exports['default'] = History;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("53", ["5", "37", "49", "52", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _inherits(subClass, superClass) {
-      if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-      }
-      subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-          value: subClass,
-          enumerable: false,
-          writable: true,
-          configurable: true
-        }});
-      if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
     var _react = $__require('5');
     var _react2 = _interopRequireDefault(_react);
-    var _RouteUtils = $__require('4b');
-    var _PropTypes = $__require('50');
+    var _invariant = $__require('37');
+    var _invariant2 = _interopRequireDefault(_invariant);
+    var _RouteUtils = $__require('49');
+    var _PropTypes = $__require('52');
     var _React$PropTypes = _react2['default'].PropTypes;
     var string = _React$PropTypes.string;
     var func = _React$PropTypes.func;
-    var Route = (function(_Component) {
-      _inherits(Route, _Component);
-      function Route() {
-        _classCallCheck(this, Route);
-        _Component.apply(this, arguments);
-      }
-      Route.prototype.render = function render() {
+    var Route = _react2['default'].createClass({
+      displayName: 'Route',
+      statics: {createRouteFromReactElement: _RouteUtils.createRouteFromReactElement},
+      propTypes: {
+        path: string,
+        component: _PropTypes.component,
+        components: _PropTypes.components,
+        getComponent: func,
+        getComponents: func
+      },
+      render: function render() {
         !false ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, '<Route> elements are for router configuration only and should not be rendered') : _invariant2['default'](false) : undefined;
-      };
-      return Route;
-    })(_react.Component);
-    Route.createRouteFromReactElement = _RouteUtils.createRouteFromReactElement;
-    Route.propTypes = {
-      path: string,
-      component: _PropTypes.component,
-      components: _PropTypes.components,
-      getComponent: func,
-      getComponents: func
-    };
+      }
+    });
     exports['default'] = Route;
     module.exports = exports['default'];
   })($__require('1e'));
@@ -7860,7 +7459,7 @@ $__System.registerDynamic("51", ["2f", "5", "4b", "50", "1e"], true, function($_
   return module.exports;
 });
 
-$__System.registerDynamic("52", ["26", "2f", "5", "4b", "50", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("54", ["5", "4d", "37", "49", "52", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7871,58 +7470,35 @@ $__System.registerDynamic("52", ["26", "2f", "5", "4b", "50", "1e"], true, funct
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _classCallCheck(instance, Constructor) {
-      if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
-      }
-    }
-    function _inherits(subClass, superClass) {
-      if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-      }
-      subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-          value: subClass,
-          enumerable: false,
-          writable: true,
-          configurable: true
-        }});
-      if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
     var _react = $__require('5');
     var _react2 = _interopRequireDefault(_react);
-    var _RouteUtils = $__require('4b');
-    var _PropTypes = $__require('50');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _invariant = $__require('37');
+    var _invariant2 = _interopRequireDefault(_invariant);
+    var _RouteUtils = $__require('49');
+    var _PropTypes = $__require('52');
     var func = _react2['default'].PropTypes.func;
-    var IndexRoute = (function(_Component) {
-      _inherits(IndexRoute, _Component);
-      function IndexRoute() {
-        _classCallCheck(this, IndexRoute);
-        _Component.apply(this, arguments);
-      }
-      IndexRoute.prototype.render = function render() {
+    var IndexRoute = _react2['default'].createClass({
+      displayName: 'IndexRoute',
+      statics: {createRouteFromReactElement: function createRouteFromReactElement(element, parentRoute) {
+          if (parentRoute) {
+            parentRoute.indexRoute = _RouteUtils.createRouteFromReactElement(element);
+          } else {
+            process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'An <IndexRoute> does not make sense at the root of your route config') : undefined;
+          }
+        }},
+      propTypes: {
+        path: _PropTypes.falsy,
+        component: _PropTypes.component,
+        components: _PropTypes.components,
+        getComponent: func,
+        getComponents: func
+      },
+      render: function render() {
         !false ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, '<IndexRoute> elements are for router configuration only and should not be rendered') : _invariant2['default'](false) : undefined;
-      };
-      return IndexRoute;
-    })(_react.Component);
-    IndexRoute.propTypes = {
-      path: _PropTypes.falsy,
-      component: _PropTypes.component,
-      components: _PropTypes.components,
-      getComponent: func,
-      getComponents: func
-    };
-    IndexRoute.createRouteFromReactElement = function(element, parentRoute) {
-      if (parentRoute) {
-        parentRoute.indexRoute = _RouteUtils.createRouteFromReactElement(element);
-      } else {
-        process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'An <IndexRoute> does not make sense at the root of your route config') : undefined;
       }
-    };
+    });
     exports['default'] = IndexRoute;
     module.exports = exports['default'];
   })($__require('1e'));
@@ -7930,7 +7506,7 @@ $__System.registerDynamic("52", ["26", "2f", "5", "4b", "50", "1e"], true, funct
   return module.exports;
 });
 
-$__System.registerDynamic("53", ["2f", "5", "4b", "54", "50", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("55", ["5", "37", "49", "56", "52", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7941,87 +7517,70 @@ $__System.registerDynamic("53", ["2f", "5", "4b", "54", "50", "1e"], true, funct
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _classCallCheck(instance, Constructor) {
-      if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
-      }
-    }
-    function _inherits(subClass, superClass) {
-      if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-      }
-      subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-          value: subClass,
-          enumerable: false,
-          writable: true,
-          configurable: true
-        }});
-      if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
     var _react = $__require('5');
     var _react2 = _interopRequireDefault(_react);
-    var _RouteUtils = $__require('4b');
-    var _PatternUtils = $__require('54');
-    var _PropTypes = $__require('50');
+    var _invariant = $__require('37');
+    var _invariant2 = _interopRequireDefault(_invariant);
+    var _RouteUtils = $__require('49');
+    var _PatternUtils = $__require('56');
+    var _PropTypes = $__require('52');
     var _React$PropTypes = _react2['default'].PropTypes;
     var string = _React$PropTypes.string;
     var object = _React$PropTypes.object;
-    var Redirect = (function(_Component) {
-      _inherits(Redirect, _Component);
-      function Redirect() {
-        _classCallCheck(this, Redirect);
-        _Component.apply(this, arguments);
-      }
-      Redirect.prototype.render = function render() {
-        !false ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, '<Redirect> elements are for router configuration only and should not be rendered') : _invariant2['default'](false) : undefined;
-      };
-      return Redirect;
-    })(_react.Component);
-    Redirect.createRouteFromReactElement = function(element) {
-      var route = _RouteUtils.createRouteFromReactElement(element);
-      if (route.from)
-        route.path = route.from;
-      route.onEnter = function(nextState, replaceState) {
-        var location = nextState.location;
-        var params = nextState.params;
-        var pathname = undefined;
-        if (route.to.charAt(0) === '/') {
-          pathname = _PatternUtils.formatPattern(route.to, params);
-        } else if (!route.to) {
-          pathname = location.pathname;
-        } else {
-          var routeIndex = nextState.routes.indexOf(route);
-          var parentPattern = Redirect.getRoutePattern(nextState.routes, routeIndex - 1);
-          var pattern = parentPattern.replace(/\/*$/, '/') + route.to;
-          pathname = _PatternUtils.formatPattern(pattern, params);
+    var Redirect = _react2['default'].createClass({
+      displayName: 'Redirect',
+      statics: {
+        createRouteFromReactElement: function createRouteFromReactElement(element) {
+          var route = _RouteUtils.createRouteFromReactElement(element);
+          if (route.from)
+            route.path = route.from;
+          route.onEnter = function(nextState, replace) {
+            var location = nextState.location;
+            var params = nextState.params;
+            var pathname = undefined;
+            if (route.to.charAt(0) === '/') {
+              pathname = _PatternUtils.formatPattern(route.to, params);
+            } else if (!route.to) {
+              pathname = location.pathname;
+            } else {
+              var routeIndex = nextState.routes.indexOf(route);
+              var parentPattern = Redirect.getRoutePattern(nextState.routes, routeIndex - 1);
+              var pattern = parentPattern.replace(/\/*$/, '/') + route.to;
+              pathname = _PatternUtils.formatPattern(pattern, params);
+            }
+            replace({
+              pathname: pathname,
+              query: route.query || location.query,
+              state: route.state || location.state
+            });
+          };
+          return route;
+        },
+        getRoutePattern: function getRoutePattern(routes, routeIndex) {
+          var parentPattern = '';
+          for (var i = routeIndex; i >= 0; i--) {
+            var route = routes[i];
+            var pattern = route.path || '';
+            parentPattern = pattern.replace(/\/*$/, '/') + parentPattern;
+            if (pattern.indexOf('/') === 0)
+              break;
+          }
+          return '/' + parentPattern;
         }
-        replaceState(route.state || location.state, pathname, route.query || location.query);
-      };
-      return route;
-    };
-    Redirect.getRoutePattern = function(routes, routeIndex) {
-      var parentPattern = '';
-      for (var i = routeIndex; i >= 0; i--) {
-        var route = routes[i];
-        var pattern = route.path || '';
-        parentPattern = pattern.replace(/\/*$/, '/') + parentPattern;
-        if (pattern.indexOf('/') === 0)
-          break;
+      },
+      propTypes: {
+        path: string,
+        from: string,
+        to: string.isRequired,
+        query: object,
+        state: object,
+        onEnter: _PropTypes.falsy,
+        children: _PropTypes.falsy
+      },
+      render: function render() {
+        !false ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, '<Redirect> elements are for router configuration only and should not be rendered') : _invariant2['default'](false) : undefined;
       }
-      return '/' + parentPattern;
-    };
-    Redirect.propTypes = {
-      path: string,
-      from: string,
-      to: string.isRequired,
-      query: object,
-      state: object,
-      onEnter: _PropTypes.falsy,
-      children: _PropTypes.falsy
-    };
+    });
     exports['default'] = Redirect;
     module.exports = exports['default'];
   })($__require('1e'));
@@ -8029,7 +7588,7 @@ $__System.registerDynamic("53", ["2f", "5", "4b", "54", "50", "1e"], true, funct
   return module.exports;
 });
 
-$__System.registerDynamic("55", ["26", "2f", "5", "53", "50", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("57", ["5", "4d", "37", "55", "52", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -8040,61 +7599,38 @@ $__System.registerDynamic("55", ["26", "2f", "5", "53", "50", "1e"], true, funct
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _classCallCheck(instance, Constructor) {
-      if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
-      }
-    }
-    function _inherits(subClass, superClass) {
-      if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-      }
-      subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-          value: subClass,
-          enumerable: false,
-          writable: true,
-          configurable: true
-        }});
-      if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
     var _react = $__require('5');
     var _react2 = _interopRequireDefault(_react);
-    var _Redirect = $__require('53');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _invariant = $__require('37');
+    var _invariant2 = _interopRequireDefault(_invariant);
+    var _Redirect = $__require('55');
     var _Redirect2 = _interopRequireDefault(_Redirect);
-    var _PropTypes = $__require('50');
+    var _PropTypes = $__require('52');
     var _React$PropTypes = _react2['default'].PropTypes;
     var string = _React$PropTypes.string;
     var object = _React$PropTypes.object;
-    var IndexRedirect = (function(_Component) {
-      _inherits(IndexRedirect, _Component);
-      function IndexRedirect() {
-        _classCallCheck(this, IndexRedirect);
-        _Component.apply(this, arguments);
-      }
-      IndexRedirect.prototype.render = function render() {
+    var IndexRedirect = _react2['default'].createClass({
+      displayName: 'IndexRedirect',
+      statics: {createRouteFromReactElement: function createRouteFromReactElement(element, parentRoute) {
+          if (parentRoute) {
+            parentRoute.indexRoute = _Redirect2['default'].createRouteFromReactElement(element);
+          } else {
+            process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'An <IndexRedirect> does not make sense at the root of your route config') : undefined;
+          }
+        }},
+      propTypes: {
+        to: string.isRequired,
+        query: object,
+        state: object,
+        onEnter: _PropTypes.falsy,
+        children: _PropTypes.falsy
+      },
+      render: function render() {
         !false ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, '<IndexRedirect> elements are for router configuration only and should not be rendered') : _invariant2['default'](false) : undefined;
-      };
-      return IndexRedirect;
-    })(_react.Component);
-    IndexRedirect.propTypes = {
-      to: string.isRequired,
-      query: object,
-      state: object,
-      onEnter: _PropTypes.falsy,
-      children: _PropTypes.falsy
-    };
-    IndexRedirect.createRouteFromReactElement = function(element, parentRoute) {
-      if (parentRoute) {
-        parentRoute.indexRoute = _Redirect2['default'].createRouteFromReactElement(element);
-      } else {
-        process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'An <IndexRedirect> does not make sense at the root of your route config') : undefined;
       }
-    };
+    });
     exports['default'] = IndexRedirect;
     module.exports = exports['default'];
   })($__require('1e'));
@@ -8102,7 +7638,7 @@ $__System.registerDynamic("55", ["26", "2f", "5", "53", "50", "1e"], true, funct
   return module.exports;
 });
 
-$__System.registerDynamic("56", ["5", "57"], true, function($__require, exports, module) {
+$__System.registerDynamic("58", ["5", "59"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -8123,201 +7659,436 @@ $__System.registerDynamic("56", ["5", "57"], true, function($__require, exports,
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {'default': obj};
   }
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError('Cannot call a class as a function');
-    }
-  }
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== 'function' && superClass !== null) {
-      throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-    }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }});
-    if (superClass)
-      Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
   var _react = $__require('5');
   var _react2 = _interopRequireDefault(_react);
-  var _Link = $__require('57');
+  var _Link = $__require('59');
   var _Link2 = _interopRequireDefault(_Link);
-  var IndexLink = (function(_Component) {
-    _inherits(IndexLink, _Component);
-    function IndexLink() {
-      _classCallCheck(this, IndexLink);
-      _Component.apply(this, arguments);
-    }
-    IndexLink.prototype.render = function render() {
+  var IndexLink = _react2['default'].createClass({
+    displayName: 'IndexLink',
+    render: function render() {
       return _react2['default'].createElement(_Link2['default'], _extends({}, this.props, {onlyActiveOnIndex: true}));
-    };
-    return IndexLink;
-  })(_react.Component);
+    }
+  });
   exports['default'] = IndexLink;
   module.exports = exports['default'];
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("57", ["5"], true, function($__require, exports, module) {
+$__System.registerDynamic("59", ["5", "4d", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    function _objectWithoutProperties(obj, keys) {
+      var target = {};
+      for (var i in obj) {
+        if (keys.indexOf(i) >= 0)
+          continue;
+        if (!Object.prototype.hasOwnProperty.call(obj, i))
+          continue;
+        target[i] = obj[i];
+      }
+      return target;
+    }
+    var _react = $__require('5');
+    var _react2 = _interopRequireDefault(_react);
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _React$PropTypes = _react2['default'].PropTypes;
+    var bool = _React$PropTypes.bool;
+    var object = _React$PropTypes.object;
+    var string = _React$PropTypes.string;
+    var func = _React$PropTypes.func;
+    var oneOfType = _React$PropTypes.oneOfType;
+    function isLeftClickEvent(event) {
+      return event.button === 0;
+    }
+    function isModifiedEvent(event) {
+      return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+    }
+    function isEmptyObject(object) {
+      for (var p in object) {
+        if (object.hasOwnProperty(p))
+          return false;
+      }
+      return true;
+    }
+    function createLocationDescriptor(to, _ref) {
+      var query = _ref.query;
+      var hash = _ref.hash;
+      var state = _ref.state;
+      if (query || hash || state) {
+        return {
+          pathname: to,
+          query: query,
+          hash: hash,
+          state: state
+        };
+      }
+      return to;
+    }
+    var Link = _react2['default'].createClass({
+      displayName: 'Link',
+      contextTypes: {router: object},
+      propTypes: {
+        to: oneOfType([string, object]).isRequired,
+        query: object,
+        hash: string,
+        state: object,
+        activeStyle: object,
+        activeClassName: string,
+        onlyActiveOnIndex: bool.isRequired,
+        onClick: func
+      },
+      getDefaultProps: function getDefaultProps() {
+        return {
+          onlyActiveOnIndex: false,
+          className: '',
+          style: {}
+        };
+      },
+      handleClick: function handleClick(event) {
+        var allowTransition = true;
+        if (this.props.onClick)
+          this.props.onClick(event);
+        if (isModifiedEvent(event) || !isLeftClickEvent(event))
+          return;
+        if (event.defaultPrevented === true)
+          allowTransition = false;
+        if (this.props.target) {
+          if (!allowTransition)
+            event.preventDefault();
+          return;
+        }
+        event.preventDefault();
+        if (allowTransition) {
+          var _props = this.props;
+          var to = _props.to;
+          var query = _props.query;
+          var hash = _props.hash;
+          var state = _props.state;
+          var _location = createLocationDescriptor(to, {
+            query: query,
+            hash: hash,
+            state: state
+          });
+          this.context.router.push(_location);
+        }
+      },
+      render: function render() {
+        var _props2 = this.props;
+        var to = _props2.to;
+        var query = _props2.query;
+        var hash = _props2.hash;
+        var state = _props2.state;
+        var activeClassName = _props2.activeClassName;
+        var activeStyle = _props2.activeStyle;
+        var onlyActiveOnIndex = _props2.onlyActiveOnIndex;
+        var props = _objectWithoutProperties(_props2, ['to', 'query', 'hash', 'state', 'activeClassName', 'activeStyle', 'onlyActiveOnIndex']);
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](!(query || hash || state), 'the `query`, `hash`, and `state` props on `<Link>` are deprecated, use `<Link to={{ pathname, query, hash, state }}/>. http://tiny.cc/router-isActivedeprecated') : undefined;
+        var router = this.context.router;
+        if (router) {
+          var _location2 = createLocationDescriptor(to, {
+            query: query,
+            hash: hash,
+            state: state
+          });
+          props.href = router.createHref(_location2);
+          if (activeClassName || activeStyle != null && !isEmptyObject(activeStyle)) {
+            if (router.isActive(_location2, onlyActiveOnIndex)) {
+              if (activeClassName)
+                props.className += props.className === '' ? activeClassName : ' ' + activeClassName;
+              if (activeStyle)
+                props.style = _extends({}, props.style, activeStyle);
+            }
+          }
+        }
+        return _react2['default'].createElement('a', _extends({}, props, {onClick: this.handleClick}));
+      }
+    });
+    exports['default'] = Link;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4a", ["5a", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    exports.createRouterObject = createRouterObject;
+    exports.createRoutingHistory = createRoutingHistory;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _deprecateObjectProperties = $__require('5a');
+    var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
+    function createRouterObject(history, transitionManager) {
+      return _extends({}, history, {
+        setRouteLeaveHook: transitionManager.listenBeforeLeavingRoute,
+        isActive: transitionManager.isActive
+      });
+    }
+    function createRoutingHistory(history, transitionManager) {
+      history = _extends({}, history, transitionManager);
+      if (process.env.NODE_ENV !== 'production') {
+        history = _deprecateObjectProperties2['default'](history, '`props.history` and `context.history` are deprecated. Please use `context.router`. http://tiny.cc/router-contextchanges');
+      }
+      return history;
+    }
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5b", ["56"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
-  var _extends = Object.assign || function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  var _PatternUtils = $__require('56');
+  function getRouteParams(route, params) {
+    var routeParams = {};
+    if (!route.path)
+      return routeParams;
+    var paramNames = _PatternUtils.getParamNames(route.path);
+    for (var p in params) {
+      if (params.hasOwnProperty(p) && paramNames.indexOf(p) !== -1)
+        routeParams[p] = params[p];
     }
-    return target;
-  };
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
+    return routeParams;
   }
-  function _objectWithoutProperties(obj, keys) {
-    var target = {};
-    for (var i in obj) {
-      if (keys.indexOf(i) >= 0)
-        continue;
-      if (!Object.prototype.hasOwnProperty.call(obj, i))
-        continue;
-      target[i] = obj[i];
-    }
-    return target;
-  }
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError('Cannot call a class as a function');
-    }
-  }
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== 'function' && superClass !== null) {
-      throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-    }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }});
-    if (superClass)
-      Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
-  var _react = $__require('5');
-  var _react2 = _interopRequireDefault(_react);
-  var _React$PropTypes = _react2['default'].PropTypes;
-  var bool = _React$PropTypes.bool;
-  var object = _React$PropTypes.object;
-  var string = _React$PropTypes.string;
-  var func = _React$PropTypes.func;
-  function isLeftClickEvent(event) {
-    return event.button === 0;
-  }
-  function isModifiedEvent(event) {
-    return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
-  }
-  function isEmptyObject(object) {
-    for (var p in object) {
-      if (object.hasOwnProperty(p))
-        return false;
-    }
-    return true;
-  }
-  var Link = (function(_Component) {
-    _inherits(Link, _Component);
-    function Link() {
-      _classCallCheck(this, Link);
-      _Component.apply(this, arguments);
-    }
-    Link.prototype.handleClick = function handleClick(event) {
-      var allowTransition = true;
-      if (this.props.onClick)
-        this.props.onClick(event);
-      if (isModifiedEvent(event) || !isLeftClickEvent(event))
-        return;
-      if (event.defaultPrevented === true)
-        allowTransition = false;
-      if (this.props.target) {
-        if (!allowTransition)
-          event.preventDefault();
-        return;
-      }
-      event.preventDefault();
-      if (allowTransition) {
-        var _props = this.props;
-        var state = _props.state;
-        var to = _props.to;
-        var query = _props.query;
-        var hash = _props.hash;
-        if (hash)
-          to += hash;
-        this.context.history.pushState(state, to, query);
-      }
-    };
-    Link.prototype.render = function render() {
-      var _this = this;
-      var _props2 = this.props;
-      var to = _props2.to;
-      var query = _props2.query;
-      var hash = _props2.hash;
-      var state = _props2.state;
-      var activeClassName = _props2.activeClassName;
-      var activeStyle = _props2.activeStyle;
-      var onlyActiveOnIndex = _props2.onlyActiveOnIndex;
-      var props = _objectWithoutProperties(_props2, ['to', 'query', 'hash', 'state', 'activeClassName', 'activeStyle', 'onlyActiveOnIndex']);
-      props.onClick = function(e) {
-        return _this.handleClick(e);
-      };
-      var history = this.context.history;
-      if (history) {
-        props.href = history.createHref(to, query);
-        if (hash)
-          props.href += hash;
-        if (activeClassName || activeStyle != null && !isEmptyObject(activeStyle)) {
-          if (history.isActive(to, query, onlyActiveOnIndex)) {
-            if (activeClassName)
-              props.className += props.className === '' ? activeClassName : ' ' + activeClassName;
-            if (activeStyle)
-              props.style = _extends({}, props.style, activeStyle);
-          }
-        }
-      }
-      return _react2['default'].createElement('a', props);
-    };
-    return Link;
-  })(_react.Component);
-  Link.contextTypes = {history: object};
-  Link.propTypes = {
-    to: string.isRequired,
-    query: object,
-    hash: string,
-    state: object,
-    activeStyle: object,
-    activeClassName: string,
-    onlyActiveOnIndex: bool.isRequired,
-    onClick: func
-  };
-  Link.defaultProps = {
-    onlyActiveOnIndex: false,
-    className: '',
-    style: {}
-  };
-  exports['default'] = Link;
+  exports['default'] = getRouteParams;
   module.exports = exports['default'];
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("50", ["5"], true, function($__require, exports, module) {
+$__System.registerDynamic("5a", ["4d", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    exports['default'] = deprecateObjectProperties;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var useMembrane = false;
+    if (process.env.NODE_ENV !== 'production') {
+      try {
+        if (Object.defineProperty({}, 'x', {get: function get() {
+            return true;
+          }}).x) {
+          useMembrane = true;
+        }
+      } catch (e) {}
+    }
+    function deprecateObjectProperties(object, message) {
+      if (!useMembrane)
+        return object;
+      var membrane = {};
+      var _loop = function(prop) {
+        if (typeof object[prop] === 'function') {
+          membrane[prop] = function() {
+            process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, message) : undefined;
+            return object[prop].apply(object, arguments);
+          };
+        } else {
+          Object.defineProperty(membrane, prop, {
+            configurable: false,
+            enumerable: false,
+            get: function get() {
+              process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, message) : undefined;
+              return object[prop];
+            }
+          });
+        }
+      };
+      for (var prop in object) {
+        _loop(prop);
+      }
+      return membrane;
+    }
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4c", ["37", "5", "5a", "5b", "49", "4d", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _invariant = $__require('37');
+    var _invariant2 = _interopRequireDefault(_invariant);
+    var _react = $__require('5');
+    var _react2 = _interopRequireDefault(_react);
+    var _deprecateObjectProperties = $__require('5a');
+    var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
+    var _getRouteParams = $__require('5b');
+    var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
+    var _RouteUtils = $__require('49');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _React$PropTypes = _react2['default'].PropTypes;
+    var array = _React$PropTypes.array;
+    var func = _React$PropTypes.func;
+    var object = _React$PropTypes.object;
+    var RouterContext = _react2['default'].createClass({
+      displayName: 'RouterContext',
+      propTypes: {
+        history: object,
+        router: object.isRequired,
+        location: object.isRequired,
+        routes: array.isRequired,
+        params: object.isRequired,
+        components: array.isRequired,
+        createElement: func.isRequired
+      },
+      getDefaultProps: function getDefaultProps() {
+        return {createElement: _react2['default'].createElement};
+      },
+      childContextTypes: {
+        history: object,
+        location: object.isRequired,
+        router: object.isRequired
+      },
+      getChildContext: function getChildContext() {
+        var _props = this.props;
+        var router = _props.router;
+        var history = _props.history;
+        var location = _props.location;
+        if (!router) {
+          process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, '`<RouterContext>` expects a `router` rather than a `history`') : undefined;
+          router = _extends({}, history, {setRouteLeaveHook: history.listenBeforeLeavingRoute});
+          delete router.listenBeforeLeavingRoute;
+        }
+        if (process.env.NODE_ENV !== 'production') {
+          location = _deprecateObjectProperties2['default'](location, '`context.location` is deprecated, please use a route component\'s `props.location` instead. http://tiny.cc/router-accessinglocation');
+        }
+        return {
+          history: history,
+          location: location,
+          router: router
+        };
+      },
+      createElement: function createElement(component, props) {
+        return component == null ? null : this.props.createElement(component, props);
+      },
+      render: function render() {
+        var _this = this;
+        var _props2 = this.props;
+        var history = _props2.history;
+        var location = _props2.location;
+        var routes = _props2.routes;
+        var params = _props2.params;
+        var components = _props2.components;
+        var element = null;
+        if (components) {
+          element = components.reduceRight(function(element, components, index) {
+            if (components == null)
+              return element;
+            var route = routes[index];
+            var routeParams = _getRouteParams2['default'](route, params);
+            var props = {
+              history: history,
+              location: location,
+              params: params,
+              route: route,
+              routeParams: routeParams,
+              routes: routes
+            };
+            if (_RouteUtils.isReactChildren(element)) {
+              props.children = element;
+            } else if (element) {
+              for (var prop in element) {
+                if (element.hasOwnProperty(prop))
+                  props[prop] = element[prop];
+              }
+            }
+            if (typeof components === 'object') {
+              var elements = {};
+              for (var key in components) {
+                if (components.hasOwnProperty(key)) {
+                  elements[key] = _this.createElement(components[key], _extends({key: key}, props));
+                }
+              }
+              return elements;
+            }
+            return _this.createElement(components, props);
+          }, element);
+        }
+        !(element === null || element === false || _react2['default'].isValidElement(element)) ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'The root route must render a single element') : _invariant2['default'](false) : undefined;
+        return element;
+      }
+    });
+    exports['default'] = RouterContext;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("52", ["5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -8372,7 +8143,97 @@ $__System.registerDynamic("50", ["5"], true, function($__require, exports, modul
   return module.exports;
 });
 
-$__System.registerDynamic("58", ["26", "59", "54", "4b", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("49", ["5", "4d", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    exports.isReactChildren = isReactChildren;
+    exports.createRouteFromReactElement = createRouteFromReactElement;
+    exports.createRoutesFromReactChildren = createRoutesFromReactChildren;
+    exports.createRoutes = createRoutes;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _react = $__require('5');
+    var _react2 = _interopRequireDefault(_react);
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    function isValidChild(object) {
+      return object == null || _react2['default'].isValidElement(object);
+    }
+    function isReactChildren(object) {
+      return isValidChild(object) || Array.isArray(object) && object.every(isValidChild);
+    }
+    function checkPropTypes(componentName, propTypes, props) {
+      componentName = componentName || 'UnknownComponent';
+      for (var propName in propTypes) {
+        if (propTypes.hasOwnProperty(propName)) {
+          var error = propTypes[propName](props, propName, componentName);
+          if (error instanceof Error)
+            process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, error.message) : undefined;
+        }
+      }
+    }
+    function createRoute(defaultProps, props) {
+      return _extends({}, defaultProps, props);
+    }
+    function createRouteFromReactElement(element) {
+      var type = element.type;
+      var route = createRoute(type.defaultProps, element.props);
+      if (type.propTypes)
+        checkPropTypes(type.displayName || type.name, type.propTypes, route);
+      if (route.children) {
+        var childRoutes = createRoutesFromReactChildren(route.children, route);
+        if (childRoutes.length)
+          route.childRoutes = childRoutes;
+        delete route.children;
+      }
+      return route;
+    }
+    function createRoutesFromReactChildren(children, parentRoute) {
+      var routes = [];
+      _react2['default'].Children.forEach(children, function(element) {
+        if (_react2['default'].isValidElement(element)) {
+          if (element.type.createRouteFromReactElement) {
+            var route = element.type.createRouteFromReactElement(element, parentRoute);
+            if (route)
+              routes.push(route);
+          } else {
+            routes.push(createRouteFromReactElement(element));
+          }
+        }
+      });
+      return routes;
+    }
+    function createRoutes(routes) {
+      if (isReactChildren(routes)) {
+        routes = createRoutesFromReactChildren(routes);
+      } else if (routes && !Array.isArray(routes)) {
+        routes = [routes];
+      }
+      return routes;
+    }
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5c", ["4d", "5d", "56", "49", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -8383,21 +8244,30 @@ $__System.registerDynamic("58", ["26", "59", "54", "4b", "1e"], true, function($
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    var _AsyncUtils = $__require('59');
-    var _PatternUtils = $__require('54');
-    var _RouteUtils = $__require('4b');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _AsyncUtils = $__require('5d');
+    var _PatternUtils = $__require('56');
+    var _RouteUtils = $__require('49');
     function getChildRoutes(route, location, callback) {
       if (route.childRoutes) {
-        callback(null, route.childRoutes);
-      } else if (route.getChildRoutes) {
-        route.getChildRoutes(location, function(error, childRoutes) {
-          callback(error, !error && _RouteUtils.createRoutes(childRoutes));
-        });
-      } else {
-        callback();
+        return [null, route.childRoutes];
       }
+      if (!route.getChildRoutes) {
+        return [];
+      }
+      var sync = true,
+          result = undefined;
+      route.getChildRoutes(location, function(error, childRoutes) {
+        childRoutes = !error && _RouteUtils.createRoutes(childRoutes);
+        if (sync) {
+          result = [error, childRoutes];
+          return;
+        }
+        callback(error, childRoutes);
+      });
+      sync = false;
+      return result;
     }
     function getIndexRoute(route, location, callback) {
       if (route.indexRoute) {
@@ -8468,12 +8338,12 @@ $__System.registerDynamic("58", ["26", "59", "54", "4b", "1e"], true, function($
               } else {
                 if (Array.isArray(indexRoute)) {
                   var _match$routes;
-                  process.env.NODE_ENV !== 'production' ? _warning2['default'](indexRoute.every(function(route) {
+                  process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](indexRoute.every(function(route) {
                     return !route.path;
                   }), 'Index routes should not have paths') : undefined;
                   (_match$routes = match.routes).push.apply(_match$routes, indexRoute);
                 } else if (indexRoute) {
-                  process.env.NODE_ENV !== 'production' ? _warning2['default'](!indexRoute.path, 'Index routes should not have paths') : undefined;
+                  process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](!indexRoute.path, 'Index routes should not have paths') : undefined;
                   match.routes.push(indexRoute);
                 }
                 callback(null, match);
@@ -8486,7 +8356,7 @@ $__System.registerDynamic("58", ["26", "59", "54", "4b", "1e"], true, function($
         }
       }
       if (remainingPathname != null || route.childRoutes) {
-        getChildRoutes(route, location, function(error, childRoutes) {
+        var onChildRoutes = function onChildRoutes(error, childRoutes) {
           if (error) {
             callback(error);
           } else if (childRoutes) {
@@ -8503,7 +8373,11 @@ $__System.registerDynamic("58", ["26", "59", "54", "4b", "1e"], true, function($
           } else {
             callback();
           }
-        });
+        };
+        var result = getChildRoutes(route, location, onChildRoutes);
+        if (result) {
+          onChildRoutes.apply(undefined, result);
+        }
       } else {
         callback();
       }
@@ -8531,14 +8405,14 @@ $__System.registerDynamic("58", ["26", "59", "54", "4b", "1e"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("5a", ["59"], true, function($__require, exports, module) {
+$__System.registerDynamic("5e", ["5d"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
-  var _AsyncUtils = $__require('59');
+  var _AsyncUtils = $__require('5d');
   function getComponentsForRoute(location, route, callback) {
     if (route.component || route.components) {
       callback(null, route.component || route.components);
@@ -8561,14 +8435,15 @@ $__System.registerDynamic("5a", ["59"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("5b", ["54"], true, function($__require, exports, module) {
+$__System.registerDynamic("5f", ["56"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
-  var _PatternUtils = $__require('54');
+  exports['default'] = isActive;
+  var _PatternUtils = $__require('56');
   function deepEqual(a, b) {
     if (a == b)
       return true;
@@ -8645,42 +8520,65 @@ $__System.registerDynamic("5b", ["54"], true, function($__require, exports, modu
       return true;
     return deepEqual(query, activeQuery);
   }
-  function isActive(pathname, query, indexOnly, location, routes, params) {
-    if (location == null)
+  function isActive(_ref, indexOnly, currentLocation, routes, params) {
+    var pathname = _ref.pathname;
+    var query = _ref.query;
+    if (currentLocation == null)
       return false;
     if (!routeIsActive(pathname, routes, params, indexOnly))
       return false;
-    return queryIsActive(query, location.query);
+    return queryIsActive(query, currentLocation.query);
   }
-  exports['default'] = isActive;
   module.exports = exports['default'];
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("59", [], true, function($__require, exports, module) {
+$__System.registerDynamic("5d", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
+  var _slice = Array.prototype.slice;
   exports.loopAsync = loopAsync;
   exports.mapAsync = mapAsync;
   function loopAsync(turns, work, callback) {
     var currentTurn = 0,
         isDone = false;
+    var sync = false,
+        hasNext = false,
+        doneArgs = undefined;
     function done() {
       isDone = true;
+      if (sync) {
+        doneArgs = [].concat(_slice.call(arguments));
+        return;
+      }
       callback.apply(this, arguments);
     }
     function next() {
-      if (isDone)
+      if (isDone) {
         return;
-      if (currentTurn < turns) {
+      }
+      hasNext = true;
+      if (sync) {
+        return;
+      }
+      sync = true;
+      while (!isDone && currentTurn < turns && hasNext) {
+        hasNext = false;
         work.call(this, currentTurn++, next, done);
-      } else {
-        done.apply(this, arguments);
+      }
+      sync = false;
+      if (isDone) {
+        callback.apply(this, doneArgs);
+        return;
+      }
+      if (currentTurn >= turns && hasNext) {
+        isDone = true;
+        callback();
       }
     }
     next();
@@ -8715,599 +8613,7 @@ $__System.registerDynamic("59", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("5c", ["59"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  exports.runEnterHooks = runEnterHooks;
-  exports.runLeaveHooks = runLeaveHooks;
-  var _AsyncUtils = $__require('59');
-  function createEnterHook(hook, route) {
-    return function(a, b, callback) {
-      hook.apply(route, arguments);
-      if (hook.length < 3) {
-        callback();
-      }
-    };
-  }
-  function getEnterHooks(routes) {
-    return routes.reduce(function(hooks, route) {
-      if (route.onEnter)
-        hooks.push(createEnterHook(route.onEnter, route));
-      return hooks;
-    }, []);
-  }
-  function runEnterHooks(routes, nextState, callback) {
-    var hooks = getEnterHooks(routes);
-    if (!hooks.length) {
-      callback();
-      return;
-    }
-    var redirectInfo = undefined;
-    function replaceState(state, pathname, query) {
-      redirectInfo = {
-        pathname: pathname,
-        query: query,
-        state: state
-      };
-    }
-    _AsyncUtils.loopAsync(hooks.length, function(index, next, done) {
-      hooks[index](nextState, replaceState, function(error) {
-        if (error || redirectInfo) {
-          done(error, redirectInfo);
-        } else {
-          next();
-        }
-      });
-    }, callback);
-  }
-  function runLeaveHooks(routes) {
-    for (var i = 0,
-        len = routes.length; i < len; ++i) {
-      if (routes[i].onLeave)
-        routes[i].onLeave.call(routes[i]);
-    }
-  }
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("5d", ["54"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var _PatternUtils = $__require('54');
-  function routeParamsChanged(route, prevState, nextState) {
-    if (!route.path)
-      return false;
-    var paramNames = _PatternUtils.getParamNames(route.path);
-    return paramNames.some(function(paramName) {
-      return prevState.params[paramName] !== nextState.params[paramName];
-    });
-  }
-  function computeChangedRoutes(prevState, nextState) {
-    var prevRoutes = prevState && prevState.routes;
-    var nextRoutes = nextState.routes;
-    var leaveRoutes = undefined,
-        enterRoutes = undefined;
-    if (prevRoutes) {
-      leaveRoutes = prevRoutes.filter(function(route) {
-        return nextRoutes.indexOf(route) === -1 || routeParamsChanged(route, prevState, nextState);
-      });
-      leaveRoutes.reverse();
-      enterRoutes = nextRoutes.filter(function(route) {
-        return prevRoutes.indexOf(route) === -1 || leaveRoutes.indexOf(route) !== -1;
-      });
-    } else {
-      leaveRoutes = [];
-      enterRoutes = nextRoutes;
-    }
-    return {
-      leaveRoutes: leaveRoutes,
-      enterRoutes: enterRoutes
-    };
-  }
-  exports['default'] = computeChangedRoutes;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("5e", ["5f"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var Utils = $__require('5f');
-  var internals = {
-    delimiter: '&',
-    depth: 5,
-    arrayLimit: 20,
-    parameterLimit: 1000,
-    strictNullHandling: false,
-    plainObjects: false,
-    allowPrototypes: false
-  };
-  internals.parseValues = function(str, options) {
-    var obj = {};
-    var parts = str.split(options.delimiter, options.parameterLimit === Infinity ? undefined : options.parameterLimit);
-    for (var i = 0,
-        il = parts.length; i < il; ++i) {
-      var part = parts[i];
-      var pos = part.indexOf(']=') === -1 ? part.indexOf('=') : part.indexOf(']=') + 1;
-      if (pos === -1) {
-        obj[Utils.decode(part)] = '';
-        if (options.strictNullHandling) {
-          obj[Utils.decode(part)] = null;
-        }
-      } else {
-        var key = Utils.decode(part.slice(0, pos));
-        var val = Utils.decode(part.slice(pos + 1));
-        if (!Object.prototype.hasOwnProperty.call(obj, key)) {
-          obj[key] = val;
-        } else {
-          obj[key] = [].concat(obj[key]).concat(val);
-        }
-      }
-    }
-    return obj;
-  };
-  internals.parseObject = function(chain, val, options) {
-    if (!chain.length) {
-      return val;
-    }
-    var root = chain.shift();
-    var obj;
-    if (root === '[]') {
-      obj = [];
-      obj = obj.concat(internals.parseObject(chain, val, options));
-    } else {
-      obj = options.plainObjects ? Object.create(null) : {};
-      var cleanRoot = root[0] === '[' && root[root.length - 1] === ']' ? root.slice(1, root.length - 1) : root;
-      var index = parseInt(cleanRoot, 10);
-      var indexString = '' + index;
-      if (!isNaN(index) && root !== cleanRoot && indexString === cleanRoot && index >= 0 && (options.parseArrays && index <= options.arrayLimit)) {
-        obj = [];
-        obj[index] = internals.parseObject(chain, val, options);
-      } else {
-        obj[cleanRoot] = internals.parseObject(chain, val, options);
-      }
-    }
-    return obj;
-  };
-  internals.parseKeys = function(key, val, options) {
-    if (!key) {
-      return;
-    }
-    if (options.allowDots) {
-      key = key.replace(/\.([^\.\[]+)/g, '[$1]');
-    }
-    var parent = /^([^\[\]]*)/;
-    var child = /(\[[^\[\]]*\])/g;
-    var segment = parent.exec(key);
-    var keys = [];
-    if (segment[1]) {
-      if (!options.plainObjects && Object.prototype.hasOwnProperty(segment[1])) {
-        if (!options.allowPrototypes) {
-          return;
-        }
-      }
-      keys.push(segment[1]);
-    }
-    var i = 0;
-    while ((segment = child.exec(key)) !== null && i < options.depth) {
-      ++i;
-      if (!options.plainObjects && Object.prototype.hasOwnProperty(segment[1].replace(/\[|\]/g, ''))) {
-        if (!options.allowPrototypes) {
-          continue;
-        }
-      }
-      keys.push(segment[1]);
-    }
-    if (segment) {
-      keys.push('[' + key.slice(segment.index) + ']');
-    }
-    return internals.parseObject(keys, val, options);
-  };
-  module.exports = function(str, options) {
-    options = options || {};
-    options.delimiter = typeof options.delimiter === 'string' || Utils.isRegExp(options.delimiter) ? options.delimiter : internals.delimiter;
-    options.depth = typeof options.depth === 'number' ? options.depth : internals.depth;
-    options.arrayLimit = typeof options.arrayLimit === 'number' ? options.arrayLimit : internals.arrayLimit;
-    options.parseArrays = options.parseArrays !== false;
-    options.allowDots = options.allowDots !== false;
-    options.plainObjects = typeof options.plainObjects === 'boolean' ? options.plainObjects : internals.plainObjects;
-    options.allowPrototypes = typeof options.allowPrototypes === 'boolean' ? options.allowPrototypes : internals.allowPrototypes;
-    options.parameterLimit = typeof options.parameterLimit === 'number' ? options.parameterLimit : internals.parameterLimit;
-    options.strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : internals.strictNullHandling;
-    if (str === '' || str === null || typeof str === 'undefined') {
-      return options.plainObjects ? Object.create(null) : {};
-    }
-    var tempObj = typeof str === 'string' ? internals.parseValues(str, options) : str;
-    var obj = options.plainObjects ? Object.create(null) : {};
-    var keys = Object.keys(tempObj);
-    for (var i = 0,
-        il = keys.length; i < il; ++i) {
-      var key = keys[i];
-      var newObj = internals.parseKeys(key, tempObj[key], options);
-      obj = Utils.merge(obj, newObj, options);
-    }
-    return Utils.compact(obj);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("5f", [], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var internals = {};
-  internals.hexTable = new Array(256);
-  for (var h = 0; h < 256; ++h) {
-    internals.hexTable[h] = '%' + ((h < 16 ? '0' : '') + h.toString(16)).toUpperCase();
-  }
-  exports.arrayToObject = function(source, options) {
-    var obj = options.plainObjects ? Object.create(null) : {};
-    for (var i = 0,
-        il = source.length; i < il; ++i) {
-      if (typeof source[i] !== 'undefined') {
-        obj[i] = source[i];
-      }
-    }
-    return obj;
-  };
-  exports.merge = function(target, source, options) {
-    if (!source) {
-      return target;
-    }
-    if (typeof source !== 'object') {
-      if (Array.isArray(target)) {
-        target.push(source);
-      } else if (typeof target === 'object') {
-        target[source] = true;
-      } else {
-        target = [target, source];
-      }
-      return target;
-    }
-    if (typeof target !== 'object') {
-      target = [target].concat(source);
-      return target;
-    }
-    if (Array.isArray(target) && !Array.isArray(source)) {
-      target = exports.arrayToObject(target, options);
-    }
-    var keys = Object.keys(source);
-    for (var k = 0,
-        kl = keys.length; k < kl; ++k) {
-      var key = keys[k];
-      var value = source[key];
-      if (!Object.prototype.hasOwnProperty.call(target, key)) {
-        target[key] = value;
-      } else {
-        target[key] = exports.merge(target[key], value, options);
-      }
-    }
-    return target;
-  };
-  exports.decode = function(str) {
-    try {
-      return decodeURIComponent(str.replace(/\+/g, ' '));
-    } catch (e) {
-      return str;
-    }
-  };
-  exports.encode = function(str) {
-    if (str.length === 0) {
-      return str;
-    }
-    if (typeof str !== 'string') {
-      str = '' + str;
-    }
-    var out = '';
-    for (var i = 0,
-        il = str.length; i < il; ++i) {
-      var c = str.charCodeAt(i);
-      if (c === 0x2D || c === 0x2E || c === 0x5F || c === 0x7E || (c >= 0x30 && c <= 0x39) || (c >= 0x41 && c <= 0x5A) || (c >= 0x61 && c <= 0x7A)) {
-        out += str[i];
-        continue;
-      }
-      if (c < 0x80) {
-        out += internals.hexTable[c];
-        continue;
-      }
-      if (c < 0x800) {
-        out += internals.hexTable[0xC0 | (c >> 6)] + internals.hexTable[0x80 | (c & 0x3F)];
-        continue;
-      }
-      if (c < 0xD800 || c >= 0xE000) {
-        out += internals.hexTable[0xE0 | (c >> 12)] + internals.hexTable[0x80 | ((c >> 6) & 0x3F)] + internals.hexTable[0x80 | (c & 0x3F)];
-        continue;
-      }
-      ++i;
-      c = 0x10000 + (((c & 0x3FF) << 10) | (str.charCodeAt(i) & 0x3FF));
-      out += internals.hexTable[0xF0 | (c >> 18)] + internals.hexTable[0x80 | ((c >> 12) & 0x3F)] + internals.hexTable[0x80 | ((c >> 6) & 0x3F)] + internals.hexTable[0x80 | (c & 0x3F)];
-    }
-    return out;
-  };
-  exports.compact = function(obj, refs) {
-    if (typeof obj !== 'object' || obj === null) {
-      return obj;
-    }
-    refs = refs || [];
-    var lookup = refs.indexOf(obj);
-    if (lookup !== -1) {
-      return refs[lookup];
-    }
-    refs.push(obj);
-    if (Array.isArray(obj)) {
-      var compacted = [];
-      for (var i = 0,
-          il = obj.length; i < il; ++i) {
-        if (typeof obj[i] !== 'undefined') {
-          compacted.push(obj[i]);
-        }
-      }
-      return compacted;
-    }
-    var keys = Object.keys(obj);
-    for (i = 0, il = keys.length; i < il; ++i) {
-      var key = keys[i];
-      obj[key] = exports.compact(obj[key], refs);
-    }
-    return obj;
-  };
-  exports.isRegExp = function(obj) {
-    return Object.prototype.toString.call(obj) === '[object RegExp]';
-  };
-  exports.isBuffer = function(obj) {
-    if (obj === null || typeof obj === 'undefined') {
-      return false;
-    }
-    return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("60", ["5f"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var Utils = $__require('5f');
-  var internals = {
-    delimiter: '&',
-    arrayPrefixGenerators: {
-      brackets: function(prefix, key) {
-        return prefix + '[]';
-      },
-      indices: function(prefix, key) {
-        return prefix + '[' + key + ']';
-      },
-      repeat: function(prefix, key) {
-        return prefix;
-      }
-    },
-    strictNullHandling: false
-  };
-  internals.stringify = function(obj, prefix, generateArrayPrefix, strictNullHandling, filter) {
-    if (typeof filter === 'function') {
-      obj = filter(prefix, obj);
-    } else if (Utils.isBuffer(obj)) {
-      obj = obj.toString();
-    } else if (obj instanceof Date) {
-      obj = obj.toISOString();
-    } else if (obj === null) {
-      if (strictNullHandling) {
-        return Utils.encode(prefix);
-      }
-      obj = '';
-    }
-    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean') {
-      return [Utils.encode(prefix) + '=' + Utils.encode(obj)];
-    }
-    var values = [];
-    if (typeof obj === 'undefined') {
-      return values;
-    }
-    var objKeys = Array.isArray(filter) ? filter : Object.keys(obj);
-    for (var i = 0,
-        il = objKeys.length; i < il; ++i) {
-      var key = objKeys[i];
-      if (Array.isArray(obj)) {
-        values = values.concat(internals.stringify(obj[key], generateArrayPrefix(prefix, key), generateArrayPrefix, strictNullHandling, filter));
-      } else {
-        values = values.concat(internals.stringify(obj[key], prefix + '[' + key + ']', generateArrayPrefix, strictNullHandling, filter));
-      }
-    }
-    return values;
-  };
-  module.exports = function(obj, options) {
-    options = options || {};
-    var delimiter = typeof options.delimiter === 'undefined' ? internals.delimiter : options.delimiter;
-    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : internals.strictNullHandling;
-    var objKeys;
-    var filter;
-    if (typeof options.filter === 'function') {
-      filter = options.filter;
-      obj = filter('', obj);
-    } else if (Array.isArray(options.filter)) {
-      objKeys = filter = options.filter;
-    }
-    var keys = [];
-    if (typeof obj !== 'object' || obj === null) {
-      return '';
-    }
-    var arrayFormat;
-    if (options.arrayFormat in internals.arrayPrefixGenerators) {
-      arrayFormat = options.arrayFormat;
-    } else if ('indices' in options) {
-      arrayFormat = options.indices ? 'indices' : 'repeat';
-    } else {
-      arrayFormat = 'indices';
-    }
-    var generateArrayPrefix = internals.arrayPrefixGenerators[arrayFormat];
-    if (!objKeys) {
-      objKeys = Object.keys(obj);
-    }
-    for (var i = 0,
-        il = objKeys.length; i < il; ++i) {
-      var key = objKeys[i];
-      keys = keys.concat(internals.stringify(obj[key], key, generateArrayPrefix, strictNullHandling, filter));
-    }
-    return keys.join(delimiter);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("61", ["60", "5e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var Stringify = $__require('60');
-  var Parse = $__require('5e');
-  var internals = {};
-  module.exports = {
-    stringify: Stringify,
-    parse: Parse
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("62", ["61"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = $__require('61');
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("63", ["62", "44", "46"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var _extends = Object.assign || function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
-  }
-  function _objectWithoutProperties(obj, keys) {
-    var target = {};
-    for (var i in obj) {
-      if (keys.indexOf(i) >= 0)
-        continue;
-      if (!Object.prototype.hasOwnProperty.call(obj, i))
-        continue;
-      target[i] = obj[i];
-    }
-    return target;
-  }
-  var _qs = $__require('62');
-  var _qs2 = _interopRequireDefault(_qs);
-  var _runTransitionHook = $__require('44');
-  var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-  var _parsePath = $__require('46');
-  var _parsePath2 = _interopRequireDefault(_parsePath);
-  function defaultStringifyQuery(query) {
-    return _qs2['default'].stringify(query, {arrayFormat: 'brackets'}).replace(/%20/g, '+');
-  }
-  function defaultParseQueryString(queryString) {
-    return _qs2['default'].parse(queryString.replace(/\+/g, '%20'));
-  }
-  function useQueries(createHistory) {
-    return function() {
-      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-      var stringifyQuery = options.stringifyQuery;
-      var parseQueryString = options.parseQueryString;
-      var historyOptions = _objectWithoutProperties(options, ['stringifyQuery', 'parseQueryString']);
-      var history = createHistory(historyOptions);
-      if (typeof stringifyQuery !== 'function')
-        stringifyQuery = defaultStringifyQuery;
-      if (typeof parseQueryString !== 'function')
-        parseQueryString = defaultParseQueryString;
-      function addQuery(location) {
-        if (location.query == null)
-          location.query = parseQueryString(location.search.substring(1));
-        return location;
-      }
-      function appendQuery(path, query) {
-        var queryString = undefined;
-        if (!query || (queryString = stringifyQuery(query)) === '')
-          return path;
-        if (typeof path === 'string')
-          path = _parsePath2['default'](path);
-        var search = path.search + (path.search ? '&' : '?') + queryString;
-        return _extends({}, path, {search: search});
-      }
-      function listenBefore(hook) {
-        return history.listenBefore(function(location, callback) {
-          _runTransitionHook2['default'](hook, addQuery(location), callback);
-        });
-      }
-      function listen(listener) {
-        return history.listen(function(location) {
-          listener(addQuery(location));
-        });
-      }
-      function pushState(state, path, query) {
-        return history.pushState(state, appendQuery(path, query));
-      }
-      function replaceState(state, path, query) {
-        return history.replaceState(state, appendQuery(path, query));
-      }
-      function createPath(path, query) {
-        return history.createPath(appendQuery(path, query));
-      }
-      function createHref(path, query) {
-        return history.createHref(appendQuery(path, query));
-      }
-      function createLocation() {
-        return addQuery(history.createLocation.apply(history, arguments));
-      }
-      return _extends({}, history, {
-        listenBefore: listenBefore,
-        listen: listen,
-        pushState: pushState,
-        replaceState: replaceState,
-        createPath: createPath,
-        createHref: createHref,
-        createLocation: createLocation
-      });
-    };
-  }
-  exports['default'] = useQueries;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4c", ["26", "48", "63", "5d", "5c", "5b", "5a", "58", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("60", ["5d", "4d", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -9315,219 +8621,71 @@ $__System.registerDynamic("4c", ["26", "48", "63", "5d", "5c", "5b", "5a", "58",
   (function(process) {
     'use strict';
     exports.__esModule = true;
-    var _extends = Object.assign || function(target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-      return target;
-    };
+    exports.runEnterHooks = runEnterHooks;
+    exports.runLeaveHooks = runLeaveHooks;
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _objectWithoutProperties(obj, keys) {
-      var target = {};
-      for (var i in obj) {
-        if (keys.indexOf(i) >= 0)
-          continue;
-        if (!Object.prototype.hasOwnProperty.call(obj, i))
-          continue;
-        target[i] = obj[i];
-      }
-      return target;
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    var _historyLibActions = $__require('48');
-    var _historyLibUseQueries = $__require('63');
-    var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
-    var _computeChangedRoutes2 = $__require('5d');
-    var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
-    var _TransitionUtils = $__require('5c');
-    var _isActive2 = $__require('5b');
-    var _isActive3 = _interopRequireDefault(_isActive2);
-    var _getComponents = $__require('5a');
-    var _getComponents2 = _interopRequireDefault(_getComponents);
-    var _matchRoutes = $__require('58');
-    var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
-    function hasAnyProperties(object) {
-      for (var p in object) {
-        if (object.hasOwnProperty(p))
-          return true;
-      }
-      return false;
-    }
-    function useRoutes(createHistory) {
-      return function() {
-        var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-        var routes = options.routes;
-        var historyOptions = _objectWithoutProperties(options, ['routes']);
-        var history = _historyLibUseQueries2['default'](createHistory)(historyOptions);
-        var state = {};
-        function isActive(pathname, query) {
-          var indexOnly = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
-          return _isActive3['default'](pathname, query, indexOnly, state.location, state.routes, state.params);
+    var _AsyncUtils = $__require('5d');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    function createEnterHook(hook, route) {
+      return function(a, b, callback) {
+        hook.apply(route, arguments);
+        if (hook.length < 3) {
+          callback();
         }
-        function createLocationFromRedirectInfo(_ref) {
-          var pathname = _ref.pathname;
-          var query = _ref.query;
-          var state = _ref.state;
-          return history.createLocation(history.createPath(pathname, query), state, _historyLibActions.REPLACE);
-        }
-        var partialNextState = undefined;
-        function match(location, callback) {
-          if (partialNextState && partialNextState.location === location) {
-            finishMatch(partialNextState, callback);
-          } else {
-            _matchRoutes2['default'](routes, location, function(error, nextState) {
-              if (error) {
-                callback(error);
-              } else if (nextState) {
-                finishMatch(_extends({}, nextState, {location: location}), callback);
-              } else {
-                callback();
-              }
-            });
-          }
-        }
-        function finishMatch(nextState, callback) {
-          var _computeChangedRoutes = _computeChangedRoutes3['default'](state, nextState);
-          var leaveRoutes = _computeChangedRoutes.leaveRoutes;
-          var enterRoutes = _computeChangedRoutes.enterRoutes;
-          _TransitionUtils.runLeaveHooks(leaveRoutes);
-          _TransitionUtils.runEnterHooks(enterRoutes, nextState, function(error, redirectInfo) {
-            if (error) {
-              callback(error);
-            } else if (redirectInfo) {
-              callback(null, createLocationFromRedirectInfo(redirectInfo));
-            } else {
-              _getComponents2['default'](nextState, function(error, components) {
-                if (error) {
-                  callback(error);
-                } else {
-                  callback(null, null, state = _extends({}, nextState, {components: components}));
-                }
-              });
-            }
-          });
-        }
-        var RouteGuid = 1;
-        function getRouteID(route) {
-          return route.__id__ || (route.__id__ = RouteGuid++);
-        }
-        var RouteHooks = {};
-        function getRouteHooksForRoutes(routes) {
-          return routes.reduce(function(hooks, route) {
-            hooks.push.apply(hooks, RouteHooks[getRouteID(route)]);
-            return hooks;
-          }, []);
-        }
-        function transitionHook(location, callback) {
-          _matchRoutes2['default'](routes, location, function(error, nextState) {
-            if (nextState == null) {
-              callback();
-              return;
-            }
-            partialNextState = _extends({}, nextState, {location: location});
-            var hooks = getRouteHooksForRoutes(_computeChangedRoutes3['default'](state, partialNextState).leaveRoutes);
-            var result = undefined;
-            for (var i = 0,
-                len = hooks.length; result == null && i < len; ++i) {
-              result = hooks[i](location);
-            }
-            callback(result);
-          });
-        }
-        function beforeUnloadHook() {
-          if (state.routes) {
-            var hooks = getRouteHooksForRoutes(state.routes);
-            var message = undefined;
-            for (var i = 0,
-                len = hooks.length; typeof message !== 'string' && i < len; ++i) {
-              message = hooks[i]();
-            }
-            return message;
-          }
-        }
-        var unlistenBefore = undefined,
-            unlistenBeforeUnload = undefined;
-        function listenBeforeLeavingRoute(route, hook) {
-          var routeID = getRouteID(route);
-          var hooks = RouteHooks[routeID];
-          if (hooks == null) {
-            var thereWereNoRouteHooks = !hasAnyProperties(RouteHooks);
-            hooks = RouteHooks[routeID] = [hook];
-            if (thereWereNoRouteHooks) {
-              unlistenBefore = history.listenBefore(transitionHook);
-              if (history.listenBeforeUnload)
-                unlistenBeforeUnload = history.listenBeforeUnload(beforeUnloadHook);
-            }
-          } else if (hooks.indexOf(hook) === -1) {
-            hooks.push(hook);
-          }
-          return function() {
-            var hooks = RouteHooks[routeID];
-            if (hooks != null) {
-              var newHooks = hooks.filter(function(item) {
-                return item !== hook;
-              });
-              if (newHooks.length === 0) {
-                delete RouteHooks[routeID];
-                if (!hasAnyProperties(RouteHooks)) {
-                  if (unlistenBefore) {
-                    unlistenBefore();
-                    unlistenBefore = null;
-                  }
-                  if (unlistenBeforeUnload) {
-                    unlistenBeforeUnload();
-                    unlistenBeforeUnload = null;
-                  }
-                }
-              } else {
-                RouteHooks[routeID] = newHooks;
-              }
-            }
-          };
-        }
-        function listen(listener) {
-          return history.listen(function(location) {
-            if (state.location === location) {
-              listener(null, state);
-            } else {
-              match(location, function(error, redirectLocation, nextState) {
-                if (error) {
-                  listener(error);
-                } else if (redirectLocation) {
-                  history.transitionTo(redirectLocation);
-                } else if (nextState) {
-                  listener(null, nextState);
-                } else {
-                  process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'Location "%s" did not match any routes', location.pathname + location.search + location.hash) : undefined;
-                }
-              });
-            }
-          });
-        }
-        return _extends({}, history, {
-          isActive: isActive,
-          match: match,
-          listenBeforeLeavingRoute: listenBeforeLeavingRoute,
-          listen: listen
-        });
       };
     }
-    exports['default'] = useRoutes;
-    module.exports = exports['default'];
+    function getEnterHooks(routes) {
+      return routes.reduce(function(hooks, route) {
+        if (route.onEnter)
+          hooks.push(createEnterHook(route.onEnter, route));
+        return hooks;
+      }, []);
+    }
+    function runEnterHooks(routes, nextState, callback) {
+      var hooks = getEnterHooks(routes);
+      if (!hooks.length) {
+        callback();
+        return;
+      }
+      var redirectInfo = undefined;
+      function replace(location, deprecatedPathname, deprecatedQuery) {
+        if (deprecatedPathname) {
+          process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, '`replaceState(state, pathname, query) is deprecated; use `replace(location)` with a location descriptor instead. http://tiny.cc/router-isActivedeprecated') : undefined;
+          redirectInfo = {
+            pathname: deprecatedPathname,
+            query: deprecatedQuery,
+            state: location
+          };
+          return;
+        }
+        redirectInfo = location;
+      }
+      _AsyncUtils.loopAsync(hooks.length, function(index, next, done) {
+        hooks[index](nextState, replace, function(error) {
+          if (error || redirectInfo) {
+            done(error, redirectInfo);
+          } else {
+            next();
+          }
+        });
+      }, callback);
+    }
+    function runLeaveHooks(routes) {
+      for (var i = 0,
+          len = routes.length; i < len; ++i) {
+        if (routes[i].onLeave)
+          routes[i].onLeave.call(routes[i]);
+      }
+    }
   })($__require('1e'));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("54", ["2f", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("56", ["37", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -9543,7 +8701,7 @@ $__System.registerDynamic("54", ["2f", "1e"], true, function($__require, exports
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _invariant = $__require('2f');
+    var _invariant = $__require('37');
     var _invariant2 = _interopRequireDefault(_invariant);
     function escapeRegExp(string) {
       return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -9696,32 +8854,51 @@ $__System.registerDynamic("54", ["2f", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("64", ["54"], true, function($__require, exports, module) {
+$__System.registerDynamic("61", ["56"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
-  var _PatternUtils = $__require('54');
-  function getRouteParams(route, params) {
-    var routeParams = {};
+  var _PatternUtils = $__require('56');
+  function routeParamsChanged(route, prevState, nextState) {
     if (!route.path)
-      return routeParams;
+      return false;
     var paramNames = _PatternUtils.getParamNames(route.path);
-    for (var p in params) {
-      if (params.hasOwnProperty(p) && paramNames.indexOf(p) !== -1)
-        routeParams[p] = params[p];
-    }
-    return routeParams;
+    return paramNames.some(function(paramName) {
+      return prevState.params[paramName] !== nextState.params[paramName];
+    });
   }
-  exports['default'] = getRouteParams;
+  function computeChangedRoutes(prevState, nextState) {
+    var prevRoutes = prevState && prevState.routes;
+    var nextRoutes = nextState.routes;
+    var leaveRoutes = undefined,
+        enterRoutes = undefined;
+    if (prevRoutes) {
+      leaveRoutes = prevRoutes.filter(function(route) {
+        return nextRoutes.indexOf(route) === -1 || routeParamsChanged(route, prevState, nextState);
+      });
+      leaveRoutes.reverse();
+      enterRoutes = nextRoutes.filter(function(route) {
+        return prevRoutes.indexOf(route) === -1 || leaveRoutes.indexOf(route) !== -1;
+      });
+    } else {
+      leaveRoutes = [];
+      enterRoutes = nextRoutes;
+    }
+    return {
+      leaveRoutes: leaveRoutes,
+      enterRoutes: enterRoutes
+    };
+  }
+  exports['default'] = computeChangedRoutes;
   module.exports = exports['default'];
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("65", ["2f", "5", "4b", "64", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("4d", ["42", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -9729,136 +8906,28 @@ $__System.registerDynamic("65", ["2f", "5", "4b", "64", "1e"], true, function($_
   (function(process) {
     'use strict';
     exports.__esModule = true;
-    var _extends = Object.assign || function(target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-      return target;
-    };
+    exports['default'] = routerWarning;
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    function _classCallCheck(instance, Constructor) {
-      if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
+    var _warning = $__require('42');
+    var _warning2 = _interopRequireDefault(_warning);
+    function routerWarning(falseToWarn, message) {
+      message = '[react-router] ' + message;
+      for (var _len = arguments.length,
+          args = Array(_len > 2 ? _len - 2 : 0),
+          _key = 2; _key < _len; _key++) {
+        args[_key - 2] = arguments[_key];
       }
+      process.env.NODE_ENV !== 'production' ? _warning2['default'].apply(undefined, [falseToWarn, message].concat(args)) : undefined;
     }
-    function _inherits(subClass, superClass) {
-      if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-      }
-      subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-          value: subClass,
-          enumerable: false,
-          writable: true,
-          configurable: true
-        }});
-      if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-    var _invariant = $__require('2f');
-    var _invariant2 = _interopRequireDefault(_invariant);
-    var _react = $__require('5');
-    var _react2 = _interopRequireDefault(_react);
-    var _RouteUtils = $__require('4b');
-    var _getRouteParams = $__require('64');
-    var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
-    var _React$PropTypes = _react2['default'].PropTypes;
-    var array = _React$PropTypes.array;
-    var func = _React$PropTypes.func;
-    var object = _React$PropTypes.object;
-    var RoutingContext = (function(_Component) {
-      _inherits(RoutingContext, _Component);
-      function RoutingContext() {
-        _classCallCheck(this, RoutingContext);
-        _Component.apply(this, arguments);
-      }
-      RoutingContext.prototype.getChildContext = function getChildContext() {
-        var _props = this.props;
-        var history = _props.history;
-        var location = _props.location;
-        return {
-          history: history,
-          location: location
-        };
-      };
-      RoutingContext.prototype.createElement = function createElement(component, props) {
-        return component == null ? null : this.props.createElement(component, props);
-      };
-      RoutingContext.prototype.render = function render() {
-        var _this = this;
-        var _props2 = this.props;
-        var history = _props2.history;
-        var location = _props2.location;
-        var routes = _props2.routes;
-        var params = _props2.params;
-        var components = _props2.components;
-        var element = null;
-        if (components) {
-          element = components.reduceRight(function(element, components, index) {
-            if (components == null)
-              return element;
-            var route = routes[index];
-            var routeParams = _getRouteParams2['default'](route, params);
-            var props = {
-              history: history,
-              location: location,
-              params: params,
-              route: route,
-              routeParams: routeParams,
-              routes: routes
-            };
-            if (_RouteUtils.isReactChildren(element)) {
-              props.children = element;
-            } else if (element) {
-              for (var prop in element) {
-                if (element.hasOwnProperty(prop))
-                  props[prop] = element[prop];
-              }
-            }
-            if (typeof components === 'object') {
-              var elements = {};
-              for (var key in components) {
-                if (components.hasOwnProperty(key)) {
-                  elements[key] = _this.createElement(components[key], _extends({key: key}, props));
-                }
-              }
-              return elements;
-            }
-            return _this.createElement(components, props);
-          }, element);
-        }
-        !(element === null || element === false || _react2['default'].isValidElement(element)) ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'The root route must render a single element') : _invariant2['default'](false) : undefined;
-        return element;
-      };
-      return RoutingContext;
-    })(_react.Component);
-    RoutingContext.propTypes = {
-      history: object.isRequired,
-      createElement: func.isRequired,
-      location: object.isRequired,
-      routes: array.isRequired,
-      params: object.isRequired,
-      components: array.isRequired
-    };
-    RoutingContext.defaultProps = {createElement: _react2['default'].createElement};
-    RoutingContext.childContextTypes = {
-      history: object.isRequired,
-      location: object.isRequired
-    };
-    exports['default'] = RoutingContext;
     module.exports = exports['default'];
   })($__require('1e'));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("4b", ["5", "26", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("48", ["4d", "38", "61", "60", "5f", "5e", "5c", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -9877,78 +8946,457 @@ $__System.registerDynamic("4b", ["5", "26", "1e"], true, function($__require, ex
       }
       return target;
     };
-    exports.isReactChildren = isReactChildren;
-    exports.createRouteFromReactElement = createRouteFromReactElement;
-    exports.createRoutesFromReactChildren = createRoutesFromReactChildren;
-    exports.createRoutes = createRoutes;
+    exports['default'] = createTransitionManager;
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _react = $__require('5');
-    var _react2 = _interopRequireDefault(_react);
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
-    function isValidChild(object) {
-      return object == null || _react2['default'].isValidElement(object);
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    var _historyLibActions = $__require('38');
+    var _computeChangedRoutes2 = $__require('61');
+    var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
+    var _TransitionUtils = $__require('60');
+    var _isActive2 = $__require('5f');
+    var _isActive3 = _interopRequireDefault(_isActive2);
+    var _getComponents = $__require('5e');
+    var _getComponents2 = _interopRequireDefault(_getComponents);
+    var _matchRoutes = $__require('5c');
+    var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
+    function hasAnyProperties(object) {
+      for (var p in object) {
+        if (object.hasOwnProperty(p))
+          return true;
+      }
+      return false;
     }
-    function isReactChildren(object) {
-      return isValidChild(object) || Array.isArray(object) && object.every(isValidChild);
-    }
-    function checkPropTypes(componentName, propTypes, props) {
-      componentName = componentName || 'UnknownComponent';
-      for (var propName in propTypes) {
-        if (propTypes.hasOwnProperty(propName)) {
-          var error = propTypes[propName](props, propName, componentName);
-          if (error instanceof Error)
-            process.env.NODE_ENV !== 'production' ? _warning2['default'](false, error.message) : undefined;
+    function createTransitionManager(history, routes) {
+      var state = {};
+      function isActive(location) {
+        var indexOnlyOrDeprecatedQuery = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+        var deprecatedIndexOnly = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+        var indexOnly = undefined;
+        if (indexOnlyOrDeprecatedQuery && indexOnlyOrDeprecatedQuery !== true || deprecatedIndexOnly !== null) {
+          process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, '`isActive(pathname, query, indexOnly) is deprecated; use `isActive(location, indexOnly)` with a location descriptor instead. http://tiny.cc/router-isActivedeprecated') : undefined;
+          location = {
+            pathname: location,
+            query: indexOnlyOrDeprecatedQuery
+          };
+          indexOnly = deprecatedIndexOnly || false;
+        } else {
+          location = history.createLocation(location);
+          indexOnly = indexOnlyOrDeprecatedQuery;
+        }
+        return _isActive3['default'](location, indexOnly, state.location, state.routes, state.params);
+      }
+      function createLocationFromRedirectInfo(location) {
+        return history.createLocation(location, _historyLibActions.REPLACE);
+      }
+      var partialNextState = undefined;
+      function match(location, callback) {
+        if (partialNextState && partialNextState.location === location) {
+          finishMatch(partialNextState, callback);
+        } else {
+          _matchRoutes2['default'](routes, location, function(error, nextState) {
+            if (error) {
+              callback(error);
+            } else if (nextState) {
+              finishMatch(_extends({}, nextState, {location: location}), callback);
+            } else {
+              callback();
+            }
+          });
         }
       }
-    }
-    function createRoute(defaultProps, props) {
-      return _extends({}, defaultProps, props);
-    }
-    function createRouteFromReactElement(element) {
-      var type = element.type;
-      var route = createRoute(type.defaultProps, element.props);
-      if (type.propTypes)
-        checkPropTypes(type.displayName || type.name, type.propTypes, route);
-      if (route.children) {
-        var childRoutes = createRoutesFromReactChildren(route.children, route);
-        if (childRoutes.length)
-          route.childRoutes = childRoutes;
-        delete route.children;
-      }
-      return route;
-    }
-    function createRoutesFromReactChildren(children, parentRoute) {
-      var routes = [];
-      _react2['default'].Children.forEach(children, function(element) {
-        if (_react2['default'].isValidElement(element)) {
-          if (element.type.createRouteFromReactElement) {
-            var route = element.type.createRouteFromReactElement(element, parentRoute);
-            if (route)
-              routes.push(route);
+      function finishMatch(nextState, callback) {
+        var _computeChangedRoutes = _computeChangedRoutes3['default'](state, nextState);
+        var leaveRoutes = _computeChangedRoutes.leaveRoutes;
+        var enterRoutes = _computeChangedRoutes.enterRoutes;
+        _TransitionUtils.runLeaveHooks(leaveRoutes);
+        leaveRoutes.forEach(removeListenBeforeHooksForRoute);
+        _TransitionUtils.runEnterHooks(enterRoutes, nextState, function(error, redirectInfo) {
+          if (error) {
+            callback(error);
+          } else if (redirectInfo) {
+            callback(null, createLocationFromRedirectInfo(redirectInfo));
           } else {
-            routes.push(createRouteFromReactElement(element));
+            _getComponents2['default'](nextState, function(error, components) {
+              if (error) {
+                callback(error);
+              } else {
+                callback(null, null, state = _extends({}, nextState, {components: components}));
+              }
+            });
+          }
+        });
+      }
+      var RouteGuid = 1;
+      function getRouteID(route) {
+        var create = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+        return route.__id__ || create && (route.__id__ = RouteGuid++);
+      }
+      var RouteHooks = {};
+      function getRouteHooksForRoutes(routes) {
+        return routes.reduce(function(hooks, route) {
+          hooks.push.apply(hooks, RouteHooks[getRouteID(route)]);
+          return hooks;
+        }, []);
+      }
+      function transitionHook(location, callback) {
+        _matchRoutes2['default'](routes, location, function(error, nextState) {
+          if (nextState == null) {
+            callback();
+            return;
+          }
+          partialNextState = _extends({}, nextState, {location: location});
+          var hooks = getRouteHooksForRoutes(_computeChangedRoutes3['default'](state, partialNextState).leaveRoutes);
+          var result = undefined;
+          for (var i = 0,
+              len = hooks.length; result == null && i < len; ++i) {
+            result = hooks[i](location);
+          }
+          callback(result);
+        });
+      }
+      function beforeUnloadHook() {
+        if (state.routes) {
+          var hooks = getRouteHooksForRoutes(state.routes);
+          var message = undefined;
+          for (var i = 0,
+              len = hooks.length; typeof message !== 'string' && i < len; ++i) {
+            message = hooks[i]();
+          }
+          return message;
+        }
+      }
+      var unlistenBefore = undefined,
+          unlistenBeforeUnload = undefined;
+      function removeListenBeforeHooksForRoute(route) {
+        var routeID = getRouteID(route, false);
+        if (!routeID) {
+          return;
+        }
+        delete RouteHooks[routeID];
+        if (!hasAnyProperties(RouteHooks)) {
+          if (unlistenBefore) {
+            unlistenBefore();
+            unlistenBefore = null;
+          }
+          if (unlistenBeforeUnload) {
+            unlistenBeforeUnload();
+            unlistenBeforeUnload = null;
           }
         }
-      });
-      return routes;
-    }
-    function createRoutes(routes) {
-      if (isReactChildren(routes)) {
-        routes = createRoutesFromReactChildren(routes);
-      } else if (routes && !Array.isArray(routes)) {
-        routes = [routes];
       }
-      return routes;
+      function listenBeforeLeavingRoute(route, hook) {
+        var routeID = getRouteID(route);
+        var hooks = RouteHooks[routeID];
+        if (!hooks) {
+          var thereWereNoRouteHooks = !hasAnyProperties(RouteHooks);
+          RouteHooks[routeID] = [hook];
+          if (thereWereNoRouteHooks) {
+            unlistenBefore = history.listenBefore(transitionHook);
+            if (history.listenBeforeUnload)
+              unlistenBeforeUnload = history.listenBeforeUnload(beforeUnloadHook);
+          }
+        } else {
+          if (hooks.indexOf(hook) === -1) {
+            process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'adding multiple leave hooks for the same route is deprecated; manage multiple confirmations in your own code instead') : undefined;
+            hooks.push(hook);
+          }
+        }
+        return function() {
+          var hooks = RouteHooks[routeID];
+          if (hooks) {
+            var newHooks = hooks.filter(function(item) {
+              return item !== hook;
+            });
+            if (newHooks.length === 0) {
+              removeListenBeforeHooksForRoute(route);
+            } else {
+              RouteHooks[routeID] = newHooks;
+            }
+          }
+        };
+      }
+      function listen(listener) {
+        return history.listen(function(location) {
+          if (state.location === location) {
+            listener(null, state);
+          } else {
+            match(location, function(error, redirectLocation, nextState) {
+              if (error) {
+                listener(error);
+              } else if (redirectLocation) {
+                history.transitionTo(redirectLocation);
+              } else if (nextState) {
+                listener(null, nextState);
+              } else {
+                process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'Location "%s" did not match any routes', location.pathname + location.search + location.hash) : undefined;
+              }
+            });
+          }
+        });
+      }
+      return {
+        isActive: isActive,
+        match: match,
+        listenBeforeLeavingRoute: listenBeforeLeavingRoute,
+        listen: listen
+      };
     }
+    module.exports = exports['default'];
   })($__require('1e'));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("66", ["26", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("62", [], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = function(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+      return '%' + c.charCodeAt(0).toString(16).toUpperCase();
+    });
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("63", ["62"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('62');
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("64", ["63"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var strictUriEncode = $__require('63');
+  exports.extract = function(str) {
+    return str.split('?')[1] || '';
+  };
+  exports.parse = function(str) {
+    if (typeof str !== 'string') {
+      return {};
+    }
+    str = str.trim().replace(/^(\?|#|&)/, '');
+    if (!str) {
+      return {};
+    }
+    return str.split('&').reduce(function(ret, param) {
+      var parts = param.replace(/\+/g, ' ').split('=');
+      var key = parts.shift();
+      var val = parts.length > 0 ? parts.join('=') : undefined;
+      key = decodeURIComponent(key);
+      val = val === undefined ? null : decodeURIComponent(val);
+      if (!ret.hasOwnProperty(key)) {
+        ret[key] = val;
+      } else if (Array.isArray(ret[key])) {
+        ret[key].push(val);
+      } else {
+        ret[key] = [ret[key], val];
+      }
+      return ret;
+    }, {});
+  };
+  exports.stringify = function(obj) {
+    return obj ? Object.keys(obj).sort().map(function(key) {
+      var val = obj[key];
+      if (val === undefined) {
+        return '';
+      }
+      if (val === null) {
+        return key;
+      }
+      if (Array.isArray(val)) {
+        return val.sort().map(function(val2) {
+          return strictUriEncode(key) + '=' + strictUriEncode(val2);
+        }).join('&');
+      }
+      return strictUriEncode(key) + '=' + strictUriEncode(val);
+    }).filter(function(x) {
+      return x.length > 0;
+    }).join('&') : '';
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("65", ["64"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('64');
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("3f", ["42", "65", "44", "39", "45", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _warning = $__require('42');
+    var _warning2 = _interopRequireDefault(_warning);
+    var _queryString = $__require('65');
+    var _runTransitionHook = $__require('44');
+    var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+    var _PathUtils = $__require('39');
+    var _deprecate = $__require('45');
+    var _deprecate2 = _interopRequireDefault(_deprecate);
+    var SEARCH_BASE_KEY = '$searchBase';
+    function defaultStringifyQuery(query) {
+      return _queryString.stringify(query).replace(/%20/g, '+');
+    }
+    var defaultParseQueryString = _queryString.parse;
+    function isNestedObject(object) {
+      for (var p in object) {
+        if (object.hasOwnProperty(p) && typeof object[p] === 'object' && !Array.isArray(object[p]) && object[p] !== null)
+          return true;
+      }
+      return false;
+    }
+    function useQueries(createHistory) {
+      return function() {
+        var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+        var history = createHistory(options);
+        var stringifyQuery = options.stringifyQuery;
+        var parseQueryString = options.parseQueryString;
+        if (typeof stringifyQuery !== 'function')
+          stringifyQuery = defaultStringifyQuery;
+        if (typeof parseQueryString !== 'function')
+          parseQueryString = defaultParseQueryString;
+        function addQuery(location) {
+          if (location.query == null) {
+            var search = location.search;
+            location.query = parseQueryString(search.substring(1));
+            location[SEARCH_BASE_KEY] = {
+              search: search,
+              searchBase: ''
+            };
+          }
+          return location;
+        }
+        function appendQuery(location, query) {
+          var _extends2;
+          var searchBaseSpec = location[SEARCH_BASE_KEY];
+          var queryString = query ? stringifyQuery(query) : '';
+          if (!searchBaseSpec && !queryString) {
+            return location;
+          }
+          process.env.NODE_ENV !== 'production' ? _warning2['default'](stringifyQuery !== defaultStringifyQuery || !isNestedObject(query), 'useQueries does not stringify nested query objects by default; ' + 'use a custom stringifyQuery function') : undefined;
+          if (typeof location === 'string')
+            location = _PathUtils.parsePath(location);
+          var searchBase = undefined;
+          if (searchBaseSpec && location.search === searchBaseSpec.search) {
+            searchBase = searchBaseSpec.searchBase;
+          } else {
+            searchBase = location.search || '';
+          }
+          var search = searchBase;
+          if (queryString) {
+            search += (search ? '&' : '?') + queryString;
+          }
+          return _extends({}, location, (_extends2 = {search: search}, _extends2[SEARCH_BASE_KEY] = {
+            search: search,
+            searchBase: searchBase
+          }, _extends2));
+        }
+        function listenBefore(hook) {
+          return history.listenBefore(function(location, callback) {
+            _runTransitionHook2['default'](hook, addQuery(location), callback);
+          });
+        }
+        function listen(listener) {
+          return history.listen(function(location) {
+            listener(addQuery(location));
+          });
+        }
+        function push(location) {
+          history.push(appendQuery(location, location.query));
+        }
+        function replace(location) {
+          history.replace(appendQuery(location, location.query));
+        }
+        function createPath(location, query) {
+          process.env.NODE_ENV !== 'production' ? _warning2['default'](!query, 'the query argument to createPath is deprecated; use a location descriptor instead') : undefined;
+          return history.createPath(appendQuery(location, query || location.query));
+        }
+        function createHref(location, query) {
+          process.env.NODE_ENV !== 'production' ? _warning2['default'](!query, 'the query argument to createHref is deprecated; use a location descriptor instead') : undefined;
+          return history.createHref(appendQuery(location, query || location.query));
+        }
+        function createLocation(location) {
+          for (var _len = arguments.length,
+              args = Array(_len > 1 ? _len - 1 : 0),
+              _key = 1; _key < _len; _key++) {
+            args[_key - 1] = arguments[_key];
+          }
+          var fullLocation = history.createLocation.apply(history, [appendQuery(location, location.query)].concat(args));
+          if (location.query) {
+            fullLocation.query = location.query;
+          }
+          return addQuery(fullLocation);
+        }
+        function pushState(state, path, query) {
+          if (typeof path === 'string')
+            path = _PathUtils.parsePath(path);
+          push(_extends({state: state}, path, {query: query}));
+        }
+        function replaceState(state, path, query) {
+          if (typeof path === 'string')
+            path = _PathUtils.parsePath(path);
+          replace(_extends({state: state}, path, {query: query}));
+        }
+        return _extends({}, history, {
+          listenBefore: listenBefore,
+          listen: listen,
+          push: push,
+          replace: replace,
+          createPath: createPath,
+          createHref: createHref,
+          createLocation: createLocation,
+          pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
+          replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
+        });
+      };
+    }
+    exports['default'] = useQueries;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("45", ["42", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -9959,7 +9407,7 @@ $__System.registerDynamic("66", ["26", "1e"], true, function($__require, exports
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _warning = $__require('26');
+    var _warning = $__require('42');
     var _warning2 = _interopRequireDefault(_warning);
     function deprecate(fn, message) {
       return function() {
@@ -9974,7 +9422,7 @@ $__System.registerDynamic("66", ["26", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("44", ["26", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("44", ["42", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -9985,7 +9433,7 @@ $__System.registerDynamic("44", ["26", "1e"], true, function($__require, exports
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _warning = $__require('26');
+    var _warning = $__require('42');
     var _warning2 = _interopRequireDefault(_warning);
     function runTransitionHook(hook, location, callback) {
       var result = hook(location, callback);
@@ -10002,26 +9450,7 @@ $__System.registerDynamic("44", ["26", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("45", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  function extractPath(string) {
-    var match = string.match(/^https?:\/\/[^\/]*/);
-    if (match == null)
-      return string;
-    return string.substring(match[0].length);
-  }
-  exports["default"] = extractPath;
-  module.exports = exports["default"];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("46", ["26", "45", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("66", ["42", "38", "39", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10029,103 +9458,101 @@ $__System.registerDynamic("46", ["26", "45", "1e"], true, function($__require, e
   (function(process) {
     'use strict';
     exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _warning = $__require('26');
+    var _warning = $__require('42');
     var _warning2 = _interopRequireDefault(_warning);
-    var _extractPath = $__require('45');
-    var _extractPath2 = _interopRequireDefault(_extractPath);
-    function parsePath(path) {
-      var pathname = _extractPath2['default'](path);
-      var search = '';
-      var hash = '';
-      process.env.NODE_ENV !== 'production' ? _warning2['default'](path === pathname, 'A path must be pathname + search + hash only, not a fully qualified URL like "%s"', path) : undefined;
-      var hashIndex = pathname.indexOf('#');
-      if (hashIndex !== -1) {
-        hash = pathname.substring(hashIndex);
-        pathname = pathname.substring(0, hashIndex);
+    var _Actions = $__require('38');
+    var _PathUtils = $__require('39');
+    function createLocation() {
+      var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
+      var action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
+      var key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+      var _fourthArg = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
+      if (typeof location === 'string')
+        location = _PathUtils.parsePath(location);
+      if (typeof action === 'object') {
+        process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'The state (2nd) argument to createLocation is deprecated; use a ' + 'location descriptor instead') : undefined;
+        location = _extends({}, location, {state: action});
+        action = key || _Actions.POP;
+        key = _fourthArg;
       }
-      var searchIndex = pathname.indexOf('?');
-      if (searchIndex !== -1) {
-        search = pathname.substring(searchIndex);
-        pathname = pathname.substring(0, searchIndex);
-      }
-      if (pathname === '')
-        pathname = '/';
+      var pathname = location.pathname || '/';
+      var search = location.search || '';
+      var hash = location.hash || '';
+      var state = location.state || null;
       return {
         pathname: pathname,
         search: search,
-        hash: hash
+        hash: hash,
+        state: state,
+        action: action,
+        key: key
       };
     }
-    exports['default'] = parsePath;
+    exports['default'] = createLocation;
     module.exports = exports['default'];
   })($__require('1e'));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("67", ["48", "46"], true, function($__require, exports, module) {
+$__System.registerDynamic("67", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   exports.__esModule = true;
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
-  }
-  var _Actions = $__require('48');
-  var _parsePath = $__require('46');
-  var _parsePath2 = _interopRequireDefault(_parsePath);
-  function createLocation() {
-    var path = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
-    var state = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
-    var action = arguments.length <= 2 || arguments[2] === undefined ? _Actions.POP : arguments[2];
-    var key = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
-    if (typeof path === 'string')
-      path = _parsePath2['default'](path);
-    var pathname = path.pathname || '/';
-    var search = path.search || '';
-    var hash = path.hash || '';
-    return {
-      pathname: pathname,
-      search: search,
-      hash: hash,
-      state: state,
-      action: action,
-      key: key
-    };
-  }
-  exports['default'] = createLocation;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("68", [], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
+  var _slice = Array.prototype.slice;
   exports.loopAsync = loopAsync;
   function loopAsync(turns, work, callback) {
-    var currentTurn = 0;
-    var isDone = false;
+    var currentTurn = 0,
+        isDone = false;
+    var sync = false,
+        hasNext = false,
+        doneArgs = undefined;
     function done() {
       isDone = true;
+      if (sync) {
+        doneArgs = [].concat(_slice.call(arguments));
+        return;
+      }
       callback.apply(this, arguments);
     }
     function next() {
-      if (isDone)
+      if (isDone) {
         return;
-      if (currentTurn < turns) {
+      }
+      hasNext = true;
+      if (sync) {
+        return;
+      }
+      sync = true;
+      while (!isDone && currentTurn < turns && hasNext) {
+        hasNext = false;
         work.call(this, currentTurn++, next, done);
-      } else {
-        done.apply(this, arguments);
+      }
+      sync = false;
+      if (isDone) {
+        callback.apply(this, doneArgs);
+        return;
+      }
+      if (currentTurn >= turns && hasNext) {
+        isDone = true;
+        callback();
       }
     }
     next();
@@ -10134,7 +9561,7 @@ $__System.registerDynamic("68", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("69", [], true, function($__require, exports, module) {
+$__System.registerDynamic("68", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10157,7 +9584,7 @@ $__System.registerDynamic("69", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("6a", [], true, function($__require, exports, module) {
+$__System.registerDynamic("69", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10174,14 +9601,14 @@ $__System.registerDynamic("6a", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("6b", ["6a", "69"], true, function($__require, exports, module) {
+$__System.registerDynamic("6a", ["69", "68"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   var pSlice = Array.prototype.slice;
-  var objectKeys = $__require('6a');
-  var isArguments = $__require('69');
+  var objectKeys = $__require('69');
+  var isArguments = $__require('68');
   var deepEqual = module.exports = function(actual, expected, opts) {
     if (!opts)
       opts = {};
@@ -10260,248 +9687,17 @@ $__System.registerDynamic("6b", ["6a", "69"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("2d", ["6b"], true, function($__require, exports, module) {
+$__System.registerDynamic("6b", ["6a"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('6b');
+  module.exports = $__require('6a');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("49", ["2d", "68", "48", "67", "44", "66"], true, function($__require, exports, module) {
-  "use strict";
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.__esModule = true;
-  var _extends = Object.assign || function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {'default': obj};
-  }
-  var _deepEqual = $__require('2d');
-  var _deepEqual2 = _interopRequireDefault(_deepEqual);
-  var _AsyncUtils = $__require('68');
-  var _Actions = $__require('48');
-  var _createLocation2 = $__require('67');
-  var _createLocation3 = _interopRequireDefault(_createLocation2);
-  var _runTransitionHook = $__require('44');
-  var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-  var _deprecate = $__require('66');
-  var _deprecate2 = _interopRequireDefault(_deprecate);
-  function createRandomKey(length) {
-    return Math.random().toString(36).substr(2, length);
-  }
-  function locationsAreEqual(a, b) {
-    return a.pathname === b.pathname && a.search === b.search && a.key === b.key && _deepEqual2['default'](a.state, b.state);
-  }
-  var DefaultKeyLength = 6;
-  function createHistory() {
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-    var getCurrentLocation = options.getCurrentLocation;
-    var finishTransition = options.finishTransition;
-    var saveState = options.saveState;
-    var go = options.go;
-    var keyLength = options.keyLength;
-    var getUserConfirmation = options.getUserConfirmation;
-    if (typeof keyLength !== 'number')
-      keyLength = DefaultKeyLength;
-    var transitionHooks = [];
-    function listenBefore(hook) {
-      transitionHooks.push(hook);
-      return function() {
-        transitionHooks = transitionHooks.filter(function(item) {
-          return item !== hook;
-        });
-      };
-    }
-    var allKeys = [];
-    var changeListeners = [];
-    var location = undefined;
-    function getCurrent() {
-      if (pendingLocation && pendingLocation.action === _Actions.POP) {
-        return allKeys.indexOf(pendingLocation.key);
-      } else if (location) {
-        return allKeys.indexOf(location.key);
-      } else {
-        return -1;
-      }
-    }
-    function updateLocation(newLocation) {
-      var current = getCurrent();
-      location = newLocation;
-      if (location.action === _Actions.PUSH) {
-        allKeys = [].concat(allKeys.slice(0, current + 1), [location.key]);
-      } else if (location.action === _Actions.REPLACE) {
-        allKeys[current] = location.key;
-      }
-      changeListeners.forEach(function(listener) {
-        listener(location);
-      });
-    }
-    function listen(listener) {
-      changeListeners.push(listener);
-      if (location) {
-        listener(location);
-      } else {
-        var _location = getCurrentLocation();
-        allKeys = [_location.key];
-        updateLocation(_location);
-      }
-      return function() {
-        changeListeners = changeListeners.filter(function(item) {
-          return item !== listener;
-        });
-      };
-    }
-    function confirmTransitionTo(location, callback) {
-      _AsyncUtils.loopAsync(transitionHooks.length, function(index, next, done) {
-        _runTransitionHook2['default'](transitionHooks[index], location, function(result) {
-          if (result != null) {
-            done(result);
-          } else {
-            next();
-          }
-        });
-      }, function(message) {
-        if (getUserConfirmation && typeof message === 'string') {
-          getUserConfirmation(message, function(ok) {
-            callback(ok !== false);
-          });
-        } else {
-          callback(message !== false);
-        }
-      });
-    }
-    var pendingLocation = undefined;
-    function transitionTo(nextLocation) {
-      if (location && locationsAreEqual(location, nextLocation))
-        return;
-      pendingLocation = nextLocation;
-      confirmTransitionTo(nextLocation, function(ok) {
-        if (pendingLocation !== nextLocation)
-          return;
-        if (ok) {
-          if (nextLocation.action === _Actions.PUSH) {
-            var _getCurrentLocation = getCurrentLocation();
-            var pathname = _getCurrentLocation.pathname;
-            var search = _getCurrentLocation.search;
-            var currentPath = pathname + search;
-            var path = nextLocation.pathname + nextLocation.search;
-            if (currentPath === path)
-              nextLocation.action = _Actions.REPLACE;
-          }
-          if (finishTransition(nextLocation) !== false)
-            updateLocation(nextLocation);
-        } else if (location && nextLocation.action === _Actions.POP) {
-          var prevIndex = allKeys.indexOf(location.key);
-          var nextIndex = allKeys.indexOf(nextLocation.key);
-          if (prevIndex !== -1 && nextIndex !== -1)
-            go(prevIndex - nextIndex);
-        }
-      });
-    }
-    function pushState(state, path) {
-      transitionTo(createLocation(path, state, _Actions.PUSH, createKey()));
-    }
-    function push(path) {
-      pushState(null, path);
-    }
-    function replaceState(state, path) {
-      transitionTo(createLocation(path, state, _Actions.REPLACE, createKey()));
-    }
-    function replace(path) {
-      replaceState(null, path);
-    }
-    function goBack() {
-      go(-1);
-    }
-    function goForward() {
-      go(1);
-    }
-    function createKey() {
-      return createRandomKey(keyLength);
-    }
-    function createPath(path) {
-      if (path == null || typeof path === 'string')
-        return path;
-      var pathname = path.pathname;
-      var search = path.search;
-      var hash = path.hash;
-      var result = pathname;
-      if (search)
-        result += search;
-      if (hash)
-        result += hash;
-      return result;
-    }
-    function createHref(path) {
-      return createPath(path);
-    }
-    function createLocation(path, state, action) {
-      var key = arguments.length <= 3 || arguments[3] === undefined ? createKey() : arguments[3];
-      return _createLocation3['default'](path, state, action, key);
-    }
-    function setState(state) {
-      if (location) {
-        updateLocationState(location, state);
-        updateLocation(location);
-      } else {
-        updateLocationState(getCurrentLocation(), state);
-      }
-    }
-    function updateLocationState(location, state) {
-      location.state = _extends({}, location.state, state);
-      saveState(location.key, location.state);
-    }
-    function registerTransitionHook(hook) {
-      if (transitionHooks.indexOf(hook) === -1)
-        transitionHooks.push(hook);
-    }
-    function unregisterTransitionHook(hook) {
-      transitionHooks = transitionHooks.filter(function(item) {
-        return item !== hook;
-      });
-    }
-    return {
-      listenBefore: listenBefore,
-      listen: listen,
-      transitionTo: transitionTo,
-      pushState: pushState,
-      replaceState: replaceState,
-      push: push,
-      replace: replace,
-      go: go,
-      goBack: goBack,
-      goForward: goForward,
-      createKey: createKey,
-      createPath: createPath,
-      createHref: createHref,
-      createLocation: createLocation,
-      setState: _deprecate2['default'](setState, 'setState is deprecated; use location.key to save state instead'),
-      registerTransitionHook: _deprecate2['default'](registerTransitionHook, 'registerTransitionHook is deprecated; use listenBefore instead'),
-      unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead')
-    };
-  }
-  exports['default'] = createHistory;
-  module.exports = exports['default'];
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6c", ["2f", "43", "6d", "49", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("43", ["42", "6b", "39", "67", "38", "66", "44", "45", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10523,11 +9719,256 @@ $__System.registerDynamic("6c", ["2f", "43", "6d", "49", "1e"], true, function($
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _invariant = $__require('2f');
+    var _warning = $__require('42');
+    var _warning2 = _interopRequireDefault(_warning);
+    var _deepEqual = $__require('6b');
+    var _deepEqual2 = _interopRequireDefault(_deepEqual);
+    var _PathUtils = $__require('39');
+    var _AsyncUtils = $__require('67');
+    var _Actions = $__require('38');
+    var _createLocation2 = $__require('66');
+    var _createLocation3 = _interopRequireDefault(_createLocation2);
+    var _runTransitionHook = $__require('44');
+    var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+    var _deprecate = $__require('45');
+    var _deprecate2 = _interopRequireDefault(_deprecate);
+    function createRandomKey(length) {
+      return Math.random().toString(36).substr(2, length);
+    }
+    function locationsAreEqual(a, b) {
+      return a.pathname === b.pathname && a.search === b.search && a.key === b.key && _deepEqual2['default'](a.state, b.state);
+    }
+    var DefaultKeyLength = 6;
+    function createHistory() {
+      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+      var getCurrentLocation = options.getCurrentLocation;
+      var finishTransition = options.finishTransition;
+      var saveState = options.saveState;
+      var go = options.go;
+      var getUserConfirmation = options.getUserConfirmation;
+      var keyLength = options.keyLength;
+      if (typeof keyLength !== 'number')
+        keyLength = DefaultKeyLength;
+      var transitionHooks = [];
+      function listenBefore(hook) {
+        transitionHooks.push(hook);
+        return function() {
+          transitionHooks = transitionHooks.filter(function(item) {
+            return item !== hook;
+          });
+        };
+      }
+      var allKeys = [];
+      var changeListeners = [];
+      var location = undefined;
+      function getCurrent() {
+        if (pendingLocation && pendingLocation.action === _Actions.POP) {
+          return allKeys.indexOf(pendingLocation.key);
+        } else if (location) {
+          return allKeys.indexOf(location.key);
+        } else {
+          return -1;
+        }
+      }
+      function updateLocation(newLocation) {
+        var current = getCurrent();
+        location = newLocation;
+        if (location.action === _Actions.PUSH) {
+          allKeys = [].concat(allKeys.slice(0, current + 1), [location.key]);
+        } else if (location.action === _Actions.REPLACE) {
+          allKeys[current] = location.key;
+        }
+        changeListeners.forEach(function(listener) {
+          listener(location);
+        });
+      }
+      function listen(listener) {
+        changeListeners.push(listener);
+        if (location) {
+          listener(location);
+        } else {
+          var _location = getCurrentLocation();
+          allKeys = [_location.key];
+          updateLocation(_location);
+        }
+        return function() {
+          changeListeners = changeListeners.filter(function(item) {
+            return item !== listener;
+          });
+        };
+      }
+      function confirmTransitionTo(location, callback) {
+        _AsyncUtils.loopAsync(transitionHooks.length, function(index, next, done) {
+          _runTransitionHook2['default'](transitionHooks[index], location, function(result) {
+            if (result != null) {
+              done(result);
+            } else {
+              next();
+            }
+          });
+        }, function(message) {
+          if (getUserConfirmation && typeof message === 'string') {
+            getUserConfirmation(message, function(ok) {
+              callback(ok !== false);
+            });
+          } else {
+            callback(message !== false);
+          }
+        });
+      }
+      var pendingLocation = undefined;
+      function transitionTo(nextLocation) {
+        if (location && locationsAreEqual(location, nextLocation))
+          return;
+        pendingLocation = nextLocation;
+        confirmTransitionTo(nextLocation, function(ok) {
+          if (pendingLocation !== nextLocation)
+            return;
+          if (ok) {
+            if (nextLocation.action === _Actions.PUSH) {
+              var prevPath = createPath(location);
+              var nextPath = createPath(nextLocation);
+              if (nextPath === prevPath && _deepEqual2['default'](location.state, nextLocation.state))
+                nextLocation.action = _Actions.REPLACE;
+            }
+            if (finishTransition(nextLocation) !== false)
+              updateLocation(nextLocation);
+          } else if (location && nextLocation.action === _Actions.POP) {
+            var prevIndex = allKeys.indexOf(location.key);
+            var nextIndex = allKeys.indexOf(nextLocation.key);
+            if (prevIndex !== -1 && nextIndex !== -1)
+              go(prevIndex - nextIndex);
+          }
+        });
+      }
+      function push(location) {
+        transitionTo(createLocation(location, _Actions.PUSH, createKey()));
+      }
+      function replace(location) {
+        transitionTo(createLocation(location, _Actions.REPLACE, createKey()));
+      }
+      function goBack() {
+        go(-1);
+      }
+      function goForward() {
+        go(1);
+      }
+      function createKey() {
+        return createRandomKey(keyLength);
+      }
+      function createPath(location) {
+        if (location == null || typeof location === 'string')
+          return location;
+        var pathname = location.pathname;
+        var search = location.search;
+        var hash = location.hash;
+        var result = pathname;
+        if (search)
+          result += search;
+        if (hash)
+          result += hash;
+        return result;
+      }
+      function createHref(location) {
+        return createPath(location);
+      }
+      function createLocation(location, action) {
+        var key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
+        if (typeof action === 'object') {
+          process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'The state (2nd) argument to history.createLocation is deprecated; use a ' + 'location descriptor instead') : undefined;
+          if (typeof location === 'string')
+            location = _PathUtils.parsePath(location);
+          location = _extends({}, location, {state: action});
+          action = key;
+          key = arguments[3] || createKey();
+        }
+        return _createLocation3['default'](location, action, key);
+      }
+      function setState(state) {
+        if (location) {
+          updateLocationState(location, state);
+          updateLocation(location);
+        } else {
+          updateLocationState(getCurrentLocation(), state);
+        }
+      }
+      function updateLocationState(location, state) {
+        location.state = _extends({}, location.state, state);
+        saveState(location.key, location.state);
+      }
+      function registerTransitionHook(hook) {
+        if (transitionHooks.indexOf(hook) === -1)
+          transitionHooks.push(hook);
+      }
+      function unregisterTransitionHook(hook) {
+        transitionHooks = transitionHooks.filter(function(item) {
+          return item !== hook;
+        });
+      }
+      function pushState(state, path) {
+        if (typeof path === 'string')
+          path = _PathUtils.parsePath(path);
+        push(_extends({state: state}, path));
+      }
+      function replaceState(state, path) {
+        if (typeof path === 'string')
+          path = _PathUtils.parsePath(path);
+        replace(_extends({state: state}, path));
+      }
+      return {
+        listenBefore: listenBefore,
+        listen: listen,
+        transitionTo: transitionTo,
+        push: push,
+        replace: replace,
+        go: go,
+        goBack: goBack,
+        goForward: goForward,
+        createKey: createKey,
+        createPath: createPath,
+        createHref: createHref,
+        createLocation: createLocation,
+        setState: _deprecate2['default'](setState, 'setState is deprecated; use location.key to save state instead'),
+        registerTransitionHook: _deprecate2['default'](registerTransitionHook, 'registerTransitionHook is deprecated; use listenBefore instead'),
+        unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead'),
+        pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
+        replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
+      };
+    }
+    exports['default'] = createHistory;
+    module.exports = exports['default'];
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("3d", ["37", "3a", "3b", "43", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    var _extends = Object.assign || function(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _invariant = $__require('37');
     var _invariant2 = _interopRequireDefault(_invariant);
-    var _ExecutionEnvironment = $__require('43');
-    var _DOMUtils = $__require('6d');
-    var _createHistory = $__require('49');
+    var _ExecutionEnvironment = $__require('3a');
+    var _DOMUtils = $__require('3b');
+    var _createHistory = $__require('43');
     var _createHistory2 = _interopRequireDefault(_createHistory);
     function createDOMHistory(options) {
       var history = _createHistory2['default'](_extends({getUserConfirmation: _DOMUtils.getUserConfirmation}, options, {go: _DOMUtils.go}));
@@ -10544,7 +9985,7 @@ $__System.registerDynamic("6c", ["2f", "43", "6d", "49", "1e"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("6e", ["26", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("3c", ["42", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10557,23 +9998,27 @@ $__System.registerDynamic("6e", ["26", "1e"], true, function($__require, exports
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _warning = $__require('26');
+    var _warning = $__require('42');
     var _warning2 = _interopRequireDefault(_warning);
     var KeyPrefix = '@@History/';
-    var QuotaExceededError = 'QuotaExceededError';
+    var QuotaExceededErrors = ['QuotaExceededError', 'QUOTA_EXCEEDED_ERR'];
     var SecurityError = 'SecurityError';
     function createKey(key) {
       return KeyPrefix + key;
     }
     function saveState(key, state) {
       try {
-        window.sessionStorage.setItem(createKey(key), JSON.stringify(state));
+        if (state == null) {
+          window.sessionStorage.removeItem(createKey(key));
+        } else {
+          window.sessionStorage.setItem(createKey(key), JSON.stringify(state));
+        }
       } catch (error) {
         if (error.name === SecurityError) {
           process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available due to security settings') : undefined;
           return;
         }
-        if (error.name === QuotaExceededError && window.sessionStorage.length === 0) {
+        if (QuotaExceededErrors.indexOf(error.name) >= 0 && window.sessionStorage.length === 0) {
           process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : undefined;
           return;
         }
@@ -10602,7 +10047,7 @@ $__System.registerDynamic("6e", ["26", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("6d", [], true, function($__require, exports, module) {
+$__System.registerDynamic("3b", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -10663,7 +10108,7 @@ $__System.registerDynamic("6d", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("43", [], true, function($__require, exports, module) {
+$__System.registerDynamic("3a", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -10676,7 +10121,56 @@ $__System.registerDynamic("43", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("48", [], true, function($__require, exports, module) {
+$__System.registerDynamic("39", ["42", "1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    exports.__esModule = true;
+    exports.extractPath = extractPath;
+    exports.parsePath = parsePath;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {'default': obj};
+    }
+    var _warning = $__require('42');
+    var _warning2 = _interopRequireDefault(_warning);
+    function extractPath(string) {
+      var match = string.match(/^https?:\/\/[^\/]*/);
+      if (match == null)
+        return string;
+      return string.substring(match[0].length);
+    }
+    function parsePath(path) {
+      var pathname = extractPath(path);
+      var search = '';
+      var hash = '';
+      process.env.NODE_ENV !== 'production' ? _warning2['default'](path === pathname, 'A path must be pathname + search + hash only, not a fully qualified URL like "%s"', path) : undefined;
+      var hashIndex = pathname.indexOf('#');
+      if (hashIndex !== -1) {
+        hash = pathname.substring(hashIndex);
+        pathname = pathname.substring(0, hashIndex);
+      }
+      var searchIndex = pathname.indexOf('?');
+      if (searchIndex !== -1) {
+        search = pathname.substring(searchIndex);
+        pathname = pathname.substring(0, searchIndex);
+      }
+      if (pathname === '')
+        pathname = '/';
+      return {
+        pathname: pathname,
+        search: search,
+        hash: hash
+      };
+    }
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("38", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -10698,7 +10192,7 @@ $__System.registerDynamic("48", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("6f", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("6c", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10733,17 +10227,68 @@ $__System.registerDynamic("6f", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("2f", ["6f"], true, function($__require, exports, module) {
+$__System.registerDynamic("37", ["6c"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('6f');
+  module.exports = $__require('6c');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("70", ["26", "2f", "48", "43", "6d", "6e", "6c", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("6d", ["1e"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    var warning = function() {};
+    if (process.env.NODE_ENV !== 'production') {
+      warning = function(condition, format, args) {
+        var len = arguments.length;
+        args = new Array(len > 2 ? len - 2 : 0);
+        for (var key = 2; key < len; key++) {
+          args[key - 2] = arguments[key];
+        }
+        if (format === undefined) {
+          throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+        }
+        if (format.length < 10 || (/^[s\W]*$/).test(format)) {
+          throw new Error('The warning format should be able to uniquely identify this ' + 'warning. Please, use a more descriptive format than: ' + format);
+        }
+        if (!condition) {
+          var argIndex = 0;
+          var message = 'Warning: ' + format.replace(/%s/g, function() {
+            return args[argIndex++];
+          });
+          if (typeof console !== 'undefined') {
+            console.error(message);
+          }
+          try {
+            throw new Error(message);
+          } catch (x) {}
+        }
+      };
+    }
+    module.exports = warning;
+  })($__require('1e'));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("42", ["6d"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('6d');
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("33", ["42", "37", "38", "39", "3a", "3b", "3c", "3d", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -10765,15 +10310,16 @@ $__System.registerDynamic("70", ["26", "2f", "48", "43", "6d", "6e", "6c", "1e"]
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {'default': obj};
     }
-    var _warning = $__require('26');
+    var _warning = $__require('42');
     var _warning2 = _interopRequireDefault(_warning);
-    var _invariant = $__require('2f');
+    var _invariant = $__require('37');
     var _invariant2 = _interopRequireDefault(_invariant);
-    var _Actions = $__require('48');
-    var _ExecutionEnvironment = $__require('43');
-    var _DOMUtils = $__require('6d');
-    var _DOMStateStorage = $__require('6e');
-    var _createDOMHistory = $__require('6c');
+    var _Actions = $__require('38');
+    var _PathUtils = $__require('39');
+    var _ExecutionEnvironment = $__require('3a');
+    var _DOMUtils = $__require('3b');
+    var _DOMStateStorage = $__require('3c');
+    var _createDOMHistory = $__require('3d');
     var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
     function isAbsolutePath(path) {
       return typeof path === 'string' && path.charAt(0) === '/';
@@ -10819,7 +10365,8 @@ $__System.registerDynamic("70", ["26", "2f", "48", "43", "6d", "6e", "6c", "1e"]
         } else {
           key = state = null;
         }
-        return history.createLocation(path, state, undefined, key);
+        var location = _PathUtils.parsePath(path);
+        return history.createLocation(_extends({}, location, {state: state}), undefined, key);
       }
       function startHashChangeListener(_ref) {
         var transitionTo = _ref.transitionTo;
@@ -10888,13 +10435,13 @@ $__System.registerDynamic("70", ["26", "2f", "48", "43", "6d", "6e", "6c", "1e"]
             stopHashChangeListener();
         };
       }
-      function pushState(state, path) {
-        process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
-        history.pushState(state, path);
+      function push(location) {
+        process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || location.state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
+        history.push(location);
       }
-      function replaceState(state, path) {
-        process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
-        history.replaceState(state, path);
+      function replace(location) {
+        process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || location.state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
+        history.replace(location);
       }
       var goIsSupportedWithoutReload = _DOMUtils.supportsGoWithoutReloadUsingHash();
       function go(n) {
@@ -10914,15 +10461,25 @@ $__System.registerDynamic("70", ["26", "2f", "48", "43", "6d", "6e", "6c", "1e"]
         if (--listenerCount === 0)
           stopHashChangeListener();
       }
+      function pushState(state, path) {
+        process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
+        history.pushState(state, path);
+      }
+      function replaceState(state, path) {
+        process.env.NODE_ENV !== 'production' ? _warning2['default'](queryKey || state == null, 'You cannot use state without a queryKey it will be dropped') : undefined;
+        history.replaceState(state, path);
+      }
       return _extends({}, history, {
         listenBefore: listenBefore,
         listen: listen,
-        pushState: pushState,
-        replaceState: replaceState,
+        push: push,
+        replace: replace,
         go: go,
         createHref: createHref,
         registerTransitionHook: registerTransitionHook,
-        unregisterTransitionHook: unregisterTransitionHook
+        unregisterTransitionHook: unregisterTransitionHook,
+        pushState: pushState,
+        replaceState: replaceState
       });
     }
     exports['default'] = createHashHistory;
@@ -10932,58 +10489,7 @@ $__System.registerDynamic("70", ["26", "2f", "48", "43", "6d", "6e", "6c", "1e"]
   return module.exports;
 });
 
-$__System.registerDynamic("71", ["1e"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    var warning = function() {};
-    if (process.env.NODE_ENV !== 'production') {
-      warning = function(condition, format, args) {
-        var len = arguments.length;
-        args = new Array(len > 2 ? len - 2 : 0);
-        for (var key = 2; key < len; key++) {
-          args[key - 2] = arguments[key];
-        }
-        if (format === undefined) {
-          throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-        }
-        if (format.length < 10 || (/^[s\W]*$/).test(format)) {
-          throw new Error('The warning format should be able to uniquely identify this ' + 'warning. Please, use a more descriptive format than: ' + format);
-        }
-        if (!condition) {
-          var argIndex = 0;
-          var message = 'Warning: ' + format.replace(/%s/g, function() {
-            return args[argIndex++];
-          });
-          if (typeof console !== 'undefined') {
-            console.error(message);
-          }
-          try {
-            throw new Error(message);
-          } catch (x) {}
-        }
-      };
-    }
-    module.exports = warning;
-  })($__require('1e'));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("26", ["71"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = $__require('71');
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("72", ["26", "5", "70", "4b", "65", "4c", "50", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("6e", ["33", "3f", "5", "48", "52", "4c", "49", "4a", "4d", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11016,128 +10522,153 @@ $__System.registerDynamic("72", ["26", "5", "70", "4b", "65", "4c", "50", "1e"],
       }
       return target;
     }
-    function _classCallCheck(instance, Constructor) {
-      if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
-      }
-    }
-    function _inherits(subClass, superClass) {
-      if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-      }
-      subClass.prototype = Object.create(superClass && superClass.prototype, {constructor: {
-          value: subClass,
-          enumerable: false,
-          writable: true,
-          configurable: true
-        }});
-      if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-    var _warning = $__require('26');
-    var _warning2 = _interopRequireDefault(_warning);
+    var _historyLibCreateHashHistory = $__require('33');
+    var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
+    var _historyLibUseQueries = $__require('3f');
+    var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
     var _react = $__require('5');
     var _react2 = _interopRequireDefault(_react);
-    var _historyLibCreateHashHistory = $__require('70');
-    var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
-    var _RouteUtils = $__require('4b');
-    var _RoutingContext = $__require('65');
-    var _RoutingContext2 = _interopRequireDefault(_RoutingContext);
-    var _useRoutes = $__require('4c');
-    var _useRoutes2 = _interopRequireDefault(_useRoutes);
-    var _PropTypes = $__require('50');
+    var _createTransitionManager = $__require('48');
+    var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
+    var _PropTypes = $__require('52');
+    var _RouterContext = $__require('4c');
+    var _RouterContext2 = _interopRequireDefault(_RouterContext);
+    var _RouteUtils = $__require('49');
+    var _RouterUtils = $__require('4a');
+    var _routerWarning = $__require('4d');
+    var _routerWarning2 = _interopRequireDefault(_routerWarning);
+    function isDeprecatedHistory(history) {
+      return !history || !history.__v2_compatible__;
+    }
     var _React$PropTypes = _react2['default'].PropTypes;
     var func = _React$PropTypes.func;
     var object = _React$PropTypes.object;
-    var Router = (function(_Component) {
-      _inherits(Router, _Component);
-      function Router(props, context) {
-        _classCallCheck(this, Router);
-        _Component.call(this, props, context);
-        this.state = {
+    var Router = _react2['default'].createClass({
+      displayName: 'Router',
+      propTypes: {
+        history: object,
+        children: _PropTypes.routes,
+        routes: _PropTypes.routes,
+        render: func,
+        createElement: func,
+        onError: func,
+        onUpdate: func,
+        matchContext: object
+      },
+      getDefaultProps: function getDefaultProps() {
+        return {render: function render(props) {
+            return _react2['default'].createElement(_RouterContext2['default'], props);
+          }};
+      },
+      getInitialState: function getInitialState() {
+        return {
           location: null,
           routes: null,
           params: null,
           components: null
         };
-      }
-      Router.prototype.handleError = function handleError(error) {
+      },
+      handleError: function handleError(error) {
         if (this.props.onError) {
           this.props.onError.call(this, error);
         } else {
           throw error;
         }
-      };
-      Router.prototype.componentWillMount = function componentWillMount() {
+      },
+      componentWillMount: function componentWillMount() {
         var _this = this;
         var _props = this.props;
-        var history = _props.history;
-        var children = _props.children;
-        var routes = _props.routes;
         var parseQueryString = _props.parseQueryString;
         var stringifyQuery = _props.stringifyQuery;
-        var createHistory = history ? function() {
-          return history;
-        } : _historyLibCreateHashHistory2['default'];
-        this.history = _useRoutes2['default'](createHistory)({
-          routes: _RouteUtils.createRoutes(routes || children),
-          parseQueryString: parseQueryString,
-          stringifyQuery: stringifyQuery
-        });
-        this._unlisten = this.history.listen(function(error, state) {
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](!(parseQueryString || stringifyQuery), '`parseQueryString` and `stringifyQuery` are deprecated. Please create a custom history. http://tiny.cc/router-customquerystring') : undefined;
+        var _createRouterObjects = this.createRouterObjects();
+        var history = _createRouterObjects.history;
+        var transitionManager = _createRouterObjects.transitionManager;
+        var router = _createRouterObjects.router;
+        this._unlisten = transitionManager.listen(function(error, state) {
           if (error) {
             _this.handleError(error);
           } else {
             _this.setState(state, _this.props.onUpdate);
           }
         });
-      };
-      Router.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-        process.env.NODE_ENV !== 'production' ? _warning2['default'](nextProps.history === this.props.history, 'You cannot change <Router history>; it will be ignored') : undefined;
-        process.env.NODE_ENV !== 'production' ? _warning2['default']((nextProps.routes || nextProps.children) === (this.props.routes || this.props.children), 'You cannot change <Router routes>; it will be ignored') : undefined;
-      };
-      Router.prototype.componentWillUnmount = function componentWillUnmount() {
+        this.history = history;
+        this.router = router;
+      },
+      createRouterObjects: function createRouterObjects() {
+        var matchContext = this.props.matchContext;
+        if (matchContext) {
+          return matchContext;
+        }
+        var history = this.props.history;
+        var _props2 = this.props;
+        var routes = _props2.routes;
+        var children = _props2.children;
+        if (isDeprecatedHistory(history)) {
+          history = this.wrapDeprecatedHistory(history);
+        }
+        var transitionManager = _createTransitionManager2['default'](history, _RouteUtils.createRoutes(routes || children));
+        var router = _RouterUtils.createRouterObject(history, transitionManager);
+        var routingHistory = _RouterUtils.createRoutingHistory(history, transitionManager);
+        return {
+          history: routingHistory,
+          transitionManager: transitionManager,
+          router: router
+        };
+      },
+      wrapDeprecatedHistory: function wrapDeprecatedHistory(history) {
+        var _props3 = this.props;
+        var parseQueryString = _props3.parseQueryString;
+        var stringifyQuery = _props3.stringifyQuery;
+        var createHistory = undefined;
+        if (history) {
+          process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, 'It appears you have provided a deprecated history object to `<Router/>`, please use a history provided by ' + 'React Router with `import { browserHistory } from \'react-router\'` or `import { hashHistory } from \'react-router\'`. ' + 'If you are using a custom history please create it with `useRouterHistory`, see http://tiny.cc/router-usinghistory for details.') : undefined;
+          createHistory = function() {
+            return history;
+          };
+        } else {
+          process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](false, '`Router` no longer defaults the history prop to hash history. Please use the `hashHistory` singleton instead. http://tiny.cc/router-defaulthistory') : undefined;
+          createHistory = _historyLibCreateHashHistory2['default'];
+        }
+        return _historyLibUseQueries2['default'](createHistory)({
+          parseQueryString: parseQueryString,
+          stringifyQuery: stringifyQuery
+        });
+      },
+      componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default'](nextProps.history === this.props.history, 'You cannot change <Router history>; it will be ignored') : undefined;
+        process.env.NODE_ENV !== 'production' ? _routerWarning2['default']((nextProps.routes || nextProps.children) === (this.props.routes || this.props.children), 'You cannot change <Router routes>; it will be ignored') : undefined;
+      },
+      componentWillUnmount: function componentWillUnmount() {
         if (this._unlisten)
           this._unlisten();
-      };
-      Router.prototype.render = function render() {
+      },
+      render: function render() {
         var _state = this.state;
         var location = _state.location;
         var routes = _state.routes;
         var params = _state.params;
         var components = _state.components;
-        var _props2 = this.props;
-        var RoutingContext = _props2.RoutingContext;
-        var createElement = _props2.createElement;
-        var props = _objectWithoutProperties(_props2, ['RoutingContext', 'createElement']);
+        var _props4 = this.props;
+        var createElement = _props4.createElement;
+        var render = _props4.render;
+        var props = _objectWithoutProperties(_props4, ['createElement', 'render']);
         if (location == null)
           return null;
         Object.keys(Router.propTypes).forEach(function(propType) {
           return delete props[propType];
         });
-        return _react2['default'].createElement(RoutingContext, _extends({}, props, {
+        return render(_extends({}, props, {
           history: this.history,
-          createElement: createElement,
+          router: this.router,
           location: location,
           routes: routes,
           params: params,
-          components: components
+          components: components,
+          createElement: createElement
         }));
-      };
-      return Router;
-    })(_react.Component);
-    Router.propTypes = {
-      history: object,
-      children: _PropTypes.routes,
-      routes: _PropTypes.routes,
-      RoutingContext: func.isRequired,
-      createElement: func,
-      onError: func,
-      onUpdate: func,
-      parseQueryString: func,
-      stringifyQuery: func
-    };
-    Router.defaultProps = {RoutingContext: _RoutingContext2['default']};
+      }
+    });
     exports['default'] = Router;
     module.exports = exports['default'];
   })($__require('1e'));
@@ -11145,7 +10676,7 @@ $__System.registerDynamic("72", ["26", "5", "70", "4b", "65", "4c", "50", "1e"],
   return module.exports;
 });
 
-$__System.registerDynamic("73", ["72", "57", "56", "55", "52", "53", "51", "4f", "4e", "4d", "4c", "4b", "65", "50", "4a"], true, function($__require, exports, module) {
+$__System.registerDynamic("6f", ["6e", "59", "58", "57", "54", "55", "53", "51", "50", "4f", "4e", "49", "4c", "4b", "52", "47", "35", "56", "3e", "32", "46"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -11155,96 +10686,111 @@ $__System.registerDynamic("73", ["72", "57", "56", "55", "52", "53", "51", "4f",
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {'default': obj};
   }
-  var _Router2 = $__require('72');
+  var _Router2 = $__require('6e');
   var _Router3 = _interopRequireDefault(_Router2);
   exports.Router = _Router3['default'];
-  var _Link2 = $__require('57');
+  var _Link2 = $__require('59');
   var _Link3 = _interopRequireDefault(_Link2);
   exports.Link = _Link3['default'];
-  var _IndexLink2 = $__require('56');
+  var _IndexLink2 = $__require('58');
   var _IndexLink3 = _interopRequireDefault(_IndexLink2);
   exports.IndexLink = _IndexLink3['default'];
-  var _IndexRedirect2 = $__require('55');
+  var _IndexRedirect2 = $__require('57');
   var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
   exports.IndexRedirect = _IndexRedirect3['default'];
-  var _IndexRoute2 = $__require('52');
+  var _IndexRoute2 = $__require('54');
   var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
   exports.IndexRoute = _IndexRoute3['default'];
-  var _Redirect2 = $__require('53');
+  var _Redirect2 = $__require('55');
   var _Redirect3 = _interopRequireDefault(_Redirect2);
   exports.Redirect = _Redirect3['default'];
-  var _Route2 = $__require('51');
+  var _Route2 = $__require('53');
   var _Route3 = _interopRequireDefault(_Route2);
   exports.Route = _Route3['default'];
-  var _History2 = $__require('4f');
+  var _History2 = $__require('51');
   var _History3 = _interopRequireDefault(_History2);
   exports.History = _History3['default'];
-  var _Lifecycle2 = $__require('4e');
+  var _Lifecycle2 = $__require('50');
   var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
   exports.Lifecycle = _Lifecycle3['default'];
-  var _RouteContext2 = $__require('4d');
+  var _RouteContext2 = $__require('4f');
   var _RouteContext3 = _interopRequireDefault(_RouteContext2);
   exports.RouteContext = _RouteContext3['default'];
-  var _useRoutes2 = $__require('4c');
+  var _useRoutes2 = $__require('4e');
   var _useRoutes3 = _interopRequireDefault(_useRoutes2);
   exports.useRoutes = _useRoutes3['default'];
-  var _RouteUtils = $__require('4b');
+  var _RouteUtils = $__require('49');
   exports.createRoutes = _RouteUtils.createRoutes;
-  var _RoutingContext2 = $__require('65');
+  var _RouterContext2 = $__require('4c');
+  var _RouterContext3 = _interopRequireDefault(_RouterContext2);
+  exports.RouterContext = _RouterContext3['default'];
+  var _RoutingContext2 = $__require('4b');
   var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
   exports.RoutingContext = _RoutingContext3['default'];
-  var _PropTypes2 = $__require('50');
+  var _PropTypes2 = $__require('52');
   var _PropTypes3 = _interopRequireDefault(_PropTypes2);
   exports.PropTypes = _PropTypes3['default'];
-  var _match2 = $__require('4a');
+  var _match2 = $__require('47');
   var _match3 = _interopRequireDefault(_match2);
   exports.match = _match3['default'];
-  var _Router4 = _interopRequireDefault(_Router2);
-  exports['default'] = _Router4['default'];
+  var _useRouterHistory2 = $__require('35');
+  var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
+  exports.useRouterHistory = _useRouterHistory3['default'];
+  var _PatternUtils = $__require('56');
+  exports.formatPattern = _PatternUtils.formatPattern;
+  var _browserHistory2 = $__require('3e');
+  var _browserHistory3 = _interopRequireDefault(_browserHistory2);
+  exports.browserHistory = _browserHistory3['default'];
+  var _hashHistory2 = $__require('32');
+  var _hashHistory3 = _interopRequireDefault(_hashHistory2);
+  exports.hashHistory = _hashHistory3['default'];
+  var _createMemoryHistory2 = $__require('46');
+  var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
+  exports.createMemoryHistory = _createMemoryHistory3['default'];
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("10", ["73"], true, function($__require, exports, module) {
+$__System.registerDynamic("10", ["6f"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('73');
+  module.exports = $__require('6f');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("74", ["3a"], true, function($__require, exports, module) {
+$__System.registerDynamic("70", ["2a"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('3a');
+  module.exports = $__require('2a');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("75", ["74"], true, function($__require, exports, module) {
+$__System.registerDynamic("71", ["70"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('74');
+  module.exports = $__require('70');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("76", ["3f", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("72", ["2f", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var assign = $__require('3f');
-    var warning = $__require('77');
+    var assign = $__require('2f');
+    var warning = $__require('73');
     function deprecated(fnName, newModule, newPackage, ctx, fn) {
       var warned = false;
       if (process.env.NODE_ENV !== 'production') {
@@ -11263,15 +10809,15 @@ $__System.registerDynamic("76", ["3f", "77", "1e"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("3b", ["78", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("2b", ["74", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactElement = $__require('78');
-    var invariant = $__require('37');
+    var ReactElement = $__require('74');
+    var invariant = $__require('27');
     function onlyChild(children) {
       !ReactElement.isValidElement(children) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'onlyChild must be passed a children with exactly one child.') : invariant(false) : undefined;
       return children;
@@ -11282,7 +10828,7 @@ $__System.registerDynamic("3b", ["78", "37", "1e"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("79", [], true, function($__require, exports, module) {
+$__System.registerDynamic("75", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -11306,21 +10852,21 @@ $__System.registerDynamic("79", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("7a", ["78", "7b", "7c", "7d", "7e", "7f", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("76", ["74", "77", "78", "79", "7a", "7b", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactElement = $__require('78');
-    var ReactPropTypeLocations = $__require('7b');
-    var ReactPropTypeLocationNames = $__require('7c');
-    var ReactCurrentOwner = $__require('7d');
-    var canDefineProperty = $__require('7e');
-    var getIteratorFn = $__require('7f');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactElement = $__require('74');
+    var ReactPropTypeLocations = $__require('77');
+    var ReactPropTypeLocationNames = $__require('78');
+    var ReactCurrentOwner = $__require('79');
+    var canDefineProperty = $__require('7a');
+    var getIteratorFn = $__require('7b');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     function getDeclarationErrorAddendum() {
       if (ReactCurrentOwner.current) {
         var name = ReactCurrentOwner.current.getName();
@@ -11476,16 +11022,16 @@ $__System.registerDynamic("7a", ["78", "7b", "7c", "7d", "7e", "7f", "37", "77",
   return module.exports;
 });
 
-$__System.registerDynamic("80", ["78", "7a", "79", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("7c", ["74", "76", "75", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactElement = $__require('78');
-    var ReactElementValidator = $__require('7a');
-    var mapObject = $__require('79');
+    var ReactElement = $__require('74');
+    var ReactElementValidator = $__require('76');
+    var mapObject = $__require('75');
     function createDOMFactory(tag) {
       if (process.env.NODE_ENV !== 'production') {
         return ReactElementValidator.createFactory(tag);
@@ -11632,23 +11178,23 @@ $__System.registerDynamic("80", ["78", "7a", "79", "1e"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("81", ["82", "83", "84", "80", "78", "7a", "85", "86", "3f", "3b", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("7d", ["7e", "7f", "80", "7c", "74", "76", "81", "82", "2f", "2b", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactChildren = $__require('82');
-    var ReactComponent = $__require('83');
-    var ReactClass = $__require('84');
-    var ReactDOMFactories = $__require('80');
-    var ReactElement = $__require('78');
-    var ReactElementValidator = $__require('7a');
-    var ReactPropTypes = $__require('85');
-    var ReactVersion = $__require('86');
-    var assign = $__require('3f');
-    var onlyChild = $__require('3b');
+    var ReactChildren = $__require('7e');
+    var ReactComponent = $__require('7f');
+    var ReactClass = $__require('80');
+    var ReactDOMFactories = $__require('7c');
+    var ReactElement = $__require('74');
+    var ReactElementValidator = $__require('76');
+    var ReactPropTypes = $__require('81');
+    var ReactVersion = $__require('82');
+    var assign = $__require('2f');
+    var onlyChild = $__require('2b');
     var createElement = ReactElement.createElement;
     var createFactory = ReactElement.createFactory;
     var cloneElement = ReactElement.cloneElement;
@@ -11685,17 +11231,17 @@ $__System.registerDynamic("81", ["82", "83", "84", "80", "78", "7a", "85", "86",
   return module.exports;
 });
 
-$__System.registerDynamic("87", ["88", "89", "8a", "3f", "40"], true, function($__require, exports, module) {
+$__System.registerDynamic("83", ["84", "85", "86", "2f", "30"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var PooledClass = $__require('88');
-  var CallbackQueue = $__require('89');
-  var Transaction = $__require('8a');
-  var assign = $__require('3f');
-  var emptyFunction = $__require('40');
+  var PooledClass = $__require('84');
+  var CallbackQueue = $__require('85');
+  var Transaction = $__require('86');
+  var assign = $__require('2f');
+  var emptyFunction = $__require('30');
   var ON_DOM_READY_QUEUEING = {
     initialize: function() {
       this.reactMountReady.reset();
@@ -11728,7 +11274,7 @@ $__System.registerDynamic("87", ["88", "89", "8a", "3f", "40"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("8b", [], true, function($__require, exports, module) {
+$__System.registerDynamic("87", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -11743,23 +11289,23 @@ $__System.registerDynamic("8b", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("8c", ["8d", "78", "8e", "8f", "8b", "87", "90", "91", "92", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("88", ["89", "74", "8a", "8b", "87", "83", "8c", "8d", "8e", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactDefaultBatchingStrategy = $__require('8d');
-    var ReactElement = $__require('78');
-    var ReactInstanceHandles = $__require('8e');
-    var ReactMarkupChecksum = $__require('8f');
-    var ReactServerBatchingStrategy = $__require('8b');
-    var ReactServerRenderingTransaction = $__require('87');
-    var ReactUpdates = $__require('90');
-    var emptyObject = $__require('91');
-    var instantiateReactComponent = $__require('92');
-    var invariant = $__require('37');
+    var ReactDefaultBatchingStrategy = $__require('89');
+    var ReactElement = $__require('74');
+    var ReactInstanceHandles = $__require('8a');
+    var ReactMarkupChecksum = $__require('8b');
+    var ReactServerBatchingStrategy = $__require('87');
+    var ReactServerRenderingTransaction = $__require('83');
+    var ReactUpdates = $__require('8c');
+    var emptyObject = $__require('8d');
+    var instantiateReactComponent = $__require('8e');
+    var invariant = $__require('27');
     function renderToString(element) {
       !ReactElement.isValidElement(element) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'renderToString(): You must pass a valid ReactElement.') : invariant(false) : undefined;
       var transaction;
@@ -11802,15 +11348,15 @@ $__System.registerDynamic("8c", ["8d", "78", "8e", "8f", "8b", "87", "90", "91",
   return module.exports;
 });
 
-$__System.registerDynamic("93", ["94", "8c", "86"], true, function($__require, exports, module) {
+$__System.registerDynamic("8f", ["90", "88", "82"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactDefaultInjection = $__require('94');
-  var ReactServerRendering = $__require('8c');
-  var ReactVersion = $__require('86');
+  var ReactDefaultInjection = $__require('90');
+  var ReactServerRendering = $__require('88');
+  var ReactVersion = $__require('82');
   ReactDefaultInjection.inject();
   var ReactDOMServer = {
     renderToString: ReactServerRendering.renderToString,
@@ -11822,19 +11368,19 @@ $__System.registerDynamic("93", ["94", "8c", "86"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("95", ["96"], true, function($__require, exports, module) {
+$__System.registerDynamic("91", ["92"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactMount = $__require('96');
+  var ReactMount = $__require('92');
   module.exports = ReactMount.renderSubtreeIntoContainer;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("86", [], true, function($__require, exports, module) {
+$__System.registerDynamic("82", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -11845,13 +11391,13 @@ $__System.registerDynamic("86", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("97", ["35"], true, function($__require, exports, module) {
+$__System.registerDynamic("93", ["25"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ExecutionEnvironment = $__require('35');
+  var ExecutionEnvironment = $__require('25');
   var performance;
   if (ExecutionEnvironment.canUseDOM) {
     performance = window.performance || window.msPerformance || window.webkitPerformance;
@@ -11861,13 +11407,13 @@ $__System.registerDynamic("97", ["35"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("98", ["97"], true, function($__require, exports, module) {
+$__System.registerDynamic("94", ["93"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var performance = $__require('97');
+  var performance = $__require('93');
   var performanceNow;
   if (performance.now) {
     performanceNow = function() {
@@ -11883,13 +11429,13 @@ $__System.registerDynamic("98", ["97"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("99", ["3f"], true, function($__require, exports, module) {
+$__System.registerDynamic("95", ["2f"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var assign = $__require('3f');
+  var assign = $__require('2f');
   var DONT_CARE_THRESHOLD = 1.2;
   var DOM_OPERATION_TYPES = {
     '_mountImageIntoNode': 'set innerHTML',
@@ -12040,17 +11586,17 @@ $__System.registerDynamic("99", ["3f"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("9a", ["9b", "99", "96", "9c", "98"], true, function($__require, exports, module) {
+$__System.registerDynamic("96", ["97", "95", "92", "98", "94"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var DOMProperty = $__require('9b');
-  var ReactDefaultPerfAnalysis = $__require('99');
-  var ReactMount = $__require('96');
-  var ReactPerf = $__require('9c');
-  var performanceNow = $__require('98');
+  var DOMProperty = $__require('97');
+  var ReactDefaultPerfAnalysis = $__require('95');
+  var ReactMount = $__require('92');
+  var ReactPerf = $__require('98');
+  var performanceNow = $__require('94');
   function roundFloat(val) {
     return Math.floor(val * 100) / 100;
   }
@@ -12238,13 +11784,13 @@ $__System.registerDynamic("9a", ["9b", "99", "96", "9c", "98"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("9d", ["9b"], true, function($__require, exports, module) {
+$__System.registerDynamic("99", ["97"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var DOMProperty = $__require('9b');
+  var DOMProperty = $__require('97');
   var MUST_USE_ATTRIBUTE = DOMProperty.injection.MUST_USE_ATTRIBUTE;
   var NS = {
     xlink: 'http://www.w3.org/1999/xlink',
@@ -12358,13 +11904,13 @@ $__System.registerDynamic("9d", ["9b"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("9e", ["9f"], true, function($__require, exports, module) {
+$__System.registerDynamic("9a", ["9b"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticMouseEvent = $__require('9f');
+  var SyntheticMouseEvent = $__require('9b');
   var WheelEventInterface = {
     deltaX: function(event) {
       return 'deltaX' in event ? event.deltaX : 'wheelDeltaX' in event ? -event.wheelDeltaX : 0;
@@ -12384,14 +11930,14 @@ $__System.registerDynamic("9e", ["9f"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("a0", ["a1", "a2"], true, function($__require, exports, module) {
+$__System.registerDynamic("9c", ["9d", "9e"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticUIEvent = $__require('a1');
-  var getEventModifierState = $__require('a2');
+  var SyntheticUIEvent = $__require('9d');
+  var getEventModifierState = $__require('9e');
   var TouchEventInterface = {
     touches: null,
     targetTouches: null,
@@ -12411,13 +11957,13 @@ $__System.registerDynamic("a0", ["a1", "a2"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("a3", ["9f"], true, function($__require, exports, module) {
+$__System.registerDynamic("9f", ["9b"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticMouseEvent = $__require('9f');
+  var SyntheticMouseEvent = $__require('9b');
   var DragEventInterface = {dataTransfer: null};
   function SyntheticDragEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
     SyntheticMouseEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
@@ -12428,13 +11974,13 @@ $__System.registerDynamic("a3", ["9f"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("a4", ["a5"], true, function($__require, exports, module) {
+$__System.registerDynamic("a0", ["a1"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var getEventCharCode = $__require('a5');
+  var getEventCharCode = $__require('a1');
   var normalizeKey = {
     'Esc': 'Escape',
     'Spacebar': ' ',
@@ -12508,7 +12054,7 @@ $__System.registerDynamic("a4", ["a5"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("a5", [], true, function($__require, exports, module) {
+$__System.registerDynamic("a1", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -12535,16 +12081,16 @@ $__System.registerDynamic("a5", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("a6", ["a1", "a5", "a4", "a2"], true, function($__require, exports, module) {
+$__System.registerDynamic("a2", ["9d", "a1", "a0", "9e"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticUIEvent = $__require('a1');
-  var getEventCharCode = $__require('a5');
-  var getEventKey = $__require('a4');
-  var getEventModifierState = $__require('a2');
+  var SyntheticUIEvent = $__require('9d');
+  var getEventCharCode = $__require('a1');
+  var getEventKey = $__require('a0');
+  var getEventModifierState = $__require('9e');
   var KeyboardEventInterface = {
     key: getEventKey,
     location: null,
@@ -12586,13 +12132,13 @@ $__System.registerDynamic("a6", ["a1", "a5", "a4", "a2"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("a7", ["a1"], true, function($__require, exports, module) {
+$__System.registerDynamic("a3", ["9d"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticUIEvent = $__require('a1');
+  var SyntheticUIEvent = $__require('9d');
   var FocusEventInterface = {relatedTarget: null};
   function SyntheticFocusEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
     SyntheticUIEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
@@ -12603,13 +12149,13 @@ $__System.registerDynamic("a7", ["a1"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("a8", ["a9"], true, function($__require, exports, module) {
+$__System.registerDynamic("a4", ["a5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticEvent = $__require('a9');
+  var SyntheticEvent = $__require('a5');
   var ClipboardEventInterface = {clipboardData: function(event) {
       return 'clipboardData' in event ? event.clipboardData : window.clipboardData;
     }};
@@ -12622,30 +12168,30 @@ $__System.registerDynamic("a8", ["a9"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("aa", ["ab", "ac", "ad", "96", "a8", "a9", "a7", "a6", "9f", "a3", "a0", "a1", "9e", "40", "a5", "37", "ae", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("a6", ["a7", "a8", "a9", "92", "a4", "a5", "a3", "a2", "9b", "9f", "9c", "9d", "9a", "30", "a1", "27", "aa", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventConstants = $__require('ab');
-    var EventListener = $__require('ac');
-    var EventPropagators = $__require('ad');
-    var ReactMount = $__require('96');
-    var SyntheticClipboardEvent = $__require('a8');
-    var SyntheticEvent = $__require('a9');
-    var SyntheticFocusEvent = $__require('a7');
-    var SyntheticKeyboardEvent = $__require('a6');
-    var SyntheticMouseEvent = $__require('9f');
-    var SyntheticDragEvent = $__require('a3');
-    var SyntheticTouchEvent = $__require('a0');
-    var SyntheticUIEvent = $__require('a1');
-    var SyntheticWheelEvent = $__require('9e');
-    var emptyFunction = $__require('40');
-    var getEventCharCode = $__require('a5');
-    var invariant = $__require('37');
-    var keyOf = $__require('ae');
+    var EventConstants = $__require('a7');
+    var EventListener = $__require('a8');
+    var EventPropagators = $__require('a9');
+    var ReactMount = $__require('92');
+    var SyntheticClipboardEvent = $__require('a4');
+    var SyntheticEvent = $__require('a5');
+    var SyntheticFocusEvent = $__require('a3');
+    var SyntheticKeyboardEvent = $__require('a2');
+    var SyntheticMouseEvent = $__require('9b');
+    var SyntheticDragEvent = $__require('9f');
+    var SyntheticTouchEvent = $__require('9c');
+    var SyntheticUIEvent = $__require('9d');
+    var SyntheticWheelEvent = $__require('9a');
+    var emptyFunction = $__require('30');
+    var getEventCharCode = $__require('a1');
+    var invariant = $__require('27');
+    var keyOf = $__require('aa');
     var topLevelTypes = EventConstants.topLevelTypes;
     var eventTypes = {
       abort: {phasedRegistrationNames: {
@@ -13058,7 +12604,7 @@ $__System.registerDynamic("aa", ["ab", "ac", "ad", "96", "a8", "a9", "a7", "a6",
   return module.exports;
 });
 
-$__System.registerDynamic("af", [], true, function($__require, exports, module) {
+$__System.registerDynamic("ab", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -13073,21 +12619,21 @@ $__System.registerDynamic("af", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("b0", ["ab", "ad", "35", "b1", "a9", "b2", "b3", "ae", "b4"], true, function($__require, exports, module) {
+$__System.registerDynamic("ac", ["a7", "a9", "25", "ad", "a5", "ae", "af", "aa", "b0"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var EventConstants = $__require('ab');
-  var EventPropagators = $__require('ad');
-  var ExecutionEnvironment = $__require('35');
-  var ReactInputSelection = $__require('b1');
-  var SyntheticEvent = $__require('a9');
-  var getActiveElement = $__require('b2');
-  var isTextInputElement = $__require('b3');
-  var keyOf = $__require('ae');
-  var shallowEqual = $__require('b4');
+  var EventConstants = $__require('a7');
+  var EventPropagators = $__require('a9');
+  var ExecutionEnvironment = $__require('25');
+  var ReactInputSelection = $__require('ad');
+  var SyntheticEvent = $__require('a5');
+  var getActiveElement = $__require('ae');
+  var isTextInputElement = $__require('af');
+  var keyOf = $__require('aa');
+  var shallowEqual = $__require('b0');
   var topLevelTypes = EventConstants.topLevelTypes;
   var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
   var eventTypes = {select: {
@@ -13189,7 +12735,7 @@ $__System.registerDynamic("b0", ["ab", "ad", "35", "b1", "a9", "b2", "b3", "ae",
   return module.exports;
 });
 
-$__System.registerDynamic("b2", [], true, function($__require, exports, module) {
+$__System.registerDynamic("ae", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -13210,7 +12756,7 @@ $__System.registerDynamic("b2", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("b5", [], true, function($__require, exports, module) {
+$__System.registerDynamic("b1", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -13253,15 +12799,15 @@ $__System.registerDynamic("b5", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("b6", ["35", "b5", "b7"], true, function($__require, exports, module) {
+$__System.registerDynamic("b2", ["25", "b1", "b3"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ExecutionEnvironment = $__require('35');
-  var getNodeForCharacterOffset = $__require('b5');
-  var getTextContentAccessor = $__require('b7');
+  var ExecutionEnvironment = $__require('25');
+  var getNodeForCharacterOffset = $__require('b1');
+  var getTextContentAccessor = $__require('b3');
   function isCollapsed(anchorNode, anchorOffset, focusNode, focusOffset) {
     return anchorNode === focusNode && anchorOffset === focusOffset;
   }
@@ -13370,16 +12916,16 @@ $__System.registerDynamic("b6", ["35", "b5", "b7"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("b1", ["b6", "b8", "b9", "b2"], true, function($__require, exports, module) {
+$__System.registerDynamic("ad", ["b2", "b4", "b5", "ae"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactDOMSelection = $__require('b6');
-  var containsNode = $__require('b8');
-  var focusNode = $__require('b9');
-  var getActiveElement = $__require('b2');
+  var ReactDOMSelection = $__require('b2');
+  var containsNode = $__require('b4');
+  var focusNode = $__require('b5');
+  var getActiveElement = $__require('ae');
   function isInDocument(node) {
     return containsNode(document.documentElement, node);
   }
@@ -13454,19 +13000,19 @@ $__System.registerDynamic("b1", ["b6", "b8", "b9", "b2"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("ba", ["89", "88", "bb", "bc", "b1", "8a", "3f"], true, function($__require, exports, module) {
+$__System.registerDynamic("b6", ["85", "84", "b7", "b8", "ad", "86", "2f"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var CallbackQueue = $__require('89');
-  var PooledClass = $__require('88');
-  var ReactBrowserEventEmitter = $__require('bb');
-  var ReactDOMFeatureFlags = $__require('bc');
-  var ReactInputSelection = $__require('b1');
-  var Transaction = $__require('8a');
-  var assign = $__require('3f');
+  var CallbackQueue = $__require('85');
+  var PooledClass = $__require('84');
+  var ReactBrowserEventEmitter = $__require('b7');
+  var ReactDOMFeatureFlags = $__require('b8');
+  var ReactInputSelection = $__require('ad');
+  var Transaction = $__require('86');
+  var assign = $__require('2f');
   var SELECTION_RESTORATION = {
     initialize: ReactInputSelection.getSelectionInformation,
     close: ReactInputSelection.restoreSelection
@@ -13515,14 +13061,14 @@ $__System.registerDynamic("ba", ["89", "88", "bb", "bc", "b1", "8a", "3f"], true
   return module.exports;
 });
 
-$__System.registerDynamic("bd", ["77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("b9", ["73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var warning = $__require('77');
+    var warning = $__require('73');
     function warnTDZ(publicInstance, callerName) {
       if (process.env.NODE_ENV !== 'production') {
         process.env.NODE_ENV !== 'production' ? warning(false, '%s(...): Can only update a mounted or mounting component. ' + 'This usually means you called %s() on an unmounted component. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, publicInstance.constructor && publicInstance.constructor.displayName || '') : undefined;
@@ -13555,18 +13101,18 @@ $__System.registerDynamic("bd", ["77", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("83", ["bd", "7e", "91", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("7f", ["b9", "7a", "8d", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactNoopUpdateQueue = $__require('bd');
-    var canDefineProperty = $__require('7e');
-    var emptyObject = $__require('91');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactNoopUpdateQueue = $__require('b9');
+    var canDefineProperty = $__require('7a');
+    var emptyObject = $__require('8d');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     function ReactComponent(props, context, updater) {
       this.props = props;
       this.context = context;
@@ -13618,24 +13164,24 @@ $__System.registerDynamic("83", ["bd", "7e", "91", "37", "77", "1e"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("84", ["83", "78", "7b", "7c", "bd", "3f", "91", "37", "be", "ae", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("80", ["7f", "74", "77", "78", "b9", "2f", "8d", "27", "ba", "aa", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactComponent = $__require('83');
-    var ReactElement = $__require('78');
-    var ReactPropTypeLocations = $__require('7b');
-    var ReactPropTypeLocationNames = $__require('7c');
-    var ReactNoopUpdateQueue = $__require('bd');
-    var assign = $__require('3f');
-    var emptyObject = $__require('91');
-    var invariant = $__require('37');
-    var keyMirror = $__require('be');
-    var keyOf = $__require('ae');
-    var warning = $__require('77');
+    var ReactComponent = $__require('7f');
+    var ReactElement = $__require('74');
+    var ReactPropTypeLocations = $__require('77');
+    var ReactPropTypeLocationNames = $__require('78');
+    var ReactNoopUpdateQueue = $__require('b9');
+    var assign = $__require('2f');
+    var emptyObject = $__require('8d');
+    var invariant = $__require('27');
+    var keyMirror = $__require('ba');
+    var keyOf = $__require('aa');
+    var warning = $__require('73');
     var MIXINS_KEY = keyOf({mixins: null});
     var SpecPolicy = keyMirror({
       DEFINE_ONCE: null,
@@ -13955,22 +13501,22 @@ $__System.registerDynamic("84", ["83", "78", "7b", "7c", "bd", "3f", "91", "37",
   return module.exports;
 });
 
-$__System.registerDynamic("bf", ["9b", "c0", "c1", "84", "c2", "bb", "c3", "9c", "c4", "90"], true, function($__require, exports, module) {
+$__System.registerDynamic("bb", ["97", "bc", "bd", "80", "be", "b7", "bf", "98", "c0", "8c"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var DOMProperty = $__require('9b');
-  var EventPluginHub = $__require('c0');
-  var ReactComponentEnvironment = $__require('c1');
-  var ReactClass = $__require('84');
-  var ReactEmptyComponent = $__require('c2');
-  var ReactBrowserEventEmitter = $__require('bb');
-  var ReactNativeComponent = $__require('c3');
-  var ReactPerf = $__require('9c');
-  var ReactRootIndex = $__require('c4');
-  var ReactUpdates = $__require('90');
+  var DOMProperty = $__require('97');
+  var EventPluginHub = $__require('bc');
+  var ReactComponentEnvironment = $__require('bd');
+  var ReactClass = $__require('80');
+  var ReactEmptyComponent = $__require('be');
+  var ReactBrowserEventEmitter = $__require('b7');
+  var ReactNativeComponent = $__require('bf');
+  var ReactPerf = $__require('98');
+  var ReactRootIndex = $__require('c0');
+  var ReactUpdates = $__require('8c');
   var ReactInjection = {
     Component: ReactComponentEnvironment.injection,
     Class: ReactClass.injection,
@@ -13988,7 +13534,7 @@ $__System.registerDynamic("bf", ["9b", "c0", "c1", "84", "c2", "bb", "c3", "9c",
   return module.exports;
 });
 
-$__System.registerDynamic("c5", [], true, function($__require, exports, module) {
+$__System.registerDynamic("c1", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -14011,14 +13557,14 @@ $__System.registerDynamic("c5", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("ac", ["40", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("a8", ["30", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var emptyFunction = $__require('40');
+    var emptyFunction = $__require('30');
     var EventListener = {
       listen: function(target, eventType, callback) {
         if (target.addEventListener) {
@@ -14054,22 +13600,22 @@ $__System.registerDynamic("ac", ["40", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("c6", ["ac", "35", "88", "8e", "96", "90", "3f", "c7", "c5", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("c2", ["a8", "25", "84", "8a", "92", "8c", "2f", "c3", "c1", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventListener = $__require('ac');
-    var ExecutionEnvironment = $__require('35');
-    var PooledClass = $__require('88');
-    var ReactInstanceHandles = $__require('8e');
-    var ReactMount = $__require('96');
-    var ReactUpdates = $__require('90');
-    var assign = $__require('3f');
-    var getEventTarget = $__require('c7');
-    var getUnboundedScrollPosition = $__require('c5');
+    var EventListener = $__require('a8');
+    var ExecutionEnvironment = $__require('25');
+    var PooledClass = $__require('84');
+    var ReactInstanceHandles = $__require('8a');
+    var ReactMount = $__require('92');
+    var ReactUpdates = $__require('8c');
+    var assign = $__require('2f');
+    var getEventTarget = $__require('c3');
+    var getUnboundedScrollPosition = $__require('c1');
     var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
     function findParent(node) {
       var nodeID = ReactMount.getID(node);
@@ -14187,7 +13733,7 @@ $__System.registerDynamic("c6", ["ac", "35", "88", "8e", "96", "90", "3f", "c7",
   return module.exports;
 });
 
-$__System.registerDynamic("b4", [], true, function($__require, exports, module) {
+$__System.registerDynamic("b0", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -14219,15 +13765,15 @@ $__System.registerDynamic("b4", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("3d", ["c8", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("2d", ["c4", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var traverseAllChildren = $__require('c8');
-    var warning = $__require('77');
+    var traverseAllChildren = $__require('c4');
+    var warning = $__require('73');
     function flattenSingleChildIntoContext(traverseContext, child, name) {
       var result = traverseContext;
       var keyUnique = result[name] === undefined;
@@ -14252,18 +13798,18 @@ $__System.registerDynamic("3d", ["c8", "77", "1e"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("c9", ["ca", "92", "cb", "c8", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("c5", ["c6", "8e", "c7", "c4", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactReconciler = $__require('ca');
-    var instantiateReactComponent = $__require('92');
-    var shouldUpdateReactComponent = $__require('cb');
-    var traverseAllChildren = $__require('c8');
-    var warning = $__require('77');
+    var ReactReconciler = $__require('c6');
+    var instantiateReactComponent = $__require('8e');
+    var shouldUpdateReactComponent = $__require('c7');
+    var traverseAllChildren = $__require('c4');
+    var warning = $__require('73');
     function instantiateChild(childInstances, child, name) {
       var keyUnique = childInstances[name] === undefined;
       if (process.env.NODE_ENV !== 'production') {
@@ -14327,19 +13873,19 @@ $__System.registerDynamic("c9", ["ca", "92", "cb", "c8", "77", "1e"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("cc", ["c1", "cd", "7d", "ca", "c9", "3d", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("c8", ["bd", "c9", "79", "c6", "c5", "2d", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactComponentEnvironment = $__require('c1');
-    var ReactMultiChildUpdateTypes = $__require('cd');
-    var ReactCurrentOwner = $__require('7d');
-    var ReactReconciler = $__require('ca');
-    var ReactChildReconciler = $__require('c9');
-    var flattenChildren = $__require('3d');
+    var ReactComponentEnvironment = $__require('bd');
+    var ReactMultiChildUpdateTypes = $__require('c9');
+    var ReactCurrentOwner = $__require('79');
+    var ReactReconciler = $__require('c6');
+    var ReactChildReconciler = $__require('c5');
+    var flattenChildren = $__require('2d');
     var updateDepth = 0;
     var updateQueue = [];
     var markupQueue = [];
@@ -14593,19 +14139,19 @@ $__System.registerDynamic("cc", ["c1", "cd", "7d", "ca", "c9", "3d", "1e"], true
   return module.exports;
 });
 
-$__System.registerDynamic("ce", ["cf", "d0", "90", "3f", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("ca", ["cb", "cc", "8c", "2f", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var LinkedValueUtils = $__require('cf');
-    var ReactDOMIDOperations = $__require('d0');
-    var ReactUpdates = $__require('90');
-    var assign = $__require('3f');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var LinkedValueUtils = $__require('cb');
+    var ReactDOMIDOperations = $__require('cc');
+    var ReactUpdates = $__require('8c');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     function forceUpdateIfMounted() {
       if (this._rootNodeID) {
         ReactDOMTextarea.updateWrapper(this);
@@ -14668,18 +14214,18 @@ $__System.registerDynamic("ce", ["cf", "d0", "90", "3f", "37", "77", "1e"], true
   return module.exports;
 });
 
-$__System.registerDynamic("d1", ["cf", "96", "90", "3f", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("cd", ["cb", "92", "8c", "2f", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var LinkedValueUtils = $__require('cf');
-    var ReactMount = $__require('96');
-    var ReactUpdates = $__require('90');
-    var assign = $__require('3f');
-    var warning = $__require('77');
+    var LinkedValueUtils = $__require('cb');
+    var ReactMount = $__require('92');
+    var ReactUpdates = $__require('8c');
+    var assign = $__require('2f');
+    var warning = $__require('73');
     var valueContextKey = '__ReactDOMSelect_value$' + Math.random().toString(36).slice(2);
     function updateOptionsIfPendingUpdateAndMounted() {
       if (this._rootNodeID && this._wrapperState.pendingUpdate) {
@@ -14800,19 +14346,19 @@ $__System.registerDynamic("d1", ["cf", "96", "90", "3f", "77", "1e"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("c8", ["7d", "78", "8e", "7f", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("c4", ["79", "74", "8a", "7b", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactCurrentOwner = $__require('7d');
-    var ReactElement = $__require('78');
-    var ReactInstanceHandles = $__require('8e');
-    var getIteratorFn = $__require('7f');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactCurrentOwner = $__require('79');
+    var ReactElement = $__require('74');
+    var ReactInstanceHandles = $__require('8a');
+    var getIteratorFn = $__require('7b');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     var SEPARATOR = ReactInstanceHandles.SEPARATOR;
     var SUBSEPARATOR = ':';
     var userProvidedKeyEscaperLookup = {
@@ -14914,16 +14460,16 @@ $__System.registerDynamic("c8", ["7d", "78", "8e", "7f", "37", "77", "1e"], true
   return module.exports;
 });
 
-$__System.registerDynamic("82", ["88", "78", "40", "c8"], true, function($__require, exports, module) {
+$__System.registerDynamic("7e", ["84", "74", "30", "c4"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var PooledClass = $__require('88');
-  var ReactElement = $__require('78');
-  var emptyFunction = $__require('40');
-  var traverseAllChildren = $__require('c8');
+  var PooledClass = $__require('84');
+  var ReactElement = $__require('74');
+  var emptyFunction = $__require('30');
+  var traverseAllChildren = $__require('c4');
   var twoArgumentPooler = PooledClass.twoArgumentPooler;
   var fourArgumentPooler = PooledClass.fourArgumentPooler;
   var userProvidedKeyEscapeRegex = /\/(?!\/)/g;
@@ -15024,17 +14570,17 @@ $__System.registerDynamic("82", ["88", "78", "40", "c8"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("d2", ["82", "d1", "3f", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("ce", ["7e", "cd", "2f", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactChildren = $__require('82');
-    var ReactDOMSelect = $__require('d1');
-    var assign = $__require('3f');
-    var warning = $__require('77');
+    var ReactChildren = $__require('7e');
+    var ReactDOMSelect = $__require('cd');
+    var assign = $__require('2f');
+    var warning = $__require('73');
     var valueContextKey = ReactDOMSelect.valueContextKey;
     var ReactDOMOption = {
       mountWrapper: function(inst, props, context) {
@@ -15089,7 +14635,7 @@ $__System.registerDynamic("d2", ["82", "d1", "3f", "77", "1e"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("7f", [], true, function($__require, exports, module) {
+$__System.registerDynamic("7b", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15108,16 +14654,16 @@ $__System.registerDynamic("7f", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("85", ["78", "7c", "40", "7f"], true, function($__require, exports, module) {
+$__System.registerDynamic("81", ["74", "78", "30", "7b"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactElement = $__require('78');
-  var ReactPropTypeLocationNames = $__require('7c');
-  var emptyFunction = $__require('40');
-  var getIteratorFn = $__require('7f');
+  var ReactElement = $__require('74');
+  var ReactPropTypeLocationNames = $__require('78');
+  var emptyFunction = $__require('30');
+  var getIteratorFn = $__require('7b');
   var ANONYMOUS = '<<anonymous>>';
   var ReactPropTypes = {
     array: createPrimitiveTypeChecker('array'),
@@ -15374,17 +14920,17 @@ $__System.registerDynamic("85", ["78", "7c", "40", "7f"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("cf", ["85", "7b", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("cb", ["81", "77", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactPropTypes = $__require('85');
-    var ReactPropTypeLocations = $__require('7b');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactPropTypes = $__require('81');
+    var ReactPropTypeLocations = $__require('77');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     var hasReadOnlyValue = {
       'button': true,
       'checkbox': true,
@@ -15475,19 +15021,19 @@ $__System.registerDynamic("cf", ["85", "7b", "37", "77", "1e"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("d3", ["d0", "cf", "96", "90", "3f", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("cf", ["cc", "cb", "92", "8c", "2f", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactDOMIDOperations = $__require('d0');
-    var LinkedValueUtils = $__require('cf');
-    var ReactMount = $__require('96');
-    var ReactUpdates = $__require('90');
-    var assign = $__require('3f');
-    var invariant = $__require('37');
+    var ReactDOMIDOperations = $__require('cc');
+    var LinkedValueUtils = $__require('cb');
+    var ReactMount = $__require('92');
+    var ReactUpdates = $__require('8c');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
     var instancesByReactID = {};
     function forceUpdateIfMounted() {
       if (this._rootNodeID) {
@@ -15568,7 +15114,7 @@ $__System.registerDynamic("d3", ["d0", "cf", "96", "90", "3f", "37", "1e"], true
   return module.exports;
 });
 
-$__System.registerDynamic("d4", [], true, function($__require, exports, module) {
+$__System.registerDynamic("d0", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15603,7 +15149,7 @@ $__System.registerDynamic("d4", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("d5", [], true, function($__require, exports, module) {
+$__System.registerDynamic("d1", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15623,7 +15169,7 @@ $__System.registerDynamic("d5", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("d6", [], true, function($__require, exports, module) {
+$__System.registerDynamic("d2", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15638,13 +15184,13 @@ $__System.registerDynamic("d6", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("d7", ["d6"], true, function($__require, exports, module) {
+$__System.registerDynamic("d3", ["d2"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var hyphenate = $__require('d6');
+  var hyphenate = $__require('d2');
   var msPattern = /^ms-/;
   function hyphenateStyleName(string) {
     return hyphenate(string).replace(msPattern, '-ms-');
@@ -15654,13 +15200,13 @@ $__System.registerDynamic("d7", ["d6"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("d8", ["d9"], true, function($__require, exports, module) {
+$__System.registerDynamic("d4", ["d5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var CSSProperty = $__require('d9');
+  var CSSProperty = $__require('d5');
   var isUnitlessNumber = CSSProperty.isUnitlessNumber;
   function dangerousStyleValue(name, value) {
     var isEmpty = value == null || typeof value === 'boolean' || value === '';
@@ -15681,7 +15227,7 @@ $__System.registerDynamic("d8", ["d9"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("da", [], true, function($__require, exports, module) {
+$__System.registerDynamic("d6", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15698,13 +15244,13 @@ $__System.registerDynamic("da", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("db", ["da"], true, function($__require, exports, module) {
+$__System.registerDynamic("d7", ["d6"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var camelize = $__require('da');
+  var camelize = $__require('d6');
   var msPattern = /^-ms-/;
   function camelizeStyleName(string) {
     return camelize(string.replace(msPattern, 'ms-'));
@@ -15714,7 +15260,7 @@ $__System.registerDynamic("db", ["da"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("d9", [], true, function($__require, exports, module) {
+$__System.registerDynamic("d5", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15818,21 +15364,21 @@ $__System.registerDynamic("d9", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("dc", ["d9", "35", "9c", "db", "d8", "d7", "d5", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("d8", ["d5", "25", "98", "d7", "d4", "d3", "d1", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var CSSProperty = $__require('d9');
-    var ExecutionEnvironment = $__require('35');
-    var ReactPerf = $__require('9c');
-    var camelizeStyleName = $__require('db');
-    var dangerousStyleValue = $__require('d8');
-    var hyphenateStyleName = $__require('d7');
-    var memoizeStringOnly = $__require('d5');
-    var warning = $__require('77');
+    var CSSProperty = $__require('d5');
+    var ExecutionEnvironment = $__require('25');
+    var ReactPerf = $__require('98');
+    var camelizeStyleName = $__require('d7');
+    var dangerousStyleValue = $__require('d4');
+    var hyphenateStyleName = $__require('d3');
+    var memoizeStringOnly = $__require('d1');
+    var warning = $__require('73');
     var processStyleName = memoizeStringOnly(function(styleName) {
       return hyphenateStyleName(styleName);
     });
@@ -15938,7 +15484,7 @@ $__System.registerDynamic("dc", ["d9", "35", "9c", "db", "d8", "d7", "d5", "77",
   return module.exports;
 });
 
-$__System.registerDynamic("b9", [], true, function($__require, exports, module) {
+$__System.registerDynamic("b5", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15954,15 +15500,15 @@ $__System.registerDynamic("b9", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("dd", ["96", "de", "b9"], true, function($__require, exports, module) {
+$__System.registerDynamic("d9", ["92", "da", "b5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactMount = $__require('96');
-  var findDOMNode = $__require('de');
-  var focusNode = $__require('b9');
+  var ReactMount = $__require('92');
+  var findDOMNode = $__require('da');
+  var focusNode = $__require('b5');
   var Mixin = {componentDidMount: function() {
       if (this.props.autoFocus) {
         focusNode(findDOMNode(this));
@@ -15979,40 +15525,40 @@ $__System.registerDynamic("dd", ["96", "de", "b9"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("df", ["dd", "dc", "9b", "e0", "ab", "bb", "e1", "d4", "d3", "d2", "d1", "ce", "96", "cc", "9c", "e2", "3f", "7e", "e3", "37", "e4", "ae", "e5", "e6", "b4", "e7", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("db", ["d9", "d8", "97", "dc", "a7", "b7", "dd", "d0", "cf", "ce", "cd", "ca", "92", "c8", "98", "de", "2f", "7a", "df", "27", "e0", "aa", "e1", "e2", "b0", "e3", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var AutoFocusUtils = $__require('dd');
-    var CSSPropertyOperations = $__require('dc');
-    var DOMProperty = $__require('9b');
-    var DOMPropertyOperations = $__require('e0');
-    var EventConstants = $__require('ab');
-    var ReactBrowserEventEmitter = $__require('bb');
-    var ReactComponentBrowserEnvironment = $__require('e1');
-    var ReactDOMButton = $__require('d4');
-    var ReactDOMInput = $__require('d3');
-    var ReactDOMOption = $__require('d2');
-    var ReactDOMSelect = $__require('d1');
-    var ReactDOMTextarea = $__require('ce');
-    var ReactMount = $__require('96');
-    var ReactMultiChild = $__require('cc');
-    var ReactPerf = $__require('9c');
-    var ReactUpdateQueue = $__require('e2');
-    var assign = $__require('3f');
-    var canDefineProperty = $__require('7e');
-    var escapeTextContentForBrowser = $__require('e3');
-    var invariant = $__require('37');
-    var isEventSupported = $__require('e4');
-    var keyOf = $__require('ae');
-    var setInnerHTML = $__require('e5');
-    var setTextContent = $__require('e6');
-    var shallowEqual = $__require('b4');
-    var validateDOMNesting = $__require('e7');
-    var warning = $__require('77');
+    var AutoFocusUtils = $__require('d9');
+    var CSSPropertyOperations = $__require('d8');
+    var DOMProperty = $__require('97');
+    var DOMPropertyOperations = $__require('dc');
+    var EventConstants = $__require('a7');
+    var ReactBrowserEventEmitter = $__require('b7');
+    var ReactComponentBrowserEnvironment = $__require('dd');
+    var ReactDOMButton = $__require('d0');
+    var ReactDOMInput = $__require('cf');
+    var ReactDOMOption = $__require('ce');
+    var ReactDOMSelect = $__require('cd');
+    var ReactDOMTextarea = $__require('ca');
+    var ReactMount = $__require('92');
+    var ReactMultiChild = $__require('c8');
+    var ReactPerf = $__require('98');
+    var ReactUpdateQueue = $__require('de');
+    var assign = $__require('2f');
+    var canDefineProperty = $__require('7a');
+    var escapeTextContentForBrowser = $__require('df');
+    var invariant = $__require('27');
+    var isEventSupported = $__require('e0');
+    var keyOf = $__require('aa');
+    var setInnerHTML = $__require('e1');
+    var setTextContent = $__require('e2');
+    var shallowEqual = $__require('b0');
+    var validateDOMNesting = $__require('e3');
+    var warning = $__require('73');
     var deleteListener = ReactBrowserEventEmitter.deleteListener;
     var listenTo = ReactBrowserEventEmitter.listenTo;
     var registrationNameModules = ReactBrowserEventEmitter.registrationNameModules;
@@ -16688,16 +16234,16 @@ $__System.registerDynamic("df", ["dd", "dc", "9b", "e0", "ab", "bb", "e1", "d4",
   return module.exports;
 });
 
-$__System.registerDynamic("8d", ["90", "8a", "3f", "40"], true, function($__require, exports, module) {
+$__System.registerDynamic("89", ["8c", "86", "2f", "30"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactUpdates = $__require('90');
-  var Transaction = $__require('8a');
-  var assign = $__require('3f');
-  var emptyFunction = $__require('40');
+  var ReactUpdates = $__require('8c');
+  var Transaction = $__require('86');
+  var assign = $__require('2f');
+  var emptyFunction = $__require('30');
   var RESET_BATCHED_UPDATES = {
     initialize: emptyFunction,
     close: function() {
@@ -16733,18 +16279,18 @@ $__System.registerDynamic("8d", ["90", "8a", "3f", "40"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("de", ["7d", "e8", "96", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("da", ["79", "e4", "92", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactCurrentOwner = $__require('7d');
-    var ReactInstanceMap = $__require('e8');
-    var ReactMount = $__require('96');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactCurrentOwner = $__require('79');
+    var ReactInstanceMap = $__require('e4');
+    var ReactMount = $__require('92');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     function findDOMNode(componentOrElement) {
       if (process.env.NODE_ENV !== 'production') {
         var owner = ReactCurrentOwner.current;
@@ -16771,16 +16317,16 @@ $__System.registerDynamic("de", ["7d", "e8", "96", "37", "77", "1e"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("e9", ["e8", "de", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("e5", ["e4", "da", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactInstanceMap = $__require('e8');
-    var findDOMNode = $__require('de');
-    var warning = $__require('77');
+    var ReactInstanceMap = $__require('e4');
+    var findDOMNode = $__require('da');
+    var warning = $__require('73');
     var didWarnKey = '_getDOMNodeDidWarn';
     var ReactBrowserComponentMixin = {getDOMNode: function() {
         process.env.NODE_ENV !== 'production' ? warning(this.constructor[didWarnKey], '%s.getDOMNode(...) is deprecated. Please use ' + 'ReactDOM.findDOMNode(instance) instead.', ReactInstanceMap.get(this).getName() || this.tagName || 'Unknown') : undefined;
@@ -16793,14 +16339,14 @@ $__System.registerDynamic("e9", ["e8", "de", "77", "1e"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("ea", ["9b", "35"], true, function($__require, exports, module) {
+$__System.registerDynamic("e6", ["97", "25"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var DOMProperty = $__require('9b');
-  var ExecutionEnvironment = $__require('35');
+  var DOMProperty = $__require('97');
+  var ExecutionEnvironment = $__require('25');
   var MUST_USE_ATTRIBUTE = DOMProperty.injection.MUST_USE_ATTRIBUTE;
   var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
   var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -16981,7 +16527,7 @@ $__System.registerDynamic("ea", ["9b", "35"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("a2", [], true, function($__require, exports, module) {
+$__System.registerDynamic("9e", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17010,14 +16556,14 @@ $__System.registerDynamic("a2", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("a1", ["a9", "c7"], true, function($__require, exports, module) {
+$__System.registerDynamic("9d", ["a5", "c3"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticEvent = $__require('a9');
-  var getEventTarget = $__require('c7');
+  var SyntheticEvent = $__require('a5');
+  var getEventTarget = $__require('c3');
   var UIEventInterface = {
     view: function(event) {
       if (event.view) {
@@ -17047,15 +16593,15 @@ $__System.registerDynamic("a1", ["a9", "c7"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("9f", ["a1", "eb", "a2"], true, function($__require, exports, module) {
+$__System.registerDynamic("9b", ["9d", "e7", "9e"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticUIEvent = $__require('a1');
-  var ViewportMetrics = $__require('eb');
-  var getEventModifierState = $__require('a2');
+  var SyntheticUIEvent = $__require('9d');
+  var ViewportMetrics = $__require('e7');
+  var getEventModifierState = $__require('9e');
   var MouseEventInterface = {
     screenX: null,
     screenY: null,
@@ -17093,17 +16639,17 @@ $__System.registerDynamic("9f", ["a1", "eb", "a2"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("ec", ["ab", "ad", "9f", "96", "ae"], true, function($__require, exports, module) {
+$__System.registerDynamic("e8", ["a7", "a9", "9b", "92", "aa"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var EventConstants = $__require('ab');
-  var EventPropagators = $__require('ad');
-  var SyntheticMouseEvent = $__require('9f');
-  var ReactMount = $__require('96');
-  var keyOf = $__require('ae');
+  var EventConstants = $__require('a7');
+  var EventPropagators = $__require('a9');
+  var SyntheticMouseEvent = $__require('9b');
+  var ReactMount = $__require('92');
+  var keyOf = $__require('aa');
   var topLevelTypes = EventConstants.topLevelTypes;
   var getFirstReactDOM = ReactMount.getFirstReactDOM;
   var eventTypes = {
@@ -17178,20 +16724,20 @@ $__System.registerDynamic("ec", ["ab", "ad", "9f", "96", "ae"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("ed", ["ae"], true, function($__require, exports, module) {
+$__System.registerDynamic("e9", ["aa"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var keyOf = $__require('ae');
+  var keyOf = $__require('aa');
   var DefaultEventPluginOrder = [keyOf({ResponderEventPlugin: null}), keyOf({SimpleEventPlugin: null}), keyOf({TapEventPlugin: null}), keyOf({EnterLeaveEventPlugin: null}), keyOf({ChangeEventPlugin: null}), keyOf({SelectEventPlugin: null}), keyOf({BeforeInputEventPlugin: null})];
   module.exports = DefaultEventPluginOrder;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("ee", [], true, function($__require, exports, module) {
+$__System.registerDynamic("ea", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17206,7 +16752,7 @@ $__System.registerDynamic("ee", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("b3", [], true, function($__require, exports, module) {
+$__System.registerDynamic("af", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17238,7 +16784,7 @@ $__System.registerDynamic("b3", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("c7", [], true, function($__require, exports, module) {
+$__System.registerDynamic("c3", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17253,23 +16799,23 @@ $__System.registerDynamic("c7", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("ef", ["ab", "c0", "ad", "35", "90", "a9", "c7", "e4", "b3", "ae", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("eb", ["a7", "bc", "a9", "25", "8c", "a5", "c3", "e0", "af", "aa", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventConstants = $__require('ab');
-    var EventPluginHub = $__require('c0');
-    var EventPropagators = $__require('ad');
-    var ExecutionEnvironment = $__require('35');
-    var ReactUpdates = $__require('90');
-    var SyntheticEvent = $__require('a9');
-    var getEventTarget = $__require('c7');
-    var isEventSupported = $__require('e4');
-    var isTextInputElement = $__require('b3');
-    var keyOf = $__require('ae');
+    var EventConstants = $__require('a7');
+    var EventPluginHub = $__require('bc');
+    var EventPropagators = $__require('a9');
+    var ExecutionEnvironment = $__require('25');
+    var ReactUpdates = $__require('8c');
+    var SyntheticEvent = $__require('a5');
+    var getEventTarget = $__require('c3');
+    var isEventSupported = $__require('e0');
+    var isTextInputElement = $__require('af');
+    var keyOf = $__require('aa');
     var topLevelTypes = EventConstants.topLevelTypes;
     var eventTypes = {change: {
         phasedRegistrationNames: {
@@ -17438,7 +16984,7 @@ $__System.registerDynamic("ef", ["ab", "c0", "ad", "35", "90", "a9", "c7", "e4",
   return module.exports;
 });
 
-$__System.registerDynamic("ae", [], true, function($__require, exports, module) {
+$__System.registerDynamic("aa", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17459,13 +17005,13 @@ $__System.registerDynamic("ae", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("f0", ["a9"], true, function($__require, exports, module) {
+$__System.registerDynamic("ec", ["a5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticEvent = $__require('a9');
+  var SyntheticEvent = $__require('a5');
   var InputEventInterface = {data: null};
   function SyntheticInputEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
     SyntheticEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
@@ -17476,17 +17022,17 @@ $__System.registerDynamic("f0", ["a9"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("a9", ["88", "3f", "40", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("a5", ["84", "2f", "30", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var PooledClass = $__require('88');
-    var assign = $__require('3f');
-    var emptyFunction = $__require('40');
-    var warning = $__require('77');
+    var PooledClass = $__require('84');
+    var assign = $__require('2f');
+    var emptyFunction = $__require('30');
+    var warning = $__require('73');
     var EventInterface = {
       type: null,
       target: null,
@@ -17592,13 +17138,13 @@ $__System.registerDynamic("a9", ["88", "3f", "40", "77", "1e"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("f1", ["a9"], true, function($__require, exports, module) {
+$__System.registerDynamic("ed", ["a5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SyntheticEvent = $__require('a9');
+  var SyntheticEvent = $__require('a5');
   var CompositionEventInterface = {data: null};
   function SyntheticCompositionEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
     SyntheticEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
@@ -17609,13 +17155,13 @@ $__System.registerDynamic("f1", ["a9"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("b7", ["35"], true, function($__require, exports, module) {
+$__System.registerDynamic("b3", ["25"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ExecutionEnvironment = $__require('35');
+  var ExecutionEnvironment = $__require('25');
   var contentKey = null;
   function getTextContentAccessor() {
     if (!contentKey && ExecutionEnvironment.canUseDOM) {
@@ -17628,15 +17174,15 @@ $__System.registerDynamic("b7", ["35"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("f2", ["88", "3f", "b7"], true, function($__require, exports, module) {
+$__System.registerDynamic("ee", ["84", "2f", "b3"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var PooledClass = $__require('88');
-  var assign = $__require('3f');
-  var getTextContentAccessor = $__require('b7');
+  var PooledClass = $__require('84');
+  var assign = $__require('2f');
+  var getTextContentAccessor = $__require('b3');
   function FallbackCompositionState(root) {
     this._root = root;
     this._startText = this.getText();
@@ -17686,18 +17232,18 @@ $__System.registerDynamic("f2", ["88", "3f", "b7"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("ad", ["ab", "c0", "77", "f3", "f4", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("a9", ["a7", "bc", "73", "ef", "f0", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventConstants = $__require('ab');
-    var EventPluginHub = $__require('c0');
-    var warning = $__require('77');
-    var accumulateInto = $__require('f3');
-    var forEachAccumulated = $__require('f4');
+    var EventConstants = $__require('a7');
+    var EventPluginHub = $__require('bc');
+    var warning = $__require('73');
+    var accumulateInto = $__require('ef');
+    var forEachAccumulated = $__require('f0');
     var PropagationPhases = EventConstants.PropagationPhases;
     var getListener = EventPluginHub.getListener;
     function listenerAtPhase(id, event, propagationPhase) {
@@ -17764,19 +17310,19 @@ $__System.registerDynamic("ad", ["ab", "c0", "77", "f3", "f4", "1e"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("f5", ["ab", "ad", "35", "f2", "f1", "f0", "ae"], true, function($__require, exports, module) {
+$__System.registerDynamic("f1", ["a7", "a9", "25", "ee", "ed", "ec", "aa"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var EventConstants = $__require('ab');
-  var EventPropagators = $__require('ad');
-  var ExecutionEnvironment = $__require('35');
-  var FallbackCompositionState = $__require('f2');
-  var SyntheticCompositionEvent = $__require('f1');
-  var SyntheticInputEvent = $__require('f0');
-  var keyOf = $__require('ae');
+  var EventConstants = $__require('a7');
+  var EventPropagators = $__require('a9');
+  var ExecutionEnvironment = $__require('25');
+  var FallbackCompositionState = $__require('ee');
+  var SyntheticCompositionEvent = $__require('ed');
+  var SyntheticInputEvent = $__require('ec');
+  var keyOf = $__require('aa');
   var END_KEYCODES = [9, 13, 27, 32];
   var START_KEYCODE = 229;
   var canUseCompositionEvent = ExecutionEnvironment.canUseDOM && 'CompositionEvent' in window;
@@ -17969,34 +17515,34 @@ $__System.registerDynamic("f5", ["ab", "ad", "35", "f2", "f1", "f0", "ae"], true
   return module.exports;
 });
 
-$__System.registerDynamic("94", ["f5", "ef", "ee", "ed", "ec", "35", "ea", "e9", "e1", "8d", "df", "f6", "c6", "bf", "8e", "96", "ba", "b0", "af", "aa", "9d", "9a", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("90", ["f1", "eb", "ea", "e9", "e8", "25", "e6", "e5", "dd", "89", "db", "f2", "c2", "bb", "8a", "92", "b6", "ac", "ab", "a6", "99", "96", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var BeforeInputEventPlugin = $__require('f5');
-    var ChangeEventPlugin = $__require('ef');
-    var ClientReactRootIndex = $__require('ee');
-    var DefaultEventPluginOrder = $__require('ed');
-    var EnterLeaveEventPlugin = $__require('ec');
-    var ExecutionEnvironment = $__require('35');
-    var HTMLDOMPropertyConfig = $__require('ea');
-    var ReactBrowserComponentMixin = $__require('e9');
-    var ReactComponentBrowserEnvironment = $__require('e1');
-    var ReactDefaultBatchingStrategy = $__require('8d');
-    var ReactDOMComponent = $__require('df');
-    var ReactDOMTextComponent = $__require('f6');
-    var ReactEventListener = $__require('c6');
-    var ReactInjection = $__require('bf');
-    var ReactInstanceHandles = $__require('8e');
-    var ReactMount = $__require('96');
-    var ReactReconcileTransaction = $__require('ba');
-    var SelectEventPlugin = $__require('b0');
-    var ServerReactRootIndex = $__require('af');
-    var SimpleEventPlugin = $__require('aa');
-    var SVGDOMPropertyConfig = $__require('9d');
+    var BeforeInputEventPlugin = $__require('f1');
+    var ChangeEventPlugin = $__require('eb');
+    var ClientReactRootIndex = $__require('ea');
+    var DefaultEventPluginOrder = $__require('e9');
+    var EnterLeaveEventPlugin = $__require('e8');
+    var ExecutionEnvironment = $__require('25');
+    var HTMLDOMPropertyConfig = $__require('e6');
+    var ReactBrowserComponentMixin = $__require('e5');
+    var ReactComponentBrowserEnvironment = $__require('dd');
+    var ReactDefaultBatchingStrategy = $__require('89');
+    var ReactDOMComponent = $__require('db');
+    var ReactDOMTextComponent = $__require('f2');
+    var ReactEventListener = $__require('c2');
+    var ReactInjection = $__require('bb');
+    var ReactInstanceHandles = $__require('8a');
+    var ReactMount = $__require('92');
+    var ReactReconcileTransaction = $__require('b6');
+    var SelectEventPlugin = $__require('ac');
+    var ServerReactRootIndex = $__require('ab');
+    var SimpleEventPlugin = $__require('a6');
+    var SVGDOMPropertyConfig = $__require('99');
     var alreadyInjected = false;
     function inject() {
       if (alreadyInjected) {
@@ -18027,7 +17573,7 @@ $__System.registerDynamic("94", ["f5", "ef", "ee", "ed", "ec", "35", "ea", "e9",
       if (process.env.NODE_ENV !== 'production') {
         var url = ExecutionEnvironment.canUseDOM && window.location.href || '';
         if (/[?&]react_perf\b/.test(url)) {
-          var ReactDefaultPerf = $__require('9a');
+          var ReactDefaultPerf = $__require('96');
           ReactDefaultPerf.start();
         }
       }
@@ -18038,16 +17584,16 @@ $__System.registerDynamic("94", ["f5", "ef", "ee", "ed", "ec", "35", "ea", "e9",
   return module.exports;
 });
 
-$__System.registerDynamic("e7", ["3f", "40", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("e3", ["2f", "30", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var assign = $__require('3f');
-    var emptyFunction = $__require('40');
-    var warning = $__require('77');
+    var assign = $__require('2f');
+    var emptyFunction = $__require('30');
+    var warning = $__require('73');
     var validateDOMNesting = emptyFunction;
     if (process.env.NODE_ENV !== 'production') {
       var specialTags = ['address', 'applet', 'area', 'article', 'aside', 'base', 'basefont', 'bgsound', 'blockquote', 'body', 'br', 'button', 'caption', 'center', 'col', 'colgroup', 'dd', 'details', 'dir', 'div', 'dl', 'dt', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'frame', 'frameset', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'iframe', 'img', 'input', 'isindex', 'li', 'link', 'listing', 'main', 'marquee', 'menu', 'menuitem', 'meta', 'nav', 'noembed', 'noframes', 'noscript', 'object', 'ol', 'p', 'param', 'plaintext', 'pre', 'script', 'section', 'select', 'source', 'style', 'summary', 'table', 'tbody', 'td', 'template', 'textarea', 'tfoot', 'th', 'thead', 'title', 'tr', 'track', 'ul', 'wbr', 'xmp'];
@@ -18284,15 +17830,15 @@ $__System.registerDynamic("e7", ["3f", "40", "77", "1e"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("c3", ["3f", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("bf", ["2f", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var assign = $__require('3f');
-    var invariant = $__require('37');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
     var autoGenerateWrapperClass = null;
     var genericComponentClass = null;
     var tagToComponentClass = {};
@@ -18342,16 +17888,16 @@ $__System.registerDynamic("c3", ["3f", "37", "1e"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("c2", ["78", "f7", "ca", "3f"], true, function($__require, exports, module) {
+$__System.registerDynamic("be", ["74", "f3", "c6", "2f"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactElement = $__require('78');
-  var ReactEmptyComponentRegistry = $__require('f7');
-  var ReactReconciler = $__require('ca');
-  var assign = $__require('3f');
+  var ReactElement = $__require('74');
+  var ReactEmptyComponentRegistry = $__require('f3');
+  var ReactReconciler = $__require('c6');
+  var assign = $__require('2f');
   var placeholderElement;
   var ReactEmptyComponentInjection = {injectEmptyComponent: function(component) {
       placeholderElement = ReactElement.createElement(component);
@@ -18382,7 +17928,7 @@ $__System.registerDynamic("c2", ["78", "f7", "ca", "3f"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("cb", [], true, function($__require, exports, module) {
+$__System.registerDynamic("c7", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18408,7 +17954,7 @@ $__System.registerDynamic("cb", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("7c", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("78", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -18429,13 +17975,13 @@ $__System.registerDynamic("7c", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("7b", ["be"], true, function($__require, exports, module) {
+$__System.registerDynamic("77", ["ba"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var keyMirror = $__require('be');
+  var keyMirror = $__require('ba');
   var ReactPropTypeLocations = keyMirror({
     prop: null,
     context: null,
@@ -18446,14 +17992,14 @@ $__System.registerDynamic("7b", ["be"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("c1", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("bd", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var injected = false;
     var ReactComponentEnvironment = {
       unmountIDFromEnvironment: null,
@@ -18473,27 +18019,27 @@ $__System.registerDynamic("c1", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("f8", ["c1", "7d", "78", "e8", "9c", "7b", "7c", "ca", "e2", "3f", "91", "37", "cb", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("f4", ["bd", "79", "74", "e4", "98", "77", "78", "c6", "de", "2f", "8d", "27", "c7", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactComponentEnvironment = $__require('c1');
-    var ReactCurrentOwner = $__require('7d');
-    var ReactElement = $__require('78');
-    var ReactInstanceMap = $__require('e8');
-    var ReactPerf = $__require('9c');
-    var ReactPropTypeLocations = $__require('7b');
-    var ReactPropTypeLocationNames = $__require('7c');
-    var ReactReconciler = $__require('ca');
-    var ReactUpdateQueue = $__require('e2');
-    var assign = $__require('3f');
-    var emptyObject = $__require('91');
-    var invariant = $__require('37');
-    var shouldUpdateReactComponent = $__require('cb');
-    var warning = $__require('77');
+    var ReactComponentEnvironment = $__require('bd');
+    var ReactCurrentOwner = $__require('79');
+    var ReactElement = $__require('74');
+    var ReactInstanceMap = $__require('e4');
+    var ReactPerf = $__require('98');
+    var ReactPropTypeLocations = $__require('77');
+    var ReactPropTypeLocationNames = $__require('78');
+    var ReactReconciler = $__require('c6');
+    var ReactUpdateQueue = $__require('de');
+    var assign = $__require('2f');
+    var emptyObject = $__require('8d');
+    var invariant = $__require('27');
+    var shouldUpdateReactComponent = $__require('c7');
+    var warning = $__require('73');
     function getDeclarationErrorAddendum(component) {
       var owner = component._currentElement._owner || null;
       if (owner) {
@@ -18850,19 +18396,19 @@ $__System.registerDynamic("f8", ["c1", "7d", "78", "e8", "9c", "7b", "7c", "ca",
   return module.exports;
 });
 
-$__System.registerDynamic("92", ["f8", "c2", "c3", "3f", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("8e", ["f4", "be", "bf", "2f", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactCompositeComponent = $__require('f8');
-    var ReactEmptyComponent = $__require('c2');
-    var ReactNativeComponent = $__require('c3');
-    var assign = $__require('3f');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactCompositeComponent = $__require('f4');
+    var ReactEmptyComponent = $__require('be');
+    var ReactNativeComponent = $__require('bf');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     var ReactCompositeComponentWrapper = function() {};
     assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent.Mixin, {_instantiateReactComponent: instantiateReactComponent});
     function getDeclarationErrorAddendum(owner) {
@@ -18919,7 +18465,7 @@ $__System.registerDynamic("92", ["f8", "c2", "c3", "3f", "37", "77", "1e"], true
   return module.exports;
 });
 
-$__System.registerDynamic("f9", [], true, function($__require, exports, module) {
+$__System.registerDynamic("f5", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18933,13 +18479,13 @@ $__System.registerDynamic("f9", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("fa", ["f9"], true, function($__require, exports, module) {
+$__System.registerDynamic("f6", ["f5"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var isNode = $__require('f9');
+  var isNode = $__require('f5');
   function isTextNode(object) {
     return isNode(object) && object.nodeType == 3;
   }
@@ -18948,13 +18494,13 @@ $__System.registerDynamic("fa", ["f9"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("b8", ["fa"], true, function($__require, exports, module) {
+$__System.registerDynamic("b4", ["f6"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var isTextNode = $__require('fa');
+  var isTextNode = $__require('f6');
   function containsNode(_x, _x2) {
     var _again = true;
     _function: while (_again) {
@@ -18986,7 +18532,7 @@ $__System.registerDynamic("b8", ["fa"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("91", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("8d", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -19003,14 +18549,14 @@ $__System.registerDynamic("91", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("8a", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("86", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var Mixin = {
       reinitializeTransaction: function() {
         this.transactionWrappers = this.getTransactionWrappers();
@@ -19101,14 +18647,14 @@ $__System.registerDynamic("8a", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("88", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("84", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var oneArgumentPooler = function(copyFieldsFrom) {
       var Klass = this;
       if (Klass.instancePool.length) {
@@ -19193,16 +18739,16 @@ $__System.registerDynamic("88", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("89", ["88", "3f", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("85", ["84", "2f", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var PooledClass = $__require('88');
-    var assign = $__require('3f');
-    var invariant = $__require('37');
+    var PooledClass = $__require('84');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
     function CallbackQueue() {
       this._callbacks = null;
       this._contexts = null;
@@ -19243,20 +18789,20 @@ $__System.registerDynamic("89", ["88", "3f", "37", "1e"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("90", ["89", "88", "9c", "ca", "8a", "3f", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("8c", ["85", "84", "98", "c6", "86", "2f", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var CallbackQueue = $__require('89');
-    var PooledClass = $__require('88');
-    var ReactPerf = $__require('9c');
-    var ReactReconciler = $__require('ca');
-    var Transaction = $__require('8a');
-    var assign = $__require('3f');
-    var invariant = $__require('37');
+    var CallbackQueue = $__require('85');
+    var PooledClass = $__require('84');
+    var ReactPerf = $__require('98');
+    var ReactReconciler = $__require('c6');
+    var Transaction = $__require('86');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
     var dirtyComponents = [];
     var asapCallbackQueue = CallbackQueue.getPooled();
     var asapEnqueued = false;
@@ -19387,20 +18933,20 @@ $__System.registerDynamic("90", ["89", "88", "9c", "ca", "8a", "3f", "37", "1e"]
   return module.exports;
 });
 
-$__System.registerDynamic("e2", ["7d", "78", "e8", "90", "3f", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("de", ["79", "74", "e4", "8c", "2f", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactCurrentOwner = $__require('7d');
-    var ReactElement = $__require('78');
-    var ReactInstanceMap = $__require('e8');
-    var ReactUpdates = $__require('90');
-    var assign = $__require('3f');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var ReactCurrentOwner = $__require('79');
+    var ReactElement = $__require('74');
+    var ReactInstanceMap = $__require('e4');
+    var ReactUpdates = $__require('8c');
+    var assign = $__require('2f');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     function enqueueUpdate(internalInstance) {
       ReactUpdates.enqueueUpdate(internalInstance);
     }
@@ -19523,14 +19069,14 @@ $__System.registerDynamic("e2", ["7d", "78", "e8", "90", "3f", "37", "77", "1e"]
   return module.exports;
 });
 
-$__System.registerDynamic("fb", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("f7", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var ReactOwner = {
       isValidOwner: function(object) {
         return !!(object && typeof object.attachRef === 'function' && typeof object.detachRef === 'function');
@@ -19552,14 +19098,14 @@ $__System.registerDynamic("fb", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("fc", ["fb", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("f8", ["f7", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactOwner = $__require('fb');
+    var ReactOwner = $__require('f7');
     var ReactRef = {};
     function attachRef(ref, component, owner) {
       if (typeof ref === 'function') {
@@ -19604,13 +19150,13 @@ $__System.registerDynamic("fc", ["fb", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("ca", ["fc"], true, function($__require, exports, module) {
+$__System.registerDynamic("c6", ["f8"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactRef = $__require('fc');
+  var ReactRef = $__require('f8');
   function attachRefs() {
     ReactRef.attachRefs(this, this._currentElement);
   }
@@ -19649,7 +19195,7 @@ $__System.registerDynamic("ca", ["fc"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("fd", [], true, function($__require, exports, module) {
+$__System.registerDynamic("f9", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19681,13 +19227,13 @@ $__System.registerDynamic("fd", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("8f", ["fd"], true, function($__require, exports, module) {
+$__System.registerDynamic("8b", ["f9"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var adler32 = $__require('fd');
+  var adler32 = $__require('f9');
   var TAG_END = /\/?>/;
   var ReactMarkupChecksum = {
     CHECKSUM_ATTR_NAME: 'data-react-checksum',
@@ -19707,7 +19253,7 @@ $__System.registerDynamic("8f", ["fd"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("e8", [], true, function($__require, exports, module) {
+$__System.registerDynamic("e4", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19732,7 +19278,7 @@ $__System.registerDynamic("e8", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("c4", [], true, function($__require, exports, module) {
+$__System.registerDynamic("c0", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19750,15 +19296,15 @@ $__System.registerDynamic("c4", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("8e", ["c4", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("8a", ["c0", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactRootIndex = $__require('c4');
-    var invariant = $__require('37');
+    var ReactRootIndex = $__require('c0');
+    var invariant = $__require('27');
     var SEPARATOR = '.';
     var SEPARATOR_LENGTH = SEPARATOR.length;
     var MAX_TREE_DEPTH = 10000;
@@ -19877,7 +19423,7 @@ $__System.registerDynamic("8e", ["c4", "37", "1e"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("f7", [], true, function($__require, exports, module) {
+$__System.registerDynamic("f3", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19903,7 +19449,7 @@ $__System.registerDynamic("f7", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("7e", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("7a", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -19923,16 +19469,16 @@ $__System.registerDynamic("7e", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("78", ["7d", "3f", "7e", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("74", ["79", "2f", "7a", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactCurrentOwner = $__require('7d');
-    var assign = $__require('3f');
-    var canDefineProperty = $__require('7e');
+    var ReactCurrentOwner = $__require('79');
+    var assign = $__require('2f');
+    var canDefineProperty = $__require('7a');
     var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol['for']('react.element') || 0xeac7;
     var RESERVED_PROPS = {
       key: true,
@@ -20077,7 +19623,7 @@ $__System.registerDynamic("78", ["7d", "3f", "7e", "1e"], true, function($__requ
   return module.exports;
 });
 
-$__System.registerDynamic("bc", [], true, function($__require, exports, module) {
+$__System.registerDynamic("b8", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20089,13 +19635,13 @@ $__System.registerDynamic("bc", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("e4", ["35"], true, function($__require, exports, module) {
+$__System.registerDynamic("e0", ["25"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ExecutionEnvironment = $__require('35');
+  var ExecutionEnvironment = $__require('25');
   var useHasFeature;
   if (ExecutionEnvironment.canUseDOM) {
     useHasFeature = document.implementation && document.implementation.hasFeature && document.implementation.hasFeature('', '') !== true;
@@ -20121,7 +19667,7 @@ $__System.registerDynamic("e4", ["35"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("3f", [], true, function($__require, exports, module) {
+$__System.registerDynamic("2f", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20152,7 +19698,7 @@ $__System.registerDynamic("3f", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("eb", [], true, function($__require, exports, module) {
+$__System.registerDynamic("e7", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20171,13 +19717,13 @@ $__System.registerDynamic("eb", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("fe", ["c0"], true, function($__require, exports, module) {
+$__System.registerDynamic("fa", ["bc"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var EventPluginHub = $__require('c0');
+  var EventPluginHub = $__require('bc');
   function runEventQueueInBatch(events) {
     EventPluginHub.enqueueEvents(events);
     EventPluginHub.processEventQueue(false);
@@ -20191,7 +19737,7 @@ $__System.registerDynamic("fe", ["c0"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("f4", [], true, function($__require, exports, module) {
+$__System.registerDynamic("f0", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20209,14 +19755,14 @@ $__System.registerDynamic("f4", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("f3", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("ef", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     function accumulateInto(current, next) {
       !(next != null) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'accumulateInto(...): Accumulated items must not be null or undefined.') : invariant(false) : undefined;
       if (current == null) {
@@ -20243,7 +19789,7 @@ $__System.registerDynamic("f3", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("ff", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("fb", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -20292,17 +19838,17 @@ $__System.registerDynamic("ff", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("100", ["ab", "ff", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("fc", ["a7", "fb", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventConstants = $__require('ab');
-    var ReactErrorUtils = $__require('ff');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var EventConstants = $__require('a7');
+    var ReactErrorUtils = $__require('fb');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     var injection = {
       Mount: null,
       injectMount: function(InjectedMount) {
@@ -20428,14 +19974,14 @@ $__System.registerDynamic("100", ["ab", "ff", "37", "77", "1e"], true, function(
   return module.exports;
 });
 
-$__System.registerDynamic("101", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("fd", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var EventPluginOrder = null;
     var namesToPlugins = {};
     function recomputePluginOrdering() {
@@ -20551,20 +20097,20 @@ $__System.registerDynamic("101", ["37", "1e"], true, function($__require, export
   return module.exports;
 });
 
-$__System.registerDynamic("c0", ["101", "100", "ff", "f3", "f4", "37", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("bc", ["fd", "fc", "fb", "ef", "f0", "27", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventPluginRegistry = $__require('101');
-    var EventPluginUtils = $__require('100');
-    var ReactErrorUtils = $__require('ff');
-    var accumulateInto = $__require('f3');
-    var forEachAccumulated = $__require('f4');
-    var invariant = $__require('37');
-    var warning = $__require('77');
+    var EventPluginRegistry = $__require('fd');
+    var EventPluginUtils = $__require('fc');
+    var ReactErrorUtils = $__require('fb');
+    var accumulateInto = $__require('ef');
+    var forEachAccumulated = $__require('f0');
+    var invariant = $__require('27');
+    var warning = $__require('73');
     var listenerBank = {};
     var eventQueue = null;
     var executeDispatchesAndRelease = function(event, simulated) {
@@ -20684,13 +20230,13 @@ $__System.registerDynamic("c0", ["101", "100", "ff", "f3", "f4", "37", "77", "1e
   return module.exports;
 });
 
-$__System.registerDynamic("ab", ["be"], true, function($__require, exports, module) {
+$__System.registerDynamic("a7", ["ba"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var keyMirror = $__require('be');
+  var keyMirror = $__require('ba');
   var PropagationPhases = keyMirror({
     bubbled: null,
     captured: null
@@ -20769,21 +20315,21 @@ $__System.registerDynamic("ab", ["be"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("bb", ["ab", "c0", "101", "fe", "9c", "eb", "3f", "e4", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("b7", ["a7", "bc", "fd", "fa", "98", "e7", "2f", "e0", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var EventConstants = $__require('ab');
-    var EventPluginHub = $__require('c0');
-    var EventPluginRegistry = $__require('101');
-    var ReactEventEmitterMixin = $__require('fe');
-    var ReactPerf = $__require('9c');
-    var ViewportMetrics = $__require('eb');
-    var assign = $__require('3f');
-    var isEventSupported = $__require('e4');
+    var EventConstants = $__require('a7');
+    var EventPluginHub = $__require('bc');
+    var EventPluginRegistry = $__require('fd');
+    var ReactEventEmitterMixin = $__require('fa');
+    var ReactPerf = $__require('98');
+    var ViewportMetrics = $__require('e7');
+    var assign = $__require('2f');
+    var isEventSupported = $__require('e0');
     var alreadyListeningTo = {};
     var isMonitoringScrollValue = false;
     var reactTopListenersCounter = 0;
@@ -20940,35 +20486,35 @@ $__System.registerDynamic("bb", ["ab", "c0", "101", "fe", "9c", "eb", "3f", "e4"
   return module.exports;
 });
 
-$__System.registerDynamic("96", ["9b", "bb", "7d", "bc", "78", "f7", "8e", "e8", "8f", "9c", "ca", "e2", "90", "3f", "91", "b8", "92", "37", "e5", "cb", "e7", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("92", ["97", "b7", "79", "b8", "74", "f3", "8a", "e4", "8b", "98", "c6", "de", "8c", "2f", "8d", "b4", "8e", "27", "e1", "c7", "e3", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var DOMProperty = $__require('9b');
-    var ReactBrowserEventEmitter = $__require('bb');
-    var ReactCurrentOwner = $__require('7d');
-    var ReactDOMFeatureFlags = $__require('bc');
-    var ReactElement = $__require('78');
-    var ReactEmptyComponentRegistry = $__require('f7');
-    var ReactInstanceHandles = $__require('8e');
-    var ReactInstanceMap = $__require('e8');
-    var ReactMarkupChecksum = $__require('8f');
-    var ReactPerf = $__require('9c');
-    var ReactReconciler = $__require('ca');
-    var ReactUpdateQueue = $__require('e2');
-    var ReactUpdates = $__require('90');
-    var assign = $__require('3f');
-    var emptyObject = $__require('91');
-    var containsNode = $__require('b8');
-    var instantiateReactComponent = $__require('92');
-    var invariant = $__require('37');
-    var setInnerHTML = $__require('e5');
-    var shouldUpdateReactComponent = $__require('cb');
-    var validateDOMNesting = $__require('e7');
-    var warning = $__require('77');
+    var DOMProperty = $__require('97');
+    var ReactBrowserEventEmitter = $__require('b7');
+    var ReactCurrentOwner = $__require('79');
+    var ReactDOMFeatureFlags = $__require('b8');
+    var ReactElement = $__require('74');
+    var ReactEmptyComponentRegistry = $__require('f3');
+    var ReactInstanceHandles = $__require('8a');
+    var ReactInstanceMap = $__require('e4');
+    var ReactMarkupChecksum = $__require('8b');
+    var ReactPerf = $__require('98');
+    var ReactReconciler = $__require('c6');
+    var ReactUpdateQueue = $__require('de');
+    var ReactUpdates = $__require('8c');
+    var assign = $__require('2f');
+    var emptyObject = $__require('8d');
+    var containsNode = $__require('b4');
+    var instantiateReactComponent = $__require('8e');
+    var invariant = $__require('27');
+    var setInnerHTML = $__require('e1');
+    var shouldUpdateReactComponent = $__require('c7');
+    var validateDOMNesting = $__require('e3');
+    var warning = $__require('73');
     var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
     var nodeCache = {};
     var ELEMENT_NODE_TYPE = 1;
@@ -21384,18 +20930,18 @@ $__System.registerDynamic("96", ["9b", "bb", "7d", "bc", "78", "f7", "8e", "e8",
   return module.exports;
 });
 
-$__System.registerDynamic("d0", ["102", "e0", "96", "9c", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("cc", ["fe", "dc", "92", "98", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var DOMChildrenOperations = $__require('102');
-    var DOMPropertyOperations = $__require('e0');
-    var ReactMount = $__require('96');
-    var ReactPerf = $__require('9c');
-    var invariant = $__require('37');
+    var DOMChildrenOperations = $__require('fe');
+    var DOMPropertyOperations = $__require('dc');
+    var ReactMount = $__require('92');
+    var ReactPerf = $__require('98');
+    var invariant = $__require('27');
     var INVALID_PROPERTY_ERRORS = {
       dangerouslySetInnerHTML: '`dangerouslySetInnerHTML` must be set using `updateInnerHTMLByID()`.',
       style: '`style` must be set using `updateStylesByID()`.'
@@ -21431,15 +20977,15 @@ $__System.registerDynamic("d0", ["102", "e0", "96", "9c", "37", "1e"], true, fun
   return module.exports;
 });
 
-$__System.registerDynamic("e1", ["d0", "96", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("dd", ["cc", "92", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactDOMIDOperations = $__require('d0');
-    var ReactMount = $__require('96');
+    var ReactDOMIDOperations = $__require('cc');
+    var ReactMount = $__require('92');
     var ReactComponentBrowserEnvironment = {
       processChildrenUpdates: ReactDOMIDOperations.dangerouslyProcessChildrenUpdates,
       replaceNodeWithMarkupByID: ReactDOMIDOperations.dangerouslyReplaceNodeWithMarkupByID,
@@ -21453,14 +20999,14 @@ $__System.registerDynamic("e1", ["d0", "96", "1e"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("77", ["40", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("73", ["30", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var emptyFunction = $__require('40');
+    var emptyFunction = $__require('30');
     var warning = emptyFunction;
     if (process.env.NODE_ENV !== 'production') {
       warning = function(condition, format) {
@@ -21495,13 +21041,13 @@ $__System.registerDynamic("77", ["40", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("103", ["e3"], true, function($__require, exports, module) {
+$__System.registerDynamic("ff", ["df"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var escapeTextContentForBrowser = $__require('e3');
+  var escapeTextContentForBrowser = $__require('df');
   function quoteAttributeValueForBrowser(value) {
     return '"' + escapeTextContentForBrowser(value) + '"';
   }
@@ -21510,14 +21056,14 @@ $__System.registerDynamic("103", ["e3"], true, function($__require, exports, mod
   return module.exports;
 });
 
-$__System.registerDynamic("9b", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("97", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     function checkMask(value, bitmask) {
       return (value & bitmask) === bitmask;
     }
@@ -21617,17 +21163,17 @@ $__System.registerDynamic("9b", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("e0", ["9b", "9c", "103", "77", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("dc", ["97", "98", "ff", "73", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var DOMProperty = $__require('9b');
-    var ReactPerf = $__require('9c');
-    var quoteAttributeValueForBrowser = $__require('103');
-    var warning = $__require('77');
+    var DOMProperty = $__require('97');
+    var ReactPerf = $__require('98');
+    var quoteAttributeValueForBrowser = $__require('ff');
+    var warning = $__require('73');
     var VALID_ATTRIBUTE_NAME_REGEX = /^[a-zA-Z_][\w\.\-]*$/;
     var illegalAttributeNameCache = {};
     var validatedAttributeNameCache = {};
@@ -21774,7 +21320,7 @@ $__System.registerDynamic("e0", ["9b", "9c", "103", "77", "1e"], true, function(
   return module.exports;
 });
 
-$__System.registerDynamic("e3", [], true, function($__require, exports, module) {
+$__System.registerDynamic("df", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21799,15 +21345,15 @@ $__System.registerDynamic("e3", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("e6", ["35", "e3", "e5"], true, function($__require, exports, module) {
+$__System.registerDynamic("e2", ["25", "df", "e1"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ExecutionEnvironment = $__require('35');
-  var escapeTextContentForBrowser = $__require('e3');
-  var setInnerHTML = $__require('e5');
+  var ExecutionEnvironment = $__require('25');
+  var escapeTextContentForBrowser = $__require('df');
+  var setInnerHTML = $__require('e1');
   var setTextContent = function(node, text) {
     node.textContent = text;
   };
@@ -21823,14 +21369,14 @@ $__System.registerDynamic("e6", ["35", "e3", "e5"], true, function($__require, e
   return module.exports;
 });
 
-$__System.registerDynamic("e5", ["35", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("e1", ["25", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ExecutionEnvironment = $__require('35');
+    var ExecutionEnvironment = $__require('25');
     var WHITESPACE_TEST = /^[ \r\n\t\f]/;
     var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
     var setInnerHTML = function(node, html) {
@@ -21871,7 +21417,7 @@ $__System.registerDynamic("e5", ["35", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("9c", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("98", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21921,14 +21467,14 @@ $__System.registerDynamic("9c", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("be", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("ba", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     var keyMirror = function(obj) {
       var ret = {};
       var key;
@@ -21947,13 +21493,13 @@ $__System.registerDynamic("be", ["37", "1e"], true, function($__require, exports
   return module.exports;
 });
 
-$__System.registerDynamic("cd", ["be"], true, function($__require, exports, module) {
+$__System.registerDynamic("c9", ["ba"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var keyMirror = $__require('be');
+  var keyMirror = $__require('ba');
   var ReactMultiChildUpdateTypes = keyMirror({
     INSERT_MARKUP: null,
     MOVE_EXISTING: null,
@@ -21966,7 +21512,7 @@ $__System.registerDynamic("cd", ["be"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("40", [], true, function($__require, exports, module) {
+$__System.registerDynamic("30", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21993,15 +21539,15 @@ $__System.registerDynamic("40", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("104", ["35", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("100", ["25", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ExecutionEnvironment = $__require('35');
-    var invariant = $__require('37');
+    var ExecutionEnvironment = $__require('25');
+    var invariant = $__require('27');
     var dummyNode = ExecutionEnvironment.canUseDOM ? document.createElement('div') : null;
     var shouldWrap = {};
     var selectWrap = [1, '<select multiple="true">', '</select>'];
@@ -22051,7 +21597,7 @@ $__System.registerDynamic("104", ["35", "37", "1e"], true, function($__require, 
   return module.exports;
 });
 
-$__System.registerDynamic("105", [], true, function($__require, exports, module) {
+$__System.registerDynamic("101", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22143,37 +21689,37 @@ $__System.registerDynamic("105", [], true, function($__require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("106", ["105"], true, function($__require, exports, module) {
+$__System.registerDynamic("102", ["101"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('105');
+  module.exports = $__require('101');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("107", ["106"], true, function($__require, exports, module) {
+$__System.registerDynamic("103", ["102"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__System._nodeRequire ? process : $__require('106');
+  module.exports = $__System._nodeRequire ? process : $__require('102');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("1e", ["107"], true, function($__require, exports, module) {
+$__System.registerDynamic("1e", ["103"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('107');
+  module.exports = $__require('103');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("37", ["1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("27", ["1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22208,14 +21754,14 @@ $__System.registerDynamic("37", ["1e"], true, function($__require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("108", ["37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("104", ["27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var invariant = $__require('37');
+    var invariant = $__require('27');
     function toArray(obj) {
       var length = obj.length;
       !(!Array.isArray(obj) && (typeof obj === 'object' || typeof obj === 'function')) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'toArray: Array-like object expected') : invariant(false) : undefined;
@@ -22238,13 +21784,13 @@ $__System.registerDynamic("108", ["37", "1e"], true, function($__require, export
   return module.exports;
 });
 
-$__System.registerDynamic("109", ["108"], true, function($__require, exports, module) {
+$__System.registerDynamic("105", ["104"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var toArray = $__require('108');
+  var toArray = $__require('104');
   function hasArrayNature(obj) {
     return (!!obj && (typeof obj == 'object' || typeof obj == 'function') && 'length' in obj && !('setInterval' in obj) && typeof obj.nodeType != 'number' && (Array.isArray(obj) || 'callee' in obj || 'item' in obj));
   }
@@ -22262,17 +21808,17 @@ $__System.registerDynamic("109", ["108"], true, function($__require, exports, mo
   return module.exports;
 });
 
-$__System.registerDynamic("10a", ["35", "109", "104", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("106", ["25", "105", "100", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ExecutionEnvironment = $__require('35');
-    var createArrayFromMixed = $__require('109');
-    var getMarkupWrap = $__require('104');
-    var invariant = $__require('37');
+    var ExecutionEnvironment = $__require('25');
+    var createArrayFromMixed = $__require('105');
+    var getMarkupWrap = $__require('100');
+    var invariant = $__require('27');
     var dummyNode = ExecutionEnvironment.canUseDOM ? document.createElement('div') : null;
     var nodeNamePattern = /^\s*<(\w+)/;
     function getNodeName(markup) {
@@ -22310,7 +21856,7 @@ $__System.registerDynamic("10a", ["35", "109", "104", "37", "1e"], true, functio
   return module.exports;
 });
 
-$__System.registerDynamic("35", [], true, function($__require, exports, module) {
+$__System.registerDynamic("25", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22329,18 +21875,18 @@ $__System.registerDynamic("35", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("10b", ["35", "10a", "40", "104", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("107", ["25", "106", "30", "100", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ExecutionEnvironment = $__require('35');
-    var createNodesFromMarkup = $__require('10a');
-    var emptyFunction = $__require('40');
-    var getMarkupWrap = $__require('104');
-    var invariant = $__require('37');
+    var ExecutionEnvironment = $__require('25');
+    var createNodesFromMarkup = $__require('106');
+    var emptyFunction = $__require('30');
+    var getMarkupWrap = $__require('100');
+    var invariant = $__require('27');
     var OPEN_TAG_NAME_EXP = /^(<[^ \/>]+)/;
     var RESULT_INDEX_ATTR = 'data-danger-index';
     function getNodeName(markup) {
@@ -22409,19 +21955,19 @@ $__System.registerDynamic("10b", ["35", "10a", "40", "104", "37", "1e"], true, f
   return module.exports;
 });
 
-$__System.registerDynamic("102", ["10b", "cd", "9c", "e5", "e6", "37", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("fe", ["107", "c9", "98", "e1", "e2", "27", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var Danger = $__require('10b');
-    var ReactMultiChildUpdateTypes = $__require('cd');
-    var ReactPerf = $__require('9c');
-    var setInnerHTML = $__require('e5');
-    var setTextContent = $__require('e6');
-    var invariant = $__require('37');
+    var Danger = $__require('107');
+    var ReactMultiChildUpdateTypes = $__require('c9');
+    var ReactPerf = $__require('98');
+    var setInnerHTML = $__require('e1');
+    var setTextContent = $__require('e2');
+    var invariant = $__require('27');
     function insertChildAt(parentNode, childNode, index) {
       var beforeChild = index >= parentNode.childNodes.length ? null : parentNode.childNodes.item(index);
       parentNode.insertBefore(childNode, beforeChild);
@@ -22486,21 +22032,21 @@ $__System.registerDynamic("102", ["10b", "cd", "9c", "e5", "e6", "37", "1e"], tr
   return module.exports;
 });
 
-$__System.registerDynamic("f6", ["102", "e0", "e1", "96", "3f", "e3", "e6", "e7", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("f2", ["fe", "dc", "dd", "92", "2f", "df", "e2", "e3", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var DOMChildrenOperations = $__require('102');
-    var DOMPropertyOperations = $__require('e0');
-    var ReactComponentBrowserEnvironment = $__require('e1');
-    var ReactMount = $__require('96');
-    var assign = $__require('3f');
-    var escapeTextContentForBrowser = $__require('e3');
-    var setTextContent = $__require('e6');
-    var validateDOMNesting = $__require('e7');
+    var DOMChildrenOperations = $__require('fe');
+    var DOMPropertyOperations = $__require('dc');
+    var ReactComponentBrowserEnvironment = $__require('dd');
+    var ReactMount = $__require('92');
+    var assign = $__require('2f');
+    var escapeTextContentForBrowser = $__require('df');
+    var setTextContent = $__require('e2');
+    var validateDOMNesting = $__require('e3');
     var ReactDOMTextComponent = function(props) {};
     assign(ReactDOMTextComponent.prototype, {
       construct: function(text) {
@@ -22552,7 +22098,7 @@ $__System.registerDynamic("f6", ["102", "e0", "e1", "96", "3f", "e3", "e6", "e7"
   return module.exports;
 });
 
-$__System.registerDynamic("7d", [], true, function($__require, exports, module) {
+$__System.registerDynamic("79", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22564,25 +22110,25 @@ $__System.registerDynamic("7d", [], true, function($__require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("3a", ["7d", "f6", "94", "8e", "96", "9c", "ca", "90", "86", "de", "95", "77", "35", "1e"], true, function($__require, exports, module) {
+$__System.registerDynamic("2a", ["79", "f2", "90", "8a", "92", "98", "c6", "8c", "82", "da", "91", "73", "25", "1e"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ReactCurrentOwner = $__require('7d');
-    var ReactDOMTextComponent = $__require('f6');
-    var ReactDefaultInjection = $__require('94');
-    var ReactInstanceHandles = $__require('8e');
-    var ReactMount = $__require('96');
-    var ReactPerf = $__require('9c');
-    var ReactReconciler = $__require('ca');
-    var ReactUpdates = $__require('90');
-    var ReactVersion = $__require('86');
-    var findDOMNode = $__require('de');
-    var renderSubtreeIntoContainer = $__require('95');
-    var warning = $__require('77');
+    var ReactCurrentOwner = $__require('79');
+    var ReactDOMTextComponent = $__require('f2');
+    var ReactDefaultInjection = $__require('90');
+    var ReactInstanceHandles = $__require('8a');
+    var ReactMount = $__require('92');
+    var ReactPerf = $__require('98');
+    var ReactReconciler = $__require('c6');
+    var ReactUpdates = $__require('8c');
+    var ReactVersion = $__require('82');
+    var findDOMNode = $__require('da');
+    var renderSubtreeIntoContainer = $__require('91');
+    var warning = $__require('73');
     ReactDefaultInjection.inject();
     var render = ReactPerf.measure('React', 'render', ReactMount.render);
     var React = {
@@ -22603,7 +22149,7 @@ $__System.registerDynamic("3a", ["7d", "f6", "94", "8e", "96", "9c", "ca", "90",
       });
     }
     if (process.env.NODE_ENV !== 'production') {
-      var ExecutionEnvironment = $__require('35');
+      var ExecutionEnvironment = $__require('25');
       if (ExecutionEnvironment.canUseDOM && window.top === window.self) {
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
           if (navigator.userAgent.indexOf('Chrome') > -1 && navigator.userAgent.indexOf('Edge') === -1 || navigator.userAgent.indexOf('Firefox') > -1) {
@@ -22627,17 +22173,17 @@ $__System.registerDynamic("3a", ["7d", "f6", "94", "8e", "96", "9c", "ca", "90",
   return module.exports;
 });
 
-$__System.registerDynamic("39", ["3a", "93", "81", "3f", "76"], true, function($__require, exports, module) {
+$__System.registerDynamic("29", ["2a", "8f", "7d", "2f", "72"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ReactDOM = $__require('3a');
-  var ReactDOMServer = $__require('93');
-  var ReactIsomorphic = $__require('81');
-  var assign = $__require('3f');
-  var deprecated = $__require('76');
+  var ReactDOM = $__require('2a');
+  var ReactDOMServer = $__require('8f');
+  var ReactIsomorphic = $__require('7d');
+  var assign = $__require('2f');
+  var deprecated = $__require('72');
   var React = {};
   assign(React, ReactIsomorphic);
   assign(React, {
@@ -22654,37 +22200,37 @@ $__System.registerDynamic("39", ["3a", "93", "81", "3f", "76"], true, function($
   return module.exports;
 });
 
-$__System.registerDynamic("10c", ["39"], true, function($__require, exports, module) {
+$__System.registerDynamic("108", ["29"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('39');
+  module.exports = $__require('29');
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("5", ["10c"], true, function($__require, exports, module) {
+$__System.registerDynamic("5", ["108"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('10c');
+  module.exports = $__require('108');
   global.define = __define;
   return module.exports;
 });
 
-$__System.register('1', ['2', '3', '4', '5', '10', '14', '15', '16', '23', '33', '41', '75', '1c'], function (_export) {
+$__System.register('1', ['2', '3', '4', '5', '10', '14', '15', '16', '23', '31', '71', '1c'], function (_export) {
 
     //Styles
     'use strict';
 
     //Components
-    var OfficePage, React, Router, DefaultRoute, Route, Link, IndexRoute, browserHistory, IndexLink, StorePage, WindowsPage, SurfacePage, Linkband, createBrowserHistory, TransitionGroup, ReactDOM, HomePage, App;
+    var OfficePage, React, Router, DefaultRoute, Route, Link, IndexRoute, hashHistory, StorePage, WindowsPage, SurfacePage, Linkband, TransitionGroup, ReactDOM, HomePage, App;
     return {
-        setters: [function (_12) {}, function (_11) {}, function (_10) {
-            OfficePage = _10['default'];
+        setters: [function (_11) {}, function (_10) {}, function (_9) {
+            OfficePage = _9['default'];
         }, function (_) {
             React = _['default'];
         }, function (_3) {
@@ -22693,18 +22239,15 @@ $__System.register('1', ['2', '3', '4', '5', '10', '14', '15', '16', '23', '33',
             Route = _3.Route;
             Link = _3.Link;
             IndexRoute = _3.IndexRoute;
-            browserHistory = _3.browserHistory;
-            IndexLink = _3.IndexLink;
-        }, function (_9) {
-            StorePage = _9['default'];
+            hashHistory = _3.hashHistory;
         }, function (_8) {
-            WindowsPage = _8['default'];
+            StorePage = _8['default'];
         }, function (_7) {
-            SurfacePage = _7['default'];
+            WindowsPage = _7['default'];
         }, function (_6) {
-            Linkband = _6['default'];
+            SurfacePage = _6['default'];
         }, function (_5) {
-            createBrowserHistory = _5['default'];
+            Linkband = _5['default'];
         }, function (_4) {
             TransitionGroup = _4['default'];
         }, function (_2) {
@@ -22735,7 +22278,7 @@ $__System.register('1', ['2', '3', '4', '5', '10', '14', '15', '16', '23', '33',
 
             ReactDOM.render(React.createElement(
                 Router,
-                { history: createBrowserHistory() },
+                { history: hashHistory },
                 React.createElement(
                     Route,
                     { path: '/', component: App },
