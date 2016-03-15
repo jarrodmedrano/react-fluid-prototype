@@ -11,6 +11,7 @@ var Mosaic = React.createClass({
 
     render() {
 
+
         let mosaicClass = classNames(
             this.props.mosaic.context ? this.props.mosaic.context : 'context-music-album',
             'c-placement f-width-small f-height-large'
@@ -43,14 +44,14 @@ var Mosaic = React.createClass({
                         </div>
                     </div>) : null}
                     {mosaicHeading ? null : <div>
-                            <dl>
-                                <dt className="x-screen-reader">Game Title</dt>
-                                <dd><cite>{mosaicTitle}</cite></dd>
-                                {mosaicCta ?
+                        <dl>
+                            <dt className="x-screen-reader">Game Title</dt>
+                            <dd><cite>{mosaicTitle}</cite></dd>
+                            {mosaicCta ?
                                 <div className="c-group">
                                     <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
                                 </div> : null }
-                            </dl>
+                        </dl>
                     </div>}
                 </article>
             </div>

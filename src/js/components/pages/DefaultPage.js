@@ -6,9 +6,23 @@ import _ from 'lodash'
 class DefaultPage extends React.Component {
 
     render() {
+        let currentPage = _.find(this.props.data.routes, function(result) {
+            return result.title === this.props.route.title
+        }, this);
+
+
+
         return (
             <div>
-                <Hero heroTitle="What are you using your Surface fors?" heroSrc="en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop" heroSize="f-medium" fX="f-x-left" />
+                {currentPage.content.hero ?
+                    <Hero {...currentPage.content.hero} /> : null
+                }
+
+                {currentPage.content.mosaic ?
+                    <div className="c-mosaic surface-mosaic">
+                        <MosaicContainer {...currentPage.content.mosaic}  />
+                    </div> : null
+                }
             </div>
         );
     }

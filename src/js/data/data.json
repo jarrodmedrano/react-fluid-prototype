@@ -45,17 +45,12 @@
       "path":"surface",
       "title":"Surface",
       "content": {
-        "hero": {
-          "heroTitle": "sdfdsfsdre you using your Surface for?",
-          "heroSrc": "en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
-          "heroSize": "f-medium",
-          "fX": "f-x-left"
-        },
         "mosaic": {
           "mosaics": [
             [
               {
                 "mosaicTitle": "Surface Pro 4",
+                "containerSize": "f-vp1-whole f-vp4-half f-height-large",
                 "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
                 "mosaicImage": "img/surfacepro.jpg",
                 "mosaicCta": 'Show me more'
@@ -64,6 +59,7 @@
             [
               {
                 "mosaicTitle": "Surface Pens",
+                "containerSize": "f-vp1-whole f-vp4-half",
                 "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
                 "mosaicImage": "img/surface-pen.jpg",
                 "mosaicCta": 'Buy Now'

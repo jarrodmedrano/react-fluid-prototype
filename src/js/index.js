@@ -32,7 +32,8 @@ var App = React.createClass({
                 <TransitionGroup className="main-container" component="div" transitionName="page-transition"
                                  transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                     {React.cloneElement(this.props.children, {
-                        key: this.props.location.pathname
+                        key: this.props.location.pathname,
+                        data: data
                         })}
                 </TransitionGroup>
             </div>
@@ -51,7 +52,7 @@ ReactDOM.render(
                     }
                     return true;
                 }).map(function(result, id) {
-                    return <IndexRoute component={HomePage} key={id} title={result.title}/>;
+                    return <IndexRoute component={DefaultPage} key={id} title={result.title}/>;
                 })}
                 {data.routes.filter(function(result, id) {
                     if(result.type === 'IndexRoute') {
