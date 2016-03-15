@@ -11,17 +11,16 @@ class DefaultPage extends React.Component {
         }, this);
 
 
-
         return (
             <div>
                 {currentPage.content.hero ?
                     <Hero {...currentPage.content.hero} /> : null
                 }
 
-                {currentPage.content.mosaic ?
-                    <div className="c-mosaic surface-mosaic">
-                        <MosaicContainer {...currentPage.content.mosaic}  />
-                    </div> : null
+                {currentPage.content.mosaics ?
+
+                        <MosaicContainer mosaics={currentPage.content.mosaics}  />
+                     : null
                 }
             </div>
         );
