@@ -12,18 +12,19 @@ import SurfacePage from 'src/js/components/pages/SurfacePage/SurfacePage';
 import WindowsPage from 'src/js/components/pages/WindowsPage/WindowsPage';
 import StorePage from 'src/js/components/pages/StorePage';
 import OfficePage from 'src/js/components/pages/OfficePage';
+import DefaultPage from 'src/js/components/pages/DefaultPage';
+
 
 //Styles
 import 'src/styles/main.scss!';
 import 'src/styles/mwf_en-us_default.min.css!';
 
+import data from 'src/js/data/data.json!';
 
 
 var App = React.createClass({
 
-
     render() {
-
 
         return (
             <div className="grid">
@@ -44,11 +45,22 @@ ReactDOM.render(
 
         <Router history={appHistory}>
             <Route path="/" component={App}>
-                <IndexRoute component={HomePage} title="Welcome"/>
-                <Route path="surface" component={SurfacePage} title="Surface" />
-                <Route path="windows" component={WindowsPage} title="Windows" />
-                <Route path="store" component={StorePage} title="Microsoft Store"/>
-                <Route path="office" component={OfficePage} title="Office"/>
+                {data.routes.filter(function(result, id) {
+                    if(result.type !== 'IndexRoute') {
+                        return false
+                    }
+                    return true;
+                }).map(function(result, id) {
+                    return <IndexRoute component={HomePage} key={id} title={result.title}/>;
+                })}
+                {data.routes.filter(function(result, id) {
+                    if(result.type === 'IndexRoute') {
+                        return false
+                    }
+                    return true;
+                }).map(function(result, id) {
+                    return <Route component={DefaultPage} key={id} path={result.path} title={result.title}/>;
+                })}
             </Route>
         </Router>
     , document.getElementById('app')

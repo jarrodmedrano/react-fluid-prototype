@@ -21,6 +21,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.19",
     "history": "npm:history@2.0.1",
+    "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
     "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@0.14.7",

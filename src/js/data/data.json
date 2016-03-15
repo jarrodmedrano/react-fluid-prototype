@@ -1,0 +1,113 @@
+{
+  "routes": [
+    {
+      "type": "IndexRoute",
+      "path":"/",
+      "title":"Welcome",
+      "content": {
+        "hero": {
+          "heroTitle": "What are you using your Surface for?",
+          "heroSrc": "en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+          "heroSize": "f-medium",
+          "fX": "f-x-left"
+        },
+        "mosaic": {
+          "containerSize": "f-vp1-whole f-vp4-whole",
+          "mosaics": [
+            [
+              {
+                "mosaicTitle": "For Business",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/work.jpg"
+              },
+              {
+                "mosaicTitle": "For School",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/for-school.jpg"
+              },
+              {
+                "mosaicTitle": "For Play",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/art.jpg"
+              },
+              {
+                "mosaicTitle": "On the Go",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/on-the-go.jpg"
+              }
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "type": "Route",
+      "path":"surface",
+      "title":"Surface",
+      "content": {
+        "hero": {
+          "heroTitle": "sdfdsfsdre you using your Surface for?",
+          "heroSrc": "en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+          "heroSize": "f-medium",
+          "fX": "f-x-left"
+        },
+        "mosaic": {
+          "mosaics": [
+            [
+              {
+                "mosaicTitle": "Surface Pro 4",
+                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                "mosaicImage": "img/surfacepro.jpg",
+                "mosaicCta": 'Show me more'
+              }
+            ],
+            [
+              {
+                "mosaicTitle": "Surface Pens",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                "mosaicImage": "img/surface-pen.jpg",
+                "mosaicCta": 'Buy Now'
+              },
+              {
+                "mosaicTitle": "The Surface Dock",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                "mosaicImage": "img/surface-dock.jpg",
+                "mosaicCta": 'Buy Now'
+              },
+              {
+                "mosaicTitle": "Type covers in your favorite colors to fit your style",
+                "mosaicSize": "f-vp1-whole f-height-medium",
+                "mosaicImage": "img/surface-keyboard.jpg",
+                "mosaicCta": 'Buy Now'
+              }
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "type": "Route",
+      "path":"windows",
+      "title":"Windows",
+      "content": {
+
+      }
+    },
+    {
+      "type": "Route",
+      "path":"store",
+      "title":"Microsoft Store",
+      "content": {
+
+      }
+    },
+    {
+      "type": "Route",
+      "path":"office",
+      "title":"Office",
+      "content": {
+
+      }
+    }
+  ]
+}
