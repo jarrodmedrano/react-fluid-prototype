@@ -4,7 +4,6 @@ import { Router, DefaultRoute, Route, Link, IndexRoute, hashHistory, useRouterHi
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import { createHashHistory } from 'history';
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
-import 'fetch';
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
