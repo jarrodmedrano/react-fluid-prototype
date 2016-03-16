@@ -12,9 +12,9 @@ class DefaultPage extends React.Component {
 
 
         return (
-            <div>
+            <div className="main-container">
                 {currentPage.content.hero ?
-                    <Hero {...currentPage.content.hero} /> : null
+                    <div><Hero {...currentPage.content.hero} /></div> : null
                 }
 
                 {currentPage.content.mosaicContainer ?

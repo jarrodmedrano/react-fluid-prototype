@@ -29,7 +29,7 @@ var App = React.createClass({
         return (
             <div className="grid">
                 <Linkband routes={this.props.routes} params={this.props.params}/>
-                <TransitionGroup className="main-container" component="div" transitionName="page-transition"
+                <TransitionGroup component="div" transitionName="page-transition"
                                  transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                     {React.cloneElement(this.props.children, {
                         key: this.props.location.pathname,
