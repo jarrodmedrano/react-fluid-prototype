@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from 'src/js/components/hero/hero';
 import MosaicContainer from 'src/js/components/mosaic/MosaicContainer'
+import Carousel from 'src/js/components/carousel/Carousel';
+
 import _ from 'lodash'
 
 class DefaultPage extends React.Component {
@@ -13,8 +15,9 @@ class DefaultPage extends React.Component {
 
         return (
             <div className="main-container">
+
                 {currentPage.content.hero ?
-                    <div><Hero {...currentPage.content.hero} /></div> : null
+                    <Hero {...currentPage.content.hero} /> : null
                 }
 
                 {currentPage.content.mosaicContainer ?
@@ -27,6 +30,11 @@ class DefaultPage extends React.Component {
                     </div>
                      : null
                 }
+
+                {currentPage.content.carousel ?
+                    <Carousel fullscreen={currentPage.content.carousel.fullscreen} {...currentPage.content.carousel} /> : null
+                }
+
             </div>
         );
     }

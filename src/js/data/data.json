@@ -11,9 +11,10 @@
           "heroSize": "f-medium",
           "fX": "f-x-left"
         },
-        "mosaic": {
-          "containerSize": "f-vp1-whole f-vp4-whole",
-          "mosaics": [
+        "mosaicContainer": [
+          {
+            "containerSize": "f-vp1-whole f-vp4-whole",
+            "mosaics":
             [
               {
                 "mosaicTitle": "For Business",
@@ -36,8 +37,8 @@
                 "mosaicImage": "img/on-the-go.jpg"
               }
             ]
-          ]
-        }
+          }
+        ]
       }
     },
     {
@@ -90,7 +91,39 @@
       "path":"windows",
       "title":"Windows",
       "content": {
-
+        "mosaicContainer": [
+          {
+            "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "The Pen is mightier in Windows",
+                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                "mosaicImage": "img/windows-pen.jpg",
+                "mosaicCta": "Let me try"
+              }
+            ]
+          },
+          {
+            "containerSize": "f-vp1-whole f-vp4-half",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "A more personal, more secure way to unlock your Windows device",
+                "mosaicSize": "f-vp1-whole f-height-medium",
+                "mosaicHeading": "true",
+                "context": "context-app",
+                "logo": "img/windows-hello.svg",
+                "mosaicCta": "Try it out"
+              },
+              {
+                "mosaicTitle": "Try Out Inking in Edge",
+                "mosaicSize": "f-vp1-whole f-height-small",
+                "mosaicCta": "Let me draw"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -98,7 +131,9 @@
       "path":"store",
       "title":"Microsoft Store",
       "content": {
-
+        "carousel": {
+          "fullscreen": "true"
+        }
       }
     },
     {
@@ -106,7 +141,52 @@
       "path":"office",
       "title":"Office",
       "content": {
-
+        "mosaicContainer": [
+          {
+            "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "Microsoft OneNote",
+                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                "context": "context-app",
+                "logo": "img/onenote-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now"
+              }
+            ]
+          },
+          {
+            "containerSize": "f-vp1-whole f-vp4-half",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "Microsoft Word",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                "context": "context-app",
+                "logo": "img/word-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now"
+              },
+              {
+                "mosaicTitle": "PowerPoint",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                "context": "context-app",
+                "logo": "img/powerpoint-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now"
+              },
+              {
+                "mosaicTitle": "Excel",
+                "mosaicSize": "f-vp1-whole f-height-small",
+                "context": "context-app",
+                "logo": "img/excel-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now"
+              }
+            ]
+          }
+        ]
       }
     }
   ]

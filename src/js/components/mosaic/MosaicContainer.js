@@ -8,13 +8,9 @@ var MosaicContainer = React.createClass({
 
         let results = this.props.mosaics;
 
-
-
-
         return (
                 <div data-f-mosaic={results.containerSize}>
                     {results.mosaics.map(function(result, id) {
-                        console.log(result)
                         return <Mosaic key={id} mosaic={result} />
                     })}
                 </div>

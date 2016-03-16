@@ -8,10 +8,6 @@ const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
 import HomePage from 'src/js/components/pages/HomePage';
-import SurfacePage from 'src/js/components/pages/SurfacePage/SurfacePage';
-import WindowsPage from 'src/js/components/pages/WindowsPage/WindowsPage';
-import StorePage from 'src/js/components/pages/StorePage';
-import OfficePage from 'src/js/components/pages/OfficePage';
 import DefaultPage from 'src/js/components/pages/DefaultPage';
 
 
@@ -52,7 +48,7 @@ ReactDOM.render(
                     }
                     return true;
                 }).map(function(result, id) {
-                    return <IndexRoute component={DefaultPage} key={id} title={result.title}/>;
+                    return <IndexRoute component={HomePage} key={id} title={result.title}/>;
                 })}
                 {data.routes.filter(function(result, id) {
                     if(result.type === 'IndexRoute') {
