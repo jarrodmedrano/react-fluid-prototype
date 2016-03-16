@@ -59,28 +59,26 @@
               ]
             },
             {
-              "containerSize": "f-vp4-half f-height-large",
+              "containerSize": "f-vp1-whole f-vp4-half",
               "mosaics":
                   [
                     {
-                      "mosaicTitle": "For Business",
-                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                      "mosaicImage": "img/work.jpg"
+                      "mosaicTitle": "Surface Pens",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                      "mosaicImage": "img/surface-pen.jpg",
+                      "mosaicCta": "Buy Now"
                     },
                     {
-                      "mosaicTitle": "For School",
-                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                      "mosaicImage": "img/for-school.jpg"
+                      "mosaicTitle": "The Surface Dock",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                      "mosaicImage": "img/surface-dock.jpg",
+                      "mosaicCta": "Buy Now"
                     },
                     {
-                      "mosaicTitle": "For Play",
-                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                      "mosaicImage": "img/art.jpg"
-                    },
-                    {
-                      "mosaicTitle": "On the Go",
-                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                      "mosaicImage": "img/on-the-go.jpg"
+                      "mosaicTitle": "Type covers in your favorite colors to fit your style",
+                      "mosaicSize": "f-vp1-whole f-height-medium",
+                      "mosaicImage": "img/surface-keyboard.jpg",
+                      "mosaicCta": "Buy Now"
                     }
                   ]
             }

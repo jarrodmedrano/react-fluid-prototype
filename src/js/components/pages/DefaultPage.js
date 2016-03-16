@@ -18,8 +18,13 @@ class DefaultPage extends React.Component {
                 }
 
                 {currentPage.content.mosaicContainer ?
-
-                        <MosaicContainer mosaics={currentPage.content.mosaicContainer}  />
+                    <div className="c-mosaic surface-mosaic">
+                        {currentPage.content.mosaicContainer.map(function(result, id) {
+                            return (
+                              <MosaicContainer key={id} mosaics={result}  />
+                            )
+                        })}
+                    </div>
                      : null
                 }
             </div>
