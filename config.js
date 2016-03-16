@@ -20,6 +20,7 @@ System.config({
     "clean-css": "npm:clean-css@3.4.10",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.19",
+    "fetch": "github:github/fetch@0.11.0",
     "history": "npm:history@2.0.1",
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
@@ -28,6 +29,7 @@ System.config({
     "react-dom": "npm:react-dom@0.14.7",
     "react-router": "npm:react-router@2.0.0",
     "scss": "github:theefer/plugin-sass@master",
+    "whatwg-fetch": "npm:whatwg-fetch@0.11.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },

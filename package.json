@@ -19,6 +19,7 @@
       "classnames": "npm:classnames@^2.2.3",
       "clean-css": "npm:clean-css@^3.4.10",
       "css": "github:systemjs/plugin-css@^0.1.19",
+      "fetch": "github:github/fetch@^0.11.0",
       "history": "npm:history@2.0.1",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "lodash": "npm:lodash@^3.10.1",

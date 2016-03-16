@@ -4,6 +4,7 @@ import { Router, DefaultRoute, Route, Link, IndexRoute, hashHistory, useRouterHi
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import { createHashHistory } from 'history';
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+import 'fetch';
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
@@ -17,10 +18,45 @@ import 'src/styles/mwf_en-us_default.min.css!';
 
 import data from 'src/js/data/data.json!';
 
-
 var App = React.createClass({
 
+    getInitialState: function() {
+
+        return {
+            data: ''
+        };
+    },
+
+    fetchStuff() {
+
+    },
+
+    componentWillMount() {
+
+    },
+
+    componentDidMount: function() {
+        fetch('src/js/data/data.json')
+            .then(function(response) {
+                return response.json()
+            }).then(function(json) {
+            console.log('parsed json', json)
+            this.setState({
+                data: json
+            });
+        }.bind(this)).catch(function(ex) {
+            console.log('parsing failed', ex)
+        })
+    },
+
+    componentWillUnmount: function() {
+
+    },
+
+
     render() {
+
+
 
         return (
             <div className="grid">
