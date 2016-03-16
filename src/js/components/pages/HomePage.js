@@ -17,7 +17,7 @@ var HomePage = React.createClass({
                     }
 
                     {currentPage.content.mosaicContainer ?
-                        <div className="c-mosaic surface-mosaic">
+                        <div className="c-mosaic fullscreen-mosaic">
                             {currentPage.content.mosaicContainer.map(function(result, id) {
                                 return (
                                     <MosaicContainer key={id} mosaics={result}  />

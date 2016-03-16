@@ -33,14 +33,14 @@ body {
   height: calc(100vh - 64px);
   //align-items: stretch;
 
-  &.surface-mosaic {
+  &.fullscreen-mosaic {
     .context-app .c-image-overlay {
       opacity: 0;
     }
   }
 
   @media only screen and (min-width: 1084px) {
-    &.surface-mosaic {
+    &.fullscreen-mosaic {
       flex-direction: row;
 
 
