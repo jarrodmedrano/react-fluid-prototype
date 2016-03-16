@@ -114,12 +114,18 @@
                 "mosaicHeading": "true",
                 "context": "context-app",
                 "logo": "img/windows-hello.svg",
-                "mosaicCta": "Try it out"
+                "mosaicCta": "Try it out",
+                "mosaicStyle": {
+                  "background": "#7DA4AE"
+                }
               },
               {
                 "mosaicTitle": "Try Out Inking in Edge",
                 "mosaicSize": "f-vp1-whole f-height-small",
-                "mosaicCta": "Let me draw"
+                "mosaicCta": "Let me draw",
+                "mosaicStyle": {
+                  "background": "#0063AF"
+                }
               }
             ]
           }
@@ -152,7 +158,10 @@
                 "context": "context-app",
                 "logo": "img/onenote-logo.svg",
                 "mosaicHeading": "true",
-                "mosaicCta": "Buy Now"
+                "mosaicCta": "Buy Now",
+                "mosaicStyle": {
+                  "background": "#7e3878"
+                }
               }
             ]
           },
@@ -166,7 +175,10 @@
                 "context": "context-app",
                 "logo": "img/word-logo.svg",
                 "mosaicHeading": "true",
-                "mosaicCta": "Buy Now"
+                "mosaicCta": "Buy Now",
+                "mosaicStyle": {
+                  "background": "#2b5796"
+                }
               },
               {
                 "mosaicTitle": "PowerPoint",
@@ -174,7 +186,10 @@
                 "context": "context-app",
                 "logo": "img/powerpoint-logo.svg",
                 "mosaicHeading": "true",
-                "mosaicCta": "Buy Now"
+                "mosaicCta": "Buy Now",
+                "mosaicStyle": {
+                  "background": "#d04525"
+                }
               },
               {
                 "mosaicTitle": "Excel",
@@ -182,7 +197,10 @@
                 "context": "context-app",
                 "logo": "img/excel-logo.svg",
                 "mosaicHeading": "true",
-                "mosaicCta": "Buy Now"
+                "mosaicCta": "Buy Now",
+                "mosaicStyle": {
+                  "background": "#1d7044"
+                }
               }
             ]
           }
