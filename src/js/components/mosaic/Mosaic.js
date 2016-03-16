@@ -4,6 +4,8 @@ import 'src/js/components/mosaic/mosaic.scss!';
 
 var Mosaic = React.createClass({
 
+
+
     handleClick(event) {
         event.preventDefault()
         this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
@@ -22,6 +24,7 @@ var Mosaic = React.createClass({
 
 
         return(
+
             <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this.handleClick} onTouchEnd={this.handleClick}>
                 <article className={mosaicClass}>
                     {mosaicImage ? <picture>

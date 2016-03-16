@@ -17,9 +17,9 @@ class DefaultPage extends React.Component {
                     <Hero {...currentPage.content.hero} /> : null
                 }
 
-                {currentPage.content.mosaics ?
+                {currentPage.content.mosaicContainer ?
 
-                        <MosaicContainer mosaics={currentPage.content.mosaics}  />
+                        <MosaicContainer mosaics={currentPage.content.mosaicContainer}  />
                      : null
                 }
             </div>

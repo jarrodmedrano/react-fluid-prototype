@@ -45,24 +45,44 @@
       "path":"surface",
       "title":"Surface",
       "content": {
-        "mosaics": [
+        "mosaicContainer": [
             {
               "containerSize": "f-vp1-whole f-vp4-half f-height-large",
-              "mosaicz": {
-                "mosaicTitle": "Surface Pro 4",
-                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
-                "mosaicImage": "img/surfacepro.jpg",
-                "mosaicCta": "Show me more"
-              }
+              "mosaics":
+              [
+                {
+                  "mosaicTitle": "Surface Pro 4",
+                  "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                  "mosaicImage": "img/surfacepro.jpg",
+                  "mosaicCta": "Show me more"
+                }
+              ]
             },
             {
               "containerSize": "f-vp4-half f-height-large",
-              "mosaicz": {
-                "mosaicTitle": "Surface Pro 4",
-                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
-                "mosaicImage": "img/surfacepro.jpg",
-                "mosaicCta": "Show me more"
-              }
+              "mosaics":
+                  [
+                    {
+                      "mosaicTitle": "For Business",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                      "mosaicImage": "img/work.jpg"
+                    },
+                    {
+                      "mosaicTitle": "For School",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                      "mosaicImage": "img/for-school.jpg"
+                    },
+                    {
+                      "mosaicTitle": "For Play",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                      "mosaicImage": "img/art.jpg"
+                    },
+                    {
+                      "mosaicTitle": "On the Go",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                      "mosaicImage": "img/on-the-go.jpg"
+                    }
+                  ]
             }
         ]
       }
