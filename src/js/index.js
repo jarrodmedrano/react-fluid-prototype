@@ -20,45 +20,11 @@ import data from 'src/js/data/data.json!';
 
 var App = React.createClass({
 
-    getInitialState: function() {
-
-        return {
-            data: ''
-        };
-    },
-
-    fetchStuff() {
-
-    },
-
-    componentWillMount() {
-
-    },
-
-    componentDidMount: function() {
-        fetch('src/js/data/data.json')
-            .then(function(response) {
-                return response.json()
-            }).then(function(json) {
-            console.log('parsed json', json)
-            this.setState({
-                data: json
-            });
-        }.bind(this)).catch(function(ex) {
-            console.log('parsing failed', ex)
-        })
-    },
-
-    componentWillUnmount: function() {
-
-    },
-
-
     render() {
 
 
-
         return (
+
             <div className="grid">
                 <Linkband routes={this.props.routes} params={this.props.params}/>
                 <TransitionGroup component="div" transitionName="page-transition"
@@ -75,7 +41,6 @@ var App = React.createClass({
 
 
 ReactDOM.render(
-
         <Router history={appHistory}>
             <Route path="/" component={App}>
                 {data.routes.filter(function(result, id) {

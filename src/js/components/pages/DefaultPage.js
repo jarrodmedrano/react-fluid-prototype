@@ -7,10 +7,13 @@ import _ from 'lodash'
 
 class DefaultPage extends React.Component {
 
+
     render() {
         let currentPage = _.find(this.props.data.routes, function(result) {
             return result.title === this.props.route.title
         }, this);
+
+
 
 
         return (
