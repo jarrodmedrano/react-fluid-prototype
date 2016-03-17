@@ -14,6 +14,13 @@ gulp.task('deploy', plugins.shell.task([
 
 gulp.task('move', function() {
     gulp.src('./img/**/*.{gif,png,jpg,svg}')
+        .pipe(plugins.imagemin({
+            progressive: true,
+            svgoPlugins: [
+                {removeViewBox: false},
+                {cleanupIDs: false}
+            ]
+        }))
         .pipe(gulp.dest('./build/img'));
     gulp.src('./src/fonts/*')
         .pipe(gulp.dest('./build/fonts'));

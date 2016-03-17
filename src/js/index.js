@@ -17,9 +17,26 @@ import 'src/styles/mwf_en-us_default.min.css!';
 
 import data from 'src/js/data/data.json!';
 
+
+const Index = data.routes.reduce(function(result) {
+    if(result.type !== 'IndexRoute') {
+        return false
+    }
+    return result;
+});
+
+const Routes = data.routes.filter(function(result) {
+    if(result.type === 'IndexRoute') {
+        return false
+    }
+    return true;
+}).map(function(result) {
+    return result
+});
+
 class App extends React.Component {
 
-
+    
     render() {
         return (
             <div className="grid">
@@ -36,24 +53,11 @@ class App extends React.Component {
     }
 }
 
-
 ReactDOM.render(
         <Router history={appHistory}>
             <Route path="/" component={App}>
-                {data.routes.filter(function(result, id) {
-                    if(result.type !== 'IndexRoute') {
-                        return false
-                    }
-                    return true;
-                }).map(function(result, id) {
-                    return <IndexRoute component={HomePage} key={id} title={result.title}/>;
-                })}
-                {data.routes.filter(function(result, id) {
-                    if(result.type === 'IndexRoute') {
-                        return false
-                    }
-                    return true;
-                }).map(function(result, id) {
+                <IndexRoute component={HomePage} title={Index.title}/>
+                {Routes.map(function(result, id) {
                     return <Route component={DefaultPage} key={id} path={result.path} title={result.title}/>;
                 })}
             </Route>

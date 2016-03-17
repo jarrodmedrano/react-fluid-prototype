@@ -47,7 +47,7 @@
     },
     {
       "type": "Route",
-      "path":"surface",
+      "path":"/surface",
       "title":"Surface",
       "content": {
         "mosaicContainer": [
@@ -96,7 +96,7 @@
     },
     {
       "type": "Route",
-      "path":"windows",
+      "path":"/windows",
       "title":"Windows",
       "content": {
         "mosaicContainer": [
@@ -145,7 +145,7 @@
     },
     {
       "type": "Route",
-      "path":"store",
+      "path":"/store",
       "title":"Microsoft Store",
       "content": {
         "carousel": {
@@ -190,7 +190,7 @@
     },
     {
       "type": "Route",
-      "path":"office",
+      "path":"/office",
       "title":"Office",
       "content": {
         "mosaicContainer": [

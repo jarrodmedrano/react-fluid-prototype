@@ -4,7 +4,6 @@ System.config({
   transpiler: "babel",
   babelOptions: {
     "optional": [
-      "runtime",
       "optimisation.modules.system"
     ]
   },
