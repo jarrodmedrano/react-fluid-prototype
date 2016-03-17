@@ -7,16 +7,7 @@ import 'src/js/components/hero/Hero.scss!';
 class Hero extends React.Component {
 
     render() {
-
-        let heroProps = {
-            heroSrc: this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} heroFileType={this.props.heroFileType ? this.props.heroFileType : 'jpg'} /> : null,
-            heroCta: this.props.ctaButton ? <div className="hero-link-container p-t-xs">
-                <a href={this.props.ctaLink} className="c-call-to-action c-glyph"><span>{this.props.ctaText}</span></a>
-            </div> : null,
-            heroTitle: this.props.heroTitle ? <dd className="c-heading"><cite>{this.props.heroTitle}</cite></dd> : null,
-            heroSubTitle: this.props.heroSubTitle ? <div className="c-subheading">{this.props.heroSubTitle}</div> : null,
-        };
-
+        
         let heroClass = classNames(
             this.props.fullscreen === 'true' ? 'f-fullscreen': '',
             'c-hero theme-dark',
@@ -31,14 +22,16 @@ class Hero extends React.Component {
                     <div className="context-game">
                         <dl>
                             <dt className="x-screen-reader">Media Title</dt>
-                            {heroProps.heroTitle}
+                            {this.props.heroTitle ? <dd className="c-heading"><cite>{this.props.heroTitle}</cite></dd> : null}
                             <dt className="x-screen-reader">Media Tagline</dt>
-                            {heroProps.heroSubTitle}
+                            {this.props.heroSubTitle ? <div className="c-subheading">{this.props.heroSubTitle}</div> : null}
                         </dl>
-                        {heroProps.heroCta}
+                        {this.props.ctaButton ? <div className="hero-link-container p-t-xs">
+                            <a href={this.props.ctaLink} className="c-call-to-action c-glyph"><span>{this.props.ctaText}</span></a>
+                        </div> : null}
                     </div>
                 </div>
-                {heroProps.heroSrc}
+                {this.props.heroSrc ? <HeroPicture heroSrc={this.props.heroSrc} heroFileType={this.props.heroFileType ? this.props.heroFileType : 'jpg'} /> : null}
             </article>
         )
     }

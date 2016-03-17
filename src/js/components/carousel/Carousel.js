@@ -15,7 +15,7 @@ class Carousel extends React.Component {
     }
   }
 
-  updateSlide(index) {
+  _updateSlide(index) {
 
     this.setState(
         {
@@ -24,7 +24,7 @@ class Carousel extends React.Component {
     );
   }
 
-  nextSlide(index, dir) {
+  _nextSlide(index, dir) {
 
     this.setState({ slideDirection: dir });
 
@@ -41,7 +41,7 @@ class Carousel extends React.Component {
     }
   }
 
-  isFullScreen() {
+  _isFullScreen() {
     return this.props.fullscreen === 'true' ? 'f-fullscreen': ''
   }
 
@@ -54,12 +54,12 @@ class Carousel extends React.Component {
       "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)"
     };
 
-    let carouselClass = classNames(this.isFullScreen(), 'c-carousel f-multi-slide theme-dark f-scrollable-previous f-scrollable-next');
+    let carouselClass = classNames(this._isFullScreen(), 'c-carousel f-multi-slide theme-dark f-scrollable-previous f-scrollable-next');
 
     return(
           <div className={carouselClass} role="region" aria-label="New Products" style={carousel_style}>
-            <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
-            <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
+            <button onClick={() => this._nextSlide(this.state.activeSlide, 'previous')} onTouchEnd={() => this._nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
+            <button onClick={() => this._nextSlide(this.state.activeSlide, 'next')} onTouchEnd={() => this._nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
               {this.props.slides.map(function(result, id) {
@@ -90,7 +90,7 @@ class Carousel extends React.Component {
                     slideTitle={result.title}
                     activeSlide={this.state.activeSlide}
                     myKey={id}
-                    updateSlide={this.updateSlide}
+                    updateSlide={this._updateSlide}
                 />
                     )
             }, this)}

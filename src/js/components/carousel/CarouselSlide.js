@@ -3,17 +3,17 @@ import classNames from 'classnames'
 
 class CarouselSlide extends React.Component {
 
-    getActiveSlide() {
+    _getActiveSlide() {
       return this.props.myKey === this.props.activeSlide ? 'f-active': ''
     }
 
-    getSlideDirection() {
+    _getSlideDirection() {
       return this.props.slideDirection === 'next' ? 'f-animate-next': 'f-animate-previous'
     }
 
     render() {
 
-      let slideClass = classNames(this.getActiveSlide(), this.getSlideDirection());
+      let slideClass = classNames(this._getActiveSlide(), this._getSlideDirection());
 
       return(
         <li id="hero-slide-one" data-f-theme="dark" className={slideClass}>
