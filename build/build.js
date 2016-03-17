@@ -457,7 +457,7 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
       "title": "Welcome",
       "content": {
         "hero": {
-          "heroTitle": "What are you using your Surface for?",
+          "heroTitle": "Choose your own Windows adventure.",
           "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
           "heroSize": "f-medium",
           "fX": "f-x-left"
@@ -467,19 +467,23 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
           "mosaics": [{
             "mosaicTitle": "For Business",
             "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-            "mosaicImage": "img/work.jpg"
+            "mosaicImage": "img/work.jpg",
+            "ctaURL": "http://www.microsoftstore.com/"
           }, {
             "mosaicTitle": "For School",
             "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-            "mosaicImage": "img/for-school.jpg"
+            "mosaicImage": "img/for-school.jpg",
+            "ctaURL": "http://www.microsoftstore.com/"
           }, {
             "mosaicTitle": "For Play",
             "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-            "mosaicImage": "img/art.jpg"
+            "mosaicImage": "img/art.jpg",
+            "ctaURL": "http://www.microsoftstore.com/"
           }, {
             "mosaicTitle": "On the Go",
             "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-            "mosaicImage": "img/on-the-go.jpg"
+            "mosaicImage": "img/on-the-go.jpg",
+            "ctaURL": "http://www.microsoftstore.com/"
           }]
         }]
       }
@@ -493,7 +497,8 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "mosaicTitle": "Surface Pro 4",
             "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
             "mosaicImage": "img/surfacepro.jpg",
-            "mosaicCta": "Show me more"
+            "mosaicCta": "Show me more",
+            "ctaURL": "http://www.microsoftstore.com/"
           }]
         }, {
           "containerSize": "f-vp1-whole f-vp4-half",
@@ -501,17 +506,20 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "mosaicTitle": "Surface Pens",
             "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
             "mosaicImage": "img/surface-pen.jpg",
-            "mosaicCta": "Buy Now"
+            "mosaicCta": "Buy Now",
+            "ctaURL": "http://www.microsoftstore.com/"
           }, {
             "mosaicTitle": "The Surface Dock",
             "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
             "mosaicImage": "img/surface-dock.jpg",
-            "mosaicCta": "Buy Now"
+            "mosaicCta": "Buy Now",
+            "ctaURL": "http://www.microsoftstore.com/"
           }, {
             "mosaicTitle": "Type covers in your favorite colors to fit your style",
             "mosaicSize": "f-vp1-whole f-height-medium",
             "mosaicImage": "img/surface-keyboard.jpg",
-            "mosaicCta": "Buy Now"
+            "mosaicCta": "Buy Now",
+            "ctaURL": "http://www.microsoftstore.com/"
           }]
         }]}
     }, {
@@ -524,7 +532,8 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "mosaicTitle": "The Pen is mightier in Windows",
             "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
             "mosaicImage": "img/windows-pen.jpg",
-            "mosaicCta": "Let me try"
+            "mosaicCta": "Let me try",
+            "ctaURL": "http://www.microsoftstore.com/"
           }]
         }, {
           "containerSize": "f-vp1-whole f-vp4-half",
@@ -535,11 +544,13 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "context": "context-app",
             "logo": "img/windows-hello.svg",
             "mosaicCta": "Try it out",
+            "ctaURL": "http://www.microsoftstore.com/",
             "mosaicStyle": {"background": "#7DA4AE"}
           }, {
             "mosaicTitle": "Try Out Inking in Edge",
             "mosaicSize": "f-vp1-whole f-height-small",
             "mosaicCta": "Let me draw",
+            "ctaURL": "http://www.microsoftstore.com/",
             "mosaicStyle": {"background": "#0063AF"}
           }]
         }]}
@@ -547,7 +558,40 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
       "type": "Route",
       "path": "store",
       "title": "Microsoft Store",
-      "content": {"carousel": {"fullscreen": "true"}}
+      "content": {"carousel": {
+          "fullscreen": "true",
+          "slides": [{
+            "id": 0,
+            "type": "item",
+            "title": "Tom Clancy's The Division",
+            "subTitle": "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
+            "buttonText": "Pre-order today",
+            "vp5": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg",
+            "vp4": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
+            "vp3": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
+            "vp2": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+          }, {
+            "id": 1,
+            "type": "item",
+            "title": "Excepteur sint occaecat cupidatat",
+            "subTitle": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "buttonText": "Pre-order today",
+            "vp5": "http://www.getmwf.com/images/components/uber-vp5.jpg",
+            "vp4": "http://www.getmwf.com/images/components/uber-vp4.jpg",
+            "vp3": "http://www.getmwf.com/images/components/uber-vp3.jpg",
+            "vp2": "http://www.getmwf.com/images/components/uber-vp3.jpg"
+          }, {
+            "id": 2,
+            "type": "item",
+            "title": "Excepteur sint occaecat cupidatat",
+            "subTitle": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "buttonText": "Pre-order today",
+            "vp5": "http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg",
+            "vp4": "http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg",
+            "vp3": "http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg",
+            "vp2": "http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
+          }]
+        }}
     }, {
       "type": "Route",
       "path": "office",
@@ -572,6 +616,7 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "logo": "img/word-logo.svg",
             "mosaicHeading": "true",
             "mosaicCta": "Buy Now",
+            "ctaURL": "http://www.microsoftstore.com/",
             "mosaicStyle": {"background": "#2b5796"}
           }, {
             "mosaicTitle": "PowerPoint",
@@ -580,6 +625,7 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "logo": "img/powerpoint-logo.svg",
             "mosaicHeading": "true",
             "mosaicCta": "Buy Now",
+            "ctaURL": "http://www.microsoftstore.com/",
             "mosaicStyle": {"background": "#d04525"}
           }, {
             "mosaicTitle": "Excel",
@@ -588,6 +634,7 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
             "logo": "img/excel-logo.svg",
             "mosaicHeading": "true",
             "mosaicCta": "Buy Now",
+            "ctaURL": "http://www.microsoftstore.com/",
             "mosaicStyle": {"background": "#1d7044"}
           }]
         }]}
@@ -744,39 +791,7 @@ $__System.register('a', ['5', '6', '7', '8', '9'], function (_export) {
 
             activeSlide: 0,
 
-            slideDirection: 'next',
-
-            slides: [{
-              id: 0,
-              type: "item",
-              title: "Tom Clancy's The Division",
-              subTitle: "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
-              buttonText: "Pre-order today",
-              vp5: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg",
-              vp4: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
-              vp3: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
-              vp2: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
-            }, {
-              id: 1,
-              type: "item",
-              title: "Excepteur sint occaecat cupidatat",
-              subTitle: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
-              buttonText: "Pre-order today",
-              vp5: "http://www.getmwf.com/images/components/uber-vp5.jpg",
-              vp4: "http://www.getmwf.com/images/components/uber-vp4.jpg",
-              vp3: "http://www.getmwf.com/images/components/uber-vp3.jpg",
-              vp2: "http://www.getmwf.com/images/components/uber-vp3.jpg"
-            }, {
-              id: 2,
-              type: "item",
-              title: "Excepteur sint occaecat cupidatat",
-              subTitle: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
-              buttonText: "Pre-order today",
-              vp5: "http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg",
-              vp4: "http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg",
-              vp3: "http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg",
-              vp2: "http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
-            }]
+            slideDirection: 'next'
           };
         },
 
@@ -790,16 +805,16 @@ $__System.register('a', ['5', '6', '7', '8', '9'], function (_export) {
 
           this.setState({ slideDirection: dir });
 
-          if (this.state.activeSlide < this.state.slides.length - 1 && dir === 'next') {
+          if (this.state.activeSlide < this.props.slides.length - 1 && dir === 'next') {
             this.setState({ activeSlide: index + 1 });
-          } else if (this.state.activeSlide === this.state.slides.length - 1 && dir === 'next') {
+          } else if (this.state.activeSlide === this.props.slides.length - 1 && dir === 'next') {
             this.setState({ activeSlide: 0 });
           }
 
           if (this.state.activeSlide > 0 && dir === 'previous') {
             this.setState({ activeSlide: index - 1 });
           } else if (this.state.activeSlide === 0 && dir === 'previous') {
-            this.setState({ activeSlide: this.state.slides.length - 1 });
+            this.setState({ activeSlide: this.props.slides.length - 1 });
           }
         },
 
@@ -840,7 +855,7 @@ $__System.register('a', ['5', '6', '7', '8', '9'], function (_export) {
               React.createElement(
                 'ul',
                 null,
-                this.state.slides.map(function (result, id) {
+                this.props.slides.map(function (result, id) {
                   return React.createElement(CarouselSlide, {
                     key: result.id,
                     slideTitle: result.title,
@@ -859,7 +874,7 @@ $__System.register('a', ['5', '6', '7', '8', '9'], function (_export) {
             React.createElement(
               'div',
               { className: 'c-sequence-indicator', role: 'radiogroup' },
-              this.state.slides.map(function (result, id) {
+              this.props.slides.map(function (result, id) {
                 return React.createElement(SequenceIndicator, {
                   key: result.id,
                   slideTitle: result.title,
@@ -1664,7 +1679,7 @@ $__System.register('33', ['7', '9', '32'], function (_export) {
                                 ),
                                 React.createElement(
                                     'div',
-                                    { 'class': 'c-group' },
+                                    { className: 'c-group' },
                                     React.createElement(
                                         'a',
                                         { href: ctaURL, className: 'c-call-to-action c-glyph c-glyph-go' },
@@ -1685,7 +1700,8 @@ $__System.register('33', ['7', '9', '32'], function (_export) {
                                     React.createElement(
                                         'dt',
                                         { className: 'x-screen-reader' },
-                                        'Game Title'
+                                        mosaicTitle,
+                                        ' Title'
                                     ),
                                     React.createElement(
                                         'dd',
@@ -1956,10 +1972,6 @@ $__System.register('37', ['7', '30', '31', '2f'], function (_export) {
         execute: function () {
             HomePage = React.createClass({
                 displayName: 'HomePage',
-
-                componentDidMount: function componentDidMount() {
-                    console.log(this.props.data);
-                },
 
                 render: function render() {
 
