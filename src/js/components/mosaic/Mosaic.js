@@ -42,13 +42,13 @@ var Mosaic = React.createClass({
 
                         <h1 className="c-heading">{ mosaicTitle }</h1>
 
-                        <div class="c-group">
+                        <div className="c-group">
                             <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
                         </div>
                     </div>) : null}
                     {mosaicHeading ? null : <div>
                         <dl>
-                            <dt className="x-screen-reader">Game Title</dt>
+                            <dt className="x-screen-reader">{mosaicTitle} Title</dt>
                             <dd><cite>{mosaicTitle}</cite></dd>
                             {mosaicCta ?
                                 <div className="c-group">

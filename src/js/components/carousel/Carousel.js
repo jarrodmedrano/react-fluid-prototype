@@ -10,43 +10,7 @@ var Carousel = React.createClass({
 
       activeSlide: 0,
 
-      slideDirection: 'next',
-
-      slides: [
-        {
-          id: 0,
-          type: "item",
-          title: "Tom Clancy's The Division",
-          subTitle: "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
-          buttonText: "Pre-order today",
-          vp5: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg",
-          vp4: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
-          vp3: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
-          vp2: "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
-        },
-        {
-          id: 1,
-          type: "item",
-          title: "Excepteur sint occaecat cupidatat",
-          subTitle: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
-          buttonText: "Pre-order today",
-          vp5: "http://www.getmwf.com/images/components/uber-vp5.jpg",
-          vp4: "http://www.getmwf.com/images/components/uber-vp4.jpg",
-          vp3: "http://www.getmwf.com/images/components/uber-vp3.jpg",
-          vp2: "http://www.getmwf.com/images/components/uber-vp3.jpg"
-        },
-        {
-          id: 2,
-          type: "item",
-          title: "Excepteur sint occaecat cupidatat",
-          subTitle: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
-          buttonText: "Pre-order today",
-          vp5: "http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg",
-          vp4: "http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg",
-          vp3: "http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg",
-          vp2: "http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
-        }
-      ]
+      slideDirection: 'next'
     }
   },
 
@@ -62,16 +26,16 @@ var Carousel = React.createClass({
 
     this.setState({ slideDirection: dir });
 
-    if(this.state.activeSlide < this.state.slides.length-1 && dir === 'next') {
+    if(this.state.activeSlide < this.props.slides.length-1 && dir === 'next') {
       this.setState({ activeSlide: index + 1 });
-    } else if(this.state.activeSlide === this.state.slides.length-1 && dir === 'next') {
+    } else if(this.state.activeSlide === this.props.slides.length-1 && dir === 'next') {
       this.setState({ activeSlide: 0 });
     }
 
     if(this.state.activeSlide > 0 && dir === 'previous') {
       this.setState({ activeSlide: index - 1 });
     } else if(this.state.activeSlide === 0 && dir === 'previous') {
-      this.setState({ activeSlide: this.state.slides.length-1 });
+      this.setState({ activeSlide: this.props.slides.length-1 });
     }
   },
 
@@ -99,7 +63,7 @@ var Carousel = React.createClass({
           <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
-              {this.state.slides.map(function(result, id) {
+              {this.props.slides.map(function(result, id) {
                 return (
                   <CarouselSlide
                       key={result.id}
@@ -120,7 +84,7 @@ var Carousel = React.createClass({
 
           <div className="c-sequence-indicator" role="radiogroup">
 
-            {this.state.slides.map(function(result, id) {
+            {this.props.slides.map(function(result, id) {
                 return (
                 <SequenceIndicator
                     key={result.id}

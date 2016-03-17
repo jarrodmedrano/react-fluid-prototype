@@ -19,22 +19,26 @@
               {
                 "mosaicTitle": "For Business",
                 "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                "mosaicImage": "img/work.jpg"
+                "mosaicImage": "img/work.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
               },
               {
                 "mosaicTitle": "For School",
                 "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                "mosaicImage": "img/for-school.jpg"
+                "mosaicImage": "img/for-school.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
               },
               {
                 "mosaicTitle": "For Play",
                 "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                "mosaicImage": "img/art.jpg"
+                "mosaicImage": "img/art.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
               },
               {
                 "mosaicTitle": "On the Go",
                 "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
-                "mosaicImage": "img/on-the-go.jpg"
+                "mosaicImage": "img/on-the-go.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
               }
             ]
           }
@@ -55,7 +59,8 @@
                   "mosaicTitle": "Surface Pro 4",
                   "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
                   "mosaicImage": "img/surfacepro.jpg",
-                  "mosaicCta": "Show me more"
+                  "mosaicCta": "Show me more",
+                  "ctaURL": "http://www.microsoftstore.com/"
                 }
               ]
             },
@@ -67,19 +72,22 @@
                       "mosaicTitle": "Surface Pens",
                       "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
                       "mosaicImage": "img/surface-pen.jpg",
-                      "mosaicCta": "Buy Now"
+                      "mosaicCta": "Buy Now",
+                      "ctaURL": "http://www.microsoftstore.com/"
                     },
                     {
                       "mosaicTitle": "The Surface Dock",
                       "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
                       "mosaicImage": "img/surface-dock.jpg",
-                      "mosaicCta": "Buy Now"
+                      "mosaicCta": "Buy Now",
+                      "ctaURL": "http://www.microsoftstore.com/"
                     },
                     {
                       "mosaicTitle": "Type covers in your favorite colors to fit your style",
                       "mosaicSize": "f-vp1-whole f-height-medium",
                       "mosaicImage": "img/surface-keyboard.jpg",
-                      "mosaicCta": "Buy Now"
+                      "mosaicCta": "Buy Now",
+                      "ctaURL": "http://www.microsoftstore.com/"
                     }
                   ]
             }
@@ -100,7 +108,8 @@
                 "mosaicTitle": "The Pen is mightier in Windows",
                 "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
                 "mosaicImage": "img/windows-pen.jpg",
-                "mosaicCta": "Let me try"
+                "mosaicCta": "Let me try",
+                "ctaURL": "http://www.microsoftstore.com/"
               }
             ]
           },
@@ -115,6 +124,7 @@
                 "context": "context-app",
                 "logo": "img/windows-hello.svg",
                 "mosaicCta": "Try it out",
+                "ctaURL": "http://www.microsoftstore.com/",
                 "mosaicStyle": {
                   "background": "#7DA4AE"
                 }
@@ -123,6 +133,7 @@
                 "mosaicTitle": "Try Out Inking in Edge",
                 "mosaicSize": "f-vp1-whole f-height-small",
                 "mosaicCta": "Let me draw",
+                "ctaURL": "http://www.microsoftstore.com/",
                 "mosaicStyle": {
                   "background": "#0063AF"
                 }
@@ -138,7 +149,42 @@
       "title":"Microsoft Store",
       "content": {
         "carousel": {
-          "fullscreen": "true"
+          "fullscreen": "true",
+          "slides": [
+            {
+              "id": 0,
+              "type": "item",
+              "title": "Tom Clancy's The Division",
+              "subTitle": "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
+              "buttonText": "Pre-order today",
+              "vp5": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg",
+              "vp4": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
+              "vp3": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
+              "vp2": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+            },
+            {
+              "id": 1,
+              "type": "item",
+              "title": "Excepteur sint occaecat cupidatat",
+              "subTitle": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+              "buttonText": "Pre-order today",
+              "vp5": "http://www.getmwf.com/images/components/uber-vp5.jpg",
+              "vp4": "http://www.getmwf.com/images/components/uber-vp4.jpg",
+              "vp3": "http://www.getmwf.com/images/components/uber-vp3.jpg",
+              "vp2": "http://www.getmwf.com/images/components/uber-vp3.jpg"
+            },
+            {
+              "id": 2,
+              "type": "item",
+              "title": "Excepteur sint occaecat cupidatat",
+              "subTitle": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+              "buttonText": "Pre-order today",
+              "vp5": "http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg",
+              "vp4": "http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg",
+              "vp3": "http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg",
+              "vp2": "http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
+            }
+          ]
         }
       }
     },
@@ -176,6 +222,7 @@
                 "logo": "img/word-logo.svg",
                 "mosaicHeading": "true",
                 "mosaicCta": "Buy Now",
+                "ctaURL": "http://www.microsoftstore.com/",
                 "mosaicStyle": {
                   "background": "#2b5796"
                 }
@@ -187,6 +234,7 @@
                 "logo": "img/powerpoint-logo.svg",
                 "mosaicHeading": "true",
                 "mosaicCta": "Buy Now",
+                "ctaURL": "http://www.microsoftstore.com/",
                 "mosaicStyle": {
                   "background": "#d04525"
                 }
@@ -198,6 +246,7 @@
                 "logo": "img/excel-logo.svg",
                 "mosaicHeading": "true",
                 "mosaicCta": "Buy Now",
+                "ctaURL": "http://www.microsoftstore.com/",
                 "mosaicStyle": {
                   "background": "#1d7044"
                 }

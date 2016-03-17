@@ -13,9 +13,6 @@ class DefaultPage extends React.Component {
             return result.title === this.props.route.title
         }, this);
 
-
-
-
         return (
             <div className="main-container">
 

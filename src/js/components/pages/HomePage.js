@@ -5,19 +5,12 @@ import _ from 'lodash'
 
 var HomePage = React.createClass({
 
-    componentDidMount() {
-        console.log(this.props.data);
-    },
 
     render() {
-
-
 
         let currentPage = _.find(this.props.data.routes, function(result) {
             return result.title === this.props.route.title
         }, this);
-
-
 
         return (
             <div className="main-container">
