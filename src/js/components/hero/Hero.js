@@ -4,9 +4,7 @@ import HeroPicture from 'src/js/components/hero/HeroPicture';
 import 'src/js/components/hero/Hero.scss!';
 
 
-var Hero = React.createClass({
-
-
+class Hero extends React.Component {
 
     render() {
 
@@ -44,6 +42,6 @@ var Hero = React.createClass({
             </article>
         )
     }
-});
+}
 
 export default Hero

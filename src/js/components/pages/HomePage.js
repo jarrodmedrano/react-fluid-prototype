@@ -3,8 +3,7 @@ import Hero from 'src/js/components/hero/hero';
 import MosaicContainer from 'src/js/components/mosaic/MosaicContainer';
 import _ from 'lodash'
 
-var HomePage = React.createClass({
-
+class HomePage extends React.Component {
 
     render() {
 
@@ -33,6 +32,6 @@ var HomePage = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default HomePage

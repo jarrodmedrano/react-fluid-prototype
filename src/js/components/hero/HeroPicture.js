@@ -1,6 +1,6 @@
 import React from 'react';
 
-var HeroPicture = React.createClass({
+class HeroPicture extends React.Component {
 
     render() {
 
@@ -26,7 +26,6 @@ var HeroPicture = React.createClass({
             </picture>
         )
     }
-
-});
+}
 
 export default HeroPicture

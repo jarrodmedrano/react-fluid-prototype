@@ -2,14 +2,12 @@ import React from 'react'
 import classNames from 'classnames';
 import 'src/js/components/mosaic/mosaic.scss!';
 
-var Mosaic = React.createClass({
-
-
+class Mosaic extends React.Component {
 
     handleClick(event) {
         event.preventDefault()
         this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
-    },
+    }
 
     render() {
 
@@ -58,7 +56,7 @@ var Mosaic = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Mosaic
 

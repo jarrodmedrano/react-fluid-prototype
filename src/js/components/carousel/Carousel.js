@@ -4,16 +4,17 @@ import SequenceIndicator from 'src/js/components/carousel/SequenceIndicator';
 import 'src/js/components/carousel/Carousel.scss!';
 import classNames from 'classnames'
 
-var Carousel = React.createClass({
+class Carousel extends React.Component {
 
-  getInitialState () {
 
-    return {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       activeSlide: 0,
-
       slideDirection: 'next'
     }
-  },
+  }
 
   updateSlide(index) {
 
@@ -22,7 +23,7 @@ var Carousel = React.createClass({
           activeSlide: index
         }
     );
-  },
+  }
 
   nextSlide(index, dir) {
 
@@ -39,11 +40,11 @@ var Carousel = React.createClass({
     } else if(this.state.activeSlide === 0 && dir === 'previous') {
       this.setState({ activeSlide: this.props.slides.length-1 });
     }
-  },
+  }
 
   isFullScreen() {
     return this.props.fullscreen === 'true' ? 'f-fullscreen': ''
-  },
+  }
 
   render(){
 
@@ -99,6 +100,6 @@ var Carousel = React.createClass({
       </div>
     )
   }
-});
+}
 
 export default Carousel

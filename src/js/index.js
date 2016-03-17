@@ -17,7 +17,7 @@ import 'src/styles/mwf_en-us_default.min.css!';
 
 import data from 'src/js/data/data.json!';
 
-var App = React.createClass({
+class App extends React.Component {
 
     render() {
 
@@ -35,7 +35,7 @@ var App = React.createClass({
             </div>
         );
     }
-});
+}
 
 
 ReactDOM.render(

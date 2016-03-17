@@ -26,12 +26,6 @@ body {
   flex-direction: column;
   height: calc(100vh - 64px);
 
-  &.fullscreen-mosaic {
-    .context-app .c-image-overlay {
-      opacity: 0;
-    }
-  }
-
   @media only screen and (min-width: 768px) {
     &.fullscreen-mosaic {
       flex-direction: row;
@@ -63,7 +57,6 @@ body {
     content: '\E8AD';
   }
 
-
   .c-hero {
       height: calc(100vh - 64px);
 
@@ -85,12 +78,9 @@ body {
   }
 }
 
-$time: .3s;
-$easing: ease-in-out;
-
 .page-transition-enter {
   opacity: 0;
-  transform:   translate(-250px,0);
+  transform: translate(-250px,0);
   transform: translate3d(-250px,0,0);
 }
 
@@ -114,6 +104,6 @@ $easing: ease-in-out;
 
 .page-transition-leave.page-transition-leave-active {
   opacity: 0;
-  transform:   translate(250px,0);
+  transform: translate(250px,0);
   transform: translate3d(250px,0,0);
 }

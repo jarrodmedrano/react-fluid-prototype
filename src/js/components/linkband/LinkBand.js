@@ -3,11 +3,7 @@ import React from 'react'
 import 'src/js/components/linkband/LinkBand.scss!';
 import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
 
-var Linkband = React.createClass({
-
-    contextTypes: {
-        location: React.PropTypes.object
-    },
+class Linkband extends React.Component {
 
     render() {
 
@@ -47,6 +43,6 @@ var Linkband = React.createClass({
 
         );
     }
-});
+}
 
 export default Linkband
