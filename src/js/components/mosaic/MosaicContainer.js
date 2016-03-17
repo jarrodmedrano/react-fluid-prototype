@@ -1,8 +1,7 @@
 import React from 'react';
 import Mosaic from 'src/js/components/mosaic/mosaic';
 
-var MosaicContainer = React.createClass({
-
+class MosaicContainer extends React.Component {
 
     render() {
 
@@ -16,6 +15,6 @@ var MosaicContainer = React.createClass({
                 </div>
         )
     }
-});
+}
 
 export default MosaicContainer;

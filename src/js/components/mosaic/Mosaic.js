@@ -5,7 +5,7 @@ import 'src/js/components/mosaic/mosaic.scss!';
 class Mosaic extends React.Component {
 
     handleClick(event) {
-        event.preventDefault()
+        event.preventDefault();
         this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
     }
 

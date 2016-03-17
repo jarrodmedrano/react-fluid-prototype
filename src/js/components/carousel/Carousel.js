@@ -6,7 +6,6 @@ import classNames from 'classnames'
 
 class Carousel extends React.Component {
 
-
   constructor(props) {
     super(props);
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import classNames from 'classnames'
 
-var CarouselSlide = React.createClass({
+class CarouselSlide extends React.Component {
 
     getActiveSlide() {
       return this.props.myKey === this.props.activeSlide ? 'f-active': ''
-    },
+    }
 
     getSlideDirection() {
       return this.props.slideDirection === 'next' ? 'f-animate-next': 'f-animate-previous'
-    },
+    }
 
     render() {
 
@@ -48,6 +48,6 @@ var CarouselSlide = React.createClass({
         </li>
       )
     }
-});
+}
 
 export default CarouselSlide
