@@ -21,8 +21,6 @@ var Mosaic = React.createClass({
 
         let { mosaicCta, ctaURL, logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
 
-
-
         return(
 
             <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this.handleClick} onTouchEnd={this.handleClick}>

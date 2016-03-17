@@ -5,7 +5,7 @@ var plugins = gulpLoadPlugins();
 gulp.task('bundle', plugins.shell.task([
     // this bundles all of the code we wrote and excludes anything
     // in dependencies.js (which are all of our external dependencies)
-    'jspm bundle-sfx src/js/index.js build/build.js'
+    'jspm bundle-sfx src/js/index.js build/build.js --minify'
 ]));
 
 gulp.task('deploy', plugins.shell.task([

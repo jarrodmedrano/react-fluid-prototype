@@ -1,10 +1,7 @@
 import React from 'react'
 
 import 'src/js/components/linkband/LinkBand.scss!';
-import SubLinkBand from 'src/js/components/SubLinkBand/SubLinkBand';
 import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
-
-import _ from 'lodash';
 
 var Linkband = React.createClass({
 

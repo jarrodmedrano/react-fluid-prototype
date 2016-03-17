@@ -21,7 +21,6 @@ var App = React.createClass({
 
     render() {
 
-
         return (
 
             <div className="grid">

@@ -25,7 +25,7 @@ var CarouselSlide = React.createClass({
 
 
                 <div className="hero-link-container">
-                  <a href="http://www.microsoftstore.com/" className="c-call-to-action c-glyph"><span>{this.props.slideButton}</span></a>
+                  <a href={this.props.ctaUrl ? this.props.ctaUrl : 'http://www.microsoftstore.com/'} className="c-call-to-action c-glyph"><span>{this.props.slideButton}</span></a>
                 </div>
               </div>
 

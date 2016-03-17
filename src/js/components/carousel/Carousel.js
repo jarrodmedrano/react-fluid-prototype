@@ -5,9 +5,10 @@ import 'src/js/components/carousel/Carousel.scss!';
 import classNames from 'classnames'
 
 var Carousel = React.createClass({
-  getInitialState () {
-    return {
 
+  getInitialState () {
+
+    return {
       activeSlide: 0,
 
       slideDirection: 'next'
@@ -15,6 +16,7 @@ var Carousel = React.createClass({
   },
 
   updateSlide(index) {
+
     this.setState(
         {
           activeSlide: index
@@ -45,7 +47,6 @@ var Carousel = React.createClass({
 
   render(){
 
-
     let carousel_style = {
       "TouchAction": "pan-y",
       "WebkitUserSelect": "none",
@@ -56,11 +57,9 @@ var Carousel = React.createClass({
     let carouselClass = classNames(this.isFullScreen(), 'c-carousel f-multi-slide theme-dark f-scrollable-previous f-scrollable-next');
 
     return(
-          <div className={carouselClass} role="region"
-             aria-label="New Products"
-             style={carousel_style}>
-          <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
-          <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
+          <div className={carouselClass} role="region" aria-label="New Products" style={carousel_style}>
+            <button onClick={() => this.nextSlide(this.state.activeSlide, 'previous')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'previous')} className="c-flipper f-left" aria-label="View previous" title="View previous"></button>
+            <button onClick={() => this.nextSlide(this.state.activeSlide, 'next')} onTouchEnd={() => this.nextSlide(this.state.activeSlide, 'next')} className="c-flipper f-right" aria-label="View next" title="View next"></button>
           <div>
             <ul>
               {this.props.slides.map(function(result, id) {
