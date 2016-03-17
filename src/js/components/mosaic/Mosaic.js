@@ -4,12 +4,17 @@ import 'src/js/components/mosaic/mosaic.scss!';
 
 class Mosaic extends React.Component {
 
+    constructor(props) {
+        super(props)
+    }
+
     _handleClick(event) {
         event.preventDefault();
         this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
     }
 
     render() {
+
 
 
         let mosaicClass = classNames(
@@ -21,7 +26,7 @@ class Mosaic extends React.Component {
 
         return(
 
-            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this._handleClick} onTouchEnd={this._handleClick}>
+            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick}>
                 <article className={mosaicClass}>
                     {mosaicImage ? <picture>
                         <img srcSet={mosaicImage} src={mosaicImage}

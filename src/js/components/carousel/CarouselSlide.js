@@ -25,7 +25,7 @@ class CarouselSlide extends React.Component {
 
 
                 <div className="hero-link-container">
-                  <a href={this.props.ctaUrl ? this.props.ctaUrl : 'http://www.microsoftstore.com/'} className="c-call-to-action c-glyph"><span>{this.props.slideButton}</span></a>
+                  <a href={this.props.ctaUrl ? this.props.ctaUrl : 'http://www.microsoftstore.com/'} target="_blank" className="c-call-to-action c-glyph"><span>{this.props.slideButton}</span></a>
                 </div>
               </div>
 

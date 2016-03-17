@@ -9,6 +9,7 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
 
+
     this.state = {
       activeSlide: 0,
       slideDirection: 'next'
