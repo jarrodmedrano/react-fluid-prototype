@@ -687,10 +687,26 @@ body {
 }
 
 // Active state for hubButton shading
-.active {
+.template-hubButton.active {
     position: relative;
+
+  @media screen and (-ms-high-contrast: black-on-white) {
+    background: purple
+  }
     
-    &.template-hubButton:after { border-bottom-color: @dark-grey; }
+    &.template-hubButton:after {
+      //border-bottom-color: @dark-grey;
+
+      @media screen and (-ms-high-contrast: active) {
+        border-bottom-color: yellow;
+        color: black;
+      }
+
+      @media screen and (-ms-high-contrast: black-on-white) {
+        border-bottom-color: purple;
+        color: transparent;
+      }
+    }
     
     &:after {
         content: ' ';
@@ -720,7 +736,9 @@ body {
 //-----------------------------------------------------------------------------//
 //   Indicators                                                                //
 //-----------------------------------------------------------------------------//
+.layoutRoot-indicatorContainer {
 
+}
 // Centered circle page indicators
 .template-pageIndicator {
     display: -ms-grid;
@@ -749,7 +767,9 @@ body {
             padding: 40px 0;
         }
     }
-    
+
+
+
     // Individual indicator circle link
     .indicatorContainer-indicator {
         width: @indicator-size * 1.75;
@@ -773,7 +793,33 @@ body {
             background-color: fade(white, 60%); // should be variable
             display: inline-block;
             float: left;
+
+
         }
+
+          @media screen and (-ms-high-contrast: active) {
+
+            &:before {
+              background-color: yellow;
+            }
+
+            &.active:before {
+              background-color: white;
+            }
+
+          }
+
+          @media screen and (-ms-high-contrast: black-on-white) {
+
+            &:before {
+              background-color: black;
+            }
+
+            &.active:before {
+              background-color: purple;
+            }
+
+          }
     }
 }
 .active {

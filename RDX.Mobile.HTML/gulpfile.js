@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     cssmin = require('gulp-cssmin'),
     concat = require("gulp-concat"),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    replace = require('gulp-regex-replace'),
     browserSync = require('browser-sync').create();
 
 // use default task to launch Browsersync and watch JS files
@@ -32,6 +33,8 @@ gulp.task('less', function () {
         //    console.log(err);
         //}))
         .pipe(concat('styles.css'))
+        .pipe(replace({regex:'black on-white', replace:'black-on-white'}))
+        .pipe(replace({regex:'white on-black', replace:'white-on-black'}))
         //.pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./'))
