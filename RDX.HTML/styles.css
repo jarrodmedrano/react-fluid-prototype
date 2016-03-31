@@ -185,7 +185,7 @@ body {
   height: 100%;
   float: right;
 }
-@media screen and (max-height: 540px) {
+@media (max-height: 540px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
     -ms-grid-columns: 48px auto 40% 48px;
   }
@@ -209,7 +209,7 @@ body {
     -ms-grid-row: 2;
   }
 }
-@media (min-width: 768px) and screen and (max-height: 768px) {
+@media (min-width: 768px) and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
     -ms-grid-columns: 48px 1fr auto 1fr 24px 40%;
   }
@@ -228,7 +228,7 @@ body {
   -ms-grid-column-span: 4;
   -ms-grid-row: 2;
 }
-@media screen and (max-height: 540px) {
+@media (max-height: 540px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
     -ms-grid-columns: 40% 24px auto 48px;
   }
@@ -249,7 +249,7 @@ body {
     -ms-grid-column-span: 1;
   }
 }
-@media (min-width: 768px) and screen and (max-height: 768px) {
+@media (min-width: 768px) and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
     -ms-grid-columns: 40% 24px 1fr auto 1fr 48px;
   }
@@ -572,8 +572,17 @@ body {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubButton.active:after {
-    border-left-color: transparent !important;
-    border-right-color: transparent !important;
+    border-top-color: yellow;
+  }
+}
+@media screen and (-ms-high-contrast: black-on-white) {
+  .template-hubButton.active:after {
+    border-top-color: purple;
+  }
+}
+@media screen and (-ms-high-contrast: white-on-black) {
+  .template-hubButton.active:after {
+    border-top-color: blue;
   }
 }
 .template-pageIndicator {
@@ -601,22 +610,9 @@ body {
 .template-pageIndicator .pageIndicator-layoutRoot button:focus {
   outline: 1px dotted grey;
 }
-.template-pageIndicator .pageIndicator-layoutRoot button:focus .indicatorContainer-indicator:before {
-  background-color: rgba(23, 23, 23, 0.6);
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator .pageIndicator-layoutRoot button:focus .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-}
-@media screen and (-ms-high-contrast: black on-white) {
-  .template-pageIndicator .pageIndicator-layoutRoot button:focus .indicatorContainer-indicator:before {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
 .template-pageIndicator .indicatorContainer-indicator {
   width: 52px;
-  height: 16px;
+  height: 32px;
   text-align: center;
   padding-top: 10px;
   -ms-grid-row-align: end;
@@ -633,17 +629,32 @@ body {
     -ms-high-contrast-adjust: none;
   }
   .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: yellow;
+    background-color: white;
+  }
+  .template-pageIndicator .indicatorContainer-indicator.active {
+    background: green;
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-pageIndicator .indicatorContainer-indicator.active:before {
     background-color: black;
   }
-}
-@media screen and (-ms-high-contrast: white on-black) {
   .template-pageIndicator .indicatorContainer-indicator.active:before {
     background-color: white;
+  }
+  .template-pageIndicator .indicatorContainer-indicator.active {
+    background: purple;
+  }
+}
+@media screen and (-ms-high-contrast: white-on-black) {
+  .template-pageIndicator .indicatorContainer-indicator.active:before {
+    background-color: black;
+  }
+  .template-pageIndicator .indicatorContainer-indicator.active:before {
+    background-color: white;
+  }
+  .template-pageIndicator .indicatorContainer-indicator.active {
+    background: blue;
   }
 }
 .template-pageIndicator .indicatorContainer-indicator:before {
@@ -651,17 +662,17 @@ body {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: black;
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: white;
   }
 }
-@media screen and (-ms-high-contrast: white on-black) {
+@media screen and (-ms-high-contrast: white-on-black) {
   .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: black;
   }
 }
 .template-pageIndicator .indicatorContainer-indicator:hover:before {
@@ -669,12 +680,25 @@ body {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-pageIndicator .indicatorContainer-indicator:hover:before {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-pageIndicator .indicatorContainer-indicator:hover:before {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: white;
+  }
+}
+.template-pageIndicator .indicatorContainer-indicator:focus:before {
+  background-color: rgba(23, 23, 23, 0.6);
+}
+@media screen and (-ms-high-contrast: active) {
+  .template-pageIndicator .indicatorContainer-indicator:focus:before {
+    background-color: white;
+  }
+}
+@media screen and (-ms-high-contrast: black-on-white) {
+  .template-pageIndicator .indicatorContainer-indicator:focus:before {
+    background-color: white;
   }
 }
 .template-pageIndicator.theme-dark {
@@ -689,12 +713,12 @@ body {
     background-color: yellow;
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
     background-color: black;
   }
 }
-@media screen and (-ms-high-contrast: white on-black) {
+@media screen and (-ms-high-contrast: white-on-black) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
     background-color: white;
   }
@@ -707,12 +731,12 @@ body {
     background-color: rgba(255, 255, 255, 0.4);
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-@media screen and (-ms-high-contrast: white on-black) {
+@media screen and (-ms-high-contrast: white-on-black) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
     background-color: rgba(255, 255, 255, 0.4);
   }
@@ -728,7 +752,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator:hover:before {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -809,24 +833,38 @@ body {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubStrip .template-hubButton {
-    border-bottom: 2px yellow solid;
+    background: black;
+    border-left: 2px solid yellow;
+  }
+  .template-hubStrip .template-hubButton:focus,
+  .template-hubStrip .template-hubButton:hover,
+  .template-hubStrip .template-hubButton.active {
+    background: green;
+    color: transparent;
   }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   .template-hubStrip .template-hubButton {
-    background-color: black;
-    border-bottom: none;
-    border-right: 2px white solid;
+    border-left: 2px solid white;
   }
-  .template-hubStrip .template-hubButton:last-of-type {
-    border-right: none;
+  .template-hubStrip .template-hubButton:focus,
+  .template-hubStrip .template-hubButton:hover,
+  .template-hubStrip .template-hubButton.active {
+    background: purple;
+    color: transparent;
   }
 }
-@media screen and (-ms-high-contrast: white on-black) {
+@media screen and (-ms-high-contrast: white-on-black) {
   .template-hubStrip .template-hubButton {
-    background-color: black;
-    border-bottom: 3px white solid;
-    border-right: 3px white solid;
+    background: black;
+    color: black;
+    border-left: 2px solid white;
+  }
+  .template-hubStrip .template-hubButton:focus,
+  .template-hubStrip .template-hubButton:hover,
+  .template-hubStrip .template-hubButton.active {
+    background: blue;
+    color: transparent;
   }
 }
 .template-hubStrip .template-hubButton:first-of-type {
@@ -872,17 +910,42 @@ button span.arrow-right:after {
     background: yellow;
     color: black;
   }
+  button:hover,
+  button:focus {
+    opacity: 1 !important;
+    background: green;
+    color: white;
+  }
+  button:focus {
+    outline: 1px dotted white;
+  }
 }
-@media screen and (-ms-high-contrast: black on-white) {
+@media screen and (-ms-high-contrast: black-on-white) {
   button {
     background: black;
     color: white;
   }
+  button:hover,
+  button:focus {
+    background: purple;
+    color: white;
+  }
+  button:focus {
+    outline: 1px dotted white;
+  }
 }
-@media screen and (-ms-high-contrast: white on-black) {
+@media screen and (-ms-high-contrast: white-on-black) {
   button {
     background: white;
     color: black;
+  }
+  button:hover,
+  button:focus {
+    background: blue;
+    color: white;
+  }
+  button:focus {
+    outline: 1px dotted white;
   }
 }
 .text-legal p {
