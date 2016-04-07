@@ -185,7 +185,7 @@ body {
   height: 100%;
   float: right;
 }
-@media (max-height: 540px) {
+@media screen and (max-height: 540px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
     -ms-grid-columns: 48px auto 40% 48px;
   }
@@ -209,7 +209,7 @@ body {
     -ms-grid-row: 2;
   }
 }
-@media (min-width: 768px) and (max-height: 768px) {
+@media (min-width: 768px) and screen and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-left {
     -ms-grid-columns: 48px 1fr auto 1fr 24px 40%;
   }
@@ -228,7 +228,7 @@ body {
   -ms-grid-column-span: 4;
   -ms-grid-row: 2;
 }
-@media (max-height: 540px) {
+@media screen and (max-height: 540px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
     -ms-grid-columns: 40% 24px auto 48px;
   }
@@ -249,7 +249,7 @@ body {
     -ms-grid-column-span: 1;
   }
 }
-@media (min-width: 768px) and (max-height: 768px) {
+@media (min-width: 768px) and screen and (max-height: 768px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.content-right {
     -ms-grid-columns: 40% 24px 1fr auto 1fr 48px;
   }

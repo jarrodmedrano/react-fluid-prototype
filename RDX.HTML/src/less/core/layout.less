@@ -237,7 +237,7 @@ body {
             }
           }
 
-          @media @mediaQueryVerticalBreakpointXSm {
+          @media screen and @mediaQueryVerticalBreakpointXSm {
             -ms-grid-columns: @page-margin auto 40% @page-margin;
           }
 
@@ -262,7 +262,7 @@ body {
               -ms-grid-row: 2;
             }
 
-            @media @mediaQueryVerticalBreakpointSm {
+            @media screen and @mediaQueryVerticalBreakpointSm {
               -ms-grid-columns: @page-margin 1fr auto 1fr @padding-unit 40%;
             }
           }
@@ -286,7 +286,7 @@ body {
             -ms-grid-row: 2;
           }
 
-          @media @mediaQueryVerticalBreakpointXSm {
+          @media screen and @mediaQueryVerticalBreakpointXSm {
             -ms-grid-columns: 40% @padding-unit auto @page-margin;
           }
 
@@ -306,7 +306,7 @@ body {
               -ms-grid-column-span: 1;
             }
 
-            @media @mediaQueryVerticalBreakpointSm {
+            @media screen and @mediaQueryVerticalBreakpointSm {
               -ms-grid-columns: 40% @padding-unit 1fr auto 1fr @page-margin;
             }
 
@@ -765,7 +765,7 @@ body {
     @media screen and (-ms-high-contrast: active) {
       -ms-high-contrast-adjust: none;
 
-      &.active:before  {
+      &.active:before {
         background-color: white;
       }
 
@@ -779,7 +779,7 @@ body {
         background-color: black;
       }
 
-      &.active:before  {
+      &.active:before {
         background-color: white;
       }
 
@@ -793,7 +793,7 @@ body {
         background-color: black;
       }
 
-      &.active:before  {
+      &.active:before {
         background-color: white;
       }
 
@@ -1007,13 +1007,13 @@ body {
     border-left: 2px solid @dark-grey;
 
     @media screen and (-ms-high-contrast: active) {
-        background: black;
-        border-left: 2px solid yellow;
+      background: black;
+      border-left: 2px solid yellow;
 
-        &:focus, &:hover, &.active {
-          background: green;
-          color: transparent;
-        }
+      &:focus, &:hover, &.active {
+        background: green;
+        color: transparent;
+      }
     }
 
     @media screen and (-ms-high-contrast: black-on-white) {
