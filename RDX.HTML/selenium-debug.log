@@ -1,0 +1,92 @@
+12:34:33.661 INFO - Launching a standalone Selenium Server
+Setting system property webdriver.ie.driver to C:\Selenium\IEDriverServer.exe
+12:34:33.701 INFO - Java: Oracle Corporation 25.77-b03
+12:34:33.701 INFO - OS: Windows 10 10.0 x86
+12:34:33.708 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+12:34:33.750 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:34:33.750 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+12:34:33.755 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+12:34:33.819 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+12:34:33.819 INFO - Selenium Server is up and running
+12:34:34.063 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Rdx Desktop, browserName=internet explorer, javascriptEnabled=true, platform=ANY}]])
+12:34:34.070 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Rdx Desktop, browserName=internet explorer, javascriptEnabled=true, platform=ANY}]
+Started InternetExplorerDriver server (64-bit)
+2.52.1.0
+Listening on port 33348
+Only local connections are allowed
+12:34:36.375 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Rdx Desktop, browserName=internet explorer, javascriptEnabled=true, platform=ANY}]]
+12:34:36.386 INFO - Executing: [set window size])
+12:34:36.402 INFO - Done: [set window size]
+12:34:36.408 INFO - Executing: [get: http://rdx-gsa.sitebox-s.redant.selfhost.corp.microsoft.com/])
+12:34:38.879 INFO - Done: [get: http://rdx-gsa.sitebox-s.redant.selfhost.corp.microsoft.com/]
+12:34:38.891 INFO - Executing: [find elements: By.cssSelector: body])
+12:34:39.077 INFO - Done: [find elements: By.cssSelector: body]
+12:34:39.083 INFO - Executing: [is displayed: 0 [[InternetExplorerDriver: internet explorer on WINDOWS (41c053bd-efd8-4ca9-9fb4-ee87b92bcedd)] -> css selector: body]])
+12:34:39.187 INFO - Done: [is displayed: 0 [[InternetExplorerDriver: internet explorer on WINDOWS (41c053bd-efd8-4ca9-9fb4-ee87b92bcedd)] -> css selector: body]]
+12:34:39.194 INFO - Executing: [take screenshot])
+12:34:39.328 INFO - Done: [take screenshot]
+12:34:39.381 INFO - Executing: [delete session: f2891751-624f-4e78-9001-8a48177e6d11])
+12:34:40.270 INFO - Done: [delete session: f2891751-624f-4e78-9001-8a48177e6d11]
+12:34:40.285 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Rdx Desktop, browserName=internet explorer, javascriptEnabled=true, platform=ANY}]])
+12:34:40.285 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Rdx Desktop, browserName=internet explorer, javascriptEnabled=true, platform=ANY}]
+Started InternetExplorerDriver server (64-bit)
+2.52.1.0
+Listening on port 42836
+Only local connections are allowed
+12:34:42.332 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Rdx Desktop, browserName=internet explorer, javascriptEnabled=true, platform=ANY}]]
+12:34:42.335 INFO - Executing: [get: http://rdx-gsa.sitebox-s.redant.selfhost.corp.microsoft.com/])
+12:34:42.603 INFO - Done: [get: http://rdx-gsa.sitebox-s.redant.selfhost.corp.microsoft.com/]
+12:34:42.609 INFO - Executing: [find elements: By.cssSelector: body])
+12:34:42.792 INFO - Done: [find elements: By.cssSelector: body]
+12:34:42.796 INFO - Executing: [is displayed: 0 [[InternetExplorerDriver: internet explorer on WINDOWS (417c2b1e-2031-4674-b18c-c780c0b68fad)] -> css selector: body]])
+12:34:42.900 INFO - Done: [is displayed: 0 [[InternetExplorerDriver: internet explorer on WINDOWS (417c2b1e-2031-4674-b18c-c780c0b68fad)] -> css selector: body]]
+12:34:42.906 INFO - Executing: [find element: By.cssSelector: button[class="rightNav"]])
+12:34:44.023 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == button[class="rightNav"] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 385 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:06:42'
+System info: host: 'v-jamedr', ip: '10.137.248.58', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_77'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, proxy={proxyType=}, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:42836/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 417c2b1e-2031-4674-b18c-c780c0b68fad
+*** Element info: {Using=css selector, value=button[class="rightNav"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+12:34:44.026 WARN - Exception: Unable to find element with css selector == button[class="rightNav"] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 385 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:06:42'
+System info: host: 'v-jamedr', ip: '10.137.248.58', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_77'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, proxy={proxyType=}, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:42836/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 417c2b1e-2031-4674-b18c-c780c0b68fad
+*** Element info: {Using=css selector, value=button[class="rightNav"]}
+12:34:44.399 INFO - Executing: [take screenshot])
+12:34:44.544 INFO - Done: [take screenshot]
+12:34:44.587 INFO - Executing: [delete session: 30cb93aa-e026-43b4-a70f-17df8a718404])
+12:34:45.419 INFO - Done: [delete session: 30cb93aa-e026-43b4-a70f-17df8a718404]

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="2"
+            failures="0"
+            tests="2">
+
+  <testsuite name="rdx-desktop"
+    errors="2" failures="0" hostname="" id="" package="rdx-desktop" skipped="0"
+    tests="2" time="11.49" timestamp="Thu, 07 Apr 2016 19:34:33 GMT">
+  
+    <testcase name="RDX Page 1 Slide 0" time="6.353" assertions="2">
+
+    
+
+    
+    </testcase>
+      <system-err>
+         ERROR: Unable to locate element: &quot;button[class=&quot;rightNav&quot;]&quot; using: css selector
+      </system-err>
+  
+    <testcase name="RDX Page 1 Slide 1" time="5.142" assertions="2">
+
+    
+
+    
+    </testcase>
+      <system-err>
+         ERROR: Unable to locate element: &quot;button[class=&quot;rightNav&quot;]&quot; using: css selector
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>
