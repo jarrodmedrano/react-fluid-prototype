@@ -21,6 +21,9 @@ body {
   max-width: 100vw;
   margin: 0 auto;
 }
+img {
+  min-width: 1px;
+}
 .factsGrid {
   display: -ms-grid;
   -ms-grid-columns: 1fr auto;
