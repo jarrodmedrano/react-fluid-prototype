@@ -836,6 +836,12 @@ body {
     min-width: 15%;
   }
 }
+@media screen and (-ms-high-contrast: black-on-white) {
+  .template-hubStrip .template-hubButton {
+    background: black;
+    color: white;
+  }
+}
 .template-hubStrip .template-hubButton .hubButton-content {
   width: 60px;
   margin: 0 auto;

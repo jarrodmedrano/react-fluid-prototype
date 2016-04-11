@@ -643,6 +643,11 @@ body {
 			height: @continuum-hubstrip-height;
 			min-width: 15%;
 		}
+
+        @media screen and (-ms-high-contrast: black-on-white) {
+            background: black;
+            color: white;
+        }
         
         .hubButton-content {
             width: 60px;
@@ -810,6 +815,7 @@ body {
           }
 
           @media screen and (-ms-high-contrast: black-on-white) {
+
 
             &:before {
               background-color: black;
