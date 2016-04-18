@@ -1,31 +1,123 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="2"
+<testsuites errors="0"
             failures="0"
-            tests="2">
+            tests="16">
 
   <testsuite name="rdx-desktop"
-    errors="2" failures="0" hostname="" id="" package="rdx-desktop" skipped="0"
-    tests="2" time="11.49" timestamp="Thu, 07 Apr 2016 19:34:33 GMT">
+    errors="0" failures="0" hostname="" id="" package="rdx-desktop" skipped="0"
+    tests="16" time="148.9" timestamp="Thu, 14 Apr 2016 17:31:35 GMT">
   
-    <testcase name="RDX Page 1 Slide 0" time="6.353" assertions="2">
+    <testcase name="RDX Page 1 Slide 0" time="4.626" assertions="2">
 
     
 
     
     </testcase>
-      <system-err>
-         ERROR: Unable to locate element: &quot;button[class=&quot;rightNav&quot;]&quot; using: css selector
-      </system-err>
   
-    <testcase name="RDX Page 1 Slide 1" time="5.142" assertions="2">
+    <testcase name="RDX Page 1 Slide 1" time="7.133" assertions="2">
 
     
 
     
     </testcase>
-      <system-err>
-         ERROR: Unable to locate element: &quot;button[class=&quot;rightNav&quot;]&quot; using: css selector
-      </system-err>
+  
+    <testcase name="RDX Page 1 Slide 2" time="7.286" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 3" time="10.20" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 4" time="11.22" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 0" time="8.256" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 1" time="7.570" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 2" time="24.93" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 3" time="11.16" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 0" time="7.074" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 1" time="7.495" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 2" time="10.27" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 3" time="9.544" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 4 Slide 1" time="7.136" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 4 Slide 2" time="7.695" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 5 Slide 1" time="7.324" assertions="2">
+
+    
+
+    
+    </testcase>
   
   
   </testsuite>

@@ -1,11 +1,123 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="0">
+            tests="16">
 
   <testsuite name="rdx-large-desktop"
     errors="0" failures="0" hostname="" id="" package="rdx-large-desktop" skipped="0"
-    tests="0" time="0.000" timestamp="Thu, 07 Apr 2016 19:34:45 GMT">
+    tests="16" time="138.5" timestamp="Thu, 14 Apr 2016 17:34:04 GMT">
+  
+    <testcase name="RDX Page 1 Slide 0" time="4.052" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 1" time="6.835" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 2" time="7.836" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 3" time="10.94" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 4" time="13.59" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 0" time="8.004" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 1" time="7.410" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 2" time="11.47" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 3" time="11.17" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 0" time="7.053" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 1" time="7.595" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 2" time="10.99" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 3" time="8.953" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 4 Slide 1" time="7.369" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 4 Slide 2" time="7.942" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 5 Slide 1" time="7.250" assertions="2">
+
+    
+
+    
+    </testcase>
   
   
   </testsuite>
