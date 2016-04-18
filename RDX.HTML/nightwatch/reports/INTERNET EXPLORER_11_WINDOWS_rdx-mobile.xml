@@ -1,11 +1,123 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="0">
+            tests="16">
 
   <testsuite name="rdx-mobile"
     errors="0" failures="0" hostname="" id="" package="rdx-mobile" skipped="0"
-    tests="0" time="0.000" timestamp="Thu, 07 Apr 2016 19:34:45 GMT">
+    tests="16" time="129.8" timestamp="Thu, 14 Apr 2016 17:36:22 GMT">
+  
+    <testcase name="RDX Page 1 Slide 0" time="3.796" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 1" time="6.212" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 2" time="8.691" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 3" time="9.316" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 1 Slide 4" time="11.92" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 0" time="5.284" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 1" time="8.789" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 2" time="9.214" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 3" time="11.72" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 0" time="5.455" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 1" time="9.182" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 2" time="9.000" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 3 Slide 3" time="10.59" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 4 Slide 1" time="5.950" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 4 Slide 2" time="9.093" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 5 Slide 1" time="5.586" assertions="2">
+
+    
+
+    
+    </testcase>
   
   
   </testsuite>
