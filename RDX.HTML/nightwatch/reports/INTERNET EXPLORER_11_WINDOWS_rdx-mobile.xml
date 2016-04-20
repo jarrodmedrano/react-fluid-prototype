@@ -1,118 +1,138 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="0"
+            failures="2"
             tests="16">
 
   <testsuite name="rdx-mobile"
-    errors="0" failures="0" hostname="" id="" package="rdx-mobile" skipped="0"
-    tests="16" time="129.8" timestamp="Thu, 14 Apr 2016 17:36:22 GMT">
+    errors="0" failures="2" hostname="" id="" package="rdx-mobile" skipped="0"
+    tests="16" time="159.5" timestamp="Wed, 20 Apr 2016 17:11:48 GMT">
   
-    <testcase name="RDX Page 1 Slide 0" time="3.796" assertions="2">
+    <testcase name="RDX Page 1 Slide 0" time="6.272" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 1 Slide 1" time="6.212" assertions="2">
+    <testcase name="RDX Page 1 Slide 1" time="6.320" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 1 Slide 2" time="8.691" assertions="2">
+    <testcase name="RDX Page 1 Slide 2" time="9.969" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 1 Slide 3" time="9.316" assertions="2">
+    <testcase name="RDX Page 1 Slide 3" time="11.66" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 1 Slide 4" time="11.92" assertions="2">
+    <testcase name="RDX Page 1 Slide 4" time="16.85" assertions="2">
+
+      <failure message="Screenshots Match Failed for RDX-mobile-page1-slide-4.png with a tolerance of 0%.
+   Screenshots at:
+    Baseline: nightwatch/screenshots/baseline/RDX-mobile-page1-slide-4.png
+    Result: nightwatch/screenshots/results/RDX-mobile-page1-slide-4.png
+    Diff: nightwatch/screenshots/diffs/RDX-mobile-page1-slide-4.png
+   Open nightwatch/screenshots/diffs/RDX-mobile-page1-slide-4.png to see how the screenshot has changed.
+   If the Result Screenshot is correct you can use it to update the Baseline Screenshot and re-run your test:
+    cp nightwatch/screenshots/results/RDX-mobile-page1-slide-4.png nightwatch/screenshots/baseline/RDX-mobile-page1-slide-4.png">    at Object.&lt;anonymous&gt; (C:\src\RDA\RDX.HTML\nightwatch\commands\compareScreenshot.js:8:21)
+    at C:\src\RDA\RDX.HTML\node_modules\nightwatch\lib\api\client-commands.js:132:22
+    at C:\src\RDA\RDX.HTML\node_modules\nightwatch\lib\index.js:424:11
+    at FSReqWrap.oncomplete (fs.js:82:15)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 0" time="6.982" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 2 Slide 0" time="5.284" assertions="2">
+    <testcase name="RDX Page 2 Slide 1" time="10.67" assertions="2">
+
+      <failure message="Screenshots Match Failed for RDX-mobile-page2-slide-1.png with a tolerance of 0%.
+   Screenshots at:
+    Baseline: nightwatch/screenshots/baseline/RDX-mobile-page2-slide-1.png
+    Result: nightwatch/screenshots/results/RDX-mobile-page2-slide-1.png
+    Diff: nightwatch/screenshots/diffs/RDX-mobile-page2-slide-1.png
+   Open nightwatch/screenshots/diffs/RDX-mobile-page2-slide-1.png to see how the screenshot has changed.
+   If the Result Screenshot is correct you can use it to update the Baseline Screenshot and re-run your test:
+    cp nightwatch/screenshots/results/RDX-mobile-page2-slide-1.png nightwatch/screenshots/baseline/RDX-mobile-page2-slide-1.png">    at Object.&lt;anonymous&gt; (C:\src\RDA\RDX.HTML\nightwatch\commands\compareScreenshot.js:8:21)
+    at C:\src\RDA\RDX.HTML\node_modules\nightwatch\lib\api\client-commands.js:132:22
+    at C:\src\RDA\RDX.HTML\node_modules\nightwatch\lib\index.js:424:11
+    at FSReqWrap.oncomplete (fs.js:82:15)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="RDX Page 2 Slide 2" time="10.68" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 2 Slide 1" time="8.789" assertions="2">
+    <testcase name="RDX Page 2 Slide 3" time="14.31" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 2 Slide 2" time="9.214" assertions="2">
+    <testcase name="RDX Page 3 Slide 0" time="6.721" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 2 Slide 3" time="11.72" assertions="2">
+    <testcase name="RDX Page 3 Slide 1" time="10.36" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 3 Slide 0" time="5.455" assertions="2">
+    <testcase name="RDX Page 3 Slide 2" time="11.29" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 3 Slide 1" time="9.182" assertions="2">
+    <testcase name="RDX Page 3 Slide 3" time="12.82" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 3 Slide 2" time="9.000" assertions="2">
+    <testcase name="RDX Page 4 Slide 1" time="6.818" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 3 Slide 3" time="10.59" assertions="2">
+    <testcase name="RDX Page 4 Slide 2" time="10.98" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="RDX Page 4 Slide 1" time="5.950" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="RDX Page 4 Slide 2" time="9.093" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="RDX Page 5 Slide 1" time="5.586" assertions="2">
+    <testcase name="RDX Page 5 Slide 1" time="6.748" assertions="2">
 
     
 

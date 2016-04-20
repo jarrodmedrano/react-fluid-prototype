@@ -575,17 +575,7 @@ img {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubButton.active:after {
-    border-top-color: yellow;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-hubButton.active:after {
-    border-top-color: purple;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-hubButton.active:after {
-    border-top-color: blue;
+    border-top-color: Highlight;
   }
 }
 .template-pageIndicator {
@@ -627,37 +617,12 @@ img {
   border-radius: 50%;
   display: inline-block;
 }
-@media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator .indicatorContainer-indicator {
-    -ms-high-contrast-adjust: none;
-  }
+@media screen and (-ms-high-contrast) {
   .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: white;
+    background-color: HighlightText;
   }
   .template-pageIndicator .indicatorContainer-indicator.active {
-    background: green;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: black;
-  }
-  .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: white;
-  }
-  .template-pageIndicator .indicatorContainer-indicator.active {
-    background: purple;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: black;
-  }
-  .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: white;
-  }
-  .template-pageIndicator .indicatorContainer-indicator.active {
-    background: blue;
+    background: Highlight;
   }
 }
 .template-pageIndicator .indicatorContainer-indicator:before {
@@ -665,43 +630,17 @@ img {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: black;
+    background-color: ButtonText;
   }
 }
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: white;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: black;
-  }
-}
-.template-pageIndicator .indicatorContainer-indicator:hover:before {
-  background-color: rgba(23, 23, 23, 0.6);
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator .indicatorContainer-indicator:hover:before {
-    background-color: white;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator .indicatorContainer-indicator:hover:before {
-    background-color: white;
-  }
-}
+.template-pageIndicator .indicatorContainer-indicator:hover:before,
 .template-pageIndicator .indicatorContainer-indicator:focus:before {
   background-color: rgba(23, 23, 23, 0.6);
 }
 @media screen and (-ms-high-contrast: active) {
+  .template-pageIndicator .indicatorContainer-indicator:hover:before,
   .template-pageIndicator .indicatorContainer-indicator:focus:before {
-    background-color: white;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator .indicatorContainer-indicator:focus:before {
-    background-color: white;
+    background-color: ButtonText;
   }
 }
 .template-pageIndicator.theme-dark {
@@ -709,21 +648,8 @@ img {
   color: #ffffff;
 }
 @media screen and (-ms-high-contrast: active) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator {
-    -ms-high-contrast-adjust: none;
-  }
   .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
-    background-color: yellow;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
-    background-color: black;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator.active:before {
-    background-color: white;
+    background-color: ButtonText;
   }
 }
 .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
@@ -731,17 +657,7 @@ img {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:before {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: ButtonText;
   }
 }
 .template-pageIndicator.theme-dark .indicatorContainer-indicator.indicator-0.active:before {
@@ -752,12 +668,7 @@ img {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-pageIndicator.theme-dark .indicatorContainer-indicator:hover:before {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator.theme-dark .indicatorContainer-indicator:hover:before {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: ButtonText;
   }
 }
 .template-pageIndicator .indicatorContainer-directionNav {
@@ -805,6 +716,11 @@ img {
   border-top: 1px solid #171717;
   border-bottom: 2px solid #171717;
 }
+@media screen and (-ms-high-contrast: active) {
+  .template-hubStrip {
+    border-bottom: 2px solid ButtonText;
+  }
+}
 .template-hubStrip button.template-hubButton {
   color: #ffffff;
   font-weight: normal;
@@ -836,38 +752,20 @@ img {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubStrip .template-hubButton {
-    background: black;
-    border-left: 2px solid yellow;
+    background: ButtonFace;
+    color: ButtonText;
+    border-left: 2px solid ButtonText;
   }
   .template-hubStrip .template-hubButton:focus,
   .template-hubStrip .template-hubButton:hover,
   .template-hubStrip .template-hubButton.active {
-    background: green;
+    background: Highlight;
     color: transparent;
   }
 }
 @media screen and (-ms-high-contrast: black-on-white) {
   .template-hubStrip .template-hubButton {
-    border-left: 2px solid white;
-  }
-  .template-hubStrip .template-hubButton:focus,
-  .template-hubStrip .template-hubButton:hover,
-  .template-hubStrip .template-hubButton.active {
-    background: purple;
-    color: transparent;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  .template-hubStrip .template-hubButton {
-    background: black;
-    color: black;
-    border-left: 2px solid white;
-  }
-  .template-hubStrip .template-hubButton:focus,
-  .template-hubStrip .template-hubButton:hover,
-  .template-hubStrip .template-hubButton.active {
-    background: blue;
-    color: transparent;
+    background: -ms-hotlight;
   }
 }
 .template-hubStrip .template-hubButton:first-of-type {
@@ -910,45 +808,17 @@ button span.arrow-right:after {
 }
 @media screen and (-ms-high-contrast: active) {
   button {
-    background: yellow;
-    color: black;
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
   }
   button:hover,
   button:focus {
-    opacity: 1 !important;
-    background: green;
-    color: white;
+    background: Highlight;
+    color: HighlightText;
   }
   button:focus {
-    outline: 1px dotted white;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  button {
-    background: black;
-    color: white;
-  }
-  button:hover,
-  button:focus {
-    background: purple;
-    color: white;
-  }
-  button:focus {
-    outline: 1px dotted white;
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  button {
-    background: white;
-    color: black;
-  }
-  button:hover,
-  button:focus {
-    background: blue;
-    color: white;
-  }
-  button:focus {
-    outline: 1px dotted white;
+    outline: 1px dotted ButtonText;
   }
 }
 .text-legal p {

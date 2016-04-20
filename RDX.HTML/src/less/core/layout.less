@@ -681,19 +681,6 @@ img {
 
   &:after {
     border-top-color: @dark-grey;
-
-    @media screen and (-ms-high-contrast: active) {
-      border-top-color: yellow;
-    }
-
-    @media screen and (-ms-high-contrast: black-on-white) {
-      border-top-color: purple;
-    }
-
-    @media screen and (-ms-high-contrast: white-on-black) {
-      border-top-color: blue;
-    }
-
     content: ' ';
     position: absolute;
     margin: 0 auto;
@@ -706,6 +693,10 @@ img {
     border-right: @caret-width solid transparent;
     border-top: @caret-width solid transparent;
     z-index: 3;
+
+    @media screen and (-ms-high-contrast: active) {
+      border-top-color: Highlight;
+    }
   }
 
   //&:hover:after, &:focus:after {
@@ -766,43 +757,16 @@ img {
 
     //color themes
 
-    @media screen and (-ms-high-contrast: active) {
-      -ms-high-contrast-adjust: none;
+
+
+    @media screen and (-ms-high-contrast) {
 
       &.active:before {
-        background-color: white;
+        background-color: HighlightText;
       }
 
       &.active {
-        background: green;
-      }
-    }
-
-    @media screen and (-ms-high-contrast: black-on-white) {
-      &.active:before {
-        background-color: black;
-      }
-
-      &.active:before {
-        background-color: white;
-      }
-
-      &.active {
-        background: purple;
-      }
-    }
-
-    @media screen and (-ms-high-contrast: white-on-black) {
-      &.active:before {
-        background-color: black;
-      }
-
-      &.active:before {
-        background-color: white;
-      }
-
-      &.active {
-        background: blue;
+        background: Highlight;
       }
     }
 
@@ -810,39 +774,15 @@ img {
       background-color: fade(@indicator-color, 40%);
 
       @media screen and (-ms-high-contrast: active) {
-        background-color: black;
-      }
-
-      @media screen and (-ms-high-contrast: black-on-white) {
-        background-color: white;
-      }
-
-      @media screen and (-ms-high-contrast: white-on-black) {
-        background-color: black;
+        background-color: ButtonText;
       }
     }
 
-    &:hover:before {
+    &:hover:before, &:focus:before {
       background-color: fade(@indicator-color, 60%);
 
       @media screen and (-ms-high-contrast: active) {
-        background-color: white;
-      }
-
-      @media screen and (-ms-high-contrast: black-on-white) {
-        background-color: white;
-      }
-    }
-
-    &:focus:before {
-      background-color: fade(@indicator-color, 60%);
-
-      @media screen and (-ms-high-contrast: active) {
-        background-color: white;
-      }
-
-      @media screen and (-ms-high-contrast: black-on-white) {
-        background-color: white;
+        background-color: ButtonText;
       }
     }
   }
@@ -854,23 +794,11 @@ img {
 
     .indicatorContainer-indicator {
 
+
+
       @media screen and (-ms-high-contrast: active) {
-        -ms-high-contrast-adjust: none;
-
         &.active:before {
-          background-color: yellow;
-        }
-      }
-
-      @media screen and (-ms-high-contrast: black-on-white) {
-        &.active:before {
-          background-color: black;
-        }
-      }
-
-      @media screen and (-ms-high-contrast: white-on-black) {
-        &.active:before {
-          background-color: white;
+          background-color: ButtonText;
         }
       }
 
@@ -878,15 +806,7 @@ img {
         background-color: fade(@indicator-color-dark, 40%);
 
         @media screen and (-ms-high-contrast: active) {
-          background-color: fade(@white, 40%);
-        }
-
-        @media screen and (-ms-high-contrast: black-on-white) {
-          background-color: fade(@black, 40%);
-        }
-
-        @media screen and (-ms-high-contrast: white-on-black) {
-          background-color: fade(@white, 40%);
+          background-color: ButtonText;
         }
       }
 
@@ -900,11 +820,7 @@ img {
         background-color: fade(@indicator-color-dark, 60%);
 
         @media screen and (-ms-high-contrast: active) {
-          background-color: fade(@white, 80%);
-        }
-
-        @media screen and (-ms-high-contrast: black-on-white) {
-          background-color: fade(@black, 80%);
+          background-color: ButtonText;
         }
       }
     }
@@ -972,6 +888,10 @@ img {
   border-top: 1px solid @dark-grey;
   border-bottom: 2px solid @dark-grey;
 
+  @media screen and (-ms-high-contrast: active) {
+    border-bottom: 2px solid ButtonText;
+  }
+
   button.template-hubButton {
     color: @white;
     font-weight: normal;
@@ -1010,34 +930,21 @@ img {
     position: relative;
     border-left: 2px solid @dark-grey;
 
+
+
     @media screen and (-ms-high-contrast: active) {
-      background: black;
-      border-left: 2px solid yellow;
+      background: ButtonFace;
+      color: ButtonText;
+      border-left: 2px solid ButtonText;
 
       &:focus, &:hover, &.active {
-        background: green;
+        background: Highlight;
         color: transparent;
       }
     }
 
     @media screen and (-ms-high-contrast: black-on-white) {
-      border-left: 2px solid white;
-
-      &:focus, &:hover, &.active {
-        background: purple;
-        color: transparent;
-      }
-    }
-
-    @media screen and (-ms-high-contrast: white-on-black) {
-      background: black;
-      color: black;
-      border-left: 2px solid white;
-
-      &:focus, &:hover, &.active {
-        background: blue;
-        color: transparent;
-      }
+      background: -ms-hotlight;
     }
 
     &:first-of-type {
@@ -1092,45 +999,17 @@ button {
   }
 
   @media screen and (-ms-high-contrast: active) {
-    background: yellow;
-    color: black;
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
 
     &:hover, &:focus {
-      opacity: 1 !important;
-      background: green;
-      color: white;
+      background: Highlight;
+      color: HighlightText;
     }
 
     &:focus {
-      outline: 1px dotted white;
-    }
-  }
-
-  @media screen and (-ms-high-contrast: black-on-white) {
-    background: black;
-    color: white;
-
-    &:hover, &:focus {
-      background: purple;
-      color: white;
-    }
-
-    &:focus {
-      outline: 1px dotted white;
-    }
-  }
-
-  @media screen and (-ms-high-contrast: white-on-black) {
-    background: white;
-    color: black;
-
-    &:hover, &:focus {
-      background: blue;
-      color: white;
-    }
-
-    &:focus {
-      outline: 1px dotted white;
+      outline: 1px dotted ButtonText;
     }
   }
 }

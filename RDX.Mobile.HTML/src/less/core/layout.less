@@ -186,9 +186,22 @@ body {
             width: @flipview-width;
             height: @flipview-height;
 
+            @media screen and (-ms-high-contrast: active) {
+              border: 1px solid ButtonText;
+
+              &:active, &:focus {
+                background-color: Highlight;
+                color: HIghlightText;
+              }
+            }
+
             .slideNav-directionIndicator {
                 -ms-grid-row: 2;
                 -ms-grid-column: 2;
+
+                @media screen and (-ms-high-contrast: active) {
+                  color: ButtonText;
+                }
             }
         }
 
@@ -209,11 +222,6 @@ body {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-				
-				@media screen and @mediaQueryBreakpointLg {
-					height: 60%;
-				}
-
             }
         }
 
@@ -234,10 +242,6 @@ body {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-				
-				@media screen and @mediaQueryBreakpointLg {
-					height: 60%;
-				}
             }
         }
     }
@@ -685,14 +689,15 @@ body {
         }
 
         @media screen and (-ms-high-contrast: active) {
-          border: 1px solid yellow;
-          color: white;
+          border: 1px solid ButtonText;
+          color: ButtonText;
         }
 
         @media screen and (-ms-high-contrast: black-on-white) {
-          background: black;
-          color: white;
+          background: -ms-hotlight;
+          color: HighlightText;
         }
+
     }
 }
 
@@ -700,29 +705,27 @@ body {
 .template-hubButton.active {
     position: relative;
 
-    @media screen and (-ms-high-contrast: black-on-white) {
-      background: purple
+    @media screen and (-ms-high-contrast: active) {
+      background: Highlight;
+      color: HighlightText;
     }
     
     &.template-hubButton:after {
       //border-bottom-color: @dark-grey;
 
       @media screen and (-ms-high-contrast: active) {
-        border-bottom-color: yellow;
-        color: black;
-      }
-
-      @media screen and (-ms-high-contrast: black-on-white) {
-        border-bottom-color: purple;
+        border-bottom-color: Highlight;
         color: transparent;
       }
+
+
     }
     
     &:after {
         content: ' ';
         position: absolute;
         left: 50%;
-        top: -14px;
+        top: -13px;
         width: 0; 
         height: 0; 
         border-left: 13px solid transparent;
@@ -732,7 +735,7 @@ body {
 
 		@media screen and @mediaQueryBreakpointLg {
 			top: inherit;
-			bottom: -14px;
+			bottom: -13px;
 			transform: scaleY(-1) translateX(-50%) !important;
 			filter: FlipV;
 			-ms-filter: "FlipV";
@@ -740,6 +743,7 @@ body {
 		
         @media screen and @mediaQueryBreakpointSm {
             transform: translateX(-50%);
+
         }
     }
 }
@@ -778,59 +782,53 @@ body {
         }
     }
 
-
-
     // Individual indicator circle link
     .indicatorContainer-indicator {
         width: @indicator-size * 1.75;
         height: @indicator-size * 1.75;
+        line-height: @indicator-size / 2;
+
         float: left;
+        text-align: center;
+        vertical-align: middle;
 		
 		@media screen and @mediaQueryBreakpointLg {
 			width: @indicator-size * 3;
         	height: @indicator-size * 3;
+            line-height: @indicator-size * 2;
 		}
         
         &.white:before { background-color: #ffffff; }
         &.white:hover:before { border-color: #ffffff !important; }
         
         &:before {
-            content:' ';
+            content: '';
             width: @indicator-size;
             height: @indicator-size;
             border-radius: 50%;
-			transform: translateX(50%);
             background-color: fade(white, 60%); // should be variable
             display: inline-block;
-            float: left;
-
-
+            vertical-align: middle;
         }
 
-          @media screen and (-ms-high-contrast: active) {
+        @media screen and (-ms-high-contrast: active) {
 
-            &:before {
-              background-color: yellow;
-            }
+          background-color: ButtonFace;
+          border: 1px solid ButtonText;
 
-            &.active:before {
-              background-color: white;
-            }
-
+          &:before {
+            background-color: ButtonText;
           }
 
-          @media screen and (-ms-high-contrast: black-on-white) {
-
-
-            &:before {
-              background-color: black;
-            }
-
-            &.active:before {
-              background-color: purple;
-            }
-
+          &.active {
+            background-color: Highlight;
           }
+
+          &.active:before {
+            background-color: HighlightText;
+          }
+
+        }
     }
 }
 .active {

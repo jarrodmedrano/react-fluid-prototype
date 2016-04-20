@@ -163,9 +163,24 @@ body {
   width: 25px;
   height: 48px;
 }
+@media screen and (-ms-high-contrast: active) {
+  .page-body .carousel-controls .sideNav {
+    border: 1px solid ButtonText;
+  }
+  .page-body .carousel-controls .sideNav:active,
+  .page-body .carousel-controls .sideNav:focus {
+    background-color: Highlight;
+    color: HIghlightText;
+  }
+}
 .page-body .carousel-controls .sideNav .slideNav-directionIndicator {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
+}
+@media screen and (-ms-high-contrast: active) {
+  .page-body .carousel-controls .sideNav .slideNav-directionIndicator {
+    color: ButtonText;
+  }
 }
 .page-body .carousel-controls .leftNav {
   position: absolute;
@@ -188,11 +203,6 @@ body {
 .page-body .carousel-controls .leftNav .directionIndicator-prev:after {
   content: '\E76B';
 }
-@media screen and (min-width: 1000px) and (orientation:landscape) {
-  .page-body .carousel-controls .leftNav .directionIndicator-prev {
-    height: 60%;
-  }
-}
 .page-body .carousel-controls .rightNav {
   position: absolute;
   right: 0;
@@ -213,11 +223,6 @@ body {
 }
 .page-body .carousel-controls .rightNav .directionIndicator-next:after {
   content: '\E76C';
-}
-@media screen and (min-width: 1000px) and (orientation:landscape) {
-  .page-body .carousel-controls .rightNav .directionIndicator-next {
-    height: 60%;
-  }
 }
 .page-body .content-carousel {
   -ms-grid-column: 1;
@@ -902,33 +907,28 @@ body {
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubStrip .template-hubButton {
-    border: 1px solid yellow;
-    color: white;
+    border: 1px solid ButtonText;
+    color: ButtonText;
   }
 }
 @media screen and (-ms-high-contrast: black-on-white) {
   .template-hubStrip .template-hubButton {
-    background: black;
-    color: white;
+    background: -ms-hotlight;
+    color: HighlightText;
   }
 }
 .template-hubButton.active {
   position: relative;
 }
-@media screen and (-ms-high-contrast: black-on-white) {
+@media screen and (-ms-high-contrast: active) {
   .template-hubButton.active {
-    background: purple;
+    background: Highlight;
+    color: HighlightText;
   }
 }
 @media screen and (-ms-high-contrast: active) {
   .template-hubButton.active.template-hubButton:after {
-    border-bottom-color: yellow;
-    color: black;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-hubButton.active.template-hubButton:after {
-    border-bottom-color: purple;
+    border-bottom-color: Highlight;
     color: transparent;
   }
 }
@@ -936,7 +936,7 @@ body {
   content: ' ';
   position: absolute;
   left: 50%;
-  top: -14px;
+  top: -13px;
   width: 0;
   height: 0;
   border-left: 13px solid transparent;
@@ -947,7 +947,7 @@ body {
 @media screen and (min-width: 1000px) and (orientation:landscape) {
   .template-hubButton.active:after {
     top: inherit;
-    bottom: -14px;
+    bottom: -13px;
     transform: scaleY(-1) translateX(-50%) !important;
     filter: FlipV;
     -ms-filter: "FlipV";
@@ -987,12 +987,16 @@ body {
 .template-pageIndicator .indicatorContainer-indicator {
   width: 8.75px;
   height: 8.75px;
+  line-height: 2.5px;
   float: left;
+  text-align: center;
+  vertical-align: middle;
 }
 @media screen and (min-width: 1000px) and (orientation:landscape) {
   .template-pageIndicator .indicatorContainer-indicator {
     width: 15px;
     height: 15px;
+    line-height: 10px;
   }
 }
 .template-pageIndicator .indicatorContainer-indicator.white:before {
@@ -1002,29 +1006,27 @@ body {
   border-color: #ffffff !important;
 }
 .template-pageIndicator .indicatorContainer-indicator:before {
-  content: ' ';
+  content: '';
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  transform: translateX(50%);
   background-color: rgba(255, 255, 255, 0.6);
   display: inline-block;
-  float: left;
+  vertical-align: middle;
 }
 @media screen and (-ms-high-contrast: active) {
+  .template-pageIndicator .indicatorContainer-indicator {
+    background-color: ButtonFace;
+    border: 1px solid ButtonText;
+  }
   .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: yellow;
+    background-color: ButtonText;
+  }
+  .template-pageIndicator .indicatorContainer-indicator.active {
+    background-color: Highlight;
   }
   .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: white;
-  }
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  .template-pageIndicator .indicatorContainer-indicator:before {
-    background-color: black;
-  }
-  .template-pageIndicator .indicatorContainer-indicator.active:before {
-    background-color: purple;
+    background-color: HighlightText;
   }
 }
 .active {
