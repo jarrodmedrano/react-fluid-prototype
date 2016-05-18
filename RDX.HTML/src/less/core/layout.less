@@ -678,26 +678,36 @@ img {
 // Active state for hubButton shading
 .template-hubButton.active {
   position: relative;
+  overflow: hidden;
 
-  &:after {
-    border-top-color: @dark-grey;
-    content: ' ';
+  &::after {
+    content: '';
+    border-top: 3px solid #0078d7;
+    width: 100%;
+    display: block;
     position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 100%;
-    width: 0;
-    height: 0;
-    border-left: @caret-width solid transparent;
-    border-right: @caret-width solid transparent;
-    border-top: @caret-width solid transparent;
-    z-index: 3;
-
-    @media screen and (-ms-high-contrast: active) {
-      border-top-color: Highlight;
-    }
+    bottom: 0;
   }
+
+  //&:after {
+  //  border-top-color: @dark-grey;
+  //  content: ' ';
+  //  position: absolute;
+  //  margin: 0 auto;
+  //  left: 0;
+  //  right: 0;
+  //  top: 100%;
+  //  width: 0;
+  //  height: 0;
+  //  border-left: @caret-width solid transparent;
+  //  border-right: @caret-width solid transparent;
+  //  border-top: @caret-width solid transparent;
+  //  z-index: 3;
+  //
+  //  @media screen and (-ms-high-contrast: active) {
+  //    border-top-color: Highlight;
+  //  }
+  //}
 
   //&:hover:after, &:focus:after {
   //    opacity: .85;
@@ -886,11 +896,12 @@ img {
   text-align: center;
   margin: 0 auto;
   border-top: 1px solid @dark-grey;
-  border-bottom: 2px solid @dark-grey;
+  justify-content: center;
+  //border-bottom: 2px solid @dark-grey;
 
-  @media screen and (-ms-high-contrast: active) {
-    border-bottom: 2px solid ButtonText;
-  }
+  //@media screen and (-ms-high-contrast: active) {
+  //  border-bottom: 2px solid ButtonText;
+  //}
 
   button.template-hubButton {
     color: @white;
@@ -920,6 +931,8 @@ img {
     flex: 1;
     flex-shrink: 1;
     height: 200px;
+    background: transparent;
+    -ms-high-contrast-adjust: none;
 
     &:focus {
       outline: 1px dotted white;
@@ -928,14 +941,14 @@ img {
     max-width: @max-brandBar-width;
     height: @brandBar-height;
     position: relative;
-    border-left: 2px solid @dark-grey;
+    //border-left: 2px solid @dark-grey;
 
 
 
     @media screen and (-ms-high-contrast: active) {
       background: ButtonFace;
       color: ButtonText;
-      border-left: 2px solid ButtonText;
+      //border-left: 2px solid ButtonText;
 
       &:focus, &:hover, &.active {
         background: Highlight;
@@ -945,10 +958,6 @@ img {
 
     @media screen and (-ms-high-contrast: black-on-white) {
       background: -ms-hotlight;
-    }
-
-    &:first-of-type {
-      border: none;
     }
 
     .hubButton-content {

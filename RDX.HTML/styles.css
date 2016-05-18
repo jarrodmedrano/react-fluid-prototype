@@ -557,26 +557,15 @@ img {
 }
 .template-hubButton.active {
   position: relative;
+  overflow: hidden;
 }
-.template-hubButton.active:after {
-  border-top-color: #171717;
-  content: ' ';
+.template-hubButton.active::after {
+  content: '';
+  border-top: 3px solid #0078d7;
+  width: 100%;
+  display: block;
   position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 100%;
-  width: 0;
-  height: 0;
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  border-top: 18px solid transparent;
-  z-index: 3;
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-hubButton.active:after {
-    border-top-color: Highlight;
-  }
+  bottom: 0;
 }
 .template-pageIndicator {
   width: 100%;
@@ -714,12 +703,7 @@ img {
   text-align: center;
   margin: 0 auto;
   border-top: 1px solid #171717;
-  border-bottom: 2px solid #171717;
-}
-@media screen and (-ms-high-contrast: active) {
-  .template-hubStrip {
-    border-bottom: 2px solid ButtonText;
-  }
+  justify-content: center;
 }
 .template-hubStrip button.template-hubButton {
   color: #ffffff;
@@ -742,10 +726,11 @@ img {
   flex: 1;
   flex-shrink: 1;
   height: 200px;
+  background: transparent;
+  -ms-high-contrast-adjust: none;
   max-width: 240px;
   height: 80px;
   position: relative;
-  border-left: 2px solid #171717;
 }
 .template-hubStrip .template-hubButton:focus {
   outline: 1px dotted white;
@@ -754,7 +739,6 @@ img {
   .template-hubStrip .template-hubButton {
     background: ButtonFace;
     color: ButtonText;
-    border-left: 2px solid ButtonText;
   }
   .template-hubStrip .template-hubButton:focus,
   .template-hubStrip .template-hubButton:hover,
@@ -767,9 +751,6 @@ img {
   .template-hubStrip .template-hubButton {
     background: -ms-hotlight;
   }
-}
-.template-hubStrip .template-hubButton:first-of-type {
-  border: none;
 }
 .template-hubStrip .template-hubButton .hubButton-content {
   -ms-grid-row: 2;
