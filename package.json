@@ -9,8 +9,7 @@
   },
   "author": "Jarrod Medrano",
   "license": "",
-  "dependencies": {
-  },
+  "dependencies": {},
   "jspm": {
     "dependencies": {
       "classnames": "npm:classnames@^2.2.3",
@@ -22,7 +21,8 @@
       "picturefill": "npm:picturefill@^3.0.2",
       "react": "npm:react@^0.14.7",
       "react-dom": "npm:react-dom@^0.14.7",
-      "react-router": "npm:react-router@^2.0.0",
+      "react-router": "npm:react-router@^2.6.1",
+      "rx": "npm:rx@^4.1.0",
       "scss": "github:theefer/plugin-sass@master"
     },
     "devDependencies": {
@@ -33,8 +33,8 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-shell": "^0.5.1",
     "gulp-imagemin": "^2.4.0",
-    "gulp-load-plugins": "^1.1.0"
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-shell": "^0.5.1"
   }
 }

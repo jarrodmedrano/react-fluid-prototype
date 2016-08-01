@@ -7,6 +7,8 @@ class HomePage extends React.Component {
 
     render() {
 
+        console.log(this.props.data);
+
         let currentPage = _.find(this.props.data.routes, function(result) {
             return result.title === this.props.route.title
         }, this);
