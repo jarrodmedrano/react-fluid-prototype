@@ -59,13 +59,12 @@ requestResponseStream.subscribe(function(data) {
             <Route path="/" component={App}>
                 <IndexRoute component={HomePage} title={Index.title}/>
                 {Routes.map(function(result, id) {
-                    return <Route component={DefaultPage} key={id} path={result.path} title={result.title}/>;
+                    return <Route component={DefaultPage} key={id} path={result.path} title={result.title} />;
                 })}
             </Route>
         </Router>
         , document.getElementById('app')
     );
-
 
 });
 
@@ -80,39 +79,33 @@ class App extends React.Component {
         this.state = {
             data: {}
         }
-
-    }
-
-    componentWillMount() {
-        console.log(this.props.title);
     }
 
     componentDidMount() {
+
+        var that = this;
+
         requestResponseStream.subscribe(function(data) {
-
-            console.log(data);
-
-            this.state = {
+            that.setState({
                 data: data
-            }
+            })
         });
     }
 
-
     render() {
 
-        return (
-            <div className="grid">
-                <Linkband routes={this.props.routes} params={this.props.params}/>
-                <TransitionGroup component="div" transitionName="page-transition"
-                                 transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-                    {React.cloneElement(this.props.children, {
-                        key: this.props.location.pathname,
-                        data: this.state.data
-                    })}
-                </TransitionGroup>
-            </div>
-        );
-    }
+            return (
+                <div className="grid">
+                    <Linkband routes={this.props.routes} params={this.props.params}/>
+                    <TransitionGroup component="div" transitionName="page-transition"
+                                     transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+                        {React.cloneElement(this.props.children, {
+                            key: this.props.location.pathname,
+                            data: this.state.data
+                        })}
+                    </TransitionGroup>
+                </div>
+            );
+        }
 }
 

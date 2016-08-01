@@ -7,32 +7,49 @@ class HomePage extends React.Component {
 
     render() {
 
-        console.log(this.props.data);
+        if(!this.props.data.routes) {
+            return (
 
-        let currentPage = _.find(this.props.data.routes, function(result) {
-            return result.title === this.props.route.title
-        }, this);
+                <div className="main-container">
+                    <div>
 
-        return (
-            <div className="main-container">
-                <div>
-                    {currentPage.content.hero ?
-                        <Hero {...currentPage.content.hero} /> : null
-                    }
+                        Loading
 
-                    {currentPage.content.mosaicContainer ?
-                        <div className="c-mosaic fullscreen-mosaic">
-                            {currentPage.content.mosaicContainer.map(function(result, id) {
-                                return (
-                                    <MosaicContainer key={id} mosaics={result}  />
-                                )
-                            })}
-                        </div>
-                        : null
-                    }
+                    </div>
+
                 </div>
-            </div>
-        );
+            )
+
+        } else {
+
+            console.log(this.props.data);
+
+            let currentPage = _.find(this.props.data.routes, function(result) {
+                return result.title === this.props.route.title
+            }, this);
+
+            return (
+                <div className="main-container">
+                    <div>
+                        {currentPage.content.hero ?
+                            <Hero {...currentPage.content.hero} /> : null
+                        }
+
+                        {currentPage.content.mosaicContainer ?
+                            <div className="c-mosaic fullscreen-mosaic">
+                                {currentPage.content.mosaicContainer.map(function(result, id) {
+                                    return (
+                                        <MosaicContainer key={id} mosaics={result}  />
+                                    )
+                                })}
+                            </div>
+                            : null
+                        }
+                    </div>
+                </div>
+            );
+
+        }
     }
 }
 
