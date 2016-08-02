@@ -8,7 +8,7 @@ const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
-import MosaicPage from 'src/js/components/layouts/MosaicPage';
+import MosaicPage from 'src/js/layouts/MosaicPage';
 
 //Styles
 import 'src/styles/mwf_en-us_default.min.css!';

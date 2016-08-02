@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from 'src/js/components/hero/hero';
 import MosaicContainer from 'src/js/components/mosaic/MosaicContainer'
 import Carousel from 'src/js/components/carousel/Carousel';
-import 'src/styles/main.scss!';
+import 'src/styles/mosaic.scss!';
 
 import _ from 'lodash'
 

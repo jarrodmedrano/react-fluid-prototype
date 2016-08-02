@@ -1,0 +1,109 @@
+#app {
+    font-family: "SegoeUI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  padding: 0;
+  background: #000;
+  overflow-x: hidden;
+
+  @media only screen and (min-width:768px) {
+    overflow: hidden;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: stretch;
+}
+
+
+.main-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+
+  @media only screen and (min-width: 768px) {
+    &.fullscreen-mosaic {
+      flex-direction: row;
+
+      [data-f-mosaic~='f-height-large'] {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+
+      [data-f-mosaic~='f-height-small'] {
+        height: 40%;
+      }
+
+      [data-f-mosaic~='f-height-medium'] {
+        height: 60%;
+      }
+    }
+  }
+
+  .c-mosaic {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .c-call-to-action.c-glyph-go:after {
+    content: '\E8AD';
+  }
+
+  .c-hero {
+      height: calc(100vh - 64px);
+
+    &.f-medium {
+      height: 380px;
+    }
+  }
+
+  .c-mosaic > div {
+    flex: 1;
+
+    > div {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translate(-250px,0);
+  transform: translate3d(-250px,0,0);
+}
+
+.page-transition-enter.page-transition-enter-active {
+  opacity: 1;
+  transform: translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+
+.page-transition-leave {
+  opacity: 1;
+  transform: translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+
+.page-transition-leave.page-transition-leave-active {
+  opacity: 0;
+  transform: translate(250px,0);
+  transform: translate3d(250px,0,0);
+}
