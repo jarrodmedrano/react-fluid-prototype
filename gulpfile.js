@@ -24,6 +24,8 @@ gulp.task('move', function() {
         .pipe(gulp.dest('./build/img'));
     gulp.src('./src/fonts/*')
         .pipe(gulp.dest('./build/fonts'));
+    gulp.src('./data/*')
+        .pipe(gulp.dest('./build/data'));
 });
 
 gulp.task('build', ['bundle', 'move']);

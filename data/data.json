@@ -1,0 +1,260 @@
+{
+  "routes": [
+    {
+      "type": "IndexRoute",
+      "path":"/",
+      "title":"Welcome",
+      "content": {
+        "hero": {
+          "heroTitle": "Choose your own Windows adventure.",
+          "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+          "heroSize": "f-medium",
+          "fX": "f-x-left"
+        },
+        "mosaicContainer": [
+          {
+            "containerSize": "f-vp1-whole f-vp4-whole",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "For Business",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/work.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
+              },
+              {
+                "mosaicTitle": "For School",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/for-school.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
+              },
+              {
+                "mosaicTitle": "For Play",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/art.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
+              },
+              {
+                "mosaicTitle": "On the Go",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-vp3-quarter",
+                "mosaicImage": "img/on-the-go.jpg",
+                "ctaURL": "http://www.microsoftstore.com/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Route",
+      "path":"/surface",
+      "title":"Surface",
+      "content": {
+        "mosaicContainer": [
+            {
+              "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+              "mosaics":
+              [
+                {
+                  "mosaicTitle": "Surface Pro 4",
+                  "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                  "mosaicImage": "img/surfacepro.jpg",
+                  "mosaicCta": "Show me more",
+                  "ctaURL": "http://www.microsoftstore.com/"
+                }
+              ]
+            },
+            {
+              "containerSize": "f-vp1-whole f-vp4-half",
+              "mosaics":
+                  [
+                    {
+                      "mosaicTitle": "Surface Pens",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                      "mosaicImage": "img/surface-pen.jpg",
+                      "mosaicCta": "Buy Now",
+                      "ctaURL": "http://www.microsoftstore.com/"
+                    },
+                    {
+                      "mosaicTitle": "The Surface Dock",
+                      "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                      "mosaicImage": "img/surface-dock.jpg",
+                      "mosaicCta": "Buy Now",
+                      "ctaURL": "http://www.microsoftstore.com/"
+                    },
+                    {
+                      "mosaicTitle": "Type covers in your favorite colors to fit your style",
+                      "mosaicSize": "f-vp1-whole f-height-medium",
+                      "mosaicImage": "img/surface-keyboard.jpg",
+                      "mosaicCta": "Buy Now",
+                      "ctaURL": "http://www.microsoftstore.com/"
+                    }
+                  ]
+            }
+        ]
+      }
+    },
+    {
+      "type": "Route",
+      "path":"/windows",
+      "title":"Windows",
+      "content": {
+        "mosaicContainer": [
+          {
+            "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "The Pen is mightier in Windows",
+                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                "mosaicImage": "img/windows-pen.jpg",
+                "mosaicCta": "Let me try",
+                "ctaURL": "http://www.microsoftstore.com/"
+              }
+            ]
+          },
+          {
+            "containerSize": "f-vp1-whole f-vp4-half",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "A more personal, more secure way to unlock your Windows device",
+                "mosaicSize": "f-vp1-whole f-height-medium",
+                "mosaicHeading": "true",
+                "context": "context-app",
+                "logo": "img/windows-hello.svg",
+                "mosaicCta": "Try it out",
+                "ctaURL": "http://www.microsoftstore.com/",
+                "mosaicStyle": {
+                  "background": "#7DA4AE"
+                }
+              },
+              {
+                "mosaicTitle": "Try Out Inking in Edge",
+                "mosaicSize": "f-vp1-whole f-height-small",
+                "mosaicCta": "Let me draw",
+                "ctaURL": "http://www.microsoftstore.com/",
+                "mosaicStyle": {
+                  "background": "#0063AF"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Route",
+      "path":"/store",
+      "title":"Microsoft Store",
+      "content": {
+        "carousel": {
+          "fullscreen": "true",
+          "slides": [
+            {
+              "id": 0,
+              "type": "item",
+              "title": "Tom Clancy's The Division",
+              "subTitle": "Take back New York in Tom Clancy's The Division open beta. Early access available only on Xbox One, February 18th.",
+              "buttonText": "Pre-order today",
+              "vp5": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp5.jpg",
+              "vp4": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp4.jpg",
+              "vp3": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp3.jpg",
+              "vp2": "http://c2278.paas2.tx.modxcloud.com/images/components/division-hero-background-vp2.jpg"
+            },
+            {
+              "id": 1,
+              "type": "item",
+              "title": "Excepteur sint occaecat cupidatat",
+              "subTitle": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+              "buttonText": "Pre-order today",
+              "vp5": "http://www.getmwf.com/images/components/uber-vp5.jpg",
+              "vp4": "http://www.getmwf.com/images/components/uber-vp4.jpg",
+              "vp3": "http://www.getmwf.com/images/components/uber-vp3.jpg",
+              "vp2": "http://www.getmwf.com/images/components/uber-vp3.jpg"
+            },
+            {
+              "id": 2,
+              "type": "item",
+              "title": "Excepteur sint occaecat cupidatat",
+              "subTitle": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+              "buttonText": "Pre-order today",
+              "vp5": "http://www.getmwf.com/images/components/martian-hero-background-vp5.jpg",
+              "vp4": "http://www.getmwf.com/images/components/martian-hero-background-vp4.jpg",
+              "vp3": "http://www.getmwf.com/images/components/martian-hero-background-vp3.jpg",
+              "vp2": "http://www.getmwf.com/images/components/martian-hero-background-vp2.jpg"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Route",
+      "path":"/office",
+      "title":"Office",
+      "content": {
+        "mosaicContainer": [
+          {
+            "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "Microsoft OneNote",
+                "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                "context": "context-app",
+                "logo": "img/onenote-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now",
+                "mosaicStyle": {
+                  "background": "#7e3878"
+                }
+              }
+            ]
+          },
+          {
+            "containerSize": "f-vp1-whole f-vp4-half",
+            "mosaics":
+            [
+              {
+                "mosaicTitle": "Microsoft Word",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                "context": "context-app",
+                "logo": "img/word-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now",
+                "ctaURL": "http://www.microsoftstore.com/",
+                "mosaicStyle": {
+                  "background": "#2b5796"
+                }
+              },
+              {
+                "mosaicTitle": "PowerPoint",
+                "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                "context": "context-app",
+                "logo": "img/powerpoint-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now",
+                "ctaURL": "http://www.microsoftstore.com/",
+                "mosaicStyle": {
+                  "background": "#d04525"
+                }
+              },
+              {
+                "mosaicTitle": "Excel",
+                "mosaicSize": "f-vp1-whole f-height-small",
+                "context": "context-app",
+                "logo": "img/excel-logo.svg",
+                "mosaicHeading": "true",
+                "mosaicCta": "Buy Now",
+                "ctaURL": "http://www.microsoftstore.com/",
+                "mosaicStyle": {
+                  "background": "#1d7044"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

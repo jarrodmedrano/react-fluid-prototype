@@ -18,7 +18,7 @@ import 'src/styles/mwf_en-us_default.min.css!';
 
 //import data from 'src/js/data/data.json!';
 
-var requestStream = Rx.Observable.just('src/js/data/data.json');
+var requestStream = Rx.Observable.just('https://api.myjson.com/bins/3s1yb');
 
 
 // We need a response stream that handles the fetch operation
@@ -31,9 +31,17 @@ var requestResponseStream = requestStream
 
 
 function fetchData(request) {
-    return fetch(request).then(function(data) {
-        return data.json();
-    });
+    return fetch(request).then(function(response) {
+        if(response.ok) {
+            return response.json();
+        }
+        else {
+            console.log('Network response was not ok');
+        }
+    })
+        .catch(function(error) {
+            console.log('There has been a problem with your fetch operation: ' + error.message);
+        });
 }
 
 requestResponseStream.subscribe(function(data) {
@@ -94,18 +102,27 @@ class App extends React.Component {
 
     render() {
 
-            return (
-                <div className="grid">
-                    <Linkband routes={this.props.routes} params={this.props.params}/>
-                    <TransitionGroup component="div" transitionName="page-transition"
-                                     transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-                        {React.cloneElement(this.props.children, {
-                            key: this.props.location.pathname,
-                            data: this.state.data
-                        })}
-                    </TransitionGroup>
-                </div>
-            );
+            if(this.state.data === {}) {
+
+                return (
+                    <div className="grid">Loading...</div>
+                )
+
+            } else {
+
+                return (
+                    <div className="grid">
+                        <Linkband routes={this.props.routes} params={this.props.params}/>
+                        <TransitionGroup component="div" transitionName="page-transition"
+                                         transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+                            {React.cloneElement(this.props.children, {
+                                key: this.props.location.pathname,
+                                data: this.state.data
+                            })}
+                        </TransitionGroup>
+                    </div>
+                );
+            }
         }
 }
 
