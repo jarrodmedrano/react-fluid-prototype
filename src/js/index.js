@@ -8,7 +8,6 @@ const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
-import HomePage from 'src/js/components/pages/HomePage';
 import DefaultPage from 'src/js/components/pages/DefaultPage';
 
 //Styles
@@ -39,7 +38,7 @@ var data = fetchData('data/data.json').done(function (xhr) {
     ReactDOM.render(
         <Router history={appHistory}>
             <Route path="/" component={App}>
-                <IndexRoute component={HomePage} title={Index.title}/>
+                <IndexRoute component={DefaultPage} title={Index.title}/>
                 {Routes.map(function (result, id) {
                     return <Route component={DefaultPage} key={id} path={result.path} title={result.title}/>;
                 })}

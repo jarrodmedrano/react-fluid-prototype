@@ -15,8 +15,6 @@ class Mosaic extends React.Component {
 
 
     render() {
-        
-
 
         let mosaicClass = classNames(
             this.props.mosaic.context ? this.props.mosaic.context : 'context-music-album',

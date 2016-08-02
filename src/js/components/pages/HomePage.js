@@ -22,7 +22,6 @@ class HomePage extends React.Component {
 
         } else {
 
-            console.log(this.props.data);
 
             let currentPage = _.find(this.props.data.routes, function(result) {
                 return result.title === this.props.route.title
