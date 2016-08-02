@@ -28,6 +28,7 @@ System.config({
     "react-router": "npm:react-router@2.0.0",
     "rx": "npm:rx@4.1.0",
     "scss": "github:theefer/plugin-sass@master",
+    "winjs": "npm:winjs@4.4.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -61,7 +62,7 @@ System.config({
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
-      "process": "npm:process@0.11.6"
+      "process": "npm:process@0.11.7"
     },
     "github:jspm/nodelibs-stream@0.1.0": {
       "stream-browserify": "npm:stream-browserify@1.0.0"
@@ -334,7 +335,7 @@ System.config({
     "npm:picturefill@3.0.2": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0"
     },
-    "npm:process@0.11.6": {
+    "npm:process@0.11.7": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "vm": "github:jspm/nodelibs-vm@0.1.0"
@@ -431,6 +432,9 @@ System.config({
     },
     "npm:warning@2.1.0": {
       "loose-envify": "npm:loose-envify@1.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:winjs@4.4.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
