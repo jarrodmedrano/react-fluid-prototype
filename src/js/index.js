@@ -14,7 +14,7 @@ import MosaicPage from 'src/js/layouts/MosaicPage';
 import 'src/styles/mwf_en-us_default.min.css!';
 
 
-var data = fetchData('data/data.json').done(function (xhr) {
+var data = fetchData('data/mosaic.json').done(function (xhr) {
 
     data = xhr.response;
 
