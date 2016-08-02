@@ -1,4 +1,5 @@
 {
+  "layout": "MosaicPage",
   "routes": [
     {
       "type": "IndexRoute",
