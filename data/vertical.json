@@ -6,7 +6,12 @@
       "path":"/",
       "title":"Surface Book",
       "content": {
-
+        "scenes": [
+          {
+            "type": "fullscreen",
+            "anchorLink": "true"
+          }
+        ]
       }
     }
   ]
