@@ -1,0 +1,88 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// General Styles for Scenes
+//-----------------------------------------------------------------------------
+
+.scene-vertical {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: height .5s;
+  background: $default-bg;
+  z-index: 2;
+
+  @media (orientation: portrait) {
+    height: auto;
+  }
+
+  .header-offset {
+    padding-top: $linkband-height;
+  }
+
+  //&.peek-slide {
+  //  //height: 200vh;
+  //
+  //  @media (orientation: portrait) {
+  //    height: auto;
+  //  }
+  //}
+
+  &.pen-hero-2 {
+    background: $default-text-alt;
+  }
+
+  &.mosaic-hero {
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: block;
+    overflow: auto;
+    height: auto;
+  }
+
+  &.config-hero {
+    justify-content: flex-start;
+    height: auto;
+  }
+
+
+  .fixed-header {
+    position: fixed;
+    bottom: 15vh;
+  }
+
+  &.active-scene {
+    .hidden-text {
+      opacity: 1;
+    }
+  }
+
+  .configs{
+    align-items: flex-start !important;
+  }
+
+
+  //&.peek-slide {
+  //  transition: height 0.5s;
+  //  height: 100vh;
+  //
+  //  &.enter-scene {
+  //    height: 90vh;
+  //  }
+  //}
+
+
+}
+
+.keyboard-text {
+  height: 100%;
+  position: relative;
+
+  h2 {
+    transition: opacity .5s;
+  }
+}

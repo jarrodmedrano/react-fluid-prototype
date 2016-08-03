@@ -1,0 +1,46 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Accessories Scene
+//-----------------------------------------------------------------------------
+
+.scene-vertical.mosaic-hero {
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: block;
+    overflow: auto;
+    height: auto;
+
+  .video {
+    position: relative;
+  }
+
+  .video-mouse {
+    overflow: hidden;
+    video {
+      width: 100%;
+    }
+  }
+
+  .video-pen {
+    overflow: hidden;
+    video {
+      width: 100%;
+    }
+  }
+
+  .c-mosaic-placement {
+
+    .c-heading {
+      font-weight: 100;
+      font-size: 34px;
+      line-height: 40px;
+      padding: 23px 0;
+    }
+
+    .c-subheading {
+      font-size: 15px;
+    }
+  }
+
+}

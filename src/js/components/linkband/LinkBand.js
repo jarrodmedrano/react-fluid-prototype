@@ -26,7 +26,7 @@ class Linkband extends React.Component {
                            className="ghost">
                                {rootRoute.indexRoute.title}
                            </span></li>
-                       {rootRouteChildren.map((item, index) =>
+                       {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                        <li className="c-hyperlink" key={index}>
                            <Link
                                activeClassName="active"
@@ -36,7 +36,7 @@ class Linkband extends React.Component {
                            <span className="ghost">{item.title}</span>
                            {(index + 1) < depth}
                        </li>
-                       )}
+                       ) : ''}
                    </ul>
                 </nav>
             </div>

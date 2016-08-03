@@ -1,0 +1,45 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Hello Scene
+//-----------------------------------------------------------------------------
+
+.hello-container{
+  padding-top: 5vh;
+  padding-bottom: 80px;
+
+  .hello{
+    font-weight: 600;
+    color: #3076BC;
+    font-size: 17px;
+    margin-top:27px;
+    margin-bottom: 55px;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  .video-bg {
+    position: relative;
+    width: 1164px;
+
+    video{
+      max-width: 100%;
+      position: absolute;
+      padding-top: 56px;
+      padding-left: 48px;
+      padding-right: 65px;
+    }
+  }
+
+  .glyph-chevron-right{
+    padding-top: 10px;
+    &:before {
+      font-family: "Segoe MDL2 Assets";
+      content: "\E017";
+      font-size: 14.5px;
+    }
+  }
+
+}

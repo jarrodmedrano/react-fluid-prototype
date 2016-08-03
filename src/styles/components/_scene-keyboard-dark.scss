@@ -1,0 +1,27 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Backlit Keyboard Scene
+//-----------------------------------------------------------------------------
+
+.scene-vertical.keyboard-dark {
+  background: url('../images/keyboard-hero-dark.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 $video-offset;
+
+  @media (orientation: portrait) {
+    background-position: 0 $video-offset-portrait;
+  }
+
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  color: $default-text-alt;
+  overflow: hidden;
+  background-attachment: fixed;
+
+  h2 {
+    margin-bottom: 15vh;
+  }
+}

@@ -1,0 +1,47 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Keyboard Scene
+//-----------------------------------------------------------------------------
+.scene-vertical.keyboard-hero {
+
+  .fixed-header {
+    opacity: 0;
+    transition: opacity 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.enter-scene {
+    .fixed-header {
+      opacity: 1;
+    }
+  }
+
+  z-index: 0;
+  background: transparent;
+
+  .keyboard-bg {
+    position: absolute;
+    //clip: rect(0, auto, auto, 0);
+    width: 100vw;
+    height: 100%;
+    top: 0;
+
+    &::before {
+      content: '';
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: url('../images/keyboard-hero.png');
+      background-repeat: no-repeat;
+      background-size: 100vw auto;
+      background-position: 0 $video-offset;
+    }
+  }
+
+
+
+}

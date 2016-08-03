@@ -1,0 +1,79 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Font Definitions
+//-----------------------------------------------------------------------------
+
+.segoe-ui-light {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RDXMDL2Assets';
+  src: url(../fonts/RDXMDL2.1.78.ttf) format("woff"),
+  url(../fonts/RDXMDL2.1.78.ttf) format("truetype");
+}
+
+//Icons
+
+.mdl-glyph {
+  &:before {
+    font-family: 'RDXMDL2Assets';
+  }
+
+  &.glyph-screen {
+    &:before {
+      content: '\EF39';
+    }
+  }
+
+  &.glyph-keyboard {
+    &:before {
+      content: '\E765';
+    }
+  }
+
+  &.glyph-draw {
+    &:before {
+      content: '\EC87';
+    }
+  }
+
+  &.glyph-apps {
+    &:before {
+      content: '\ECAA';
+    }
+  }
+
+  &.glyph-headphones {
+    &:before {
+      content: '\E7F6';
+    }
+  }
+
+  &.glyph-drive {
+    &:before {
+      content: '\EDA2';
+    }
+  }
+
+  &.glyph-ram {
+    &:before {
+      content: '\EEA0';
+    }
+  }
+
+  &.glyph-cpu {
+    &:before {
+      content: '\EEA1';
+    }
+  }
+
+  &.glyph-system {
+    &:before {
+      content: '\E770';
+    }
+  }
+}

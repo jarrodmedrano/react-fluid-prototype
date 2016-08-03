@@ -1,0 +1,127 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Sticky Header
+//-----------------------------------------------------------------------------
+
+$linkband-spacing: 20px;
+$linkband-bg: rgba(230,230,230,.7);
+
+
+.sticky-banner {
+  padding: $linkband-spacing;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: $linkband-bg;
+  position: fixed;
+  z-index: 9999;
+
+
+  .logo {
+    margin-right: $linkband-spacing;
+  }
+
+  .c-heading-4 {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .cta {
+    align-self: flex-end;
+    margin-left: auto;
+
+    .c-button {
+      margin-top: 0;
+    }
+  }
+
+  .c-label {
+    display: inline-block;
+    padding-bottom: 0;
+    margin-right: $linkband-spacing;
+    margin-top: 0;
+    line-height: 16px;
+    vertical-align: middle;
+  }
+
+  .c-rating {
+    margin-left: $linkband-spacing;
+
+    div {
+      vertical-align: middle;
+    }
+  }
+
+  .c-heading-5 {
+    display: inline-block;
+    padding-top: 0;
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+  a[role=button].c-button.c-button-primary {
+    background: $btn-primary-bg;
+    color: $btn-primary-color;
+
+    &.active {
+      background: rgba(0, 0, 0, 0.2);
+      color: #000;
+    }
+  }
+
+  //override borders and outlines on buttons, solves IE jankiness but might be an accessibility problem
+
+  .btn, a[role=button].c-button, button.c-button {
+    border: 0 !important;
+    outline: 0 !important;
+  }
+
+  a.c-action-trigger:focus, button.c-action-trigger:focus {
+    outline: 0 !important;
+  }
+
+  a.c-action-trigger {
+    outline: 0 !important;
+    border: 0 !important;
+  }
+}
+
+
+.sticky-footer {
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  padding: 0;
+
+  a[role='button'] {
+    background: transparent;
+    border: 0;
+
+    flex: 1 auto;
+    padding: $linkband-spacing;
+    margin: 0;
+
+    &.c-glyph {
+      padding-left: 10px;
+    }
+
+    &.c-glyph:before {
+      margin-left: 0;
+    }
+  }
+
+  a.c-action-trigger {
+    color: $default-text;
+
+    &.active {
+      background: $btn-primary-bg;
+      color: $btn-primary-color;
+      text-decoration: none;
+    }
+  }
+}

@@ -6,7 +6,7 @@ import 'src/styles/mosaic.scss!';
 
 import _ from 'lodash'
 
-class DefaultPage extends React.Component {
+class MosaicPage extends React.Component {
 
     render() {
         let currentPage = _.find(this.props.data.routes, function(result) {
@@ -40,4 +40,4 @@ class DefaultPage extends React.Component {
     }
 }
 
-export default DefaultPage
+export default MosaicPage

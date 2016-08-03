@@ -1,0 +1,235 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Compare Chart
+//-----------------------------------------------------------------------------
+
+.scene-vertical.config-hero {
+  flex-direction: column;
+  padding: 0 20px 100px;
+  height: auto;
+
+  .config-title {
+    align-self: flex-start !important;
+    width: 100%;
+
+    .c-heading-3 {
+      padding-left: 12px;
+    }
+
+    .title-border {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 15px;
+    }
+
+    .c-paragraph-1 {
+      padding-left: 12px;
+      padding-top: 60px;
+    }
+  }
+
+  .configs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 75vh;
+    width: 100%;
+
+    .selected {
+      border: 2px solid rgba(0, 0, 0, 0.4) !important;
+      color: #000 !important;
+    }
+
+    .config-card {
+      background-color: #E6E7E8;
+      color: #4a4646;
+      margin: 5px;
+      justify-content: flex-start;
+      width: 72%;
+      height: 100%;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      position: relative;
+
+      ul {
+        font-size: 15px;
+        margin-top: 0px;
+
+        li {
+          padding: 5px 0px;
+        }
+      }
+
+      .device-spec {
+        display: none;
+      }
+
+      &.selected .device-spec {
+        display: block;
+        width: 100%;
+        min-height: 44px;
+        line-height: 44px;
+        background-color: #2077BB;
+        padding: 2px;
+        margin-top: -50px;
+        box-sizing: content-box;
+        margin-left: -2px;
+        position: absolute;
+
+        .c-paragraph-4 {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .glyph-system::before {
+          color: #fff;
+          font-size: 24px;
+          padding-right: 10px;
+          vertical-align: top;
+        }
+
+      }
+    }
+
+    .config-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .config-top {
+      min-height: 108px;
+      width: auto;
+      background-color: rgba(0, 0, 0, 0.0980392);
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .c-list {
+        padding-left: 0px;
+      }
+
+      li {
+        list-style-type: none;
+        margin: 0px;
+      }
+
+      .glyph-cpu {
+        font-weight: 400;
+      }
+
+      .glyph-cpu::before {
+        color: #2077BB;
+        font-size: 24px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+
+      .glyph-drive::before {
+        color: #2077BB;
+        font-size: 24px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+
+      .glyph-ram::before {
+        color: #2077BB;
+        font-size: 24px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+    }
+
+    .content-section {
+      min-height: 142px;
+      border-bottom: 1px solid #a3a3a3;
+      display: flex;
+
+      .price {
+        text-align: left;
+      }
+
+      .content {
+        padding: 0 10px;
+        text-align: left;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .c-paragraph-4 {
+          padding-top: 5px;
+          flex: 1;
+        }
+
+        .c-heading-3 {
+          flex: 1;
+        }
+
+        .c-heading-5 {
+          font-weight: 400;
+        }
+
+      }
+
+    }
+
+    .config-header {
+      padding-top: 0;
+    }
+
+    .config-subheader {
+      color: #6D6D6D;
+      padding: 0 0 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      display: block;
+    }
+
+    .bottom-config-footer {
+      margin-top: auto;
+      align-self: flex-end;
+      width: 100%;
+    }
+
+    .config-footer {
+      padding: 10px;
+      margin: 20px 0 0;
+      border: 1px solid #000;
+      text-align: left;
+
+      .c-paragraph {
+        overflow: auto;
+        padding-top: 0;
+      }
+
+      img {
+        float: left;
+        overflow: auto;
+        margin-right: 18px;
+      }
+
+      .c-hyperlink {
+        display: block;
+      }
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-top: 24px;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 33.33%;
+
+      .c-heading-5 {
+        margin: 0 0 0;
+        padding: 0 0 0;
+      }
+    }
+
+    li {
+      text-align: left;
+    }
+  }
+}
