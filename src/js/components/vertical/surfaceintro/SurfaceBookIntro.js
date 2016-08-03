@@ -1,4 +1,5 @@
 import React from 'react'
+import 'src/js/components/vertical/surfaceintro/surfacebookintro.scss!'
 
 class SurfaceBookIntro extends React.Component {
 
@@ -11,7 +12,7 @@ class SurfaceBookIntro extends React.Component {
         };
 
         return (
-            <div>
+            <div className="full-width">
                 <div className="hotspots">
                     <div className="hotspots-inner">
                         <div className="hotspot one">

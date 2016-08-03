@@ -15,13 +15,13 @@ class VerticalPage extends React.Component {
         return (
             <main id="main">
                 {currentPage.content.verticals ?
-                    <section className="scene-vertical">
+                    <div>
                     {currentPage.content.verticals.map(function(result, id) {
                         return (
                             <Vertical key={id} vertical={result}  />
                         )
                     })}
-                    </section>
+                    </div>
                     : null
                 }
             </main>

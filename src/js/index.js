@@ -84,7 +84,6 @@ class App extends React.Component {
             )
 
         } else {
-            console.log(this.state.data);
 
             return (
                 <div className="grid">
