@@ -8,14 +8,15 @@ const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
+/* TODO import only page components we need */
 import MosaicPage from 'src/js/layouts/MosaicPage';
 import VerticalPage from 'src/js/layouts/VerticalPage';
 
 //Styles
 import 'src/styles/mwf_en-us_default.min.css!';
 
-
-var data = fetchData('data/vertical.json').done(function (xhr) {
+/* TODO how to get different json file? */
+var data = fetchData('data/data.json').done(function (xhr) {
 
     data = xhr.response;
 
@@ -38,6 +39,7 @@ var data = fetchData('data/vertical.json').done(function (xhr) {
     ReactDOM.render(
         <Router history={appHistory}>
             <Route path="/" component={App}>
+                /* TODO get page component type from json */
                 <IndexRoute component={VerticalPage} title={Index.title}/>
                 {Routes.map(function (result, id) {
                     return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
@@ -66,9 +68,12 @@ class App extends React.Component {
     componentDidMount() {
         var that = this;
 
+        /* TODO: get data state from router */
+
         that.setState({
             data: data
         });
+
     }
 
     render() {
