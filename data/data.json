@@ -6,9 +6,17 @@
       "path":"/",
       "title":"Surface Book",
       "content": {
-        "scenes": [
+        "verticals": [
           {
-            "type": "fullscreen",
+            "type": "surfacebookintro",
+            "anchorLink": "true"
+          },
+          {
+            "type": "parallax",
+            "anchorLink": "true"
+          },
+          {
+            "type": "parallax",
             "anchorLink": "true"
           }
         ]

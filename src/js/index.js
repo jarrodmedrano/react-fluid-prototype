@@ -54,7 +54,6 @@ function fetchData(request) {
     return WinJS.xhr({url: request, responseType: "json"})
 }
 
-
 class App extends React.Component {
 
     constructor(props) {
