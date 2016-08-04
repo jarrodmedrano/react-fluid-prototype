@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames';
 import SurfaceBookIntro from 'src/js/components/vertical/surfaceintro/SurfaceBookIntro';
 import Parallax from 'src/js/components/vertical/parallax/Parallax';
+import Fullscreen from 'src/js/components/vertical/fullscreen/Fullscreen';
 
 class Vertical extends React.Component {
 
@@ -19,8 +20,8 @@ class Vertical extends React.Component {
                 {this.props.vertical.type === 'parallax' ?
                     <Parallax /> : null
                 }
-                {this.props.vertical.type === 'parallax' ?
-                    <Parallax /> : null
+                {this.props.vertical.type === 'fullscreen' ?
+                    <Fullscreen /> : null
                 }
             </section>
         )
