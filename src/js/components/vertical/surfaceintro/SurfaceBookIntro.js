@@ -16,7 +16,8 @@ class SurfaceBookIntro extends React.Component {
                 <div className="hotspots">
                     <div className="hotspots-inner">
                         <div className="hotspot one">
-                            <div className="copy"><h2 className="c-heading c-heading-4">From laptop to
+                            <div className="copy">
+                                <h2 className="c-heading c-heading-4">From laptop to
                                 tablet</h2>
                                 <p className="c-paragraph-4">Detach the screen from the keyboard to turn your Surface
                                     Book
