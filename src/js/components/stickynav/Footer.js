@@ -4,7 +4,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="sticky-banner sticky-footer hidden-text">
+            <div className="sticky-banner sticky-footer">
                 <a href="#slide-intro" className="c-action-trigger" role="button" id="anchor1">Explore Surface Book</a>
                 <a href="#slide-keyboard" className="c-action-trigger c-glyph glyph-keyboard mdl-glyph" role="button" id="anchor2">Keyboard</a>
                 <a href="#slide-screen" className="c-action-trigger c-glyph glyph-screen mdl-glyph" role="button"

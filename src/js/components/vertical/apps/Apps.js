@@ -1,8 +1,11 @@
 import React from 'react'
+import 'src/js/components/vertical/apps/scene-apps.scss!'
 
 class Apps extends React.Component {
 
     render() {
+
+
         return (
             <div className="device">
                 <div className="text-center header-offset"><h2 className="c-heading-3">Work the way you want</h2>
@@ -10,26 +13,26 @@ class Apps extends React.Component {
                         to the way that you work and the places where you create.</p></div>
                 <div className="clipboard">
                     <div className="surface-pen">
-                        <img src="images/clipboard-pen.png" style="width: 458px; height: auto;" />
+                        <img src="img/vertical/clipboard-pen.png" />
                     </div>
                     <br/>
                     <div className="clipboard-bg">
                         <div className="clipboard-screen">
                             <video id="video-one-note">
-                                <source src="images/one-note.mp4" type="video/mp4" />
+                                <source src="img/vertical/one-note.mp4" type="video/mp4" />
                             </video>
                             <video id="video-fresh-paint" className="video-toggle">
-                                <source src="images/fresh-paint.mp4" type="video/mp4" />
+                                <source src="img/vertical/fresh-paint.mp4" type="video/mp4" />
                             </video>
                         </div>
-                        <img src="images/clipboard-clipboard.png" alt="Clipboard" width="700"/></div>
+                        <img src="img/vertical/clipboard-clipboard.png" alt="Clipboard" width="700"/></div>
 
                     <div id="parallax-foreground" className="parallax-foreground">
                         <div className="app-block svg">
                             <div className="onenote-content">
 
                                 <h3 className="c-heading-4">
-                                    <img src="images/one-note-logo.svg" alt="OneNote" />
+                                    <img src="img/vertical/one-note-logo.svg" alt="OneNote" />
                                     <strong>OneNote</strong>
                                 </h3>
                                 <p className="c-paragraph-4">Work together, keep it together, use it anywhere. All your notes on all your devices. Get OneNote free.</p>
@@ -41,7 +44,7 @@ class Apps extends React.Component {
                             <div className="onenote-content">
 
                                 <h3 className="c-heading-4">
-                                    <img src="images/fresh-paint-logo.png" alt="Fresh Paint" />
+                                    <img src="img/vertical/fresh-paint-logo.png" alt="Fresh Paint" />
                                     <strong>OneNote</strong>
                                 </h3>
                                 <p className="c-paragraph-4">Capture everything from your smallest doodles to your biggest ideas all in one place, no matter where you are.</p>

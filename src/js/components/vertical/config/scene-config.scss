@@ -4,7 +4,9 @@
 // Compare Chart
 //-----------------------------------------------------------------------------
 
-.scene-vertical.config-hero {
+/*TODO decouple this class from the scss */
+
+.scene-vertical.config {
   flex-direction: column;
   padding: 0 20px 100px;
   height: auto;

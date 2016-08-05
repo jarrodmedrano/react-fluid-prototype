@@ -1,4 +1,5 @@
 import React from 'react'
+import 'src/js/components/vertical/config/scene-config.scss!'
 
 class Config extends React.Component {
 
@@ -32,7 +33,7 @@ class Config extends React.Component {
                                         friendly.</p>
                                 </div>
                             </div>
-                            <div className="content-section" style="border-bottom: none;">
+                            <div className="content-section" >
                                 <div className="content">
                                     <ul className="c-list">
                                         <li>Light online browsing</li>
@@ -66,7 +67,7 @@ class Config extends React.Component {
                                     </p>
                                 </div>
                             </div>
-                            <div className="content-section" style="border-bottom: none;">
+                            <div className="content-section">
                                 <div className="content">
                                     <ul className="c-list">
                                         <li>General online browsing</li>
@@ -92,7 +93,7 @@ class Config extends React.Component {
                             <div className="content-section">
                                 <div className="content">
                                     <h5 className="price c-heading-3">$1,899</h5>
-                                    <h5 className="c-heading-5" style="padding-top:25px !important; font-weight:400;">If
+                                    <h5 className="c-heading-5">If
                                         you're looking
                                         for</h5>
                                 </div>
@@ -101,11 +102,11 @@ class Config extends React.Component {
                                 <div className="content">
                                     <p className="c-paragraph-4">The perfect laptop for editing<br/> photos and gaming.
                                     </p>
-                                    <h5 className="c-heading-5" style="font-weight:400;">If you're looking
+                                    <h5 className="c-heading-5">If you're looking
                                         to:</h5>
                                 </div>
                             </div>
-                            <div className="content-section" style="border-bottom: none;">
+                            <div className="content-section" >
                                 <div className="content">
                                     <ul className="c-list">
                                         <li>Medium online browsing</li>
@@ -139,7 +140,7 @@ class Config extends React.Component {
                                         bigger gaming.</p>
                                 </div>
                             </div>
-                            <div className="content-section" style="min-height:193px !important; border-bottom: none;">
+                            <div className="content-section">
                                 <div className="content">
                                     <ul className="c-list">
                                         <li>Heavy online browsing</li>
@@ -173,7 +174,7 @@ class Config extends React.Component {
                                         professionals, creators, and more.</p>
                                 </div>
                             </div>
-                            <div className="content-section" style="height:193px !important; border-bottom: none;">
+                            <div className="content-section">
                                 <div className="content">
                                     <ul className="c-list">
                                         <li>Stream photos and music</li>
@@ -205,7 +206,7 @@ class Config extends React.Component {
                                     <p className="c-paragraph-4">The most powerful laptop - the work and play PC.</p>
                                 </div>
                             </div>
-                            <div className="content-section" style="height:193px !important; border-bottom: none;">
+                            <div className="content-section">
                                 <div className="content">
                                     <ul className="c-list">
                                         <li>Stream large photos and music</li>

@@ -15,9 +15,9 @@ class Hello extends React.Component {
                             className="glyph-chevron-right"></span></a></p>
                         <div className="video-bg">
                             <video loop id="video-hello">
-                                <source src="images/windows-hello.mp4" type="video/mp4"/>
+                                <source src="img/vertical/windows-hello.mp4" type="video/mp4"/>
                             </video>
-                            <img src="images/hello-bg.jpg" alt="Windows Hello"/>
+                            <img src="img/vertical/hello-bg.jpg" alt="Windows Hello"/>
                         </div>
                     </div>
                 </div>

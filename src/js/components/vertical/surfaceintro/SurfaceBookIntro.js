@@ -5,11 +5,12 @@ class SurfaceBookIntro extends React.Component {
 
     render() {
 
-        var lineStyle = {
+        let lineStyle = {
             "fill": "none",
             "stroke": "#818080",
             "strokeMiterlimit": "10"
         };
+
 
         return (
             <div className="full-width">

@@ -8,16 +8,55 @@
       "content": {
         "verticals": [
           {
-            "type": "surfacebookintro",
-            "anchorLink": "true"
+            "type": "apps",
+            "anchorLink": "true",
+            "title": "Work the way you want",
+            "paragraph": "Surface Book transforms from a laptop into two additional configurations adapting to the way that you work and the places where you create.",
+            "cardTitle": "OneNote",
+            "cardContent": "Work together, keep it together, use it anywhere. All your notes on all your devices. Get OneNote free.",
+            "cardCta": "EXPLORE WITH ONENOTE"
           },
           {
             "type": "parallax",
-            "anchorLink": "true"
+            "title": "Surface Pens",
+            "anchorLink": "true",
+            "background": "img/vertical/keyboard-hero.jpg"
           },
           {
             "type": "parallax",
+            "title": "Backlit keyboard",
+            "anchorLink": "true",
+            "background": "img/vertical/keyboard-hero-dark.jpg"
+          },
+          {
+            "type": "config",
             "anchorLink": "true"
+          },
+          {
+            "type": "hello",
+            "anchorLink": "true"
+          },
+          {
+            "type": "fullscreen",
+            "anchorLink": "true",
+            "videoUrl": "img/vertical/Hero-pen.mp4"
+          },
+          {
+            "type": "fullscreen",
+            "anchorLink": "true",
+            "videoUrl": "img/vertical/Hero-pen.mp4"
+          },
+          {
+            "type": "parallax",
+            "title": "Surface Pens",
+            "anchorLink": "true",
+            "background": "img/vertical/keyboard-hero.jpg"
+          },
+          {
+            "type": "parallax",
+            "title": "Backlit keyboard",
+            "anchorLink": "true",
+            "background": "img/vertical/keyboard-hero-dark.jpg"
           }
         ]
       }

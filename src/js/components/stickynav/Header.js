@@ -4,8 +4,8 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="sticky-banner sticky-header hidden-text">
-                <img src="images/ms-logo.png" alt="Microsoft" className="logo"/>
+            <div className="sticky-banner sticky-header">
+                <img src="img/vertical/ms-logo.png" alt="Microsoft" className="logo"/>
                 <h4 className="c-heading-4">Surface Book</h4>
                 <div className="c-rating f-community-rated f-user-rated f-aggregate">
                     <p className="x-screen-reader">Rating:

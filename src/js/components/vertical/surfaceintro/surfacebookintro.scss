@@ -4,7 +4,9 @@
 // Video Scene
 //-----------------------------------------------------------------------------
 
-.scene-vertical {
+/*TODO decouple this class from the scss */
+
+.scene-vertical.surfacebookintro {
   background: url('../images/surface-book-intro.jpg');
   background-attachment: fixed;
   background-position: 0 0;

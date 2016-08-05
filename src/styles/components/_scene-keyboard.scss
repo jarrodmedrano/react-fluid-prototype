@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------
 // Keyboard Scene
 //-----------------------------------------------------------------------------
-.scene-vertical.keyboard-hero {
+.scene-vertical.parallax {
 
   .fixed-header {
     opacity: 0;
@@ -28,20 +28,28 @@
     height: 100%;
     top: 0;
 
-    &::before {
-      content: '';
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background: url('../images/keyboard-hero.png');
-      background-repeat: no-repeat;
-      background-size: 100vw auto;
-      background-position: 0 $video-offset;
-    }
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: 0 $video-offset;
+    background-attachment: fixed;
+    //
+    //&::before {
+    //  content: '';
+    //  position: fixed;
+    //  width: 100vw;
+    //  height: 100vh;
+    //  top: 0;
+    //  left: 0;
+    //  background: url('img/keyboard-hero.png');
+    //  background-repeat: no-repeat;
+    //  background-size: 100vw auto;
+    //  background-position: 0 $video-offset;
+    //}
   }
 
-
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  overflow: hidden;
 
 }

@@ -13,7 +13,6 @@ class Mosaic extends React.Component {
         this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
     }
 
-
     render() {
 
         let mosaicClass = classNames(

@@ -9,7 +9,7 @@ const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
 /* TODO import only page components we need */
-import MosaicPage from 'src/js/layouts/MosaicPage';
+// import MosaicPage from 'src/js/layouts/MosaicPage';
 import VerticalPage from 'src/js/layouts/VerticalPage';
 
 //Styles
@@ -80,14 +80,14 @@ class App extends React.Component {
         if (this.state.data === {}) {
 
             return (
-                <div className="grid">Loading...</div>
+                <div>Loading...</div>
             )
 
         } else {
 
             return (
-                <div className="grid">
-                    <Linkband routes={this.props.routes} params={this.props.params}/>
+                <div>
+                    {/*<Linkband routes={this.props.routes} params={this.props.params}/>*/}
                     <TransitionGroup component="div" transitionName="page-transition"
                                      transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                         {React.cloneElement(this.props.children, {

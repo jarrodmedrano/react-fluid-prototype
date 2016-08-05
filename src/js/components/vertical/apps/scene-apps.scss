@@ -3,8 +3,18 @@
 //-----------------------------------------------------------------------------
 // Apps Scene
 //-----------------------------------------------------------------------------
+$app-svg-width: 315px;
+$default-bg: #E6E7E8;
+$default-text: #000;
+$accent-color: #0078D7;
+$default-text-alt: #fff;
 
-.scene-vertical.app-hero {
+$btn-primary-bg: $accent-color;
+$btn-primary-color: #fff;
+
+/*TODO decouple this class from the scss */
+
+.scene-vertical.apps {
   background: url('../images/gradient-bg.jpg');
   background-size: cover;
   justify-content: flex-start;
@@ -52,6 +62,11 @@
     position: absolute;
     margin-top: -50px;
     transition: margin-top .5s ease-in-out;
+
+    img {
+      width: 458px;
+      height: auto;
+    }
 
     &.pen-intro {
       margin-top: -20px;

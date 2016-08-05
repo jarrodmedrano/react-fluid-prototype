@@ -4,6 +4,8 @@ import 'src/styles/main.scss!';
 import _ from 'lodash'
 
 import Vertical from 'src/js/components/vertical/Vertical';
+import Header from 'src/js/components/stickynav/Header';
+import Footer from 'src/js/components/stickynav/Footer';
 
 class VerticalPage extends React.Component {
 
@@ -13,18 +15,20 @@ class VerticalPage extends React.Component {
         }, this);
 
         return (
-            <main id="main">
-                {currentPage.content.verticals ?
-                    <div>
-                    {currentPage.content.verticals.map(function(result, id) {
-                        return (
-                            <Vertical key={id} vertical={result}  />
-                        )
-                    })}
-                    </div>
-                    : null
-                }
-            </main>
+            <div>
+            <Header />
+            <Footer />
+                <main id="main">
+                    {currentPage.content.verticals ?
+                        currentPage.content.verticals.map(function(result, id) {
+                            return (
+                                <Vertical key={id} vertical={result}  />
+                            )
+                        })
+                        : null
+                    }
+                </main>
+            </div>
         );
     }
 }
