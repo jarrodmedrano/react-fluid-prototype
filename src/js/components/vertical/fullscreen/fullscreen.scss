@@ -1,6 +1,12 @@
-.fullscreen {
+.scene-vertical.fullscreen {
+
+  div {
+    text-align: center;
+  }
+
   video {
     height: 100%;
     width: auto;
+    margin: 0 auto;
   }
 }

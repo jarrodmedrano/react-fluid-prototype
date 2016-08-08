@@ -1,10 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import WinJS from 'winjs'
-import {Router, DefaultRoute, Route, Link, IndexRoute, hashHistory, useRouterHistory} from 'react-router'
+import {Router, DefaultRoute, Route, Link, IndexRoute, browserHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
-import {createHashHistory} from 'history';
-const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 
 //Components
 import Linkband from 'src/js/components/linkband/linkband';
@@ -37,7 +35,7 @@ var data = fetchData('data/data.json').done(function (xhr) {
     });
 
     ReactDOM.render(
-        <Router history={appHistory}>
+        <Router history={browserHistory}>
             <Route path="/" component={App}>
                 /* TODO get page component type from json */
                 <IndexRoute component={VerticalPage} title={Index.title}/>

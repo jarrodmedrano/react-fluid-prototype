@@ -13,7 +13,7 @@ class Parallax extends React.Component {
         let imgUrl = this.props.data.background;
         let myTitle = this.props.data.title;
 
-        var bgStyle = {
+        let bgStyle = {
             backgroundImage: 'url(' + imgUrl + ')',
         };
 

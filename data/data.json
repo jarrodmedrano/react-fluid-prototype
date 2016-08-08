@@ -6,6 +6,23 @@
       "path":"/",
       "title":"Surface Book",
       "content": {
+        "specs": {
+          "default": {
+            "label": "Starting at",
+            "price": "$1,499.99"
+          }
+        },
+        "starRating": {
+          "rating": "3",
+          "bestRating": "5",
+          "ratingText": "See reviews",
+          "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
+        },
+        "header": {
+          "title": "Surface Book",
+          "ctaText": "Compare Models",
+          "ctaUrl": "#compare-models"
+        },
         "verticals": [
           {
             "type": "apps",
@@ -43,20 +60,10 @@
           },
           {
             "type": "fullscreen",
+            "title": "Display",
             "anchorLink": "true",
-            "videoUrl": "img/vertical/Hero-pen.mp4"
-          },
-          {
-            "type": "parallax",
-            "title": "Surface Pens",
-            "anchorLink": "true",
-            "background": "img/vertical/keyboard-hero.jpg"
-          },
-          {
-            "type": "parallax",
-            "title": "Backlit keyboard",
-            "anchorLink": "true",
-            "background": "img/vertical/keyboard-hero-dark.jpg"
+            "bgUrl": "img/vertical/bg-pebbles.jpg",
+            "fgUrl": "img/vertical/display-hero.svg"
           }
         ]
       }

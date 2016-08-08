@@ -16,7 +16,10 @@ class VerticalPage extends React.Component {
 
         return (
             <div>
-            <Header />
+            {currentPage.content.header ?
+                <Header header={ currentPage.content.header } price={ currentPage.content.specs.default } starRating={ currentPage.content.starRating } />
+                : null
+            }
             <Footer />
                 <main id="main">
                     {currentPage.content.verticals ?

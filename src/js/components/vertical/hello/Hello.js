@@ -1,4 +1,7 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
 import React from 'react'
+import 'src/js/components/vertical/hello/hello.scss!'
 
 class Hello extends React.Component {
 
@@ -9,9 +12,8 @@ class Hello extends React.Component {
                         <p className="c-paragraph">Windows Hello gives you a more secure way to log in, with a look<br/>
                             or a touch for
                             fast access.</p>
-                        <p className="c-paragraph hello"><a href="ms-retaildemo-launchbioenrollment:about"
-                                                            className="track-link"
-                                                            id="Hello-App">TRY HELLO <span
+                        <p className="c-paragraph hello">
+                            <a href="ms-retaildemo-launchbioenrollment:about" className="track-link" id="Hello-App">TRY HELLO <span
                             className="glyph-chevron-right"></span></a></p>
                         <div className="video-bg">
                             <video loop id="video-hello">

@@ -336,14 +336,14 @@
 
 }
 
-.animation-queue-underlay svg#surface-book-screen-illustration g.main polyline, .animation-queue-underlay svg#surface-book-screen-illustration g.main rect {
+.animation-queue-underlay svg g.main polyline, .animation-queue-underlay svg g.main rect {
   fill: none;
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-width: 1;
 }
 
-.animation-queue-underlay svg#surface-book-screen-illustration .draw-in {
+.animation-queue-underlay svg .draw-in {
   animation-fill-mode: both;
 }
 
@@ -362,41 +362,41 @@
   height: 100%;
 }
 
-.active-scene .animation-queue-underlay svg#surface-book-screen-illustration .fade-in {
+.active-scene .animation-queue-underlay svg .fade-in {
   animation: surfaceBookScreenIllustrationFadeInIntro 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
-.active-scene .animation-queue-underlay svg#surface-book-screen-illustration .draw-in {
+.active-scene .animation-queue-underlay svg .draw-in {
   animation: surfaceBookScreenIllustrationDrawInIntro 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
-.animation-queue-underlay.outro svg#surface-book-screen-illustration .pop-in {
+.animation-queue-underlay.outro svg .pop-in {
   animation: surfaceBookScreenIllustrationPopInOutro 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
-.animation-queue-underlay.outro svg#surface-book-screen-illustration .draw-in {
+.animation-queue-underlay.outro svg .draw-in {
   animation: surfaceBookScreenIllustrationDrawInOutro 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
-.active-scene .animation-queue-underlay svg#surface-book-screen-illustration .pop-in {
+.active-scene .animation-queue-underlay svg .pop-in {
   animation: surfaceBookScreenIllustrationPopInIntro 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
-.active-scene .animation-queue-underlay svg#surface-book-screen-illustration .pop-in {
+.active-scene .animation-queue-underlay svg .pop-in {
   transform: translate(-10vh);
 
 }
 
-.animation-queue-underlay.outro svg#surface-book-screen-illustration .fade-in {
+.animation-queue-underlay.outro svg .fade-in {
   animation: surfaceBookScreenIllustrationFadeInOutro 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
 //remove intro-reverse
-.animation-queue-underlay svg#surface-book-screen-illustration .fade-in {
+.animation-queue-underlay svg .fade-in {
   animation: surfaceBookScreenIllustrationFadeInIntroReverse 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 
-.animation-queue-underlay.outro-reverse svg#surface-book-screen-illustration .fade-in {
+.animation-queue-underlay.outro-reverse svg .fade-in {
   animation: surfaceBookScreenIllustrationFadeInOutroReverse 1.4s cubic-bezier(.16, 1, .29, .99) both;
 }
 

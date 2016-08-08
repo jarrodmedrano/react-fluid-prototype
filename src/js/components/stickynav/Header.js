@@ -1,33 +1,25 @@
 import React from 'react'
+import Starrating from 'src/js/components/starrating/Starrating'
+import Button from 'src/js/components/button/Button'
 
 class Header extends React.Component {
 
     render() {
+
+        console.log(this.props);
+
+        let { title } = this.props.header;
+
         return (
             <div className="sticky-banner sticky-header">
                 <img src="img/vertical/ms-logo.png" alt="Microsoft" className="logo"/>
-                <h4 className="c-heading-4">Surface Book</h4>
-                <div className="c-rating f-community-rated f-user-rated f-aggregate">
-                    <p className="x-screen-reader">Rating:
-                        <span itemprop="ratingValue">3</span>/
-                        <span itemprop="bestRating">5</span>
-                    </p>
-                    <div aria-hidden="true">
-                        <span className="c-glyph f-full"></span>
-                        <span className="c-glyph f-full"></span>
-                        <span className="c-glyph f-full"></span>
-                        <span className="c-glyph f-full"></span>
-                        <span className="c-glyph f-none"></span>
-                    </div>
+                { title ? <h4 className="c-heading-4">{ title }</h4> : null }
 
-                    <span className="c-label"><a
-                        href="https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
-                        className="track-link c-hyperlink" id="See-Reviews">See reviews</a></span>
-                </div>
+                { this.props.starRating ? <Starrating data={ this.props.starRating } /> : null }
 
                 <div className="cta">
-                    <div className="c-label">Starting at <span className="c-heading-5">$1,499.99</span></div>
-                    <a href="#slide-compare" role="button" className="c-button c-button-primary" id="anchor7">Compare models</a>
+                    <div className="c-label">{ this.props.price.label } <span className="c-heading-5">{ this.props.price.price }</span></div>
+                    <Button data={ this.props.header } />
                 </div>
             </div>
         )

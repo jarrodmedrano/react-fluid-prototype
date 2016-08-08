@@ -1,3 +1,5 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
 import React from 'react'
 import 'src/js/components/vertical/config/scene-config.scss!'
 
