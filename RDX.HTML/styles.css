@@ -341,7 +341,7 @@ img {
   -ms-grid-columns: auto 100px;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList {
-  -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto;
+  -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px 1fr 1fr auto;
 }
 @media all and (min-width: 640px) and (max-width: 1100px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList {
@@ -350,7 +350,8 @@ img {
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList .graphicContainer-graphic,
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList .headingBox {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-align: end;
 }
 @media all and (max-width: 1100px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList .graphicContainer-graphic,

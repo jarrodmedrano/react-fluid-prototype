@@ -358,6 +358,7 @@ img {
               .headingBox {
                 -ms-grid-column: 2;
                 -ms-grid-row: 2;
+
               }
 
               .subcontent-box1 {
@@ -420,14 +421,15 @@ img {
 
             // Required Sub-setting [Threecol > Column] - Logo and 2 Containers of content centered
             &.threeColumn-logoList {
-              -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto;
+              -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px 1fr 1fr auto;
               @media all and (min-width: 640px) and (max-width: 1100px) {
                 -ms-grid-rows: 1fr 90px 40px 1fr 1fr 100px 1fr 1fr 1fr;
               }
 
               .graphicContainer-graphic,
               .headingBox {
-                -ms-grid-row: 2;
+                -ms-grid-row: 1;
+                -ms-grid-row-align: end;
               }
 
               @media all and (max-width: 1100px) {
