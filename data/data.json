@@ -21,7 +21,11 @@
         "header": {
           "title": "Surface Book",
           "ctaText": "Compare Models",
-          "ctaUrl": "#compare-models"
+          "ctaUrl": "#compare-models",
+          "brand": {
+            "imgUrl": "img/vertical/ms-logo.png",
+            "title": "Microsoft"
+          }
         },
         "verticals": [
           {

@@ -6,13 +6,11 @@ class Header extends React.Component {
 
     render() {
 
-        console.log(this.props);
-
-        let { title } = this.props.header;
+        let { title, brand } = this.props.header;
 
         return (
             <div className="sticky-banner sticky-header">
-                <img src="img/vertical/ms-logo.png" alt="Microsoft" className="logo"/>
+                { brand ? <img src={ brand.imgUrl } alt={ brand.title } className="logo"/> : null }
                 { title ? <h4 className="c-heading-4">{ title }</h4> : null }
 
                 { this.props.starRating ? <Starrating data={ this.props.starRating } /> : null }
