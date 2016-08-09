@@ -1264,6 +1264,15 @@ button span.arrow-right:after {
 .layout-specs .column .text-subheader {
   display: block;
   margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-bottom: 2.3632px;
+  padding-top: 2.3632px;
+  padding-bottom: 0.1477rem;
+  padding-top: 0.1477rem;
+  font-weight: 300;
 }
 @media screen and (max-width: 640px) {
   .layout-specs .column .text-subheader {
