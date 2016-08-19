@@ -249,12 +249,12 @@ window.addEventListener('load', function(){
         case 37:
             var oldPage = currentID();    
             toThePreviousPage();
-            //WinGS.LogBI("KeyPress", "{'direction':'left','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+            RDX.LogBI("KeyPress", "{'direction':'left','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
             break;
         case 39:
-            var oldPage = currentID();    
+            var oldPage = currentID();
             toTheNextPage();
-            //WinGS.LogBI("KeyPress", "{'direction':'right','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+            RDX.LogBI("KeyPress", "{'direction':'right','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
             break;
     }
   }
@@ -281,7 +281,7 @@ var begin = function(event) {
 //*******************************************************************
 // begin RELATED FUNCTIONS
 
-function build(onThisSide,offScreenSlideID,showingSlideID) { 
+function build(onThisSide,offScreenSlideID,showingSlideID) {
   var showingSlideIDStyles = document.getElementById(showingSlideID).style;
   sliderElementStyles.transition = "all";
   builtOffSCreenOnThisSide = onThisSide;
@@ -307,8 +307,8 @@ function build(onThisSide,offScreenSlideID,showingSlideID) {
     firstSlideStyles.marginLeft = '100%';
     firstSlideStyles.display = MsGrid;
   } else {
-    showingSlideIDStyles.float = sideOfScreenWithNoSlide;  
-    sliderElementStyles.vw = "200";  
+    showingSlideIDStyles.float = sideOfScreenWithNoSlide;
+    sliderElementStyles.vw = "200";
     fabricate([offScreenSlideID,onThisSide]);
   };
   function showingSlidePositionAndSliderWidth() {
@@ -341,8 +341,8 @@ function buildLandR(left,right,showing) {
 };
 
 /////////////////////////////////
-// increaseFlipperZIndex() and resetFlipperZIndex() are needed 
-// to get flippers to display on First and Last slide, since since the touch transitions 
+// increaseFlipperZIndex() and resetFlipperZIndex() are needed
+// to get flippers to display on First and Last slide, since since the touch transitions
 // for those slides use different positioning JS than the others
 function increaseFlipperZIndex() {
   increaseFlipperZIndexFired = true;
@@ -434,9 +434,9 @@ function setShowingSlideToClientWidth(showingSlideID) {
 // moving
 
 var moving = function(event) {
-    if (event.isPrimary === true && 
-      pointerType       === event.pointerType && 
-      isAnimating       === false && 
+    if (event.isPrimary === true &&
+      pointerType       === event.pointerType &&
+      isAnimating       === false &&
       isBuilt           === true) {
       var midX = event.clientX;
       var movedX = 0;
@@ -453,15 +453,15 @@ var moving = function(event) {
         oneFifthOriginalCarouselWidth = (carouselWidth / 5);
         if (absoluteDiffrerence > oneFifthOriginalCarouselWidth && difference > 0) {
           isAnimating = true;
-          var oldPage = currentID();  
+          var oldPage = currentID();
           updatePage(1);
-          //WinGS.LogBI("Swipe", "{'direction':'previous','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+          RDX.LogBI("Swipe", "{'direction':'previous','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
           slideSlider(leftString);
         } else if (absoluteDiffrerence > oneFifthOriginalCarouselWidth && difference < 0) {
           isAnimating = true;
-          var oldPage = currentID();  
+          var oldPage = currentID();
           updatePage(-1);
-          //WinGS.LogBI("Swipe", "{'direction':'next','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+          RDX.LogBI("Swipe", "{'direction':'next','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
           slideSlider(rightString);
         };
     };
@@ -473,9 +473,9 @@ var moving = function(event) {
 var end = function(event) {
   if (event.isPrimary === true) {
     if (!isAnimating) {
-      isAnimating = true; 
+      isAnimating = true;
       reCentering(event);
-      isAnimating = false; 
+      isAnimating = false;
       InitialXPoint = undefined;
     };
   };
@@ -509,7 +509,7 @@ function slideSlider(directionMoving) {
   } else {
     document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
   }
-  setTimeout(function(){ 
+  setTimeout(function(){
     disassemble();
     isAnimating = false;
     isBuilt = false;
@@ -618,24 +618,24 @@ function resetBooleansAndLogicValues() {
 // section sliding
 //  possible bug - will there ever be only 1 section?
 
-// Fired ONLY on initial page load at 5000 millisecond intervals 
+// Fired ONLY on initial page load at 5000 millisecond intervals
 var isNewSlideToNextSectionRightExecuting = false;
 
 function newSlideToNextSectionRight() {
-  var isNextSectionHigher = false; 
+  var isNextSectionHigher = false;
   isNewSlideToNextSectionRightExecuting = true;
   var nextSection = currentSection;
   nextSection = nextSection + 1;
   for (var i = 0; i < arrayOfSections.length; i++) {
     if (nextSection === arrayOfSections[i]) {
-      isNextSectionHigher = true; 
+      isNextSectionHigher = true;
       goToArbitrarySection(nextSection);
     };
   };
   if (isNextSectionHigher === false) {
     goToArbitrarySection(0);
   };
-  isNextSectionHigher = false; 
+  isNextSectionHigher = false;
 };
 
 
@@ -761,13 +761,13 @@ function ifIsBuiltIsTrue_Dissassemble(){
 function pageNext() {
     var oldPage = currentID();
     toTheNextPage();
-    //WinGS.LogBI("Click", "{'target':'rightNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'rightNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
 }
 
 function pagePrev() {
     var oldPage = currentID();
     toThePreviousPage();
-    //WinGS.LogBI("Click", "{'target':'leftNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'leftNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
 }
 
 function sectionNext() {
@@ -777,13 +777,13 @@ function sectionNext() {
 function navigateToPage(page) {
     var oldPage = currentID();
     goToArbitraryPage(page);
-    //WinGS.LogBI("Click", "{'target':'pageIndicator','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'pageIndicator','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
 }
 
 function navigateToSection(section) {
     var oldPage = currentID();
     goToArbitrarySection(section);
-    //WinGS.LogBI("Click", "{'target':'hubButton','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'hubButton','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
 }
 
 function showPageNext() {
@@ -797,7 +797,7 @@ function showPageNext() {
   } else {
     document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
   }
-    //WinGS.LogBI("Click", "{'target':'rightNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'rightNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
 }
 
 function showPagePrev() {
@@ -811,7 +811,7 @@ function showPagePrev() {
   } else {
     document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
   }
-    //WinGS.LogBI("Click", "{'target':'leftNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'leftNav','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
 }
 
 function showArbitrarySection(section) {
@@ -829,7 +829,7 @@ function showArbitrarySection(section) {
         } else {
             document.getElementsByClassName("template-pageIndicator")[0].classList.remove("indicators-bottom");
         }
-    //WinGS.LogBI("Click", "{'target':'hubButton','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
+    RDX.LogBI("Click", "{'target':'hubButton','oldPage':'" + oldPage + "','newPage':'" + currentID() + "'}");
     }
 }
 
