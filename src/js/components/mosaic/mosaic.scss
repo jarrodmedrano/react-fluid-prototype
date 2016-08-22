@@ -18,3 +18,43 @@
     opacity: 0;
   }
 }
+
+.c-mosaic {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.c-mosaic > div {
+  flex: 1;
+
+  > div {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .fullscreen-mosaic {
+    flex-direction: row;
+    height: 100vh;
+
+    [data-f-mosaic~='f-height-large'] {
+      height: 100%;
+      img {
+        height: 100%;
+      }
+    }
+
+    [data-f-mosaic~='f-height-small'] {
+      height: 40%;
+    }
+
+    [data-f-mosaic~='f-height-medium'] {
+      height: 60%;
+    }
+  }
+}

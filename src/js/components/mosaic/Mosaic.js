@@ -26,35 +26,42 @@ class Mosaic extends React.Component {
 
             <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick}>
                 <article className={mosaicClass}>
-                    {mosaicImage ? <picture>
+
+                    { mosaicImage ? <picture>
                         <img srcSet={mosaicImage} src={mosaicImage}
-                             alt={mosaicTitle} />
+                             alt={ mosaicTitle ? mosaicTitle : null } />
                     </picture> : null
                     }
 
                     <div className="c-image-overlay" aria-hidden="true"></div>
 
-                    {mosaicHeading ? (<div>
-                        <div className="c-image-container">
-                            {logo ? <img src={logo} className="c-image" /> : null }
-                        </div>
+                    { mosaicHeading ? (
+                        <div>
+                            <div className="c-image-container">
+                                { logo ? <img src={logo ? logo : null } className="c-image" /> : null }
+                            </div>
 
-                        <h1 className="c-heading">{ mosaicTitle }</h1>
+                            { mosaicTitle ? <h1 className="c-heading">{ mosaicTitle }</h1> : null }
 
-                        <div className="c-group">
-                            <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go"><span>{mosaicCta}</span></a>
-                        </div>
-                    </div>) : null}
-                    {mosaicHeading ? null : <div>
+                            { mosaicCta ?
+                                <div className="c-group">
+                                    <a href={ctaURL ? ctaURL : null} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
+                                </div>
+                        : null }
+                        </div>)
+                    : null }
+
+                    { mosaicHeading ? null :
+                    (<div>
                         <dl>
-                            <dt className="x-screen-reader">{mosaicTitle} Title</dt>
-                            <dd><cite>{mosaicTitle}</cite></dd>
+                            <dt className="x-screen-reader">{ mosaicTitle ? mosaicTitle : null }Title</dt>
+                            <dd><cite>{ mosaicTitle ? mosaicTitle : null }</cite></dd>
                             {mosaicCta ?
                                 <div className="c-group">
-                                    <a href={ctaURL} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
+                                    <a href={ctaURL ? ctaURL : null} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
                                 </div> : null }
                         </dl>
-                    </div>}
+                    </div>)}
                 </article>
             </div>
         )

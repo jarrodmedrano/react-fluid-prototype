@@ -26,32 +26,7 @@ body {
   flex-direction: column;
   height: calc(100vh - 64px);
 
-  @media only screen and (min-width: 768px) {
-    &.fullscreen-mosaic {
-      flex-direction: row;
 
-      [data-f-mosaic~='f-height-large'] {
-        height: 100%;
-        img {
-          height: 100%;
-        }
-      }
-
-      [data-f-mosaic~='f-height-small'] {
-        height: 40%;
-      }
-
-      [data-f-mosaic~='f-height-medium'] {
-        height: 60%;
-      }
-    }
-  }
-
-  .c-mosaic {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
 
   .c-call-to-action.c-glyph-go:after {
     content: '\E8AD';
@@ -62,18 +37,6 @@ body {
 
     &.f-medium {
       height: 380px;
-    }
-  }
-
-  .c-mosaic > div {
-    flex: 1;
-
-    > div {
-      height: 100%;
-
-      img {
-        height: 100%;
-      }
     }
   }
 }
