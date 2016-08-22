@@ -144,18 +144,24 @@
                     "ctaURL": "http://www.microsoftstore.com/"
                   },
                   {
-                    "mosaicTitle": "The Surface Dock",
                     "mosaicSize": "f-vp1-whole f-vp4-half",
-                    "mosaicImage": "img/vertical/mosaic-surface-2.jpg",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
-                  },
-                  {
-                    "mosaicTitle": "The Surface Dock",
-                    "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
-                    "mosaicImage": "img/vertical/mosaic-surface-3.jpg",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
+                    "containerSize": "f-vp1-whole f-vp4-half",
+                    "mosaics": [
+                      {
+                        "mosaicTitle": "The Surface Dock",
+                        "mosaicSize": "f-vp1-whole f-vp4-half",
+                        "mosaicImage": "img/vertical/mosaic-surface-2.jpg",
+                        "mosaicCta": "Buy Now",
+                        "ctaURL": "http://www.microsoftstore.com/"
+                      },
+                      {
+                        "mosaicTitle": "The Surface Dock",
+                        "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                        "mosaicImage": "img/vertical/mosaic-surface-3.jpg",
+                        "mosaicCta": "Buy Now",
+                        "ctaURL": "http://www.microsoftstore.com/"
+                      }
+                    ]
                   }
                 ]
               }

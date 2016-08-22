@@ -1,4 +1,5 @@
 import React from 'react'
+import MosaicContainer from 'src/js/components/mosaic/MosaicContainer'
 import classNames from 'classnames';
 import 'src/js/components/mosaic/mosaic.scss!';
 
@@ -20,7 +21,8 @@ class Mosaic extends React.Component {
             'c-placement f-width-small f-height-large'
         );
 
-        let { mosaicCta, ctaURL, logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading } = this.props.mosaic;
+        let { mosaicCta, ctaURL, logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading, mosaics } = this.props.mosaic;
+
 
         return(
 
