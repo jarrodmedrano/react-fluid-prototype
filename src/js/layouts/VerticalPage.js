@@ -20,7 +20,6 @@ class VerticalPage extends React.Component {
                 <Header header={ currentPage.content.header } price={ currentPage.content.specs.default } starRating={ currentPage.content.starRating } />
                 : null
             }
-            <Footer />
                 <main id="main">
                     {currentPage.content.verticals ?
                         currentPage.content.verticals.map(function(result, id) {
@@ -31,6 +30,7 @@ class VerticalPage extends React.Component {
                         : null
                     }
                 </main>
+                <Footer />
             </div>
         );
     }

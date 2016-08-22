@@ -68,6 +68,53 @@
             "anchorLink": "true",
             "bgUrl": "img/vertical/bg-pebbles.jpg",
             "fgUrl": "img/vertical/display-hero.svg"
+          },
+          {
+            "type": "mosaic",
+            "title": "Accessories",
+            "anchorLink": "true",
+            "mosaicContainer": [
+              {
+                "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+                "mosaics":
+                [
+                  {
+                    "mosaicTitle": "Surface Pro 4",
+                    "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                    "mosaicImage": "img/surfacepro.jpg",
+                    "mosaicCta": "Show me more",
+                    "ctaURL": "http://www.microsoftstore.com/"
+                  }
+                ]
+              },
+              {
+                "containerSize": "f-vp1-whole f-vp4-half",
+                "mosaics":
+                [
+                  {
+                    "mosaicTitle": "Surface Pens",
+                    "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                    "mosaicImage": "img/surface-pen.jpg",
+                    "mosaicCta": "Buy Now",
+                    "ctaURL": "http://www.microsoftstore.com/"
+                  },
+                  {
+                    "mosaicTitle": "The Surface Dock",
+                    "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
+                    "mosaicImage": "img/surface-dock.jpg",
+                    "mosaicCta": "Buy Now",
+                    "ctaURL": "http://www.microsoftstore.com/"
+                  },
+                  {
+                    "mosaicTitle": "Type covers in your favorite colors to fit your style",
+                    "mosaicSize": "f-vp1-whole f-height-medium",
+                    "mosaicImage": "img/surface-keyboard.jpg",
+                    "mosaicCta": "Buy Now",
+                    "ctaURL": "http://www.microsoftstore.com/"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
