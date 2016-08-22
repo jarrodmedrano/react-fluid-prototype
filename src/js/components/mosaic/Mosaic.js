@@ -17,11 +17,10 @@ class Mosaic extends React.Component {
     render() {
 
         let mosaicClass = classNames(
-            this.props.mosaic.context ? this.props.mosaic.context : 'context-music-album',
-            'c-placement f-width-small f-height-large'
+            this.props.mosaic.context ? this.props.mosaic.context : null
         );
 
-        let { mosaicCta, ctaURL, logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading, mosaics } = this.props.mosaic;
+        let { mosaicCta, ctaURL, logo, mosaicTitle, mosaicSize, mosaicStyle, mosaicImage, mosaicHeading, mosaicSubHeading, mosaicOverlay } = this.props.mosaic;
 
 
         return(
@@ -35,7 +34,18 @@ class Mosaic extends React.Component {
                     </picture> : null
                     }
 
-                    <div className="c-image-overlay" aria-hidden="true"></div>
+                    { mosaicOverlay ? <div className="c-image-overlay" aria-hidden="true"></div> : null }
+
+                    {
+                        mosaicSubHeading ? (
+                            <div>
+                                <h2 className="c-heading c-heading-4">Accessories</h2>
+                                <p className="c-subheading">The perfect complements to your Surface Book, to help you be more
+                        creative and productive than ever.</p>
+                            </div>
+                        )
+                        : null
+                    }
 
                     { mosaicHeading ? (
                         <div>
@@ -53,17 +63,18 @@ class Mosaic extends React.Component {
                         </div>)
                     : null }
 
-                    { mosaicHeading ? null :
+                    { mosaicCta ?
                     (<div>
                         <dl>
-                            <dt className="x-screen-reader">{ mosaicTitle ? mosaicTitle : null }Title</dt>
-                            <dd><cite>{ mosaicTitle ? mosaicTitle : null }</cite></dd>
-                            {mosaicCta ?
+                            { mosaicTitle ? <dt className="x-screen-reader"> mosaicTitle </dt> : null }
+                            { mosaicTitle ? <dd><cite> mosaicTitle </cite></dd> : null }
+                            { mosaicCta ?
                                 <div className="c-group">
                                     <a href={ctaURL ? ctaURL : null} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
-                                </div> : null }
+                                </div>
+                            : null }
                         </dl>
-                    </div>)}
+                    </div>) : null }
                 </article>
             </div>
         )

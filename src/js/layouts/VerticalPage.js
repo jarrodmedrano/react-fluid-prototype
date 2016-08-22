@@ -1,4 +1,5 @@
 import React from 'react'
+import 'src/styles/mwf-west-european-default.min.css!';
 import 'src/styles/main.scss!';
 
 import _ from 'lodash'

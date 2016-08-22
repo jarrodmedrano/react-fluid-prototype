@@ -79,6 +79,7 @@
                 "mosaics":
                 [
                   {
+                    "context": "context-music-album c-placement f-width-small f-height-large",
                     "mosaicTitle": "Surface Pro 4",
                     "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
                     "mosaicImage": "img/surfacepro.jpg",
@@ -92,6 +93,7 @@
                 "mosaics":
                 [
                   {
+                    "context": "context-music-album c-placement f-width-small f-height-large",
                     "mosaicTitle": "Surface Pens",
                     "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
                     "mosaicImage": "img/surface-pen.jpg",
@@ -99,6 +101,7 @@
                     "ctaURL": "http://www.microsoftstore.com/"
                   },
                   {
+                    "context": "context-music-album c-placement f-width-small f-height-large",
                     "mosaicTitle": "The Surface Dock",
                     "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
                     "mosaicImage": "img/surface-dock.jpg",
@@ -106,6 +109,7 @@
                     "ctaURL": "http://www.microsoftstore.com/"
                   },
                   {
+                    "context": "context-music-album c-placement f-width-small f-height-large",
                     "mosaicTitle": "Type covers in your favorite colors to fit your style",
                     "mosaicSize": "f-vp1-whole f-height-medium",
                     "mosaicImage": "img/surface-keyboard.jpg",
@@ -126,19 +130,20 @@
                 "mosaics":
                 [
                   {
-                    "mosaicTitle": "Accessories",
-                    "mosaicSize": "f-vp1-whole f-vp4-half f-height-medium"
+                    "mosaicSubHeading": "Accessories",
+                    "mosaicSize": "f-vp1-whole f-vp4-half f-height-large",
+                    "context": "c-mosaic-placement f-background-accent f-vp1-whole f-vp4-half"
                   },
                   {
-                    "mosaicTitle": "The Surface Dock",
-                    "mosaicSize": "f-vp1-whole f-vp4-half f-height-medium",
+                    "mosaicSize": "f-vp1-whole f-vp4-half",
+                    "context": "f-vp1-whole f-vp2-whole f-height-large",
                     "mosaicImage": "img/vertical/Dali-Rollover.png",
                     "mosaicCta": "Buy Now",
                     "ctaURL": "http://www.microsoftstore.com/"
                   },
                   {
-                    "mosaicTitle": "The Surface Dock",
                     "mosaicSize": "f-vp1-whole f-vp4-half",
+                    "context": "f-vp1-whole f-vp2-whole f-height-medium",
                     "mosaicImage": "img/vertical/SB-Pen-Rollover.png",
                     "mosaicCta": "Buy Now",
                     "ctaURL": "http://www.microsoftstore.com/"
@@ -146,7 +151,7 @@
                   {
                     "mosaicSize": "f-vp1-whole f-vp4-half",
                     "containerSize": "f-vp1-whole f-vp4-half",
-                    "mosaics": [
+                    "mosaicChildren": [
                       {
                         "mosaicTitle": "The Surface Dock",
                         "mosaicSize": "f-vp1-whole f-vp4-half",

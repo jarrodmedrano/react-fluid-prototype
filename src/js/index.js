@@ -10,8 +10,6 @@ import Linkband from 'src/js/components/linkband/linkband';
 // import MosaicPage from 'src/js/layouts/MosaicPage';
 import VerticalPage from 'src/js/layouts/VerticalPage';
 
-//Styles
-import 'src/styles/mwf_en-us_default.min.css!';
 
 /* TODO how to get different json file? */
 var data = fetchData('data/data.json').done(function (xhr) {
