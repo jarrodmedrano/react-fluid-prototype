@@ -31,7 +31,8 @@ class VerticalPage extends React.Component {
                         : null
                     }
                 </main>
-                <Footer />
+
+                {currentPage.content.verticals ? <Footer footer={currentPage.content.verticals} /> : null}
             </div>
         );
     }

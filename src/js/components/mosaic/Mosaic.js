@@ -11,7 +11,7 @@ class Mosaic extends React.Component {
 
     _handleClick(event) {
         event.preventDefault();
-        this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : window.open('http://www.microsoftstore.com/');
+        this.props.mosaic.ctaURL ? window.open(this.props.mosaic.ctaURL) : null;
     }
 
     render() {
@@ -25,7 +25,7 @@ class Mosaic extends React.Component {
 
         return(
 
-            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick}>
+            <div className="theme-dark" data-f-mosaic={mosaicSize} style={mosaicStyle}>
                 <article className={mosaicClass}>
 
                     { mosaicImage ? <picture>
@@ -39,9 +39,8 @@ class Mosaic extends React.Component {
                     {
                         mosaicSubHeading ? (
                             <div>
-                                <h2 className="c-heading c-heading-4">Accessories</h2>
-                                <p className="c-subheading">The perfect complements to your Surface Book, to help you be more
-                        creative and productive than ever.</p>
+                                { mosaicTitle ? <h2 className="c-heading c-heading-4">{ mosaicTitle }</h2> : null }
+                                <p className="c-subheading">{ mosaicSubHeading }</p>
                             </div>
                         )
                         : null
@@ -65,15 +64,12 @@ class Mosaic extends React.Component {
 
                     { mosaicCta ?
                     (<div>
-                        <dl>
-                            { mosaicTitle ? <dt className="x-screen-reader"> mosaicTitle </dt> : null }
-                            { mosaicTitle ? <dd><cite> mosaicTitle </cite></dd> : null }
+                            { mosaicTitle ? <div><h3 className="c-heading">{mosaicTitle}</h3></div> : null }
                             { mosaicCta ?
                                 <div className="c-group">
                                     <a href={ctaURL ? ctaURL : null} className="c-call-to-action c-glyph c-glyph-go" ><span>{mosaicCta}</span></a>
                                 </div>
                             : null }
-                        </dl>
                     </div>) : null }
                 </article>
             </div>

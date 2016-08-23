@@ -16,7 +16,7 @@ class MosaicContainer extends React.Component {
                         if(result.containerSize) {
                             return (
                                 <div data-f-mosaic={result.containerSize}>
-                                    {result.mosaicChildren.map(function(result2, id2) {
+                                    {result.mosaics.map(function(result2, id2) {
                                         return <Mosaic key={id2} mosaic={result2} />
                                     })}
                                 </div>

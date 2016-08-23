@@ -15,7 +15,7 @@ class Vertical extends React.Component {
         let verticalClass = classNames('scene-vertical', this.props.vertical.type);
 
         return (
-            <section className={verticalClass}>
+            <section className={verticalClass}  id={this.props.vertical.title.split(' ').join('-').toLowerCase()}>
                 {this.props.vertical.type === 'surfacebookintro' ?
                     <SurfaceBookIntro data={this.props.vertical} /> : null
                 }

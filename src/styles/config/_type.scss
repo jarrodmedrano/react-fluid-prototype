@@ -10,10 +10,11 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'RDXMDL2Assets';
-  src: url(../fonts/RDXMDL2.1.78.ttf) format("woff"),
-  url(../fonts/RDXMDL2.1.78.ttf) format("truetype");
+  src: url(/src/fonts/RDXMDL2.1.78.ttf) format("woff"),
+  url(/src/fonts/RDXMDL2.1.78.ttf) format("truetype");
 }
 
 //Icons

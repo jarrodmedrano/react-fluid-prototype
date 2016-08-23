@@ -51,14 +51,16 @@
           },
           {
             "type": "config",
-            "anchorLink": "true"
+            "title": "Compare Models"
           },
           {
             "type": "hello",
+            "title": "Hello",
             "anchorLink": "true"
           },
           {
             "type": "fullscreen",
+            "title": "Surface Pen",
             "anchorLink": "true",
             "videoUrl": "img/vertical/Hero-pen.mp4"
           },
@@ -79,42 +81,42 @@
                 "mosaics":
                 [
                   {
-                    "context": "context-music-album c-placement f-width-small f-height-large",
                     "mosaicTitle": "Surface Pro 4",
-                    "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                    "mosaicSize": "f-vp1-whole f-vp4-half",
+                    "context": "c-mosaic-placement f-background-neutral-90 f-height-large f-width-large",
                     "mosaicImage": "img/surfacepro.jpg",
                     "mosaicCta": "Show me more",
                     "ctaURL": "http://www.microsoftstore.com/"
-                  }
-                ]
-              },
-              {
-                "containerSize": "f-vp1-whole f-vp4-half",
-                "mosaics":
-                [
-                  {
-                    "context": "context-music-album c-placement f-width-small f-height-large",
-                    "mosaicTitle": "Surface Pens",
-                    "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
-                    "mosaicImage": "img/surface-pen.jpg",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
                   },
                   {
-                    "context": "context-music-album c-placement f-width-small f-height-large",
-                    "mosaicTitle": "The Surface Dock",
-                    "mosaicSize": "f-vp1-whole f-vp2-half f-height-small",
-                    "mosaicImage": "img/surface-dock.jpg",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
-                  },
-                  {
-                    "context": "context-music-album c-placement f-width-small f-height-large",
-                    "mosaicTitle": "Type covers in your favorite colors to fit your style",
-                    "mosaicSize": "f-vp1-whole f-height-medium",
-                    "mosaicImage": "img/surface-keyboard.jpg",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
+                    "mosaicSize": "f-vp1-whole f-vp4-half",
+                    "containerSize": "f-vp1-whole f-vp4-half",
+                    "mosaics": [
+                      {
+                        "context": "c-mosaic-placement f-background-neutral-80 f-height-large f-width-small",
+                        "mosaicTitle": "Surface Pens",
+                        "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                        "mosaicImage": "img/surface-pen.jpg",
+                        "mosaicCta": "Buy Now",
+                        "ctaURL": "http://www.microsoftstore.com/"
+                      },
+                      {
+                        "context": "c-mosaic-placement f-background-neutral-75 f-height-large f-width-small",
+                        "mosaicTitle": "The Surface Dock",
+                        "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                        "mosaicImage": "img/surface-dock.jpg",
+                        "mosaicCta": "Buy Now",
+                        "ctaURL": "http://www.microsoftstore.com/"
+                      },
+                      {
+                        "context": "c-mosaic-placement f-background-neutral-65 f-height-small f-width-large",
+                        "mosaicTitle": "Type covers in your favorite colors to fit your style",
+                        "mosaicSize": "f-vp1-whole f-height-small",
+                        "mosaicImage": "img/surface-keyboard.jpg",
+                        "mosaicCta": "Buy Now",
+                        "ctaURL": "http://www.microsoftstore.com/"
+                      }
+                    ]
                   }
                 ]
               }
@@ -130,41 +132,34 @@
                 "mosaics":
                 [
                   {
-                    "mosaicSubHeading": "Accessories",
+                    "mosaicTitle": "Accessories",
+                    "mosaicSubHeading": "The perfect complements to your Surface Book, to help you be more creative and productive than ever.",
                     "mosaicSize": "f-vp1-whole f-vp4-half f-height-large",
                     "context": "c-mosaic-placement f-background-accent f-vp1-whole f-vp4-half"
                   },
                   {
                     "mosaicSize": "f-vp1-whole f-vp4-half",
                     "context": "f-vp1-whole f-vp2-whole f-height-large",
-                    "mosaicImage": "img/vertical/Dali-Rollover.png",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
+                    "mosaicImage": "img/vertical/Dali-Rollover.png"
                   },
                   {
                     "mosaicSize": "f-vp1-whole f-vp4-half",
                     "context": "f-vp1-whole f-vp2-whole f-height-medium",
-                    "mosaicImage": "img/vertical/SB-Pen-Rollover.png",
-                    "mosaicCta": "Buy Now",
-                    "ctaURL": "http://www.microsoftstore.com/"
+                    "mosaicImage": "img/vertical/SB-Pen-Rollover.png"
                   },
                   {
                     "mosaicSize": "f-vp1-whole f-vp4-half",
                     "containerSize": "f-vp1-whole f-vp4-half",
-                    "mosaicChildren": [
+                    "mosaics": [
                       {
                         "mosaicTitle": "The Surface Dock",
                         "mosaicSize": "f-vp1-whole f-vp4-half",
-                        "mosaicImage": "img/vertical/mosaic-surface-2.jpg",
-                        "mosaicCta": "Buy Now",
-                        "ctaURL": "http://www.microsoftstore.com/"
+                        "mosaicImage": "img/vertical/mosaic-surface-2.jpg"
                       },
                       {
                         "mosaicTitle": "The Surface Dock",
                         "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
-                        "mosaicImage": "img/vertical/mosaic-surface-3.jpg",
-                        "mosaicCta": "Buy Now",
-                        "ctaURL": "http://www.microsoftstore.com/"
+                        "mosaicImage": "img/vertical/mosaic-surface-3.jpg"
                       }
                     ]
                   }
