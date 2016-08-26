@@ -803,7 +803,7 @@ button span.arrow-right:after {
     outline: 1px dotted ButtonText;
   }
 }
-.text-legal p {
+.text-legal {
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
   font-size: 10px;
@@ -820,27 +820,27 @@ button span.arrow-right:after {
   line-height: 12pt;
   margin: 0;
 }
-.text-legal p.textType_maxLinesOne {
+.text-legal.textType_maxLinesOne {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-height: 12px;
   max-height: 0.75rem;
 }
-.text-legal p.textType_maxLinesTwo {
+.text-legal.textType_maxLinesTwo {
   max-height: 24px;
   max-height: 1.5rem;
 }
-.text-legal p.textType_maxLinesThree {
+.text-legal.textType_maxLinesThree {
   max-height: 36px;
   max-height: 2.25rem;
 }
-.text-legal p.textType_maxLinesFour {
+.text-legal.textType_maxLinesFour {
   max-height: 48px;
   max-height: 3rem;
 }
-.card-content + .text-legal p,
-.card-content + a + .text-legal p,
-.card-content + button + .text-legal p {
+.card-content + .text-legal,
+.card-content + a + .text-legal,
+.card-content + button + .text-legal {
   padding: 10px 0;
   height: auto;
 }
@@ -1187,9 +1187,9 @@ button span.arrow-right:after {
          height: auto !important; */
   }
 }
-.layout-specifications .card-content + .text-legal p,
-.layout-specifications .card-content + a + .text-legal p,
-.layout-specifications .card-content + button + .text-legal p {
+.layout-specifications .card-content + .text-legal,
+.layout-specifications .card-content + a + .text-legal,
+.layout-specifications .card-content + button + .text-legal {
   padding: 0;
 }
 .layout-specifications ul li {
