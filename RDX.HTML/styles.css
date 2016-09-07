@@ -527,7 +527,7 @@ img {
   -ms-grid-column: 2;
   background: transparent;
   padding: 0;
-  line-height: 1.25rem;
+  line-height: 0;
 }
 .page-body .control-carousel .carousel-controls .leftNav {
   position: absolute;
@@ -537,7 +537,7 @@ img {
 .page-body .control-carousel .carousel-controls .leftNav .directionIndicator-prev {
   font-size: 11pt;
   position: absolute;
-  top: 8px;
+  top: 1rem;
   right: 3px;
 }
 .page-body .control-carousel .carousel-controls .leftNav .directionIndicator-prev:after {
@@ -551,7 +551,7 @@ img {
 .page-body .control-carousel .carousel-controls .rightNav .directionIndicator-next {
   font-size: 11pt;
   position: absolute;
-  top: 8px;
+  top: 1rem;
   left: 3px;
 }
 .page-body .control-carousel .carousel-controls .rightNav .directionIndicator-next:after {
@@ -802,6 +802,17 @@ button span.arrow-right:after {
   }
   button:focus {
     outline: 1px dotted ButtonText;
+  }
+  button.sideNav:focus,
+  button.sideNav:active,
+  button.sideNav:hover {
+    color: ButtonText;
+  }
+  button.sideNav:focus div:after,
+  button.sideNav:active div:after,
+  button.sideNav:hover div:after {
+    color: HighlightText;
+    background: Highlight;
   }
 }
 .text-legal {

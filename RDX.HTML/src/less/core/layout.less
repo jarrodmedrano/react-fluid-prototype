@@ -639,7 +639,7 @@ img {
           -ms-grid-column: 2;
           background: transparent;
           padding: 0;
-          line-height: 1.25rem;
+          line-height: 0;
         }
       }
 
@@ -654,7 +654,7 @@ img {
           }
           font-size: 11pt;
           position: absolute;
-          top: 8px;
+          top: 1rem;
           right: 3px;
         }
       }
@@ -670,7 +670,7 @@ img {
           }
           font-size: 11pt;
           position: absolute;
-          top: 8px;
+          top: 1rem;
           left: 3px;
         }
       }
@@ -691,30 +691,6 @@ img {
     position: absolute;
     bottom: 0;
   }
-
-  //&:after {
-  //  border-top-color: @dark-grey;
-  //  content: ' ';
-  //  position: absolute;
-  //  margin: 0 auto;
-  //  left: 0;
-  //  right: 0;
-  //  top: 100%;
-  //  width: 0;
-  //  height: 0;
-  //  border-left: @caret-width solid transparent;
-  //  border-right: @caret-width solid transparent;
-  //  border-top: @caret-width solid transparent;
-  //  z-index: 3;
-  //
-  //  @media screen and (-ms-high-contrast: active) {
-  //    border-top-color: Highlight;
-  //  }
-  //}
-
-  //&:hover:after, &:focus:after {
-  //    opacity: .85;
-  //}
 }
 
 //-----------------------------------------------------------------------------//
@@ -769,8 +745,6 @@ img {
     }
 
     //color themes
-
-
 
     @media screen and (-ms-high-contrast) {
 
@@ -1010,6 +984,8 @@ button {
     }
   }
 
+
+
   @media screen and (-ms-high-contrast: active) {
     background: ButtonFace;
     color: ButtonText;
@@ -1022,6 +998,18 @@ button {
 
     &:focus {
       outline: 1px dotted ButtonText;
+    }
+
+    &.sideNav {
+
+      &:focus, &:active, &:hover {
+        color: ButtonText;
+
+        div:after {
+          color: HighlightText;
+          background: Highlight;
+        }
+      }
     }
   }
 }
