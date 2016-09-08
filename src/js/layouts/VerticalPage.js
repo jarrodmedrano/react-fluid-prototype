@@ -4,9 +4,9 @@ import 'src/styles/main.scss!';
 
 import _ from 'lodash'
 
-import Vertical from 'src/js/components/vertical/Vertical';
-import Header from 'src/js/components/stickynav/Header';
-import Footer from 'src/js/components/stickynav/Footer';
+import Vertical from './components/vertical/Vertical';
+import Header from './components/stickynav/Header';
+import Footer from './components/stickynav/Footer';
 
 class VerticalPage extends React.Component {
 

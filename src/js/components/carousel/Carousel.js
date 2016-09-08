@@ -1,7 +1,7 @@
 import React from 'react';
-import CarouselSlide from 'src/js/components/carousel/CarouselSlide';
-import SequenceIndicator from 'src/js/components/carousel/SequenceIndicator';
-import 'src/js/components/carousel/Carousel.scss!';
+import CarouselSlide from './CarouselSlide';
+import SequenceIndicator from './SequenceIndicator';
+import './Carousel.scss!';
 import classNames from 'classnames'
 
 class Carousel extends React.Component {

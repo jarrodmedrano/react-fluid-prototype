@@ -1,5 +1,5 @@
 import React from 'react'
-import 'src/js/components/vertical/fullscreen/fullscreen.scss!'
+import './fullscreen.scss!'
 
 class Fullscreen extends React.Component {
 

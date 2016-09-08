@@ -5,10 +5,10 @@ import {Router, DefaultRoute, Route, Link, IndexRoute, browserHistory} from 'rea
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 //Components
-import Linkband from 'src/js/components/linkband/linkband';
+// import Linkband from './components/linkband/linkband';
 /* TODO import only page components we need */
-// import MosaicPage from 'src/js/layouts/MosaicPage';
-import VerticalPage from 'src/js/layouts/VerticalPage';
+// import MosaicPage from './layouts/MosaicPage';
+import VerticalPage from './layouts/VerticalPage';
 
 
 /* TODO how to get different json file? */

@@ -1,10 +1,10 @@
-# REX Prototype
+# RDX Prototype
 
 
 ## Usage
 
 ```
-jspm install
-jspm-server
+npm install
+npm run dev
 ```
 

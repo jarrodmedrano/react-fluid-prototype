@@ -1,7 +1,7 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
 
 import React from 'react'
-import 'src/js/components/vertical/hello/hello.scss!'
+import './hello.scss!'
 
 class Hello extends React.Component {
 

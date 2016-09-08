@@ -1,5 +1,5 @@
 import React from 'react'
-import 'src/js/components/vertical/surfaceintro/surfacebookintro.scss!'
+import './surfacebookintro.scss!'
 
 class SurfaceBookIntro extends React.Component {
 

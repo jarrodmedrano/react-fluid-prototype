@@ -1,5 +1,5 @@
 import React from 'react'
-import 'src/js/components/vertical/apps/scene-apps.scss!'
+import './scene-apps.scss!'
 
 class Apps extends React.Component {
 

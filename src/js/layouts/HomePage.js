@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from 'src/js/components/hero/hero';
-import MosaicContainer from 'src/js/components/mosaic/MosaicContainer';
+import Hero from './components/hero/hero';
+import MosaicContainer from './components/mosaic/MosaicContainer';
 import _ from 'lodash'
 
 class HomePage extends React.Component {

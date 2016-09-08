@@ -1,5 +1,5 @@
 import React from 'react';
-import Mosaic from 'src/js/components/mosaic/mosaic';
+import Mosaic from './mosaic';
 
 class MosaicContainer extends React.Component {
 

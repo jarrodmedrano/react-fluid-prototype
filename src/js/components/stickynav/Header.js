@@ -1,6 +1,6 @@
 import React from 'react'
-import Starrating from 'src/js/components/starrating/Starrating'
-import Button from 'src/js/components/button/Button'
+import Starrating from '../starrating/Starrating'
+import Button from '../button/Button'
 
 class Header extends React.Component {
 

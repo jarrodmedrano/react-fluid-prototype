@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from 'src/js/components/hero/hero';
-import MosaicContainer from 'src/js/components/mosaic/MosaicContainer'
-import Carousel from 'src/js/components/carousel/Carousel';
+import Hero from './components/hero/hero';
+import MosaicContainer from './components/mosaic/MosaicContainer'
+import Carousel from './components/carousel/Carousel';
 import 'src/styles/mosaic.scss!';
 import 'src/styles/mwf_en-us_default.min.css!';
 

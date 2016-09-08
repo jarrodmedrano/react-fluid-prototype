@@ -1,12 +1,12 @@
 import React from 'react'
 import classNames from 'classnames';
-import SurfaceBookIntro from 'src/js/components/vertical/surfaceintro/SurfaceBookIntro';
-import Parallax from 'src/js/components/vertical/parallax/Parallax';
-import Fullscreen from 'src/js/components/vertical/fullscreen/Fullscreen';
-import Apps from 'src/js/components/vertical/apps/Apps';
-import Config from 'src/js/components/vertical/config/Config';
-import Hello from 'src/js/components/vertical/hello/Hello'
-import MosaicContainer from 'src/js/components/mosaic/MosaicContainer';
+import SurfaceBookIntro from '/components/vertical/surfaceintro/SurfaceBookIntro';
+import Parallax from '/components/vertical/parallax/Parallax';
+import Fullscreen from '/components/vertical/fullscreen/Fullscreen';
+import Apps from '/components/vertical/apps/Apps';
+import Config from '/components/vertical/config/Config';
+import Hello from '/components/vertical/hello/Hello'
+import MosaicContainer from '/components/mosaic/MosaicContainer';
 
 class Vertical extends React.Component {
 

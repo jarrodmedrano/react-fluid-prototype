@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import HeroPicture from 'src/js/components/hero/HeroPicture';
-import 'src/js/components/hero/Hero.scss!';
+import HeroPicture from './HeroPicture';
+import './Hero.scss!';
 
 
 class Hero extends React.Component {

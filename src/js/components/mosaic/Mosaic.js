@@ -1,7 +1,7 @@
 import React from 'react'
-import MosaicContainer from 'src/js/components/mosaic/MosaicContainer'
+import MosaicContainer from './MosaicContainer'
 import classNames from 'classnames';
-import 'src/js/components/mosaic/mosaic.scss!';
+import './mosaic.scss!';
 
 class Mosaic extends React.Component {
 
