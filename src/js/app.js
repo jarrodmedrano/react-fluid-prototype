@@ -12,7 +12,7 @@ import VerticalPage from './layouts/VerticalPage';
 
 
 /* TODO how to get different json file? */
-var data = fetchData('data/data.json').done(function (xhr) {
+var data = fetchData('../data/data.json').done(function (xhr) {
 
     data = xhr.response;
 

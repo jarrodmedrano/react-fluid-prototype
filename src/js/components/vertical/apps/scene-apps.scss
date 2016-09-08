@@ -15,7 +15,7 @@ $btn-primary-color: #fff;
 /*TODO decouple this class from the scss */
 
 .scene-vertical.apps {
-  background: url('../images/gradient-bg.jpg');
+  background: url('../../../../img/vertical/gradient-bg.jpg');
   background-size: cover;
   justify-content: flex-start;
   flex-direction: column;
@@ -107,7 +107,7 @@ $btn-primary-color: #fff;
       transform: translateZ(0);
 
       //&.one-note-screen {
-      //  background: url('../images/one-note-sprite.png');
+      //  background: url('../../img/one-note-sprite.png');
       //  background-size: 100% auto;
       //}
     }

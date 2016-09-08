@@ -1,12 +1,11 @@
 import React from 'react'
-import 'src/styles/mwf-west-european-default.min.css!';
-import 'src/styles/main.scss!';
+import '../../styles/main.scss';
 
-import _ from 'lodash'
+import * as _ from 'lodash'
 
-import Vertical from './components/vertical/Vertical';
-import Header from './components/stickynav/Header';
-import Footer from './components/stickynav/Footer';
+import Vertical from '../components/vertical/Vertical';
+import Header from '../components/stickynav/Header';
+import Footer from '../components/stickynav/Footer';
 
 class VerticalPage extends React.Component {
 

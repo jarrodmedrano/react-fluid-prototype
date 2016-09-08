@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 grunt.initConfig({
     buildcontrol: {
             options: {
-                dir: 'build',
+                dir: 'dist',
                 commit: true,
                 push: true,
                 message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
