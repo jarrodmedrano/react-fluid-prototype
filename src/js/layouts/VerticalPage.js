@@ -10,9 +10,8 @@ import Footer from '../components/stickynav/Footer';
 class VerticalPage extends React.Component {
 
     render() {
-        let currentPage = _.find(this.props.data.routes, function(result) {
-            return result.title === this.props.route.title
-        }, this);
+
+        let currentPage = _.find(this.props.data.routes);
 
         return (
             <div>

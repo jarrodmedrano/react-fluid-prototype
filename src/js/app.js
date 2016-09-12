@@ -10,16 +10,16 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 // import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 
-var data = window.datasource;
+var myData = window.datasource;
 
-var Index = data.routes.reduce(function (result) {
+var Index = myData.routes.reduce(function (result) {
     if (result.type !== 'IndexRoute') {
         return false
     }
     return result;
 });
 
-var Routes = data.routes.filter(function (result) {
+var Routes = myData.routes.filter(function (result) {
     if (result.type === 'IndexRoute') {
         return false
     }
@@ -28,63 +28,36 @@ var Routes = data.routes.filter(function (result) {
     return result
 });
 
-ReactDOM.render(
-    <Router history={browserHistory}>
-        <Route path="/" component={App}>
-            /* TODO get page component type from json */
-            <IndexRoute component={VerticalPage} title={Index.title}/>
-            {Routes.map(function (result, id) {
-                return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
-            })}
-        </Route>
-    </Router>
-    , document.getElementById('app')
-);
+
 
 class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            data: {}
-        }
-    }
-
-    componentDidMount() {
-        var that = this;
-
-        /* TODO: get data state from router */
-
-        that.setState({
-            data: data
-        });
-
-    }
-
     render() {
-
-        if (this.state.data === {}) {
-
-            return (
-                <div>Loading...</div>
-            )
-
-        } else {
-
-            return (
-                <div>
-                    {/*<Linkband routes={this.props.routes} params={this.props.params}/>*/}
-                    <TransitionGroup component="div" transitionName="page-transition"
-                                     transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-                        {React.cloneElement(this.props.children, {
-                            key: this.props.location.pathname,
-                            data: data
-                        })}
-                    </TransitionGroup>
-                </div>
-            );
-        }
+        return (
+            <div>
+                {/*<Linkband routes={this.props.routes} params={this.props.params}/>*/}
+                <TransitionGroup component="div" transitionName="page-transition"
+                                 transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+                    {React.cloneElement(this.props.children, {
+                        key: this.props.location.pathname,
+                        data: myData
+                    })}
+                </TransitionGroup>
+            </div>
+        );
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    ReactDOM.render(
+        <Router history={browserHistory}>
+            <Route path="/" component={App}>
+                /* TODO get page component type from json */
+                <IndexRoute component={VerticalPage} title={Index.title}/>
+                {Routes.map(function (result, id) {
+                    return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
+                })}
+            </Route>
+        </Router>
+        , document.getElementById('app')
+    );
+});
