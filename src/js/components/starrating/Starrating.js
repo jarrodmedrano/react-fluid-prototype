@@ -9,8 +9,8 @@ class Starrating extends React.Component {
         return (
             <div className="c-rating f-community-rated f-user-rated f-aggregate">
                 <p className="x-screen-reader">Rating:
-                    <span itemprop="ratingValue">{this.props.data.rating}</span>/
-                    <span itemprop="bestRating">{this.props.data.bestRating}</span>
+                    <span itemProp="ratingValue">{this.props.data.rating}</span>/
+                    <span itemProp="bestRating">{this.props.data.bestRating}</span>
                 </p>
                 <div aria-hidden="true">
                     <span className="c-glyph f-full"></span>

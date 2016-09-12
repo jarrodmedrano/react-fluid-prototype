@@ -28,6 +28,7 @@
     "html-webpack-plugin": "^2.0.3",
     "image-webpack-loader": "^1.6.1",
     "jquery": "^3.0.0-alpha1",
+    "json-loader": "^0.5.4",
     "lodash": "^4.15.0",
     "node-sass": "^3.3.3",
     "postcss-loader": "^0.6.0",

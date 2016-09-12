@@ -10,7 +10,13 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 // import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 
-var myData = window.datasource;
+var myData = {};
+
+if (DEV) {
+    myData = require('../data/data.json');
+} else {
+    myData = window.datasource;
+}
 
 var Index = myData.routes.reduce(function (result) {
     if (result.type !== 'IndexRoute') {
