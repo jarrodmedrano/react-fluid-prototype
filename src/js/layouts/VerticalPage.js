@@ -19,15 +19,17 @@ class VerticalPage extends React.Component {
 
         let branding = _.find(this.props.data.branding);
 
+        console.log(branding.title);
+
         return (
             <div>
 
-                <Header starRating={ ratings } price={ specs } />
+                <Header starRating={ ratings } price={ specs }  branding={ branding } />
                 <main id="main">
                     {currentPage.sections.verticals ?
                         currentPage.sections.verticals.map(function(result, id) {
                             return (
-                                <Vertical key={id} vertical={result} branding={ branding } />
+                                <Vertical key={id} vertical={result} />
                             )
                         })
                         : null

@@ -8,6 +8,8 @@ class Header extends React.Component {
 
         let brand = this.props.branding;
 
+        console.log(brand);
+
         return (
             <div className="sticky-banner sticky-header">
                 { brand ? <img src={ brand.logo } alt={ brand.title } className="logo"/> : null }
