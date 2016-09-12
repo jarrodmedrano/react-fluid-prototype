@@ -11,26 +11,30 @@ class VerticalPage extends React.Component {
 
     render() {
 
-        let currentPage = _.find(this.props.data.routes);
+        let currentPage = _.find(this.props.data.pages);
+
+        let ratings = _.find(this.props.data.ratings);
+
+        let specs = _.find(this.props.data.specs);
+
+        let branding = _.find(this.props.data.branding);
 
         return (
             <div>
-            {currentPage.content.header ?
-                <Header header={ currentPage.content.header } price={ currentPage.content.specs.default } starRating={ currentPage.content.starRating } />
-                : null
-            }
+
+                <Header starRating={ ratings } price={ specs } />
                 <main id="main">
-                    {currentPage.content.verticals ?
-                        currentPage.content.verticals.map(function(result, id) {
+                    {currentPage.sections.verticals ?
+                        currentPage.sections.verticals.map(function(result, id) {
                             return (
-                                <Vertical key={id} vertical={result}  />
+                                <Vertical key={id} vertical={result} branding={ branding } />
                             )
                         })
                         : null
                     }
                 </main>
 
-                {currentPage.content.verticals ? <Footer footer={currentPage.content.verticals} /> : null}
+                {currentPage.sections.verticals ? <Footer footer={currentPage.sections.verticals} /> : null}
             </div>
         );
     }

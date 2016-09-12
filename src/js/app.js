@@ -13,19 +13,19 @@ import VerticalPage from './layouts/VerticalPage';
 var myData = {};
 
 if (DEV) {
-    myData = require('../data/data.json');
+    myData = require('../data/hubRoot.json');
 } else {
     myData = window.datasource;
 }
 
-var Index = myData.routes.reduce(function (result) {
+var Index = myData.pages.reduce(function (result) {
     if (result.type !== 'IndexRoute') {
         return false
     }
     return result;
 });
 
-var Routes = myData.routes.filter(function (result) {
+var Routes = myData.pages.filter(function (result) {
     if (result.type === 'IndexRoute') {
         return false
     }

@@ -1,14 +1,12 @@
 {
   "layout": "MosaicPage",
-  // The specs object is optional TBD
-  "specs": { // Inserted by the host
+  "specs": {
     "default": {
       "label": "Starting at",
       "price": "$1,499.99"
     }
   },
-  // The ratings object is optional TBD
-  "ratings": { // Inserted by the host
+  "ratings": {
     "rating": "3",
     "bestRating": "5",
     "ratingText": "See reviews",
@@ -20,7 +18,7 @@
       "groupIdentifier": "oem",
       "logo": "img/vertical/ms-logo.png",
       "title": "Surface Book",
-      "color": "#7d299c" // added
+      "color": "#7d299c"
     },
     {
       "ordinal": "200",
@@ -41,7 +39,6 @@
           "layout": "apps",
           "anchorLink": "true",
           "title": "Work the way you want"
-          /// ... extra information depending on card type
         },
         {
           "ordinal": "200",
@@ -51,7 +48,6 @@
           "anchorLink": "true",
           "title": "Surface Pens",
           "condition": "PenSupport=true"
-          /// ... extra information depending on card type
         }
       ]
     }
