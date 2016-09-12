@@ -10,45 +10,36 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 // import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 
+var data = window.datasource;
 
-/* TODO how to get different json file? */
-var data = fetchData('../data/data.json').done(function (xhr) {
-
-    data = xhr.response;
-
-    var Index = data.routes.reduce(function (result) {
-        if (result.type !== 'IndexRoute') {
-            return false
-        }
-        return result;
-    });
-
-    var Routes = data.routes.filter(function (result) {
-        if (result.type === 'IndexRoute') {
-            return false
-        }
-        return true;
-    }).map(function (result) {
-        return result
-    });
-
-    ReactDOM.render(
-        <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                /* TODO get page component type from json */
-                <IndexRoute component={VerticalPage} title={Index.title}/>
-                {Routes.map(function (result, id) {
-                    return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
-                })}
-            </Route>
-        </Router>
-        , document.getElementById('app')
-    );
+var Index = data.routes.reduce(function (result) {
+    if (result.type !== 'IndexRoute') {
+        return false
+    }
+    return result;
 });
 
-function fetchData(request) {
-    return WinJS.xhr({url: request, responseType: "json"})
-}
+var Routes = data.routes.filter(function (result) {
+    if (result.type === 'IndexRoute') {
+        return false
+    }
+    return true;
+}).map(function (result) {
+    return result
+});
+
+ReactDOM.render(
+    <Router history={browserHistory}>
+        <Route path="/" component={App}>
+            /* TODO get page component type from json */
+            <IndexRoute component={VerticalPage} title={Index.title}/>
+            {Routes.map(function (result, id) {
+                return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
+            })}
+        </Route>
+    </Router>
+    , document.getElementById('app')
+);
 
 class App extends React.Component {
 
