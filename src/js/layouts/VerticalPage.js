@@ -26,8 +26,8 @@ class VerticalPage extends React.Component {
 
                 <Header starRating={ ratings } price={ specs }  branding={ branding } />
                 <main id="main">
-                    {currentPage.sections.verticals ?
-                        currentPage.sections.verticals.map(function(result, id) {
+                    {currentPage.sections ?
+                        currentPage.sections.map(function(result, id) {
                             return (
                                 <Vertical key={id} vertical={result} />
                             )
@@ -36,7 +36,7 @@ class VerticalPage extends React.Component {
                     }
                 </main>
 
-                {currentPage.sections.verticals ? <Footer footer={currentPage.sections.verticals} /> : null}
+                {currentPage.sections ? <Footer footer={currentPage.sections} /> : null}
             </div>
         );
     }
