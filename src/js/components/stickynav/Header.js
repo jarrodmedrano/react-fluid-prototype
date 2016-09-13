@@ -1,6 +1,6 @@
 import React from 'react'
-import Starrating from '../starrating/Starrating'
-import Button from '../button/Button'
+import Starrating from 'js/components/starrating/Starrating'
+import Button from 'js/components/button/Button'
 
 class Header extends React.Component {
 
@@ -8,7 +8,11 @@ class Header extends React.Component {
 
         let brand = this.props.branding;
 
-        console.log(brand);
+        let logo = require('img/vertical/ms-logo.png');
+
+        console.log(typeof(brand.logo));
+
+        let logos = 'img/vertical/ms-logo.png';
 
         return (
             <div className="sticky-banner sticky-header">

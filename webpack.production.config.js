@@ -33,7 +33,10 @@ var config = {
         'url?limit=8192&hash=sha512&digest=hex&name=[hash].[ext]',
         'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
       ]
-    }]
+    }, {
+            test: /\.json$/,
+            loader: 'json'
+        }]
   },
   postcss: [autoprefixer, csswring],
   plugins: [
@@ -56,6 +59,12 @@ var config = {
       }
     })
   ]
+    ,
+    resolve: {
+        root: [
+            path.resolve('./src')
+        ]
+    },
 };
 
 module.exports = config;

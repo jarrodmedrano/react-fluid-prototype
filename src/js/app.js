@@ -10,33 +10,48 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 // import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    if(process.env.NODE_ENV === 'dev') {
+        myData = require('../data/hubRoot.json');
+    } else {
+        myData = window.datasource;
+    }
+
+    var Index = myData.pages.reduce(function (result) {
+        if (result.type !== 'IndexRoute') {
+            return false
+        }
+        return result;
+    });
+
+    var Routes = myData.pages.filter(function (result) {
+        if (result.type === 'IndexRoute') {
+            return false
+        }
+        return true;
+    }).map(function (result) {
+        return result
+    });
+
+    ReactDOM.render(
+        <Router history={browserHistory}>
+            <Route path="/" component={App}>
+                /* TODO get page component type from json */
+                <IndexRoute component={VerticalPage} title={Index.title}/>
+                {Routes.map(function (result, id) {
+                    return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
+                })}
+            </Route>
+        </Router>
+        , document.getElementById('app')
+    );
+});
+
 var myData = {};
 
-if (DEV) {
-    myData = require('../data/hubRoot.json');
-} else {
-    myData = window.datasource;
-}
-
-var Index = myData.pages.reduce(function (result) {
-    if (result.type !== 'IndexRoute') {
-        return false
-    }
-    return result;
-});
-
-var Routes = myData.pages.filter(function (result) {
-    if (result.type === 'IndexRoute') {
-        return false
-    }
-    return true;
-}).map(function (result) {
-    return result
-});
-
-
-
 class App extends React.Component {
+
     render() {
         return (
             <div>
@@ -52,18 +67,3 @@ class App extends React.Component {
         );
     }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    ReactDOM.render(
-        <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                /* TODO get page component type from json */
-                <IndexRoute component={VerticalPage} title={Index.title}/>
-                {Routes.map(function (result, id) {
-                    return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
-                })}
-            </Route>
-        </Router>
-        , document.getElementById('app')
-    );
-});

@@ -45,10 +45,16 @@ var config = {
             inject: 'body' // Inject all scripts into the body
         }),
         new webpack.DefinePlugin({
-            DEV: JSON.stringify('true'),
-            PRODUCTION: JSON.stringify('false')
+            'process.env': {
+                'NODE_ENV': JSON.stringify('dev')
+            }
         })
     ],
+    resolve: {
+        root: [
+            path.resolve('./src')
+        ]
+    },
     postcss: [autoprefixer, csswring],
     devtool: 'eval'
     // devtool: 'sourcemap'
