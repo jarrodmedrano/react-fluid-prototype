@@ -6,7 +6,6 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 //Components
 // import Linkband from './components/linkband/linkband';
-/* TODO import only page components we need */
 // import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 

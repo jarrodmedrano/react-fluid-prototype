@@ -1,10 +1,9 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer-core');
 var csswring = require('csswring');
 var webpack = require('webpack');
 var path = require('path');
 var fs = require('fs');
-
 
 var config = {
     entry: ['webpack/hot/dev-server', './src/js/app.js'],
@@ -33,7 +32,8 @@ var config = {
             loaders: [
                 'url?limit=8192&hash=sha512&digest=hex&name=[hash].[ext]',
                 'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
-            ]
+            ],
+            path: path.resolve(__dirname, './img'),
         }, {
             test: /\.json$/,
             loader: 'json'
