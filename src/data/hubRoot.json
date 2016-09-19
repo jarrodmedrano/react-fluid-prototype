@@ -50,6 +50,28 @@
           "condition": "PenSupport=true"
         }
       ]
+    },
+    {
+      "groupIdentifier": "windows",
+      "sections": [
+        {
+          "ordinal": "100",
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "OneNote",
+          "layout": "apps",
+          "anchorLink": "true",
+          "title": "Work the way you want"
+        },
+        {
+          "ordinal": "200",
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Pen",
+          "layout": "parallax",
+          "anchorLink": "true",
+          "title": "Surface Pens",
+          "condition": "PenSupport=true"
+        }
+      ]
     }
   ]
 }

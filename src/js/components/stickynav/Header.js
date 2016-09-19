@@ -4,7 +4,7 @@ import Button from 'js/components/button/Button'
 
 
 
-class Header extends React.Component {
+class StickyBanner extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,9 +15,7 @@ class Header extends React.Component {
 
     render() {
 
-
         let brand = this.props.branding;
-
 
         return (
             <div className="sticky-banner sticky-header">
@@ -35,4 +33,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header
+export default StickyBanner
