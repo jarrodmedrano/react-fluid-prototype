@@ -14,7 +14,6 @@ class VerticalPage extends React.Component {
 
         /* TODO make names independent */
 
-
         let { ratings, specs, groups, branding } = this.props.data;
 
         return (

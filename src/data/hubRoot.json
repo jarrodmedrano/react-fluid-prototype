@@ -17,13 +17,15 @@
       "ordinal": "100",
       "groupIdentifier": "oem",
       "logo": "vertical/ms-logo.png",
+      "logoTab": "vertical/surfacebook-logo.png",
       "title": "Surface Book",
       "color": "#7d299c"
     },
     {
       "ordinal": "200",
       "groupIdentifier": "windows",
-      "logo": "img/vertical/windows-logo.svg",
+      "logo": "vertical/windows-logo.svg",
+      "logoTab": "vertical/windows-logo.svg",
       "title": "Surface Book",
       "color": "#7d299c"
     }

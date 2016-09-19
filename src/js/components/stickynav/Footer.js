@@ -3,6 +3,8 @@ import React from 'react'
 class Footer extends React.Component {
 
 
+
+
     _handleClick(anchorTarget, event) {
 
         event.preventDefault();
