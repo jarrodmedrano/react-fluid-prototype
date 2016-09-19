@@ -14,21 +14,16 @@ class VerticalPage extends React.Component {
 
         /* TODO make names independent */
 
-        let currentPage = _.find(this.props.data.groups);
 
-        let ratings = _.find(this.props.data.ratings);
-
-        let specs = _.find(this.props.data.specs);
-
-        let branding = _.find(this.props.data.branding);
+        let { ratings, specs, groups, branding } = this.props.data;
 
         return (
             <div>
-                <Tabs routes={this.props.routes} params={this.props.params} />
-                <StickyBanner starRating={ ratings } price={ specs } branding={ branding } />
+                <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } />
+                <StickyBanner starRating={ ratings } price={ specs } branding={ branding[0] } />
                 <main id="main">
-                    {currentPage.sections ?
-                        currentPage.sections.map(function(result, id) {
+                    {groups.sections ?
+                        groups.sections.map(function(result, id) {
                             return (
                                 <Vertical key={id} vertical={result} />
                             )
@@ -37,7 +32,7 @@ class VerticalPage extends React.Component {
                     }
                 </main>
 
-                {currentPage.sections ? <Footer footer={currentPage.sections} /> : null}
+                {groups.sections ? <Footer footer={groups.sections} /> : null}
             </div>
         );
     }
