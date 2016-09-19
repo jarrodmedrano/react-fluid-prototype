@@ -41,9 +41,7 @@ class Tabs extends React.Component {
         logoTabs.forEach(function(element, index) {
             var keys = 'logoTab' + index;
 
-            return logoObj[index] = {
-                [keys]: require(`img/${element}`)
-            }
+            return logoObj[index] = require(`img/${element}`);
         });
 
 
