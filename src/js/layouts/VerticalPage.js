@@ -4,7 +4,7 @@ import '../../styles/main.scss';
 import * as _ from 'lodash'
 
 import Vertical from '../components/vertical/Vertical';
-import StickyBanner from '../components/stickynav/Header';
+import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
 import Footer from '../components/stickynav/Footer';
 
@@ -12,14 +12,15 @@ class VerticalPage extends React.Component {
 
     render() {
 
-        let currentPage = _.find(this.props.data.pages);
+        /* TODO make names independent */
+
+        let currentPage = _.find(this.props.data.groups);
 
         let ratings = _.find(this.props.data.ratings);
 
         let specs = _.find(this.props.data.specs);
 
         let branding = _.find(this.props.data.branding);
-
 
         return (
             <div>

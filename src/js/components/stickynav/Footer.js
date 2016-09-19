@@ -7,8 +7,6 @@ class Footer extends React.Component {
 
         event.preventDefault();
 
-        console.log(anchorTarget);
-
         let args = {
             contentX: anchorTarget.offsetLeft + anchorTarget.offsetWidth/2,
             contentY: anchorTarget.offsetTop + anchorTarget.offsetHeight/2,

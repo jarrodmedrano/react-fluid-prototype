@@ -9,7 +9,7 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 // import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     if(process.env.NODE_ENV === 'dev') {
         myData = require('../data/hubRoot.json');
@@ -17,20 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
         myData = window.datasource;
     }
 
-    var Index = myData.pages.reduce(function (result) {
-        if (result.type !== 'IndexRoute') {
-            return false
-        }
-        return result;
-    });
+    /* TODO make groups name independent */
 
-    var Routes = myData.pages.filter(function (result) {
-        if (result.type === 'IndexRoute') {
-            return false
+    var Index = myData.groups[0];
+
+    var Routes = myData.groups.filter(function(result, index) {
+        if(index > 0) {
+          return result;
         }
-        return true;
-    }).map(function (result) {
-        return result
     });
 
     ReactDOM.render(
@@ -39,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 /* TODO get page component type from json */
                 <IndexRoute component={VerticalPage} title={Index.title}/>
                 {Routes.map(function (result, id) {
-                    return <Route component={VerticalPage} key={id} path={result.path} title={result.title}/>;
+                    return <Route component={VerticalPage} key={id} path={result.groupIdentifier} title={result.groupIdentifier}/>;
                 })}
             </Route>
         </Router>

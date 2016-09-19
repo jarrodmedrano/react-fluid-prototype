@@ -20,8 +20,17 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active">{rootRoute.indexRoute.title}</IndexLink>
-                    </li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active">{rootRoute.indexRoute.title}</IndexLink></li>
+                    {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
+                        <li className="c-hyperlink" key={index}>
+                            <Link
+                                activeClassName="active"
+                                to={item.path || ''}>
+                                {item.title}
+                            </Link>
+                            {(index + 1) < depth}
+                        </li>
+                    ) : ''}
                 </ul>
             </div>
         )

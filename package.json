@@ -25,6 +25,7 @@
     "eslint-friendly-formatter": "^1.2.2",
     "eslint-loader": "^1.0.0",
     "file-loader": "^0.8.1",
+    "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.0.3",
     "image-webpack-loader": "^1.6.1",
     "jquery": "^3.0.0-alpha1",
