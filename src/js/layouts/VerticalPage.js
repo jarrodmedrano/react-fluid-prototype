@@ -12,11 +12,18 @@ class VerticalPage extends React.Component {
 
     render() {
 
-        let { currentPage, ratings, specs, branding } = _.find(this.props.data);
+        let currentPage = _.find(this.props.data.pages);
+
+        let ratings = _.find(this.props.data.ratings);
+
+        let specs = _.find(this.props.data.specs);
+
+        let branding = _.find(this.props.data.branding);
+
 
         return (
             <div>
-                <Tabs />
+                <Tabs routes={this.props.routes} params={this.props.params} />
                 <StickyBanner starRating={ ratings } price={ specs } branding={ branding } />
                 <main id="main">
                     {currentPage.sections ?
