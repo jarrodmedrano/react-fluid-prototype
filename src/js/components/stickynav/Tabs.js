@@ -9,8 +9,6 @@ class Tabs extends React.Component {
 
         const depth = this.props.routes.length;
 
-        console.log(depth);
-
         const rootRoute = this.props.routes[0];
 
         const rootRouteChildren = rootRoute.childRoutes;
@@ -22,7 +20,7 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink">
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active">{rootRoute.indexRoute.title}</IndexLink>
                     </li>
                 </ul>
             </div>
