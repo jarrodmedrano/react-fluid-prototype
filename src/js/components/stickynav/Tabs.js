@@ -14,22 +14,18 @@ class Tabs extends React.Component {
 
         };
 
-        // brandLogo: require(`img/${this.props.groups[0]}`)
-
         var logoTabs = this.props.groups.map(function(result) {
 
            return result.brand[0].logoTab
 
         }).reduce(function(result, item, i) {
 
-            result['logoTab' + i] = item;
+            result[i] = require(`img/${item}`);
             return result;
 
         }, {});
 
-        this.state = Object.assign(this.state, logoTabs);
-
-        console.log(this.state);
+        this.state = Object.assign(this.state, {logoTabs});
 
     }
 
@@ -48,13 +44,13 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title} src="" /></IndexLink></li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title} src={this.state.logoTabs[0]} /></IndexLink></li>
                     {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                         <li className="c-hyperlink" key={index}>
                             <Link
                                 activeClassName="active"
                                 to={item.path || ''}>
-                                <img src="" alt={item.title} />
+                                <img src={this.state.logoTabs[index + 1]} alt={item.title} />
                             </Link>
                             {(index + 1) < depth}
                         </li>
