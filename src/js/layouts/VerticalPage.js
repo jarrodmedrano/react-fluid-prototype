@@ -27,7 +27,7 @@ class VerticalPage extends React.Component {
         return (
             <div>
                 <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } groups={ groups } />
-                <StickyBanner starRating={ ratings } price={ specs } branding={ branding[0] } />
+                <StickyBanner starRating={ ratings } price={ specs.default } branding={ branding[0] } />
                 <main id="main">
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
