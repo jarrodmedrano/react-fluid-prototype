@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../styles/main.scss';
 
-import * as _ from 'lodash'
+import _ from 'lodash'
+
 
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
@@ -16,13 +17,21 @@ class VerticalPage extends React.Component {
 
         let { ratings, specs, groups, branding } = this.props.data;
 
+        let title = this.props.route.title;
+
+        let currentPage = _.find(groups, function(result) {
+            return result.groupIdentifier === title
+        }, this);
+
+        console.log(currentPage);
+
         return (
             <div>
                 <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } />
                 <StickyBanner starRating={ ratings } price={ specs } branding={ branding[0] } />
                 <main id="main">
-                    {groups.sections ?
-                        groups.sections.map(function(result, id) {
+                    {currentPage.sections ?
+                        currentPage.sections.map(function(result, id) {
                             return (
                                 <Vertical key={id} vertical={result} />
                             )
@@ -30,8 +39,7 @@ class VerticalPage extends React.Component {
                         : null
                     }
                 </main>
-
-                {groups.sections ? <Footer footer={groups.sections} /> : null}
+                {currentPage.sections ? <Footer footer={currentPage.sections} /> : null}
             </div>
         );
     }

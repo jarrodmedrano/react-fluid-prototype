@@ -16,60 +16,12 @@ class Tabs extends React.Component {
             brandLogo: require(`img/${this.props.branding[0].logoTab}`)
         };
 
-        // var myObj = {};
-        //
-        // var brandLogos = this.props.branding.filter(function(result, index) {
-        //
-        //     var key = 'brandLogo' + index;
-        //
-        //     return myObj = {
-        //         [key]: require(`img/${result.logoTab}`)
-        //     }
-        // });
-        //
-        // console.log(myObj);
-
         var logoTabs = this.props.branding.map(function(result) {
            return result.logoTab;
         });
-        //
-         console.log(logoTabs);
-        //
-        //
-        var logoObj = {};
-
-        logoTabs.forEach(function(element, index) {
-            var keys = 'logoTab' + index;
-
-            return logoObj[index] = require(`img/${element}`);
-        });
 
 
-        // for(var i = 0; i < logoTabs.length; i++) {
-        //     var keys = 'logoTab' + i;
-        //     logoObj = {
-        //         [keys]: require(`img/${logoTabs[i]}`)
-        //     }
-        // }
 
-        // var logoObj = logoTabs.map(function(result, index) {
-        //     var keys = 'logoTab' + index;
-        //
-        //     return logoObj = {
-        //         [keys]: require(`img/${result}`)
-        //     }
-        // });
-
-        console.log(logoObj);
-
-        this.state = Object.assign(logoObj);
-
-        console.log(this.state);
-
-
-        // this.state = {
-        //     brandLogo: require(`img/${this.props.branding.logoTab}`)
-        // }
     }
 
     render() {
@@ -87,7 +39,7 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title} src={this.state[0]} /></IndexLink></li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title} src={this.state.brandLogo} /></IndexLink></li>
                     {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                         <li className="c-hyperlink" key={index}>
                             <Link

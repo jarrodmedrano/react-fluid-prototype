@@ -38,9 +38,10 @@
           "ordinal": "100",
           "groupIdentifier": "oem",
           "sectionIdentifier": "OneNote",
-          "layout": "apps",
+          "layout": "fullscreen",
           "anchorLink": "true",
-          "title": "Work the way you want"
+          "title": "Surface Pens",
+          "videoUrl": "vertical/Hero-pen.mp4"
         },
         {
           "ordinal": "200",
@@ -62,7 +63,7 @@
           "sectionIdentifier": "OneNote",
           "layout": "apps",
           "anchorLink": "true",
-          "title": "Work the way you want"
+          "title": "Windows Section 1"
         },
         {
           "ordinal": "200",
@@ -70,7 +71,7 @@
           "sectionIdentifier": "Pen",
           "layout": "parallax",
           "anchorLink": "true",
-          "title": "Surface Pens",
+          "title": "Windows Section 2",
           "condition": "PenSupport=true"
         }
       ]

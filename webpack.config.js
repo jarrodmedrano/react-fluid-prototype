@@ -19,7 +19,7 @@ var config = {
     module: {
         loaders: [{
             test: /\.js$/,
-            loaders: ['react-hot', 'babel', 'eslint'],
+            loaders: ['react-hot', 'babel?presets[]=es2015,presets[]=stage-2,presets[]=react,plugins[]=transform-object-rest-spread', 'eslint'],
             exclude: /node_modules/
         }, {
             test: /\.scss$/,
