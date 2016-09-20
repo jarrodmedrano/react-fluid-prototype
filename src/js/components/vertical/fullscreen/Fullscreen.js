@@ -3,9 +3,17 @@ import './fullscreen.scss'
 
 class Fullscreen extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            videoUrl: require(`img/${this.props.data.videoUrl}`)
+        };
+    }
+
     render() {
 
-        let { title, videoUrl, bgUrl, fgUrl } = this.props.data;
+        let { title, bgUrl, fgUrl } = this.props.data;
 
         let bgStyle = {
             backgroundImage: 'url(' + bgUrl + ')',
@@ -20,11 +28,9 @@ class Fullscreen extends React.Component {
                     <img src={fgUrl} alt={title} className="overlay" />
                         : null
                 }
-                {videoUrl ?
                 <video className="video-fullscreen fixed" loop id="video-pen">
-                    <source src={videoUrl} type="video/mp4" />
-                </video> : null
-                }
+                    <source src={this.state.videoUrl} type="video/mp4" />
+                </video>
             </div>
         )
     }

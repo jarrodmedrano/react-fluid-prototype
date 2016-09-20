@@ -23,11 +23,10 @@ class VerticalPage extends React.Component {
             return result.groupIdentifier === title
         }, this);
 
-        console.log(currentPage);
 
         return (
             <div>
-                <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } />
+                <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } groups={ groups } />
                 <StickyBanner starRating={ ratings } price={ specs } branding={ branding[0] } />
                 <main id="main">
                     {currentPage.sections ?

@@ -17,7 +17,6 @@
       "ordinal": "100",
       "groupIdentifier": "oem",
       "logo": "vertical/ms-logo.png",
-      "logoTab": "vertical/surfacebook-logo.png",
       "title": "Surface Book",
       "color": "#7d299c"
     },
@@ -33,6 +32,11 @@
   "groups": [
     {
       "groupIdentifier": "oem",
+      "brand": [
+        {
+          "logoTab": "vertical/surfacebook-logo.png"
+        }
+      ],
       "sections": [
         {
           "ordinal": "100",
@@ -56,6 +60,11 @@
     },
     {
       "groupIdentifier": "windows",
+      "brand": [
+        {
+          "logoTab": "vertical/windows-logo.svg"
+        }
+      ],
       "sections": [
         {
           "ordinal": "100",

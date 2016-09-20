@@ -7,20 +7,29 @@ import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
 
 class Tabs extends React.Component {
 
-
-
     constructor(props) {
         super(props);
 
         this.state = {
-            brandLogo: require(`img/${this.props.branding[0].logoTab}`)
+
         };
 
-        var logoTabs = this.props.branding.map(function(result) {
-           return result.logoTab;
-        });
+        // brandLogo: require(`img/${this.props.groups[0]}`)
 
+        var logoTabs = this.props.groups.map(function(result) {
 
+           return result.brand[0].logoTab
+
+        }).reduce(function(result, item, i) {
+
+            result['logoTab' + i] = item;
+            return result;
+
+        }, {});
+
+        this.state = Object.assign(this.state, logoTabs);
+
+        console.log(this.state);
 
     }
 
@@ -39,7 +48,7 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title} src={this.state.brandLogo} /></IndexLink></li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title} src="" /></IndexLink></li>
                     {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                         <li className="c-hyperlink" key={index}>
                             <Link
