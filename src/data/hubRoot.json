@@ -70,9 +70,15 @@
           "ordinal": "100",
           "groupIdentifier": "windows",
           "sectionIdentifier": "OneNote",
-          "layout": "apps",
+          "layout": "hero",
           "anchorLink": "true",
-          "title": "Windows Section 1"
+          "title": "Windows Section 1",
+          "hero": {
+            "heroTitle": "Choose your own Windows adventure.",
+            "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+            "heroSize": "f-medium",
+            "fX": "f-x-left"
+          }
         },
         {
           "ordinal": "200",

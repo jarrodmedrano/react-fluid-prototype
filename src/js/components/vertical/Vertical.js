@@ -6,6 +6,7 @@ import Fullscreen from './fullscreen/Fullscreen';
 import Apps from './apps/Apps';
 import Config from './config/Config';
 import Hello from './hello/Hello';
+import Hero from '../hero/Hero';
 import MosaicContainer from '../mosaic/MosaicContainer';
 
 class Vertical extends React.Component {
@@ -20,6 +21,9 @@ class Vertical extends React.Component {
             <section className={verticalClass}  id={this.props.vertical.title.split(' ').join('-').toLowerCase()}>
                 {layout === 'surfacebookintro' ?
                     <SurfaceBookIntro data={this.props.vertical} /> : null
+                }
+                {layout === 'hero' ?
+                    <Hero data={this.props.vertical} /> : null
                 }
                 {layout === 'parallax' ?
                     <Parallax data={this.props.vertical} /> : null
