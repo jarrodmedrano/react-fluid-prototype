@@ -8,7 +8,7 @@ class Hero extends React.Component {
 
     render() {
         return (
-            <section className="m-hero-item f-medium f-x-left f-y-top context-accessory theme-dark" itemScope itemType="http://schema.org/Product">
+            <section className="m-hero-item f-medium f-x-left f-y-bottom context-accessory theme-dark" itemScope itemType="http://schema.org/Product">
                 <picture>
                     <source srcSet="http://placehold.it/1600x600/2F2F2F/171717" media="(min-width: 1779px)" />
                         <source srcSet="http://placehold.it/1600x600/2F2F2F/171717" media="(min-width: 1400px)" />
@@ -22,6 +22,7 @@ class Hero extends React.Component {
                     <div>
                         <h1 className="c-heading">Heading</h1>
                         <p className="c-subheading">Subheading</p>
+                        <p class="c-paragraph-1">Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed</p>
                         <div className="c-price" itemProp="offers" itemScope itemType="http://schema.org/Offer">
                             <meta itemProp="priceCurrency" content="USD" />
                                 <span>$</span>
