@@ -62,7 +62,8 @@
       "groupIdentifier": "windows",
       "brand": [
         {
-          "logoTab": "vertical/windows-logo.svg"
+          "logoTab": "vertical/windows-logo.svg",
+          "color": "#3076BC"
         }
       ],
       "sections": [
