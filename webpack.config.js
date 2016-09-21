@@ -62,7 +62,11 @@ var config = {
         ]
     },
     postcss: [autoprefixer, csswring],
-    devtool: 'eval'
+    devtool: 'eval',
+    devServer: {
+        port: 3000,
+        historyApiFallback: true
+    }
     // devtool: 'sourcemap'
 };
 

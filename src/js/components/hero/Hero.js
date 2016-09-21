@@ -7,15 +7,6 @@ import './Hero.scss';
 class Hero extends React.Component {
 
     render() {
-        
-        let heroClass = classNames(
-            this.props.fullscreen === 'true' ? 'f-fullscreen': '',
-            'c-hero theme-dark',
-            this.props.fY ? this.props.fY : 'f-y-center',
-            this.props.fX ? this.props.fX : 'f-x-center',
-            this.props.heroSize ? this.props.heroSize : null
-        );
-
         return (
             <section className="m-hero-item f-medium f-x-left f-y-top context-accessory theme-dark" itemScope itemType="http://schema.org/Product">
                 <picture>
