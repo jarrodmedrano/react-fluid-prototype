@@ -24,29 +24,36 @@
                     {
                         "ordinal": "100",
                         "groupIdentifier": "oem",
-                        "logo": "./img/vertical/ms-logo.png",
+                        "logo": "vertical/ms-logo.png",
                         "title": "Surface Book",
                         "color": "#7d299c"
                     },
                     {
                         "ordinal": "200",
                         "groupIdentifier": "windows",
-                        "logo": "img/vertical/ms-logo.png",
+                        "logo": "vertical/windows-logo.svg",
+                        "logoTab": "vertical/windows-logo.svg",
                         "title": "Surface Book",
                         "color": "#7d299c"
                     }
                 ],
-                "pages": [
+                "groups": [
                     {
                         "groupIdentifier": "oem",
+                        "brand": [
+                            {
+                                "logoTab": "vertical/surfacebook-logo.png"
+                            }
+                        ],
                         "sections": [
                             {
                                 "ordinal": "100",
                                 "groupIdentifier": "oem",
                                 "sectionIdentifier": "OneNote",
-                                "layout": "apps",
+                                "layout": "fullscreen",
                                 "anchorLink": "true",
-                                "title": "Work the way you want"
+                                "title": "Surface Pens",
+                                "videoUrl": "vertical/Hero-pen.mp4"
                             },
                             {
                                 "ordinal": "200",
@@ -58,10 +65,43 @@
                                 "condition": "PenSupport=true"
                             }
                         ]
+                    },
+                    {
+                        "groupIdentifier": "windows",
+                        "brand": [
+                            {
+                                "logoTab": "vertical/windows-logo.png",
+                                "color": "#3076BC"
+                            }
+                        ],
+                        "sections": [
+                            {
+                                "ordinal": "100",
+                                "groupIdentifier": "windows",
+                                "sectionIdentifier": "OneNote",
+                                "layout": "hero",
+                                "anchorLink": "true",
+                                "title": "Windows Section 1",
+                                "hero": {
+                                    "heroTitle": "Choose your own Windows adventure.",
+                                    "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+                                    "heroSize": "f-medium",
+                                    "fX": "f-x-left"
+                                }
+                            },
+                            {
+                                "ordinal": "200",
+                                "groupIdentifier": "windows",
+                                "sectionIdentifier": "Pen",
+                                "layout": "parallax",
+                                "anchorLink": "true",
+                                "title": "Windows Section 2",
+                                "condition": "PenSupport=true"
+                            }
+                        ]
                     }
                 ]
             }
-
         </script>
     </head>
     <body class="win-type-body">

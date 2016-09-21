@@ -20,7 +20,7 @@ var config = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel?presets[]=es2015,presets[]=stage-2,presets[]=react,plugins[]=transform-object-rest-spread',
     }, {
       test: /\.scss$/,
       loader: 'style!css!postcss!sass'
@@ -34,9 +34,15 @@ var config = {
         'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
       ]
     }, {
-            test: /\.json$/,
-            loader: 'json'
-        }]
+        test: /\.json$/,
+        loader: 'json'
+    }, {
+        test: /\.html$/,
+        loader: 'html-loader?attrs[]=video:src'
+    }, {
+        test: /\.mp4$/,
+        loader: 'url?limit=10000&mimetype=video/mp4'
+    }]
   },
   postcss: [autoprefixer, csswring],
   plugins: [

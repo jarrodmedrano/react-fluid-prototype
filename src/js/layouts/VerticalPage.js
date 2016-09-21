@@ -23,7 +23,6 @@ class VerticalPage extends React.Component {
             return result.groupIdentifier === title
         }, this);
 
-
         return (
             <div>
                 <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } groups={ groups } />
