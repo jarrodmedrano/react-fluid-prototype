@@ -53,6 +53,20 @@
           }
         },
         {
+          "ordinal": "100",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "OneNote",
+          "layout": "immersive-hero",
+          "anchorLink": "true",
+          "title": "Surface Pens",
+          "hero": {
+            "heroTitle": "Choose your own Windows adventure.",
+            "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+            "heroSize": "f-medium",
+            "fX": "f-x-left"
+          }
+        },
+        {
           "ordinal": "200",
           "groupIdentifier": "oem",
           "sectionIdentifier": "OneNote",

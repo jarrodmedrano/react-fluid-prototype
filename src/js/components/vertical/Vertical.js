@@ -7,6 +7,7 @@ import Apps from './apps/Apps';
 import Config from './config/Config';
 import Hello from './hello/Hello';
 import Hero from '../hero/Hero';
+import ImmersiveHero from '../hero/ImmersiveHero';
 import MosaicContainer from '../mosaic/MosaicContainer';
 
 class Vertical extends React.Component {
@@ -24,6 +25,9 @@ class Vertical extends React.Component {
                 }
                 {layout === 'hero' ?
                     <Hero data={this.props.vertical} /> : null
+                }
+                {layout === 'immersive-hero' ?
+                    <ImmersiveHero data={this.props.vertical} /> : null
                 }
                 {layout === 'parallax' ?
                     <Parallax data={this.props.vertical} /> : null

@@ -26,3 +26,38 @@
 .c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
   bottom: calc(60px + 72px);
 }
+
+.m-immersive-hero-item {
+  height: 100%;
+}
+
+.m-immersive-hero-item > div > div {
+  z-index: 1;
+}
+
+.m-immersive-hero-item.f-align-top>div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 100vh;
+  //top: 0;
+}
+
+.m-immersive-hero-item.f-align-top>div>div {
+  position: relative;
+  transform: translateX(0);
+  left: 0;
+  top: 0;
+  flex: 1;
+  box-sizing: content-box;
+}
+
+.m-immersive-hero-item.f-align-top>div>picture.c-image img {
+  position: relative;
+  height: auto;
+  max-width: 50%;
+  left: 0;
+  transform: translateX(0);
+}
+
