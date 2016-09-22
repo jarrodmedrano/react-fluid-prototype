@@ -30,14 +30,13 @@
   "groups": [
     {
       "groupIdentifier": "oem",
-      "brand": [
+      "brand":
         {
           "logo": "vertical/ms-logo.png",
           "title": "Surface Book",
           "color": "#7d299c",
           "logoTab": "vertical/surfacebook-logo.png"
-        }
-      ],
+        },
       "sections": [
         {
           "ordinal": "100",
@@ -80,12 +79,10 @@
     },
     {
       "groupIdentifier": "windows",
-      "brand": [
-        {
+      "brand": {
           "logoTab": "vertical/windows-logo.png",
           "color": "#3076BC"
-        }
-      ],
+        },
       "sections": [
         {
           "ordinal": "100",

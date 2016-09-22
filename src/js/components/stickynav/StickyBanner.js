@@ -8,6 +8,8 @@ class StickyBanner extends React.Component {
 
     constructor(props) {
         super(props);
+
+
         this.state = {
             brandLogo: require(`img/${this.props.branding.logo}`)
         }

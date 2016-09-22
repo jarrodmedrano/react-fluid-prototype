@@ -16,7 +16,7 @@ class Tabs extends React.Component {
 
         var logoTabs = this.props.groups.map(function(result) {
 
-           return result.brand[0].logoTab
+           return result.brand.logoTab
 
         }).reduce(function(result, item, i) {
 
