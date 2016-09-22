@@ -15,7 +15,7 @@ class VerticalPage extends React.Component {
 
         /* TODO make names independent */
 
-        let { ratings, specs, groups, branding } = this.props.data;
+        let { ratings, deviceInformation, groups, branding } = this.props.data;
 
         let title = this.props.route.title;
 
@@ -23,10 +23,16 @@ class VerticalPage extends React.Component {
             return result.groupIdentifier === title
         }, this);
 
+        let oemGroup = _.find(groups, function(result) {
+            if(result.groupIdentifier === 'oem') {
+                return true
+            }
+        });
+
         return (
             <div>
                 <Tabs routes={this.props.routes} params={this.props.params} branding={ branding } groups={ groups } />
-                <StickyBanner starRating={ ratings } price={ specs.default } branding={ branding[0] } />
+                {oemGroup ? <StickyBanner ratings={ ratings } price={ deviceInformation } branding={ branding } /> : null }
                 <main id="main">
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {

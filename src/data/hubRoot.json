@@ -6,13 +6,20 @@
       "price": "$1,499.99"
     }
   },
+  "deviceInformation": {
+    "ManufacturerName": "Microsoft",
+    "ModelName": "Surface Book",
+    "price": "$1499",
+    "salePrice": "$1399",
+    "saleExpires": "11/1/16"
+  },
   "ratings": {
     "rating": "3",
     "bestRating": "5",
     "ratingText": "See reviews",
     "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
   },
-  "branding": [
+  "branding":
     {
       "ordinal": "100",
       "groupIdentifier": "oem",
@@ -20,20 +27,14 @@
       "title": "Surface Book",
       "color": "#7d299c"
     },
-    {
-      "ordinal": "200",
-      "groupIdentifier": "windows",
-      "logo": "vertical/windows-logo.svg",
-      "logoTab": "vertical/windows-logo.svg",
-      "title": "Surface Book",
-      "color": "#7d299c"
-    }
-  ],
   "groups": [
     {
       "groupIdentifier": "oem",
       "brand": [
         {
+          "logo": "vertical/ms-logo.png",
+          "title": "Surface Book",
+          "color": "#7d299c",
           "logoTab": "vertical/surfacebook-logo.png"
         }
       ],

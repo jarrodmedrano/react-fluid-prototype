@@ -22,10 +22,10 @@ class StickyBanner extends React.Component {
                 { brand ? <img src={ this.state.brandLogo } alt={ brand.title } className="logo"/> : null }
                 { brand ? <h4 className="c-heading-4">{ brand.title }</h4> : null }
 
-                { this.props.starRating ? <Starrating data={ this.props.starRating } /> : null }
+                { this.props.ratings ? <Starrating data={ this.props.ratings } /> : null }
 
                 <div className="cta">
-                    <div className="c-label">{ this.props.price.label } <span className="c-heading-5">{ this.props.price.price }</span></div>
+                    <div className="c-label">Starting at: <span className="c-heading-5">{ this.props.price.price }</span></div>
                     {/*<Button data={ this.props.header } />*/}
                 </div>
             </div>
