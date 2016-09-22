@@ -1,7 +1,7 @@
 import React from 'react'
 import './fullscreen.scss'
 
-class Fullscreen extends React.Component {
+class FullBleed extends React.Component {
 
     constructor(props) {
         super(props);
@@ -36,4 +36,4 @@ class Fullscreen extends React.Component {
     }
 }
 
-export default Fullscreen
+export default FullBleed

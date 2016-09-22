@@ -40,20 +40,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-height: 100vh;
-  transform: translateX(0);
+  height: 100vh;
+  transform: none;
   left: 0;
-
-  @media only screen and (min-width: 1084px) {
-    top: 148px;
-  }
 }
 
 .m-immersive-hero-item.f-align-top>div>div {
   position: relative;
-  transform: translateX(0);
+  transform: none;
   left: 0;
-  top: 0;
+  //top: 0;
   flex: 1;
   box-sizing: content-box;
 }
@@ -63,7 +59,7 @@
   height: auto;
   max-width: 50%;
   left: 0;
-  transform: translateX(0);
+  transform: none;
 }
 
 

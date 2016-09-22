@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames';
 import SurfaceBookIntro from './surfaceintro/SurfaceBookIntro';
 import Parallax from './parallax/Parallax';
-import Fullscreen from './fullscreen/Fullscreen';
+import Fullscreen from './fullscreen/FullBleed';
 import Apps from './apps/Apps';
 import Config from './config/Config';
 import Hello from './hello/Hello';

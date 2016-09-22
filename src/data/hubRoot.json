@@ -44,7 +44,7 @@
           "sectionIdentifier": "OneNote",
           "layout": "hero",
           "anchorLink": "true",
-          "title": "Hero Left",
+          "title": "Intro Image - Left",
           "hero": {
             "heroTitle": "Choose your own Windows adventure.",
             "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
@@ -58,7 +58,7 @@
           "sectionIdentifier": "OneNote",
           "layout": "immersive-hero",
           "anchorLink": "true",
-          "title": "Immersive Hero",
+          "title": "Device Detail",
           "hero": {
             "heroTitle": "Choose your own Windows adventure.",
             "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
@@ -72,7 +72,7 @@
           "sectionIdentifier": "OneNote",
           "layout": "fullscreen",
           "anchorLink": "true",
-          "title": "Surface Pens",
+          "title": "Full Bleed - Video",
           "videoUrl": "vertical/Hero-pen.mp4"
         }
       ]

@@ -19,7 +19,7 @@ class Hero extends React.Component {
                                             <img srcSet="http://placehold.it/1259x472/2F2F2F/171717" src="http://placehold.it/1259x472/2F2F2F/171717" alt="Placeholder with grey background and dimension watermark without any imagery" />
                 </picture>
                 <div>
-                    <div>
+                    <div className="content-animate">
                         <h1 className="c-heading">Heading</h1>
                         <p className="c-subheading">Subheading</p>
                         <p class="c-paragraph-1">Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed</p>
