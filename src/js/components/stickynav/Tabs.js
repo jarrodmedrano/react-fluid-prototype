@@ -1,5 +1,6 @@
 import React from 'react'
 import './tabs.scss'
+import classNames from 'classnames'
 
 import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
 
@@ -27,9 +28,12 @@ class Tabs extends React.Component {
 
         this.state = Object.assign(this.state, {logoTabs});
 
+
     }
 
     render() {
+
+
 
         const depth = this.props.routes.length;
 
@@ -49,6 +53,7 @@ class Tabs extends React.Component {
                         <li className="c-hyperlink" key={index}>
                             <Link
                                 activeClassName="active"
+                                activeStyle={{ background: 'red' }}
                                 to={item.path || ''}>
                                 <img src={this.state.logoTabs[index + 1]} alt={item.title} />
                             </Link>

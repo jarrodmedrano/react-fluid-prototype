@@ -7,6 +7,8 @@ import './Hero.scss';
 class Hero extends React.Component {
 
     render() {
+
+
         return (
             <section className="m-hero-item f-medium f-x-left f-y-bottom context-accessory theme-dark" itemScope itemType="http://schema.org/Product">
                 <picture>
