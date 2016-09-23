@@ -51,14 +51,14 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img alt={rootRoute.title}  /></IndexLink></li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img src={this.state.logoTabs[0].logoTab} alt={rootRoute.title}  /></IndexLink></li>
                     {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                         <li className="c-hyperlink" key={index}>
                             <Link
                                 activeClassName="active"
                                 activeStyle={{ background: 'red' }}
                                 to={item.path || ''}>
-                                <img  alt={item.title} />
+                                <img src={this.state.logoTabs[index + 1].logoTab} alt={item.title} />
                             </Link>
                             {(index + 1) < depth}
                         </li>
