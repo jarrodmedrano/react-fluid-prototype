@@ -1,11 +1,7 @@
 import React from 'react'
 import './tabs.scss'
-import _ from 'lodash'
-import classNames from 'classnames'
 
-import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
-
-
+import { Link, IndexLink } from 'react-router';
 
 class Tabs extends React.Component {
 
@@ -42,10 +38,6 @@ class Tabs extends React.Component {
         const rootRoute = this.props.routes[0];
 
         const rootRouteChildren = rootRoute.childRoutes;
-
-        const innerRoute = this.props.routes[1];
-
-        const innerRouteChildren = innerRoute.childRoutes;
 
         return (
             <div className="tabs">

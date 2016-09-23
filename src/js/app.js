@@ -1,12 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import WinJS from 'winjs'
-import {Router, DefaultRoute, Route, Link, IndexRoute, browserHistory} from 'react-router'
+import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 //Components
-// import Linkband from './components/linkband/linkband';
-// import MosaicPage from './layouts/MosaicPage';
 import VerticalPage from './layouts/VerticalPage';
 
 document.addEventListener('DOMContentLoaded', function () {
