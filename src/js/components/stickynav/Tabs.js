@@ -23,16 +23,12 @@ class Tabs extends React.Component {
         }).reduce(function(newVal, previousVal, key) {
 
             previousVal.logoTab = require(`img/${previousVal.logoTab}`);
-
             newVal[key] = previousVal;
-
             return newVal;
 
         }, {});
 
         this.state = Object.assign(this.state, {logoTabs});
-
-        console.log(this.state);
 
     }
 
@@ -56,7 +52,7 @@ class Tabs extends React.Component {
                         <li className="c-hyperlink" key={index}>
                             <Link
                                 activeClassName="active"
-                                activeStyle={{ background: 'red' }}
+                                activeStyle={{ background: this.state.logoTabs[index + 1].color }}
                                 to={item.path || ''}>
                                 <img src={this.state.logoTabs[index + 1].logoTab} alt={item.title} />
                             </Link>
