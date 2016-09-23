@@ -16,20 +16,23 @@ class Tabs extends React.Component {
 
         };
 
-        var logoTabs = this.props.groups.map(function(result) {
+        var logoTabs = this.props.groups.reduce(function(newVal, previousVal, key) {
 
-            return result.brand
+            newVal[key] = require(`img/${previousVal.brand.logoTab}`);
 
-        }).reduce(function(newVal, previousVal, key) {
-
-            previousVal.logoTab = require(`img/${previousVal.logoTab}`);
-            newVal[key] = previousVal;
             return newVal;
 
         }, {});
 
-        this.state = Object.assign(this.state, {logoTabs});
+        var logoColors = this.props.groups.reduce(function(newVal, previousVal, key) {
 
+            newVal[key] = previousVal.brand.color;
+            return newVal
+
+        }, {});
+
+        this.state = Object.assign(this.state, {logoTabs}, {logoColors});
+        console.log(this.state);
     }
 
     render() {
@@ -47,14 +50,14 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img src={this.state.logoTabs[0].logoTab} alt={rootRoute.title}  /></IndexLink></li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active"><img src={this.state.logoTabs[0]} alt={rootRoute.title}  /></IndexLink></li>
                     {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                         <li className="c-hyperlink" key={index}>
                             <Link
                                 activeClassName="active"
-                                activeStyle={{ background: this.state.logoTabs[index + 1].color }}
+                                activeStyle={{ background: this.state.logoColors[index + 1] }}
                                 to={item.path || ''}>
-                                <img src={this.state.logoTabs[index + 1].logoTab} alt={item.title} />
+                                <img src={this.state.logoTabs[index + 1]} alt={item.title} />
                             </Link>
                             {(index + 1) < depth}
                         </li>
