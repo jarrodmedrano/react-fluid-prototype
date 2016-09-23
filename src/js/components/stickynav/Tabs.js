@@ -16,30 +16,21 @@ class Tabs extends React.Component {
 
         };
 
-        let brands = _.chain(this.props.groups).filter(function(result) {
-                return result.brand
-        }).map(function(result) {
-            return {
-                ['brand' + index]: result
-            }
-        }).value();
+        var logoTabs = this.props.groups.map(function(result) {
 
+            return result.brand
 
-        // var logoTabs = brands.map(function(result, index) {
-        //
-        //    return  result
-        // });
+        }).reduce(function(newVal, previousVal, key) {
 
+            previousVal.logoTab = require(`img/${previousVal.logoTab}`);
 
-        //     .reduce(function(result, item, i) {
-        //     console.log(item);
-        //
-        //     result[i] = require(`img/${item}`);
-        //     return result;
-        //
-        // }, {});
+            newVal[key] = previousVal;
 
-        this.state = Object.assign(this.state, brands);
+            return newVal;
+
+        }, {});
+
+        this.state = Object.assign(this.state, {logoTabs});
 
         console.log(this.state);
 
