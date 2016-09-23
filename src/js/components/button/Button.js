@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router';
+
 
 class Button extends React.Component {
 
     render() {
         return (
-            <a href={ this.props.data.ctaUrl } role="button" className="c-button c-button-primary" id="anchor7">{ this.props.data.ctaText }</a>
+            <Link to={this.props.pathname} hash={this.props.hash} className="c-button c-button-primary" >{this.props.title}</Link>
         )
     }
 }

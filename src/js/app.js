@@ -24,8 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    function handleUpdate() {
+        let {
+            action
+        } = this.state.location;
+
+        if (action === 'PUSH') {
+            window.scrollTo(0, 0);
+        }
+    }
+
     ReactDOM.render(
-        <Router history={browserHistory}>
+        <Router history={browserHistory} onUpdate={handleUpdate}>
             <Route path="/" component={App}>
                 /* TODO get page component type from json */
                 <IndexRoute component={VerticalPage} title={Index.groupIdentifier}/>

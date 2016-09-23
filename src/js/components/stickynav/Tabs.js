@@ -17,14 +17,15 @@ class Tabs extends React.Component {
             if(previousVal.brand.logoTab != null) {
                 newVal[key] = require(`img/${previousVal.brand.logoTab}`);
             }
-
             return newVal;
 
         }, {});
 
         let logoColors = this.props.groups.reduce(function(newVal, previousVal, key) {
 
-            newVal[key] = previousVal.brand.color;
+            if(previousVal.brand.color != null) {
+                newVal[key] = previousVal.brand.color;
+            }
             return newVal
 
         }, {});
@@ -43,10 +44,10 @@ class Tabs extends React.Component {
         return (
             <div className="tabs">
                 <ul>
-                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active">{this.state.logoTabs[0] ? <img src={ this.state.logoTabs[0]} alt={rootRoute.title}  /> : rootRoute.title}</IndexLink></li>
+                    <li className="c-hyperlink"><IndexLink to={rootRoute.path} activeClassName="active" activeStyle={{ background: this.state.logoColors[0] }}>{this.state.logoTabs[0] ? <img src={ this.state.logoTabs[0]} alt={rootRoute.title}  /> : rootRoute.title}</IndexLink></li>
                     {rootRouteChildren !=null ? rootRouteChildren.map((item, index) =>
                         <li className="c-hyperlink" key={index}>
-                            <Link 
+                            <Link
                                 activeClassName="active"
                                 activeStyle={{ background: this.state.logoColors[index + 1] }}
                                 to={item.path || ''}>

@@ -1,17 +1,12 @@
 {
   "layout": "VerticalPage",
-  "specs": {
-    "default": {
-      "label": "Starting at",
-      "price": "$1,499.99"
-    }
-  },
   "deviceInformation": {
     "ManufacturerName": "Microsoft",
     "ModelName": "Surface Book",
     "price": "$1499",
     "salePrice": "$1399",
-    "saleExpires": "11/1/16"
+    "saleExpires": "11/1/16",
+    "label": "Starting at:"
   },
   "ratings": {
     "rating": "3",
@@ -34,6 +29,7 @@
         {
           "logo": "vertical/ms-logo.png",
           "title": "Surface Book",
+          "color": "#ffffff",
           "logoTab": "vertical/surfacebook-logo.png"
         },
       "sections": [
@@ -105,6 +101,55 @@
           "anchorLink": "true",
           "title": "Windows Section 2",
           "condition": "PenSupport=true"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "retailer",
+      "brand":
+      {
+        "logo": "vertical/ms-logo.png",
+        "title": "Surface Book",
+        "color": "#ffffff",
+        "logoTab": "vertical/surfacebook-logo.png"
+      },
+      "sections": [
+        {
+          "ordinal": "100",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Hero",
+          "layout": "hero",
+          "anchorLink": "true",
+          "title": "Intro Image - Left",
+          "hero": {
+            "heroTitle": "Choose your own Windows adventure.",
+            "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+            "heroSize": "f-medium",
+            "fX": "f-x-left"
+          }
+        },
+        {
+          "ordinal": "100",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "OneNote",
+          "layout": "immersive-hero",
+          "anchorLink": "true",
+          "title": "Device Detail",
+          "hero": {
+            "heroTitle": "Choose your own Windows adventure.",
+            "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
+            "heroSize": "f-medium",
+            "fX": "f-x-left"
+          }
+        },
+        {
+          "ordinal": "200",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "comparemodels",
+          "layout": "fullscreen",
+          "anchorLink": "true",
+          "title": "Full Bleed - Video",
+          "videoUrl": "vertical/Hero-pen.mp4"
         }
       ]
     }

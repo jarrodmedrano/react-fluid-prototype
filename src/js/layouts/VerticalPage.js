@@ -29,10 +29,11 @@ class VerticalPage extends React.Component {
             }
         });
 
+
         return (
             <div>
                 {groups.length > 1 ? <Tabs routes={this.props.routes} params={this.props.params} groups={ groups } /> : null }
-                {oemGroup ? <StickyBanner oemratings={ ratings } price={ deviceInformation } branding={ oemGroup.brand } /> : null }
+                {oemGroup.brand ? <StickyBanner oemratings={ ratings } price={ deviceInformation } branding={ oemGroup.brand } groups={ groups } currentPage={ currentPage }  /> : null }
                 <main id="main">
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
