@@ -129,7 +129,7 @@
           }
         },
         {
-          "ordinal": "100",
+          "ordinal": "200",
           "groupIdentifier": "oem",
           "sectionIdentifier": "OneNote",
           "layout": "immersive-hero",
@@ -143,13 +143,82 @@
           }
         },
         {
-          "ordinal": "200",
+          "ordinal": "300",
           "groupIdentifier": "oem",
           "sectionIdentifier": "comparemodels",
           "layout": "fullscreen",
           "anchorLink": "true",
           "title": "Full Bleed - Video",
           "videoUrl": "vertical/Hero-pen.mp4"
+        },
+        {
+          "ordinal": "400",
+          "groupIdentifier": "partner",
+          "sectionIdentifier": "mosaic",
+          "layout": "mosaic",
+          "anchorLink": "true",
+          "title": "Mosaics",
+          "mosaicContainer": [
+            {
+              "containerSize": "f-vp1-whole f-vp4-half f-height-large",
+              "mosaics":
+              [
+                {
+                  "mosaicTitle": "Microsoft OneNote",
+                  "mosaicSize": "c-placement context-accessory f-width-large f-height-large",
+                  "context": "context-app",
+                  "logo": "img/onenote-logo.svg",
+                  "mosaicHeading": "true",
+                  "mosaicCta": "Buy Now",
+                  "mosaicStyle": {
+                    "background": "#7e3878"
+                  }
+                }
+              ]
+            },
+            {
+              "containerSize": "f-vp1-whole f-vp4-half",
+              "mosaics":
+              [
+                {
+                  "mosaicTitle": "Microsoft Word",
+                  "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                  "context": "context-app",
+                  "logo": "img/word-logo.svg",
+                  "mosaicHeading": "true",
+                  "mosaicCta": "Buy Now",
+                  "ctaURL": "http://www.microsoftstore.com/",
+                  "mosaicStyle": {
+                    "background": "#2b5796"
+                  }
+                },
+                {
+                  "mosaicTitle": "PowerPoint",
+                  "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
+                  "context": "context-app",
+                  "logo": "img/powerpoint-logo.svg",
+                  "mosaicHeading": "true",
+                  "mosaicCta": "Buy Now",
+                  "ctaURL": "http://www.microsoftstore.com/",
+                  "mosaicStyle": {
+                    "background": "#d04525"
+                  }
+                },
+                {
+                  "mosaicTitle": "Excel",
+                  "mosaicSize": "f-vp1-whole f-height-small",
+                  "context": "context-app",
+                  "logo": "img/excel-logo.svg",
+                  "mosaicHeading": "true",
+                  "mosaicCta": "Buy Now",
+                  "ctaURL": "http://www.microsoftstore.com/",
+                  "mosaicStyle": {
+                    "background": "#1d7044"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
