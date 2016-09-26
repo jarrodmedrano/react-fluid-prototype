@@ -4,6 +4,9 @@ var csswring          = require('csswring');
 var webpack           = require('webpack');
 var path              = require('path');
 var fs                = require('fs');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+var nodeExternals = require('webpack-node-externals');
 
 var config = {
   entry: './src/js/app.js',
@@ -11,6 +14,9 @@ var config = {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[hash].js'
   },
+    externals: [nodeExternals({
+        // this WILL include `jquery` and `webpack/hot/dev-server` in the bundle, as well as `lodash/*`
+    })],
   module: {
     preLoaders: [{
       test: /\.js$/,
@@ -36,7 +42,8 @@ var config = {
     }, {
         test: /\.json$/,
         loader: 'json'
-    }, {
+    }
+    , {
         test: /\.html$/,
         loader: 'html-loader?attrs[]=video:src'
     }, {
@@ -46,6 +53,7 @@ var config = {
   },
   postcss: [autoprefixer, csswring],
   plugins: [
+
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body' // Inject all scripts into the body
@@ -56,14 +64,20 @@ var config = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+
     // keeps hashes consistent between compilations
     new webpack.optimize.OccurenceOrderPlugin(),
+     new CommonsChunkPlugin({
+          name: 'vendors',
+     }),
+
     // minifies your code
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false
       }
-    })
+    }),
+    new UnminifiedWebpackPlugin()
   ]
     ,
     resolve: {
