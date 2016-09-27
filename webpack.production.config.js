@@ -14,9 +14,6 @@ var config = {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[hash].js'
   },
-    externals: [nodeExternals({
-        // this WILL include `jquery` and `webpack/hot/dev-server` in the bundle, as well as `lodash/*`
-    })],
   module: {
     preLoaders: [{
       test: /\.js$/,
