@@ -1,5 +1,4 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var autoprefixer = require('autoprefixer-core');
 var csswring = require('csswring');
 var webpack = require('webpack');
 var path = require('path');
@@ -61,7 +60,7 @@ var config = {
             path.resolve('./src')
         ]
     },
-    postcss: [autoprefixer, csswring],
+    postcss: [csswring],
     devtool: 'eval',
     devServer: {
         port: 3000,
