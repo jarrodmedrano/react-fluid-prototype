@@ -1,5 +1,4 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var autoprefixer      = require('autoprefixer-core');
 var csswring          = require('csswring');
 var webpack           = require('webpack');
 var path              = require('path');
@@ -48,7 +47,7 @@ var config = {
         loader: 'url?limit=10000&mimetype=video/mp4'
     }]
   },
-  postcss: [autoprefixer, csswring],
+  postcss: [csswring],
   plugins: [
 
     new HtmlWebpackPlugin({
