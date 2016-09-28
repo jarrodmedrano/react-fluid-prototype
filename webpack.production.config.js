@@ -8,6 +8,7 @@ var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 var nodeExternals = require('webpack-node-externals');
 
+
 var config = {
   entry: './src/js/app.js',
   output: {
@@ -61,13 +62,11 @@ var config = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-
     // keeps hashes consistent between compilations
     new webpack.optimize.OccurenceOrderPlugin(),
      new CommonsChunkPlugin({
           name: 'vendors',
      }),
-
     // minifies your code
     new webpack.optimize.UglifyJsPlugin({
       compressor: {

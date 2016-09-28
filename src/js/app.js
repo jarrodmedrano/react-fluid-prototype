@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+import AsyncProps from 'async-props'
 
 //Components
 import VerticalPage from './layouts/VerticalPage';
@@ -35,15 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     ReactDOM.render(
-        <Router history={browserHistory} onUpdate={handleUpdate}>
-            <Route path="/" component={App}>
-                /* TODO get page component type from json */
-                <IndexRoute component={VerticalPage} title={Index.groupIdentifier}/>
-                {Routes.map(function (result, id) {
-                    return <Route component={VerticalPage} key={id} path={result.groupIdentifier} title={result.groupIdentifier}/>;
-                })}
-            </Route>
-        </Router>
+        <VerticalPage data={myData} title="oem" />
         , document.getElementById('app')
     );
 });
@@ -52,14 +45,22 @@ var myData = {};
 
 class App extends React.Component {
 
+    static loadProps(params, cb) {
+        cb(null, {
+            tacos: myData
+        })
+    }
+
     render() {
+        const tacos = this.props.tacos
+
         return (
             <div>
                 <TransitionGroup component="div" transitionName="page-transition"
                                  transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                     {React.cloneElement(this.props.children, {
                         key: this.props.location.pathname,
-                        data: myData
+                        data: tacos
                     })}
                 </TransitionGroup>
             </div>
