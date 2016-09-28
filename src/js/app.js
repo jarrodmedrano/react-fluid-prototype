@@ -47,12 +47,12 @@ class App extends React.Component {
 
     static loadProps(params, cb) {
         cb(null, {
-            tacos: myData
+            data: myData
         })
     }
 
     render() {
-        const tacos = this.props.tacos
+        const data = this.props.data;
 
         return (
             <div>
@@ -60,7 +60,7 @@ class App extends React.Component {
                                  transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                     {React.cloneElement(this.props.children, {
                         key: this.props.location.pathname,
-                        data: tacos
+                        data: data
                     })}
                 </TransitionGroup>
             </div>
