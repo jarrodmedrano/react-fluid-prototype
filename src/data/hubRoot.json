@@ -14,37 +14,69 @@
     "ratingText": "See reviews",
     "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
   },
-  "branding":
-    {
-      "ordinal": "100",
-      "groupIdentifier": "oem",
-      "logo": "vertical/ms-logo.png",
-      "title": "Surface Book",
-      "color": "#7d299c"
-    },
+  "branding": {
+    "ordinal": "100",
+    "groupIdentifier": "oem",
+    "logo": "vertical/ms-logo.png",
+    "title": "Surface Book",
+    "color": "#7d299c"
+  },
   "groups": [
     {
       "groupIdentifier": "oem",
-      "brand":
-        {
-          "logo": "vertical/ms-logo.png",
-          "title": "Surface Book",
-          "color": "#ffffff",
-          "logoTab": "vertical/surfacebook-logo.png"
-        },
+      "brand": {
+        "logo": "vertical/ms-logo.png",
+        "title": "Surface Book",
+        "color": "#ffffff",
+        "logoTab": "vertical/surfacebook-logo.png"
+      },
       "sections": [
         {
           "ordinal": "100",
           "groupIdentifier": "oem",
-          "sectionIdentifier": "OneNote",
+          "sectionIdentifier": "Section1",
           "layout": "hero",
           "anchorLink": "true",
-          "title": "Intro Image - Left",
-          "hero": {
-            "heroTitle": "Choose your own Windows adventure.",
-            "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
-            "heroSize": "f-medium",
-            "fX": "f-x-left"
+          "title": "-- Section1 Title --",
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "picture": "http://placehold.it/1259x472/2F2F2F/171717",
+          "altText": "AltText",
+          "ariaLabel": "AraiLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/1600x600/2F2F2F/171717",
+              "minwidth": "(min-width: 1779px)"
+            },
+            {
+              "src": "http://placehold.it/1600x600/2F2F2F/171717",
+              "minwidth": "(min-width: 1400px)"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minwidth": "(min-width: 1084px)"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minwidth": "(min-width:768px)"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minwidth": "(min-width:540px)"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minwidth": "(min-width:0)"
+            }
+          ],
+          "button": {
+            "layout": "button",
+            "path": "http://www.microsoft.com",
+            "title": "Let me see!",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "blue"
           }
         },
         {
@@ -80,8 +112,7 @@
           "mosaicContainer": [
             {
               "containerSize": "f-vp1-whole f-vp4-half f-height-large",
-              "mosaics":
-              [
+              "mosaics": [
                 {
                   "mosaicTitle": "Microsoft OneNote",
                   "mosaicSize": "c-mosaic-placement f-background-neutral-90 f-height-large f-width-large",
@@ -97,8 +128,7 @@
             },
             {
               "containerSize": "f-vp1-whole f-vp4-half",
-              "mosaics":
-              [
+              "mosaics": [
                 {
                   "mosaicTitle": "Microsoft Word",
                   "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
@@ -144,9 +174,9 @@
     {
       "groupIdentifier": "windows",
       "brand": {
-          "logoTab": "vertical/windows-logo.png",
-          "color": "#3076BC"
-        },
+        "logoTab": "vertical/windows-logo.png",
+        "color": "#3076BC"
+      },
       "sections": [
         {
           "ordinal": "100",
@@ -175,8 +205,7 @@
     },
     {
       "groupIdentifier": "retailer",
-      "brand":
-      {
+      "brand": {
         "logo": "vertical/ms-logo.png",
         "title": "Surface Book",
         "color": "#003b64",
