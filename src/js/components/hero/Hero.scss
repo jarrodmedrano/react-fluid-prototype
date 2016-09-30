@@ -1,0 +1,36 @@
+.c-hero.theme-dark {
+  background: #000;
+}
+
+.c-hero.f-fullscreen {
+  height: calc(100vh - 64px);
+
+
+  img {
+    height: calc(100vh - 64px);
+    min-width: auto;
+  }
+
+  .f-y-center {
+    .context-game {
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+.sub-route + .main-container .c-hero.f-fullscreen {
+  height: calc(100vh - 100px);
+
+  img {
+    height: calc(100vh - 100px);
+    min-width: auto;
+  }
+
+  .f-y-center {
+    .context-game {
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}

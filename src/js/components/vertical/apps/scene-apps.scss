@@ -1,0 +1,204 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Apps Scene
+//-----------------------------------------------------------------------------
+$app-svg-width: 315px;
+$default-bg: #E6E7E8;
+$default-text: #000;
+$accent-color: #0078D7;
+$default-text-alt: #fff;
+
+$btn-primary-bg: $accent-color;
+$btn-primary-color: #fff;
+
+/*TODO decouple this class from the scss */
+
+.scene-vertical.apps {
+  background: url('../../../../img/vertical/gradient-bg.jpg');
+  background-size: cover;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: auto;
+
+
+  @media (orientation: portrait) {
+    height: auto;
+  }
+
+  padding: 0 10vw;
+  //overflow-y: auto;
+  //height: auto;
+
+  svg {
+    vertical-align: top;
+    width: $app-svg-width;
+    //position: fixed;
+    //top: 0;
+  }
+
+  p {
+    margin: 0 auto;
+  }
+
+  .parallax-group {
+    width: 90vw;
+  }
+
+  .parallax-foreground {
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+    width: $app-svg-width;
+    padding-left: 50px;
+
+    &.out {
+      opacity: 0;
+    }
+  }
+
+  .surface-pen {
+    display: inline-block;
+    position: absolute;
+    margin-top: -50px;
+    transition: margin-top .5s ease-in-out;
+
+    img {
+      width: 458px;
+      height: auto;
+    }
+
+    &.pen-intro {
+      margin-top: -20px;
+    }
+  }
+
+  &.active-scene {
+    .surface-pen {
+      margin-top: -20px;
+    }
+  }
+
+  .device {
+    perspective: 1px;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .clipboard {
+    align-self: flex-start;
+    display: inline-block;
+    margin: 80px 0 80px 0;
+    //padding-right: calc(#{$app-svg-width} + 40px);
+    position: relative;
+  }
+
+  .clipboard-bg {
+    display: inline-block;
+    position: relative;
+
+    .clipboard-screen {
+      position: absolute;
+      top: 42px;
+      left: 47px;
+      width: 604px;
+      height: 906px;
+
+      transform: translateZ(0);
+
+      //&.one-note-screen {
+      //  background: url('../../img/one-note-sprite.png');
+      //  background-size: 100% auto;
+      //}
+    }
+  }
+
+  &.app-left {
+    .clipboard {
+      margin-right: 0;
+      margin-left: 100px;
+    }
+  }
+
+  .video-toggle {
+    display: none;
+  }
+
+  video {
+    transition: transform 5s;
+  }
+
+  .app-block {
+    background: #682A7A;
+    width: 315px;
+    height: 426px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $default-text-alt;
+    padding: 0 50px;
+
+    &.app-block-secondary {
+      display: none;
+    }
+
+    &.freshpaint-bg {
+      background: #fad213;
+      color: $default-text;
+
+      .c-call-to-action {
+        color: $default-text;
+      }
+    }
+
+    &.theme-dark {
+
+    }
+
+    img {
+      max-width: 50px;
+      margin-bottom: 20px;
+    }
+
+    strong {
+      display: block;
+      font-family: "Segoe UI Semibold";
+    }
+
+    .onenote-content {
+      flex: 1;
+    }
+
+    .group {
+      display: block;
+      margin-bottom: 40px;
+
+      .c-call-to-action {
+        background: none;
+        border: none;
+        display: inline;
+        font-family: "Segoe UI Semibold";
+      }
+    }
+  }
+
+  &.scene-changed {
+
+      video {
+        display: none;
+      }
+
+      video.video-toggle {
+        display: block;
+      }
+
+      .svg {
+        display: none;
+      }
+
+      .app-block-secondary {
+        display: flex;
+      }
+  }
+}

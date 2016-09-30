@@ -1,0 +1,526 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Display Scene
+//-----------------------------------------------------------------------------
+
+.scene-vertical.display-hero {
+  background: $default-text;
+  padding: $linkband-height 0;
+  //background: url('../../img/vertical/bg-pebbles.jpg') center 0;
+  //background: url('../../img/vertical/bg-ice.jpg') center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  #video-display {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .overlay {
+      background: #000;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationFadeInIntro {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationFadeInOutro {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationFadeInIntroReverse {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationFadeInOutroReverse {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationPopInIntro {
+
+  0% {
+    transform: translateY(10vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationPopInOutro {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10vh);
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationPopInIntroReverse {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10vh);
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationPopInOutroReverse {
+
+  0% {
+    transform: translateY(10vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationDrawInIntro {
+
+  0% {
+    stroke-dasharray: 1817.979px;
+    stroke-dashoffset: -1817.979px;
+  }
+
+  100% {
+    stroke-dasharray: 1432px;
+    stroke-dashoffset: -3249.979px;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationDrawInOutro {
+
+  0% {
+    stroke-dasharray: 1432;
+    stroke-dashoffset: -3249.979;
+  }
+
+  100% {
+    stroke-dasharray: 1817.979;
+    stroke-dashoffset: -1817.979;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationDrawInIntroReverse {
+
+  0% {
+    stroke-dasharray: 1432;
+    stroke-dashoffset: -3249.979;
+  }
+
+  100% {
+    stroke-dasharray: 1817.979;
+    stroke-dashoffset: -1817.979;
+  }
+
+}
+
+@keyframes surfaceBookScreenIllustrationDrawInOutroReverse {
+
+  0% {
+    stroke-dasharray: 1817.979;
+    stroke-dashoffset: -1817.979;
+  }
+
+  100% {
+    stroke-dasharray: 1432;
+    stroke-dashoffset: -3249.979;
+  }
+
+}
+
+
+@keyframes slideIntro {
+
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes slideOutro {
+
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+}
+
+@keyframes slideIntroReverse {
+
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+}
+
+@keyframes slideOutroReverse {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes slideIntroOpacityOnly {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes slideOutroOpacityOnly {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes slideIntroReverseOpacityOnly {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes slideOutroReverseOpacityOnly {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes slideIntroTransformOnly {
+
+  0% {
+    transform: translateY(3rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes slideOutroTransformOnly {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-3rem);
+  }
+
+}
+
+@keyframes slideIntroReverseTransformOnly {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(3rem);
+  }
+
+}
+
+@keyframes slideOutroReverseTransformOnly {
+
+  0% {
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+.animation-queue-underlay svg g.main polyline, .animation-queue-underlay svg g.main rect {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 1;
+}
+
+.animation-queue-underlay svg .draw-in {
+  animation-fill-mode: both;
+}
+
+.animation-queue-underlay {
+  width: 90%;
+  height: 90%;
+}
+
+.animation-queue-underlay > .module {
+  width: 100%;
+  height: 100%;
+}
+
+.animation-queue-underlay > .module svg {
+  width: 100%;
+  height: 100%;
+}
+
+.active-scene .animation-queue-underlay svg .fade-in {
+  animation: surfaceBookScreenIllustrationFadeInIntro 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.active-scene .animation-queue-underlay svg .draw-in {
+  animation: surfaceBookScreenIllustrationDrawInIntro 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-underlay.outro svg .pop-in {
+  animation: surfaceBookScreenIllustrationPopInOutro 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-underlay.outro svg .draw-in {
+  animation: surfaceBookScreenIllustrationDrawInOutro 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.active-scene .animation-queue-underlay svg .pop-in {
+  animation: surfaceBookScreenIllustrationPopInIntro 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.active-scene .animation-queue-underlay svg .pop-in {
+  transform: translate(-10vh);
+
+}
+
+.animation-queue-underlay.outro svg .fade-in {
+  animation: surfaceBookScreenIllustrationFadeInOutro 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+//remove intro-reverse
+.animation-queue-underlay svg .fade-in {
+  animation: surfaceBookScreenIllustrationFadeInIntroReverse 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-underlay.outro-reverse svg .fade-in {
+  animation: surfaceBookScreenIllustrationFadeInOutroReverse 1.4s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+
+section.module.scroll-proxied-animation-queue {
+
+  position: relative;
+  background-color: hsl(240, 30%, 30%);
+
+}
+
+section.module.scroll-proxied-animation-queue .animation-queue-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  clip: rect(0, auto, auto, 0);
+}
+
+section.module.scroll-proxied-animation-queue .animation-queue-stage .animation-queue-background {
+  position: fixed;
+  top: 0;
+}
+
+.animation-queue-slide, .animation-queue-underlay {
+  //position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+.animation-queue-slide, .animation-queue-underlay {
+  z-index: 2;
+}
+
+.active-scene .animation-queue-underlay {
+  animation: slideIntroTransformOnly .5s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-underlay.outro {
+  animation: slideOutroTransformOnly .5s cubic-bezier(.71, .01, .84, 0) both;
+}
+
+//remove intro-reverse
+.animation-queue-underlay {
+  animation: slideIntroReverseTransformOnly .5s cubic-bezier(.71, .01, .84, 0) both;
+}
+
+.animation-queue-underlay.outro-reverse {
+  animation: slideOutroReverseTransformOnly .5s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.active-scene .animation-queue-underlay .with-slide {
+  animation: slideIntroOpacityOnly .5s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-underlay.outro .with-slide {
+  animation: slideOutroOpacityOnly .5s cubic-bezier(.71, .01, .84, 0) both;
+}
+
+//remove intro-reverse
+.animation-queue-underlay .with-slide {
+  animation: slideIntroReverseOpacityOnly .5s cubic-bezier(.71, .01, .84, 0) both;
+}
+
+.animation-queue-underlay.outro-reverse .with-slide {
+  animation: slideOutroReverseOpacityOnly .5s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.active-scene .animation-queue-slide {
+  animation: slideIntro .5s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-slide.outro {
+  animation: slideOutro .5s cubic-bezier(.71, .01, .84, 0) both;
+}
+
+//remove intro-reverse
+.animation-queue-slide {
+  animation: slideIntroReverse .5s cubic-bezier(.71, .01, .84, 0) both;
+}
+
+.animation-queue-slide.outro-reverse {
+  animation: slideOutroReverse .5s cubic-bezier(.16, 1, .29, .99) both;
+}
+
+.animation-queue-slide h1, .animation-queue-slide h2 {
+  color: white;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.animation-queue-slide h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.animation-queue-slide .bg-sprite-video-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-queue-slide .bg-sprite-video-stage .bg-sprite-video {
+  overflow: hidden;
+}
+
+.animation-queue-slide .bg-sprite-video-stage .bg-sprite-video img {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}

@@ -1,7 +1,7 @@
-.idea
+.DS_STORE
+dist
 node_modules
-styles.min.css
-maps
-RDX.HTML/nightwatch/screenshots/diffs
-RDX.HTML/nightwatch/screenshots/results
-jspm_packages
+*.log
+*.idea
+*.suo
+/obj/Debug

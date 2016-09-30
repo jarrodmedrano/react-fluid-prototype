@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ab1f20cd-0189-408a-b894-a8ce11f32eaf}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartupFile>Gruntfile.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Compile Include="Gruntfile.js" />
+    <Compile Include="webpack.config.js" />
+    <Compile Include="webpack.production.config.js" />
+    <Content Include="src\index.html" />
+    <Content Include="src\data\data.json" />
+    <Content Include="src\data\datasource.json" />
+    <Content Include="src\data\hubRoot.json" />
+    <Content Include="src\data\mosaic.json" />
+    <Content Include="src\fonts\MWFMDL2.svg" />
+    <Compile Include="src\js\app.js" />
+    <Content Include="src\styles\mwf-west-european-default.min.css" />
+    <Content Include="src\styles\mwf_en-us_default.min.css" />
+    <Content Include="src\img\vertical\best-buy-logo.png" />
+    <Content Include="src\img\vertical\clipboard-clipboard-2.png" />
+    <Content Include="src\img\vertical\clipboard-clipboard.png" />
+    <Content Include="src\img\vertical\clipboard-pen.png" />
+    <Content Include="src\img\vertical\Dali-Rollover.png" />
+    <Content Include="src\img\vertical\detachable-keyboard.png" />
+    <Content Include="src\img\vertical\fresh-paint-logo.png" />
+    <Content Include="src\img\vertical\fresh-paint.png" />
+    <Content Include="src\img\vertical\gradient-bg.png" />
+    <Content Include="src\img\vertical\keyboard-hero.png" />
+    <Content Include="src\img\vertical\mosaic-surface-pen.png" />
+    <Content Include="src\img\vertical\ms-logo.png" />
+    <Content Include="src\img\vertical\SB-Pen-Rollover.png" />
+    <Content Include="src\img\vertical\surface-pens.png" />
+    <Content Include="src\img\vertical\surfacebook-logo.png" />
+    <Content Include="src\img\vertical\windows-logo.png" />
+    <Content Include="src\img\vertical\bg-ice.jpg" />
+    <Content Include="src\img\vertical\bg-pebbles.jpg" />
+    <Content Include="src\img\vertical\detachable-keyboard.jpg" />
+    <Content Include="src\img\vertical\display-hero.jpg" />
+    <Content Include="src\img\vertical\gradient-bg.jpg" />
+    <Content Include="src\img\vertical\hello-bg.jpg" />
+    <Content Include="src\img\vertical\keyboard-hero-dark.jpg" />
+    <Content Include="src\img\vertical\keyboard-hero.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-2-vp3.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-2.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-3.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-5.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-7.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-8-vp3.jpg" />
+    <Content Include="src\img\vertical\mosaic-surface-8.jpg" />
+    <Content Include="src\img\vertical\surface-book-intro.jpg" />
+    <Content Include="src\img\vertical\surface-hero.jpg" />
+    <Content Include="src\img\vertical\surface-pen.jpg" />
+    <Content Include="src\img\vertical\display-hero.svg" />
+    <Content Include="src\img\vertical\display.svg" />
+    <Content Include="src\img\vertical\file-storage-1.svg" />
+    <Content Include="src\img\vertical\file-storage-2.svg" />
+    <Content Include="src\img\vertical\file-storage-3.svg" />
+    <Content Include="src\img\vertical\file-storage-4.svg" />
+    <Content Include="src\img\vertical\file-storage-5.svg" />
+    <Content Include="src\img\vertical\office-logo.svg" />
+    <Content Include="src\img\vertical\one-note-logo.svg" />
+    <Content Include="src\img\vertical\store-icon.svg" />
+    <Content Include="src\img\vertical\windows-logo.svg" />
+    <Compile Include="src\js\layouts\HomePage.js" />
+    <Compile Include="src\js\layouts\MosaicPage.js" />
+    <Compile Include="src\js\layouts\VerticalPage.js" />
+    <Compile Include="src\js\components\button\Button.js" />
+    <Compile Include="src\js\components\carousel\Carousel.js" />
+    <Compile Include="src\js\components\carousel\CarouselSlide.js" />
+    <Compile Include="src\js\components\carousel\SequenceIndicator.js" />
+    <Compile Include="src\js\components\hero\Hero.js" />
+    <Compile Include="src\js\components\hero\HeroPicture.js" />
+    <Compile Include="src\js\components\hero\ImmersiveHero.js" />
+    <Compile Include="src\js\components\linkband\LinkBand.js" />
+    <Compile Include="src\js\components\mosaic\Mosaic.js" />
+    <Compile Include="src\js\components\mosaic\MosaicContainer.js" />
+    <Compile Include="src\js\components\starrating\Starrating.js" />
+    <Compile Include="src\js\components\stickynav\Footer.js" />
+    <Compile Include="src\js\components\stickynav\StickyBanner.js" />
+    <Compile Include="src\js\components\stickynav\Tabs.js" />
+    <Compile Include="src\js\components\vertical\Group.js" />
+    <Compile Include="src\js\components\vertical\Vertical.js" />
+    <Compile Include="src\js\components\vertical\apps\Apps.js" />
+    <Compile Include="src\js\components\vertical\config\Config.js" />
+    <Compile Include="src\js\components\vertical\fullscreen\FullBleed.js" />
+    <Compile Include="src\js\components\vertical\hello\Hello.js" />
+    <Compile Include="src\js\components\vertical\parallax\Parallax.js" />
+    <Compile Include="src\js\components\vertical\surfaceintro\SurfaceBookIntro.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\data" />
+    <Folder Include="src\fonts" />
+    <Folder Include="src\img" />
+    <Folder Include="src\img\vertical" />
+    <Folder Include="src\js" />
+    <Folder Include="src\js\components" />
+    <Folder Include="src\js\components\button" />
+    <Folder Include="src\js\components\carousel" />
+    <Folder Include="src\js\components\hero" />
+    <Folder Include="src\js\components\linkband" />
+    <Folder Include="src\js\components\mosaic" />
+    <Folder Include="src\js\components\starrating" />
+    <Folder Include="src\js\components\stickynav" />
+    <Folder Include="src\js\components\vertical" />
+    <Folder Include="src\js\components\vertical\apps" />
+    <Folder Include="src\js\components\vertical\config" />
+    <Folder Include="src\js\components\vertical\fullscreen" />
+    <Folder Include="src\js\components\vertical\hello" />
+    <Folder Include="src\js\components\vertical\parallax" />
+    <Folder Include="src\js\components\vertical\surfaceintro" />
+    <Folder Include="src\js\layouts" />
+    <Folder Include="src\styles" />
+    <Folder Include="src\styles\components" />
+    <Folder Include="src\styles\config" />
+    <Folder Include="src\styles\layouts" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\node\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,204 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// Video Scene
+//-----------------------------------------------------------------------------
+
+/*TODO decouple this class from the scss */
+
+.scene-vertical.surfacebookintro {
+  background: url('../../../../img/vertical/surface-book-intro.jpg');
+  background-attachment: fixed;
+  background-position: 0 0;
+  z-index: 3;
+  background-size: 100% auto;
+
+  &.video-ready {
+    background: none;
+  }
+
+  video {
+    position: fixed;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    top: -10vh;
+    //
+    //@media (orientation: portrait) {
+    //  top: $video-offset-portrait;
+    //}
+
+    pointer-events: none;
+  }
+
+  &.exit {
+    video {
+      position: absolute;
+    }
+  }
+
+  #video-intro {
+    z-index: 4;
+  }
+
+  @keyframes pulsate {
+    0% {transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 0.4;}
+    100% {transform: scale(1.2, 1.2); opacity: 0.0;}
+  }
+
+  .hotspots {
+    display: none;
+  }
+
+  &.active-scene {
+    .hotspots {
+      display: block;
+    }
+  }
+
+  &.enter-scene {
+
+    .hotspots {
+      opacity: 1;
+
+      .circle-inner {
+        width: 25px;
+        height: 25px;
+
+        &::before {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .hotspots {
+    position: fixed;
+    z-index: 4;
+    top: -10vh;
+    margin: 0 auto;
+    width: 1920px;
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    .copy p {
+      padding-top: 10px;
+    }
+
+    .hotspots-inner {
+      max-width: 58%;
+      height: 42vw;
+      margin-top: 13%;
+      margin-left: 25%;
+      position: relative;
+    }
+
+    .hotspot {
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+
+      &.one {
+
+        .copy {
+          position: absolute;
+          width: 350px;
+          bottom: 0;
+          top: -253px;
+          left: -400px;
+        }
+
+        svg {
+          //max-width: 20%;
+          position: absolute;
+          //top: -200%;
+          //right: -300%;
+          width: 150px;
+          top: -115px;
+          left: -148px;
+        }
+      }
+
+      &.two {
+        top: 30%;
+        right: 30%;
+        left: auto;
+
+        .copy {
+          position: absolute;
+          width: 300px;
+          bottom: 0;
+          top: -200px;
+          left: 193px;
+        }
+
+        svg {
+          //max-width: 20%;
+          position: absolute;
+          //top: -200%;
+          //right: -300%;
+          width: 150px;
+          top: -115px;
+          right: -150px;
+        }
+      }
+
+      &.three {
+        bottom: 15%;
+        right: 5%;
+        top: auto;
+        left: auto;
+
+        .copy {
+          position: absolute;
+          width: 300px;
+          bottom: 0;
+          top: -253px;
+          left: 0px;
+        }
+
+        svg {
+          //max-width: 20%;
+          position: absolute;
+          //top: -200%;
+          //right: -300%;
+          width: 150px;
+          top: -115px;
+          right: -150px;
+        }
+      }
+    }
+
+    .circle-inner {
+      width: 0px;
+      height: 0px;
+      border-radius: 50px;
+      background-color:rgb(0, 120, 215);
+      position: relative;
+      opacity: 0.4;
+
+      cursor: pointer;
+      transition: height 0.5s, width 0.5s;
+
+      &::before {
+        content: '';
+        width: 0px;
+        height: 0px;
+        z-index: 4;
+        left: -50%;
+        top: -50%;
+        border-radius: 100px;
+        background-color: rgb(0, 120, 215);
+        opacity: 0.4;
+        position: absolute;
+        display: inline-block;
+        transition: height 0.5s, width 0.5s;
+        animation: pulsate 2s ease-out;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+//! Copyright (C) Microsoft Corporation. All rights reserved.
+
+//-----------------------------------------------------------------------------
+// General Helper Classes
+//-----------------------------------------------------------------------------
+
+.align-bottom {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden-text {
+  opacity: 0;
+  transition: opacity 2s;
+  pointer-events: none;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity .5s;
+  display: none;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.full-width {
+  width: 100%;
+}

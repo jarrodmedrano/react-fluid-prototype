@@ -1,0 +1,42 @@
+.tabs {
+  background: #333333;
+  height: 72px;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  + .sticky-banner {
+    top: 72px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70%;
+  }
+
+  li {
+    height: 100%;
+  }
+
+  li img, li svg {
+    max-height: 40px;
+    max-width: 114px;
+    filter: brightness(0) invert(1);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 3em;
+  }
+
+  a.active img, a.active svg {
+    filter: none;
+  }
+}

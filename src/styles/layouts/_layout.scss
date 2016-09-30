@@ -1,0 +1,24 @@
+////! Copyright (C) Microsoft Corporation. All rights reserved.
+//
+////-----------------------------------------------------------------------------
+//// Custom Layout Definitions
+////-----------------------------------------------------------------------------
+
+html.noscroll {
+  //overflow: hidden !important;
+}
+
+body {
+  background: $default-bg;
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+}
+
+.content-column {
+  align-self: center;
+}
+
+.content-column-image {
+  width: 90vw;
+}
