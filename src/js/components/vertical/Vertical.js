@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames';
 import SurfaceBookIntro from './surfaceintro/SurfaceBookIntro';
 import Parallax from './parallax/Parallax';
-import Fullscreen from './fullscreen/FullBleed';
+import Video from './video/Video';
 import Apps from './apps/Apps';
 import Config from './config/Config';
 import Hello from './hello/Hello';
@@ -32,8 +32,8 @@ class Vertical extends React.Component {
                 {layout === 'parallax' ?
                     <Parallax data={this.props.vertical} /> : null
                 }
-                {layout === 'fullscreen' ?
-                    <Fullscreen data={this.props.vertical} /> : null
+                {layout === 'video' ?
+                    <Video data={this.props.vertical} /> : null
                 }
                 {layout === 'apps' ?
                     <Apps data={this.props.vertical} /> : null

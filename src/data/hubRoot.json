@@ -80,30 +80,24 @@
           }
         },
         {
-          "ordinal": "100",
+          "ordinal": "200",
           "groupIdentifier": "oem",
           "sectionIdentifier": "OneNote",
           "layout": "immersive-hero",
           "anchorLink": "true",
-          "title": "Device Detail",
-          "hero": {
-            "heroTitle": "Choose your own Windows adventure.",
-            "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
-            "heroSize": "f-medium",
-            "fX": "f-x-left"
-          }
-        },
-        {
-          "ordinal": "200",
-          "groupIdentifier": "oem",
-          "sectionIdentifier": "OneNote",
-          "layout": "fullscreen",
-          "anchorLink": "true",
-          "title": "Full Bleed - Video",
-          "videoUrl": "vertical/Hero-pen.mp4"
+          "title": "-- immersive hero title --"
         },
         {
           "ordinal": "300",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "OneNote",
+          "layout": "video",
+          "anchorLink": "true",
+          "title": "-- video title --",
+          "video": "vertical/Hero-pen.mp4"
+        },
+        {
+          "ordinal": "400",
           "groupIdentifier": "partner",
           "sectionIdentifier": "mosaic",
           "layout": "mosaic",
