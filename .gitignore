@@ -4,4 +4,4 @@ node_modules
 *.log
 *.idea
 *.suo
-/RDX/.vs/config/applicationhost.config
+/obj/Debug
