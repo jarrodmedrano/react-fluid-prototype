@@ -13,6 +13,7 @@
 body {
   height: 100%;
   touch-action: none;
+  overflow: hidden;
 }
 .control-app {
   height: 100%;
@@ -341,7 +342,7 @@ img {
   -ms-grid-columns: auto 100px;
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList {
-  -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto;
+  -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px 1fr 1fr auto;
 }
 @media all and (min-width: 640px) and (max-width: 1100px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList {
@@ -350,7 +351,8 @@ img {
 }
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList .graphicContainer-graphic,
 .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList .headingBox {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-align: end;
 }
 @media all and (max-width: 1100px) {
   .page-body .control-carousel .carousel-slideContainer .template-contentCard.page-content-threeColumn .column.threeColumn-logoList .graphicContainer-graphic,
@@ -525,7 +527,7 @@ img {
   -ms-grid-column: 2;
   background: transparent;
   padding: 0;
-  line-height: 1.25rem;
+  line-height: 0;
 }
 .page-body .control-carousel .carousel-controls .leftNav {
   position: absolute;
@@ -535,7 +537,7 @@ img {
 .page-body .control-carousel .carousel-controls .leftNav .directionIndicator-prev {
   font-size: 11pt;
   position: absolute;
-  top: 8px;
+  top: 1rem;
   right: 3px;
 }
 .page-body .control-carousel .carousel-controls .leftNav .directionIndicator-prev:after {
@@ -549,7 +551,7 @@ img {
 .page-body .control-carousel .carousel-controls .rightNav .directionIndicator-next {
   font-size: 11pt;
   position: absolute;
-  top: 8px;
+  top: 1rem;
   left: 3px;
 }
 .page-body .control-carousel .carousel-controls .rightNav .directionIndicator-next:after {
@@ -801,8 +803,19 @@ button span.arrow-right:after {
   button:focus {
     outline: 1px dotted ButtonText;
   }
+  button.sideNav:focus,
+  button.sideNav:active,
+  button.sideNav:hover {
+    color: ButtonText;
+  }
+  button.sideNav:focus div:after,
+  button.sideNav:active div:after,
+  button.sideNav:hover div:after {
+    color: HighlightText;
+    background: Highlight;
+  }
 }
-.text-legal p {
+.text-legal {
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
   font-size: 10px;
@@ -819,27 +832,27 @@ button span.arrow-right:after {
   line-height: 12pt;
   margin: 0;
 }
-.text-legal p.textType_maxLinesOne {
+.text-legal.textType_maxLinesOne {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-height: 12px;
   max-height: 0.75rem;
 }
-.text-legal p.textType_maxLinesTwo {
+.text-legal.textType_maxLinesTwo {
   max-height: 24px;
   max-height: 1.5rem;
 }
-.text-legal p.textType_maxLinesThree {
+.text-legal.textType_maxLinesThree {
   max-height: 36px;
   max-height: 2.25rem;
 }
-.text-legal p.textType_maxLinesFour {
+.text-legal.textType_maxLinesFour {
   max-height: 48px;
   max-height: 3rem;
 }
-.card-content + .text-legal p,
-.card-content + a + .text-legal p,
-.card-content + button + .text-legal p {
+.card-content + .text-legal,
+.card-content + a + .text-legal,
+.card-content + button + .text-legal {
   padding: 10px 0;
   height: auto;
 }
@@ -1186,9 +1199,9 @@ button span.arrow-right:after {
          height: auto !important; */
   }
 }
-.layout-specifications .card-content + .text-legal p,
-.layout-specifications .card-content + a + .text-legal p,
-.layout-specifications .card-content + button + .text-legal p {
+.layout-specifications .card-content + .text-legal,
+.layout-specifications .card-content + a + .text-legal,
+.layout-specifications .card-content + button + .text-legal {
   padding: 0;
 }
 .layout-specifications ul li {
@@ -1263,6 +1276,15 @@ button span.arrow-right:after {
 .layout-specs .column .text-subheader {
   display: block;
   margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-bottom: 2.3632px;
+  padding-top: 2.3632px;
+  padding-bottom: 0.1477rem;
+  padding-top: 0.1477rem;
+  font-weight: 300;
 }
 @media screen and (max-width: 640px) {
   .layout-specs .column .text-subheader {

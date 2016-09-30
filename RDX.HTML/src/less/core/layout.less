@@ -19,6 +19,7 @@
 body {
   height: 100%;
   touch-action: none;
+  overflow: hidden;
 }
 
 .control-app {
@@ -358,6 +359,7 @@ img {
               .headingBox {
                 -ms-grid-column: 2;
                 -ms-grid-row: 2;
+
               }
 
               .subcontent-box1 {
@@ -420,14 +422,15 @@ img {
 
             // Required Sub-setting [Threecol > Column] - Logo and 2 Containers of content centered
             &.threeColumn-logoList {
-              -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px auto 1fr auto;
+              -ms-grid-rows: 1fr auto 40px 40px auto minmax(0px, 1fr) 40px 1fr 1fr auto;
               @media all and (min-width: 640px) and (max-width: 1100px) {
                 -ms-grid-rows: 1fr 90px 40px 1fr 1fr 100px 1fr 1fr 1fr;
               }
 
               .graphicContainer-graphic,
               .headingBox {
-                -ms-grid-row: 2;
+                -ms-grid-row: 1;
+                -ms-grid-row-align: end;
               }
 
               @media all and (max-width: 1100px) {
@@ -636,7 +639,7 @@ img {
           -ms-grid-column: 2;
           background: transparent;
           padding: 0;
-          line-height: 1.25rem;
+          line-height: 0;
         }
       }
 
@@ -651,7 +654,7 @@ img {
           }
           font-size: 11pt;
           position: absolute;
-          top: 8px;
+          top: 1rem;
           right: 3px;
         }
       }
@@ -667,7 +670,7 @@ img {
           }
           font-size: 11pt;
           position: absolute;
-          top: 8px;
+          top: 1rem;
           left: 3px;
         }
       }
@@ -688,30 +691,6 @@ img {
     position: absolute;
     bottom: 0;
   }
-
-  //&:after {
-  //  border-top-color: @dark-grey;
-  //  content: ' ';
-  //  position: absolute;
-  //  margin: 0 auto;
-  //  left: 0;
-  //  right: 0;
-  //  top: 100%;
-  //  width: 0;
-  //  height: 0;
-  //  border-left: @caret-width solid transparent;
-  //  border-right: @caret-width solid transparent;
-  //  border-top: @caret-width solid transparent;
-  //  z-index: 3;
-  //
-  //  @media screen and (-ms-high-contrast: active) {
-  //    border-top-color: Highlight;
-  //  }
-  //}
-
-  //&:hover:after, &:focus:after {
-  //    opacity: .85;
-  //}
 }
 
 //-----------------------------------------------------------------------------//
@@ -766,8 +745,6 @@ img {
     }
 
     //color themes
-
-
 
     @media screen and (-ms-high-contrast) {
 
@@ -1007,6 +984,8 @@ button {
     }
   }
 
+
+
   @media screen and (-ms-high-contrast: active) {
     background: ButtonFace;
     color: ButtonText;
@@ -1020,6 +999,18 @@ button {
     &:focus {
       outline: 1px dotted ButtonText;
     }
+
+    &.sideNav {
+
+      &:focus, &:active, &:hover {
+        color: ButtonText;
+
+        div:after {
+          color: HighlightText;
+          background: Highlight;
+        }
+      }
+    }
   }
 }
 
@@ -1027,7 +1018,7 @@ button {
 //  Type                                                                       //
 //-----------------------------------------------------------------------------//
 
-.text-legal p {
+.text-legal {
   .text-captionAlt();
   opacity: .6;
   font-size: 10pt !important;
@@ -1035,9 +1026,9 @@ button {
   margin: 0;
 }
 
-.card-content + .text-legal p,
-.card-content + a + .text-legal p,
-.card-content + button + .text-legal p {
+.card-content + .text-legal,
+.card-content + a + .text-legal,
+.card-content + button + .text-legal {
   padding: (@design-unit * 2.5) 0;
   height: auto;
 }
@@ -1294,9 +1285,9 @@ button {
     }
   }
 
-  .card-content + .text-legal p,
-  .card-content + a + .text-legal p,
-  .card-content + button + .text-legal p {
+  .card-content + .text-legal,
+  .card-content + a + .text-legal,
+  .card-content + button + .text-legal {
     padding: 0;
   }
 
@@ -1414,6 +1405,8 @@ button {
     .text-subheader {
       display: block;
       margin: 0;
+      font-size: 24px;
+      .textbase-title();
 
       @media screen and (max-width: 640px) {
         .text-title();
