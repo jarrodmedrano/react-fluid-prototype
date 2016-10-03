@@ -6,18 +6,18 @@ import Button from '../button/Button';
 
 class Hero extends React.Component {
     render() {
-        let { title, heading, subheading, paragraph, pictures, button, picture, altText, ariaLabel } = this.props.data;
+        let { heading, subheading, paragraph, pictures, button, picture, altText } = this.props.data;
 
         return (
             <section className="m-hero-item f-medium f-x-left f-y-bottom context-accessory theme-dark">
                 <picture className="c-image">
-                    {/*
-                        pictures.map(function(object)
+                    {
+                        pictures.map(function(object, id)
                         {
                             return (
-                                <source srcSet={object.src} media={obejct.minwidth} />)
+                                <source srcSet={object.src} media={object.minwidth} key={id} />)
                         })
-                    */}
+                    }
                     {picture ? <img srcSet={picture} src={picture} alt={altText} /> : null}
                 </picture>
                 <div>

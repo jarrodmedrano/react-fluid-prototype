@@ -39,7 +39,7 @@ class Vertical extends React.Component {
                 {layout === 'mosaic' ?
                         this.props.vertical.mosaicContainer.map(function(result, id) {
                         return (
-                            <div className="c-mosaic fullscreen-mosaic">
+                            <div className="c-mosaic fullscreen-mosaic" key={id} >
                                     <MosaicContainer key={id} mosaics={result}  />
                             </div>
                         )
