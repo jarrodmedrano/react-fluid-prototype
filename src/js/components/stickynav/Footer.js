@@ -1,18 +1,9 @@
 import React from 'react'
 
 class Footer extends React.Component {
-
-
-
-
     _handleClick(anchorTarget, event) {
-
-
     }
-
     render() {
-
-
         return (
             <div className="sticky-banner sticky-footer">
                 {this.props.footer.map(function(result, id)  {

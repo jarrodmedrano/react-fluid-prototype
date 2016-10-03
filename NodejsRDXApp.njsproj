@@ -79,9 +79,6 @@
     <Compile Include="src\js\layouts\MosaicPage.js" />
     <Compile Include="src\js\layouts\VerticalPage.js" />
     <Compile Include="src\js\components\button\Button.js" />
-    <Compile Include="src\js\components\carousel\Carousel.js" />
-    <Compile Include="src\js\components\carousel\CarouselSlide.js" />
-    <Compile Include="src\js\components\carousel\SequenceIndicator.js" />
     <Compile Include="src\js\components\hero\Hero.js" />
     <Compile Include="src\js\components\hero\HeroPicture.js" />
     <Compile Include="src\js\components\hero\ImmersiveHero.js" />
@@ -96,10 +93,7 @@
     <Compile Include="src\js\components\vertical\Vertical.js" />
     <Compile Include="src\js\components\vertical\apps\Apps.js" />
     <Compile Include="src\js\components\vertical\config\Config.js" />
-    <Compile Include="src\js\components\vertical\fullscreen\FullBleed.js" />
-    <Compile Include="src\js\components\vertical\hello\Hello.js" />
     <Compile Include="src\js\components\vertical\parallax\Parallax.js" />
-    <Compile Include="src\js\components\vertical\surfaceintro\SurfaceBookIntro.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src" />
@@ -110,7 +104,6 @@
     <Folder Include="src\js" />
     <Folder Include="src\js\components" />
     <Folder Include="src\js\components\button" />
-    <Folder Include="src\js\components\carousel" />
     <Folder Include="src\js\components\hero" />
     <Folder Include="src\js\components\linkband" />
     <Folder Include="src\js\components\mosaic" />
@@ -119,10 +112,8 @@
     <Folder Include="src\js\components\vertical" />
     <Folder Include="src\js\components\vertical\apps" />
     <Folder Include="src\js\components\vertical\config" />
-    <Folder Include="src\js\components\vertical\fullscreen" />
-    <Folder Include="src\js\components\vertical\hello" />
+    <Folder Include="src\js\components\vertical\video" />
     <Folder Include="src\js\components\vertical\parallax" />
-    <Folder Include="src\js\components\vertical\surfaceintro" />
     <Folder Include="src\js\layouts" />
     <Folder Include="src\styles" />
     <Folder Include="src\styles\components" />
