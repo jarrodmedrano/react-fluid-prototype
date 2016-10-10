@@ -1,7 +1,6 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
-
 import React from 'react'
-import './scene-config.scss'
+// System.import('./scene-config.scss!');
 
 class Config extends React.Component {
 

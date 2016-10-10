@@ -24,7 +24,6 @@ class MosaicContainer extends React.Component {
                         } else {
                             return <Mosaic key={id} mosaic={result} mosaicChildren={result.mosaicChildren} />
                         }
-
                     })}
                 </div>
         )

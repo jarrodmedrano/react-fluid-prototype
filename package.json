@@ -1,64 +1,42 @@
 {
-  "name": "RDX",
-  "version": "1.0.0",
-  "description": "RDX React Prototype",
-  "main": "assets/js/bundle.js",
-  "repository": {
-    "type": "git",
-    "url": "https://osgdi.visualstudio.com/DefaultCollection/_git/WDG%20DD%20RDX"
-  },
-  "keywords": [
-    "template",
-    "react",
-    "webpack",
-    "hot module replacement",
-    "ES6"
-  ],
-  "devDependencies": {
-    "autoprefixer-core": "^6.0.1",
-    "babel-core": "^6.14.0",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-2": "^6.13.0",
-    "classnames": "^2.2.5",
-    "css-loader": "^0.19.0",
-    "csswring": "^4.0.0",
-    "eslint": "^1.6.0",
-    "eslint-friendly-formatter": "^1.2.2",
-    "eslint-loader": "^1.0.0",
-    "file-loader": "^0.8.1",
-    "html-loader": "^0.4.4",
-    "html-webpack-plugin": "^2.0.3",
-    "image-webpack-loader": "^1.6.1",
-    "jquery": "^3.0.0-alpha1",
-    "json-loader": "^0.5.4",
-    "lodash": "^4.15.0",
-    "node-sass": "^3.3.3",
-    "postcss-loader": "^0.6.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "react-hot-loader": "^2.0.0-alpha-4",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.7.0",
-    "redux": "^3.6.0",
-    "sass-loader": "^3.0.0",
-    "style-loader": "^0.12.4",
-    "unminified-webpack-plugin": "^1.1.1",
-    "url-loader": "^0.5.5",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0",
-    "webpack-node-externals": "^1.4.3",
-    "winjs": "^4.4.0"
-  },
+  "name": "RDX-prototype",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "build": "set NODE_ENV=production&&webpack -p --progress --colors --config webpack.production.config.js",
-    "dev": "webpack-dev-server --progress --colors  --inline --hot --content-base dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf ./dist"
+    "start": "webpack --progress --colors --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jarrod Medrano <v-jamedr@microsoft.com>",
-  "license": "MIT",
-  "homepage": "https://osgdi.visualstudio.com/DefaultCollection/_git/WDG%20DD%20RDX"
+  "author": "v-jamedr",
+  "license": "",
+  "dependencies": {},
+  "jspm": {
+    "dependencies": {
+      "async-props": "npm:async-props@^0.3.2",
+      "classnames": "npm:classnames@^2.2.5",
+      "clean-css": "npm:clean-css@^3.4.10",
+      "css": "github:systemjs/plugin-css@^0.1.19",
+      "history": "npm:history@2.0.1",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "lodash": "npm:lodash@^4.16.3",
+      "picturefill": "npm:picturefill@^3.0.2",
+      "react": "npm:react@^0.14.7",
+      "react-dom": "npm:react-dom@^0.14.7",
+      "react-router": "npm:react-router@^2.0.0",
+      "sass": "npm:sass@^0.5.0",
+      "scss": "github:mobilexag/plugin-sass@^0.4.6"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-shell": "^0.5.1",
+    "jspm": "^0.16.46"
+  }
 }

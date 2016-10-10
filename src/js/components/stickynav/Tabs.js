@@ -1,5 +1,5 @@
-import React from 'react'
-import './tabs.scss'
+import React from 'react';
+import './tabs.scss!'
 
 import { Link, IndexLink } from 'react-router';
 
@@ -15,7 +15,7 @@ class Tabs extends React.Component {
         let logoTabs = this.props.groups.reduce(function(newVal, previousVal, key) {
 
             if(previousVal.brand.logoTab != null) {
-                newVal[key] = require(`img/${previousVal.brand.logoTab}`);
+                newVal[key] = previousVal.brand.logoTab;
             }
             return newVal;
 

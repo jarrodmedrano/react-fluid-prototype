@@ -1,7 +1,8 @@
 import React from 'react'
-import Starrating from 'js/components/starrating/Starrating'
-import Button from 'js/components/button/Button'
+import Starrating from '../starrating/Starrating'
+import Button from '../button/Button'
 import _ from 'lodash';
+import './sticky-banner.scss!'
 
 class StickyBanner extends React.Component {
     render() {

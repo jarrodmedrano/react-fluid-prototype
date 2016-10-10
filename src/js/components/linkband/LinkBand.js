@@ -1,7 +1,6 @@
 import React from 'react'
-
-import './LinkBand.scss';
-import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router';
+import './LinkBand.scss!'
+import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router'
 
 class Linkband extends React.Component {
 

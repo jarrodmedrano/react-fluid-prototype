@@ -1,5 +1,5 @@
 import React from 'react'
-import './fullscreenVideo.scss'
+// System.import('./fullscreenVideo.scss!');
 
 class Video extends React.Component {
 

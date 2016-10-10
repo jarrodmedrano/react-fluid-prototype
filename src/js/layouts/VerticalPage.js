@@ -1,8 +1,7 @@
 import React from 'react'
-import '../../styles/main.scss';
+import '../../styles/main.scss!';
 
-import _ from 'lodash'
-
+import _ from 'lodash/lodash';
 
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
@@ -15,9 +14,11 @@ class VerticalPage extends React.Component {
 
         /* TODO make names independent */
 
+
         let { ratings, deviceInformation, groups, branding } = this.props.data;
 
-        let title = this.props.title;
+        let title = this.props.route.title;
+
 
         let currentPage = _.find(groups, function(result) {
             return result.groupIdentifier === title
@@ -32,7 +33,7 @@ class VerticalPage extends React.Component {
 
         return (
             <div>
-                {/*{groups.length > 1 ? <Tabs routes={this.props.routes} params={this.props.params} groups={ groups } /> : null }*/}
+                {groups.length > 1 ? <Tabs routes={this.props.routes} params={this.props.params} groups={ groups } /> : null }
                 {oemGroup.brand ? <StickyBanner oemratings={ ratings } price={ deviceInformation } branding={ oemGroup.brand } groups={ groups } currentPage={ currentPage }  /> : null }
                 <main id="main">
                     {currentPage.sections ?

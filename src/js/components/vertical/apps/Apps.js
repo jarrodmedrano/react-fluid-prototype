@@ -1,5 +1,5 @@
-import React from 'react'
-import './scene-apps.scss'
+import React from 'react';
+// System.import('./scene-apps.scss!');
 
 class Apps extends React.Component {
 

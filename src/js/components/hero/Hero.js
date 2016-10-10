@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import HeroPicture from './HeroPicture';
-import './Hero.scss';
+import './Hero.scss!';
 import Button from '../button/Button';
 
 class Hero extends React.Component {
@@ -11,13 +10,13 @@ class Hero extends React.Component {
         return (
             <section className="m-hero-item f-medium f-x-left f-y-bottom context-accessory theme-dark">
                 <picture className="c-image">
-                    {
+                    {pictures ?
                         pictures.map(function(object, id)
                         {
                             return (
                                 <source srcSet={object.src} media={object.minwidth} key={id} />)
                         })
-                    }
+                    : null}
                     {picture ? <img srcSet={picture} src={picture} alt={altText} /> : null}
                 </picture>
                 <div>

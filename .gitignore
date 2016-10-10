@@ -6,3 +6,5 @@ node_modules
 *.suo
 /obj/Debug
 /.vs
+jspm_packages
+*.orig
