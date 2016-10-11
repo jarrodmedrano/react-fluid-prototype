@@ -4,9 +4,9 @@ System.config({
   transpiler: "babel",
   babelOptions: {
     "optional": [
-        "runtime",
-        "optimisation.modules.system",
-        "es7.asyncFunctions"
+      "runtime",
+      "optimisation.modules.system",
+      "es7.asyncFunctions"
     ]
   },
   paths: {

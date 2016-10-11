@@ -6,7 +6,7 @@ import { createHashHistory } from 'history';
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 //Components
 import VerticalPage from './layouts/VerticalPage';
-System.import('./src/styles/mwf-west-european-default.min.css!');
+import '../styles/mwf-west-european-default.min.css!'
 
 var myData = window.datasource;
 
