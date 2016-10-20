@@ -1,33 +1,21 @@
 import React from 'react';
 import classNames from 'classnames';
+import Heading from '../heading/Heading';
 import './Hero.scss!';
-import Button from '../button/Button';
+import Picture from '../picture/Picture';
 
 class Hero extends React.Component {
     render() {
-        let { heading, subheading, paragraph, pictures, button, picture, altText } = this.props.data;
+
+        let { alignX, alignY, theme } = this.props.data;
+
+        let heroClass = classNames('m-hero-item f-medium context-accessory', `f-x-${alignX}`, `f-y-${alignY}`, `theme-${theme}`);
 
         return (
-            <section className="m-hero-item f-medium f-x-left f-y-bottom context-accessory theme-dark">
-                <picture className="c-image">
-                    {pictures ?
-                        pictures.map(function(object, id)
-                        {
-                            return (
-                                <source srcSet={object.src} media={object.minwidth} key={id} />)
-                        })
-                    : null}
-                    {picture ? <img srcSet={picture} src={picture} alt={altText} /> : null}
-                </picture>
-                <div>
-                    <div className="content-animate">
-                        <h1 className="c-heading">{heading}</h1>
-                        <p className="c-subheading">{subheading}</p>
-                        <p className="c-paragraph-1">{paragraph}</p>
-                        <Button data={button}/>
-                    </div>
-                </div>
-            </section>
+            <div className={heroClass}>
+                <Picture data={this.props.data} />
+                <Heading data={this.props.data} />
+            </div>
         )
     }
 }

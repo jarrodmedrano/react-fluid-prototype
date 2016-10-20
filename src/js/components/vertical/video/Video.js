@@ -1,25 +1,23 @@
 import React from 'react'
-// System.import('./fullscreenVideo.scss!');
 
 class Video extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
 
         let { title, video, foregroundImage, backgroundImage } = this.props.data;
 
         let bgStyle = {
-            backgroundImage: 'url(' + backgroundImage + ')',
             width: '100vw',
             height: '100vh',
             backgroundSize: 'cover'
         };
 
+        let bgImg = {
+            backgroundImage: 'url(' + backgroundImage + ')'
+        };
+
         return (
-            <div style={bgStyle}>
+            <div style={backgroundImage ? Object.assign(bgStyle, bgImg) : bgStyle}>
                 {foregroundImage ?
                     <img src={foregroundImage} alt={title} className="overlay" />
                         : null

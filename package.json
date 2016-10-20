@@ -20,9 +20,9 @@
       "json": "github:systemjs/plugin-json@^0.1.0",
       "lodash": "npm:lodash@^4.16.3",
       "picturefill": "npm:picturefill@^3.0.2",
-      "react": "npm:react@^0.14.7",
-      "react-dom": "npm:react-dom@^0.14.7",
-      "react-router": "npm:react-router@^2.0.0",
+      "react": "npm:react@^15.0",
+      "react-dom": "npm:react-dom@^15.0",
+      "react-router": "npm:react-router@^2.7.0",
       "sass": "npm:sass@^0.5.0",
       "scss": "github:mobilexag/plugin-sass@^0.4.6"
     },

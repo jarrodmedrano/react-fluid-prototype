@@ -1,14 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router';
 
 class Button extends React.Component {
+
     render() {
         if (this.props.data) {
-            let { title, path, ariaLabel, textColor, backgroundColor, hash } = this.props.data;
 
-            {/*TODO: Adjust style according to data*/ }
+            let { title, path, ariaLabel, textColor, backgroundColor } = this.props.data.button;
+
+            let btnStyle = {
+                background: backgroundColor,
+                color: textColor
+            };
+
             return (
-                <Link to={path} hash={hash} className="c-button c-button-primary" >{title}</Link>
+                <div><a href={path} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={btnStyle}><span>{title}</span></a></div>
             )
         }
         else {

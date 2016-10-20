@@ -6,7 +6,7 @@ import Apps from './apps/Apps';
 import Config from './config/Config';
 import Hero from '../hero/Hero';
 import ImmersiveHero from '../hero/ImmersiveHero';
-import MosaicContainer from '../mosaic/MosaicContainer';
+import Mosaic from '../mosaic/Mosaic';
 
 class Vertical extends React.Component {
 
@@ -17,33 +17,33 @@ class Vertical extends React.Component {
         let layout = this.props.vertical.layout;
 
         return (
-            <section className={verticalClass}  id={this.props.vertical.title.split(' ').join('-').toLowerCase()}>
+            <section className={verticalClass} id={this.props.vertical.title.split(' ').join('-').toLowerCase()}>
                 {layout === 'hero' ?
-                    <Hero data={this.props.vertical} /> : null
+                    <Hero data={this.props.vertical}/> : null
                 }
                 {layout === 'immersive-hero' ?
-                    <ImmersiveHero data={this.props.vertical} /> : null
+                    <ImmersiveHero data={this.props.vertical}/> : null
                 }
                 {layout === 'parallax' ?
-                    <Parallax data={this.props.vertical} /> : null
+                    <Parallax data={this.props.vertical}/> : null
                 }
                 {layout === 'video' ?
-                    <Video data={this.props.vertical} /> : null
+                    <Video data={this.props.vertical}/> : null
                 }
                 {layout === 'apps' ?
-                    <Apps data={this.props.vertical} /> : null
+                    <Apps data={this.props.vertical}/> : null
                 }
                 {layout === 'config' ?
-                    <Config data={this.props.vertical} /> : null
+                    <Config data={this.props.vertical}/> : null
                 }
                 {layout === 'mosaic' ?
-                        this.props.vertical.mosaicContainer.map(function(result, id) {
-                        return (
-                            <div className="c-mosaic fullscreen-mosaic" key={id} >
-                                    <MosaicContainer key={id} mosaics={result}  />
+                    <div className="c-mosaic fullscreen-mosaic">
+                        <div className="m-mosaic">
+                            <div className="c-mosaic">
+                                <Mosaic data={this.props.vertical}/>
                             </div>
-                        )
-                        }) : null
+                        </div>
+                    </div> : null
                 }
             </section>
         )

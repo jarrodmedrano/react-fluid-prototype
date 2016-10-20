@@ -26,8 +26,8 @@ System.config({
     "json": "github:systemjs/plugin-json@0.1.2",
     "lodash": "npm:lodash@4.16.4",
     "picturefill": "npm:picturefill@3.0.2",
-    "react": "npm:react@0.14.8",
-    "react-dom": "npm:react-dom@0.14.7",
+    "react": "npm:react@15.3.2",
+    "react-dom": "npm:react-dom@15.3.2",
     "react-router": "npm:react-router@2.8.1",
     "sass": "npm:sass@0.5.0",
     "scss": "github:mobilexag/plugin-sass@0.4.6",
@@ -330,9 +330,6 @@ System.config({
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0"
     },
-    "npm:fbjs@0.6.1": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:fbjs@0.8.5": {
       "core-js": "npm:core-js@1.2.7",
       "immutable": "npm:immutable@3.8.1",
@@ -357,9 +354,9 @@ System.config({
     },
     "npm:history@2.0.1": {
       "deep-equal": "npm:deep-equal@1.0.1",
-      "invariant": "npm:invariant@2.2.0",
+      "invariant": "npm:invariant@2.2.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "query-string": "npm:query-string@3.0.0",
+      "query-string": "npm:query-string@3.0.3",
       "warning": "npm:warning@2.1.0"
     },
     "npm:history@2.1.2": {
@@ -382,10 +379,6 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:invariant@2.2.0": {
-      "loose-envify": "npm:loose-envify@1.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:invariant@2.2.1": {
       "loose-envify": "npm:loose-envify@1.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -396,12 +389,6 @@ System.config({
     },
     "npm:js-base64@2.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
-    },
-    "npm:loose-envify@1.1.0": {
-      "js-tokens": "npm:js-tokens@1.0.2",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "stream": "github:jspm/nodelibs-stream@0.1.0",
-      "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:loose-envify@1.2.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -487,9 +474,6 @@ System.config({
     "npm:punycode@1.3.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:query-string@3.0.0": {
-      "strict-uri-encode": "npm:strict-uri-encode@1.1.0"
-    },
     "npm:query-string@3.0.3": {
       "strict-uri-encode": "npm:strict-uri-encode@1.1.0"
     },
@@ -498,8 +482,8 @@ System.config({
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:react-dom@0.14.7": {
-      "react": "npm:react@0.14.8"
+    "npm:react-dom@15.3.2": {
+      "react": "npm:react@15.3.2"
     },
     "npm:react-router@2.8.1": {
       "history": "npm:history@2.1.2",
@@ -509,10 +493,6 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "react": "npm:react@15.3.2",
       "warning": "npm:warning@3.0.0"
-    },
-    "npm:react@0.14.8": {
-      "fbjs": "npm:fbjs@0.6.1",
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:react@15.3.2": {
       "fbjs": "npm:fbjs@0.8.5",

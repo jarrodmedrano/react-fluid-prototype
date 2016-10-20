@@ -39,7 +39,6 @@ class App extends React.Component {
 ReactDOM.render(
     <Router history={appHistory}>
         <Route path="/" component={App}>
-            /* TODO get page component type from json */
             <IndexRoute component={VerticalPage} title={Index.groupIdentifier}/>
             {Routes.map(function (result, id) {
                 return <Route component={VerticalPage} key={id} path={result.groupIdentifier} title={result.groupIdentifier}/>;
