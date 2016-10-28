@@ -12,4 +12,4 @@ build/fonts
 build/img
 build/src
 build/*.js
-buil
+build/*.js*

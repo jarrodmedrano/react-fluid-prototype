@@ -13,7 +13,7 @@ gulp.task('deploy', plugins.shell.task([
 ]));
 
 gulp.task('move', function() {
-    gulp.src('./img/**/*.{gif,png,jpg,svg}')
+    gulp.src('./src/img/**/*.{gif,png,jpg,svg}')
         .pipe(plugins.imagemin({
             progressive: true,
             svgoPlugins: [
