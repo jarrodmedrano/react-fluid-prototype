@@ -5,251 +5,592 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-tap-highlight" content="no">
-
+    <link rel="stylesheet"
+          href="http://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.12.0/css/mwf-west-european-default.min.css"
+          type="text/css"/>
     <meta name="robots" content="noindex, nofollow">
     <script>
-        window.datasource = {
-                 "layout": "VerticalPage",
-                 "deviceInformation": {
-                     "ManufacturerName": "Microsoft",
-                     "ModelName": "Surface Book",
-                     "price": "$1499",
-                     "salePrice": "$1399",
-                     "saleExpires": "11/1/16",
-                     "label": "Starting at:"
-                 },
-                 "ratings": {
-                     "rating": "3",
-                     "bestRating": "5",
-                     "ratingText": "See reviews",
-                     "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
-                 },
-                 "groups": [
-                     {
-                         "groupIdentifier": "oem",
-                         "brand": {
-                             "logo": "src/img/vertical/ms-logo.png",
-                             "title": "-- OEM Title --",
-                             "color": "#ffffff",
-                             "logoTab": "src/img/vertical/surfacebook-logo.png"
-                         },
-                         "sections": [
-                             {
-                                 "ordinal": "100",
-                                 "groupIdentifier": "oem",
-                                 "sectionIdentifier": "Section1",
-                                 "layout": "hero",
-                                 "anchorLink": "true",
-                                 "title": "-- Section1 Title --",
-                                 "heading": "-- Hero Heading --",
-                                 "subheading": "-- Subheading --",
-                                 "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-                                 "picture": "http://placehold.it/1259x472/2F2F2F/171717",
-                                 "altText": "AltText",
-                                 "ariaLabel": "AraiLabel",
-                                 "pictures": [
-                                     {
-                                         "src": "http://placehold.it/1600x600/2F2F2F/171717",
-                                         "minwidth": "(min-width: 1779px)"
-                                     },
-                                     {
-                                         "src": "http://placehold.it/1600x600/2F2F2F/171717",
-                                         "minwidth": "(min-width: 1400px)"
-                                     },
-                                     {
-                                         "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                                         "minwidth": "(min-width: 1084px)"
-                                     },
-                                     {
-                                         "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                                         "minwidth": "(min-width:768px)"
-                                     },
-                                     {
-                                         "src": "http://placehold.it/767x431/2F2F2F/171717",
-                                         "minwidth": "(min-width:540px)"
-                                     },
-                                     {
-                                         "src": "http://placehold.it/539x303/2F2F2F/171717",
-                                         "minwidth": "(min-width:0)"
-                                     }
-                                 ],
-                                 "button": {
-                                     "layout": "button",
-                                     "path": "http://www.microsoft.com",
-                                     "title": "Let me see!",
-                                     "ariaLabel": "ariaLabel",
-                                     "textColor": "white",
-                                     "backgroundColor": "blue"
-                                 }
-                             },
-                             {
-                                 "ordinal": "200",
-                                 "groupIdentifier": "oem",
-                                 "sectionIdentifier": "OneNote",
-                                 "layout": "immersive-hero",
-                                 "anchorLink": "true",
-                                 "title": "-- immersive hero title --"
-                             },
-                             {
-                                 "ordinal": "300",
-                                 "groupIdentifier": "oem",
-                                 "sectionIdentifier": "OneNote",
-                                 "layout": "video",
-                                 "anchorLink": "true",
-                                 "title": "-- video title --",
-                                 "video": "src/img/vertical/Hero-pen.mp4"
-                             },
-                             {
-                                 "ordinal": "400",
-                                 "groupIdentifier": "partner",
-                                 "sectionIdentifier": "mosaic",
-                                 "layout": "mosaic",
-                                 "anchorLink": "true",
-                                 "title": "Mosaics",
-                                 "mosaicContainer": [
-                                     {
-                                         "containerSize": "f-vp1-whole f-vp4-half f-height-large",
-                                         "mosaics": [
-                                             {
-                                                 "mosaicTitle": "Microsoft OneNote",
-                                                 "mosaicSize": "c-mosaic-placement f-background-neutral-90 f-height-large f-width-large",
-                                                 "context": "c-mosaic-placement f-background-neutral-90 f-height-large f-width-large",
-                                                 "logo": "img/onenote-logo.svg",
-                                                 "mosaicHeading": "true",
-                                                 "mosaicCta": "Buy Now",
-                                                 "mosaicStyle": {
-                                                     "background": "#7e3878"
-                                                 }
-                                             }
-                                         ]
-                                     },
-                                     {
-                                         "containerSize": "f-vp1-whole f-vp4-half",
-                                         "mosaics": [
-                                             {
-                                                 "mosaicTitle": "Microsoft Word",
-                                                 "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
-                                                 "context": "c-mosaic-placement f-background-neutral-80 f-height-large f-width-small",
-                                                 "logo": "img/word-logo.svg",
-                                                 "mosaicHeading": "true",
-                                                 "mosaicCta": "Buy Now",
-                                                 "ctaURL": "http://www.microsoftstore.com/",
-                                                 "mosaicStyle": {
-                                                     "background": "#2b5796"
-                                                 }
-                                             },
-                                             {
-                                                 "mosaicTitle": "PowerPoint",
-                                                 "mosaicSize": "f-vp1-whole f-vp2-half f-height-medium",
-                                                 "context": "c-mosaic-placement f-background-neutral-75 f-height-large f-width-small",
-                                                 "logo": "img/powerpoint-logo.svg",
-                                                 "mosaicHeading": "true",
-                                                 "mosaicCta": "Buy Now",
-                                                 "ctaURL": "http://www.microsoftstore.com/",
-                                                 "mosaicStyle": {
-                                                     "background": "#d04525"
-                                                 }
-                                             },
-                                             {
-                                                 "mosaicTitle": "Excel",
-                                                 "mosaicSize": "f-vp1-whole f-height-small",
-                                                 "context": "c-mosaic-placement f-background-neutral-65 f-height-large f-width-large",
-                                                 "logo": "img/excel-logo.svg",
-                                                 "mosaicHeading": "true",
-                                                 "mosaicCta": "Buy Now",
-                                                 "ctaURL": "http://www.microsoftstore.com/",
-                                                 "mosaicStyle": {
-                                                     "background": "#1d7044"
-                                                 }
-                                             }
-                                         ]
-                                     }
-                                 ]
-                             }
-                         ]
-                     },
-                     {
-                         "groupIdentifier": "windows",
-                         "brand": {
-                             "logoTab": "src/img/vertical/windows-logo.png",
-                             "color": "#3076BC"
-                         },
-                         "sections": [
-                             {
-                                 "ordinal": "100",
-                                 "groupIdentifier": "windows",
-                                 "sectionIdentifier": "OneNote",
-                                 "layout": "hero",
-                                 "anchorLink": "true",
-                                 "title": "Windows Section 1",
-                                 "hero": {
-                                     "heroTitle": "Choose your own Windows adventure.",
-                                     "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
-                                     "heroSize": "f-medium",
-                                     "fX": "f-x-left"
-                                 }
-                             },
-                             {
-                                 "ordinal": "200",
-                                 "groupIdentifier": "windows",
-                                 "sectionIdentifier": "Pen",
-                                 "layout": "parallax",
-                                 "anchorLink": "true",
-                                 "title": "Windows Section 2",
-                                 "condition": "PenSupport=true"
-                             }
-                         ]
-                     },
-                     {
-                         "groupIdentifier": "retailer",
-                         "brand": {
-                             "logo": "src/img/vertical/ms-logo.png",
-                             "title": "Surface Book",
-                             "color": "#003b64",
-                             "logoTab": "src/img/vertical/best-buy-logo.png"
-                         },
-                         "sections": [
-                             {
-                                 "ordinal": "100",
-                                 "groupIdentifier": "oem",
-                                 "sectionIdentifier": "Hero",
-                                 "layout": "hero",
-                                 "anchorLink": "true",
-                                 "title": "Intro Image - Left",
-                                 "hero": {
-                                     "heroTitle": "Choose your own Windows adventure.",
-                                     "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
-                                     "heroSize": "f-medium",
-                                     "fX": "f-x-left"
-                                 }
-                             },
-                             {
-                                 "ordinal": "200",
-                                 "groupIdentifier": "oem",
-                                 "sectionIdentifier": "OneNote",
-                                 "layout": "immersive-hero",
-                                 "anchorLink": "true",
-                                 "title": "Device Detail",
-                                 "hero": {
-                                     "heroTitle": "Choose your own Windows adventure.",
-                                     "heroSrc": "img/en-INTL-PDP0-Surface-Pro4-SU3-00001-Large-desktop",
-                                     "heroSize": "f-medium",
-                                     "fX": "f-x-left"
-                                 }
-                             },
-                             {
-                                 "ordinal": "300",
-                                 "groupIdentifier": "oem",
-                                 "sectionIdentifier": "comparemodels",
-                                 "layout": "fullscreen",
-                                 "anchorLink": "true",
-                                 "title": "Full Bleed - Video",
-                                 "videoUrl": "src/img/vertical/Hero-pen.mp4"
-                             }
-                         ]
-                     }
-                 ]
-             }
+        if (window.RDX) {
+            window.datasource = JSON.parse(window.RDX.datasource);
+        }
+        else {
+            window.datasource =
+            {
+                "layout": "VerticalPage",
+                "deviceInformation": {
+                    "ManufacturerName": "Microsoft",
+                    "ModelName": "Surface Book",
+                    "price": "$1499",
+                    "salePrice": "$1399",
+                    "saleExpires": "11/1/16",
+                    "label": "Starting at:"
+                },
+                "ratings": {
+                    "rating": "3",
+                    "bestRating": "5",
+                    "ratingText": "See reviews",
+                    "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
+                },
+                "groups": [
+                    {
+                        "groupIdentifier": "oem",
+                        "brand": {
+                            "logo": "src/img/vertical/ms-logo.png",
+                            "title": "-- OEM Title --",
+                            "color": "#ffffff",
+                            "logoTab": "src/img/vertical/surfacebook-logo.png"
+                        },
+                        "sections": [
+                            {
+                                "ordinal": "100",
+                                "groupIdentifier": "oem",
+                                "sectionIdentifier": "Section1",
+                                "layout": "hero",
+                                "anchorLink": "true",
+                                "title": "-- Section1 Title --",
+                                "heading": "-- Hero Heading --",
+                                "subheading": "-- Subheading --",
+                                "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+                                "altText": "AltText",
+                                "ariaLabel": "AriaLabel",
+                                "pictures": [
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1779px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1400px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1084px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                                        "minwidth": "(min-width:768px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/767x431/2F2F2F/171717",
+                                        "minwidth": "(min-width:540px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/539x303/2F2F2F/171717",
+                                        "minwidth": "(min-width:0)"
+                                    }
+                                ],
+                                "button": {
+                                    "layout": "button",
+                                    "path": "#/windows",
+                                    "title": "Call to action",
+                                    "ariaLabel": "ariaLabel",
+                                    "textColor": "white",
+                                    "backgroundColor": "#0078D7"
+                                },
+                                "alignX": "right",
+                                "alignY": "center",
+                                "theme": "theme-dark"
+                            },
+                            {
+                                "ordinal": "200",
+                                "groupIdentifier": "oem",
+                                "sectionIdentifier": "OneNote",
+                                "layout": "immersive-hero",
+                                "anchorLink": "true",
+                                "title": "-- immersive hero title --",
+                                "heading": "-- Hero Heading --",
+                                "subheading": "-- Subheading --",
+                                "picture": "http://placehold.it/1259x472/2F2F2F/171717",
+                                "altText": "AltText",
+                                "ariaLabel": "AriaLabel",
+                                "pictures": [
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1779px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1400px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1084px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                                        "minwidth": "(min-width:768px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/767x431/2F2F2F/171717",
+                                        "minwidth": "(min-width:540px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/539x303/2F2F2F/171717",
+                                        "minwidth": "(min-width:0)"
+                                    }
+                                ],
+                                "button": {
+                                    "layout": "button",
+                                    "path": "http://www.microsoft.com",
+                                    "title": "Call to action",
+                                    "ariaLabel": "ariaLabel",
+                                    "textColor": "white",
+                                    "backgroundColor": "#0078D7"
+                                },
+                                "alignY": "top",
+                                "theme": "theme-dark"
+                            },
+                            {
+                                "ordinal": "300",
+                                "groupIdentifier": "oem",
+                                "sectionIdentifier": "OneNote",
+                                "layout": "video",
+                                "anchorLink": "true",
+                                "title": "-- video title --",
+                                "video": "src/img/vertical/Hero-pen.mp4"
+                            },
+                            {
+                                "ordinal": "300",
+                                "groupIdentifier": "partner",
+                                "sectionIdentifier": "mosaic",
+                                "layout": "mosaic",
+                                "anchorLink": "true",
+                                "title": "-- mosaic title --",
+                                "mosaic": {
+                                    "theme": "theme-dark",
+                                    "layout": "layout-3",
+                                    "tiles": [
+                                        {
+                                            "heading": "-- mosaic title 1 --",
+                                            "subheading": "-- mosaic subtitle 1 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/890x800/171717/2F2F2F",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/800x800/171717/2F2F2F",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/700x800/171717/2F2F2F",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/1083x400/171717/2F2F2F",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/768x400/171717/2F2F2F",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/540x300/171717/2F2F2F",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "heading": "-- mosaic title 2 --",
+                                            "subheading": "-- mosaic subtitle 2 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/425x425/2F2F2F/222222",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/400x400/2F2F2F/222222",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/350x400/2F2F2F/222222",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/542x400/2F2F2F/222222",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/384x400/2F2F2F/222222",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/540x300/2F2F2F/222222",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "heading": "-- mosaic title 3 --",
+                                            "subheading": "-- mosaic subtitle 3 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/425x425/464646/333333",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/400x400/464646/333333",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/350x400/464646/333333",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/542x400/464646/333333",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/384x400/464646/333333",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/540x300/464646/333333",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "heading": "-- mosaic title 4 --",
+                                            "subheading": "-- mosaic subtitle 4 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/425x425/5E5E5E/505050",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/400x400/5E5E5E/505050",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/350x400/5E5E5E/505050",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/542x400/5E5E5E/505050",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/384x400/5E5E5E/505050",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/540x300/5E5E5E/505050",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "heading": "-- mosaic title 5 --",
+                                            "subheading": "-- mosaic subtitle 5 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/215x215/767676/666666",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/200x200/767676/666666",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/175x200/767676/666666",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/271x200/767676/666666",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/192x200/767676/666666",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/270x150/767676/666666",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "heading": "-- mosaic title 6 --",
+                                            "subheading": "-- mosaic subtitle 6 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/215x215/919191/777777",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/200x200/919191/777777",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/175x200/919191/777777",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/271x200/919191/777777",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/192x200/919191/777777",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/270x150/919191/777777",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "heading": "-- mosaic title 7 --",
+                                            "subheading": "-- mosaic subtitle 7 --",
+                                            "button": {
+                                                "layout": "link",
+                                                "path": "http://www.microsoft.com",
+                                                "title": "Call to action",
+                                                "textColor": "white",
+                                                "backgroundColor": "blue"
+                                            },
+                                            "size": "1",
+                                            "pictures": [
+                                                {
+                                                    "src": "http://placehold.it/425x215/ACACAC/888888",
+                                                    "minwidth": "(min-width:1779px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/400x200/ACACAC/888888",
+                                                    "minwidth": "(min-width:1400px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/350x200/ACACAC/888888",
+                                                    "minwidth": "(min-width:1084px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/542x200/ACACAC/888888",
+                                                    "minwidth": "(min-width:768px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/384x200/ACACAC/888888",
+                                                    "minwidth": "(min-width:540px)"
+                                                },
+
+                                                {
+                                                    "src": "http://placehold.it/540x150/ACACAC/888888",
+                                                    "minwidth": "(min-width:0)"
+                                                },
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "groupIdentifier": "windows",
+                        "brand": {
+                            "logoTab": "src/img/vertical/windows-logo.png",
+                            "color": "#3076BC"
+                        },
+                        "sections": [
+                            {
+                                "ordinal": "100",
+                                "groupIdentifier": "oem",
+                                "sectionIdentifier": "Section1",
+                                "layout": "hero",
+                                "anchorLink": "true",
+                                "title": "-- Section1 Title --",
+                                "heading": "-- Hero Heading --",
+                                "subheading": "-- Subheading --",
+                                "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+                                "picture": "http://placehold.it/1259x472/2F2F2F/171717",
+                                "altText": "AltText",
+                                "ariaLabel": "AriaLabel",
+                                "pictures": [
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1779px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1400px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1084px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                                        "minwidth": "(min-width:768px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/767x431/2F2F2F/171717",
+                                        "minwidth": "(min-width:540px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/539x303/2F2F2F/171717",
+                                        "minwidth": "(min-width:0)"
+                                    }
+                                ],
+                                "button": {
+                                    "layout": "button",
+                                    "path": "http://www.microsoft.com",
+                                    "title": "Call to action",
+                                    "ariaLabel": "ariaLabel",
+                                    "textColor": "white",
+                                    "backgroundColor": "#0078D7"
+                                },
+                                "alignX": "right",
+                                "alignY": "center",
+                                "theme": "theme-dark"
+                            }
+                        ]
+                    },
+                    {
+                        "groupIdentifier": "retailer",
+                        "brand": {
+                            "logo": "src/img/vertical/ms-logo.png",
+                            "title": "Surface Book",
+                            "color": "#003b64",
+                            "logoTab": "src/img/vertical/best-buy-logo.png"
+                        },
+                        "sections": [
+                            {
+                                "ordinal": "100",
+                                "groupIdentifier": "oem",
+                                "sectionIdentifier": "Section1",
+                                "layout": "hero",
+                                "anchorLink": "true",
+                                "title": "-- Section1 Title --",
+                                "heading": "-- Hero Heading --",
+                                "subheading": "-- Subheading --",
+                                "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+                                "picture": "http://placehold.it/1259x472/2F2F2F/171717",
+                                "altText": "AltText",
+                                "ariaLabel": "AriaLabel",
+                                "pictures": [
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1779px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1600x600/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1400px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                                        "minwidth": "(min-width: 1084px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                                        "minwidth": "(min-width:768px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/767x431/2F2F2F/171717",
+                                        "minwidth": "(min-width:540px)"
+                                    },
+                                    {
+                                        "src": "http://placehold.it/539x303/2F2F2F/171717",
+                                        "minwidth": "(min-width:0)"
+                                    }
+                                ],
+                                "button": {
+                                    "layout": "button",
+                                    "path": "http://www.microsoft.com",
+                                    "title": "Call to action",
+                                    "ariaLabel": "ariaLabel",
+                                    "textColor": "white",
+                                    "backgroundColor": "#0078D7"
+                                },
+                                "alignX": "right",
+                                "alignY": "center",
+                                "theme": "theme-dark"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     </script>
 </head>
 <body class="win-type-body">

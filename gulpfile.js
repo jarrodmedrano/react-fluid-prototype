@@ -21,7 +21,7 @@ gulp.task('move', function() {
                 {cleanupIDs: false}
             ]
         }))
-        .pipe(gulp.dest('./build/img'));
+        .pipe(gulp.dest('./build/src/img'));
     gulp.src('./src/fonts/*')
         .pipe(gulp.dest('./build/fonts'));
 });
