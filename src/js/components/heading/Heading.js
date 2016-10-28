@@ -3,6 +3,7 @@ import Button from '../button/Button';
 
 class Heading extends React.Component {
     render() {
+
         let { heading, subheading, paragraph } = this.props.data;
 
         return (

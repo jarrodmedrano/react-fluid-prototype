@@ -4,7 +4,7 @@ class Picture extends React.Component {
 
     render() {
 
-        let { pictures, picture, altText } = this.props.data;
+        let { pictures, altText } = this.props.data;
 
         return (
             <picture className="c-image">
@@ -14,8 +14,8 @@ class Picture extends React.Component {
                             <source srcSet={object.src} media={object.minwidth} key={id}/>)
                     })
                     : null }
-                {picture ?
-                    <img srcSet={picture} src={picture} alt={altText}/> : null }
+                {pictures ?
+                    <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText}/> : null }
             </picture>
         )
     }

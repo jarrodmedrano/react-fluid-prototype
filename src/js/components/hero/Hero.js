@@ -9,7 +9,7 @@ class Hero extends React.Component {
 
         let { alignX, alignY, theme } = this.props.data;
 
-        let heroClass = classNames('m-hero-item f-medium context-accessory', `f-x-${alignX}`, `f-y-${alignY}`, `theme-${theme}`);
+        let heroClass = classNames('m-hero-item f-medium context-accessory', `f-x-${alignX}`, `f-y-${alignY}`, theme);
 
         return (
             <div className={heroClass}>

@@ -23,11 +23,11 @@ System.config({
     "core-js": "npm:core-js@1.2.7",
     "css": "github:systemjs/plugin-css@0.1.19",
     "history": "npm:history@2.0.1",
-    "json": "github:systemjs/plugin-json@0.1.2",
+    "json": "github:systemjs/plugin-json@0.2.0",
     "lodash": "npm:lodash@4.16.4",
     "picturefill": "npm:picturefill@3.0.2",
-    "react": "npm:react@15.3.2",
-    "react-dom": "npm:react-dom@15.3.2",
+    "react": "npm:react@15.0.2",
+    "react-dom": "npm:react-dom@15.0.2",
     "react-router": "npm:react-router@2.8.1",
     "sass": "npm:sass@0.5.0",
     "scss": "github:mobilexag/plugin-sass@0.4.6",
@@ -119,13 +119,6 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
-    },
-    "npm:async-props@0.3.2": {
-      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "react": "npm:react@15.3.2",
-      "react-router": "npm:react-router@2.8.1"
     },
     "npm:autoprefixer@6.5.0": {
       "browserslist": "npm:browserslist@1.4.0",
@@ -482,8 +475,8 @@ System.config({
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:react-dom@15.3.2": {
-      "react": "npm:react@15.3.2"
+    "npm:react-dom@15.0.2": {
+      "react": "npm:react@15.0.2"
     },
     "npm:react-router@2.8.1": {
       "history": "npm:history@2.1.2",
@@ -491,10 +484,10 @@ System.config({
       "invariant": "npm:invariant@2.2.1",
       "loose-envify": "npm:loose-envify@1.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "react": "npm:react@15.3.2",
+      "react": "npm:react@15.0.2",
       "warning": "npm:warning@3.0.0"
     },
-    "npm:react@15.3.2": {
+    "npm:react@15.0.2": {
       "fbjs": "npm:fbjs@0.8.5",
       "loose-envify": "npm:loose-envify@1.2.0",
       "object-assign": "npm:object-assign@4.1.0",

@@ -1,4 +1,5 @@
 import React from 'react'
+import './video.scss!'
 
 class Video extends React.Component {
 
@@ -22,7 +23,7 @@ class Video extends React.Component {
                     <img src={foregroundImage} alt={title} className="overlay" />
                         : null
                 }
-                <video className="video-fullscreen fixed" loop id="video-pen">
+                <video className="video-fullscreen fixed" loop>
                     <source src={video} type="video/mp4" />
                 </video>
             </div>

@@ -1,6 +1,6 @@
 .tabs {
   background: #333333;
-  height: 72px;
+  height: 45px;
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -9,7 +9,7 @@
   justify-content: center;
 
   + .sticky-banner {
-    top: 72px;
+    top: 45px;
   }
 
   ul {
@@ -24,8 +24,7 @@
   }
 
   li img, li svg {
-    max-height: 40px;
-    max-width: 114px;
+    max-height: 35px;
     filter: brightness(0) invert(1);
   }
 

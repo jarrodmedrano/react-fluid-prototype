@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames';
-import Parallax from './parallax/Parallax';
-import Video from './video/Video';
-import Apps from './apps/Apps';
-import Config from './config/Config';
+import Parallax from '../parallax/Parallax';
+import Video from '../video/Video';
+import Apps from '../apps/Apps';
+import Config from '../config/Config';
 import Hero from '../hero/Hero';
 import ImmersiveHero from '../hero/ImmersiveHero';
 import Mosaic from '../mosaic/Mosaic';
@@ -12,38 +12,32 @@ class Vertical extends React.Component {
 
     render() {
 
-        let verticalClass = classNames('scene-vertical', this.props.vertical.groupIdentifier);
+        let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier);
 
-        let layout = this.props.vertical.layout;
+        let layout = this.props.data.layout;
 
         return (
-            <section className={verticalClass} id={this.props.vertical.title.split(' ').join('-').toLowerCase()}>
+            <section className={verticalClass} id={this.props.data.title.split(' ').join('-').toLowerCase()}>
                 {layout === 'hero' ?
-                    <Hero data={this.props.vertical}/> : null
+                    <Hero data={this.props.data}/> : null
                 }
                 {layout === 'immersive-hero' ?
-                    <ImmersiveHero data={this.props.vertical}/> : null
+                    <ImmersiveHero data={this.props.data}/> : null
                 }
                 {layout === 'parallax' ?
-                    <Parallax data={this.props.vertical}/> : null
+                    <Parallax data={this.props.data}/> : null
                 }
                 {layout === 'video' ?
-                    <Video data={this.props.vertical}/> : null
+                    <Video data={this.props.data}/> : null
                 }
                 {layout === 'apps' ?
-                    <Apps data={this.props.vertical}/> : null
+                    <Apps data={this.props.data}/> : null
                 }
                 {layout === 'config' ?
-                    <Config data={this.props.vertical}/> : null
+                    <Config data={this.props.data}/> : null
                 }
                 {layout === 'mosaic' ?
-                    <div className="c-mosaic fullscreen-mosaic">
-                        <div className="m-mosaic">
-                            <div className="c-mosaic">
-                                <Mosaic data={this.props.vertical}/>
-                            </div>
-                        </div>
-                    </div> : null
+                    <Mosaic data={this.props.data}/> : null
                 }
             </section>
         )

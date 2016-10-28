@@ -9,7 +9,7 @@ class ImmersiveHero extends React.Component {
 
         let { alignY, theme } = this.props.data;
 
-        let heroClass = classNames('m-immersive-hero-item', `f-align-${alignY}`, `theme-${theme}`);
+        let heroClass = classNames('m-immersive-hero-item', `f-align-${alignY}`, theme);
 
         return (
             <div className={heroClass}>

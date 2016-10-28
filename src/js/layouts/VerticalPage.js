@@ -39,7 +39,7 @@ class VerticalPage extends React.Component {
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
                             return (
-                                <Vertical key={id} vertical={result} />
+                                <Vertical key={id} data={result} />
                             )
                         })
                         : null
