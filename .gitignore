@@ -8,3 +8,8 @@ node_modules
 /.vs
 jspm_packages
 *.orig
+build/fonts
+build/img
+build/src
+build/*.js
+build/*.js*
