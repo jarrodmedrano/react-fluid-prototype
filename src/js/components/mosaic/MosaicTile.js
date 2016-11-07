@@ -3,7 +3,6 @@ import Picture from '../picture/Picture';
 import Heading from '../heading/Heading';
 import propsAreValid from '../../util';
 
-
 class MosaicTile extends React.Component {
     render() {
         if(propsAreValid(this.props)) {
