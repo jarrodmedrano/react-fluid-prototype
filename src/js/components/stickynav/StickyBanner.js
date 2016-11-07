@@ -5,21 +5,10 @@ import _ from 'lodash';
 import './sticky-banner.scss!'
 
 class StickyBanner extends React.Component {
+
     render() {
 
-        let retailerGroup = _.find(this.props.groups, function(result) {
-            if(result.groupIdentifier === 'retailer') {
-                return result
-            }
-        });
-
-        let oemGroup = _.find(this.props.groups, function (result) {
-            if (result.groupIdentifier === 'oem') {
-                return result
-            }
-        });
-
-        let {title, logo} = oemGroup.brand;
+        let {title, logo} = this.props.oemGroup;
 
         return (
             <div className="sticky-banner sticky-header">
@@ -41,7 +30,7 @@ class StickyBanner extends React.Component {
 
                 <div className="cta">
                     <div className="c-label">{ this.props.price.label } <span className="c-heading-5">{ this.props.price.price }</span></div>
-                    <Button pathname={retailerGroup.groupIdentifier} hash="#comparemodels" title="Compare Models" />
+                    <Button  />
                 </div>
             </div>
         )
