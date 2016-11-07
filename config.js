@@ -14,8 +14,13 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  packages: {
+    "src": {
+      "defaultExtension": "js"
+    }
+  },
+
   map: {
-    "async-props": "npm:async-props@0.3.2",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "classnames": "npm:classnames@2.2.5",
@@ -24,13 +29,20 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.19",
     "history": "npm:history@2.0.1",
     "json": "github:systemjs/plugin-json@0.2.0",
-    "lodash": "npm:lodash@4.16.4",
+    "lodash": "npm:lodash@4.16.6",
     "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@15.0.2",
     "react-dom": "npm:react-dom@15.0.2",
     "react-router": "npm:react-router@2.8.1",
     "sass": "npm:sass@0.5.0",
     "scss": "github:mobilexag/plugin-sass@0.4.6",
+    "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.6.0",
+    "winjs": "npm:winjs@4.4.0",
+    "github:capaj/systemjs-hot-reloader@0.6.0": {
+      "debug": "npm:debug@2.2.0",
+      "socket.io-client": "github:socketio/socket.io-client@1.5.1",
+      "weakee": "npm:weakee@1.0.0"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -90,7 +102,7 @@ System.config({
     "github:mobilexag/plugin-sass@0.4.6": {
       "autoprefixer": "npm:autoprefixer@6.5.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "lodash": "npm:lodash@4.16.4",
+      "lodash": "npm:lodash@4.16.6",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "postcss": "npm:postcss@5.2.4",
       "reqwest": "github:ded/reqwest@2.0.5",
@@ -290,6 +302,9 @@ System.config({
       "pbkdf2": "npm:pbkdf2@3.0.9",
       "public-encrypt": "npm:public-encrypt@4.0.0",
       "randombytes": "npm:randombytes@2.0.3"
+    },
+    "npm:debug@2.2.0": {
+      "ms": "npm:ms@0.7.1"
     },
     "npm:des.js@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -587,6 +602,9 @@ System.config({
     },
     "npm:warning@3.0.0": {
       "loose-envify": "npm:loose-envify@1.2.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:winjs@4.4.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }

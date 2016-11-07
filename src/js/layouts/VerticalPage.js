@@ -1,8 +1,5 @@
 import React from 'react'
 import '../../styles/main.scss!';
-
-import _ from 'lodash/lodash';
-
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
@@ -12,29 +9,30 @@ class VerticalPage extends React.Component {
 
     render() {
 
-        /* TODO make names independent */
+        let {ratings, deviceInformation, groups} = this.props.data;
 
+        let {currentPage, oemGroup, retailerGroup} = this.props;
 
-        let { ratings, deviceInformation, groups, branding } = this.props.data;
+        let tabsProps = {
+            routes : this.props.routes,
+            params : this.props.params,
+            groups
+        };
 
-        let title = this.props.route.title;
-
-
-        let currentPage = _.find(groups, function(result) {
-            return result.groupIdentifier === title
-        }, this);
-
-        let oemGroup = _.find(groups, function(result) {
-            if(result.groupIdentifier === 'oem') {
-                return result
-            }
-        });
-
+        let bannerProps = {
+            oemratings : ratings,
+            price : deviceInformation,
+            branding : oemGroup.brand,
+            groups,
+            currentPage,
+            oemGroup,
+            retailerGroup
+        };
 
         return (
             <div>
-                {groups.length > 1 ? <Tabs routes={this.props.routes} params={this.props.params} groups={ groups } /> : null }
-                {oemGroup.brand ? <StickyBanner oemratings={ ratings } price={ deviceInformation } branding={ oemGroup.brand } groups={ groups } currentPage={ currentPage }  /> : null }
+                {groups.length > 1 ? <Tabs {...tabsProps} /> : null }
+                {oemGroup.brand ? <StickyBanner {...bannerProps} /> : null }
                 <main id="main">
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
@@ -50,5 +48,20 @@ class VerticalPage extends React.Component {
         );
     }
 }
+
+// VerticalPage.propTypes = {
+//     routes : React.PropTypes.isRequired,
+//     params : React.PropTypes.isRequired,
+//     data : React.PropTypes.isRequired,
+//     ratings : React.PropTypes.isRequired,
+//     deviceInformation : React.PropTypes.isRequired,
+//     groups: React.PropTypes.isRequired,
+//     currentPage: React.PropTypes.isRequired,
+//     oemGroup: React.PropTypes.isRequired,
+//     retailerGroup: React.PropTypes.isRequired,
+//     oemratings: React.PropTypes.isRequired,
+//     price : React.PropTypes.isRequired,
+//     branding : React.PropTypes.isRequired,
+// };
 
 export default VerticalPage

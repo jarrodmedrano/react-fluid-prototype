@@ -6,11 +6,10 @@ import { Link, IndexLink } from 'react-router';
 class Tabs extends React.Component {
 
     constructor(props) {
+
         super(props);
 
-        this.state = {
-
-        };
+        this.state = {};
 
         let logoTabs = this.props.groups.reduce(function(newVal, previousVal, key) {
 
