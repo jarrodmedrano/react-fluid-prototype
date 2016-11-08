@@ -42,7 +42,7 @@ class MosaicContainer extends React.Component {
             return (
                 <div className="c-mosaic fullscreen-mosaic">
                     <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                        <MosaicTile  />
+                        <MosaicTile data={tiles[0]} />
                     </div>
                     <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
