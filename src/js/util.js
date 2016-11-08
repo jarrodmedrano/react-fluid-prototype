@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export function createChainableTypeChecker(validate) {
+function createChainableTypeChecker(validate) {
     function checkType(isRequired, props, propName, componentName, location) {
         componentName = componentName || ANONYMOUS;
         if (props[propName] == null) {
@@ -17,7 +17,7 @@ export function createChainableTypeChecker(validate) {
         }
     }
 
-    var chainedCheckType = checkType.bind(null, false);
+    let chainedCheckType = checkType.bind(null, false);
     chainedCheckType.isRequired = checkType.bind(null, true);
 
     return chainedCheckType;
@@ -26,12 +26,17 @@ export function createChainableTypeChecker(validate) {
 export default function validateProp (props, propName, componentName, location) {
     componentName = componentName || 'ANONYMOUS';
 
-    if (!props[propName]) {
-       return new Error(componentName + ' is missing propType ' + propName + '.');
+    if (props[propName]) {
+        let value = props[propName];
+        if (typeof value === 'string') {
+            return value.length <= 140 ? null : new Error(propName + ' in ' + componentName + " is longer than 140 characters");
+        }
     }
 
+    // assume all ok
     return null;
 }
+
 
 //
 // function validateProps(props) {

@@ -1,7 +1,6 @@
 import React from 'react';
 import Picture from '../picture/Picture';
 import Heading from '../heading/Heading';
-import validateProp from '../../util';
 
 class MosaicTile extends React.Component {
     render() {
@@ -13,9 +12,34 @@ class MosaicTile extends React.Component {
             )
     }
 }
+const chainablePropType = predicate => {
+    const propType = (props, propName, componentName) => {
+        // don't do any validation if empty
+        if (props[propName] == null) {
+            return;
+        }
 
-export default MosaicTile;
+        return predicate(props, propName, componentName);
+    }
+
+    propType.isRequired = (props, propName, componentName) => {
+        // warn if empty
+        if (props[propName] == null) {
+            return new Error(`Required prop \`${propName}\` was not specified in \`${componentName}\`.`);
+        }
+
+        return predicate(props, propName, componentName);
+    }
+
+    return propType;
+}
+
+const customProp = chainablePropType(() => {
+
+});
 
 MosaicTile.propTypes = {
-    data: validateProp
+    data: customProp.isRequired
 };
+
+export default MosaicTile;
