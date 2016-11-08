@@ -562,10 +562,7 @@
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-    if (location.origin.match(/localhost/)) {
-        System.trace = true
-        System.import('src/js/app.js')
-    }
+    System.trace = true
     System.import('src/js/app.js')
 </script>
 </body>
