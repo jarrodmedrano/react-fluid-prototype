@@ -7,6 +7,9 @@ import Config from '../../../../prototypes/js/components/config/Config';
 import Hero from '../hero/Hero';
 import ImmersiveHero from '../hero/ImmersiveHero';
 import Mosaic from '../mosaic/Mosaic';
+import LegacyFeature from '../legacy/legacyFeature';
+import LegacyKSP from '../legacy/legacyKsp';
+import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 
 class Vertical extends React.Component {
 
@@ -38,6 +41,26 @@ class Vertical extends React.Component {
                 }
                 {layout === 'mosaic' ?
                     <Mosaic data={this.props.data}/> : null
+                }
+                {layout === 'feature' ?
+                    <LegacyFeature data={this.props.data}/> : null
+                }
+                {layout === 'featureCta' ?
+                    <LegacyFeature data={this.props.data}/> : null
+                }
+                {layout === 'ksp' ?
+                    <LegacyKSP data={this.props.data}/> : null
+                }
+                {/*  Implement as variants of 'ksp'?
+                {layout === 'ksp_reversed' ?
+                    <LegacyKSP data={this.props.data}/> : null
+                }
+                {layout === 'ksp_rs' ?
+                    <LegacyKSP data={this.props.data}/> : null
+                }
+                */}
+                {layout === 'centeredBackdropTemplate' ?
+                    <LegacyCenteredBackdrop data={this.props.data}/> : null
                 }
             </section>
         )
