@@ -1,17 +1,18 @@
 import React from 'react';
 import propsAreValid from '../../util';
 import picturePropTypes from '../../../data/dataProps';
+import dataPropTypes from '../../../data/dataProps';
 
 class Picture extends React.Component {
-
     render() {
         if(propsAreValid(this.props.data)) {
             let { pictures, altText } = this.props.data;
             return (
                 <picture className="c-image">
                     {pictures.map(function (object, id) {
-                            return (
-                                <source srcSet={object.src} media={object.minwidth} key={id}/>)
+                        return (
+                            <source srcSet={object.src} media={object.minwidth} key={id}/>
+                        )
                     })}
                     <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText}/>
                 </picture>
@@ -25,6 +26,6 @@ Picture.defaultProps = {
     altText: ''
 };
 
-Picture.propTypes = picturePropTypes;
+Picture.propTypes = dataPropTypes(picturePropTypes);
 
 export default Picture

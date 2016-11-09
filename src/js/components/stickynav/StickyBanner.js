@@ -30,7 +30,7 @@ class StickyBanner extends React.Component {
 
                 <div className="cta">
                     <div className="c-label">{ this.props.price.label } <span className="c-heading-5">{ this.props.price.price }</span></div>
-                    <Button  />
+                    {/*<Button  />*/}
                 </div>
             </div>
         )

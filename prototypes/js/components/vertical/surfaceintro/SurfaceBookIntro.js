@@ -2,16 +2,12 @@ import React from 'react'
 import './surfacebookintro.scss'
 
 class SurfaceBookIntro extends React.Component {
-
     render() {
-
         let lineStyle = {
             'fill': 'none',
             'stroke': '#818080',
             'strokeMiterlimit': '10'
         };
-
-
         return (
             <div className="full-width">
                 <div className="hotspots">

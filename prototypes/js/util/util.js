@@ -8,7 +8,7 @@ const chainablePropType = predicate => {
         }
 
         return predicate(props, propName, componentName);
-    }
+    };
 
     propType.isRequired = (props, propName, componentName) => {
         // warn if empty
@@ -17,10 +17,10 @@ const chainablePropType = predicate => {
         }
 
         return predicate(props, propName, componentName);
-    }
+    };
 
     return propType;
-}
+};
 
 export var customProp = chainablePropType(() => {
 
