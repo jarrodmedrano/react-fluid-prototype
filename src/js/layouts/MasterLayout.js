@@ -1,6 +1,4 @@
 import React from 'react'
-import toggleRender from '../util';
-import customProp from '../util';
 //Components
 import VerticalPage from './VerticalPage';
 import _ from 'lodash/lodash';
