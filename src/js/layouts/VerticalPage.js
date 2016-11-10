@@ -31,7 +31,6 @@ class VerticalPage extends React.Component {
             }
         });
 
-
         return (
             <div>
                 {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
@@ -54,7 +53,7 @@ class VerticalPage extends React.Component {
                 </main>
                 {currentPage.sections ? <Footer footer={currentPage.sections} /> : null}
             </div>
-        );
+        )
     }
 }
 

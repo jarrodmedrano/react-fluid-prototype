@@ -1,6 +1,8 @@
 import React from 'react';
 import MosaicTile from './MosaicTile';
 import propsAreValid from '../../util';
+import tilePropTypes from '../../../data/dataProps';
+import dataPropTypes from '../../../data/dataProps';
 
 class MosaicContainer extends React.Component {
     render() {
@@ -268,5 +270,7 @@ class MosaicContainer extends React.Component {
         } return null
     }
 }
+
+MosaicContainer.propTypes = dataPropTypes(tilePropTypes);
 
 export default MosaicContainer;

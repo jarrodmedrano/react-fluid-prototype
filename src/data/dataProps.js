@@ -48,6 +48,23 @@ export let devicePropTypes = {
   label: React.PropTypes.string,
 }
 
+export let tilePropTypes = {
+  tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
+      headingPropTypes,
+      size: React.PropTypes.string,
+      picturePropTypes,
+      buttonPropTypes
+  }))
+}
+
+export let mosaicPropTypes = {
+  mosaic: React.PropTypes.shape({
+      theme: React.PropTypes.string,
+      layout: React.PropTypes.string,
+      tilePropTypes
+  }),
+}
+
 export default function dataPropTypes(component) {
     return {
         data: React.PropTypes.shape(Object.assign(component)).isRequired
