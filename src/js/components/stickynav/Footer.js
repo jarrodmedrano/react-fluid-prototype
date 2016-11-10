@@ -1,10 +1,12 @@
-import React from 'react'
-import {Link} from 'react-router'
+import React from 'react';
+import {Link} from 'react-router';
+import propsAreValid from '../../util';
 
 class Footer extends React.Component {
     _handleClick(anchorTarget, event) {
     }
     render() {
+      if(propsAreValid(this.props.data)) {
         return (
             <div className="sticky-banner sticky-footer">
                 {this.props.footer.map(function(result, id)  {
@@ -18,6 +20,7 @@ class Footer extends React.Component {
                 }, this)}
             </div>
         )
+      } return null
     }
 }
 

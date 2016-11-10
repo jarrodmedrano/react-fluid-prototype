@@ -1,14 +1,19 @@
-import React from 'react'
-import Starrating from '../starrating/Starrating'
-import Button from '../button/Button'
+import React from 'react';
+import Starrating from '../starrating/Starrating';
+import Button from '../button/Button';
 import _ from 'lodash';
-import './sticky-banner.scss!'
+import './sticky-banner.scss!';
+import propsAreValid from '../../util';
+import devicePropTypes from '../../../data/dataProps';
+import dataPropTypes from '../../../data/dataProps';
 
 class StickyBanner extends React.Component {
 
     render() {
 
-        let {title, logo} = this.props.oemGroup;
+        if(propsAreValid(this.props.data)) {
+
+        let {title, logo} = this.props.data.brand;
 
         return (
             <div className="sticky-banner sticky-header">
@@ -16,6 +21,8 @@ class StickyBanner extends React.Component {
                 { title ? <h4 className="c-heading-4">{ title }</h4> : null }
 
                 { this.props.ratings ? <Starrating data={ this.props.ratings } /> : null }
+
+                {this.props.children}
 
                 {/*
                     TODO: Look in the retailer group's brand object to see if it has a 'compareModels' link.  If so use that for the button.
@@ -27,14 +34,12 @@ class StickyBanner extends React.Component {
                 {/*
                     TODO: Design the values for displaying price.  Sale price vs MSRP, time limit messaging etc...
                 */}
-
-                <div className="cta">
-                    <div className="c-label">{ this.props.price.label } <span className="c-heading-5">{ this.props.price.price }</span></div>
-                    {/*<Button  />*/}
-                </div>
             </div>
         )
+      } return null
     }
 }
+
+StickyBanner.propTypes = dataPropTypes(devicePropTypes);
 
 export default StickyBanner

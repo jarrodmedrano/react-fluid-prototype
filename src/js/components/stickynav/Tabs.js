@@ -11,7 +11,7 @@ class Tabs extends React.Component {
 
         this.state = {};
 
-        let logoTabs = this.props.groups.reduce(function(newVal, previousVal, key) {
+        let logoTabs = this.props.data.groups.reduce(function(newVal, previousVal, key) {
 
             if(previousVal.brand.logoTab != null) {
                 newVal[key] = previousVal.brand.logoTab;
@@ -20,7 +20,7 @@ class Tabs extends React.Component {
 
         }, {});
 
-        let logoColors = this.props.groups.reduce(function(newVal, previousVal, key) {
+        let logoColors = this.props.data.groups.reduce(function(newVal, previousVal, key) {
 
             if(previousVal.brand.color != null) {
                 newVal[key] = previousVal.brand.color;

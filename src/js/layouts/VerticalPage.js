@@ -4,35 +4,44 @@ import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
 import Footer from '../components/stickynav/Footer';
+import Button from '../components/button/Button';
+import _ from 'lodash';
 
 class VerticalPage extends React.Component {
 
     render() {
 
+        let title = this.props.route.title;
         let {ratings, deviceInformation, groups} = this.props.data;
 
-        let {currentPage, oemGroup, retailerGroup} = this.props;
 
-        let tabsProps = {
-            routes : this.props.routes,
-            params : this.props.params,
-            groups
-        };
+        let currentPage = _.find(groups, function(result) {
+            return result.groupIdentifier === title
+        }, {this});
 
-        let bannerProps = {
-            oemratings : ratings,
-            price : deviceInformation,
-            branding : oemGroup.brand,
-            groups,
-            currentPage,
-            oemGroup,
-            retailerGroup
-        };
+        let oemGroup = _.find(groups, function(result) {
+            if(result.groupIdentifier === 'oem') {
+                return result
+            }
+        });
+
+        let retailerGroup = _.find(this.props.groups, function(result) {
+            if(result.groupIdentifier === 'retailer') {
+                return result
+            }
+        });
+
 
         return (
             <div>
-                {groups.length > 1 ? <Tabs {...tabsProps} /> : null }
-                {oemGroup.brand ? <StickyBanner {...bannerProps} /> : null }
+                {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
+                {oemGroup.brand ?
+                  <StickyBanner data={currentPage}>
+                    <div className="cta">
+                        <Button data={this.props.currentPage}  />
+                    </div>
+                  </StickyBanner>
+                : null }
                 <main id="main">
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
