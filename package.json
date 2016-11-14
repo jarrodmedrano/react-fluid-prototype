@@ -12,15 +12,7 @@
     "test": "node run-tests",
     "build": "jspm bundle app --inject --minify"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:capaj/jspm-react.git"
-  },
   "author": "v-jamedr@microsoft.com",
-  "bugs": {
-    "url": "https://github.com/capaj/jspm-react/issues"
-  },
-  "homepage": "https://github.com/capaj/jspm-react",
   "jspm": {
     "directories": {
       "baseURL": "src"
@@ -67,7 +59,8 @@
   },
   "standard": {
     "ignore": [
-      "src/config.js"
+      "src/config.js",
+      "prototypes/*"
     ]
   }
 }

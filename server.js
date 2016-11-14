@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
     cache = -1
 }
 const server = httpServer.createServer({
-    root: 'public',
+    root: 'src',
     cache: cache,
     robots: true,
     headers: {
