@@ -16,30 +16,6 @@ let myTile =  {
     },
     "size": "1",
     "pictures": [
-        {
-            "src": "http://placehold.it/890x800/171717/2F2F2F",
-            "minwidth": "(min-width:1779px)"
-        },
-        {
-            "src": "http://placehold.it/800x800/171717/2F2F2F",
-            "minwidth": "(min-width:1400px)"
-        },
-        {
-            "src": "http://placehold.it/700x800/171717/2F2F2F",
-            "minwidth": "(min-width:1084px)"
-        },
-        {
-            "src": "http://placehold.it/1083x400/171717/2F2F2F",
-            "minwidth": "(min-width:768px)"
-        },
-        {
-            "src": "http://placehold.it/768x400/171717/2F2F2F",
-            "minwidth": "(min-width:540px)"
-        },
-        {
-            "src": "http://placehold.it/540x300/171717/2F2F2F",
-            "minwidth": "(min-width:0)"
-        }
     ]
 };
 

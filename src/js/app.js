@@ -4,14 +4,11 @@ import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
-//Components
 import MasterLayout from './layouts/MasterLayout';
 
-var myData = window.datasource;
-
-var Index = myData.groups[0];
-
-var Routes = myData.groups.filter(function (result, index) {
+const myData = window.datasource;
+const Index = myData.groups[0];
+const Routes = myData.groups.filter(function (result, index) {
     if (index > 0) {
         return result;
     }
@@ -33,10 +30,9 @@ class App extends React.Component {
     }
 }
 
-
 class RenderForcer extends React.Component {
     componentWillMount () {
-        this.forceUpdate()  // a little hack to help us rerender when this module is reloaded
+        this.forceUpdate();
     }
     render () {
         return (
@@ -60,5 +56,5 @@ ReactDOM.render(
 );
 
 App.propTypes = {
-    children: React.PropTypes.node,
+    children: React.PropTypes.node
 };
