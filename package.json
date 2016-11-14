@@ -2,6 +2,8 @@
   "name": "RDX-prototype",
   "version": "0.0.0",
   "description": "",
+  "baseURL": "src",
+  "main": "server.js",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -17,7 +19,7 @@
   "homepage": "https://github.com/capaj/jspm-react",
   "jspm": {
     "directories": {
-      "baseURL": "./src"
+      "baseURL": "src"
     },
     "dependencies": {
       "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
