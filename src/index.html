@@ -570,7 +570,7 @@
         })
     }
     Promise.resolve(readyForMainLoad).then(() => {
-        System.import('src/js/app').then(function () {
+        System.import('js/app').then(function () {
             console.log('ran at ', new Date());
         })
     });

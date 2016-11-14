@@ -34,6 +34,8 @@ class App extends React.Component {
     }
 }
 
+console.log('test');
+
 
 class RenderForcer extends React.Component {
     componentWillMount () {
