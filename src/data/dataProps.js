@@ -46,7 +46,7 @@ export let devicePropTypes = {
   salePrice: React.PropTypes.string,
   saleExpires: React.PropTypes.string,
   label: React.PropTypes.string,
-}
+};
 
 export let tilePropTypes = {
   tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
@@ -55,7 +55,7 @@ export let tilePropTypes = {
       picturePropTypes,
       buttonPropTypes
   }))
-}
+};
 
 export let mosaicPropTypes = {
   mosaic: React.PropTypes.shape({
@@ -63,7 +63,7 @@ export let mosaicPropTypes = {
       layout: React.PropTypes.string,
       tilePropTypes
   }),
-}
+};
 
 export default function dataPropTypes(component) {
     return {

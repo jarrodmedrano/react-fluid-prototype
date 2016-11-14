@@ -1,3 +1,4 @@
+import 'systemjs-hot-reloader/default-listener.js';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
@@ -33,17 +34,29 @@ class App extends React.Component {
     }
 }
 
+
+class RenderForcer extends React.Component {
+    componentWillMount () {
+        this.forceUpdate()  // a little hack to help us rerender when this module is reloaded
+    }
+    render () {
+        return (
+            <Router history={appHistory}>
+                <Route path="/" component={App}>
+                    <IndexRoute title={Index.groupIdentifier}
+                                component={(props, state, params) => <MasterLayout  {...props} />}/>
+                    {Routes.map(function (result, id) {
+                        return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
+                                      component={(props, state, params) => <MasterLayout  {...props} />}/>;
+                    })}
+                </Route>
+            </Router>
+        )
+    }
+}
+
 ReactDOM.render(
-    <Router history={appHistory}>
-        <Route path="/" component={App}>
-            <IndexRoute title={Index.groupIdentifier}
-                        component={(props, state, params) => <MasterLayout  {...props} />}/>
-            {Routes.map(function (result, id) {
-                return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
-                              component={(props, state, params) => <MasterLayout  {...props} />}/>;
-            })}
-        </Route>
-    </Router>
+    <RenderForcer />
     , document.getElementById('app')
 );
 

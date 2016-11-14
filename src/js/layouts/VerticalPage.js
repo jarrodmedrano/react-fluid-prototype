@@ -37,7 +37,6 @@ class VerticalPage extends React.Component {
                 {oemGroup.brand ?
                   <StickyBanner data={currentPage}>
                     <div className="cta">
-                        <Button data={this.props.currentPage}  />
                     </div>
                   </StickyBanner>
                 : null }

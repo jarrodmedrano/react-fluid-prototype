@@ -16,6 +16,10 @@ class MosaicTile extends React.Component {
     }
 }
 
+MosaicTile.defaultProps = {
+       data: {}
+};
+
 MosaicTile.propTypes = {
   data: React.PropTypes.object.isRequired
 };

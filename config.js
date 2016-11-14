@@ -39,7 +39,7 @@ System.config({
     "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.6.0",
     "winjs": "npm:winjs@4.4.0",
     "github:capaj/systemjs-hot-reloader@0.6.0": {
-      "debug": "npm:debug@2.2.0",
+      "debug": "npm:debug@2.3.2",
       "socket.io-client": "github:socketio/socket.io-client@1.5.1",
       "weakee": "npm:weakee@1.0.0"
     },
@@ -303,8 +303,8 @@ System.config({
       "public-encrypt": "npm:public-encrypt@4.0.0",
       "randombytes": "npm:randombytes@2.0.3"
     },
-    "npm:debug@2.2.0": {
-      "ms": "npm:ms@0.7.1"
+    "npm:debug@2.3.2": {
+      "ms": "npm:ms@0.7.2"
     },
     "npm:des.js@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
