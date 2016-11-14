@@ -4,45 +4,6 @@ import propsAreValid from '../../util';
 import tilePropTypes from '../../../data/dataProps';
 import dataPropTypes from '../../../data/dataProps';
 
-let myTile =  {
-    "heading": "-- mosaic title 1 --",
-    "subheading": "-- mosaic subtitle 1 --",
-    "button": {
-        "layout": "link",
-        "path": "http://www.microsoft.com",
-        "title": "Call to action",
-        "textColor": "white",
-        "backgroundColor": "blue"
-    },
-    "size": "1",
-    "pictures": [
-        {
-            "src": "http://placehold.it/890x800/171717/2F2F2F",
-            "minwidth": "(min-width:1779px)"
-        },
-        {
-            "src": "http://placehold.it/800x800/171717/2F2F2F",
-            "minwidth": "(min-width:1400px)"
-        },
-        {
-            "src": "http://placehold.it/700x800/171717/2F2F2F",
-            "minwidth": "(min-width:1084px)"
-        },
-        {
-            "src": "http://placehold.it/1083x400/171717/2F2F2F",
-            "minwidth": "(min-width:768px)"
-        },
-        {
-            "src": "http://placehold.it/768x400/171717/2F2F2F",
-            "minwidth": "(min-width:540px)"
-        },
-        {
-            "src": "http://placehold.it/540x300/171717/2F2F2F",
-            "minwidth": "(min-width:0)"
-        }
-    ]
-};
-
 class MosaicContainer extends React.Component {
     render() {
         // TODO generate these layouts without all this markup
@@ -91,7 +52,6 @@ class MosaicContainer extends React.Component {
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                 <MosaicTile data={tiles[2]}/>
                             </div>
-
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                 <MosaicTile data={tiles[3]}/>
                             </div>

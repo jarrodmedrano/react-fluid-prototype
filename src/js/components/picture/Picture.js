@@ -6,7 +6,7 @@ import dataPropTypes from '../../../data/dataProps';
 class Picture extends React.Component {
     render() {
         if(propsAreValid(this.props.data)) {
-            let { pictures, altText } = this.props.data;
+            let {pictures, altText} = this.props.data;
             return (
                 <picture className="c-image">
                     {pictures.map(function (object, id) {
