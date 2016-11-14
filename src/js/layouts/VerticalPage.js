@@ -8,23 +8,17 @@ import Button from '../components/button/Button';
 import _ from 'lodash';
 
 class VerticalPage extends React.Component {
-
     render() {
-
         let title = this.props.route.title;
         let {ratings, deviceInformation, groups} = this.props.data;
-
-
         let currentPage = _.find(groups, function(result) {
             return result.groupIdentifier === title
         }, {this});
-
         let oemGroup = _.find(groups, function(result) {
             if(result.groupIdentifier === 'oem') {
                 return result
             }
         });
-
         let retailerGroup = _.find(this.props.groups, function(result) {
             if(result.groupIdentifier === 'retailer') {
                 return result
@@ -50,7 +44,7 @@ class VerticalPage extends React.Component {
                         : null
                     }
                 </main>
-                {currentPage.sections ? <Footer footer={currentPage.sections} /> : null}
+                {currentPage.sections ? <Footer data={currentPage.sections} /> : null}
             </div>
         )
     }

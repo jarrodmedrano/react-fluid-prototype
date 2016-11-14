@@ -7,7 +7,6 @@ import propsAreValid from '../../util';
 
 class Hero extends React.Component {
     render() {
-        console.log(this.props);
         if(propsAreValid(this.props.data)) {
             let {alignX, alignY, theme, layout} = this.props.data;
             let heroClass = classNames(`f-x-${alignX}`, `f-y-${alignY}`, `f-align-${alignY}`, theme, `m-${layout}-item`);

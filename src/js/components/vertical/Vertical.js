@@ -2,15 +2,12 @@ import React from 'react'
 import classNames from 'classnames';
 import Video from '../video/Video';
 import Hero from '../hero/Hero';
-import ImmersiveHero from '../hero/ImmersiveHero';
 import Mosaic from '../mosaic/Mosaic';
 
 class Vertical extends React.Component {
-
     render() {
         let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier);
         let layout = this.props.data.layout;
-
         return (
             <section className={verticalClass} id={this.props.data.title.split(' ').join('-').toLowerCase()}>
                 {layout === 'hero' || layout === 'immersive-hero' ?

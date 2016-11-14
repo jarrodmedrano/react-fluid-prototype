@@ -5,7 +5,9 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
-
+if (typeof window !== 'undefined') {
+    window.React = React;
+}
 const myData = window.datasource;
 const Index = myData.groups[0];
 const Routes = myData.groups.filter(function (result, index) {
