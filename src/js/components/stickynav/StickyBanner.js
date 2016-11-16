@@ -10,11 +10,11 @@ import dataPropTypes from '../../../data/dataProps';
 class StickyBanner extends React.Component {
     render() {
         if(propsAreValid(this.props.data)) {
-        let {title, logo} = this.props.data.brand;
+        let {anchorTitle, logo} = this.props.data.brand;
         return (
             <div className="sticky-banner sticky-header">
-                { (logo && title) ? <img src={ logo } alt={title} className="logo"/> : null }
-                { title ? <h4 className="c-heading-4">{title}</h4> : null }
+                { (logo && anchorTitle) ? <img src={ logo } alt={anchorTitle} className="logo"/> : null }
+                { anchorTitle ? <h4 className="c-heading-4">{anchorTitle}</h4> : null }
                 { this.props.ratings ? <Starrating data={ this.props.ratings } /> : null }
                 {this.props.children}
                 {/*
