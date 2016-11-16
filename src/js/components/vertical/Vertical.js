@@ -7,9 +7,9 @@ import Mosaic from '../mosaic/Mosaic';
 class Vertical extends React.Component {
     render() {
         let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier);
-        let layout = this.props.data.layout;
+        let {layout, ordinal} = this.props.data;
         return (
-            <section className={verticalClass} id={this.props.data.anchorTitle.split(' ').join('-').toLowerCase()}>
+            <section className={verticalClass} id={ordinal}>
                 {layout === 'hero' || layout === 'immersive-hero' ?
                     <Hero data={this.props.data}/> : null
                 }
