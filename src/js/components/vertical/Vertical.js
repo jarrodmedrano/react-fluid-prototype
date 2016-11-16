@@ -9,7 +9,7 @@ class Vertical extends React.Component {
         let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier);
         let layout = this.props.data.layout;
         return (
-            <section className={verticalClass} id={this.props.data.title.split(' ').join('-').toLowerCase()}>
+            <section className={verticalClass} id={this.props.data.anchorTitle.split(' ').join('-').toLowerCase()}>
                 {layout === 'hero' || layout === 'immersive-hero' ?
                     <Hero data={this.props.data}/> : null
                 }

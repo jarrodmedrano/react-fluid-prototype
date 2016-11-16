@@ -12,9 +12,9 @@ class Footer extends React.Component {
             <div className="sticky-banner sticky-footer">
                 {footer.map(function(result, id)  {
                         if(result.anchorLink) {
-                            let anchorTarget = '#' + result.title.split(' ').join('-').toLowerCase();
+                            let anchorTarget = '#' + result.anchorTitle.split(' ').join('-').toLowerCase();
                             return (
-                                <a href={anchorTarget} className="c-action-trigger" role="button" key={id} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick.bind(this)}>{result.title}</a>
+                                <a href={anchorTarget} className="c-action-trigger" role="button" key={id} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick.bind(this)}>{result.anchorTitle}</a>
                             )
                         }
                 }, this)}

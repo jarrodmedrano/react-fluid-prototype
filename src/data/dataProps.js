@@ -4,7 +4,7 @@ import React from 'react';
     ONLY RUNS IN DEVELOPMENT, NOT IN PRODUCTION
 */}
 
-export var picturePropTypes = {
+export let picturePropTypes = {
     pictures: React.PropTypes.arrayOf(
         React.PropTypes.shape({
             src: React.PropTypes.string,
@@ -39,7 +39,7 @@ export let ratingsPropTypes = {
     })
 };
 
-export var devicePropTypes = {
+export let devicePropTypes = {
   ManufacturerName: React.PropTypes.string,
   ModelName: React.PropTypes.string,
   price: React.PropTypes.string,
