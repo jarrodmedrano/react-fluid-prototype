@@ -5,6 +5,8 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
+import Scroll from 'react-scroll';
+
 if (typeof window !== 'undefined') {
     window.React = React;
 }

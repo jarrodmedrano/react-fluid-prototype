@@ -6,8 +6,44 @@ import Tabs from '../components/stickynav/Tabs';
 import Footer from '../components/stickynav/Footer';
 import Button from '../components/button/Button';
 import _ from 'lodash';
+import Scroll from 'react-scroll';
+
+var Link       = Scroll.Link;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
 
 class VerticalPage extends React.Component {
+    componentDidMount() {
+        Events.scrollEvent.register('begin', function(to, element) {
+            console.log("begin", arguments);
+        });
+        Events.scrollEvent.register('end', function(to, element) {
+            console.log("end", arguments);
+        });
+        scrollSpy.update();
+    }
+    componentWillUnmount() {
+        Events.scrollEvent.remove('begin');
+        Events.scrollEvent.remove('end');
+    }
+    _scrollToTop() {
+        scroll.scrollToTop();
+    }
+    _scrollToBottom() {
+        scroll.scrollToBottom();
+    }
+    _scrollTo(target) {
+        target.top = target.getBound
+        scroll.scrollTo(target);
+    }
+    _scrollMore() {
+        scroll.scrollMore(100);
+    }
+    _handleSetActive(to) {
+        console.log(to);
+    }
     render() {
         let title = this.props.route.title;
         let {ratings, deviceInformation, groups} = this.props.data;
@@ -31,6 +67,7 @@ class VerticalPage extends React.Component {
                 {oemGroup.brand ?
                   <StickyBanner data={currentPage}>
                     <div className="cta">
+                        <div><Link to="#300" spy={true} onClick={this._scrollTo.bind(this)} className="c-call-to-action c-glyph" ><span>test</span></Link></div>
                     </div>
                   </StickyBanner>
                 : null }
