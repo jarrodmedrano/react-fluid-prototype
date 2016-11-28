@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Video from '../video/Video';
 import Hero from '../hero/Hero';
 import Mosaic from '../mosaic/Mosaic';
+import CompareTable from '../compare/CompareTable';
 
 class Vertical extends React.Component {
     render() {
@@ -27,6 +28,9 @@ class Vertical extends React.Component {
                 }
                 {layout === 'mosaic' ?
                     <Mosaic data={this.props.data}/> : null
+                }
+                {layout === 'compare' ?
+                    <CompareTable data={this.props.data}/> : null
                 }
             </section>
         )

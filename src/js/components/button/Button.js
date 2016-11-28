@@ -5,7 +5,7 @@ import dataPropTypes from '../../../data/dataProps';
 
 class Button extends React.Component {
     render() {
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data.button)) {
             let { anchorTitle, path, ariaLabel, textColor, backgroundColor } = this.props.data.button;
             let btnStyle = {
                 background: backgroundColor,
