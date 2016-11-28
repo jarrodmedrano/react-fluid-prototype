@@ -1,6 +1,6 @@
 # RDX Prototype
-
-
+This is the React prototype of RDX.
+The original Surface book prototype is located in a branch called modular-merge-sb.
 ## Usage
 
 ```
