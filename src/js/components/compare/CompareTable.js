@@ -3,7 +3,7 @@ import React from 'react'
 import GenericList from '../list/GenericList';
 import Heading from '../heading/Heading';
 import CompareRow from './CompareRow';
-// System.import('./scene-config.scss!');
+import './scene-config.scss!';
 import propsAreValid from '../../util';
 
 class CompareTable extends React.Component {
@@ -17,16 +17,9 @@ class CompareTable extends React.Component {
                     <div className="configs">
                         {this.props.data.compare.models.map(function (result, id) {
                             return (
-                                <div className="config-card text-center">
-                                    <div className="config-top">
-                                        <GenericList key={id} data={result.props}/>
-                                    </div>
-                                    <div className="config-wrapper">
-                                        <CompareRow key={id} data={result.props}/>
-                                    </div>
-                                </div>
+                               <CompareRow key={id} data={this.props.data}/>
                             )
-                        })}
+                        }, this)}
                     </div>
                 </div>
             )

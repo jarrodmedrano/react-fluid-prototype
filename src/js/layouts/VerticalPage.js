@@ -67,7 +67,7 @@ class VerticalPage extends React.Component {
                 {oemGroup.brand ?
                   <StickyBanner data={currentPage}>
                     <div className="cta">
-                        <div><Link to="#300" spy={true} onClick={this._scrollTo.bind(this)} className="c-call-to-action c-glyph" ><span>test</span></Link></div>
+                        <div><Link to="#400" spy={true} onClick={this._scrollTo.bind(this)} className="c-call-to-action c-glyph" ><span>Compare Models</span></Link></div>
                     </div>
                   </StickyBanner>
                 : null }
