@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames';
-import Video from '../video/Video';
+import FullScreen from '../fullscreen/FullScreen';
 import Hero from '../hero/Hero';
 import Mosaic from '../mosaic/Mosaic';
 import CompareTable from '../compare/CompareTable';
@@ -17,8 +17,8 @@ class Vertical extends React.Component {
                 {layout === 'parallax' ?
                     <Parallax data={this.props.data}/> : null
                 }
-                {layout === 'video' ?
-                    <Video data={this.props.data}/> : null
+                {layout === 'fullscreen' ?
+                    <FullScreen data={this.props.data}/> : null
                 }
                 {layout === 'apps' ?
                     <Apps data={this.props.data}/> : null

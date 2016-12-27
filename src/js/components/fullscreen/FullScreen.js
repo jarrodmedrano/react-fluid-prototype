@@ -1,7 +1,7 @@
 import React from 'react'
-import './video.scss!'
+import './fullscreen.scss!'
 
-class Video extends React.Component {
+class FullScreen extends React.Component {
 
     render() {
 
@@ -31,4 +31,4 @@ class Video extends React.Component {
     }
 }
 
-export default Video
+export default FullScreen
