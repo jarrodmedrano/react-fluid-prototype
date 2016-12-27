@@ -9,10 +9,14 @@ class CompareRow extends React.Component {
             return (
             <div className="config-card text-center">
                 <div className="config-top">
-                    <GenericList data={this.props.data}/>
+                    <GenericList data={this.props.data.specs} />
                 </div>
                 <div className="config-wrapper">
-                    <Heading data={this.props.data}/>
+                    <div className="content-section">
+                        <div className="content">
+                            <GenericList data={this.props.data.features} />
+                        </div>
+                    </div>
                 </div>
             </div>
             )

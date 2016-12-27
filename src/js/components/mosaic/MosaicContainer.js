@@ -9,7 +9,7 @@ class MosaicContainer extends React.Component {
         // TODO generate these layouts without all this markup
         if(propsAreValid(this.props.data)) {
             let {tiles, layout, theme} = this.props.data;
-            if (tiles.length === 2 && layout === "layout-1" || tiles.length === 2) {
+            if (tiles.length === 2 && layout === "mosaic-1" || tiles.length === 2) {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
@@ -20,7 +20,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 );
-            } else if (tiles.length === 4 && layout === "layout-2") {
+            } else if (tiles.length === 4 && layout === "mosaic-2") {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
@@ -39,7 +39,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 );
-            } else if (tiles.length === 7 && layout === "layout-3" || tiles.length === 7) {
+            } else if (tiles.length === 7 && layout === "mosaic-3" || tiles.length === 7) {
                 return (
                     <div className="c-mosaic fullscreen-mosaic">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
@@ -69,7 +69,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 );
-            } else if (tiles.length === 6 && layout === "layout-4" || tiles.length === 6) {
+            } else if (tiles.length === 6 && layout === "mosaic-4" || tiles.length === 6) {
                 return (
                     <div className="c-mosaic fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
@@ -98,7 +98,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 )
-            } else if (tiles.length === 8 && layout === "layout-5" || tiles.length === 8) {
+            } else if (tiles.length === 8 && layout === "mosaic-5" || tiles.length === 8) {
                 return (
                     <div className="c-mosaic fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
@@ -135,7 +135,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 );
-            } else if (tiles.length === 9 && layout === "layout-6" || tiles.length >= 9) {
+            } else if (tiles.length === 9 && layout === "mosaic-6" || tiles.length >= 9) {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
@@ -177,7 +177,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 );
-            } else if (tiles.length === 4 && layout === "layout-7") {
+            } else if (tiles.length === 4 && layout === "mosaic-7") {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
@@ -198,7 +198,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 );
-            } else if (tiles.length === 3 && layout === "layout-8") {
+            } else if (tiles.length === 3 && layout === "mosaic-8") {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
@@ -216,7 +216,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 )
-            } else if (tiles.length === 3 && layout === "layout-9" || tiles.length === 3) {
+            } else if (tiles.length === 3 && layout === "mosaic-9" || tiles.length === 3) {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
@@ -232,7 +232,7 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 )
-            } else if (tiles.length === 4 && layout === "layout-10" || tiles.length === 4) {
+            } else if (tiles.length === 4 && layout === "mosaic-10" || tiles.length === 4) {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">

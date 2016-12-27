@@ -5,8 +5,12 @@
 //-----------------------------------------------------------------------------
 
 /*TODO decouple this class from the scss */
-
-.scene-vertical.config {
+.scene-vertical.comparetable {
+  background: #F3F3F3;
+  height: auto;
+  justify-content: flex-start;
+}
+.config-table {
   flex-direction: column;
   padding: 0 20px 100px;
   height: auto;

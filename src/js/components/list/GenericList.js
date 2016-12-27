@@ -1,19 +1,20 @@
 import React from 'react'
+import _ from 'lodash'
 import GenericListItem from './GenericListItem';
-import propsAreValid from '../../util';
+import propsAreValid, {entries} from '../../util';
 
 class GenericList extends React.Component {
     render() {
         if (propsAreValid(this.props.data)) {
             return (
                 <ul className="c-list">
-                    {this.props.data.compare.models.map(function (result, id) {
+                    {this.props.data.map(function(result, id) {
                         return (
-                            <li key={id}>{result[id]}</li>
+                            <GenericListItem key={id} data={result} />
                         )
-                    })}
+                    }, this)}
                 </ul>
-            );
+            )
         }
         return null;
     }

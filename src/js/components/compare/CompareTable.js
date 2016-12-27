@@ -10,16 +10,19 @@ class CompareTable extends React.Component {
     render() {
         if (propsAreValid(this.props.data)) {
             return (
-                <div>
-                    <div className="config-title">
-                        <Heading data={this.props.data}/>
-                    </div>
-                    <div className="configs">
-                        {this.props.data.compare.models.map(function (result, id) {
-                            return (
-                               <CompareRow key={id} data={this.props.data}/>
-                            )
-                        }, this)}
+                <div className="auto-width">
+                    <div className="config-table">
+                        <div className="config-title">
+                            <h2 className="c-heading-3 header-offset">{this.props.data.heading}</h2>
+                            <div className="title-border"></div>
+                        </div>
+                        <div className="configs">
+                            {this.props.data.compare.models.map(function (result, id) {
+                                return (
+                                   <CompareRow key={id} data={result} />
+                                )
+                            }, this)}
+                        </div>
                     </div>
                 </div>
             )

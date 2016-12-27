@@ -7,7 +7,7 @@ import CompareTable from '../compare/CompareTable';
 
 class Vertical extends React.Component {
     render() {
-        let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier);
+        let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
         let {layout, ordinal} = this.props.data;
         return (
             <section className={verticalClass} id={ordinal}>
