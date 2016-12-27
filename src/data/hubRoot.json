@@ -141,7 +141,7 @@
           "title": "-- mosaic title --",
           "mosaic": {
             "theme": "theme-dark",
-            "layout": "layout-3",
+            "layout": "mosaic-3",
             "tiles": [
               {
                 "heading": "-- mosaic title 1 --",

@@ -4,42 +4,31 @@ import './tabs.scss!'
 import { Link, IndexLink } from 'react-router';
 
 class Tabs extends React.Component {
-
     constructor(props) {
-
         super(props);
-
         this.state = {};
 
-        let logoTabs = this.props.groups.reduce(function(newVal, previousVal, key) {
-
+        let logoTabs = this.props.data.groups.reduce(function(newVal, previousVal, key) {
             if(previousVal.brand.logoTab != null) {
                 newVal[key] = previousVal.brand.logoTab;
             }
             return newVal;
-
         }, {});
 
-        let logoColors = this.props.groups.reduce(function(newVal, previousVal, key) {
-
-            if(previousVal.brand.color != null) {
-                newVal[key] = previousVal.brand.color;
+        let logoColors = this.props.data.groups.reduce(function(newVal, previousVal, key) {
+            if(previousVal.brand.tabColor != null) {
+                newVal[key] = previousVal.brand.tabColor;
             }
             return newVal
-
         }, {});
 
         this.state = Object.assign(this.state, {logoTabs}, {logoColors});
     }
 
     render() {
-
         const depth = this.props.routes.length;
-
         const rootRoute = this.props.routes[0];
-
         const rootRouteChildren = rootRoute.childRoutes;
-
         return (
             <div className="tabs">
                 <ul>
@@ -54,7 +43,7 @@ class Tabs extends React.Component {
                             </Link>
                             {(index + 1) < depth}
                         </li>
-                    ) : ''}
+                    ) : null}
                 </ul>
             </div>
         )

@@ -5,15 +5,32 @@
 //-----------------------------------------------------------------------------
 
 /*TODO decouple this class from the scss */
-
-.scene-vertical.config {
-  flex-direction: column;
-  padding: 0 20px 100px;
+.scene-vertical.comparetable {
+  background: #F3F3F3;
   height: auto;
+  justify-content: flex-start;
+}
+.config-table {
+  flex-direction: column;
+  padding: 50px 20px 150px;
+  height: auto;
+  background: #F3F3F3;
+  text-align: left;
+  display: block;
+  overflow: auto;
+  width: 100vw;
+
+  .auto-width {
+    overflow: auto;
+
+    .configs {
+      padding: 0 0 25px;
+    }
+  }
 
   .config-title {
-    align-self: flex-start !important;
     width: 100%;
+    margin-bottom: 50px;
 
     .c-heading-3 {
       padding-left: 12px;
@@ -30,35 +47,43 @@
     }
   }
 
+  .auto-width {
+    max-width: 100vw;
+    overflow: auto;
+  }
+
   .configs {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    height: 75vh;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 
     .selected {
-      border: 2px solid rgba(0, 0, 0, 0.4) !important;
-      color: #000 !important;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      color: #000;
     }
 
     .config-card {
-      background-color: #E6E7E8;
-      color: #4a4646;
-      margin: 5px;
-      justify-content: flex-start;
-      width: 72%;
-      height: 100%;
+      flex: 0 1 20%;
+      min-width: 20%;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
       border: 2px solid rgba(0, 0, 0, 0.2);
       position: relative;
+      margin-right: 10px;
 
       ul {
         font-size: 15px;
-        margin-top: 0px;
+        margin-top: 0;
+        text-align: left;
 
         li {
-          padding: 5px 0px;
+          padding: 5px 0;
         }
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
 
       .device-spec {
@@ -88,31 +113,25 @@
           padding-right: 10px;
           vertical-align: top;
         }
-
       }
     }
 
-    .config-wrapper {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
     .config-top {
-      min-height: 108px;
+      //min-height: 108px;
       width: auto;
-      background-color: rgba(0, 0, 0, 0.0980392);
+      background-color: rgba(203, 203, 203, 0.4);
       padding-left: 10px;
       padding-top: 10px;
       padding-bottom: 10px;
+      flex: 0;
 
       .c-list {
-        padding-left: 0px;
+        padding-left: 0;
       }
 
       li {
         list-style-type: none;
-        margin: 0px;
+        margin: 0;
       }
 
       .glyph-cpu {
@@ -144,7 +163,11 @@
     .content-section {
       min-height: 142px;
       border-bottom: 1px solid #a3a3a3;
-      display: flex;
+      flex: 0;
+
+      &:last-child {
+        flex: 1;
+      }
 
       .price {
         text-align: left;
@@ -153,9 +176,6 @@
       .content {
         padding: 0 10px;
         text-align: left;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
 
         .c-paragraph-4 {
           padding-top: 5px;
@@ -169,69 +189,13 @@
         .c-heading-5 {
           font-weight: 400;
         }
-
       }
-
-    }
-
-    .config-header {
-      padding-top: 0;
     }
 
     .config-subheader {
-      color: #6D6D6D;
       padding: 0 0 20px;
       border-bottom: 1px solid rgba(0, 0, 0, .2);
       display: block;
-    }
-
-    .bottom-config-footer {
-      margin-top: auto;
-      align-self: flex-end;
-      width: 100%;
-    }
-
-    .config-footer {
-      padding: 10px;
-      margin: 20px 0 0;
-      border: 1px solid #000;
-      text-align: left;
-
-      .c-paragraph {
-        overflow: auto;
-        padding-top: 0;
-      }
-
-      img {
-        float: left;
-        overflow: auto;
-        margin-right: 18px;
-      }
-
-      .c-hyperlink {
-        display: block;
-      }
-    }
-
-    .icons {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      margin-top: 24px;
-    }
-
-    .icon {
-      display: inline-block;
-      width: 33.33%;
-
-      .c-heading-5 {
-        margin: 0 0 0;
-        padding: 0 0 0;
-      }
-    }
-
-    li {
-      text-align: left;
     }
   }
 }

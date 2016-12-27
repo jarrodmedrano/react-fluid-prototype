@@ -1,37 +1,27 @@
 import React from 'react'
 import classNames from 'classnames';
-import Parallax from '../../../../prototypes/js/components/parallax/Parallax';
-import Video from '../video/Video';
-import Apps from '../../../../prototypes/js/components/apps/Apps';
-import Config from '../../../../prototypes/js/components/config/Config';
+import FullScreen from '../fullscreen/FullScreen';
 import Hero from '../hero/Hero';
-import ImmersiveHero from '../hero/ImmersiveHero';
 import Mosaic from '../mosaic/Mosaic';
+import CompareTable from '../compare/CompareTable';
 import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyKsp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 
 class Vertical extends React.Component {
-
     render() {
-
-        let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier);
-
-        let layout = this.props.data.layout;
-
+        let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
+        let {layout, ordinal} = this.props.data;
         return (
-            <section className={verticalClass} id={this.props.data.title.split(' ').join('-').toLowerCase()}>
-                {layout === 'hero' ?
+            <section className={verticalClass} id={ordinal}>
+                {layout === 'hero' || layout === 'immersive-hero' ?
                     <Hero data={this.props.data}/> : null
-                }
-                {layout === 'immersive-hero' ?
-                    <ImmersiveHero data={this.props.data}/> : null
                 }
                 {layout === 'parallax' ?
                     <Parallax data={this.props.data}/> : null
                 }
-                {layout === 'video' ?
-                    <Video data={this.props.data}/> : null
+                {layout === 'fullscreen' ?
+                    <FullScreen data={this.props.data}/> : null
                 }
                 {layout === 'apps' ?
                     <Apps data={this.props.data}/> : null
@@ -41,6 +31,9 @@ class Vertical extends React.Component {
                 }
                 {layout === 'mosaic' ?
                     <Mosaic data={this.props.data}/> : null
+                }
+		        {layout === 'compare' ?
+                    <CompareTable data={this.props.data}/> : null
                 }
                 {layout === 'feature' ?
                     <LegacyFeature data={this.props.data}/> : null

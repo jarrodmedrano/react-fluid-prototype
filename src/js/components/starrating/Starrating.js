@@ -1,11 +1,12 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
 
-import React from 'react'
+import React from 'react';
+import propsAreValid from '../../util';
 
 class Starrating extends React.Component {
 
     render() {
-
+      if(propsAreValid(this.props.data)) {
         return (
             <div className="c-rating f-community-rated f-user-rated f-aggregate">
                 <p className="x-screen-reader">Rating:
@@ -25,6 +26,7 @@ class Starrating extends React.Component {
                     className="track-link c-hyperlink" id="See-Reviews">See reviews</a></span>
             </div>
         )
+      } return null
     }
 }
 

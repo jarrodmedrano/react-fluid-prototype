@@ -2,13 +2,13 @@
   {
     "ordinal": "100",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-1",
+    "sectionIdentifier": "mosaic-1",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-1",
+    "title": "mosaic-1",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-1",
+      "layout": "mosaic-1",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -92,13 +92,13 @@
   {
     "ordinal": "200",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-2",
+    "sectionIdentifier": "mosaic-2",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-2",
+    "title": "mosaic-2",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-2",
+      "layout": "mosaic-2",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -258,13 +258,13 @@
   {
     "ordinal": "300",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-3",
+    "sectionIdentifier": "mosaic-3",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-3",
+    "title": "mosaic-3",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-3",
+      "layout": "mosaic-3",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -538,13 +538,13 @@
   {
     "ordinal": "400",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-4",
+    "sectionIdentifier": "mosaic-4",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-4",
+    "title": "mosaic-4",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-4",
+      "layout": "mosaic-4",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -780,13 +780,13 @@
   {
     "ordinal": "500",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-5",
+    "sectionIdentifier": "mosaic-5",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-5",
+    "title": "mosaic-5",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-5",
+      "layout": "mosaic-5",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -1098,13 +1098,13 @@
   {
     "ordinal": "600",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-6",
+    "sectionIdentifier": "mosaic-6",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-6",
+    "title": "mosaic-6",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-6",
+      "layout": "mosaic-6",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -1454,13 +1454,13 @@
   {
     "ordinal": "700",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-7",
+    "sectionIdentifier": "mosaic-7",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-7",
+    "title": "mosaic-7",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-7",
+      "layout": "mosaic-7",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -1620,13 +1620,13 @@
   {
     "ordinal": "800",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-8",
+    "sectionIdentifier": "mosaic-8",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-8",
+    "title": "mosaic-8",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-8",
+      "layout": "mosaic-8",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -1748,13 +1748,13 @@
   {
     "ordinal": "900",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-9",
+    "sectionIdentifier": "mosaic-9",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-9",
+    "title": "mosaic-9",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-9",
+      "layout": "mosaic-9",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",
@@ -1876,13 +1876,13 @@
   {
     "ordinal": "1000",
     "groupIdentifier": "partner",
-    "sectionIdentifier": "layout-10",
+    "sectionIdentifier": "mosaic-10",
     "layout": "mosaic",
     "anchorLink": "true",
-    "title": "layout-10",
+    "title": "mosaic-10",
     "mosaic": {
       "theme": "theme-dark",
-      "layout": "layout-10",
+      "layout": "mosaic-10",
       "tiles": [
         {
           "heading": "-- mosaic title 1 --",

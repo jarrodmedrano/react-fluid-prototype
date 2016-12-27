@@ -1,30 +1,37 @@
 {
-  "name": "RDX-prototype",
-  "version": "0.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "webpack --progress --colors --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "react-app",
+  "version": "0.0.1",
+  "description": "react.js app",
+  "main": "server.js",
+  "engines": {
+    "node": ">=4.0.0"
   },
-  "author": "v-jamedr",
-  "license": "",
-  "dependencies": {},
+  "scripts": {
+    "postinstall": "jspm install",
+    "start": "node server",
+    "test": "node run-tests",
+    "build": "jspm bundle app --inject --minify"
+  },
+  "author": "v-jamedr@microsoft.com",
   "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
     "dependencies": {
+      "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
       "classnames": "npm:classnames@^2.2.5",
       "clean-css": "npm:clean-css@^3.4.10",
       "css": "github:systemjs/plugin-css@^0.1.19",
       "history": "npm:history@2.0.1",
       "json": "github:systemjs/plugin-json@^0.2.0",
-      "lodash": "npm:lodash@^4.16.6",
+      "lodash": "npm:lodash@^4.16.4",
       "picturefill": "npm:picturefill@^3.0.2",
-      "react": "npm:react@~15.0",
-      "react-dom": "npm:react-dom@~15.0",
-      "react-router": "npm:react-router@^2.7.0",
+      "react": "npm:react@^15.2.1",
+      "react-dom": "npm:react-dom@^15.2.1",
+      "react-router": "npm:react-router@^2.6.0",
+      "react-scroll": "npm:react-scroll@^1.4.4",
       "sass": "npm:sass@^0.5.0",
-      "scss": "github:mobilexag/plugin-sass@^0.4.6",
-      "winjs": "npm:winjs@^4.4.0"
+      "scss": "github:mobilexag/plugin-sass@^0.4.6"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -32,11 +39,31 @@
       "core-js": "npm:core-js@^1.1.4"
     }
   },
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-shell": "^0.5.1",
-    "jspm": "^0.16.46"
+    "babel": "^6.5.2",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "chokidar-socket-emitter": "^0.5.4",
+    "enzyme": "^2.3.0",
+    "glob": "^7.0.4",
+    "husky": "^0.11.4",
+    "jsdom": "^9.8.3",
+    "jspm": "^0.16.39",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-scroll": "^1.4.4",
+    "standard": "^7.1.2",
+    "systemjs": "^0.19.31"
+  },
+  "standard": {
+    "ignore": [
+      "src/config.js",
+      "prototypes/*"
+    ]
   }
 }

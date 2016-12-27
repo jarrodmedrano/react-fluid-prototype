@@ -1,15 +1,14 @@
-export default function propsAreValid(props) {
-    if(!props.data) {
-       return false
+
+export default function propsAreValid(props, required) {
+    if(!props) {
+        return false
     } else {
         return true
     }
 }
 
-export function toggleRender(props, component) {
-    if(!props.data) {
-        return false
-    } else {
-        return component
+export function* entries(obj) {
+    for(let key of Object.keys(obj)) {
+        yield [key, obj[key]];
     }
 }

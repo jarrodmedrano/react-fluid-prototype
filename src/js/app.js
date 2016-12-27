@@ -4,14 +4,15 @@ import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
-//Components
 import MasterLayout from './layouts/MasterLayout';
+import Scroll from 'react-scroll';
 
-var myData = window.datasource;
-
-var Index = myData.groups[0];
-
-var Routes = myData.groups.filter(function (result, index) {
+if (typeof window !== 'undefined') {
+    window.React = React;
+}
+const myData = window.datasource;
+const Index = myData.groups[0];
+const Routes = myData.groups.filter(function (result, index) {
     if (index > 0) {
         return result;
     }
@@ -33,20 +34,31 @@ class App extends React.Component {
     }
 }
 
+class RenderForcer extends React.Component {
+    componentWillMount () {
+        this.forceUpdate();
+    }
+    render () {
+        return (
+            <Router history={appHistory}>
+                <Route path="/" component={App}>
+                    <IndexRoute title={Index.groupIdentifier}
+                                component={(props, state, params) => <MasterLayout  {...props} />}/>
+                    {Routes.map(function (result, id) {
+                        return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
+                                      component={(props, state, params) => <MasterLayout  {...props} />}/>;
+                    })}
+                </Route>
+            </Router>
+        )
+    }
+}
+
 ReactDOM.render(
-    <Router history={appHistory}>
-        <Route path="/" component={App}>
-            <IndexRoute title={Index.groupIdentifier}
-                        component={(props, state, params) => <MasterLayout  {...props} />}/>
-            {Routes.map(function (result, id) {
-                return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
-                              component={(props, state, params) => <MasterLayout  {...props} />}/>;
-            })}
-        </Route>
-    </Router>
+    <RenderForcer />
     , document.getElementById('app')
 );
 
 App.propTypes = {
-    children: React.PropTypes.node,
+    children: React.PropTypes.node
 };

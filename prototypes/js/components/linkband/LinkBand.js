@@ -3,20 +3,12 @@ import './LinkBand.scss!'
 import { Router, Route, Link, IndexLink, IndexRoute } from 'react-router'
 
 class Linkband extends React.Component {
-
     render() {
-
         const depth = this.props.routes.length;
-
         const rootRoute = this.props.routes[0];
-
         const rootRouteChildren = rootRoute.childRoutes;
-
         const innerRoute = this.props.routes[1];
-
         const innerRouteChildren = innerRoute.childRoutes;
-
-
         return (
             <div className={innerRouteChildren != null ? 'sub-route': ''}>
                 <nav className="c-link-navigation">
@@ -39,7 +31,6 @@ class Linkband extends React.Component {
                    </ul>
                 </nav>
             </div>
-
         );
     }
 }

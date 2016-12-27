@@ -34,10 +34,10 @@
                     {
                         "groupIdentifier": "oem",
                         "brand": {
-                            "logo": "src/img/vertical/ms-logo.png",
-                            "title": "-- OEM Title --",
-                            "color": "#ffffff",
-                            "logoTab": "src/img/vertical/surfacebook-logo.png"
+                            "logo": "img/vertical/ms-logo.png",
+                            "anchorTitle": "-- OEM Title --",
+                            "tabColor": "#ffffff",
+                            "logoTab": "img/vertical/surfacebook-logo.png"
                         },
                         "sections": [
                             {
@@ -46,12 +46,13 @@
                                 "sectionIdentifier": "Section1",
                                 "layout": "hero",
                                 "anchorLink": "true",
-                                "title": "-- Section1 Title --",
+                                "anchorTitle": "-- Section1 Title --",
                                 "heading": "-- Hero Heading --",
                                 "subheading": "-- Subheading --",
                                 "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
                                 "altText": "AltText",
                                 "ariaLabel": "AriaLabel",
+                                "heroType": "default",
                                 "pictures": [
                                     {
                                         "src": "http://placehold.it/1600x600/2F2F2F/171717",
@@ -81,7 +82,7 @@
                                 "button": {
                                     "layout": "button",
                                     "path": "#/windows",
-                                    "title": "Call to action",
+                                    "anchorTitle": "Call to action",
                                     "ariaLabel": "ariaLabel",
                                     "textColor": "white",
                                     "backgroundColor": "#0078D7"
@@ -96,7 +97,7 @@
                                 "sectionIdentifier": "OneNote",
                                 "layout": "immersive-hero",
                                 "anchorLink": "true",
-                                "title": "-- immersive hero title --",
+                                "anchorTitle": "-- immersive hero title --",
                                 "heading": "-- Hero Heading --",
                                 "subheading": "-- Subheading --",
                                 "picture": "http://placehold.it/1259x472/2F2F2F/171717",
@@ -131,7 +132,7 @@
                                 "button": {
                                     "layout": "button",
                                     "path": "http://www.microsoft.com",
-                                    "title": "Call to action",
+                                    "anchorTitle": "Call to action",
                                     "ariaLabel": "ariaLabel",
                                     "textColor": "white",
                                     "backgroundColor": "#0078D7"
@@ -142,22 +143,120 @@
                             {
                                 "ordinal": "300",
                                 "groupIdentifier": "oem",
-                                "sectionIdentifier": "OneNote",
-                                "layout": "video",
+                                "sectionIdentifier": "SurfacePen",
+                                "layout": "fullscreen",
                                 "anchorLink": "true",
-                                "title": "-- video title --",
-                                "video": "src/img/vertical/Hero-pen.mp4"
+                                "anchorTitle": "-- video title --",
+                                "video": "img/vertical/Hero-pen.mp4"
                             },
                             {
-                                "ordinal": "300",
+                                "ordinal": "400",
+                                "groupIdentifier": "oem",
+                                "sectionIdentifier": "CompareTable",
+                                "layout": "compare",
+                                "anchorLink": "true",
+                                "anchorTitle": "-- compare title --",
+                                "heading": "-- Compare Heading --",
+                                "compare": {
+                                    "models": [
+                                        {
+                                            "heading": "-- Hero Heading --",
+                                            "specs":
+                                                [
+                                                    "processor: Intel Core i7",
+                                                    "storage: 1 TB",
+                                                    "memory: 16 GB + dGPU"
+                                                ],
+                                            "features":
+                                                [
+                                                    "Light online browsing",
+                                                    "Send emails",
+                                                    "Check mail"
+                                                ]
+                                        },
+                                        {
+                                            "specs":
+                                                [
+                                                    "processor: Intel Core i7",
+                                                    "storage: 1 TB",
+                                                    "memory: 16 GB + dGPU"
+                                                ],
+                                            "features":
+                                                [
+                                                    "Light online browsing",
+                                                    "Send emails",
+                                                    "Check mail"
+                                                ]
+                                        },
+                                        {
+                                            "specs":
+                                                [
+                                                    "processor: Intel Core i7",
+                                                    "storage: 1 TB",
+                                                    "memory: 16 GB + dGPU"
+                                                ],
+                                            "features":
+                                                [
+                                                    "Light online browsing",
+                                                    "Send emails",
+                                                    "Check mail"
+                                                ]
+                                        },
+                                        {
+                                            "specs":
+                                                [
+                                                    "processor: Intel Core i7",
+                                                    "storage: 1 TB",
+                                                    "memory: 16 GB + dGPU"
+                                                ],
+                                            "features":
+                                                [
+                                                    "Light online browsing",
+                                                    "Send emails",
+                                                    "Check mail"
+                                                ]
+                                        },
+                                        {
+                                            "specs":
+                                                [
+                                                    "processor: Intel Core i7",
+                                                    "storage: 1 TB",
+                                                    "memory: 16 GB + dGPU"
+                                                ],
+                                            "features":
+                                                [
+                                                    "Light online browsing",
+                                                    "Send emails",
+                                                    "Check mail"
+                                                ]
+                                        },
+                                        {
+                                            "specs":
+                                                [
+                                                    "processor: Intel Core i7",
+                                                    "storage: 1 TB",
+                                                    "memory: 16 GB + dGPU"
+                                                ],
+                                            "features":
+                                                [
+                                                    "Light online browsing",
+                                                    "Send emails",
+                                                    "Check mail"
+                                                ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "ordinal": "500",
                                 "groupIdentifier": "partner",
                                 "sectionIdentifier": "mosaic",
                                 "layout": "mosaic",
                                 "anchorLink": "true",
-                                "title": "-- mosaic title --",
+                                "anchorTitle": "-- mosaic title --",
                                 "mosaic": {
                                     "theme": "theme-dark",
-                                    "layout": "layout-3",
+                                    "layout": "mosaic-3",
                                     "tiles": [
                                         {
                                             "heading": "-- mosaic title 1 --",
@@ -165,11 +264,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/890x800/171717/2F2F2F",
@@ -203,11 +301,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/425x425/2F2F2F/222222",
@@ -241,11 +338,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/425x425/464646/333333",
@@ -279,11 +375,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/425x425/5E5E5E/505050",
@@ -317,11 +412,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/215x215/767676/666666",
@@ -355,11 +449,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/215x215/919191/777777",
@@ -393,11 +486,10 @@
                                             "button": {
                                                 "layout": "link",
                                                 "path": "http://www.microsoft.com",
-                                                "title": "Call to action",
+                                                "anchorTitle": "Call to action",
                                                 "textColor": "white",
                                                 "backgroundColor": "blue"
                                             },
-                                            "size": "1",
                                             "pictures": [
                                                 {
                                                     "src": "http://placehold.it/425x215/ACACAC/888888",
@@ -433,7 +525,7 @@
                     {
                         "groupIdentifier": "windows",
                         "brand": {
-                            "logoTab": "src/img/vertical/windows-logo.png",
+                            "logoTab": "img/vertical/windows-logo.png",
                             "color": "#3076BC"
                         },
                         "sections": [
@@ -443,7 +535,7 @@
                                 "sectionIdentifier": "Section1",
                                 "layout": "hero",
                                 "anchorLink": "true",
-                                "title": "-- Section1 Title --",
+                                "anchorTitle": "-- Section1 Title --",
                                 "heading": "-- Hero Heading --",
                                 "subheading": "-- Subheading --",
                                 "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
@@ -479,7 +571,7 @@
                                 "button": {
                                     "layout": "button",
                                     "path": "http://www.microsoft.com",
-                                    "title": "Call to action",
+                                    "anchorTitle": "Call to action",
                                     "ariaLabel": "ariaLabel",
                                     "textColor": "white",
                                     "backgroundColor": "#0078D7"
@@ -493,19 +585,19 @@
                     {
                         "groupIdentifier": "oem",
                         "brand": {
-                            "logo": "src/img/vertical/ms-logo.png",
-                            "title": "Surface Book",
+                            "logo": "img/vertical/ms-logo.png",
+                            "anchorTitle": "Surface Book",
                             "color": "#003b64",
-                            "logoTab": "src/img/vertical/best-buy-logo.png"
+                            "logoTab": "img/vertical/best-buy-logo.png"
                         },
                         "sections": [
                             {
-                                "ordinal": "100",
+                                "ordinal": "200",
                                 "groupIdentifier": "oem",
                                 "sectionIdentifier": "Section1",
                                 "layout": "hero",
                                 "anchorLink": "true",
-                                "title": "-- Section1 Title --",
+                                "anchorTitle": "-- Section1 Title --",
                                 "heading": "-- Hero Heading --",
                                 "subheading": "-- Subheading --",
                                 "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
@@ -541,7 +633,7 @@
                                 "button": {
                                     "layout": "button",
                                     "path": "http://www.microsoft.com",
-                                    "title": "Call to action",
+                                    "anchorTitle": "Call to action",
                                     "ariaLabel": "ariaLabel",
                                     "textColor": "white",
                                     "backgroundColor": "#0078D7"
@@ -562,11 +654,18 @@
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
+    var readyForMainLoad
     if (location.origin.match(/localhost/)) {
         System.trace = true
-        System.import('src/js/app.js')
+        readyForMainLoad = System.import('capaj/systemjs-hot-reloader').then(function(HotReloader){
+            hr = new HotReloader.default('http://localhost:9080')  // chokidar-socket-emitter port
+        })
     }
-    System.import('src/js/app.js')
+    Promise.resolve(readyForMainLoad).then(() => {
+        System.import('js/app').then(function () {
+            console.log('ran at ', new Date())
+        })
+    })
 </script>
 </body>
 </html>

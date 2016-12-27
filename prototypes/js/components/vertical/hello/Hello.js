@@ -1,10 +1,8 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
-
 import React from 'react'
 import './hello.scss'
 
 class Hello extends React.Component {
-
     render() {
         return (
                 <div className="hello-container">

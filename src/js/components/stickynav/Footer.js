@@ -1,23 +1,26 @@
-import React from 'react'
-import {Link} from 'react-router'
+import React from 'react';
+import {Link} from 'react-router';
+import propsAreValid from '../../util';
 
 class Footer extends React.Component {
     _handleClick(anchorTarget, event) {
     }
     render() {
+      if(propsAreValid(this.props.data)) {
+        let footer = this.props.data;
         return (
             <div className="sticky-banner sticky-footer">
-                {this.props.footer.map(function(result, id)  {
+                {footer.map(function(result, id)  {
                         if(result.anchorLink) {
-                            let anchorTarget = '#' + result.title.split(' ').join('-').toLowerCase();
-
+                            let anchorTarget = result.ordinal;
                             return (
-                                <a href={anchorTarget} className="c-action-trigger" role="button" key={id} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick.bind(this)}>{result.title}</a>
+                                <Link to={anchorTarget} className="c-action-trigger" activeClassName="active" role="button" key={id} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick.bind(this)}>{result.anchorTitle}</Link>
                             )
                         }
                 }, this)}
             </div>
         )
+      } return null
     }
 }
 
