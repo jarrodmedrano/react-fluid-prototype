@@ -20,16 +20,11 @@
   overflow: auto;
   width: 100vw;
 
-  .autowidth {
+  .auto-width {
     overflow: auto;
-
-    .config-title {
-      width: 200%;
-    }
 
     .configs {
       padding: 0 0 25px;
-      width: 200%;
     }
   }
 

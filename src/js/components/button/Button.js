@@ -2,6 +2,9 @@ import React from 'react'
 import propsAreValid from '../../util';
 import buttonPropTypes from '../../../data/dataProps';
 import dataPropTypes from '../../../data/dataProps';
+import onClickHandler from '../../../telemetry.js';
+import Link from '../link/Link';
+
 
 class Button extends React.Component {
     render() {
