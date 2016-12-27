@@ -29,7 +29,7 @@ export default class Link extends React.Component {
         const isInternal = this.isInternal(to);
 
         if (isInternal) {
-            return (<ReactLink to={to} {...rest}>{children}</ReactLink>);
+            return (<a href={to} {...rest}>{children}</a>);
         } else {
             return (<a href={to} {...rest} onClick={onClickHandler}>{children}</a>);
         }

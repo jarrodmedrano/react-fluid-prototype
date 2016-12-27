@@ -2,7 +2,6 @@ import React from 'react'
 import propsAreValid from '../../util';
 import buttonPropTypes from '../../../data/dataProps';
 import dataPropTypes from '../../../data/dataProps';
-import onClickHandler from '../../../telemetry.js';
 import Link from '../link/Link';
 
 
@@ -15,7 +14,9 @@ class Button extends React.Component {
                 color: textColor
             };
             return (
-                <div><a href={path} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={btnStyle}><span>{anchorTitle}</span></a></div>
+                <div>
+                    <Link to={path} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={btnStyle} children={anchorTitle} />
+                </div>
             )
         } return null
     }
