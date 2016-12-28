@@ -6,10 +6,20 @@ import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
 import Scroll from 'react-scroll';
+import data from '../data/assembleData';
 
 if (typeof window !== 'undefined') {
     window.React = React;
 }
+
+if (window.RDX) {
+    window.datasource = JSON.parse(window.RDX.datasource);
+}
+else {
+    window.datasource = data;
+    console.log(data);
+}
+
 const myData = window.datasource;
 const Index = myData.groups[0];
 const Routes = myData.groups.filter(function (result, index) {
@@ -23,7 +33,7 @@ class App extends React.Component {
             return (
                 <div>
                     <TransitionGroup component="div" transitionName="page-transition"
-                                     transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+                                     transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                         {React.cloneElement(this.props.children, {
                             key: this.props.location.pathname,
                             data: myData,

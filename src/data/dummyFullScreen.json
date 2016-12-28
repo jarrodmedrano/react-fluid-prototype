@@ -1,0 +1,19 @@
+{
+  "groupIdentifier": "fullscreen",
+  "brand": {
+    "logoTab": "",
+    "color": "#3076BC",
+    "anchorTitle": "-- Full Screen --"
+  },
+  "sections": [
+    {
+      "ordinal": "100",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "SurfacePen",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "-- video title --",
+      "video": "img/vertical/Hero-pen.mp4"
+    }
+  ]
+}
