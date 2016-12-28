@@ -14,6 +14,132 @@
       "anchorLink": "true",
       "anchorTitle": "-- video title --",
       "video": "img/vertical/Hero-pen.mp4"
+    },
+    {
+      "ordinal": "200",
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section2",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "-- Center Center Dark --",
+      "heading": "-- Hero Heading --",
+      "subheading": "-- Subheading --",
+      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+      "altText": "AltText",
+      "ariaLabel": "AriaLabel",
+      "pictures": [
+        {
+          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+          "minwidth": "(min-width: 1779px)"
+        },
+        {
+          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+          "minwidth": "(min-width: 1400px)"
+        },
+        {
+          "src": "http://placehold.it/1399x787/2F2F2F/171717",
+          "minwidth": "(min-width: 1084px)"
+        },
+        {
+          "src": "http://placehold.it/1083x609/2F2F2F/171717",
+          "minwidth": "(min-width:768px)"
+        },
+        {
+          "src": "http://placehold.it/767x431/2F2F2F/171717",
+          "minwidth": "(min-width:540px)"
+        },
+        {
+          "src": "http://placehold.it/539x303/2F2F2F/171717",
+          "minwidth": "(min-width:0)"
+        }
+      ],
+      "alignX": "center",
+      "alignY": "center",
+      "theme": "theme-dark"
+    },
+    {
+      "ordinal": "300",
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section3",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "-- Center Bottom Dark --",
+      "heading": "-- Hero Heading --",
+      "subheading": "-- Subheading --",
+      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+      "altText": "AltText",
+      "ariaLabel": "AriaLabel",
+      "pictures": [
+        {
+          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+          "minwidth": "(min-width: 1779px)"
+        },
+        {
+          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+          "minwidth": "(min-width: 1400px)"
+        },
+        {
+          "src": "http://placehold.it/1399x787/2F2F2F/171717",
+          "minwidth": "(min-width: 1084px)"
+        },
+        {
+          "src": "http://placehold.it/1083x609/2F2F2F/171717",
+          "minwidth": "(min-width:768px)"
+        },
+        {
+          "src": "http://placehold.it/767x431/2F2F2F/171717",
+          "minwidth": "(min-width:540px)"
+        },
+        {
+          "src": "http://placehold.it/539x303/2F2F2F/171717",
+          "minwidth": "(min-width:0)"
+        }
+      ],
+      "alignX": "center",
+      "alignY": "bottom",
+      "theme": "theme-dark"
+    },
+    {
+      "ordinal": "400",
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section4",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "-- Center Top Dark --",
+      "heading": "-- Hero Heading --",
+      "subheading": "-- Subheading --",
+      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+      "altText": "AltText",
+      "ariaLabel": "AriaLabel",
+      "pictures": [
+        {
+          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+          "minwidth": "(min-width: 1779px)"
+        },
+        {
+          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+          "minwidth": "(min-width: 1400px)"
+        },
+        {
+          "src": "http://placehold.it/1399x787/2F2F2F/171717",
+          "minwidth": "(min-width: 1084px)"
+        },
+        {
+          "src": "http://placehold.it/1083x609/2F2F2F/171717",
+          "minwidth": "(min-width:768px)"
+        },
+        {
+          "src": "http://placehold.it/767x431/2F2F2F/171717",
+          "minwidth": "(min-width:540px)"
+        },
+        {
+          "src": "http://placehold.it/539x303/2F2F2F/171717",
+          "minwidth": "(min-width:0)"
+        }
+      ],
+      "alignX": "center",
+      "alignY": "top",
+      "theme": "theme-dark"
     }
   ]
 }
