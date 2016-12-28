@@ -1,10 +1,10 @@
 {
-  "groupIdentifier": "oem",
+  "groupIdentifier": "mosaic",
   "brand": {
-    "logo": "img/vertical/ms-logo.png",
-    "anchorTitle": "Surface Book",
+    "logo": "",
+    "anchorTitle": "-- Mosaic --",
     "color": "#003b64",
-    "logoTab": "img/vertical/best-buy-logo.png"
+    "logoTab": ""
   },
   "sections": [
     {
@@ -13,7 +13,7 @@
       "sectionIdentifier": "mosaic-1",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-1",
+      "anchorTitle": "mosaic-1",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-1",
@@ -24,7 +24,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -62,7 +62,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -103,7 +103,7 @@
       "sectionIdentifier": "mosaic-2",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-2",
+      "anchorTitle": "mosaic-2",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-2",
@@ -114,7 +114,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -152,7 +152,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -190,7 +190,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -228,7 +228,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -269,7 +269,7 @@
       "sectionIdentifier": "mosaic-3",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-3",
+      "anchorTitle": "mosaic-3",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-3",
@@ -280,7 +280,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -318,7 +318,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -356,7 +356,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -394,7 +394,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -432,7 +432,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -470,7 +470,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -508,7 +508,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -549,7 +549,7 @@
       "sectionIdentifier": "mosaic-4",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-4",
+      "anchorTitle": "mosaic-4",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-4",
@@ -560,7 +560,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -598,7 +598,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -636,7 +636,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -674,7 +674,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -712,7 +712,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -750,7 +750,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -791,7 +791,7 @@
       "sectionIdentifier": "mosaic-5",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-5",
+      "anchorTitle": "mosaic-5",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-5",
@@ -802,7 +802,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -840,7 +840,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -878,7 +878,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -916,7 +916,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -954,7 +954,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -992,7 +992,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1030,7 +1030,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1068,7 +1068,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1109,7 +1109,7 @@
       "sectionIdentifier": "mosaic-6",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-6",
+      "anchorTitle": "mosaic-6",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-6",
@@ -1120,7 +1120,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1158,7 +1158,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1196,7 +1196,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1234,7 +1234,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1272,7 +1272,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1310,7 +1310,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1348,7 +1348,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1386,7 +1386,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1424,7 +1424,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1465,7 +1465,7 @@
       "sectionIdentifier": "mosaic-7",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-7",
+      "anchorTitle": "mosaic-7",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-7",
@@ -1476,7 +1476,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1514,7 +1514,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1552,7 +1552,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1590,7 +1590,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1631,7 +1631,7 @@
       "sectionIdentifier": "mosaic-8",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-8",
+      "anchorTitle": "mosaic-8",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-8",
@@ -1642,7 +1642,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1680,7 +1680,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1718,7 +1718,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1759,7 +1759,7 @@
       "sectionIdentifier": "mosaic-9",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-9",
+      "anchorTitle": "mosaic-9",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-9",
@@ -1770,7 +1770,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1808,7 +1808,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1846,7 +1846,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1887,7 +1887,7 @@
       "sectionIdentifier": "mosaic-10",
       "layout": "mosaic",
       "anchorLink": "true",
-      "title": "mosaic-10",
+      "anchorTitle": "mosaic-10",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-10",
@@ -1898,7 +1898,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1936,7 +1936,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -1974,7 +1974,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },
@@ -2012,7 +2012,7 @@
             "button": {
               "layout": "link",
               "path": "http://www.microsoft.com",
-              "title": "Call to action",
+              "anchorTitle": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             },

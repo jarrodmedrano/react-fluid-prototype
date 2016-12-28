@@ -11,21 +11,21 @@
   top: calc(50% + 36px);
 }
 
-.c-hero.f-y-center >div > div, .m-hero-item.f-y-center > div > div {
-  top: calc(50% - 72px);
-}
+//.c-hero.f-y-center >div > div, .m-hero-item.f-y-center > div > div {
+//  top: calc(50% - 72px);
+//}
 
-.c-hero.f-y-center>div>div, .m-hero-item.f-y-center>div>div {
-  transform: translateY(calc(50% - 72px));
-}
+//.c-hero.f-y-center>div>div, .m-hero-item.f-y-center>div>div {
+//  transform: translateY(calc(50% - 72px));
+//}
 
-.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
-  top: calc(60px + 72px);
-}
-
-.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
-  bottom: calc(60px + 72px);
-}
+//.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+//  top: calc(60px + 72px);
+//}
+//
+//.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
+//  bottom: calc(60px + 72px);
+//}
 
 .m-immersive-hero-item {
   height: 100%;

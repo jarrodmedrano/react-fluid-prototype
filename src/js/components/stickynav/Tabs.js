@@ -39,7 +39,7 @@ class Tabs extends React.Component {
                                 activeClassName="active"
                                 activeStyle={{ background: this.state.logoColors[index + 1] }}
                                 to={item.path || ''}>
-                                {this.state.logoTabs[index + 1] ? <img src={this.state.logoTabs[index + 1]} alt={item.title} /> : item.title}
+                                {this.state.logoTabs[index + 1] ? <img src={this.state.logoTabs[index + 1]} alt={item.title} /> : <p>{item.title}</p>}
                             </Link>
                             {(index + 1) < depth}
                         </li>

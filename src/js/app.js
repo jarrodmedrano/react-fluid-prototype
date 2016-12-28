@@ -17,6 +17,7 @@ if (window.RDX) {
 }
 else {
     window.datasource = data;
+    console.log(data);
 }
 
 const myData = window.datasource;
