@@ -12,19 +12,22 @@
 }
 .config-table {
   flex-direction: column;
-  padding: 50px 20px 150px;
+  padding: 189px 20px 150px;
   height: auto;
   background: #F3F3F3;
   text-align: left;
-  display: block;
+  display: flex;
   overflow: auto;
   width: 100vw;
 
   .auto-width {
-    overflow: auto;
+    overflow-x: auto;
+    flex: 1;
+    overflow-y: hidden;
+    padding-bottom: 25px;
 
     .configs {
-      padding: 0 0 25px;
+      height: 100%;
     }
   }
 
@@ -47,10 +50,6 @@
     }
   }
 
-  .auto-width {
-    max-width: 100vw;
-    overflow: auto;
-  }
 
   .configs {
     width: 100%;
