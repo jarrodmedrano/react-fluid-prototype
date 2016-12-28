@@ -15,17 +15,20 @@
 //  top: calc(50% - 72px);
 //}
 
-//.c-hero.f-y-center>div>div, .m-hero-item.f-y-center>div>div {
-//  transform: translateY(calc(50% - 72px));
-//}
+.c-hero.f-y-center>div>div, .m-hero-item.f-y-center>div>div {
+  transform: translateY(calc(50% - 72px));
+}
 
-//.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
-//  top: calc(60px + 72px);
-//}
-//
-//.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
-//  bottom: calc(60px + 72px);
-//}
+.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+  top: calc(60px + 72px);
+}
+
+.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
+  bottom: calc(60px + 72px);
+}
+.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+  top: calc(60px + 72px);
+}
 
 .m-immersive-hero-item {
   height: 100%;
@@ -36,7 +39,7 @@
   z-index: 1;
 }
 
-.m-immersive-hero-item.f-align-top>div {
+.m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -46,7 +49,7 @@
   left: 0;
 }
 
-.m-immersive-hero-item.f-align-top>div>div {
+.m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
   position: relative;
   transform: none;
   left: 0;
@@ -55,7 +58,7 @@
   box-sizing: content-box;
 }
 
-.m-immersive-hero-item.f-align-top>div>picture.c-image img {
+.m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
   position: relative;
   height: auto;
   max-width: 50%;
@@ -63,4 +66,22 @@
   transform: none;
 }
 
+.m-immersive-hero-item.f-align-bottom > div > div {
+  order: 2;
+}
 
+.m-immersive-hero-item.f-align-bottom>div>picture.c-image {
+  order: 1;
+  flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top>div {
+    top: 0;
+  }
+}
+@media only screen and (min-width: 1084px) {
+  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top>div {
+    top: 0;
+  }
+}
