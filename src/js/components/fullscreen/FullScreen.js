@@ -5,7 +5,7 @@ class FullScreen extends React.Component {
 
     render() {
 
-        let { title, video, foregroundImage, backgroundImage } = this.props.data;
+        let { video } = this.props.data;
 
         let bgStyle = {
             width: '100vw',
@@ -13,16 +13,8 @@ class FullScreen extends React.Component {
             backgroundSize: 'cover'
         };
 
-        let bgImg = {
-            backgroundImage: 'url(' + backgroundImage + ')'
-        };
-
         return (
-            <div style={backgroundImage ? Object.assign(bgStyle, bgImg) : bgStyle}>
-                {foregroundImage ?
-                    <img src={foregroundImage} alt={title} className="overlay" />
-                        : null
-                }
+            <div style={bgStyle}>
                 <video className="video-fullscreen fixed" loop>
                     <source src={video} type="video/mp4" />
                 </video>
