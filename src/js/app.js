@@ -6,7 +6,7 @@ import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
 import Scroll from 'react-scroll';
-import * as dummyData from '../data/hubRoot';
+import data from '../data/assembleData';
 
 if (typeof window !== 'undefined') {
     window.React = React;
@@ -16,7 +16,7 @@ if (window.RDX) {
     window.datasource = JSON.parse(window.RDX.datasource);
 }
 else {
-    window.datasource = dummyData;
+    window.datasource = data;
 }
 
 const myData = window.datasource;

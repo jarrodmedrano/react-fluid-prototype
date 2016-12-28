@@ -1,4 +1,4 @@
-data = {
+{
   "layout": "VerticalPage",
   "deviceInformation": {
     "ManufacturerName": "Microsoft",
@@ -507,4 +507,4 @@ data = {
       ]
     }
   ]
-};
+}
