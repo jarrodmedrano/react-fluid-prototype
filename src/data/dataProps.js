@@ -10,10 +10,11 @@ let requiredString = React.PropTypes.string.isRequired;
 export let picturePropTypes = {
     pictures: React.PropTypes.arrayOf(
         React.PropTypes.shape({
-            src: string,
+            src: string.isRequired,
             minwidth: string,
         })
-    )
+    ),
+    altText: string
 };
 
 export let headingPropTypes = {

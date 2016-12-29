@@ -36,7 +36,6 @@
           "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
           "altText": "AltText",
           "ariaLabel": "AriaLabel",
-          "heroType": "default",
           "pictures": [
             {
               "src": "http://placehold.it/2400x1350/2F2F2F/171717",
