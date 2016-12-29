@@ -19,6 +19,10 @@
   }
 }
 
+video {
+  max-width: 100%;
+}
+
 .sub-route + .main-container .c-hero.f-fullscreen {
   height: calc(100vh - 100px);
 

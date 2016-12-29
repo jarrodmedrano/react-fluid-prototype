@@ -1,5 +1,4 @@
 import React from 'react'
-import Heading from '../heading/Heading';
 import GenericList from '../list/GenericList';
 import propsAreValid from '../../util';
 

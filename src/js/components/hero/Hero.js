@@ -4,6 +4,7 @@ import Heading from '../heading/Heading';
 import './Hero.scss!';
 import Picture from '../picture/Picture';
 import propsAreValid from '../../util';
+import dataPropTypes, { heroPropTypes } from '../../../data/dataProps';
 
 class Hero extends React.Component {
     render() {
@@ -49,5 +50,7 @@ class Hero extends React.Component {
         } return null
     }
 }
+
+Hero.propTypes = dataPropTypes(heroPropTypes);
 
 export default Hero

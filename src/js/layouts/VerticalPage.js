@@ -4,46 +4,11 @@ import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
 import Footer from '../components/stickynav/Footer';
-import Button from '../components/button/Button';
+import Link from '../components/link/Link';
 import _ from 'lodash';
-import Scroll from 'react-scroll';
-
-var Link       = Scroll.Link;
-var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 
 class VerticalPage extends React.Component {
-    componentDidMount() {
-        Events.scrollEvent.register('begin', function(to, element) {
-            console.log("begin", arguments);
-        });
-        Events.scrollEvent.register('end', function(to, element) {
-            console.log("end", arguments);
-        });
-        scrollSpy.update();
-    }
-    componentWillUnmount() {
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
-    }
-    _scrollToTop() {
-        scroll.scrollToTop();
-    }
-    _scrollToBottom() {
-        scroll.scrollToBottom();
-    }
-    _scrollTo(target) {
-        target.top = target.getBound
-        scroll.scrollTo(target);
-    }
-    _scrollMore() {
-        scroll.scrollMore(100);
-    }
-    _handleSetActive(to) {
-        console.log(to);
-    }
     render() {
         let title = this.props.route.title;
         let {ratings, deviceInformation, groups} = this.props.data;
@@ -67,7 +32,7 @@ class VerticalPage extends React.Component {
                 {oemGroup.brand ?
                   <StickyBanner data={currentPage}>
                     <div className="cta">
-                        <div><Link to="#400" spy={true} onClick={this._scrollTo.bind(this)} className="c-call-to-action c-glyph" ><span>Compare Models</span></Link></div>
+                        <div><Link to="#400" className="c-call-to-action c-glyph" ><span>Compare Models</span></Link></div>
                     </div>
                   </StickyBanner>
                 : null }
@@ -87,19 +52,6 @@ class VerticalPage extends React.Component {
     }
 }
 
-// VerticalPage.propTypes = {
-//     routes : React.PropTypes.isRequired,
-//     params : React.PropTypes.isRequired,
-//     data : React.PropTypes.isRequired,
-//     ratings : React.PropTypes.isRequired,
-//     deviceInformation : React.PropTypes.isRequired,
-//     groups: React.PropTypes.isRequired,
-//     currentPage: React.PropTypes.isRequired,
-//     oemGroup: React.PropTypes.isRequired,
-//     retailerGroup: React.PropTypes.isRequired,
-//     oemratings: React.PropTypes.isRequired,
-//     price : React.PropTypes.isRequired,
-//     branding : React.PropTypes.isRequired,
-// };
+VerticalPage.propTypes = dataPropTypes(verticalPagePropTypes);
 
 export default VerticalPage

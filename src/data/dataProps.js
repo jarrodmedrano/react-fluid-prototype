@@ -4,65 +4,118 @@ import React from 'react';
     ONLY RUNS IN DEVELOPMENT, NOT IN PRODUCTION
 */}
 
+let string = React.PropTypes.string;
+let requiredString = React.PropTypes.string.isRequired;
+
 export let picturePropTypes = {
     pictures: React.PropTypes.arrayOf(
         React.PropTypes.shape({
-            src: React.PropTypes.string,
-            minwidth: React.PropTypes.string,
+            src: string.isRequired,
+            minwidth: string,
         })
-    )
+    ),
+    altText: string
 };
 
 export let headingPropTypes = {
-    heading: React.PropTypes.string,
-    subheading: React.PropTypes.string,
-    paragraph: React.PropTypes.string
+    heading: string,
+    subheading: string,
+    paragraph: string
 };
 
 export let buttonPropTypes = {
     button: React.PropTypes.shape({
-        layout: React.PropTypes.string,
-        path: React.PropTypes.string,
-        title: React.PropTypes.string,
-        ariaLabel: React.PropTypes.string,
-        textColor: React.PropTypes.string,
-        backgroundColor: React.PropTypes.string,
+        layout: string,
+        path: string,
+        anchorTitle: string,
+        ariaLabel: string,
+        textColor: string,
+        backgroundColor: string,
     })
 };
 
 export let ratingsPropTypes = {
     ratings: React.PropTypes.shape({
-        rating: React.PropTypes.string.isRequired,
-        bestRating: React.PropTypes.string.isRequired,
-        ratingText: React.PropTypes.string.isRequired,
-        reviewLink: React.PropTypes.string.isRequired,
+        rating: requiredString,
+        bestRating: requiredString,
+        ratingText: requiredString,
+        reviewLink: requiredString,
     })
 };
 
 export let devicePropTypes = {
-  ManufacturerName: React.PropTypes.string,
-  ModelName: React.PropTypes.string,
-  price: React.PropTypes.string,
-  salePrice: React.PropTypes.string,
-  saleExpires: React.PropTypes.string,
-  label: React.PropTypes.string,
+  ManufacturerName: string,
+  ModelName: string,
+  price: string,
+  salePrice: string,
+  saleExpires: string,
+  label: string,
 };
 
 export let tilePropTypes = {
   tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
-      headingPropTypes,
-      size: React.PropTypes.string,
-      picturePropTypes,
-      buttonPropTypes
+      heading: Object.assign(headingPropTypes.heading),
+      size: string,
+      pictures: Object.assign(picturePropTypes.pictures),
+      button: Object.assign(buttonPropTypes.button)
   }))
 };
 
 export let mosaicPropTypes = {
   mosaic: React.PropTypes.shape({
-      theme: React.PropTypes.string,
-      layout: React.PropTypes.string,
-      tilePropTypes
+      theme: string,
+      layout: string,
+      tiles: Object.assign(tilePropTypes.tiles)
   }),
+};
+
+export let heroPropTypes = {
+    alignX: string,
+    alignY: string,
+    theme: string,
+    layout: string,
+    pictures: Object.assign(picturePropTypes.pictures),
+    button: Object.assign(buttonPropTypes.button)
+};
+
+export let listPropTypes = React.PropTypes.array.isRequired;
+
+export let listItemPropTypes = React.PropTypes.string.isRequired;
+
+export let linkPropTypes = {
+    to: React.PropTypes.string.isRequired,
+    children: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.object
+    ]).isRequired
+};
+
+export let verticalPropTypes = {
+    layout: requiredString,
+    ordinal: requiredString,
+    groupIdentifier: requiredString,
+    sectionIdentifier: requiredString
+};
+
+export let footerPropTypes = React.PropTypes.arrayOf(React.PropTypes.shape({
+    anchorLink: requiredString
+})).isRequired;
+
+export let verticalPagePropTypes = {
+    route: React.PropTypes.object,
+    groups: React.PropTypes.arrayOf(React.PropTypes.shape({
+        groupIdentifier: requiredString,
+        brand: React.PropTypes.shape({
+            logoTab: string,
+            color: string,
+        }).isRequired,
+        sections: React.PropTypes.arrayOf(React.PropTypes.shape({
+            groupIdentifier: requiredString,
+            sectionIdentifier: requiredString,
+            layout: requiredString,
+            anchorLink: requiredString,
+        }))
+    }))
 };
 
 export default function dataPropTypes(component) {
@@ -71,73 +124,71 @@ export default function dataPropTypes(component) {
     }
 }
 
-
-
 //
 // MasterLayout.propTypes = {
 //     routes : React.PropTypes.array.isRequired,
 //     route : React.PropTypes.object.isRequired,
 //     params : React.PropTypes.object.isRequired,
 //     data : React.PropTypes.shape({
-//         layout: React.PropTypes.string,
+//         layout: string,
 //         deviceInformation: React.PropTypes.object,
 //         ratings: React.PropTypes.shape({
-//             rating: React.PropTypes.string.isRequired,
-//             bestRating: React.PropTypes.string.isRequired,
-//             ratingText: React.PropTypes.string.isRequired,
-//             reviewLink: React.PropTypes.string.isRequired,
+//             rating: requiredString,
+//             bestRating: requiredString,
+//             ratingText: requiredString,
+//             reviewLink: requiredString,
 //         }),
 //         groups: React.PropTypes.arrayOf(React.PropTypes.shape({
-//             groupIdentifier: React.PropTypes.string.isRequired,
+//             groupIdentifier: requiredString,
 //             brand: React.PropTypes.shape({
-//                 logoTab: React.PropTypes.string.isRequired,
-//                 color: React.PropTypes.string.isRequired,
+//                 logoTab: requiredString,
+//                 color: requiredString,
 //             }).isRequired,
 //             sections: React.PropTypes.arrayOf(React.PropTypes.shape({
-//                 groupIdentifier: React.PropTypes.string.isRequired,
-//                 sectionIdentifier: React.PropTypes.string.isRequired,
-//                 layout: React.PropTypes.string.isRequired,
-//                 anchorLink: React.PropTypes.string.isRequired,
-//                 title: React.PropTypes.string.isRequired,
-//                 heading: React.PropTypes.string,
-//                 subheading: React.PropTypes.string,
-//                 paragraph: React.PropTypes.string,
-//                 altText: React.PropTypes.string,
-//                 ariaLabel: React.PropTypes.string,
+//                 groupIdentifier: requiredString,
+//                 sectionIdentifier: requiredString,
+//                 layout: requiredString,
+//                 anchorLink: requiredString,
+//                 title: requiredString,
+//                 heading: string,
+//                 subheading: string,
+//                 paragraph: string,
+//                 altText: string,
+//                 ariaLabel: string,
 //                 pictures: React.PropTypes.arrayOf(React.PropTypes.shape({
-//                     src: React.PropTypes.string,
-//                     minwidth: React.PropTypes.string,
+//                     src: string,
+//                     minwidth: string,
 //                 })),
 //                 button: React.PropTypes.shape({
-//                     layout: React.PropTypes.string,
-//                     path: React.PropTypes.string,
-//                     title: React.PropTypes.string,
-//                     ariaLabel: React.PropTypes.string,
-//                     textColor: React.PropTypes.string,
-//                     backgroundColor: React.PropTypes.string,
+//                     layout: string,
+//                     path: string,
+//                     title: string,
+//                     ariaLabel: string,
+//                     textColor: string,
+//                     backgroundColor: string,
 //                 }),
-//                 alignX: React.PropTypes.string,
-//                 alignY: React.PropTypes.string,
-//                 theme: React.PropTypes.string,
-//                 video: React.PropTypes.string,
+//                 alignX: string,
+//                 alignY: string,
+//                 theme: string,
+//                 video: string,
 //                 mosaic: React.PropTypes.shape({
-//                     theme: React.PropTypes.string,
-//                     layout: React.PropTypes.string,
+//                     theme: string,
+//                     layout: string,
 //                     tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
-//                         heading: React.PropTypes.string,
-//                         subheading: React.PropTypes.string,
-//                         size: React.PropTypes.string,
+//                         heading: string,
+//                         subheading: string,
+//                         size: string,
 //                         pictures: React.PropTypes.arrayOf(React.PropTypes.shape({
-//                             src: React.PropTypes.string,
-//                             minwidth: React.PropTypes.string,
+//                             src: string,
+//                             minwidth: string,
 //                         })),
 //                         button: React.PropTypes.shape({
-//                             layout: React.PropTypes.string,
-//                             path: React.PropTypes.string,
-//                             title: React.PropTypes.string,
-//                             ariaLabel: React.PropTypes.string,
-//                             textColor: React.PropTypes.string,
-//                             backgroundColor: React.PropTypes.string,
+//                             layout: string,
+//                             path: string,
+//                             title: string,
+//                             ariaLabel: string,
+//                             textColor: string,
+//                             backgroundColor: string,
 //                         }),
 //                     }))
 //                 }),

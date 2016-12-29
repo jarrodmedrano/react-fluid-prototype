@@ -1,7 +1,6 @@
 import React from 'react';
 import propsAreValid from '../../util';
-import picturePropTypes from '../../../data/dataProps';
-import dataPropTypes from '../../../data/dataProps';
+import dataPropTypes, {picturePropTypes} from '../../../data/dataProps';
 
 class Picture extends React.Component {
     render() {
@@ -14,7 +13,7 @@ class Picture extends React.Component {
                             <source srcSet={object.src} media={object.minwidth} key={id}/>
                         )
                     })}
-                    <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText}/>
+                    <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText ? altText : null}/>
                 </picture>
             )
         } return null
@@ -22,8 +21,10 @@ class Picture extends React.Component {
 }
 
 Picture.defaultProps = {
-    pictures: [{src: '', minwidth: '', altText: ''}],
-    altText: ''
+    data: {
+        pictures: [{src: '', minwidth: '', altText: ''}],
+        altText: ''
+    }
 };
 
 Picture.propTypes = dataPropTypes(picturePropTypes);

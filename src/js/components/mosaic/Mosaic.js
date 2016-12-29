@@ -2,8 +2,7 @@ import React from 'react'
 import './mosaic.scss!'
 import MosaicContainer from './MosaicContainer';
 import propsAreValid from '../../util';
-import mosaicPropTypes from '../../../data/dataProps';
-import dataPropTypes from '../../../data/dataProps';
+import dataPropTypes, {mosaicPropTypes} from '../../../data/dataProps';
 
 class Mosaic extends React.Component {
     render() {

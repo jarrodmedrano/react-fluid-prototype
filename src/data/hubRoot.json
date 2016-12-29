@@ -36,14 +36,13 @@
           "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
           "altText": "AltText",
           "ariaLabel": "AriaLabel",
-          "heroType": "default",
           "pictures": [
             {
-              "src": "http://placehold.it/1600x600/2F2F2F/171717",
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
               "minwidth": "(min-width: 1779px)"
             },
             {
-              "src": "http://placehold.it/1600x600/2F2F2F/171717",
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
               "minwidth": "(min-width: 1400px)"
             },
             {
@@ -89,11 +88,11 @@
           "ariaLabel": "AriaLabel",
           "pictures": [
             {
-              "src": "http://placehold.it/1600x600/2F2F2F/171717",
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
               "minwidth": "(min-width: 1779px)"
             },
             {
-              "src": "http://placehold.it/1600x600/2F2F2F/171717",
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
               "minwidth": "(min-width: 1400px)"
             },
             {
@@ -254,7 +253,7 @@
                 },
                 "pictures": [
                   {
-                    "src": "http://placehold.it/890x800/171717/2F2F2F",
+                    "src": "http://placehold.it/890x950/171717/2F2F2F",
                     "minwidth": "(min-width:1779px)"
                   },
                   {

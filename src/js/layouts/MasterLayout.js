@@ -1,8 +1,6 @@
 import React from 'react'
 //Components
 import VerticalPage from './VerticalPage';
-import _ from 'lodash/lodash';
-
 
 class MasterLayout extends React.Component {
 
@@ -13,5 +11,8 @@ class MasterLayout extends React.Component {
     }
 }
 
+MasterLayout.propTypes = {
+    data: React.PropTypes.object.isRequired
+};
 
 export default MasterLayout

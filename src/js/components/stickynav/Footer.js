@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import propsAreValid from '../../util';
+import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
 
 class Footer extends React.Component {
     _handleClick(anchorTarget, event) {
@@ -23,5 +24,7 @@ class Footer extends React.Component {
       } return null
     }
 }
+
+Footer.propTypes = footerPropTypes;
 
 export default Footer
