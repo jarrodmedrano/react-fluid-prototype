@@ -4,7 +4,7 @@ import dataPropTypes, {picturePropTypes} from '../../../data/dataProps';
 
 class Picture extends React.Component {
     render() {
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data, this.defaultProps)) {
             let {pictures, altText} = this.props.data;
             return (
                 <picture className="c-image">
