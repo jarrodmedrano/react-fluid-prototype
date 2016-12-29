@@ -5,7 +5,6 @@ import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
-import Scroll from 'react-scroll';
 import data from '../data/assembleData';
 
 if (typeof window !== 'undefined') {
@@ -17,7 +16,6 @@ if (window.RDX) {
 }
 else {
     window.datasource = data;
-    console.log(data);
 }
 
 const myData = window.datasource;

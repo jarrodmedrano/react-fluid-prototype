@@ -1,7 +1,6 @@
 import React from 'react';
 import propsAreValid from '../../util';
-import picturePropTypes from '../../../data/dataProps';
-import dataPropTypes from '../../../data/dataProps';
+import dataPropTypes, {picturePropTypes} from '../../../data/dataProps';
 
 class Picture extends React.Component {
     render() {

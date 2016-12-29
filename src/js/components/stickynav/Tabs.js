@@ -1,6 +1,6 @@
 import React from 'react';
 import './tabs.scss!'
-
+import dataPropTypes, {verticalPagePropTypes} from '../../../data/dataProps';
 import { Link, IndexLink } from 'react-router';
 
 class Tabs extends React.Component {
@@ -49,5 +49,7 @@ class Tabs extends React.Component {
         )
     }
 }
+
+Tabs.propTypes = dataPropTypes(verticalPagePropTypes);
 
 export default Tabs

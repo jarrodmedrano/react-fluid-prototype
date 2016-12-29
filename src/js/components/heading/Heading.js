@@ -1,8 +1,7 @@
 import React from 'react';
 import Button from '../button/Button';
 import propsAreValid from '../../util';
-import headingPropTypes from '../../../data/dataProps';
-import dataPropTypes from '../../../data/dataProps';
+import dataPropTypes, {headingPropTypes} from '../../../data/dataProps';
 
 class Heading extends React.Component {
     render() {

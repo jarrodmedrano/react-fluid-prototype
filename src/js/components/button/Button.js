@@ -4,7 +4,6 @@ import buttonPropTypes from '../../../data/dataProps';
 import dataPropTypes from '../../../data/dataProps';
 import Link from '../link/Link';
 
-
 class Button extends React.Component {
     render() {
         if(propsAreValid(this.props.data.button)) {

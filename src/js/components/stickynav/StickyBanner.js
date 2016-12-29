@@ -4,8 +4,7 @@ import Button from '../button/Button';
 import _ from 'lodash';
 import './sticky-banner.scss!';
 import propsAreValid from '../../util';
-import devicePropTypes from '../../../data/dataProps';
-import dataPropTypes from '../../../data/dataProps';
+import dataPropTypes, {devicePropTypes} from '../../../data/dataProps';
 
 class StickyBanner extends React.Component {
     render() {
