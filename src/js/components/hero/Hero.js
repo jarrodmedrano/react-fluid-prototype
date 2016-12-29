@@ -19,6 +19,25 @@ class Hero extends React.Component {
                         </div>
                     </div>
                 )
+            }
+            else if(layout === 'fullscreen') {
+                let heroClassFScreen = classNames(heroClass, 'm-image-intro f-transparent');
+                if(this.props.data.video) {
+                    return (
+                        <div>
+                            <video className="video-fullscreen fixed" loop>
+                                <source src={this.props.data.video} type="video/mp4" />
+                            </video>
+                        </div>
+                    )
+                } else {
+                    return (
+                        <div className={heroClassFScreen}>
+                            <Heading data={this.props.data}/>
+                            <Picture data={this.props.data}/>
+                        </div>
+                    )
+                }
             } else {
                 return (
                     <div className={heroClass}>

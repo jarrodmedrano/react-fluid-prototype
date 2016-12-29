@@ -14,15 +14,15 @@ class Vertical extends React.Component {
         let {layout, ordinal} = this.props.data;
         return (
             <section className={verticalClass} id={ordinal}>
-                {layout === 'hero' || layout === 'immersive-hero' ?
+                {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' ?
                     <Hero data={this.props.data}/> : null
                 }
                 {layout === 'parallax' ?
                     <Parallax data={this.props.data}/> : null
                 }
-                {layout === 'fullscreen' ?
-                    <FullScreen data={this.props.data}/> : null
-                }
+                {/*{layout === 'fullscreen' ?*/}
+                    {/*<FullScreen data={this.props.data}/> : null*/}
+                {/*}*/}
                 {layout === 'apps' ?
                     <Apps data={this.props.data}/> : null
                 }

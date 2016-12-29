@@ -1,4 +1,7 @@
 import React from 'react'
+import Heading from '../heading/Heading';
+import '../hero/Hero.scss!';
+import Picture from '../picture/Picture';
 import './fullscreen.scss!'
 
 class FullScreen extends React.Component {
@@ -13,13 +16,22 @@ class FullScreen extends React.Component {
             backgroundSize: 'cover'
         };
 
-        return (
-            <div style={bgStyle}>
-                <video className="video-fullscreen fixed" loop>
-                    <source src={video} type="video/mp4" />
-                </video>
-            </div>
-        )
+        if(video) {
+            return (
+                <div style={bgStyle}>
+                    <video className="video-fullscreen fixed" loop>
+                        <source src={video} type="video/mp4" />
+                    </video>
+                </div>
+            )
+        } else {
+            return (
+                <section className="m-image-intro f-transparent f-align-center theme-light">
+                    <Picture data={this.props.data}/>
+                    <Heading data={this.props.data}/>
+                </section>
+            )
+        }
     }
 }
 
