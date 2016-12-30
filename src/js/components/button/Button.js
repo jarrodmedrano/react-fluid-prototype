@@ -1,12 +1,11 @@
 import React from 'react'
 import propsAreValid from '../../util';
-import buttonPropTypes from '../../../data/dataProps';
-import dataPropTypes from '../../../data/dataProps';
+import dataPropTypes, {buttonPropTypes, buttonInterface} from '../../../data/dataProps';
 import Link from '../link/Link';
 
 class Button extends React.Component {
     render() {
-        if(propsAreValid(this.props.data.button)) {
+        if(propsAreValid(this.props.data.button, buttonInterface)) {
             let { anchorTitle, path, ariaLabel, textColor, backgroundColor } = this.props.data.button;
             let btnStyle = {
                 background: backgroundColor,

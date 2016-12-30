@@ -1,4 +1,5 @@
 import React from 'react';
+
 {/*
     Proptypes are evaluated at run time and will throw WARNINGS if missing
     ONLY RUNS IN DEVELOPMENT, NOT IN PRODUCTION
@@ -97,9 +98,18 @@ export let verticalPropTypes = {
     sectionIdentifier: requiredString
 };
 
-export let footerPropTypes = React.PropTypes.arrayOf(React.PropTypes.shape({
-    anchorLink: requiredString
-})).isRequired;
+export let sectionPropTypes = {
+    sections: React.PropTypes.arrayOf(React.PropTypes.shape({
+        groupIdentifier: requiredString,
+        sectionIdentifier: requiredString,
+        layout: requiredString,
+        anchorLink: requiredString,
+    }))
+};
+
+export let footerPropTypes = {
+    sections: Object.assign(sectionPropTypes.sections)
+};
 
 export let verticalPagePropTypes = {
     route: React.PropTypes.object,
@@ -109,12 +119,7 @@ export let verticalPagePropTypes = {
             logoTab: string,
             color: string,
         }).isRequired,
-        sections: React.PropTypes.arrayOf(React.PropTypes.shape({
-            groupIdentifier: requiredString,
-            sectionIdentifier: requiredString,
-            layout: requiredString,
-            anchorLink: requiredString,
-        }))
+        sections: Object.assign(sectionPropTypes.sections)
     }))
 };
 
@@ -123,7 +128,6 @@ export default function dataPropTypes(component) {
         data: React.PropTypes.shape(Object.assign(component)).isRequired
     }
 }
-
 //
 // MasterLayout.propTypes = {
 //     routes : React.PropTypes.array.isRequired,

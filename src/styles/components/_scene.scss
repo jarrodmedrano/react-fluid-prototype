@@ -16,6 +16,10 @@
   background: $default-bg;
   z-index: 2;
 
+  &:last-child > div {
+    padding-bottom: 60px;
+  }
+
   @media (orientation: portrait) {
     height: auto;
     top: $linkband-height;

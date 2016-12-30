@@ -8,10 +8,10 @@ class Footer extends React.Component {
     }
     render() {
       if(propsAreValid(this.props.data)) {
-        let footer = this.props.data;
+        let sections = this.props.data;
         return (
             <div className="sticky-banner sticky-footer">
-                {footer.map(function(result, id)  {
+                {sections.map(function(result, id)  {
                         if(result.anchorLink) {
                             let anchorTarget = result.ordinal;
                             return (

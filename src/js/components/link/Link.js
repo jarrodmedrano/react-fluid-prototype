@@ -1,6 +1,5 @@
 import React from 'react';
-import propsAreValid from '../../util';
-import onClickHandler from '../../telemetry';
+import propsAreValid, {onClickHandler} from '../../util';
 import {linkPropTypes} from '../../../data/dataProps';
 
 class Link extends React.Component {
@@ -29,6 +28,11 @@ class Link extends React.Component {
         } return null
     }
 }
+
+Link.defaultProps = {
+    to: '',
+    children: ''
+};
 
 Link.propTypes = linkPropTypes;
 
