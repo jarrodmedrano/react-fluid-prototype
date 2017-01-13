@@ -1,5 +1,5 @@
 import React from 'react';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {picturePropTypes} from '../../../data/dataProps';
 
 class Picture extends React.Component {

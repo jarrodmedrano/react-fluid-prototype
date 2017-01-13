@@ -8,11 +8,7 @@ node_modules
 /.vs
 jspm_packages
 *.orig
-build/fonts
-build/img
-build/src
-build/*.js
-build/*.js*
+build
 npm-debug.log*
 # User-specific files
 *.suo

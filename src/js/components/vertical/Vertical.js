@@ -6,7 +6,7 @@ import CompareTable from '../compare/CompareTable';
 import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyKsp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 
 class Vertical extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import MosaicTile from './MosaicTile';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import tilePropTypes from '../../../data/dataProps';
 import dataPropTypes from '../../../data/dataProps';
 

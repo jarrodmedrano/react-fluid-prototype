@@ -1,7 +1,7 @@
 import React from 'react'
 import './mosaic.scss!'
 import MosaicContainer from './MosaicContainer';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {mosaicPropTypes} from '../../../data/dataProps';
 
 class Mosaic extends React.Component {

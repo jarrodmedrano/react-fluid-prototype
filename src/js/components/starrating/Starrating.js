@@ -1,7 +1,7 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
 
 import React from 'react';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 
 class Starrating extends React.Component {
 

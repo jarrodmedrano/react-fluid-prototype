@@ -1,5 +1,5 @@
 import React from 'react'
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {buttonPropTypes, buttonInterface} from '../../../data/dataProps';
 import ButtonLink from '../link/ButtonLink';
 

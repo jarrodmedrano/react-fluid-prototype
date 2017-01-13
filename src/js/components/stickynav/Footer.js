@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
 import ButtonLink from '../link/ButtonLink';
 

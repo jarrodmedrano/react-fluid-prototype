@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Heading from '../heading/Heading';
 import './Hero.scss!';
 import Picture from '../picture/Picture';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, { heroPropTypes } from '../../../data/dataProps';
 
 class Hero extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react'
 import GenericList from '../list/GenericList';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 
 class CompareRow extends React.Component {
     render() {

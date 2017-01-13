@@ -4,7 +4,7 @@ import GenericList from '../list/GenericList';
 import Heading from '../heading/Heading';
 import CompareRow from './CompareRow';
 import './scene-config.scss!';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 
 class CompareTable extends React.Component {
     render() {

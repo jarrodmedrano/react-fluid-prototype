@@ -1,7 +1,7 @@
 import React from 'react';
-import propsAreValid, {onClickHandler} from '../../util';
+import propsAreValid, {onClickHandler} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../scroll';
+import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
 import {Link as RouterLink} from 'react-router'
 
 

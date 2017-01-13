@@ -10,7 +10,11 @@
     "postinstall": "jspm install",
     "start": "node server",
     "test": "node run-tests",
-    "build": "jspm bundle app --inject --minify"
+    "clean": "rimraf build",
+    "postbuild": "postbuild -i src/index.html -o build/index.html -r production",
+    "assets": "cpx src/img/**/*.{mp4,png,jpg,svg} build/img && cpx src/fonts/**/*.{ttf,woff,svg} build/fonts",
+    "build-dev": "jspm bundle-sfx js/app build/build.js --inject && npm run assets && cpx src/index.html build && npm run postbuild",
+    "build-prod": "jspm bundle-sfx js/app build/build.js --inject --minify && npm run postbuild"
   },
   "author": "v-jamedr@microsoft.com",
   "jspm": {
@@ -47,16 +51,16 @@
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-register": "^6.9.0",
-    "chai": "^3.5.0",
     "chokidar-socket-emitter": "^0.5.4",
-    "enzyme": "^2.3.0",
+    "cpx": "^1.5.0",
     "glob": "^7.0.4",
-    "husky": "^0.11.4",
     "jsdom": "^9.8.3",
     "jspm": "^0.16.39",
+    "postbuild": "^2.0.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-scroll": "^1.4.4",
+    "rimraf": "^2.5.4",
     "standard": "^7.1.2",
     "systemjs": "^0.19.31"
   },

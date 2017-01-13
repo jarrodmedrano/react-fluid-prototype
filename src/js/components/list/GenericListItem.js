@@ -1,5 +1,5 @@
 import React from 'react'
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import {listItemPropTypes} from '../../../data/dataProps';
 
 class GenericListItem extends React.Component {

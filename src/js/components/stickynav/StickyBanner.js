@@ -3,7 +3,7 @@ import Starrating from '../starrating/Starrating';
 import Button from '../button/Button';
 import _ from 'lodash';
 import './sticky-banner.scss!';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {devicePropTypes} from '../../../data/dataProps';
 
 class StickyBanner extends React.Component {

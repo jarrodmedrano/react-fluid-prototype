@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../button/Button';
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {headingPropTypes} from '../../../data/dataProps';
 
 class Heading extends React.Component {

@@ -2,7 +2,7 @@ import React from 'react';
 import Picture from '../picture/Picture';
 import Heading from '../heading/Heading';
 import ButtonLink from '../link/ButtonLink'
-import propsAreValid from '../../util';
+import propsAreValid from '../../lib/util';
 import dataPropTypes, {tilePropTypes} from '../../../data/dataProps';
 
 class MosaicTile extends React.Component {

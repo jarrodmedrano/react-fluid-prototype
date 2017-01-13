@@ -7,7 +7,7 @@ import Footer from '../components/stickynav/Footer';
 import ButtonLink from '../components/link/ButtonLink';
 import _ from 'lodash';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../scroll';
+import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../lib/scroll';
 
 class VerticalPage extends React.Component {
 

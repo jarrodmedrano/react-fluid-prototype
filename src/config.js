@@ -24,8 +24,6 @@ System.config({
     "history": "npm:history@2.0.1",
     "json": "github:systemjs/plugin-json@0.2.2",
     "lodash": "npm:lodash@4.16.6",
-    "mobx": "npm:mobx@2.4.0",
-    "mobx-react": "npm:mobx-react@3.5.1",
     "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@15.3.2",
     "react-dom": "npm:react-dom@15.3.2",
@@ -412,9 +410,6 @@ System.config({
     "npm:miller-rabin@4.0.0": {
       "bn.js": "npm:bn.js@4.11.6",
       "brorand": "npm:brorand@1.0.6"
-    },
-    "npm:mobx-react@3.5.1": {
-      "mobx": "npm:mobx@2.4.0"
     },
     "npm:node-fetch@1.6.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",

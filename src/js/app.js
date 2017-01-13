@@ -6,17 +6,12 @@ import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
-
+//For React Dev Tools in browser
 if (typeof window !== 'undefined') {
     window.React = React;
 }
-
-if (window.RDX) {
-    window.datasource = JSON.parse(window.RDX.datasource);
-}
-else {
-    window.datasource = data;
-}
+//Check if Window.RDX exists, if not, load data from dummyData
+window.RDX ? window.datasource = JSON.parse(window.RDX.datasource) : window.datasource = data;
 
 const myData = window.datasource;
 const Index = myData.groups[0];
