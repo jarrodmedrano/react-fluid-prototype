@@ -2,10 +2,9 @@ import React from 'react';
 import {Link} from 'react-router';
 import propsAreValid from '../../util';
 import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
+import ButtonLink from '../link/ButtonLink';
 
 class Footer extends React.Component {
-    _handleClick(anchorTarget, event) {
-    }
     render() {
       if(propsAreValid(this.props.data)) {
         let sections = this.props.data;
@@ -15,7 +14,7 @@ class Footer extends React.Component {
                         if(result.anchorLink) {
                             let anchorTarget = result.ordinal;
                             return (
-                                <Link to={anchorTarget} className="c-action-trigger" activeClassName="active" role="button" key={id} onClick={this._handleClick.bind(this)} onTouchEnd={this._handleClick.bind(this)}>{result.anchorTitle}</Link>
+                                <ButtonLink to={anchorTarget} role="button" key={id} >{result.anchorTitle}</ButtonLink>
                             )
                         }
                 }, this)}

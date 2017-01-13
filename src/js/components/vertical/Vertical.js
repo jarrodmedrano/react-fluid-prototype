@@ -10,41 +10,40 @@ import propsAreValid from '../../util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 
 class Vertical extends React.Component {
+
+
     render() {
         if(propsAreValid(this.props.data)) {
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
             let {layout, ordinal} = this.props.data;
             return (
-                <section className={verticalClass} id={ordinal}>
+                <section className={verticalClass} id={ordinal} name={ordinal}>
                     {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' ?
-                        <Hero data={this.props.data}/> : null
+                        <Hero data={this.props.data}  active={this.props.active} /> : null
                     }
                     {layout === 'parallax' ?
-                        <Parallax data={this.props.data}/> : null
+                        <Parallax data={this.props.data}  active={this.props.active} /> : null
                     }
                     {/*{layout === 'fullscreen' ?*/}
                     {/*<FullScreen data={this.props.data}/> : null*/}
                     {/*}*/}
                     {layout === 'apps' ?
-                        <Apps data={this.props.data}/> : null
-                    }
-                    {layout === 'config' ?
-                        <Config data={this.props.data}/> : null
+                        <Apps data={this.props.data}  active={this.props.active} /> : null
                     }
                     {layout === 'mosaic' ?
-                        <Mosaic data={this.props.data}/> : null
+                        <Mosaic data={this.props.data}  active={this.props.active} /> : null
                     }
                     {layout === 'compare' ?
-                        <CompareTable data={this.props.data}/> : null
+                        <CompareTable data={this.props.data}  active={this.props.active} /> : null
                     }
                     {layout === 'feature' ?
-                        <LegacyFeature data={this.props.data}/> : null
+                        <LegacyFeature data={this.props.data}  active={this.props.active} /> : null
                     }
                     {layout === 'featureCta' ?
-                        <LegacyFeature data={this.props.data}/> : null
+                        <LegacyFeature data={this.props.data}  active={this.props.active} /> : null
                     }
                     {layout === 'ksp' ?
-                        <LegacyKSP data={this.props.data}/> : null
+                        <LegacyKSP data={this.props.data}  active={this.props.active} /> : null
                     }
                     {/*  Implement as variants of 'ksp'?
                      {layout === 'ksp_reversed' ?
@@ -55,7 +54,7 @@ class Vertical extends React.Component {
                      }
                      */}
                     {layout === 'centeredBackdropTemplate' ?
-                        <LegacyCenteredBackdrop data={this.props.data}/> : null
+                        <LegacyCenteredBackdrop data={this.props.data} active={this.props.active}/> : null
                     }
                 </section>
             )

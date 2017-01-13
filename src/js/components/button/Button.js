@@ -1,7 +1,7 @@
 import React from 'react'
 import propsAreValid from '../../util';
 import dataPropTypes, {buttonPropTypes, buttonInterface} from '../../../data/dataProps';
-import Link from '../link/Link';
+import ButtonLink from '../link/ButtonLink';
 
 class Button extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class Button extends React.Component {
             };
             return (
                 <div>
-                    <Link to={path} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={btnStyle} children={anchorTitle} />
+                    <ButtonLink to={path} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={btnStyle} children={anchorTitle}  />
                 </div>
             )
         } return null

@@ -64,8 +64,8 @@
           ],
           "button": {
             "layout": "button",
-            "path": "#/windows",
-            "anchorTitle": "Call to action",
+            "path": "#hero",
+            "anchorTitle": "Hero Examples",
             "ariaLabel": "ariaLabel",
             "textColor": "white",
             "backgroundColor": "#0078D7"

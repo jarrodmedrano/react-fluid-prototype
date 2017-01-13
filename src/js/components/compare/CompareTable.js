@@ -21,7 +21,7 @@ class CompareTable extends React.Component {
                                     return (
                                        <CompareRow key={id} data={result} />
                                     )
-                                }, this)}
+                                })}
                             </div>
                     </div>
                 </div>

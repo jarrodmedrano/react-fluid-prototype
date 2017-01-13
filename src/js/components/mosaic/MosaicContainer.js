@@ -7,16 +7,16 @@ import dataPropTypes from '../../../data/dataProps';
 class MosaicContainer extends React.Component {
     render() {
         // TODO generate these layouts without all this markup
-        if(propsAreValid(this.props.data)) {
-            let {tiles, layout, theme} = this.props.data;
+        if(propsAreValid(this.props.data.mosaic)) {
+            let {tiles, layout, theme} = this.props.data.mosaic;
             if (tiles.length === 2 && layout === "mosaic-1" || tiles.length === 2) {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                            <MosaicTile data={tiles[0]}/>
+                            <MosaicTile data={tiles[0]}  />
                         </div>
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                            <MosaicTile data={tiles[1]}/>
+                            <MosaicTile data={tiles[1]}  />
                         </div>
                     </div>
                 );
@@ -24,17 +24,17 @@ class MosaicContainer extends React.Component {
                 return (
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                            <MosaicTile data={tiles[0]}/>
+                            <MosaicTile data={tiles[0]}  />
                         </div>
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                <MosaicTile data={tiles[1]}/>
+                                <MosaicTile data={tiles[1]}  />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                <MosaicTile data={tiles[2]}/>
+                                <MosaicTile data={tiles[2]}  />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-height-medium">
-                                <MosaicTile data={tiles[3]}/>
+                                <MosaicTile data={tiles[3]}  />
                             </div>
                         </div>
                     </div>
@@ -43,27 +43,27 @@ class MosaicContainer extends React.Component {
                 return (
                     <div className="c-mosaic fullscreen-mosaic">
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                                <MosaicTile data={tiles[0]} />
+                                <MosaicTile data={tiles[0]}  />
                         </div>
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                <MosaicTile data={tiles[1]}/>
+                                <MosaicTile data={tiles[1]}  />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                <MosaicTile data={tiles[2]}/>
+                                <MosaicTile data={tiles[2]}  />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                <MosaicTile data={tiles[3]}/>
+                                <MosaicTile data={tiles[3]}  />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-half f-height-small">
-                                    <MosaicTile data={tiles[4]} size="small" />
+                                    <MosaicTile data={tiles[4]} size="small"  />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-half f-height-small">
-                                    <MosaicTile data={tiles[5]} size="small" />
+                                    <MosaicTile data={tiles[5]} size="small"  />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-height-small">
-                                    <MosaicTile data={tiles[6]} />
+                                    <MosaicTile data={tiles[6]}  />
                                 </div>
                             </div>
                         </div>
@@ -74,26 +74,26 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]}  />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[1]}/>
+                                    <MosaicTile data={tiles[1]} />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[2]}/>
+                                    <MosaicTile data={tiles[2]}  />
                                 </div>
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[3]}/>
+                                    <MosaicTile data={tiles[3]} />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[4]}/>
+                                    <MosaicTile data={tiles[4]} />
                                 </div>
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                <MosaicTile data={tiles[5]}/>
+                                <MosaicTile data={tiles[5]} />
                             </div>
                         </div>
                     </div>
@@ -103,29 +103,29 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[1]}/>
+                                    <MosaicTile data={tiles[1]} />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[2]}/>
+                                    <MosaicTile data={tiles[2]} />
                                 </div>
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                <MosaicTile data={tiles[3]}/>
+                                <MosaicTile data={tiles[3]} />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[4]}/>
+                                    <MosaicTile data={tiles[4]} />
                                 </div>
                                 <div data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <div className={theme} data-f-mosaic="f-vp1-half f-height-small">
-                                        <MosaicTile data={tiles[5]} size="small" />
+                                        <MosaicTile data={tiles[5]} size="small"  />
                                     </div>
                                     <div className={theme} data-f-mosaic="f-vp1-half f-height-small">
-                                        <MosaicTile data={tiles[6]} size="small" />
+                                        <MosaicTile data={tiles[6]} size="small"  />
                                     </div>
                                     <div className={theme} data-f-mosaic="f-vp1-whole f-height-small">
                                         <MosaicTile data={tiles[7]} />
@@ -140,37 +140,37 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[1]}/>
+                                    <MosaicTile data={tiles[1]} />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[2]}/>
-                                </div>
-                            </div>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[3]}/>
-                                </div>
-                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[4]}/>
+                                    <MosaicTile data={tiles[2]} />
                                 </div>
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                    <MosaicTile data={tiles[5]}/>
+                                    <MosaicTile data={tiles[3]} />
+                                </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[4]} />
+                                </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[5]} />
                                 </div>
                                 <div data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <div className={theme} data-f-mosaic="f-vp1-half f-height-small">
-                                        <MosaicTile data={tiles[6]} size="small" />
+                                        <MosaicTile data={tiles[6]} size="small"  />
                                     </div>
                                     <div className={theme} data-f-mosaic="f-vp1-half f-height-small">
-                                        <MosaicTile data={tiles[7]} size="small" />
+                                        <MosaicTile data={tiles[7]} size="small"  />
                                     </div>
                                     <div className={theme} data-f-mosaic="f-vp1-whole f-height-small">
-                                        <MosaicTile data={tiles[8]} />
+                                        <MosaicTile data={tiles[8]}  />
                                     </div>
                                 </div>
                             </div>
@@ -182,18 +182,18 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[1]}/>
+                                <MosaicTile data={tiles[1]} />
                             </div>
                         </div>
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[2]}/>
+                                <MosaicTile data={tiles[2]} />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[3]}/>
+                                <MosaicTile data={tiles[3]} />
                             </div>
                         </div>
                     </div>
@@ -203,14 +203,14 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                    <MosaicTile data={tiles[1]}/>
+                                    <MosaicTile data={tiles[1]} />
                                 </div>
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                    <MosaicTile data={tiles[2]}/>
+                                    <MosaicTile data={tiles[2]} />
                                 </div>
                             </div>
                         </div>
@@ -221,14 +221,14 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[1]}/>
+                                <MosaicTile data={tiles[1]} />
                             </div>
                         </div>
                         <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                            <MosaicTile data={tiles[2]}/>
+                            <MosaicTile data={tiles[2]} />
                         </div>
                     </div>
                 )
@@ -237,18 +237,18 @@ class MosaicContainer extends React.Component {
                     <div className="c-mosaic  fullscreen-mosaic">
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[1]}/>
+                                <MosaicTile data={tiles[1]} />
                             </div>
                         </div>
                         <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[2]}/>
+                                <MosaicTile data={tiles[2]} />
                             </div>
                             <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-large">
-                                <MosaicTile data={tiles[3]}/>
+                                <MosaicTile data={tiles[3]} />
                             </div>
                         </div>
                     </div>
@@ -259,10 +259,10 @@ class MosaicContainer extends React.Component {
                         {tiles.map(function (result, id) {
                             return (
                                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large" key={id}>
-                                    <MosaicTile data={result}/>
+                                    <MosaicTile data={result.data}  />
                                 </div>
                             )
-                        })}
+                        }, this)}
                     </div>
                 )
             }

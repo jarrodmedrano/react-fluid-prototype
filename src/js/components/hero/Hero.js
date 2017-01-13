@@ -15,8 +15,8 @@ class Hero extends React.Component {
                 return (
                     <div className={heroClass}>
                         <div>
-                            <Heading data={this.props.data}/>
-                            <Picture data={this.props.data}/>
+                            <Heading data={this.props.data}  />
+                            <Picture data={this.props.data}  />
                         </div>
                     </div>
                 )
@@ -34,16 +34,16 @@ class Hero extends React.Component {
                 } else {
                     return (
                         <div className={heroClassFScreen}>
-                            <Heading data={this.props.data}/>
-                            <Picture data={this.props.data}/>
+                            <Heading data={this.props.data}  />
+                            <Picture data={this.props.data}  />
                         </div>
                     )
                 }
             } else {
                 return (
                     <div className={heroClass}>
-                            <Picture data={this.props.data}/>
-                            <Heading data={this.props.data}/>
+                            <Picture data={this.props.data}  />
+                            <Heading data={this.props.data}  />
                     </div>
                 )
             }

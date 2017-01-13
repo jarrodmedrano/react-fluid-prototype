@@ -35,6 +35,17 @@ export let buttonPropTypes = {
     })
 };
 
+export let buttonInterface = {
+    button: {
+        layout: string,
+        path: string,
+        anchorTitle: string,
+        ariaLabel: string,
+        textColor: string,
+        backgroundColor: string,
+    }
+};
+
 export let ratingsPropTypes = {
     ratings: React.PropTypes.shape({
         rating: requiredString,
