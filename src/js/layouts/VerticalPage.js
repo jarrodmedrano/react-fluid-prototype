@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../styles/mwf-west-european-default.min.css!';
+import '../../styles/mwf-ie9-west-european-default.min.css!';
 import '../../styles/main.scss!';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
