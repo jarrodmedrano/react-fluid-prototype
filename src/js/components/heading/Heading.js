@@ -13,7 +13,7 @@ class Heading extends React.Component {
                     <h1 className="c-heading">{heading}</h1>
                     <p className="c-subheading">{subheading}</p>
                     <p className="c-paragraph-1">{paragraph}</p>
-                    <Button data={this.props.data}  />
+                    {this.props.data.button ? <Button data={this.props.data}  /> : null }
                 </div>
             </div>
             )

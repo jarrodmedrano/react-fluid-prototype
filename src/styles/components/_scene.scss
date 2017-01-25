@@ -6,19 +6,16 @@
 
 .scene-vertical {
   flex: 1;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
   transition: height .5s;
   background: $default-bg;
   z-index: 2;
-
-  &:last-child > div {
-    padding-bottom: 60px;
-  }
+  padding-bottom: 60px;
 
   @media (orientation: portrait) {
     height: auto;

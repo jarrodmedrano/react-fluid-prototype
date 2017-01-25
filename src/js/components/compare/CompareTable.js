@@ -12,7 +12,7 @@ class CompareTable extends React.Component {
             return (
                     <div className="config-table">
                         <div className="config-title">
-                            <h2 className="c-heading-3 header-offset">{this.props.data.heading}</h2>
+                            <h2 className="c-heading-3">{this.props.data.heading}</h2>
                             <div className="title-border"></div>
                         </div>
                         <div className="auto-width">

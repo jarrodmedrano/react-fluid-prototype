@@ -36,7 +36,7 @@
 .c-mosaic-placement:hover {
   cursor: pointer;
   .c-image-overlay {
-    opacity: 0;
+    opacity: 0 !important;
   }
 }
 
@@ -46,12 +46,18 @@
 
 .theme-light .c-placement .c-image-overlay,
 .theme-dark .theme-light .c-placement .c-image-overlay {
-  background-color: rgba(255, 255, 255, .2);
+  background-color: #ffffff;
+  opacity: .2;
+}
+
+.c-placement .c-image-overlay {
+  opacity: .2;
 }
 
 .theme-dark .c-placement .c-image-overlay,
 .theme-light .theme-dark .c-placement .c-image-overlay {
-  background-color: rgba(0, 0, 0, .2);
+  background-color: #000000;
+  opacity: .2;
 }
 
 @media only screen and (min-width: 768px) {

@@ -70,32 +70,40 @@
   order: 2;
 }
 
-.m-immersive-hero-item.f-align-bottom>div>picture.c-image {
+.m-immersive-hero-item.f-align-bottom > div > picture.c-image {
   order: 1;
   flex: 1;
 }
 
 @media only screen and (min-width: 768px) {
-  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top>div {
+  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
     top: 0;
   }
 }
 @media only screen and (min-width: 1084px) {
-  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top>div {
+  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
     top: 0;
     bottom: 189px;
   }
 }
 
 @media only screen and (min-width: 540px) {
-  .m-image-intro.f-align-bottom>div {
+  .m-image-intro.f-align-bottom > div {
     bottom: 189px;
   }
 
-  .m-image-intro.f-transparent.f-align-top>div {
+  .m-image-intro.f-transparent.f-align-top > div {
     top: 189px;
   }
 }
-.m-immersive-hero-item.f-align-bottom >div {
+.m-immersive-hero-item.f-align-bottom > div {
   bottom: 189px;
+}
+
+.m-immersive-hero-item>div>div .c-heading {
+  font-size: 34px;
+}
+
+.c-heading {
+  font-weight: 400;
 }

@@ -6,21 +6,25 @@ import ButtonLink from '../link/ButtonLink';
 
 class Footer extends React.Component {
     render() {
-      if(propsAreValid(this.props.data)) {
-        let sections = this.props.data;
-        return (
-            <div className="sticky-banner sticky-footer">
-                {sections.map(function(result, id)  {
-                        if(result.anchorLink) {
+        if (propsAreValid(this.props.data)) {
+            let sections = this.props.data;
+            return (
+                <div className="sticky-banner sticky-footer">
+                    {sections.map(function (result, id) {
+                        if (result.anchorLink && sections.length >= 3) {
                             let anchorTarget = result.ordinal;
-                            return (
-                                <ButtonLink to={anchorTarget} role="button" key={id} >{result.anchorTitle}</ButtonLink>
-                            )
+                            if (id <= 7) {
+                                return (
+                                    <ButtonLink to={anchorTarget} role="button"
+                                                key={id}>{result.anchorTitle}</ButtonLink>
+                                )
+                            }
                         }
-                }, this)}
-            </div>
-        )
-      } return null
+                    }, this)}
+                </div>
+            )
+        }
+        return null
     }
 }
 

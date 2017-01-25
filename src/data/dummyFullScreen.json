@@ -30,23 +30,23 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1399x787/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
@@ -72,23 +72,23 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1399x787/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
@@ -114,23 +114,23 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1399x787/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",

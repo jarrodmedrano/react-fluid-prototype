@@ -1,4 +1,5 @@
 import React from 'react';
+import './button-link.scss!';
 import propsAreValid, {onClickHandler} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
 import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
@@ -47,7 +48,7 @@ class ButtonLink extends React.Component {
 
             if (_isInternal) {
                 return (
-                    <Link className="c-action-trigger" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500}>{children}</Link>
+                    <Link className="c-action-trigger" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{children}</Link>
                 );
             } else {
                 return (<a href={to} {...rest} onClick={onClickHandler}>{children}</a>);

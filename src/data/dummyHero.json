@@ -3,7 +3,7 @@
   "brand": {
     "logoTab": "",
     "color": "#3076BC",
-    "anchorTitle": "-- Hero --"
+    "buttonText": "-- Hero --"
   },
   "sections": [
     {
@@ -21,33 +21,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -71,33 +71,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -121,33 +121,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -171,33 +171,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -221,33 +221,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -271,33 +271,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -321,33 +321,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -371,33 +371,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -421,33 +421,33 @@
       "pictures": [
         {
           "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "(min-width: 1779px)"
+          "minwidth": "1779"
         },
         {
           "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "(min-width: 1400px)"
+          "minwidth": "1400"
         },
         {
           "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "(min-width: 1084px)"
+          "minwidth": "1084"
         },
         {
           "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "(min-width:768px)"
+          "minwidth": "768"
         },
         {
           "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "(min-width:540px)"
+          "minwidth": "540"
         },
         {
           "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "(min-width:0)"
+          "minwidth": "0"
         }
       ],
       "button": {
         "layout": "button",
         "path": "#/windows",
-        "anchorTitle": "Call to action",
+        "buttonText": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
