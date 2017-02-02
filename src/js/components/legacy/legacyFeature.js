@@ -3,8 +3,25 @@ import classNames from 'classnames';
 import Heading from '../heading/Heading';
 import './legacy.scss!';
 import Picture from '../picture/Picture';
+import ButtonLink from '../link/ButtonLink';
+import sanitizeHtml from 'sanitize-html';
+import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
 
 class LegacyFeature extends React.Component {
+
+
+    _cleanHtml(dirty) {
+        return sanitizeHtml(dirty, {
+            allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'span' ],
+            allowedAttributes: {
+                'a': [ 'href', 'style' ],
+                'span': [ 'style' ],
+                'b': [ 'style' ],
+                'p': [ 'style' ]
+            }
+        });
+    }
+
     render() {
         {/* 
             This component renders both feature and featureCTA
@@ -12,36 +29,45 @@ class LegacyFeature extends React.Component {
 
         let { style, textSide, header, logo, text1, text2, text3, media, button, legalText } = this.props.data;
 
-        // alignX, alignY, and theme need to be assumed in the css since they will not be available in the data
-        let templateClass = classNames('m-hero-item f-medium context-accessory');
+        let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
 
-        {/*
-            'style' was included to adjust local values.  We may need to inventory to see what has been used here.
-
-            if media != null
-            media.blockType will be "video" or "img" or "gif"
-            media.src will contain the relative uri
-
-            if button != null
-            button.blockType will be "buttonExternal" or "buttonInternal"
-            button.text
-            if external
-                button.link
-            else if internal
-                button.toPage
-
-            Need style elements for all of these to make it look similar to the previous layout
-        */}
+        let btnStyle = {
+            background: '#E2231A',
+            color: '#FFF',
+            marginLeft: '0',
+            marginRight: '0'
+        };
 
         return (
-            <div className={templateClass}>
+            <div className="m-feature" data-grid="col-12">
+                <div className={templateClass}>
+                {media.blockType === 'gif' ? <picture className="feature-image">
+                        <source srcSet={media.src} />
+                        <img srcSet={media.src} src={media.src} />
+                    </picture> : null }
+                {media.blockType === 'img' ? <picture className="feature-image">
+                        <source srcSet={media.src} />
+                        <img srcSet={media.src} src={media.src} />
+                    </picture> : null }
+                {media.blockType === 'video' ?
+                    <div id="videoPlayer1" className="c-video" >
+                                <video className="f-video-player" preload="metadata" loop muted aria-labelledby="videoPlayer1Name" autoPlay aria-describedby="videoPlayer1Description"> <source src={media.src} type="video/mp4" />
+                                </video>
+                        <div className="f-video-cc-overlay" aria-hidden="true"></div>
+                    </div>
+                : null}
                 <div>
-                    {/* (logo) ? <img class="logo" src={logo} /> : null */}
-                    <h1>{header}</h1>
-                    <p>{text1}</p>
-                    {/* (button)?<a href={button.link}><button type="submit">{button.text}</button></a>: null */}
+                    <div>
+                        {header ? <h1 className="c-heading"  dangerouslySetInnerHTML={{ __html: this._cleanHtml(header) }} /> : null }
+                        {text1 ? <p className="c-paragraph-1" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text1) }} /> : null }
+                        {text2 ? <p className="c-paragraph" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text2) }} /> : null }
+                        {text3 ? <p className="c-paragraph" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text3) }} /> : null }
+                    </div>
+                    {button ? <div><ButtonLink to={button.path ? button.path : null} className="c-call-to-action c-glyph" aria-label={button.buttonText} style={btnStyle} children={button.buttonText}  /></div> : null}
+                    {legalText ? <p className="c-paragraph-4" dangerouslySetInnerHTML={{ __html: this._cleanHtml(legalText) }} /> : null }
                 </div>
             </div>
+         </div>
         )
     }
 }

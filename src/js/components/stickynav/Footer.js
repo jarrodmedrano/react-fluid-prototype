@@ -5,6 +5,7 @@ import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
 import ButtonLink from '../link/ButtonLink';
 
 class Footer extends React.Component {
+
     render() {
         if (propsAreValid(this.props.data)) {
             let sections = this.props.data;
@@ -17,6 +18,15 @@ class Footer extends React.Component {
                                 return (
                                     <ButtonLink to={anchorTarget} role="button"
                                                 key={id}>{result.anchorTitle}</ButtonLink>
+                                )
+                            }
+                        }
+                        else {
+                            if(result.layout === 'feature' || result.layout === 'featureCta' || result.layout === 'ksp' || result.layout === 'centeredBackdropTemplate') {
+                                let anchorTarget = result.ordinal;
+                                return (
+                                    <ButtonLink to={anchorTarget} role="button"
+                                                key={id}>{result.header}</ButtonLink>
                                 )
                             }
                         }

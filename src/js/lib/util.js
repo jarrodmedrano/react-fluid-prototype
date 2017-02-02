@@ -1,4 +1,3 @@
-//Common Functions
 export function onClickHandler(e) {
     if(window.RDX) {
         e.preventDefault();

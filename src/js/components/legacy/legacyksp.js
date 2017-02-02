@@ -1,52 +1,94 @@
 import React from 'react';
 import classNames from 'classnames';
 import Heading from '../heading/Heading';
+import ButtonLink from '../link/ButtonLink';
 import './legacy.scss!';
 import Picture from '../picture/Picture';
+import sanitizeHtml from 'sanitize-html';
 
 class LegacyKSP extends React.Component {
+
+    cleanHtml(dirty) {
+        return sanitizeHtml(dirty, {
+            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span'],
+            allowedAttributes: {
+                'a': ['href', 'style'],
+                'span': ['style'],
+                'b': ['style'],
+                'p': ['style']
+            }
+        });
+    }
+
+
     render() {
         {/* 
-            This component renders ksp
-            Perhaps clone with an external switch to handle the 'reversed' and 'rs' variants
-        */ }
+         This component renders ksp
+         Perhaps clone with an external switch to handle the 'reversed' and 'rs' variants
+         */
+        }
 
-        let { style, textSide, header, logo, text1, text2, caption1, caption2, icon1, icon2, media, button, legalText } = this.props.data;
+        let {style, textSide, header, logo, text1, text2, caption1, caption2, icon1, icon2, media, button, legalText} = this.props.data;
 
-        // alignX, alignY, and theme need to be assumed in the css since they will not be available in the data
-        let templateClass = classNames('m-hero-item f-medium context-accessory');
+        let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
 
-        {/*
-            'style' was included to adjust local values.  We may need to inventory to see what has been used here.
+        let btnStyle = {
+            background: '#E2231A',
+            color: '#FFF',
+            marginLeft: '0',
+            marginRight: '0'
+        };
 
-            icon* is optional
-            *2 values are optional
-            media is optional
-            button is optional
-
-            if media != null
-            media.blockType will be "video" or "img" or "gif"
-            media.src will contain the relative uri
-
-            if button != null
-            button.blockType will be "buttonExternal" or "buttonInternal"
-            button.text
-            if external
-                button.link
-            else if internal
-                button.toPage
-
-            Need style elements for all of these to make it look similar to the previous layout
-        */}
+        let templateStyle = {};
 
         return (
-            <div className={templateClass}>
-                <div>
-                    {/* (logo) ? <img class="logo" src={logo} /> : null */}
-                    <h1>{header}</h1>
-                    <p>{text1}</p>
-                    {/* (button)?<a href={button.link}><button type="submit">{button.text}</button></a>: null */}
+            <div className="m-feature" data-grid="col-12" onScroll={this._handleScroll}>
+                <div className={templateClass}>
+                    {media ? <picture className="feature-image">
+                            <source srcSet={media.src}/>
+                            <img srcSet={media.src} src={media.src}/>
+                        </picture> : null }
+                    <div>
+                        <div>
+                            {header ? <h1 className="c-heading-3"
+                                          dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
+                            <div data-grid="col-12" className="c-structured-list">
+                                <ul className="f-column">
+                                    <li className="f-row">
+                                        {icon1 ?
+                                            <div data-grid="col-2 stack-2">
+                                                <img className="c-image" src={icon1}/>
+                                            </div> : null }
+                                        <div data-grid="col-10">
+                                            {text1 ? <p className="c-paragraph-1"
+                                                         dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
+                                            {caption1 ? <p className="c-paragraph-4"
+                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
+                                        </div>
+                                    </li>
+                                    <li className="f-row">
+                                        {icon2 ?
+                                            <div data-grid="col-2 stack-2">
+                                                <img className="c-image" src={icon2}/>
+                                            </div> : null }
+                                        <div data-grid="col-10">
+                                            {text2 ? <p className="c-paragraph-1"
+                                                        dangerouslySetInnerHTML={{__html: this.cleanHtml(text2)}}/> : null }
+                                            {caption2 ? <p className="c-paragraph-4"
+                                                           dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2)}}/> : null }
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        {button ? <ButtonLink to={button.path ? button.path : null} className="c-call-to-action c-glyph"
+                                              aria-label={button.buttonText} style={btnStyle}
+                                              children={button.buttonText}/> : null}
+                        {legalText ? <p className="c-paragraph-4"
+                                        dangerouslySetInnerHTML={{__html: this.cleanHtml(legalText)}}/> : null }
+                    </div>
                 </div>
+
             </div>
         )
     }

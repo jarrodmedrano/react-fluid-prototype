@@ -1,0 +1,349 @@
+{
+  "groups": [
+    {
+      "groupIdentifier": "oem",
+      "brand": {
+        "groupIdentifier": "oem",
+        "logo": "img/oem_assets/Retail-logo.png",
+        "color": "#4e9b3b"
+      },
+      "sections": [
+        {
+          "layout": "centeredBackdropTemplate",
+          "textSide": "center",
+          "cardnumber": "0",
+          "header": "Work smarter",
+          "subheader": "Surface Pro 4 runs professional-grade software, even when you use it like a tablet.  Sketch and take notes on the tablet by folding away the Type Cover.",
+          "cardColor": "#ffffff",
+          "cardThemeColor": "white",
+          "cardThemeFont": "Segoe MDL2 Assets",
+          "cardBackground": "linear-gradient(to bottom, rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 90%), url('img/oem_assets/SP4_BTS.png')",
+          "cardButton": "white",
+          "cardButtonBackground": "#0078d7",
+          "cardButtonHover": "#0078d7",
+          "cardButtonHoverBackground": "white",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Open OneNote",
+            "path": "ms-retaildemo:Retail_Demo_Notebook_FINAL2/Overview.one"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Holiday0",
+          "ordinal": "100"
+        },
+        {
+          "layout": "ksp",
+          "logo": "img/oem_assets/P1-logo.png",
+          "textSide": "left",
+          "header": "Ultimate flexibility ",
+          "icon1": "img/oem_assets/P1-icon1.png",
+          "text1": "Stylish design with a twist",
+          "caption1": "With a wobble-free touch experience, thanks to Acer’s unique 360-degree, dual-torque hinge design – it explores in four different modes.",
+          "icon2": "img/oem_assets/P1-icon2.png",
+          "text2": "The need for speed",
+          "caption2": "Full USB 3.1 Type-C supports both power and ultra-fast data transfer in just one port at up to twice the speed of USB 3.0",
+          "legalText": "Specifications vary depending on model.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "More info",
+            "path": "http://www.acer.com"
+          },
+          "media": {
+            "blockType": "img",
+            "src": "img/oem_assets/P1-content.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page_1_name",
+          "ordinal": "200"
+        },
+        {
+          "layout": "feature",
+          "logo": "img/oem_assets/P2-logo.png",
+          "textSide": "right",
+          "header": "Ultimate flexibility ",
+          "text1": "With Acer’s 360° dual-torque hinge included in its fresh design language, the Aspire R 14 can adapt to just about any situation or space.",
+          "legalText": "",
+          "media": {
+            "blockType": "img",
+            "src": "img/oem_assets/P2-content.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Acer",
+          "ordinal": "300"
+        },
+        {
+          "layout": "featureCta",
+          "logo": "img/oem_assets/P3-logo.png",
+          "textSide": "left",
+          "header": "Incredibly smart",
+          "text1": "When switching modes, the audio channels automatically reverse",
+          "legalText": "",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "More info",
+            "path": "http://www.acer.com"
+          },
+          "media": {
+            "blockType": "img",
+            "src": "img/oem_assets/P3-content.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Acer",
+          "ordinal": "400"
+        },
+        {
+          "layout": "threeColSpecs",
+          "textSide": "left",
+          "header": "Specifications",
+          "1-1-lead": "Operating system",
+          "1-1-text": "Windows 10",
+          "1-2-lead": "Display resolution",
+          "1-2-text": "RetailInfo.rawScreenResolution",
+          "2-1-lead": "Screen size",
+          "2-1-text": "RetailInfo.ScreenSize",
+          "2-2-lead": "Processor",
+          "2-2-text": "RetailInfo.ProcessorDescription",
+          "3-1-lead": "System memory (RAM)",
+          "3-1-text": "RetailInfo.Memory",
+          "3-2-lead": "Hard drive capacity",
+          "3-2-text": "RetailInfo.StorageDescription",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page_4_name",
+          "ordinal": "500"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "windows",
+      "brand": {
+        "groupIdentifier": "windows",
+        "logo": "img/windows_assets/Windows_Desktop_Logo.png",
+        "color": "#00bcf2"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Easily manage everything on your desktop",
+          "text1": "Fast, familiar, and more secure with great multi-tasking features, like the ability to create new desktops when you need more space.",
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/RDX_Manage_laptop_v2.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "ManageDesktop",
+          "ordinal": "100"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Access hours of fun",
+          "text1": "Discover popular, new, free, and paid games, all certified by Microsoft and available in the Windows Store.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Browse games",
+            "path": "ms-windows-store://navigatetopage/?Id=Games",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/RDX_Casual_Gaming_v7.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "CasualGaming",
+          "ordinal": "200"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Meet Cortana, your personal assistant",
+          "text1": "You can ask Cortana anything, get her help with planning itineraries and reminders, and she'll even make timely suggestions based on what she knows about you.",
+          "legalText": "Cortana available in select global markets; experience may vary by region and device.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Talk to Cortana",
+            "path": "ms-cortana://"
+          },
+          "media": {
+            "blockType": "gif",
+            "src": "img/windows_assets/Page2.gif"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Cortana",
+          "ordinal": "300"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Introducing Microsoft Edge. Go beyond browsing. ",
+          "text1": "Write on webpages, find things faster, and read distraction-free with Microsoft’s newest browser.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Try it now",
+            "path": "http://www.microsoft.com/en-us/windows/microsoft-edge",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/EDGE_2IN1_v3.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Edge",
+          "ordinal": "400"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "office",
+      "brand": {
+        "groupIdentifier": "office",
+        "logo": "img/retailer_assets/Office_logo.png",
+        "color": "#dc3c00"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>The Power to</span> overachieve.</b></span>",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/Office_Holiday_Architect_30sec_EN-US.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Create <span><b><span style='color:#58585a'>amazing documents with ease using built in research and smart proofing tools.</span></b></span>",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/Office_Holiday_Feature_Final_720p_en_us.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Move <span><b><span style='color:#58585a'>with OneDrive.  Share documents, photos and work across all your devices.</span></b></span>",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/Media1.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>Discover the Office</span> that is right for you.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "img/office_assets/Office_Chart_V3.gif"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page4",
+          "ordinal": "400"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "retailer",
+      "brand": {
+        "groupIdentifier": "retailer",
+        "logo": "img/retailer_assets/BBY_Logo_946x220.png",
+        "color": "#003b64"
+      },
+      "sections": [
+        {
+          "layout": "featureCta",
+          "logo": "img/retailer_assets/logo-geeksquad-946x220.png",
+          "textSide": "left",
+          "header": "Geek Squad Protect & Support Plus featuring Computing Services",
+          "text1": "Includes Drops, Spills & Cracks Protection. Diagnostic & Repair Support. Unlimited Virus Removals, plus Internet Security Software.",
+          "itembody1": "Drops, Spills & Cracks Protection",
+          "itembody2": "Diagnostic & Repair Support and Unlimited Virus Removals plus Internet Security Software",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Learn more",
+            "path": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmacat748300491884",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "img",
+            "src": "img/retailer_assets/bby_slide1.png"
+          },
+          "groupIdentifier": "retailer",
+          "sectionIdentifier": "Page3",
+          "ordinal": "100"
+        },
+        {
+          "layout": "featureCta",
+          "logo": "img/retailer_assets/logo-geeksquad-946x220.png",
+          "textSide": "left",
+          "header": "Geek Squad Data Backup or Transfer",
+          "text1": "Let our expert Agents help you hold on to what matters. Data Backup or Transfer Service for $79.99 with computer purchase.",
+          "itembody1": "Let our expert Agents help you hold on to what matters. Data Backup or Transfer Service $79.99 with computer purchase.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Learn more",
+            "path": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmcat748300491884",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "img",
+            "src": "img/retailer_assets/bby_slide2.png"
+          },
+          "groupIdentifier": "retailer",
+          "sectionIdentifier": "GeekSquad",
+          "ordinal": "200"
+        },
+        {
+          "layout": "featureCta",
+          "logo": "img/office_assets/Office_logo.png",
+          "textSide": "left",
+          "header": "Save $20 on Microsoft Office*",
+          "text1": "when you buy a new PC, Mac, iPad, or select tablet.",
+          "legalText": "Eligible on all Office suites except Office 365 1-month auto-renewal. See Blue Shirt for offer details. Compatible devices only. Application availability varies by device. For full system requirements, see www.office.com/information.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "Learn more",
+            "path": "http://www.bestbuy.com/site/offer/146005/pcmcat748301070998.c?id=pcmcat748301070998",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "img",
+            "src": "img/retailer_assets/bby-slide1.png"
+          },
+          "groupIdentifier": "retailer",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        },
+        {
+          "layout": "featureCta",
+          "logo": "img/retailer_assets/bby-tradein-1-1.png",
+          "textSide": "left",
+          "header": "Trade-In & Trade-Up",
+          "text1": "Bring in your used devices and we'll help you upgrade. Visit BestBuy.com/tradein or ask a Blue Shirt for assistance today.",
+          "button": {
+            "blockType": "buttonExternal",
+            "buttonText": "See what your tech is worth",
+            "path": "http://www.bestbuy.com/site/misc/best-buy-trade-in/pcmcat133600050011.c?id=pcmcat133600050011",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "img",
+            "src": "img/retailer_assets/heroimage_tradein.png"
+          },
+          "groupIdentifier": "retailer",
+          "sectionIdentifier": "Page4",
+          "ordinal": "400"
+        }
+      ]
+    }
+  ]
+}

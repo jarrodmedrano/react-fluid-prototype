@@ -15,11 +15,11 @@
   transition: height .5s;
   background: $default-bg;
   z-index: 2;
-  padding-bottom: 60px;
+  //padding-bottom: 60px;
 
   @media (orientation: portrait) {
-    height: auto;
-    top: $linkband-height;
+    min-height: 100vh;
+    //top: $linkband-height;
   }
 
   .header-offset {

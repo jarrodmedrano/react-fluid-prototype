@@ -13,19 +13,6 @@ import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../lib
 
 class VerticalPage extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            active: false
-        };
-    }
-
-    _handleSetActive(to) {
-        this.setState({
-            active: true
-        });
-    }
 
     render() {
         let title = this.props.route.title;
@@ -45,12 +32,12 @@ class VerticalPage extends React.Component {
         });
 
         return (
-            <div>
-                {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} onChange={this._handleSetActive} /> : null }
+            <div onScroll={_handleSetActive}>
+                {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
                 {oemGroup.brand ?
                   <StickyBanner data={currentPage}>
                     <div className="cta">
-                        <div><ButtonLink to="#400" className="c-call-to-action c-glyph"  onChange={this._handleSetActive}><span>Compare Models</span></ButtonLink></div>
+                        <div><ButtonLink to="#400" className="c-call-to-action c-glyph"  onChange={this._handleSetActive}>Compare Models</ButtonLink></div>
                     </div>
                   </StickyBanner>
                 : null }
@@ -58,7 +45,7 @@ class VerticalPage extends React.Component {
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
                             return (
-                              <Vertical key={id} data={result} onChange={this._handleSetActive} active={this.state.active} />
+                              <Vertical key={id} data={result} onChange={this._handleSetActive} />
                             )
                         }, this)
                         : null

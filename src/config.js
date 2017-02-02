@@ -30,6 +30,7 @@ System.config({
     "react-intl": "npm:react-intl@2.1.3",
     "react-router": "npm:react-router@2.6.0",
     "react-scroll": "npm:react-scroll@1.4.4",
+    "sanitize-html": "npm:sanitize-html@1.14.1",
     "sass": "npm:sass@0.5.0",
     "scss": "github:mobilexag/plugin-sass@0.4.6",
     "github:capaj/systemjs-hot-reloader@0.6.0": {
@@ -313,8 +314,19 @@ System.config({
       "randombytes": "npm:randombytes@2.0.3",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
+    "npm:dom-serializer@0.1.0": {
+      "domelementtype": "npm:domelementtype@1.1.3",
+      "entities": "npm:entities@1.1.1"
+    },
     "npm:domain-browser@1.1.7": {
       "events": "github:jspm/nodelibs-events@0.1.1"
+    },
+    "npm:domhandler@2.3.0": {
+      "domelementtype": "npm:domelementtype@1.1.3"
+    },
+    "npm:domutils@1.5.1": {
+      "dom-serializer": "npm:dom-serializer@0.1.0",
+      "domelementtype": "npm:domelementtype@1.1.3"
     },
     "npm:elliptic@6.3.2": {
       "bn.js": "npm:bn.js@4.11.6",
@@ -326,6 +338,9 @@ System.config({
     "npm:encoding@0.1.12": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "iconv-lite": "npm:iconv-lite@0.4.13"
+    },
+    "npm:entities@1.1.1": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:evp_bytestokey@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -366,6 +381,19 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "query-string": "npm:query-string@3.0.3",
       "warning": "npm:warning@2.1.0"
+    },
+    "npm:htmlparser2@3.9.2": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "domelementtype": "npm:domelementtype@1.3.0",
+      "domhandler": "npm:domhandler@2.3.0",
+      "domutils": "npm:domutils@1.5.1",
+      "entities": "npm:entities@1.1.1",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "string_decoder": "github:jspm/nodelibs-string_decoder@0.1.0",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:https-browserify@0.0.0": {
       "http": "github:jspm/nodelibs-http@1.7.1"
@@ -548,6 +576,11 @@ System.config({
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:sanitize-html@1.14.1": {
+      "htmlparser2": "npm:htmlparser2@3.9.2",
+      "regexp-quote": "npm:regexp-quote@0.0.0",
+      "xtend": "npm:xtend@4.0.1"
     },
     "npm:sass.js@0.9.13": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",

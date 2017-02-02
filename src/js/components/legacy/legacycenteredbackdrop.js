@@ -1,21 +1,58 @@
 import React from 'react';
 import classNames from 'classnames';
-import Heading from '../heading/Heading';
+import Button from '../button/Button';
 import './legacy.scss!';
 import Picture from '../picture/Picture';
+import ButtonLink from '../link/ButtonLink';
+import sanitizeHtml from 'sanitize-html';
 
 class LegacyCenteredBackdrop extends React.Component {
+
+    componentDidMount() {
+        document.querySelector('.m-hero-item').addEventListener('scroll', this._handleScroll);
+    }
+
+    componentWillUnmount() {
+        document.querySelector('.m-hero-item').removeEventListener('scroll', this._handleScroll);
+    }
+
+    _cleanHtml(dirty) {
+        return sanitizeHtml(dirty, {
+            allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'span' ],
+            allowedAttributes: {
+                'a': [ 'href', 'style' ],
+                'span': [ 'style' ],
+                'b': [ 'style' ],
+                'p': [ 'style' ]
+            }
+        });
+    }
+
+
+
     render() {
         {/* 
             This component renders ksp
             Perhaps clone with an external switch to handle the 'reversed' and 'rs' variants
         */ }
 
-        let { cardColor, cardBackground, cardThemeColor, cardButtonBackground, CardButtonHoverBackground, cardThemeFont} = this.props.data;
-        let { header, subheader, button, legalText } = this.props.data;
+        let { cardColor, cardBackground, cardThemeColor, cardButtonBackground, CardButtonHoverBackground, cardThemeFont,  cardButton, header, subheader, button, legalText, textSide, media } = this.props.data;
 
         // alignX, alignY, and theme need to be assumed in the css since they will not be available in the data
-        let templateClass = classNames('m-hero-item f-medium context-accessory');
+        let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-center`, `theme-light m-hero-item`);
+
+
+        let btnStyle = {
+            color: cardButton,
+            background: cardButtonBackground
+        };
+
+        let templateStyle = {
+            background: cardBackground,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% auto',
+            color: cardColor,
+        };
 
         {/*
             'style' was included to adjust local values.  We may need to inventory to see what has been used here.
@@ -35,12 +72,24 @@ class LegacyCenteredBackdrop extends React.Component {
         */}
 
         return (
-            <div className={templateClass}>
+            <div className={templateClass} style={templateStyle} onScroll={this._handleScroll}>
                 <div>
-                    <h1>{header}</h1>
-                    <p>{subheader}</p>
-                    {/* (button)?<a href={button.link}><button type="submit">{button.text}</button></a>: null */}
+                    <div className="content-animate">
+                        <div>
+                            <div>
+                        {header ? <h1 className="c-heading"  dangerouslySetInnerHTML={{ __html: this._cleanHtml(header) }} /> : null }
+                        {subheader ? <p className="c-paragraph-1" dangerouslySetInnerHTML={{ __html: this._cleanHtml(subheader) }} /> : null }
+                            </div>
+                        </div>
+                        {button ? <div><ButtonLink to={button.path ? button.path : null} className="c-call-to-action c-glyph" aria-label={button.buttonText} style={btnStyle} children={button.buttonText}  /></div> : null}
+                        {legalText ? <p className="c-paragraph-4" dangerouslySetInnerHTML={{ __html: this._cleanHtml(legalText) }} /> : null }
+
+                    </div>
                 </div>
+                {media ? <picture className="c-image">
+                   <source srcSet={media.src} />
+                    <img srcSet={media.src} src={media.src} />
+                </picture> : null }
             </div>
         )
     }

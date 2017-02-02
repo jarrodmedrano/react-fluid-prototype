@@ -109,6 +109,7 @@
           "sectionIdentifier": "SurfacePen",
           "layout": "fullscreen",
           "anchorLink": "true",
+          "anchorIcon": "",
           "anchorTitle": "Surface Pen",
           "video": "img/vertical/Hero-pen.mp4"
         },

@@ -5,6 +5,35 @@
   width: 677px;
   z-index: 0;
 }
+@media only screen and (min-width: 768px) {
+  .c-feature.f-align-left > div.c-video, .c-feature.f-align-right > div.c-video {
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}
+
+.m-feature {
+  background: #fff;
+
+  @media only screen and (min-width: 768px) {
+    .c-feature.f-align-left picture {
+      position: absolute;
+      right: 0;
+    }
+
+    .c-feature.f-align-right picture {
+      position: absolute;
+      left: 0;
+    }
+
+    .feature-image {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+
 
 
 .c-hero.theme-dark {
