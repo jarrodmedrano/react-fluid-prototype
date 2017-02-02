@@ -16,6 +16,9 @@ npm-debug.log*
 *.userosscache
 *.sln.docstates
 *.vcxproj.filters
+src/img/office_assets
+src/img/windows_assets
+src/img/retailer_assets
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
