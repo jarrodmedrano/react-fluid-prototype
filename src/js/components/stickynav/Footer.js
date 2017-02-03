@@ -5,10 +5,15 @@ import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
 import ButtonLink from '../link/ButtonLink';
 
 class Footer extends React.Component {
+    _checkLegacyTemplate() {
+
+    }
 
     render() {
-        if (propsAreValid(this.props.data)) {
-            let sections = this.props.data;
+        console.log(this.props.data.groupIdentifier);
+
+        if (propsAreValid(this.props.data.sections)) {
+            let sections = this.props.data.sections;
             return (
                 <div className="sticky-banner sticky-footer">
                     {sections.map(function (result, id) {
@@ -23,11 +28,7 @@ class Footer extends React.Component {
                         }
                         else {
                             if(result.layout === 'feature' || result.layout === 'featureCta' || result.layout === 'ksp' || result.layout === 'centeredBackdropTemplate') {
-                                let anchorTarget = result.ordinal;
-                                return (
-                                    <ButtonLink to={anchorTarget} role="button"
-                                                key={id}>{result.header}</ButtonLink>
-                                )
+                                return null
                             }
                         }
                     }, this)}

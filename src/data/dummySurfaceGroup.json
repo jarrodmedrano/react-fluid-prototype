@@ -1,0 +1,362 @@
+{
+  "groupIdentifier": "oem",
+  "brand": {
+    "logo": "img/vertical/ms-logo.png",
+    "anchorTitle": "Surface Book",
+    "tabColor": "#ffffff",
+    "logoTab": "img/vertical/surfacebook-logo.png"
+  },
+  "sections": [
+    {
+      "ordinal": "100",
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section2",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "Explore Surface Book",
+      "altText": "Surface Book Pro",
+      "ariaLabel": "Surface Book Pro",
+      "pictures": [
+        {
+          "src": "img/vertical/surface-hero.jpg",
+          "minwidth": "1779"
+        },
+        {
+          "src": "img/vertical/surface-hero.jpg",
+          "minwidth": "1400"
+        },
+        {
+          "src": "img/vertical/surface-hero.jpg",
+          "minwidth": "1084"
+        },
+        {
+          "src": "img/vertical/surface-hero.jpg",
+          "minwidth": "768px"
+        },
+        {
+          "src": "img/vertical/surface-hero.jpg",
+          "minwidth": "540"
+        },
+        {
+          "src": "img/vertical/surface-hero.jpg",
+          "minwidth": "0"
+        }
+      ],
+      "alignX": "center",
+      "alignY": "center",
+      "theme": "theme-light"
+    },
+    {
+      "ordinal": "200",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "Keyboard",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "Keyboard",
+      "heading": "Five-point touchpad",
+      "picture": "img/vertical/keyboard-hero.jpg",
+      "altText": "AltText",
+      "ariaLabel": "AriaLabel",
+      "pictures": [
+        {
+          "src": "img/vertical/keyboard-hero.jpg",
+          "minwidth": "1779"
+        },
+        {
+          "src": "img/vertical/keyboard-hero.jpg",
+          "minwidth": "1400"
+        },
+        {
+          "src": "img/vertical/keyboard-hero.jpg",
+          "minwidth": "1084"
+        },
+        {
+          "src": "img/vertical/keyboard-hero.jpg",
+          "minwidth": "768"
+        },
+        {
+          "src": "img/vertical/keyboard-hero.jpg",
+          "minwidth": "540"
+        },
+        {
+          "src": "img/vertical/keyboard-hero.jpg",
+          "minwidth": "0"
+        }
+      ],
+      "alignY": "bottom",
+      "theme": "theme-light"
+    },
+    {
+      "ordinal": "300",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "SurfacePen",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorIcon": "",
+      "anchorTitle": "Surface Pen",
+      "video": "img/vertical/Hero-pen.mp4"
+    },
+    {
+      "ordinal": "400",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "Apps",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorTitle": "Apps",
+      "heading": "-- Apps Heading --"
+    },
+    {
+      "ordinal": "500",
+      "groupIdentifier": "partner",
+      "sectionIdentifier": "Accessories",
+      "layout": "mosaic",
+      "anchorLink": "true",
+      "anchorTitle": "Accessories",
+      "mosaic": {
+        "theme": "theme-dark",
+        "layout": "mosaic-3",
+        "tiles": [
+          {
+            "heading": "Accessories",
+            "subheading": "The perfect complements to your Surface",
+            "backgroundColor": "#0078D7",
+            "textColor": "#FFF",
+            "button": {
+              "layout": "link",
+              "path": "http://www.microsoft.com",
+              "buttonText": "Call to action",
+              "textColor": "white",
+              "backgroundColor": "blue"
+            }
+          },
+          {
+            "button": {
+              "path": "http://www.microsoft.com",
+              "overlay": "#000"
+            },
+            "pictures": [
+              {
+                "src": "img/vertical/mosaic-surface-8.jpg",
+                "minwidth": "1779"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-8.jpg",
+                "minwidth": "1400"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-8.jpg",
+                "minwidth": "1084"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-8.jpg",
+                "minwidth": "768"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-8.jpg",
+                "minwidth": "540"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-8.jpg",
+                "minwidth": "0"
+              }
+            ]
+          },
+          {
+            "button": {
+              "path": "http://www.microsoft.com",
+              "overlay": "#000"
+            },
+            "pictures": [
+              {
+                "src": "img/vertical/mosaic-surface-5.jpg",
+                "minwidth": "1779"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-5.jpg",
+                "minwidth": "1400"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-5.jpg",
+                "minwidth": "1084"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-5.jpg",
+                "minwidth": "768"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-5.jpg",
+                "minwidth": "540"
+              },
+              {
+                "src": "img/vertical/mosaic-surface-5.jpg",
+                "minwidth": "0"
+              }
+            ]
+          },
+          {
+            "button": {
+              "path": "http://www.microsoft.com",
+              "overlay": "#000"
+            },
+            "pictures": [
+              {
+                "src": "img/vertical/mosaic-ports.jpg",
+                "minwidth": "1779"
+              },
+              {
+                "src": "img/vertical/mosaic-ports.jpg",
+                "minwidth": "1400"
+              },
+              {
+                "src": "img/vertical/mosaic-ports.jpg",
+                "minwidth": "1084"
+              },
+              {
+                "src": "img/vertical/mosaic-ports.jpg",
+                "minwidth": "768"
+              },
+              {
+                "src": "img/vertical/mosaic-ports.jpg",
+                "minwidth": "540"
+              },
+              {
+                "src": "img/vertical/mosaic-ports.jpg",
+                "minwidth": "0"
+              }
+            ]
+          },
+          {
+            "button": {
+              "path": "http://www.microsoft.com",
+              "overlay": "#000"
+            },
+            "pictures": [
+              {
+                "src": "img/vertical/mosaic-headphones.jpg",
+                "minwidth": "1779"
+              },
+              {
+                "src": "img/vertical/mosaic-headphones.jpg",
+                "minwidth": "1400"
+              },
+              {
+                "src": "img/vertical/mosaic-headphones.jpg",
+                "minwidth": "1084"
+              },
+              {
+                "src": "img/vertical/mosaic-headphones.jpg",
+                "minwidth": "768"
+              },
+              {
+                "src": "img/vertical/mosaic-headphones.jpg",
+                "minwidth": "540"
+              },
+              {
+                "src": "img/vertical/mosaic-headphones.jpg",
+                "minwidth": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ordinal": "600",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "Compare",
+      "layout": "compare",
+      "anchorLink": "true",
+      "anchorTitle": "Compare",
+      "heading": "-- Compare Heading --",
+      "compare": {
+        "models": [
+          {
+            "heading": "-- Hero Heading --",
+            "specs":
+            [
+              "processor: Intel Core i7",
+              "storage: 1 TB",
+              "memory: 16 GB + dGPU"
+            ],
+            "features":
+            [
+              "Light online browsing",
+              "Send emails",
+              "Check mail"
+            ]
+          },
+          {
+            "specs":
+            [
+              "processor: Intel Core i7",
+              "storage: 1 TB",
+              "memory: 16 GB + dGPU"
+            ],
+            "features":
+            [
+              "Light online browsing",
+              "Send emails",
+              "Check mail"
+            ]
+          },
+          {
+            "specs":
+            [
+              "processor: Intel Core i7",
+              "storage: 1 TB",
+              "memory: 16 GB + dGPU"
+            ],
+            "features":
+            [
+              "Light online browsing",
+              "Send emails",
+              "Check mail"
+            ]
+          },
+          {
+            "specs":
+            [
+              "processor: Intel Core i7",
+              "storage: 1 TB",
+              "memory: 16 GB + dGPU"
+            ],
+            "features":
+            [
+              "Light online browsing",
+              "Send emails",
+              "Check mail"
+            ]
+          },
+          {
+            "specs":
+            [
+              "processor: Intel Core i7",
+              "storage: 1 TB",
+              "memory: 16 GB + dGPU"
+            ],
+            "features":
+            [
+              "Light online browsing",
+              "Send emails",
+              "Check mail"
+            ]
+          },
+          {
+            "specs":
+            [
+              "processor: Intel Core i7",
+              "storage: 1 TB",
+              "memory: 16 GB + dGPU"
+            ],
+            "features":
+            [
+              "Light online browsing",
+              "Send emails",
+              "Check mail"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

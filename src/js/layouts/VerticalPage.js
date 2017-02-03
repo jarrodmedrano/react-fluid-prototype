@@ -12,8 +12,6 @@ import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../lib/scroll';
 
 class VerticalPage extends React.Component {
-
-
     render() {
         let title = this.props.route.title;
         let {ratings, deviceInformation, groups} = this.props.data;
@@ -37,7 +35,7 @@ class VerticalPage extends React.Component {
                 {oemGroup.brand ?
                   <StickyBanner data={currentPage}>
                     <div className="cta">
-                        <div><ButtonLink to="#400" className="c-call-to-action c-glyph"  onChange={this._handleSetActive}>Compare Models</ButtonLink></div>
+                        <div><ButtonLink to="#400" className="c-call-to-action c-glyph">Compare Models</ButtonLink></div>
                     </div>
                   </StickyBanner>
                 : null }
@@ -45,13 +43,13 @@ class VerticalPage extends React.Component {
                     {currentPage.sections ?
                         currentPage.sections.map(function(result, id) {
                             return (
-                              <Vertical key={id} data={result} onChange={this._handleSetActive} />
+                              <Vertical key={id} data={result} />
                             )
                         }, this)
                         : null
                     }
                 </main>
-                {currentPage.sections ? <Footer data={currentPage.sections} onChange={this._handleSetActive} /> : null}
+                {currentPage.sections ? <Footer data={currentPage} /> : null}
             </div>
         )
     }

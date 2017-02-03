@@ -36,9 +36,17 @@ class ButtonLink extends React.Component {
             const _isInternal = this._isInternal(to);
 
             if (_isInternal) {
-                return (
-                    <Link className="c-action-trigger" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} />
-                );
+                if(this.props.layout === 'down-arrow') {
+                    return (
+                        <div className="down-arrow">
+                            <Link className="c-action-trigger" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
+                        </div>
+                    );
+                } else {
+                    return (
+                        <Link className="c-action-trigger" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} />
+                    );
+                }
             } else {
                 return (<a href={to} {...rest} onClick={onClickHandler} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} />);
             }

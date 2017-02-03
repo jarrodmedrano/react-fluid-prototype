@@ -1,0 +1,94 @@
+{
+  "groupIdentifier": "retailer",
+  "brand": {
+    "groupIdentifier": "retailer",
+    "logo": "img/retailer_assets/BBY_Logo_946x220.png",
+    "color": "#003b64"
+  },
+  "sections": [
+    {
+      "layout": "featureCta",
+      "logo": "img/retailer_assets/logo-geeksquad-946x220.png",
+      "textSide": "left",
+      "header": "Geek Squad Protect & Support Plus featuring Computing Services",
+      "text1": "Includes Drops, Spills & Cracks Protection. Diagnostic & Repair Support. Unlimited Virus Removals, plus Internet Security Software.",
+      "itembody1": "Drops, Spills & Cracks Protection",
+      "itembody2": "Diagnostic & Repair Support and Unlimited Virus Removals plus Internet Security Software",
+      "button": {
+        "blockType": "buttonExternal",
+        "buttonText": "Learn more",
+        "path": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmacat748300491884",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "img",
+        "src": "img/retailer_assets/bby_slide1.png"
+      },
+      "groupIdentifier": "retailer",
+      "sectionIdentifier": "Page3",
+      "ordinal": "100"
+    },
+    {
+      "layout": "featureCta",
+      "logo": "img/retailer_assets/logo-geeksquad-946x220.png",
+      "textSide": "left",
+      "header": "Geek Squad Data Backup or Transfer",
+      "text1": "Let our expert Agents help you hold on to what matters. Data Backup or Transfer Service for $79.99 with computer purchase.",
+      "itembody1": "Let our expert Agents help you hold on to what matters. Data Backup or Transfer Service $79.99 with computer purchase.",
+      "button": {
+        "blockType": "buttonExternal",
+        "buttonText": "Learn more",
+        "path": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmcat748300491884",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "img",
+        "src": "img/retailer_assets/bby_slide2.png"
+      },
+      "groupIdentifier": "retailer",
+      "sectionIdentifier": "GeekSquad",
+      "ordinal": "200"
+    },
+    {
+      "layout": "featureCta",
+      "logo": "img/office_assets/Office_logo.png",
+      "textSide": "left",
+      "header": "Save $20 on Microsoft Office*",
+      "text1": "when you buy a new PC, Mac, iPad, or select tablet.",
+      "legalText": "Eligible on all Office suites except Office 365 1-month auto-renewal. See Blue Shirt for offer details. Compatible devices only. Application availability varies by device. For full system requirements, see www.office.com/information.",
+      "button": {
+        "blockType": "buttonExternal",
+        "buttonText": "Learn more",
+        "path": "http://www.bestbuy.com/site/offer/146005/pcmcat748301070998.c?id=pcmcat748301070998",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "img",
+        "src": "img/retailer_assets/bby-slide1.png"
+      },
+      "groupIdentifier": "retailer",
+      "sectionIdentifier": "Page3",
+      "ordinal": "300"
+    },
+    {
+      "layout": "featureCta",
+      "logo": "img/retailer_assets/bby-tradein-1-1.png",
+      "textSide": "left",
+      "header": "Trade-In & Trade-Up",
+      "text1": "Bring in your used devices and we'll help you upgrade. Visit BestBuy.com/tradein or ask a Blue Shirt for assistance today.",
+      "button": {
+        "blockType": "buttonExternal",
+        "buttonText": "See what your tech is worth",
+        "path": "http://www.bestbuy.com/site/misc/best-buy-trade-in/pcmcat133600050011.c?id=pcmcat133600050011",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "img",
+        "src": "img/retailer_assets/heroimage_tradein.png"
+      },
+      "groupIdentifier": "retailer",
+      "sectionIdentifier": "Page4",
+      "ordinal": "400"
+    }
+  ]
+}
