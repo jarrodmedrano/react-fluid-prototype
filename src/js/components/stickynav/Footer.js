@@ -10,8 +10,6 @@ class Footer extends React.Component {
     }
 
     render() {
-        console.log(this.props.data.groupIdentifier);
-
         if (propsAreValid(this.props.data.sections)) {
             let sections = this.props.data.sections;
             return (
