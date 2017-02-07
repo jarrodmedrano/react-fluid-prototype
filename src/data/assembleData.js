@@ -9,7 +9,7 @@ import dummyOEM from './legacy/dummyOEM.json!';
 import dummyOffice from './legacy/dummyOffice.json!';
 import dummyRetailer from './legacy/dummyRetailer.json!';
 import dummyWindows from './legacy/dummyWindows.json!';
-
+import dummyDefault from './legacy/dummyDefault.json!';
 // dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
 
 let defaultVertical = {

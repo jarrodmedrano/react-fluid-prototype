@@ -114,7 +114,7 @@ export let sectionPropTypes = {
         groupIdentifier: requiredString,
         sectionIdentifier: requiredString,
         layout: requiredString,
-        anchorLink: requiredString,
+        anchorLink: string,
     }))
 };
 
