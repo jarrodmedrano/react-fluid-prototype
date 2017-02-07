@@ -24,7 +24,7 @@ class MosaicTile extends React.Component {
                         <section className="c-mosaic-placement c-placement" style={tileStyle}>
                             {overlay ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: overlay}}></div> : null }
                             <Picture data={this.props.data} />
-                            {this.props.data.button.buttonText && (this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
+                            {this.props.data.button.text && (this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
                         </section>
                     </ButtonLink>
                 )
