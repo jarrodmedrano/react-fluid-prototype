@@ -81,9 +81,9 @@ class LegacyKSP extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        {button ? <ButtonLink to={button.path ? button.path : null} className="c-call-to-action c-glyph"
-                                              aria-label={button.buttonText} style={btnStyle}
-                                              children={button.buttonText}/> : null}
+                        {button ? <ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph"
+                                              aria-label={button.text} style={btnStyle}
+                                              children={button.text}/> : null}
                         {legalText ? <p className="c-paragraph-4"
                                         dangerouslySetInnerHTML={{__html: this.cleanHtml(legalText)}}/> : null }
                     </div>

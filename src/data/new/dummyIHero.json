@@ -46,8 +46,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "http://www.microsoft.com",
-        "buttonText": "Call to action",
+        "link": "http://www.microsoft.com",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -95,8 +95,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "http://www.microsoft.com",
-        "buttonText": "Call to action",
+        "link": "http://www.microsoft.com",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"

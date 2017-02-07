@@ -26,8 +26,8 @@
       "text1": "Discover popular, new, free, and paid games, all certified by Microsoft and available in the Windows Store.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Browse games",
-        "path": "ms-windows-store://navigatetopage/?Id=Games",
+        "text": "Browse games",
+        "link": "ms-windows-store://navigatetopage/?Id=Games",
         "actionType": "url"
       },
       "media": {
@@ -46,8 +46,8 @@
       "legalText": "Cortana available in select global markets; experience may vary by region and device.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Talk to Cortana",
-        "path": "ms-cortana://"
+        "text": "Talk to Cortana",
+        "link": "ms-cortana://"
       },
       "media": {
         "blockType": "gif",
@@ -64,8 +64,8 @@
       "text1": "Write on webpages, find things faster, and read distraction-free with Microsoft’s newest browser.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Try it now",
-        "path": "http://www.microsoft.com/en-us/windows/microsoft-edge",
+        "text": "Try it now",
+        "link": "http://www.microsoft.com/en-us/windows/microsoft-edge",
         "actionType": "url"
       },
       "media": {

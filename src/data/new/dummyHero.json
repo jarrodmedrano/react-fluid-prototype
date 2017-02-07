@@ -3,7 +3,7 @@
   "brand": {
     "logoTab": "",
     "color": "#3076BC",
-    "buttonText": "-- Hero --"
+    "text": "-- Hero --"
   },
   "sections": [
     {
@@ -46,8 +46,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -96,8 +96,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -146,8 +146,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -196,8 +196,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -246,8 +246,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -296,8 +296,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -346,8 +346,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -396,8 +396,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"
@@ -446,8 +446,8 @@
       ],
       "button": {
         "layout": "button",
-        "path": "#/windows",
-        "buttonText": "Call to action",
+        "link": "#/windows",
+        "text": "Call to action",
         "ariaLabel": "ariaLabel",
         "textColor": "white",
         "backgroundColor": "#0078D7"

@@ -16,8 +16,8 @@
       "itembody2": "Diagnostic & Repair Support and Unlimited Virus Removals plus Internet Security Software",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Learn more",
-        "path": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmacat748300491884",
+        "text": "Learn more",
+        "link": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmacat748300491884",
         "actionType": "url"
       },
       "media": {
@@ -37,8 +37,8 @@
       "itembody1": "Let our expert Agents help you hold on to what matters. Data Backup or Transfer Service $79.99 with computer purchase.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Learn more",
-        "path": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmcat748300491884",
+        "text": "Learn more",
+        "link": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmcat748300491884",
         "actionType": "url"
       },
       "media": {
@@ -58,8 +58,8 @@
       "legalText": "Eligible on all Office suites except Office 365 1-month auto-renewal. See Blue Shirt for offer details. Compatible devices only. Application availability varies by device. For full system requirements, see www.office.com/information.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Learn more",
-        "path": "http://www.bestbuy.com/site/offer/146005/pcmcat748301070998.c?id=pcmcat748301070998",
+        "text": "Learn more",
+        "link": "http://www.bestbuy.com/site/offer/146005/pcmcat748301070998.c?id=pcmcat748301070998",
         "actionType": "url"
       },
       "media": {
@@ -78,8 +78,8 @@
       "text1": "Bring in your used devices and we'll help you upgrade. Visit BestBuy.com/tradein or ask a Blue Shirt for assistance today.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "See what your tech is worth",
-        "path": "http://www.bestbuy.com/site/misc/best-buy-trade-in/pcmcat133600050011.c?id=pcmcat133600050011",
+        "text": "See what your tech is worth",
+        "link": "http://www.bestbuy.com/site/misc/best-buy-trade-in/pcmcat133600050011.c?id=pcmcat133600050011",
         "actionType": "url"
       },
       "media": {

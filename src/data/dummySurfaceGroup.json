@@ -123,15 +123,15 @@
             "textColor": "#FFF",
             "button": {
               "layout": "link",
-              "path": "http://www.microsoft.com",
-              "buttonText": "Call to action",
+              "link": "http://www.microsoft.com",
+              "text": "Call to action",
               "textColor": "white",
               "backgroundColor": "blue"
             }
           },
           {
             "button": {
-              "path": "http://www.microsoft.com",
+              "link": "http://www.microsoft.com",
               "overlay": "#000"
             },
             "pictures": [
@@ -163,7 +163,7 @@
           },
           {
             "button": {
-              "path": "http://www.microsoft.com",
+              "link": "http://www.microsoft.com",
               "overlay": "#000"
             },
             "pictures": [
@@ -195,7 +195,7 @@
           },
           {
             "button": {
-              "path": "http://www.microsoft.com",
+              "link": "http://www.microsoft.com",
               "overlay": "#000"
             },
             "pictures": [
@@ -227,7 +227,7 @@
           },
           {
             "button": {
-              "path": "http://www.microsoft.com",
+              "link": "http://www.microsoft.com",
               "overlay": "#000"
             },
             "pictures": [

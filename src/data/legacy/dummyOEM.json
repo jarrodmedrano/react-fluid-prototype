@@ -22,8 +22,8 @@
       "cardButtonHoverBackground": "white",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "Open OneNote",
-        "path": "ms-retaildemo:Retail_Demo_Notebook_FINAL2/Overview.one"
+        "text": "Open OneNote",
+        "link": "ms-retaildemo:Retail_Demo_Notebook_FINAL2/Overview.one"
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "Holiday0",
@@ -43,8 +43,8 @@
       "legalText": "Specifications vary depending on model.",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "More info",
-        "path": "http://www.acer.com"
+        "text": "More info",
+        "link": "http://www.acer.com"
       },
       "media": {
         "blockType": "img",
@@ -78,8 +78,8 @@
       "legalText": "",
       "button": {
         "blockType": "buttonExternal",
-        "buttonText": "More info",
-        "path": "http://www.acer.com"
+        "text": "More info",
+        "link": "http://www.acer.com"
       },
       "media": {
         "blockType": "img",
