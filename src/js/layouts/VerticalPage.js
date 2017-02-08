@@ -10,48 +10,52 @@ import ButtonLink from '../components/link/ButtonLink';
 import _ from 'lodash';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../lib/scroll';
+import propsAreValid from '../lib/util';
 
 class VerticalPage extends React.Component {
     render() {
-        let title = this.props.route.title;
-        let {ratings, deviceInformation, groups} = this.props.data;
-        let currentPage = _.find(groups, function(result) {
-            return result.groupIdentifier === title
-        }, {this});
-        let oemGroup = _.find(groups, function(result) {
-            if(result.groupIdentifier === 'oem') {
-                return result
-            }
-        });
-        let retailerGroup = _.find(this.props.groups, function(result) {
-            if(result.groupIdentifier === 'retailer') {
-                return result
-            }
-        });
+        if (propsAreValid(this.props.data)) {
+            let title = this.props.route.title;
+            let {ratings, deviceInformation, groups} = this.props.data;
+            let currentPage = _.find(groups, function (result) {
+                return result.groupIdentifier === title
+            }, {this});
+            let oemGroup = _.find(groups, function (result) {
+                if (result.groupIdentifier === 'oem') {
+                    return result
+                }
+            });
+            let retailerGroup = _.find(this.props.groups, function (result) {
+                if (result.groupIdentifier === 'retailer') {
+                    return result
+                }
+            });
 
-        return (
-            <div onScroll={_handleSetActive}>
-                {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
-                {oemGroup.brand ?
-                  <StickyBanner data={currentPage}>
-                    <div className="cta">
-                        <div><ButtonLink to="#400" className="c-call-to-action c-glyph">Compare Models</ButtonLink></div>
-                    </div>
-                  </StickyBanner>
-                : null }
-                <main id="main">
-                    {currentPage.sections ?
-                        currentPage.sections.map(function(result, id) {
-                            return (
-                              <Vertical key={id} data={result} />
-                            )
-                        }, this)
-                        : null
-                    }
-                </main>
-                {currentPage.sections ? <Footer data={currentPage} /> : null}
-            </div>
-        )
+            return (
+                <div onScroll={_handleSetActive}>
+                    {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
+                    {oemGroup ?
+                        <StickyBanner data={currentPage}>
+                            <div className="cta">
+                                <div><ButtonLink to="#400" className="c-call-to-action c-glyph">Compare
+                                    Models</ButtonLink></div>
+                            </div>
+                        </StickyBanner>
+                        : null }
+                    <main id="main">
+                        {currentPage.sections ?
+                            currentPage.sections.map(function (result, id) {
+                                return (
+                                    <Vertical key={id} data={result}/>
+                                )
+                            }, this)
+                            : null
+                        }
+                    </main>
+                    {currentPage.sections ? <Footer data={currentPage}/> : null}
+                </div>
+            )
+        }
     }
 }
 

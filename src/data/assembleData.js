@@ -10,7 +10,7 @@ import dummyOffice from './legacy/dummyOffice.json!';
 import dummyRetailer from './legacy/dummyRetailer.json!';
 import dummyWindows from './legacy/dummyWindows.json!';
 import dummyDefault from './legacy/dummyDefault.json!';
-// dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
+//dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
 
 let defaultVertical = {
     "layout": "VerticalPage",
@@ -31,7 +31,7 @@ let defaultVertical = {
     "groups": []
 };
 // defaultVertical.groups.push(dummySurfaceGroup);
-defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+defaultVertical.groups.push(dummyOffice, dummyRetailer, dummyWindows);
 //defaultVertical.groups.push(dummyOEM);
 let data = defaultVertical;
 export default data;
