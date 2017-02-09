@@ -3,7 +3,13 @@
   "brand": {
     "groupIdentifier": "retailer",
     "logo": "img/retailer_assets/BBY_Logo_946x220.png",
-    "color": "#003b64"
+    "color": "#003b64",
+    "button": {
+      "blockType": "buttonExternal",
+      "text": "Compare Models",
+      "link": "http://www.bestbuy.com/site/geek-squad-protection/geek-squad-protect-support-plus/pcmcat748300491884.c?id=pcmacat748300491884",
+      "actionType": "url"
+    }
   },
   "sections": [
     {

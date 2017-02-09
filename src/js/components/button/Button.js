@@ -12,7 +12,6 @@ class Button extends React.Component {
                 color: textColor
             };
             return (
-
                 <div>
                     <ButtonLink to={link} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={btnStyle} children={text}  />
                 </div>
