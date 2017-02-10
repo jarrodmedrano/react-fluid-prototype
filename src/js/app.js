@@ -24,6 +24,9 @@ const Routes = myData.groups.filter(function (result, index) {
 //Navigate to Home
 window.home = () => appHistory.push('/');
 
+//Reset function
+window.reset = () => appHistory.push('/');
+
 class App extends React.Component {
     render() {
             return (
@@ -41,9 +44,11 @@ class App extends React.Component {
 }
 
 class RenderForcer extends React.Component {
+
     componentWillMount () {
         this.forceUpdate();
     }
+
     render () {
         return (
             <Router history={appHistory}>
