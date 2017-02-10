@@ -20,7 +20,7 @@ class MosaicTile extends React.Component {
                 let { overlay } = this.props.data.button;
 
                 return (
-                    <ButtonLink to={this.props.data.button.link}  >
+                    <ButtonLink to={this.props.data.button.link} layout="mosaic">
                         <section className="c-mosaic-placement c-placement" style={tileStyle}>
                             {overlay ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: overlay}}></div> : null }
                             <Picture data={this.props.data} />

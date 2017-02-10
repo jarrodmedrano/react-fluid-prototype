@@ -17,10 +17,12 @@ class Footer extends React.Component {
                     {sections.map(function (result, id) {
                         if (result.anchorLink && sections.length >= 3) {
                             let anchorTarget = result.ordinal;
+                            let anchorIconFont = result.anchorIconFont;
+
                             if (id <= 7) {
                                 return (
                                     <ButtonLink to={anchorTarget} role="button"
-                                                key={id}>{result.anchorTitle}</ButtonLink>
+                                                key={id} icon={anchorIconFont ? anchorIconFont : null}>{result.anchorTitle}</ButtonLink>
                                 )
                             }
                         }

@@ -30,8 +30,9 @@ let defaultVertical = {
     },
     "groups": []
 };
-// defaultVertical.groups.push(dummySurfaceGroup);
-defaultVertical.groups.push(dummyOffice, dummyRetailer, dummyWindows);
-//defaultVertical.groups.push(dummyOEM);
+//sample surface data
+defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
+//Sample retailer data
+//defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
 let data = defaultVertical;
 export default data;

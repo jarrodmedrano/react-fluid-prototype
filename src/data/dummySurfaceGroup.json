@@ -14,6 +14,7 @@
       "layout": "fullscreen",
       "anchorLink": "true",
       "anchorTitle": "Explore Surface Book",
+      "anchorIconFont": "glyph-draw",
       "altText": "Surface Book Pro",
       "ariaLabel": "Surface Book Pro",
       "pictures": [
@@ -53,6 +54,7 @@
       "layout": "fullscreen",
       "anchorLink": "true",
       "anchorTitle": "Keyboard",
+      "anchorIconFont": "glyph-keyboard",
       "heading": "Five-point touchpad",
       "picture": "img/vertical/keyboard-hero.jpg",
       "altText": "AltText",
@@ -92,7 +94,7 @@
       "sectionIdentifier": "SurfacePen",
       "layout": "fullscreen",
       "anchorLink": "true",
-      "anchorIcon": "",
+      "anchorIconFont": "glyph-draw",
       "anchorTitle": "Surface Pen",
       "video": "img/vertical/Hero-pen.mp4"
     },
@@ -102,6 +104,7 @@
       "sectionIdentifier": "Apps",
       "layout": "fullscreen",
       "anchorLink": "true",
+      "anchorIconFont": "glyph-screen",
       "anchorTitle": "Apps",
       "heading": "-- Apps Heading --"
     },
@@ -112,6 +115,7 @@
       "layout": "mosaic",
       "anchorLink": "true",
       "anchorTitle": "Accessories",
+      "anchorIconFont": "glyph-headphones",
       "mosaic": {
         "theme": "theme-dark",
         "layout": "mosaic-3",
@@ -265,8 +269,6 @@
       "groupIdentifier": "oem",
       "sectionIdentifier": "Compare",
       "layout": "compare",
-      "anchorLink": "true",
-      "anchorTitle": "Compare",
       "heading": "-- Compare Heading --",
       "compare": {
         "models": [
