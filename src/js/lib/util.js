@@ -1,7 +1,13 @@
-export function onClickHandler(e) {
+export function externalNavigate(e) {
     if(window.RDX) {
         e.preventDefault();
         window.RDX.externalNavigate(e.target);
+    }
+}
+
+export function navigateEvent(group, section) {
+    if(window.RDX) {
+        window.RDX.navigateEvent(group, section);
     }
 }
 
@@ -17,8 +23,6 @@ export default function propsAreValid(props) {
         return true
     }
 }
-
-
 
 function createChainableTypeChecker(validate) {
     function checkType(isRequired, props, propName, componentName, location) {

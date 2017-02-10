@@ -53,7 +53,6 @@ class Vertical extends React.Component {
         if(propsAreValid(this.props.data)) {
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
             let {layout, ordinal} = this.props.data;
-            console.log(this.props.data);
             return (
                 <section className={verticalClass} id={ordinal} name={ordinal} ref="vertical">
                     {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' ?

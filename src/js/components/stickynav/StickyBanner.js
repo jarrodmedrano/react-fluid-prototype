@@ -8,7 +8,6 @@ import dataPropTypes, {devicePropTypes} from '../../../data/dataProps';
 class StickyBanner extends React.Component {
     render() {
         if(propsAreValid(this.props.data)) {
-            console.log(this.props.data);
         let {anchorTitle, logo, groupIdentifier} = this.props.data.brand;
         return (
             <div className="sticky-banner sticky-header">
