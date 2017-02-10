@@ -6,13 +6,13 @@ import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
+
 //For React Dev Tools in browser
 if (typeof window !== 'undefined') {
     window.React = React;
 }
 //Check if Window.RDX exists, if not, load data from dummyData
 window.RDX ? window.datasource = JSON.parse(window.RDX.datasource) : window.datasource = data;
-
 const myData = window.datasource;
 const Index = myData.groups[0];
 const Routes = myData.groups.filter(function (result, index) {
@@ -20,6 +20,9 @@ const Routes = myData.groups.filter(function (result, index) {
         return result;
     }
 });
+
+//Navigate to Home
+window.home = () => appHistory.push('/');
 
 class App extends React.Component {
     render() {

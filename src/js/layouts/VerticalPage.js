@@ -13,6 +13,7 @@ import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../lib
 import propsAreValid from '../lib/util';
 
 class VerticalPage extends React.Component {
+
     render() {
         if (propsAreValid(this.props.data)) {
             let title = this.props.route.title;
