@@ -30,6 +30,8 @@ class LegacyKSP extends React.Component {
 
         let {style, textSide, header, logo, text1, text2, caption1, caption2, icon1, icon2, media, button, legalText} = this.props.data;
 
+        let {cardButtonBackground} = this.props.data;
+
         let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
 
         let btnStyle = {
