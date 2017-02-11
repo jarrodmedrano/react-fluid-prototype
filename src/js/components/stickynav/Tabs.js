@@ -19,6 +19,8 @@ class Tabs extends React.Component {
         let logoColors = this.props.data.groups.reduce(function(newVal, previousVal, key) {
             if(previousVal.brand.color != null) {
                 newVal[key] = previousVal.brand.color;
+            } else {
+                newVal[key] = '#0078D7';
             }
             return newVal
         }, {});
