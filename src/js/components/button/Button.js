@@ -7,7 +7,7 @@ class Button extends React.Component {
 
     render() {
         if(propsAreValid(this.props.data.button, buttonInterface)) {
-            let { text, link, ariaLabel, textColor } = this.props.data.button;
+            let { text, link, ariaLabel, textColor, backgroundColor } = this.props.data.button;
             let btnStyle = {
                 color: textColor
             };

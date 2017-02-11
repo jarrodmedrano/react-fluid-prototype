@@ -27,8 +27,8 @@ export let headingPropTypes = {
 export let buttonPropTypes = {
     button: React.PropTypes.shape({
         layout: string,
-        path: string,
-        anchorTitle: string,
+        link: string,
+        text: string,
         ariaLabel: string,
         textColor: string,
         backgroundColor: string,
@@ -38,8 +38,8 @@ export let buttonPropTypes = {
 export let buttonInterface = {
     button: {
         layout: string,
-        path: string,
-        anchorTitle: string,
+        link: string,
+        text: string,
         ariaLabel: string,
         textColor: string,
         backgroundColor: string,
@@ -176,7 +176,7 @@ export default function dataPropTypes(component) {
 //                 })),
 //                 button: React.PropTypes.shape({
 //                     layout: string,
-//                     path: string,
+//                     link: string,
 //                     title: string,
 //                     ariaLabel: string,
 //                     textColor: string,
@@ -199,7 +199,7 @@ export default function dataPropTypes(component) {
 //                         })),
 //                         button: React.PropTypes.shape({
 //                             layout: string,
-//                             path: string,
+//                             link: string,
 //                             title: string,
 //                             ariaLabel: string,
 //                             textColor: string,

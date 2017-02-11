@@ -55,14 +55,8 @@ class Vertical extends React.Component {
             let {layout, ordinal} = this.props.data;
             return (
                 <section className={verticalClass} id={ordinal} name={ordinal} ref="vertical">
-                    {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' ?
+                    {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' || layout === 'card' ?
                         <Hero data={this.props.data} active={this.state.active} /> : null
-                    }
-                    {layout === 'parallax' ?
-                        <Parallax data={this.props.data} active={this.state.active} /> : null
-                    }
-                    {layout === 'apps' ?
-                        <Apps data={this.props.data} active={this.state.active} /> : null
                     }
                     {layout === 'mosaic' ?
                         <Mosaic data={this.props.data} active={this.state.active} /> : null
