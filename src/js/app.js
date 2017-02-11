@@ -4,6 +4,8 @@ import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
+import Scroll  from 'react-scroll';
+const scroll = Scroll.animateScroll;
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
 
@@ -28,6 +30,11 @@ window.home = () => appHistory.push('/');
 window.reset = () => appHistory.push('/');
 
 class App extends React.Component {
+
+    componentWillUpdate() {
+        scroll.scrollTo(0, {delay: 0, duration: 0});
+    }
+
     render() {
             return (
                 <div>
