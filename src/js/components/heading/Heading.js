@@ -12,7 +12,7 @@ class Heading extends React.Component {
                 <div className="content-animate">
                     {heading ? <h1 className="c-heading">{heading}</h1> : null }
                     {subheading ? <p className="c-subheading">{subheading}</p> : null }
-                    {paragraph ? <p className="c-paragraph-1">{paragraph}</p> : null }
+                    {paragraph ? <p className="c-paragraph">{paragraph}</p> : null }
                     {this.props.data.button ? <Button data={this.props.data}  /> : null }
                 </div>
             </div>

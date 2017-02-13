@@ -21,7 +21,9 @@ class VerticalPage extends React.Component {
 
             let currentPage = _.find(groups, function (result) {
                 return result.groupIdentifier === title
-            }, {this});
+            });
+
+            let currentBrandColor = currentPage.brand.tabColor;
 
             let oemGroup = _.find(groups, function (result) {
                 if (result.groupIdentifier === 'oem') {
@@ -50,7 +52,7 @@ class VerticalPage extends React.Component {
                         {currentPage.sections ?
                             currentPage.sections.map(function (result, id) {
                                 return (
-                                    <Vertical key={id} data={result}/>
+                                    <Vertical key={id} data={result} brandColor={this.currentBrandColor} />
                                 )
                             }, this)
                             : null

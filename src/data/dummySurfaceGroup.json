@@ -14,7 +14,6 @@
       "layout": "fullscreen",
       "anchorLink": "true",
       "anchorTitle": "Explore Surface Book",
-      "anchorIconFont": "glyph-draw",
       "altText": "Surface Book Pro",
       "ariaLabel": "Surface Book Pro",
       "pictures": [
@@ -107,7 +106,7 @@
       "anchorIconFont": "glyph-screen",
       "anchorTitle": "Apps",
       "heading": "Apps Heading",
-      "subheading": "The perfect complements to your Surface",
+      "paragraph": "The perfect complements to your Surface",
       "alignX": "right",
       "pictures": [
         {
@@ -148,6 +147,7 @@
       "layout": "mosaic",
       "anchorLink": "true",
       "anchorTitle": "Accessories",
+      "anchorIcon": "img/vertical/pen-icon.png",
       "anchorIconFont": "glyph-headphones",
       "mosaic": {
         "theme": "theme-dark",

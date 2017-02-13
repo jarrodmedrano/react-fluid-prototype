@@ -26,13 +26,12 @@ class LegacyFeature extends React.Component {
         {/* 
             This component renders both feature and featureCTA
         */ }
-
         let { style, textSide, header, logo, text1, text2, text3, media, button, legalText } = this.props.data;
 
         let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
 
         let btnStyle = {
-            background: '#E2231A',
+            background: this.props.brandColor,
             color: '#FFF',
             marginLeft: '0',
             marginRight: '0'

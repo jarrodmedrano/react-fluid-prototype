@@ -65,7 +65,7 @@ class Vertical extends React.Component {
                         <CompareTable data={this.props.data} active={this.state.active} /> : null
                     }
                     {layout === 'feature' ?
-                        <LegacyFeature data={this.props.data}  active={this.state.active} /> : null
+                        <LegacyFeature data={this.props.data}  active={this.state.active} brandColor={this.props.brandColor} /> : null
                     }
                     {layout === 'featureCta' ?
                         <LegacyFeature data={this.props.data}  active={this.state.active} /> : null
@@ -82,7 +82,7 @@ class Vertical extends React.Component {
                      }
                      */}
                     {layout === 'centeredBackdropTemplate' ?
-                        <LegacyCenteredBackdrop data={this.props.data} active={this.state.active}/> : null
+                        <LegacyCenteredBackdrop data={this.props.data} active={this.state.active} /> : null
                     }
                 </section>
             )

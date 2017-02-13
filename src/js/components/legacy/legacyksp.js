@@ -35,7 +35,7 @@ class LegacyKSP extends React.Component {
         let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
 
         let btnStyle = {
-            background: '#E2231A',
+            background: cardButtonBackground,
             color: '#FFF',
             marginLeft: '0',
             marginRight: '0'
