@@ -6,10 +6,11 @@ import ButtonLink from '../link/ButtonLink';
 class Button extends React.Component {
 
     render() {
-        if(propsAreValid(this.props.data.button, buttonInterface)) {
+        if(propsAreValid(this.props.data.button) && propsAreValid(this.props.data.button.link)) {
             let { text, link, ariaLabel, textColor, backgroundColor } = this.props.data.button;
             let btnStyle = {
-                color: textColor
+                color: textColor,
+                background: backgroundColor
             };
             return (
                 <div>

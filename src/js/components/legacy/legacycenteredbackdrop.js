@@ -41,10 +41,12 @@ class LegacyCenteredBackdrop extends React.Component {
         // alignX, alignY, and theme need to be assumed in the css since they will not be available in the data
         let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-center`, `theme-light m-hero-item`);
 
+        let buttonBG = cardButtonBackground || this.props.brandColor;
+
 
         let btnStyle = {
             color: cardButton,
-            background: cardButtonBackground
+            background: buttonBG
         };
 
         let templateStyle = {
@@ -81,7 +83,7 @@ class LegacyCenteredBackdrop extends React.Component {
                         {subheader ? <p className="c-paragraph-1" dangerouslySetInnerHTML={{ __html: this._cleanHtml(subheader) }} /> : null }
                             </div>
                         </div>
-                        {button ? <div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph" aria-label={button.text} style={btnStyle} children={button.text}  /></div> : null}
+                        {button ? <div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph" aria-label={button.text} style={btnStyle} children={button.text}  brandColor={this.props.brandColor ? this.props.brandColor : null} /></div> : null}
                         {legalText ? <p className="c-paragraph-4" dangerouslySetInnerHTML={{ __html: this._cleanHtml(legalText) }} /> : null }
 
                     </div>

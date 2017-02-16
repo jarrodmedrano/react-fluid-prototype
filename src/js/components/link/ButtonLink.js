@@ -6,7 +6,6 @@ import {linkPropTypes} from '../../../data/dataProps';
 import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
 import {Link as RouterLink} from 'react-router';
 import sanitizeHtml from 'sanitize-html';
-import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 
 class ButtonLink extends React.Component {
 
@@ -34,19 +33,12 @@ class ButtonLink extends React.Component {
     render() {
 
         if(propsAreValid(this.props)) {
-
             const {to, children, iconFont, layout, icon, ...rest} = this.props;
             const _isInternal = this._isInternal(to);
             let templateClass = classNames('c-action-trigger');
 
             if (_isInternal) {
-                if(layout === 'down-arrow') {
-                    return (
-                        <div className="down-arrow">
-                            <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
-                        </div>
-                    );
-                } else if(layout === 'mosaic') {
+                if(layout === 'mosaic') {
                     return (
                         <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
                     )

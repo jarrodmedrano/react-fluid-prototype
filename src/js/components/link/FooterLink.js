@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './button-link.scss!';
 import propsAreValid, {externalNavigate} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
+import {Link, Element, Events, scroll, scrollSpy} from '../../lib/scroll';
 import {Link as RouterLink} from 'react-router';
 
 class FooterLink extends React.Component {

@@ -13,7 +13,7 @@ class Footer extends React.Component {
                     {sections.map(function (result, id) {
                         //If There is an anchor link and there are more than or equal to 3 sections
                         if (result.anchorLink && sections.length >= 3) {
-                            let anchorTarget = result.ordinal;
+                            let anchorTarget = result.sectionIdentifier;
                             let anchorIconFont = result.anchorIconFont;
                             let anchorIcon = result.anchorIcon;
 

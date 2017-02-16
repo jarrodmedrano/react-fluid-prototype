@@ -9,7 +9,7 @@ const scroll = Scroll.animateScroll;
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
 //import fonts
-import '../styles/fonts.scss!'
+import '../styles/fonts.scss!';
 //For React Dev Tools in browser
 if (typeof window !== 'undefined') {
     window.React = React;

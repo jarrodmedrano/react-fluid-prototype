@@ -43,26 +43,26 @@ class Vertical extends React.Component {
     render() {
         if(propsAreValid(this.props.data)) {
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
-            let {layout, ordinal} = this.props.data;
+            let {layout, sectionIdentifier} = this.props.data;
             return (
-                <section className={verticalClass} id={ordinal} name={ordinal}>
+                <section className={verticalClass} id={sectionIdentifier} name={sectionIdentifier}>
                     {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' || layout === 'card' ?
-                        <Hero data={this.props.data}  /> : null
+                        <Hero data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} /> : null
                     }
                     {layout === 'mosaic' ?
-                        <Mosaic data={this.props.data}  /> : null
+                        <Mosaic data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} /> : null
                     }
                     {layout === 'compare' ?
-                        <CompareTable data={this.props.data}  /> : null
+                        <CompareTable data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} /> : null
                     }
                     {layout === 'feature' ?
-                        <LegacyFeature data={this.props.data}   brandColor={this.props.brandColor} /> : null
+                        <LegacyFeature data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} /> : null
                     }
                     {layout === 'featureCta' ?
-                        <LegacyFeature data={this.props.data}   /> : null
+                        <LegacyFeature data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null}  /> : null
                     }
                     {layout === 'ksp' ?
-                        <LegacyKSP data={this.props.data}   /> : null
+                        <LegacyKSP data={this.props.data}  brandColor={this.props.brandColor ? this.props.brandColor : null} /> : null
                     }
                     {/*  Implement as variants of 'ksp'?
                      {layout === 'ksp_reversed' ?
@@ -73,7 +73,7 @@ class Vertical extends React.Component {
                      }
                      */}
                     {layout === 'centeredBackdropTemplate' ?
-                        <LegacyCenteredBackdrop data={this.props.data}  /> : null
+                        <LegacyCenteredBackdrop data={this.props.data} brandColor={this.props.brandColor} /> : null
                     }
                 </section>
             )
