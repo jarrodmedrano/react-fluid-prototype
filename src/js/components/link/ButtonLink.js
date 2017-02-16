@@ -35,25 +35,20 @@ class ButtonLink extends React.Component {
 
         if(propsAreValid(this.props)) {
 
-            const {to, children, ...rest} = this.props;
+            const {to, children, iconFont, layout, icon, ...rest} = this.props;
             const _isInternal = this._isInternal(to);
-            var templateClass = classNames('c-action-trigger');
-
-            if(this.props.icon) {
-                let anchorIconFont = this.props.icon;
-                templateClass = classNames(`${anchorIconFont}`, `c-action-trigger c-glyph mdl-glyph`);
-            }
+            let templateClass = classNames('c-action-trigger');
 
             if (_isInternal) {
-                if(this.props.layout === 'down-arrow') {
+                if(layout === 'down-arrow') {
                     return (
                         <div className="down-arrow">
                             <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
                         </div>
                     );
-                } else if(this.props.layout === 'mosaic') {
+                } else if(layout === 'mosaic') {
                     return (
-                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{children}</Link>
+                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
                     )
                 } else {
                     return (
@@ -61,7 +56,7 @@ class ButtonLink extends React.Component {
                     );
                 }
             } else {
-                if(this.props.layout === 'mosaic') {
+                if(layout === 'mosaic') {
                     return (<a href={to} {...rest} onClick={externalNavigate}>{children}</a>);
                 } else {
                     return (<a href={to} {...rest} onClick={externalNavigate} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} />);

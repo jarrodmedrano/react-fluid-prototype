@@ -3,6 +3,16 @@
 //-----------------------------------------------------------------------------
 // General Styles for Scenes
 //-----------------------------------------------------------------------------
+$linkband-spacing: 20px;
+$linkband-bg: rgba(255,255,255,.8);
+$default-bg: #E6E7E8;
+$default-text: #000;
+$accent-color: #0078D7;
+$default-text-alt: #fff;
+$linkband-height: 74px;
+//$video-offset: 0;
+$video-offset: -10vh;
+$video-offset-portrait: 0;
 
 .scene-vertical {
   flex: 1;

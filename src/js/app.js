@@ -8,11 +8,13 @@ import Scroll  from 'react-scroll';
 const scroll = Scroll.animateScroll;
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
-
+//Only import fonts in dev mode for now
+import './core/config.#{ENV|environment}.js';
 //For React Dev Tools in browser
 if (typeof window !== 'undefined') {
     window.React = React;
 }
+
 //Check if Window.RDX exists, if not, load data from dummyData
 window.RDX ? window.datasource = JSON.parse(window.RDX.datasource) : window.datasource = data;
 const myData = window.datasource;

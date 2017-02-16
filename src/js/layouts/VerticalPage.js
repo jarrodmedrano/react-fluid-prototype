@@ -9,11 +9,20 @@ import Footer from '../components/stickynav/Footer';
 import StickyButton from '../components/stickynav/StickyButton';
 import _ from 'lodash';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../lib/scroll';
 import propsAreValid from '../lib/util';
+//Common Scrolling Functions
+import Scroll  from 'react-scroll';
+export const Link       = Scroll.Link;
+export const Element    = Scroll.Element;
+export const Events     = Scroll.Events;
+export const scroll     = Scroll.animateScroll;
+export const scrollSpy  = Scroll.scrollSpy;
 
 class VerticalPage extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = { shortcut: null }
+    }
     render() {
         if (propsAreValid(this.props.data)) {
             let title = this.props.route.title;
@@ -38,7 +47,7 @@ class VerticalPage extends React.Component {
             });
 
             return (
-                <div onScroll={_handleSetActive}>
+                <div>
                     {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
                     {oemGroup ?
                         <StickyBanner data={oemGroup}>

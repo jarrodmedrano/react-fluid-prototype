@@ -134,10 +134,20 @@ $btn-primary-color: #fff;
   a.c-action-trigger {
     color: $default-text;
 
+    img {
+      max-width: 16px;
+      max-height: 16px;
+      margin-right: 10px;
+    }
+
     &.active {
       background: $btn-primary-bg;
       color: $btn-primary-color;
       text-decoration: none;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
     }
   }
 }

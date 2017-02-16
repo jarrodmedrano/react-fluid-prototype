@@ -12,8 +12,8 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
+    "ENV": "env.conditions.js",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.6.0",

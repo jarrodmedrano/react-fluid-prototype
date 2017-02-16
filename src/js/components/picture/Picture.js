@@ -22,7 +22,7 @@ class Picture extends React.Component {
 
 Picture.defaultProps = {
     data: {
-        pictures: [{src: '', minwidth: '', altText: ''}],
+        pictures: [{src: '', minwidth: ''}],
         altText: ''
     }
 };

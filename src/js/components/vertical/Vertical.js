@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames';
+import './vertical.scss!'
 import Hero from '../hero/Hero';
 import Mosaic from '../mosaic/Mosaic';
 import CompareTable from '../compare/CompareTable';
@@ -8,45 +9,35 @@ import LegacyKSP from '../legacy/legacyKsp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 import propsAreValid from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy} from '../../lib/scroll';
+import Scroll  from 'react-scroll';
+export const Link       = Scroll.Link;
+export const Element    = Scroll.Element;
+export const Events     = Scroll.Events;
+export const scroll     = Scroll.animateScroll;
+export const scrollSpy  = Scroll.scrollSpy;
 
 class Vertical extends React.Component {
-
     constructor(props) {
         super(props);
 
-        this.state = {
-            active: false
-        }
     }
 
     componentDidMount() {
-        Events.scrollEvent.register('begin', function(to, element) {
-            // console.log("begin", to, arguments);
-            Vertical._deactivateScroll();
-        });
-        Events.scrollEvent.register('end', function(to, element) {
-            // console.log("end", to, this);
-            Vertical._handleScroll();
-        });
-        scrollSpy.update();
+        // let keydown = false;
+        //
+        // window.addEventListener('keydown', function(e) {
+        //     if (e.repeat) { return }
+        //     if(e.code === 'PageDown') {
+        //         console.log(e);
+        //     }
+        // });
+
     }
 
     componentWillUnmount() {
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
-    }
-
-    static _deactivateScroll() {
-        Vertical.state = {
-            active: false
-        };
-    }
-
-    static _handleScroll() {
-        Vertical.state = {
-            active: true
-        };
+        // window.removeEventListener('keydown', function(e) {
+        //     if (e.repeat) { return }
+        // });
     }
 
     render() {
@@ -54,24 +45,24 @@ class Vertical extends React.Component {
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
             let {layout, ordinal} = this.props.data;
             return (
-                <section className={verticalClass} id={ordinal} name={ordinal} ref="vertical">
+                <section className={verticalClass} id={ordinal} name={ordinal}>
                     {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' || layout === 'card' ?
-                        <Hero data={this.props.data} active={this.state.active} /> : null
+                        <Hero data={this.props.data}  /> : null
                     }
                     {layout === 'mosaic' ?
-                        <Mosaic data={this.props.data} active={this.state.active} /> : null
+                        <Mosaic data={this.props.data}  /> : null
                     }
                     {layout === 'compare' ?
-                        <CompareTable data={this.props.data} active={this.state.active} /> : null
+                        <CompareTable data={this.props.data}  /> : null
                     }
                     {layout === 'feature' ?
-                        <LegacyFeature data={this.props.data}  active={this.state.active} brandColor={this.props.brandColor} /> : null
+                        <LegacyFeature data={this.props.data}   brandColor={this.props.brandColor} /> : null
                     }
                     {layout === 'featureCta' ?
-                        <LegacyFeature data={this.props.data}  active={this.state.active} /> : null
+                        <LegacyFeature data={this.props.data}   /> : null
                     }
                     {layout === 'ksp' ?
-                        <LegacyKSP data={this.props.data}  active={this.state.active} /> : null
+                        <LegacyKSP data={this.props.data}   /> : null
                     }
                     {/*  Implement as variants of 'ksp'?
                      {layout === 'ksp_reversed' ?
@@ -82,7 +73,7 @@ class Vertical extends React.Component {
                      }
                      */}
                     {layout === 'centeredBackdropTemplate' ?
-                        <LegacyCenteredBackdrop data={this.props.data} active={this.state.active} /> : null
+                        <LegacyCenteredBackdrop data={this.props.data}  /> : null
                     }
                 </section>
             )

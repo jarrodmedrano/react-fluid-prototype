@@ -18,9 +18,9 @@
 
 //Icons
 .mdl-glyph {
-  //&:before {
-  //  font-family: 'RDXMDL2Assets';
-  //}
+  &:before {
+    font-family: 'RDXMDL2Assets';
+  }
 
   &.glyph-screen {
     &:before {
