@@ -10,8 +10,8 @@ class Tabs extends React.Component {
         this.state = {};
 
         let logos = this.props.data.groups.reduce(function(newVal, previousVal, key) {
-            if(previousVal.brand.logo != null) {
-                newVal[key] = previousVal.brand.logo;
+            if(previousVal.brand.logoTab != null) {
+                newVal[key] = previousVal.brand.logoTab;
             }
             return newVal;
         }, {});
