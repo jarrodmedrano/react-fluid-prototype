@@ -23,7 +23,7 @@
       "baseURL": "src"
     },
     "dependencies": {
-      "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
+      "capaj/systemjs-hot-reloader": "github:alexisvincent/systemjs-hot-reloader@^0.6.0",
       "classnames": "npm:classnames@^2.2.5",
       "clean-css": "npm:clean-css@^3.4.10",
       "css": "github:systemjs/plugin-css@^0.1.19",

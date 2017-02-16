@@ -8,8 +8,8 @@ import Scroll  from 'react-scroll';
 const scroll = Scroll.animateScroll;
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
-//Only import fonts in dev mode for now
-import './core/config.#{ENV|environment}.js';
+//import fonts
+import '../styles/fonts.scss!'
 //For React Dev Tools in browser
 if (typeof window !== 'undefined') {
     window.React = React;
