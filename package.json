@@ -33,6 +33,7 @@
       "picturefill": "npm:picturefill@^3.0.2",
       "react": "npm:react@^15.2.1",
       "react-dom": "npm:react-dom@^15.2.1",
+      "react-keydown": "npm:react-keydown@^1.6.5",
       "react-router": "npm:react-router@^2.6.0",
       "react-scroll": "npm:react-scroll@^1.4.4",
       "sanitize-html": "npm:sanitize-html@^1.14.1",

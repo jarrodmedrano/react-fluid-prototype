@@ -8,6 +8,9 @@ import Scroll  from 'react-scroll';
 const scroll = Scroll.animateScroll;
 import MasterLayout from './layouts/MasterLayout';
 import data from '../data/assembleData';
+//TODO: replace this library with regular event listeners.
+import keydown from 'react-keydown';
+
 //import fonts
 import '../styles/fonts.scss!';
 //For React Dev Tools in browser
@@ -31,10 +34,24 @@ window.home = () => appHistory.push('/');
 //Reset function
 window.reset = () => appHistory.push('/');
 
+
 class App extends React.Component {
+
 
     componentWillUpdate() {
         scroll.scrollTo(0, {delay: 0, duration: 0});
+    }
+
+    @keydown( 'cmd+h', 'ctrl+home' )
+    homeGroup(e) {
+        e.preventDefault();
+        appHistory.push('/');
+    }
+
+    @keydown( 'cmd+option+h', 'ctrl+alt+home' )
+    resetGroup(e) {
+        e.preventDefault();
+        appHistory.push('/');
     }
 
     render() {
@@ -44,7 +61,7 @@ class App extends React.Component {
                                      transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                         {React.cloneElement(this.props.children, {
                             key: this.props.location.pathname,
-                            data: myData,
+                            data: myData
                         })}
                     </TransitionGroup>
                 </div>
