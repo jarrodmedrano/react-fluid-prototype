@@ -57,13 +57,10 @@ class App extends React.Component {
     render() {
             return (
                 <div>
-                    <TransitionGroup component="div" transitionName="page-transition"
-                                     transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                         {React.cloneElement(this.props.children, {
                             key: this.props.location.pathname,
                             data: myData
                         })}
-                    </TransitionGroup>
                 </div>
             );
     }

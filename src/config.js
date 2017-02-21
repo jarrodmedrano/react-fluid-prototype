@@ -321,8 +321,7 @@ System.config({
       "entities": "npm:entities@1.1.1"
     },
     "npm:domain-browser@1.1.7": {
-      "events": "github:jspm/nodelibs-events@0.1.1",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+      "events": "github:jspm/nodelibs-events@0.1.1"
     },
     "npm:domhandler@2.3.0": {
       "domelementtype": "npm:domelementtype@1.1.3"
@@ -493,8 +492,7 @@ System.config({
       "supports-color": "npm:supports-color@3.1.2"
     },
     "npm:process-nextick-args@1.0.7": {
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:process@0.11.9": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

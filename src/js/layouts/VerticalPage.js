@@ -13,13 +13,14 @@ import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 import propsAreValid from '../lib/util';
 //Common Scrolling Functions
 import Scroll  from 'react-scroll';
-export const Link       = Scroll.Link;
-export const Element    = Scroll.Element;
-export const Events     = Scroll.Events;
-export const scroll     = Scroll.animateScroll;
-export const scrollSpy  = Scroll.scrollSpy;
+let scroller   = Scroll.scroller;
+
+import Element from '../components/scrollElement/Element';
+
+
 //TODO: replace this library with regular event listeners.
 import keydown from 'react-keydown';
+
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -41,13 +42,18 @@ class VerticalPage extends React.Component {
         //start at the first section
         let currentSections = currentPage.sections;
 
+        let currentSectionClass = `${title}-section-`;
+
         //set Current page in the state
         this.state = {
             currentPage: currentPage,
             currentBrandColor: currentBrandColor,
             currentSections: currentSections,
             currentPaths: currentPaths,
-            currentId: currentId
+            currentId: currentId,
+            currentSection: 0,
+            currentSectionClass: currentSectionClass,
+            currentTitle: title
         }
     }
 
@@ -72,6 +78,40 @@ class VerticalPage extends React.Component {
             return this.props.history.push("/");
         }
     }
+
+    @keydown( 'cmd+down', 'ctrl+down')
+    nextSection(e) {
+        e.preventDefault();
+        if(this.state.currentSection+1 < this.state.currentSections.length) {
+            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection+=1}`);
+        } else {
+            return false
+        }
+    }
+
+    @keydown( 'cmd+up', 'ctrl+up')
+    prevSection(e) {
+        e.preventDefault();
+        if(this.state.currentSection-1 >= 0) {
+            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection-=1}`);
+        } else {
+            return false
+        }
+    }
+
+    @keydown('alt+0', 'alt+1', 'alt+2', 'alt+3', 'alt+4', 'alt+5', 'alt+6', 'alt+7', 'alt+8', 'alt+9')
+    toSection(e) {
+        e.preventDefault();
+        let sectionKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+
+        sectionKeys.map(function(result, id) {
+            if(id < this.state.currentSections.length && e.which === result) {
+                console.log(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
+               return scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
+            }
+        }, this);
+    }
+
 
     render() {
         if (propsAreValid(this.props.data)) {
@@ -104,7 +144,7 @@ class VerticalPage extends React.Component {
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
-                                    <Vertical key={id} data={result} brandColor={this.state.currentBrandColor} />
+                                    <Element name={this.state.currentSectionClass + id} key={id}><Vertical data={result} brandColor={this.state.currentBrandColor}  /></Element>
                                 )
                             }, this)
                             : null
