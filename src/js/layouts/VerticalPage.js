@@ -7,6 +7,7 @@ import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
 import Footer from '../components/stickynav/Footer';
 import StickyButton from '../components/stickynav/StickyButton';
+import Price from '../components/price/Price';
 import _ from 'lodash';
 
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
@@ -128,18 +129,21 @@ class VerticalPage extends React.Component {
                     return result
                 }
             });
-
             return (
                 <div>
                     {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
-                    {oemGroup ?
+                    {oemGroup ? 
                         <StickyBanner data={oemGroup}>
-                            {retailerGroup ?
-                                <StickyButton data={retailerGroup} />
-                                : null
-                            }
-                        </StickyBanner>
+                            { oemGroup.brand.price ? 
+                                <Price data={oemGroup.brand.price}/> 
+                            : null }
+                            
+                            { retailerGroup ? 
+                                <StickyButton data={retailerGroup} /> 
+                            : null }
+                        </StickyBanner> 
                     : null }
+                    
                     <main id="main">
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {

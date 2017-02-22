@@ -10,11 +10,7 @@ import dataPropTypes, {devicePropTypes} from '../../../data/dataProps';
 class StickyButton extends React.Component {
     render() {
         return (
-            <div className="cta">
-                <div>
-                    <Button data={this.props.data.brand} />
-                </div>
-            </div>
+            <Button data={this.props.data.brand} />
         )
     }
 }

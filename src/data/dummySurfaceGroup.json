@@ -4,7 +4,14 @@
     "logo": "img/vertical/ms-logo.png",
     "anchorTitle": "Surface Book",
     "tabColor": "#ffffff",
-    "logoTab": "img/vertical/surfacebook-logo.png"
+    "logoTab": "img/vertical/surfacebook-logo.png",
+    "price": "$1,499.00"
+  },
+  "ratings": {
+    "rating": "3",
+    "bestRating": "5",
+    "ratingText": "See reviews",
+    "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
   },
   "sections": [
     {

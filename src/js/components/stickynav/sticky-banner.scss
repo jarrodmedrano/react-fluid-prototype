@@ -45,6 +45,8 @@ $btn-primary-color: #fff;
   .cta {
     align-self: flex-end;
     margin-left: auto;
+    display: flex;
+    align-items: center;
 
     .c-button {
       margin-top: 0;
