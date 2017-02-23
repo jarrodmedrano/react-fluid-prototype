@@ -16,6 +16,7 @@ const Element    = Scroll.Element;
 const Events     = Scroll.Events;
 const scroll     = Scroll.animateScroll;
 const scrollSpy  = Scroll.scrollSpy;
+let myWinHeight = window.innerHeight + 200;
 
 class Vertical extends React.Component {
     constructor(props) {
@@ -24,38 +25,28 @@ class Vertical extends React.Component {
         this.state = {
             active: false,
             events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
-            winHeight: window.innerHeight + 200,
-            winWidth: window.innerWidth
+            winHeight: myWinHeight
         }
     }
 
     componentDidMount() {
         this._initScene();
-
         window.addEventListener('resize', this._updateDimensions.bind(this));
     }
 
     componentWillUnmount () {
-        // unRegister events listeners with the listview div
         this.state.events.forEach((type) => {
            findDOMNode(this.refs.sceneRef).removeEventListener(type, this._checkSceneVisible.bind(this), false)
         });
-
         window.removeEventListener('resize', this._updateDimensions.bind(this));
-
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
     }
 
-
     _updateDimensions() {
-        let newWinHeight = window.innerHeight + 200;
-        this.setState({winHeight: newWinHeight, winWidth: window.innerWidth})
+        this.setState({winHeight: myWinHeight, winWidth: window.innerWidth})
     }
 
     _initScene() {
         this._checkSceneVisible();
-
         this.state.events.forEach((type) => {
            findDOMNode(this.refs.sceneRef).addEventListener(type, this._checkSceneVisible.bind(this), false)
         })
@@ -80,9 +71,7 @@ class Vertical extends React.Component {
 
         return (
             rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (this.state.winHeight || document.documentElement.clientHeight) &&
-            rect.right <= (this.state.winWidth || document.documentElement.clientWidth)
+            rect.bottom <= this.state.winHeight
         );
     }
 
@@ -92,7 +81,7 @@ class Vertical extends React.Component {
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier.toLowerCase());
             let {layout, sectionIdentifier} = this.props.data;
             return (
-                <section className={verticalClass} id={sectionIdentifier} name={sectionIdentifier} style={{position: 'relative'}} ref="sceneRef">
+                <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier} style={{position: 'relative'}} ref="sceneRef">
                     {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' || layout === 'card' ?
                         <Hero data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} /> : null
                     }
@@ -122,6 +111,7 @@ class Vertical extends React.Component {
                     {layout === 'centeredBackdropTemplate' ?
                         <LegacyCenteredBackdrop data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active}  /> : null
                     }
+
                 </section>
             )
         } return null
