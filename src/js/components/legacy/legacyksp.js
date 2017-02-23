@@ -52,6 +52,7 @@ class LegacyKSP extends React.Component {
                         </picture> : null }
                     <div>
                         <div>
+                            {logo ? <img className="logo" src={logo} /> : null }
                             {header ? <h1 className="c-heading-3"
                                           dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
                             <div data-grid="col-12" className="c-structured-list">
@@ -62,10 +63,11 @@ class LegacyKSP extends React.Component {
                                                 <img className="c-image" src={icon1}/>
                                             </div> : null }
                                         <div data-grid="col-10">
-                                            {text1 ? <p className="c-paragraph-1"
+                                            <p className="c-paragraph-2">
+                                                {caption1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
+                                            </p>
+                                            {text1 ? <p className="c-paragraph-4"
                                                          dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
-                                            {caption1 ? <p className="c-paragraph-4"
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
                                         </div>
                                     </li>
                                     <li className="f-row">
@@ -74,9 +76,10 @@ class LegacyKSP extends React.Component {
                                                 <img className="c-image" src={icon2}/>
                                             </div> : null }
                                         <div data-grid="col-10">
-                                            {text2 ? <p className="c-paragraph-1"
-                                                        dangerouslySetInnerHTML={{__html: this.cleanHtml(text2)}}/> : null }
-                                            {caption2 ? <p className="c-paragraph-4"
+                                            <p className="c-paragraph-2">
+                                                {caption2 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(text2)}}/> : null }
+                                            </p>
+                                            {text2 ? <p className="c-paragraph-4"
                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2)}}/> : null }
                                         </div>
                                     </li>
