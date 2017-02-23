@@ -7,6 +7,21 @@ import propsAreValid from '../../lib/util';
 import dataPropTypes, {heroPropTypes} from '../../../data/dataProps';
 
 class Hero extends React.Component {
+
+    componentWillReceiveProps(nextProps) {
+        this._handleVideo(nextProps.active);
+    }
+
+    _handleVideo(play) {
+        if (this.props.data.video) {
+            if (play === true) {
+                this.refs.vidRef.play();
+            } else {
+                this.refs.vidRef.pause();
+            }
+        }
+    }
+
     render() {
         if (propsAreValid(this.props.data)) {
             let {alignX, alignY, theme, layout} = this.props.data;
@@ -32,7 +47,7 @@ class Hero extends React.Component {
                 if (this.props.data.video) {
                     return (
                         <div>
-                            <video className="video-fullscreen fixed" loop>
+                            <video ref="vidRef" className="video-fullscreen fixed" loop>
                                 <source src={this.props.data.video} type="video/mp4"/>
                             </video>
                         </div>

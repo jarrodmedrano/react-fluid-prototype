@@ -194,7 +194,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "pako": "npm:pako@0.2.9",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "readable-stream": "npm:readable-stream@2.2.2",
+      "readable-stream": "npm:readable-stream@2.2.3",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:browserslist@1.4.0": {
@@ -575,7 +575,7 @@ System.config({
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
     },
-    "npm:readable-stream@2.2.2": {
+    "npm:readable-stream@2.2.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "buffer-shims": "npm:buffer-shims@1.0.0",
       "core-util-is": "npm:core-util-is@1.0.2",

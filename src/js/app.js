@@ -37,7 +37,6 @@ window.reset = () => appHistory.push('/');
 
 class App extends React.Component {
 
-
     componentWillUpdate() {
         scroll.scrollTo(0, {delay: 0, duration: 0});
     }

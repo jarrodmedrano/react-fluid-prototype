@@ -4,6 +4,7 @@ import dummyMosaic from './new/dummyMosaic.json!';
 import dummyIHero from './new/dummyIHero.json!';
 import dummyFullScreen from './new/dummyFullScreen.json!';
 import dummySurfacePro from './new/dummySurfacePro.json!';
+import dummyFVideo from './new/dummyFVideo.json!';
 import dummySurfaceGroup from './dummySurfaceGroup.json!';
 import dummyOEM from './legacy/dummyOEM.json!';
 import dummyOffice from './legacy/dummyOffice.json!';
@@ -31,8 +32,9 @@ let defaultVertical = {
     "groups": []
 };
 //sample surface data
-defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
+//defaultVertical.groups.push(dummyFVideo, dummyRetailer);
+//defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
-// defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
 let data = defaultVertical;
 export default data;

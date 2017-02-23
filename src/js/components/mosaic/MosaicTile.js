@@ -32,7 +32,7 @@ class MosaicTile extends React.Component {
                 return (
                     <section className="c-mosaic-placement">
                         <Picture data={this.props.data}/>
-                        {(this.props.size != 'small') ? <Heading data={this.props.data}  /> : null}
+                        {(this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
                     </section>
                 )
             }

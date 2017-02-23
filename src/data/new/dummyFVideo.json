@@ -1,0 +1,21 @@
+{
+  "groupIdentifier": "oem",
+  "brand": {
+    "logo": "img/vertical/ms-logo.png",
+    "anchorTitle": "Surface Book",
+    "tabColor": "#ffffff",
+    "logoTab": "img/vertical/surfacebook-logo.png"
+  },
+  "sections": [
+    {
+      "ordinal": "300",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "SurfacePen",
+      "layout": "fullscreen",
+      "anchorLink": "true",
+      "anchorGlyph": "glyph-draw",
+      "anchorTitle": "Surface Pen",
+      "video": "img/vertical/Hero-pen.mp4"
+    }
+  ]
+}

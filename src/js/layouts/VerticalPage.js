@@ -1,7 +1,10 @@
 import React from 'react'
+import { findDOMNode } from 'react-dom'
 import '../../styles/mwf-west-european-default.min.css!';
 import '../../styles/mwf-ie9-west-european-default.min.css!';
 import '../../styles/main.scss!';
+import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
+import propsAreValid from '../lib/util';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
@@ -9,19 +12,11 @@ import Footer from '../components/stickynav/Footer';
 import StickyButton from '../components/stickynav/StickyButton';
 import Price from '../components/price/Price';
 import _ from 'lodash';
-
-import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
-import propsAreValid from '../lib/util';
-//Common Scrolling Functions
+import keydown from 'react-keydown';
 import Scroll  from 'react-scroll';
-let scroller   = Scroll.scroller;
-
 import Element from '../components/scrollElement/Element';
 
-
-//TODO: replace this library with regular event listeners.
-import keydown from 'react-keydown';
-
+let scroller = Scroll.scroller;
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -54,47 +49,49 @@ class VerticalPage extends React.Component {
             currentId: currentId,
             currentSection: 0,
             currentSectionClass: currentSectionClass,
-            currentTitle: title
+            currentTitle: title,
+            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
         }
     }
 
-    @keydown( 'cmd+right', 'ctrl+right' )
+
+    @keydown('cmd+right', 'ctrl+right')
     nextGroup(e) {
         e.preventDefault();
-        if(this.state.currentId < this.state.currentPaths.length-1) {
+        if (this.state.currentId < this.state.currentPaths.length - 1) {
             return this.props.history.push(this.state.currentPaths[this.state.currentId + 1]);
         } else {
             return this.props.history.push("/");
         }
     }
 
-    @keydown( 'cmd+left', 'ctrl+left')
+    @keydown('cmd+left', 'ctrl+left')
     prevGroup(e) {
         e.preventDefault();
-        if(this.state.currentId === -1) {
+        if (this.state.currentId === -1) {
             return this.props.history.push(this.state.currentPaths[this.state.currentPaths.length - 1]);
-        } else if(this.state.currentId > 0) {
+        } else if (this.state.currentId > 0) {
             return this.props.history.push(this.state.currentPaths[this.state.currentId - 1]);
         } else {
             return this.props.history.push("/");
         }
     }
 
-    @keydown( 'cmd+down', 'ctrl+down')
+    @keydown('cmd+down', 'ctrl+down')
     nextSection(e) {
         e.preventDefault();
-        if(this.state.currentSection+1 < this.state.currentSections.length) {
-            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection+=1}`);
+        if (this.state.currentSection + 1 < this.state.currentSections.length) {
+            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection += 1}`);
         } else {
             return false
         }
     }
 
-    @keydown( 'cmd+up', 'ctrl+up')
+    @keydown('cmd+up', 'ctrl+up')
     prevSection(e) {
         e.preventDefault();
-        if(this.state.currentSection-1 >= 0) {
-            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection-=1}`);
+        if (this.state.currentSection - 1 >= 0) {
+            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection -= 1}`);
         } else {
             return false
         }
@@ -105,14 +102,12 @@ class VerticalPage extends React.Component {
         e.preventDefault();
         let sectionKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 
-        sectionKeys.map(function(result, id) {
-            if(id < this.state.currentSections.length && e.which === result) {
-                console.log(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
-               return scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
+        sectionKeys.map(function (result, id) {
+            if (id < this.state.currentSections.length && e.which === result) {
+                return scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
             }
         }, this);
     }
-
 
     render() {
         if (propsAreValid(this.props.data)) {
@@ -129,6 +124,7 @@ class VerticalPage extends React.Component {
                     return result
                 }
             });
+
             return (
                 <div>
                     {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
@@ -148,7 +144,9 @@ class VerticalPage extends React.Component {
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
-                                    <Element name={this.state.currentSectionClass + id} key={id}><Vertical data={result} brandColor={this.state.currentBrandColor}  /></Element>
+                                    <Element name={this.state.currentSectionClass + id} key={id}>
+                                        <Vertical data={result} brandColor={this.state.currentBrandColor} />
+                                    </Element>
                                 )
                             }, this)
                             : null

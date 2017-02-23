@@ -9,6 +9,9 @@ import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../
 
 class LegacyFeature extends React.Component {
 
+    componentWillReceiveProps(nextProps) {
+        this._handleVideo(nextProps.active);
+    }
 
     _cleanHtml(dirty) {
         return sanitizeHtml(dirty, {
@@ -20,6 +23,16 @@ class LegacyFeature extends React.Component {
                 'p': [ 'style' ]
             }
         });
+    }
+
+    _handleVideo(play) {
+        if(this.refs.vidRef) {
+            if(play === true) {
+                this.refs.vidRef.play();
+            } else {
+                this.refs.vidRef.pause();
+            }
+        }
     }
 
     render() {
@@ -52,7 +65,7 @@ class LegacyFeature extends React.Component {
                     </picture> : null }
                 {media.blockType === 'video' ?
                     <div id="videoPlayer1" className="c-video" >
-                                <video className="f-video-player" preload="metadata" loop muted aria-labelledby="videoPlayer1Name" autoPlay aria-describedby="videoPlayer1Description"> <source src={media.src} type="video/mp4" />
+                                <video className="f-video-player" preload="metadata" loop muted aria-labelledby="videoPlayer1Name"  aria-describedby="videoPlayer1Description" ref="vidRef"> <source src={media.src} type="video/mp4" />
                                 </video>
                         <div className="f-video-cc-overlay" aria-hidden="true"></div>
                     </div>

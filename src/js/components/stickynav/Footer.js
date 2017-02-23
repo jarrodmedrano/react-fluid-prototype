@@ -14,13 +14,13 @@ class Footer extends React.Component {
                         //If There is an anchor link and there are more than or equal to 3 sections
                         if (result.anchorLink && sections.length >= 3) {
                             let anchorTarget = result.sectionIdentifier;
-                            let anchorIconFont = result.anchorIconFont;
+                            let anchorGlyph = result.anchorGlyph;
                             let anchorIcon = result.anchorIcon;
 
                             //If there are are less than or equal to 7 footer links render the links
                             if (id <= 7) {
                                 return (
-                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorIconFont ? anchorIconFont : null}>{result.anchorTitle}</FooterLink>
+                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorGlyph ? anchorGlyph : null}>{result.anchorTitle}</FooterLink>
                                 )
                             }
                         }
