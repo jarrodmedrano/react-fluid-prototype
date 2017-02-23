@@ -54,9 +54,7 @@ class Vertical extends React.Component {
     }
 
     _initScene() {
-        console.log(this.state.winHeight);
         this._checkSceneVisible();
-
 
         this.state.events.forEach((type) => {
            findDOMNode(this.refs.sceneRef).addEventListener(type, this._checkSceneVisible.bind(this), false)
@@ -79,10 +77,6 @@ class Vertical extends React.Component {
 
     _visibleY(el) {
         let rect = el.rect;
-
-        if(rect.bottom <= (this.state.winHeight || document.documentElement.clientHeight)) {
-            console.log(el, rect.bottom, 'bottom is less than ', this.state.winHeight);
-        }
 
         return (
             rect.top >= 0 &&
