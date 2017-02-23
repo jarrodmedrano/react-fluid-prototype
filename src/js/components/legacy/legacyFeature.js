@@ -25,11 +25,17 @@ class LegacyFeature extends React.Component {
         });
     }
 
+    componentWillUnmount() {
+        if(this.refs.vidRef) {
+            this.refs.vidRef.currentTime = 0;
+        }
+    }
+
     _handleVideo(play) {
         if(this.refs.vidRef) {
-            if(play === true) {
+            if(play === true && this.refs.vidRef.paused) {
                 this.refs.vidRef.play();
-            } else {
+            } else if(play === false && !this.refs.vidRef.paused) {
                 this.refs.vidRef.pause();
             }
         }

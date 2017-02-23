@@ -12,11 +12,17 @@ class Hero extends React.Component {
         this._handleVideo(nextProps.active);
     }
 
+    componentWillUnmount() {
+        if(this.refs.vidRef) {
+            this.refs.vidRef.currentTime = 0;
+        }
+    }
+
     _handleVideo(play) {
-        if (this.props.data.video) {
-            if (play === true) {
+        if(this.refs.vidRef) {
+            if(play === true && this.refs.vidRef.paused) {
                 this.refs.vidRef.play();
-            } else {
+            } else if(play === false && !this.refs.vidRef.paused) {
                 this.refs.vidRef.pause();
             }
         }

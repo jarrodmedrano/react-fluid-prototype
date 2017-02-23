@@ -11,11 +11,11 @@ import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 import propsAreValid from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 import Scroll  from 'react-scroll';
-export const Link       = Scroll.Link;
-export const Element    = Scroll.Element;
-export const Events     = Scroll.Events;
-export const scroll     = Scroll.animateScroll;
-export const scrollSpy  = Scroll.scrollSpy;
+const Link       = Scroll.Link;
+const Element    = Scroll.Element;
+const Events     = Scroll.Events;
+const scroll     = Scroll.animateScroll;
+const scrollSpy  = Scroll.scrollSpy;
 
 class Vertical extends React.Component {
     constructor(props) {
@@ -23,34 +23,43 @@ class Vertical extends React.Component {
 
         this.state = {
             active: false,
-            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend']
+            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
+            winHeight: window.innerHeight + 200,
+            winWidth: window.innerWidth
         }
     }
 
     componentDidMount() {
         this._initScene();
+
+        window.addEventListener('resize', this._updateDimensions.bind(this));
     }
 
     componentWillUnmount () {
         // unRegister events listeners with the listview div
         this.state.events.forEach((type) => {
-            if (window.addEventListener) {
-                findDOMNode(this.refs.sceneRef).removeEventListener(type, this._checkSceneVisible.bind(this), false)
-            } else {
-                findDOMNode(this.refs.sceneRef).removeEvent('on' + type, this._checkSceneVisible.bind(this), false)
-            }
-        })
+           findDOMNode(this.refs.sceneRef).removeEventListener(type, this._checkSceneVisible.bind(this), false)
+        });
+
+        window.removeEventListener('resize', this._updateDimensions.bind(this));
+
+        Events.scrollEvent.remove('begin');
+        Events.scrollEvent.remove('end');
+    }
+
+
+    _updateDimensions() {
+        let newWinHeight = window.innerHeight + 200;
+        this.setState({winHeight: newWinHeight, winWidth: window.innerWidth})
     }
 
     _initScene() {
+        console.log(this.state.winHeight);
         this._checkSceneVisible();
 
+
         this.state.events.forEach((type) => {
-            if (window.addEventListener) {
-                findDOMNode(this.refs.sceneRef).addEventListener(type, this._checkSceneVisible.bind(this), false)
-            } else {
-                findDOMNode(this.refs.sceneRef).attachEvent('on' + type, this._checkSceneVisible.bind(this), false)
-            }
+           findDOMNode(this.refs.sceneRef).addEventListener(type, this._checkSceneVisible.bind(this), false)
         })
     }
 
@@ -65,21 +74,22 @@ class Vertical extends React.Component {
     _checkSceneVisible() {
         let scene = this.refs.sceneRef;
         scene.rect = findDOMNode(scene).getBoundingClientRect();
-            // findDOMNode(scene).addEventListener('scroll', this.onScroll.bind(this), false);
-
-        this._visibleY(scene) ? this._onEnterViewport(scene) : this._onLeaveViewport(scene)
+        this._visibleY(scene) ? this._onEnterViewport() : this._onLeaveViewport()
     }
 
     _visibleY(el) {
-        let windowHeight = window.innerHeight;
+        let rect = el.rect;
 
-        let rect = el.rect, top = rect.top, height = rect.height;
+        if(rect.bottom <= (this.state.winHeight || document.documentElement.clientHeight)) {
+            console.log(el, rect.bottom, 'bottom is less than ', this.state.winHeight);
+        }
 
-        if (top < (windowHeight) === false) return false;
-        // Check if the element is out of view due to a container scrolling
-        if ((top + height) < (windowHeight)) return false;
-
-        else return true;
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (this.state.winHeight || document.documentElement.clientHeight) &&
+            rect.right <= (this.state.winWidth || document.documentElement.clientWidth)
+        );
     }
 
     render() {
