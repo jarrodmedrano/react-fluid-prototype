@@ -17,6 +17,7 @@ const Events     = Scroll.Events;
 const scroll     = Scroll.animateScroll;
 const scrollSpy  = Scroll.scrollSpy;
 let myWinHeight = window.innerHeight + 200;
+import _ from 'lodash';
 
 class Vertical extends React.Component {
     constructor(props) {
@@ -29,7 +30,8 @@ class Vertical extends React.Component {
             ticking: false
         };
 
-        this._visibleY = this._visibleY.bind(this);
+        this._updateDimensions = _.debounce(this._updateDimensions, 500);
+        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 500);
     }
 
     componentDidMount() {
@@ -47,7 +49,7 @@ class Vertical extends React.Component {
 
     _updateDimensions() {
         this.setState({winHeight: window.innerHeight + 200, winWidth: window.innerWidth})
-    }
+    };
 
     _initScene() {
         this._checkSceneVisible();
@@ -63,7 +65,6 @@ class Vertical extends React.Component {
 
     _onLeaveViewport() {
         this.setState({active: false});
-
         impressionEvent(false, this.props.data.groupIdentifier, this.props.data.sectionIdentifier)
     }
 
@@ -71,14 +72,7 @@ class Vertical extends React.Component {
         let scene = this.refs.sceneRef;
         scene.rect = findDOMNode(scene).getBoundingClientRect();
 
-        if (!this.state.ticking) {
-            window.requestAnimationFrame(() => {
-                this._visibleY(scene) ? this._onEnterViewport() : this._onLeaveViewport();
-                this.setState({ticking: false});
-            })
-        }
-
-        this.setState({ticking: true});
+        this._visibleY(scene) ? this._onEnterViewport() : this._onLeaveViewport();
     }
 
     _visibleY(el) {
