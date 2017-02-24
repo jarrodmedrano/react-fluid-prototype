@@ -25,7 +25,7 @@ class Vertical extends React.Component {
 
         this.state = {
             active: false,
-            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend', 'onscroll'],
+            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
             winHeight: myWinHeight,
             ticking: false
         };
@@ -36,7 +36,6 @@ class Vertical extends React.Component {
 
     componentDidMount() {
         this._initScene();
-        window.addEventListener('resize', this._updateDimensions.bind(this));
     }
 
     componentWillUnmount () {
@@ -55,7 +54,9 @@ class Vertical extends React.Component {
         this._checkSceneVisible();
         this.state.events.forEach((type) => {
            findDOMNode(this.refs.sceneRef).addEventListener(type, this._checkSceneVisible.bind(this), false)
-        })
+        });
+
+        window.addEventListener('resize', this._updateDimensions.bind(this));
     }
 
     _onEnterViewport() {
