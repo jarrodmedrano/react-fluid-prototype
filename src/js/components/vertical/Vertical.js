@@ -26,7 +26,6 @@ class Vertical extends React.Component {
             active: false,
             events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend', 'onscroll'],
             winHeight: myWinHeight,
-            last_known_scroll_position: 0,
             ticking: false
         };
 
@@ -71,10 +70,10 @@ class Vertical extends React.Component {
     _checkSceneVisible() {
         let scene = this.refs.sceneRef;
         scene.rect = findDOMNode(scene).getBoundingClientRect();
-        this.state.last_known_scroll_position = window.scrollY;
+
         if (!this.state.ticking) {
             window.requestAnimationFrame(() => {
-                this._visibleY(scene, this.state.last_known_scroll_position) ? this._onEnterViewport() : this._onLeaveViewport();
+                this._visibleY(scene) ? this._onEnterViewport() : this._onLeaveViewport();
                 this.setState({ticking: false});
             })
         }
