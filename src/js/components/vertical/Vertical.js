@@ -71,7 +71,8 @@ class Vertical extends React.Component {
 
         return (
             rect.top >= 0 &&
-            rect.bottom <= this.state.winHeight
+            rect.bottom <= this.state.winHeight &&
+            (rect.height + rect.top) < this.state.winHeight
         );
     }
 
