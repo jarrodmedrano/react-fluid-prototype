@@ -11,7 +11,7 @@ export function navigateEvent(group, section) {
     }
 }
 
-export function impressionEvent(group, section) {
+export function impressionEvent(visible, group, section) {
     if(window.RDX) {
         window.RDX.impressionEvent(visible, group, section);
     }

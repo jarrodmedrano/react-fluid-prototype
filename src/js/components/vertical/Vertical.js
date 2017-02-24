@@ -54,11 +54,13 @@ class Vertical extends React.Component {
 
     _onEnterViewport() {
         this.setState({active: true});
-        impressionEvent(this.props.data.groupIdentifier, this.props.data.sectionIdentifier)
+        impressionEvent(true, this.props.data.groupIdentifier, this.props.data.sectionIdentifier)
     }
 
     _onLeaveViewport() {
         this.setState({active: false});
+
+        impressionEvent(false, this.props.data.groupIdentifier, this.props.data.sectionIdentifier)
     }
 
     _checkSceneVisible() {
