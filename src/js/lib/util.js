@@ -7,13 +7,13 @@ export function externalNavigate(e) {
 
 export function navigateEvent(group, section) {
     if(window.RDX) {
-        window.RDX.navigateEvent(visible, group, section);
+        window.RDX.navigateEvent(group, section);
     }
 }
 
 export function impressionEvent(group, section) {
     if(window.RDX) {
-        window.RDX.impressionEvent(group, section);
+        window.RDX.impressionEvent(visible, group, section);
     }
 }
 
