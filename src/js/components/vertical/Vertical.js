@@ -8,7 +8,7 @@ import CompareTable from '../compare/CompareTable';
 import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyKsp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
-import propsAreValid from '../../lib/util';
+import propsAreValid, {impressionEvent} from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 import Scroll  from 'react-scroll';
 const Link       = Scroll.Link;
@@ -54,6 +54,7 @@ class Vertical extends React.Component {
 
     _onEnterViewport() {
         this.setState({active: true});
+        impressionEvent(this.props.data.groupIdentifier, this.props.data.sectionIdentifier)
     }
 
     _onLeaveViewport() {

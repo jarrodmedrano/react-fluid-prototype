@@ -11,6 +11,12 @@ export function navigateEvent(group, section) {
     }
 }
 
+export function impressionEvent(group, section) {
+    if(window.RDX) {
+        window.RDX.impressionEvent(group, section);
+    }
+}
+
 export default function propsAreValid(props) {
     if(!props) {
         if(window.RDX) {
