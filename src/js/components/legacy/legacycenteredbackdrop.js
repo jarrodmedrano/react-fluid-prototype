@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import './legacy.scss!';
-import ButtonLink from '../link/ButtonLink';
+import Button from '../button/Button';
 import sanitizeHtml from 'sanitize-html';
 
 class LegacyCenteredBackdrop extends React.Component {
@@ -75,10 +75,12 @@ class LegacyCenteredBackdrop extends React.Component {
                                                 dangerouslySetInnerHTML={{__html: this._cleanHtml(subheader)}}/> : null }
                             </div>
                         </div>
-                        {button ?
-                            <div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph"
-                                             aria-label={button.text} style={btnStyle} children={button.text}/>
-                            </div> : null}
+                        {/*{button ?*/}
+                            {/*<div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph"*/}
+                                             {/*aria-label={button.text} style={btnStyle} children={button.text}/>*/}
+                            {/*</div> : null}*/}
+
+                        {button ? <Button data={this.props.data} style={btnStyle} /> : null }
                         {legalText ? <p className="c-paragraph-4"
                                         dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}}/> : null }
                     </div>

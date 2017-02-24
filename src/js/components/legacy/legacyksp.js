@@ -1,9 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import Heading from '../heading/Heading';
-import ButtonLink from '../link/ButtonLink';
+import Button from '../button/Button';
 import './legacy.scss!';
-import Picture from '../picture/Picture';
 import sanitizeHtml from 'sanitize-html';
 
 class LegacyKSP extends React.Component {
@@ -86,9 +84,10 @@ class LegacyKSP extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        {button ? <ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph"
-                                              aria-label={button.text} style={btnStyle}
-                                              children={button.text}/> : null}
+                        {button ? <Button data={this.props.data} style={btnStyle} /> : null }
+                        {/*{button ? <ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph"*/}
+                                              {/*aria-label={button.text} style={btnStyle}*/}
+                                              {/*children={button.text}/> : null}*/}
                         {legalText ? <p className="c-paragraph-4"
                                         dangerouslySetInnerHTML={{__html: this.cleanHtml(legalText)}}/> : null }
                     </div>

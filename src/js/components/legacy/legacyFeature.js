@@ -1,11 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import Heading from '../heading/Heading';
 import './legacy.scss!';
-import Picture from '../picture/Picture';
-import ButtonLink from '../link/ButtonLink';
+import Button from '../button/Button';
 import sanitizeHtml from 'sanitize-html';
-import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
 
 class LegacyFeature extends React.Component {
 
@@ -83,7 +80,8 @@ class LegacyFeature extends React.Component {
                         {text2 ? <p className="c-paragraph" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text2) }} /> : null }
                         {text3 ? <p className="c-paragraph" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text3) }} /> : null }
                     </div>
-                    {button ? <div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph" aria-label={button.text} style={btnStyle} children={button.text}  /></div> : null}
+                    {button ? <Button data={this.props.data} style={btnStyle} /> : null }
+                    {/*{button ? <div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph" aria-label={button.text} style={btnStyle} children={button.text}  /></div> : null}*/}
                     {legalText ? <p className="c-paragraph-4" dangerouslySetInnerHTML={{ __html: this._cleanHtml(legalText) }} /> : null }
                 </div>
             </div>

@@ -39,7 +39,6 @@ class Vertical extends React.Component {
     }
 
     componentWillUnmount () {
-
         this.state.events.forEach((type) => {
            findDOMNode(this.refs.sceneRef).removeEventListener(type, this._checkSceneVisible.bind(this), false)
         });

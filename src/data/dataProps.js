@@ -32,6 +32,7 @@ export let buttonPropTypes = {
         ariaLabel: string,
         textColor: string,
         backgroundColor: string,
+        toPage: string
     })
 };
 

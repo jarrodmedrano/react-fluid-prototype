@@ -23,7 +23,7 @@
       "button": {
         "blockType": "buttonExternal",
         "text": "Open OneNote",
-        "link": "ms-retaildemo:Retail_Demo_Notebook_FINAL2/Overview.one"
+        "toPage": "Acer"
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "Holiday0",
