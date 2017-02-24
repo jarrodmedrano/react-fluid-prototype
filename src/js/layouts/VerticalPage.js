@@ -13,11 +13,7 @@ import StickyButton from '../components/stickynav/StickyButton';
 import Price from '../components/price/Price';
 import _ from 'lodash';
 import keydown from 'react-keydown';
-import Scroll  from 'react-scroll';
 import Element from '../components/scrollElement/Element';
-
-let scroller = Scroll.scroller;
-let myWinHeight = window.innerHeight + 200;
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -51,22 +47,9 @@ class VerticalPage extends React.Component {
             currentSection: 0,
             currentSectionClass: currentSectionClass,
             currentTitle: title,
-            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
-            winHeight: myWinHeight
         }
     }
 
-    componentDidMount() {
-        window.addEventListener('resize', this._updateDimensions.bind(this));
-    }
-
-    componentWillUnMount() {
-        window.removeEventListener('resize', this._updateDimensions.bind(this));
-    }
-
-    _updateDimensions() {
-        this.setState({winHeight: window.innerHeight + 200})
-    }
 
     @keydown('cmd+right', 'ctrl+right')
     nextGroup(e) {

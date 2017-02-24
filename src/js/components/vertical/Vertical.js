@@ -30,8 +30,8 @@ class Vertical extends React.Component {
             ticking: false
         };
 
-        this._updateDimensions = _.debounce(this._updateDimensions, 500);
-        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 500);
+        this._updateDimensions = _.debounce(this._updateDimensions, 1000);
+        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
     }
 
     componentDidMount() {
