@@ -7,7 +7,7 @@ export function externalNavigate(e) {
 
 export function navigateEvent(group, section) {
     if(window.RDX) {
-        window.RDX.navigateEvent(group, section);
+        window.RDX.navigateEvent(visible, group, section);
     }
 }
 
