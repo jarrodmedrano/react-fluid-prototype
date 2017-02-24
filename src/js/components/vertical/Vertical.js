@@ -42,7 +42,7 @@ class Vertical extends React.Component {
     }
 
     _updateDimensions() {
-        this.setState({winHeight: myWinHeight, winWidth: window.innerWidth})
+        this.setState({winHeight: window.innerHeight + 200, winWidth: window.innerWidth})
     }
 
     _initScene() {

@@ -33,8 +33,8 @@ let defaultVertical = {
 };
 //sample surface data
 //defaultVertical.groups.push(dummyFVideo, dummyRetailer);
-defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
+//defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
-//defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
 let data = defaultVertical;
 export default data;

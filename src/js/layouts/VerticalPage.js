@@ -17,6 +17,7 @@ import Scroll  from 'react-scroll';
 import Element from '../components/scrollElement/Element';
 
 let scroller = Scroll.scroller;
+let myWinHeight = window.innerHeight + 200;
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -51,9 +52,21 @@ class VerticalPage extends React.Component {
             currentSectionClass: currentSectionClass,
             currentTitle: title,
             events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
+            winHeight: myWinHeight
         }
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', this._updateDimensions.bind(this));
+    }
+
+    componentWillUnMount() {
+        window.removeEventListener('resize', this._updateDimensions.bind(this));
+    }
+
+    _updateDimensions() {
+        this.setState({winHeight: window.innerHeight + 200})
+    }
 
     @keydown('cmd+right', 'ctrl+right')
     nextGroup(e) {
