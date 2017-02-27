@@ -1,0 +1,23 @@
+.down-arrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 0;
+  position: fixed;
+  z-index: 9999;
+
+  .f-next {
+    height: 36px;
+    width: 96px;
+    line-height: 36px;
+
+    &:before {
+      content: '\E70D';
+      vertical-align: middle;
+    }
+  }
+}
