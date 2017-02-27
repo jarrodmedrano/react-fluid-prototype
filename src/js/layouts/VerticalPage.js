@@ -14,6 +14,8 @@ import Price from '../components/price/Price';
 import _ from 'lodash';
 import keydown from 'react-keydown';
 import Element from '../components/scrollElement/Element';
+import Scroll  from 'react-scroll';
+let scroller = Scroll.scroller;
 
 class VerticalPage extends React.Component {
     constructor(props) {
