@@ -8,14 +8,16 @@ import propsAreValid from '../lib/util';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
-import Footer from '../components/stickynav/Footer';
+import Footer from '../components/stickynav/StickyFooter';
 import StickyButton from '../components/stickynav/StickyButton';
 import Price from '../components/price/Price';
+import DownArrow from '../components/downarrow/DownArrow';
 import _ from 'lodash';
 import keydown from 'react-keydown';
 import Element from '../components/scrollElement/Element';
 import Scroll  from 'react-scroll';
 let scroller = Scroll.scroller;
+
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -48,13 +50,13 @@ class VerticalPage extends React.Component {
             currentId: currentId,
             currentSection: 0,
             currentSectionClass: currentSectionClass,
-            currentTitle: title,
+            currentTitle: title
         }
     }
 
 
     @keydown('cmd+right', 'ctrl+right')
-    nextGroup(e) {
+    _nextGroup(e) {
         e.preventDefault();
         if (this.state.currentId < this.state.currentPaths.length - 1) {
             return this.props.history.push(this.state.currentPaths[this.state.currentId + 1]);
@@ -64,7 +66,7 @@ class VerticalPage extends React.Component {
     }
 
     @keydown('cmd+left', 'ctrl+left')
-    prevGroup(e) {
+    _prevGroup(e) {
         e.preventDefault();
         if (this.state.currentId === -1) {
             return this.props.history.push(this.state.currentPaths[this.state.currentPaths.length - 1]);
@@ -76,27 +78,27 @@ class VerticalPage extends React.Component {
     }
 
     @keydown('cmd+down', 'ctrl+down')
-    nextSection(e) {
+    _nextSection(e) {
         e.preventDefault();
         if (this.state.currentSection + 1 < this.state.currentSections.length) {
-            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection += 1}`);
+            this._goNext();
         } else {
             return false
         }
     }
 
     @keydown('cmd+up', 'ctrl+up')
-    prevSection(e) {
+    _prevSection(e) {
         e.preventDefault();
         if (this.state.currentSection - 1 >= 0) {
-            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection -= 1}`);
+            this._goPrevious();
         } else {
             return false
         }
     }
 
     @keydown('alt+0', 'alt+1', 'alt+2', 'alt+3', 'alt+4', 'alt+5', 'alt+6', 'alt+7', 'alt+8', 'alt+9')
-    toSection(e) {
+    _toSection(e) {
         e.preventDefault();
         let sectionKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 
@@ -105,6 +107,32 @@ class VerticalPage extends React.Component {
                 return scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
             }
         }, this);
+    }
+
+    _handleNext(e) {
+        e.preventDefault();
+        if (this.state.currentSection + 1 < this.state.currentSections.length) {
+            this._goNext();
+        } else if (this.state.currentSection - 1 >= 0) {
+            this._goTop();
+        }
+    }
+
+    _goNext() {
+        this.setState({currentSection: this.state.currentSection += 1},
+            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
+        );
+    }
+
+    _goPrevious() {
+        this.setState({currentSection: this.state.currentSection -= 1},
+            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
+        );
+    }
+
+    _goTop() {
+        this.setState({currentSection: 0});
+        scroller.scrollTo(`${this.state.currentTitle}-section-0`);
     }
 
     render() {
@@ -121,6 +149,11 @@ class VerticalPage extends React.Component {
                 if (result.groupIdentifier === 'retailer') {
                     return result
                 }
+            });
+
+            //Find out if there are legacy layouts in this page (or not)
+            let legacyLayouts = !!_.find(this.state.currentSections, function(result) {
+                return _.includes(result.layout, 'feature', 'featureCta', 'ksp', 'centeredBackdropTemplate', 'threeColSpecs')
             });
 
             return (
@@ -150,7 +183,7 @@ class VerticalPage extends React.Component {
                             : null
                         }
                     </main>
-                    {this.state.currentPage.sections ? <Footer data={this.state.currentPage}/> : null}
+                    {this.state.currentPage.sections && !legacyLayouts ? <Footer data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleNext(event)} />}
                 </div>
             )
         }

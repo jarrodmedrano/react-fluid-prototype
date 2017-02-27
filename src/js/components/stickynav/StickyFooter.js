@@ -1,17 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router';
 import propsAreValid from '../../lib/util';
 import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
 import FooterLink from '../link/FooterLink';
+
 
 class Footer extends React.Component {
     render() {
         if (propsAreValid(this.props.data.sections)) {
             let sections = this.props.data.sections;
+
             return (
                 <div className="sticky-banner sticky-footer">
                     {sections.map(function (result, id) {
                         //If There is an anchor link and there are more than or equal to 3 sections
+
                         if (result.anchorLink && sections.length >= 3) {
                             let anchorTarget = result.sectionIdentifier;
                             let anchorGlyph = result.anchorGlyph;
@@ -24,13 +26,9 @@ class Footer extends React.Component {
                                 )
                             }
                         }
-                        else {
-                            //Don't render footer links if there is a legacy template, because the titles are too long
-                            if(result.layout === 'feature' || result.layout === 'featureCta' || result.layout === 'ksp' || result.layout === 'centeredBackdropTemplate') {
-                                return null
-                            }
-                        }
-                    }, this)}
+                        return null
+                    }, this)
+                    }
                 </div>
             )
         }

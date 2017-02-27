@@ -4987,7 +4987,7 @@
         <Compile Include="src\js\components\mosaic\MosaicTile.js" />
         <Compile Include="src\js\components\picture\Picture.js" />
         <Compile Include="src\js\components\starrating\Starrating.js" />
-        <Compile Include="src\js\components\stickynav\Footer.js" />
+        <Compile Include="src\js\components\stickynav\StickyFooter.js" />
         <Compile Include="src\js\components\stickynav\StickyBanner.js" />
         <Compile Include="src\js\components\stickynav\Tabs.js" />
         <Compile Include="src\js\components\vertical\Vertical.js" />

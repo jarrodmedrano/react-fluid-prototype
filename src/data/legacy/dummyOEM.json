@@ -108,6 +108,159 @@
       "groupIdentifier": "oem",
       "sectionIdentifier": "Page_4_name",
       "ordinal": "500"
+    },
+    {
+      "ordinal": "500",
+      "groupIdentifier": "partner",
+      "sectionIdentifier": "Accessories",
+      "layout": "mosaic",
+      "anchorLink": "true",
+      "anchorTitle": "Accessories",
+      "theme": "theme-dark",
+      "mosaicLayout": "mosaic-3",
+      "tiles": [
+        {
+          "heading": "Accessories",
+          "subheading": "The perfect complements to your Surface",
+          "backgroundColor": "#0078D7",
+          "textColor": "#FFF",
+          "button": {
+            "layout": "link",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "textColor": "white",
+            "backgroundColor": "blue"
+          }
+        },
+        {
+          "button": {
+            "link": "http://www.microsoft.com",
+            "overlay": "#000"
+          },
+          "pictures": [
+            {
+              "src": "img/vertical/mosaic-surface-8.jpg",
+              "minwidth": "1779"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-8.jpg",
+              "minwidth": "1400"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-8.jpg",
+              "minwidth": "1084"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-8.jpg",
+              "minwidth": "768"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-8.jpg",
+              "minwidth": "540"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-8.jpg",
+              "minwidth": "0"
+            }
+          ]
+        },
+        {
+          "button": {
+            "link": "http://www.microsoft.com",
+            "overlay": "#000"
+          },
+          "pictures": [
+            {
+              "src": "img/vertical/mosaic-surface-5.jpg",
+              "minwidth": "1779"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-5.jpg",
+              "minwidth": "1400"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-5.jpg",
+              "minwidth": "1084"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-5.jpg",
+              "minwidth": "768"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-5.jpg",
+              "minwidth": "540"
+            },
+            {
+              "src": "img/vertical/mosaic-surface-5.jpg",
+              "minwidth": "0"
+            }
+          ]
+        },
+        {
+          "button": {
+            "link": "http://www.microsoft.com",
+            "overlay": "#000"
+          },
+          "pictures": [
+            {
+              "src": "img/vertical/mosaic-ports.jpg",
+              "minwidth": "1779"
+            },
+            {
+              "src": "img/vertical/mosaic-ports.jpg",
+              "minwidth": "1400"
+            },
+            {
+              "src": "img/vertical/mosaic-ports.jpg",
+              "minwidth": "1084"
+            },
+            {
+              "src": "img/vertical/mosaic-ports.jpg",
+              "minwidth": "768"
+            },
+            {
+              "src": "img/vertical/mosaic-ports.jpg",
+              "minwidth": "540"
+            },
+            {
+              "src": "img/vertical/mosaic-ports.jpg",
+              "minwidth": "0"
+            }
+          ]
+        },
+        {
+          "button": {
+            "link": "http://www.microsoft.com",
+            "overlay": "#000"
+          },
+          "pictures": [
+            {
+              "src": "img/vertical/mosaic-headphones.jpg",
+              "minwidth": "1779"
+            },
+            {
+              "src": "img/vertical/mosaic-headphones.jpg",
+              "minwidth": "1400"
+            },
+            {
+              "src": "img/vertical/mosaic-headphones.jpg",
+              "minwidth": "1084"
+            },
+            {
+              "src": "img/vertical/mosaic-headphones.jpg",
+              "minwidth": "768"
+            },
+            {
+              "src": "img/vertical/mosaic-headphones.jpg",
+              "minwidth": "540"
+            },
+            {
+              "src": "img/vertical/mosaic-headphones.jpg",
+              "minwidth": "0"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
