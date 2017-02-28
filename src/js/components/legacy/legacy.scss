@@ -5,15 +5,31 @@
   width: 677px;
   z-index: 0;
 }
+
 @media only screen and (min-width: 768px) {
   .c-feature.f-align-left > div.c-video, .c-feature.f-align-right > div.c-video {
     transform: translateY(-50%);
     top: 50%;
+    width: 60%;
+    max-width: 60%;
+  }
+  .c-feature.f-align-left>div, .c-feature.f-align-right>div {
+    width: 40%;
+  }
+
+  .c-feature.f-align-left picture, .c-feature.f-align-right picture {
+    width: 60%;
+    max-width: 60%;
   }
 }
 
 .m-feature {
   background: #fff;
+
+  &.legacy-feature {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .logo {
     max-width: 200px;

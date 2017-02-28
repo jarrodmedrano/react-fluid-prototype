@@ -42,7 +42,7 @@ class LegacyKSP extends React.Component {
         let templateStyle = {};
 
         return (
-            <div className="m-feature" data-grid="col-12" onScroll={this._handleScroll}>
+            <div className="m-feature legacy-feature" data-grid="col-12" onScroll={this._handleScroll}>
                 <div className={templateClass}>
                     {media ? <picture className="feature-image">
                             <source srcSet={media.src}/>

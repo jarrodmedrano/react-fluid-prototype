@@ -56,7 +56,7 @@ class LegacyFeature extends React.Component {
         };
 
         return (
-            <div className="m-feature" data-grid="col-12">
+            <div className="m-feature legacy-feature" data-grid="col-12">
                 <div className={templateClass}>
                 {media.blockType === 'gif' ? <picture className="feature-image">
                         <source srcSet={media.src} />
