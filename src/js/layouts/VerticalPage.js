@@ -4,7 +4,7 @@ import '../../styles/mwf-west-european-default.min.css!';
 import '../../styles/mwf-ie9-west-european-default.min.css!';
 import '../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
-import propsAreValid from '../lib/util';
+import propsAreValid, {impressionEvent} from '../lib/util';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
@@ -17,7 +17,7 @@ import keydown from 'react-keydown';
 import Element from '../components/scrollElement/Element';
 import Scroll  from 'react-scroll';
 let scroller = Scroll.scroller;
-
+let myWinHeight = window.innerHeight + 200;
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -30,16 +30,11 @@ class VerticalPage extends React.Component {
             return result.groupIdentifier === title
         });
 
-        let currentBrandColor = currentPage.brand.color;
-
-        let currentPaths = _.map(this.props.routes[0].childRoutes, 'path');
-
-        let currentId = currentPaths.indexOf(title);
-
-        //start at the first section
-        let currentSections = currentPage.sections;
-
-        let currentSectionClass = `${title}-section-`;
+        let currentBrandColor = currentPage.brand.color,
+            currentPaths = _.map(this.props.routes[0].childRoutes, 'path'),
+            currentId = currentPaths.indexOf(title),
+            currentSections = currentPage.sections,
+            currentSectionClass = `${title}-section-`;
 
         //set Current page in the state
         this.state = {
@@ -50,10 +45,25 @@ class VerticalPage extends React.Component {
             currentId: currentId,
             currentSection: 0,
             currentSectionClass: currentSectionClass,
-            currentTitle: title
-        }
+            currentTitle: title,
+            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
+            winHeight: myWinHeight
+        };
+
+        this._updateDimensions = _.debounce(this._updateDimensions, 1000);
+        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
     }
 
+    componentDidMount() {
+        this._initScene();
+    }
+
+    componentWillUnmount() {
+        this.state.events.forEach((type) => {
+            window.removeEventListener(type, this._checkSceneVisible.bind(this), false)
+        });
+        window.removeEventListener('resize', this._updateDimensions.bind(this));
+    }
 
     @keydown('cmd+right', 'ctrl+right')
     _nextGroup(e) {
@@ -135,9 +145,49 @@ class VerticalPage extends React.Component {
         scroller.scrollTo(`${this.state.currentTitle}-section-0`);
     }
 
+    _updateDimensions() {
+        this.setState({winHeight: window.innerHeight + 200, winWidth: window.innerWidth})
+    };
+
+    _initScene() {
+        this._checkSceneVisible();
+
+        this.state.events.forEach((type) => {
+            window.addEventListener(type, this._checkSceneVisible.bind(this), false)
+        });
+
+        window.addEventListener('resize', this._updateDimensions.bind(this));
+    }
+
+    _onEnterViewport(scene) {
+        this.setState({currentSection: scene.props.itemRef});
+        impressionEvent(true, this.props.data.groupIdentifier, scene)
+    }
+
+    _onLeaveViewport(scene) {
+        impressionEvent(false, this.props.data.groupIdentifier, scene)
+    }
+
+    _checkSceneVisible() {
+        let refs = _.map(this.refs);
+        refs.map(function(result) {
+            result.rect = findDOMNode(result).getBoundingClientRect();
+            this._visibleY(result) ? this._onEnterViewport(result) : this._onLeaveViewport(result);
+        }, this);
+    }
+
+    _visibleY(el) {
+        let rect = el.rect;
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= this.state.winHeight &&
+            (rect.height + rect.top) < this.state.winHeight
+        );
+    }
+
     render() {
         if (propsAreValid(this.props.data)) {
-            let {ratings, deviceInformation, groups} = this.props.data;
+            let {groups} = this.props.data;
 
             let oemGroup = _.find(groups, function (result) {
                 if (result.groupIdentifier === 'oem') {
@@ -158,7 +208,7 @@ class VerticalPage extends React.Component {
 
             return (
                 <div>
-                    {groups.length > 1 ? <Tabs data={this.props.data} {...this.props}  /> : null }
+                    {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
                     {oemGroup ? 
                         <StickyBanner data={oemGroup}>
                             { oemGroup.brand.price ? 
@@ -175,8 +225,8 @@ class VerticalPage extends React.Component {
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
-                                    <Element name={this.state.currentSectionClass + id} key={id}>
-                                        <Vertical data={result} brandColor={this.state.currentBrandColor} />
+                                    <Element name={this.state.currentSectionClass + id} key={this.state.currentSectionClass + id} ref={`${this.state.currentPage}-sceneRef-${id}`} itemRef={id}>
+                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} myId={id} />
                                     </Element>
                                 )
                             }, this)
