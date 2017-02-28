@@ -114,7 +114,8 @@ class VerticalPage extends React.Component {
 
         sectionKeys.map(function (result, id) {
             if (id < this.state.currentSections.length && e.which === result) {
-                return scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection + id}`);
+                console.log(result, id);
+                return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
             }
         }, this);
     }
@@ -160,8 +161,8 @@ class VerticalPage extends React.Component {
     }
 
     _onEnterViewport(scene) {
-        this.setState({currentSection: scene.props.itemRef});
-        impressionEvent(true, this.props.data.groupIdentifier, scene)
+        this.setState({currentSection: scene.props.itemRef},
+        impressionEvent(true, this.props.data.groupIdentifier, scene));
     }
 
     _onLeaveViewport(scene) {
@@ -225,7 +226,7 @@ class VerticalPage extends React.Component {
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
-                                    <Element name={this.state.currentSectionClass + id} key={this.state.currentSectionClass + id} ref={`${this.state.currentPage}-sceneRef-${id}`} itemRef={id}>
+                                    <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.state.currentPage}-sceneRef-${id}`} itemRef={id}>
                                         <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} myId={id} />
                                     </Element>
                                 )
