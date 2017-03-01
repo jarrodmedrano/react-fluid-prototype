@@ -3,7 +3,6 @@ import React from 'react'
 import VerticalPage from './VerticalPage';
 
 class MasterLayout extends React.Component {
-
     render() {
         return (
             <VerticalPage data={this.props.data} {...this.props} />

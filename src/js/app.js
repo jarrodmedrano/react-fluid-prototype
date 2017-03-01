@@ -32,8 +32,13 @@ const Routes = myData.groups.filter(function (result, index) {
 window.home = () => appHistory.push('/');
 
 //Reset function
-window.reset = () => appHistory.push('/');
-
+window.reset = () => {
+    let reset = new Promise(function(resolve){
+        appHistory.replace('/');
+        ReactDOM.unmountComponentAtNode(document.getElementById('app'), resolve)
+    });
+    reset.then(ReactDOM.render(<RenderForcer />, document.getElementById('app')));
+};
 
 class App extends React.Component {
 
@@ -58,24 +63,24 @@ class App extends React.Component {
     }
 
     render() {
-            return (
-                <div>
-                        {React.cloneElement(this.props.children, {
-                            key: this.props.location.pathname,
-                            data: myData
-                        })}
-                </div>
-            );
+        return (
+            <div>
+                    {React.cloneElement(this.props.children, {
+                        key: this.props.location.pathname,
+                        data: myData
+                    })}
+            </div>
+        );
     }
 }
 
 class RenderForcer extends React.Component {
 
-    componentWillMount () {
+    componentWillMount() {
         this.forceUpdate();
     }
 
-    render () {
+    render() {
         return (
             <Router history={appHistory}>
                 <Route path="/" component={App}>

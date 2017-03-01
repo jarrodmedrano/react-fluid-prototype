@@ -75,11 +75,6 @@ class LegacyCenteredBackdrop extends React.Component {
                                                 dangerouslySetInnerHTML={{__html: this._cleanHtml(subheader)}}/> : null }
                             </div>
                         </div>
-                        {/*{button ?*/}
-                            {/*<div><ButtonLink to={button.link ? button.link : null} className="c-call-to-action c-glyph"*/}
-                                             {/*aria-label={button.text} style={btnStyle} children={button.text}/>*/}
-                            {/*</div> : null}*/}
-
                         {button ? <Button data={this.props.data} style={btnStyle} /> : null }
                         {legalText ? <p className="c-paragraph-4"
                                         dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}}/> : null }
