@@ -62,13 +62,11 @@ class LegacyKSP extends React.Component {
                                             </div> : null }
                                         <div data-grid="col-10">
                                             <p className="c-paragraph-2">
-                                                {caption1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
-                                                {itemHeading1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(itemHeading1)}}/> : null }
+                                                {caption1 || itemHeading1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itemHeading1)}}/> : null }
                                             </p>
-                                            {text1 ? <p className="c-paragraph-4"
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
-                                            {itemBody1 ? <p className="c-paragraph-4"
-                                                         dangerouslySetInnerHTML={{__html: this.cleanHtml(itemBody1)}}/> : null }
+                                            {text1 || itemBody1 ? 
+                                                <p className="c-paragraph-4"
+                                                    dangerouslySetInnerHTML={{__html: this.cleanHtml(text1 ? text1 : itemBody1)}}/> : null }
                                         </div>
                                     </li>
                                     <li className="f-row">
