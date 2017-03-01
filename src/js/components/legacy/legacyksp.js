@@ -65,7 +65,7 @@ class LegacyKSP extends React.Component {
                                                 {caption1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
                                                 {itemHeading1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(itemHeading1)}}/> : null }
                                             </p>
-                                            {text1 ?  <p className="c-paragraph-4"
+                                            {text1 ? <p className="c-paragraph-4"
                                                             dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
                                             {itemBody1 ? <p className="c-paragraph-4"
                                                          dangerouslySetInnerHTML={{__html: this.cleanHtml(itemBody1)}}/> : null }
