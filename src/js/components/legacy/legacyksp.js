@@ -26,7 +26,7 @@ class LegacyKSP extends React.Component {
          */
         }
 
-        let {style, textSide, header, logo, text1, text2, caption1, caption2, icon1, icon2, media, button, legalText, cardButtonBackground} = this.props.data;
+        let {style, textSide, header, logo, text1, text2, itemBody1, itemHeading1, caption1, caption2, icon1, icon2, media, button, legalText, cardButtonBackground} = this.props.data;
 
         let buttonBG = cardButtonBackground || this.props.brandColor;
 
@@ -40,7 +40,7 @@ class LegacyKSP extends React.Component {
         };
 
         let templateStyle = {};
-
+        
         return (
             <div className="m-feature legacy-feature" data-grid="col-12" onScroll={this._handleScroll}>
                 <div className={templateClass}>
@@ -63,9 +63,12 @@ class LegacyKSP extends React.Component {
                                         <div data-grid="col-10">
                                             <p className="c-paragraph-2">
                                                 {caption1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
+                                                {itemHeading1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(itemHeading1)}}/> : null }
                                             </p>
-                                            {text1 ? <p className="c-paragraph-4"
-                                                         dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
+                                            {text1 ?  <p className="c-paragraph-4"
+                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
+                                            {itemBody1 ? <p className="c-paragraph-4"
+                                                         dangerouslySetInnerHTML={{__html: this.cleanHtml(itemBody1)}}/> : null }
                                         </div>
                                     </li>
                                     <li className="f-row">
