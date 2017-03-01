@@ -6,7 +6,7 @@ import propsAreValid from '../../lib/util';
 class Starrating extends React.Component {
 
     render() {
-      if(propsAreValid(this.props.data)) {
+      if(propsAreValid(this.props.data, this)) {
         return (
             <div className="c-rating f-community-rated f-user-rated f-aggregate">
                 <p className="x-screen-reader">Rating:

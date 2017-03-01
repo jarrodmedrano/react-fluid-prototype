@@ -35,6 +35,6 @@ let defaultVertical = {
 //defaultVertical.groups.push(dummyFVideo, dummyRetailer);
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
-defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+defaultVertical.groups.push(dummyWindows, dummyOEM, dummyOffice, dummyRetailer);
 let data = defaultVertical;
 export default data;

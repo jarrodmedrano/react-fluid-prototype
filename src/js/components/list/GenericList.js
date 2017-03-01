@@ -6,7 +6,7 @@ import {listPropTypes} from '../../../data/dataProps';
 
 class GenericList extends React.Component {
     render() {
-        if (propsAreValid(this.props.data)) {
+        if (propsAreValid(this.props.data, this)) {
             return (
                 <ul className="c-list">
                     {this.props.data.map(function(result, id) {

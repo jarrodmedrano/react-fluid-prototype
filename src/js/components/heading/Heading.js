@@ -5,7 +5,7 @@ import dataPropTypes, {headingPropTypes} from '../../../data/dataProps';
 
 class Heading extends React.Component {
     render() {
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data, this)) {
         let { heading, subheading, paragraph } = this.props.data;
         return (
             <div>

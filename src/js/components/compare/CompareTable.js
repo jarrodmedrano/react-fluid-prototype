@@ -8,7 +8,7 @@ import propsAreValid from '../../lib/util';
 
 class CompareTable extends React.Component {
     render() {
-        if (propsAreValid(this.props.data)) {
+        if (propsAreValid(this.props.data, this)) {
             return (
                     <div className="config-table">
                         <div className="config-title">

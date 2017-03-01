@@ -4,7 +4,7 @@ import propsAreValid from '../../lib/util';
 
 class CompareRow extends React.Component {
     render() {
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data, this)) {
             return (
             <div className="config-card text-center">
                 <div className="config-top">

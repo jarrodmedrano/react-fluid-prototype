@@ -10,7 +10,7 @@ class FooterLink extends React.Component {
 
     render() {
 
-        if(propsAreValid(this.props)) {
+        if(propsAreValid(this.props, this)) {
             const {to, children, iconFont, icon, ...rest} = this.props;
             let templateClass = classNames('c-action-trigger');
 

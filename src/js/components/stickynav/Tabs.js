@@ -33,7 +33,7 @@ class Tabs extends React.Component {
     }
 
     render() {
-        if (propsAreValid(this.props.routes)) {
+        if (propsAreValid(this.props.routes, this)) {
             const depth = this.props.routes.length;
             const rootRoute = this.props.routes[0];
             const rootRouteChildren = rootRoute.childRoutes;

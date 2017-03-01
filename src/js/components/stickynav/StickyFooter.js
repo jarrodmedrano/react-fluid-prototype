@@ -6,7 +6,7 @@ import FooterLink from '../link/FooterLink';
 
 class Footer extends React.Component {
     render() {
-        if (propsAreValid(this.props.data.sections)) {
+        if (propsAreValid(this.props.data.sections, this)) {
             let sections = this.props.data.sections;
 
             return (

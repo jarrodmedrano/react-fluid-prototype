@@ -7,7 +7,7 @@ import dataPropTypes from '../../../data/dataProps';
 class MosaicContainer extends React.Component {
     render() {
         // TODO generate these layouts without all this markup
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data, this)) {
             let {tiles, mosaicLayout, theme} = this.props.data;
             if (tiles.length === 2 && mosaicLayout === "mosaic-1" || tiles.length === 2) {
                 return (

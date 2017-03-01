@@ -6,7 +6,7 @@ import dataPropTypes, {mosaicPropTypes} from '../../../data/dataProps';
 
 class Mosaic extends React.Component {
     render() {
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data, this)) {
             return (
                 <div className="m-mosaic">
                     <MosaicContainer data={this.props.data}  />

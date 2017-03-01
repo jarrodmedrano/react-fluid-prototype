@@ -4,7 +4,7 @@ import {listItemPropTypes} from '../../../data/dataProps';
 
 class GenericListItem extends React.Component {
     render() {
-        if (propsAreValid(this.props.data)) {
+        if (propsAreValid(this.props.data, this)) {
             return (
                 <li>
                     {this.props.data}

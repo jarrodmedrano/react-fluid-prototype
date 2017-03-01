@@ -50,16 +50,16 @@ class App extends React.Component {
         scroll.scrollTo(0, {delay: 0, duration: 0});
     }
 
-    @keydown( 'cmd+h', 'ctrl+home' )
+    @keydown( 'cmd+h', 'ctrl+alt+h' )
     homeGroup(e) {
         e.preventDefault();
-        appHistory.push('/');
+        window.home();
     }
 
-    @keydown( 'cmd+option+h', 'ctrl+alt+home' )
+    @keydown( 'cmd+option+h', 'ctrl+alt+r' )
     resetGroup(e) {
         e.preventDefault();
-        appHistory.push('/');
+        window.reset();
     }
 
     render() {
@@ -76,20 +76,33 @@ class App extends React.Component {
 
 class RenderForcer extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            updatedId: Math.random()
+        };
+
+        this._changeHandler = this._changeHandler.bind(this);
+    }
+
     componentWillMount() {
         this.forceUpdate();
+    }
+
+    _changeHandler() {
+        this.setState({updatedId: Math.random()});
     }
 
     render() {
         return (
             <Router history={appHistory}>
-                <Route path="/" component={App}>
-                    <IndexRoute title={Index.groupIdentifier}
-                                component={(props, state, params) => <MasterLayout  {...props} />}/>
+                <Route path="/" component={App} onChange={this._handleChange}>
+                    <IndexRoute onChange={this._changeHandler} title={Index.groupIdentifier}
+                                component={(props, state, params) => <MasterLayout {...props} updatedId={this.state.updatedId} />}/>
                     {Routes.map(function (result, id) {
-                        return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
-                                      component={(props, state, params) => <MasterLayout  {...props} />}/>;
-                    })}
+                        return <Route onChange={this._changeHandler} key={id} path={result.groupIdentifier} title={result.groupIdentifier}
+                                      component={(props, state, params) => <MasterLayout  {...props} updatedId={this.state.updatedId} />} />;
+                    }, this)}
                 </Route>
             </Router>
         )

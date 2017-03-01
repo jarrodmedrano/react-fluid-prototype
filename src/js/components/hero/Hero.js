@@ -29,7 +29,7 @@ class Hero extends React.Component {
     }
 
     render() {
-        if (propsAreValid(this.props.data)) {
+        if (propsAreValid(this.props.data, this)) {
             let {alignX, alignY, theme, layout} = this.props.data;
             let heroClass = classNames(
                 alignX ? `f-x-${alignX}` : null,

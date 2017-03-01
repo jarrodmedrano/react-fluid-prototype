@@ -55,7 +55,13 @@ class VerticalPage extends React.Component {
     }
 
     componentDidMount() {
-        this._initScene();
+        this._checkSceneVisible();
+
+        this.state.events.forEach((type) => {
+            window.addEventListener(type, this._checkSceneVisible.bind(this), false)
+        });
+
+        window.addEventListener('resize', this._updateDimensions.bind(this));
     }
 
     componentWillUnmount() {
@@ -114,7 +120,6 @@ class VerticalPage extends React.Component {
 
         sectionKeys.map(function (result, id) {
             if (id < this.state.currentSections.length && e.which === result) {
-                console.log(result, id);
                 return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
             }
         }, this);
@@ -150,16 +155,6 @@ class VerticalPage extends React.Component {
         this.setState({winHeight: window.innerHeight + 200, winWidth: window.innerWidth})
     };
 
-    _initScene() {
-        this._checkSceneVisible();
-
-        this.state.events.forEach((type) => {
-            window.addEventListener(type, this._checkSceneVisible.bind(this), false)
-        });
-
-        window.addEventListener('resize', this._updateDimensions.bind(this));
-    }
-
     _onEnterViewport(scene) {
         this.setState({currentSection: scene.props.itemRef},
         impressionEvent(true, this.props.data.groupIdentifier, scene));
@@ -187,7 +182,7 @@ class VerticalPage extends React.Component {
     }
 
     render() {
-        if (propsAreValid(this.props.data)) {
+        if (propsAreValid(this.props.data, this)) {
             let {groups} = this.props.data;
 
             let oemGroup = _.find(groups, function (result) {
@@ -227,7 +222,7 @@ class VerticalPage extends React.Component {
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
                                     <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.state.currentPage}-sceneRef-${id}`} itemRef={id}>
-                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} myId={id} />
+                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} updatedId={this.props.updatedId} myId={id} />
                                     </Element>
                                 )
                             }, this)

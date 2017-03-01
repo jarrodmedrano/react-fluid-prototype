@@ -9,7 +9,7 @@ import {Link as RouterLink} from 'react-router';
 class DownArrow extends React.Component {
 
     render() {
-        if(propsAreValid(this.props.data)) {
+        if(propsAreValid(this.props.data, this)) {
             const {to, children, ...rest} = this.props;
 
             return (

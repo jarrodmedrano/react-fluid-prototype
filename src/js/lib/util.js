@@ -17,12 +17,13 @@ export function impressionEvent(visible, group, section) {
     }
 }
 
-export default function propsAreValid(props) {
+export default function propsAreValid(props, componentName = 'ANONYMOUS') {
+    //TODO better validation of all props
     if(!props) {
         if(window.RDX) {
-            window.RDX.logError('Invalid prop' + props);
+            window.RDX.logError('Error: no props were passed to component', componentName);
         } else {
-            console.error('Invalid prop' + props)
+            console.error('Error: no props were passed to component', componentName);
         }
         return false
     } else {
