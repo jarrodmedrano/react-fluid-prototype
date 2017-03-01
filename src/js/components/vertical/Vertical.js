@@ -37,33 +37,33 @@ class Vertical extends React.Component {
             let {layout, sectionIdentifier} = this.props.data;
             return (
                 <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier} style={{position: 'relative'}} >
-                    {layout === 'hero' || layout === 'immersive-hero' || layout === 'fullscreen' || layout === 'card' ?
+                    {layout == 'hero' || layout == 'immersive-hero' || layout == 'fullscreen' || layout == 'card' ?
                         <Hero data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
-                    {layout === 'mosaic' ?
+                    {layout == 'mosaic' ?
                         <Mosaic data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
-                    {layout === 'compare' ?
+                    {layout == 'compare' ?
                         <CompareTable data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active}  updated={this.state.updated} /> : null
                     }
-                    {layout === 'feature' ?
+                    {layout == 'feature' ?
                         <LegacyFeature data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
-                    {layout === 'featureCta' ?
+                    {layout == 'featureCta' ?
                         <LegacyFeature data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
-                    {layout === 'ksp' || layout == 'ksp_rs' ?
+                    {layout == 'ksp' || layout == 'ksp_rs' ?
                         <LegacyKSP data={this.props.data}  brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} />  : null
                     }
                     {/*  Implement as variants of 'ksp'?
-                     {layout === 'ksp_reversed' ?
+                     {layout == 'ksp_reversed' ?
                      <LegacyKSP data={this.props.data}/> : null
                      }
-                     {layout === 'ksp_rs' ?
+                     {layout == 'ksp_rs' ?
                      <LegacyKSP data={this.props.data}/> : null
                      }
                      */}
-                    {layout === 'centeredBackdropTemplate' ?
+                    {layout == 'centeredBackdropTemplate' ?
                         <LegacyCenteredBackdrop data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
                 </section>
