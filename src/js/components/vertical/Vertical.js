@@ -52,7 +52,7 @@ class Vertical extends React.Component {
                     {layout === 'featureCta' ?
                         <LegacyFeature data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
-                    {layout === 'ksp' ?
+                    {layout === 'ksp' || layout == 'ksp_rs' ?
                         <LegacyKSP data={this.props.data}  brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} />  : null
                     }
                     {/*  Implement as variants of 'ksp'?

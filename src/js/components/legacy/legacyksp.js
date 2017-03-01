@@ -27,7 +27,7 @@ class LegacyKSP extends React.Component {
              */
             }
 
-            let {style, textSide, header, logo, text1, text2, caption1, caption2, icon1, icon2, media, button, legalText, cardButtonBackground} = this.props.data;
+        let {style, textSide, header, logo, text1, text2, itemBody1, itemHeading1, caption1, caption2, icon1, icon2, media, button, legalText, cardButtonBackground} = this.props.data;
 
             let buttonBG = cardButtonBackground || this.props.brandColor;
 
@@ -63,11 +63,11 @@ class LegacyKSP extends React.Component {
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
-                                                    {caption1 ? <strong
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1)}}/> : null }
+                                                {caption1 || itemHeading1 ? <strong dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itemHeading1)}}/> : null }
                                                 </p>
-                                                {text1 ? <p className="c-paragraph-4"
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text1)}}/> : null }
+                                            {text1 || itemBody1 ? 
+                                                <p className="c-paragraph-4"
+                                                    dangerouslySetInnerHTML={{__html: this.cleanHtml(text1 ? text1 : itemBody1)}}/> : null }
                                             </div>
                                         </li>
                                         <li className="f-row">
