@@ -37,6 +37,7 @@ class LegacyCenteredBackdrop extends React.Component {
                 cardButtonBackground = this.props.brandColor,
                 CardButtonHoverBackground,
                 cardThemeFont,
+                style,
                 cardButton = defaultColor,
                 header, subheader, button, legalText, textSide, media} = this.props.data;
 
@@ -55,6 +56,8 @@ class LegacyCenteredBackdrop extends React.Component {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: '100% auto'
             };
+
+            let mergedStyle = Object.assign(templateStyle, style);
 
             {/*
              'style' was included to adjust local values.  We may need to inventory to see what has been used here.
@@ -75,7 +78,7 @@ class LegacyCenteredBackdrop extends React.Component {
             }
 
             return (
-                <div className={templateClass} style={templateStyle} onScroll={this._handleScroll}>
+                <div className={templateClass} style={mergedStyle} onScroll={this._handleScroll}>
                     <div>
                         <div className="content-animate">
                             <div>
