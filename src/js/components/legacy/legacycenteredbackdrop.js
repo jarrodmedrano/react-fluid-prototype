@@ -27,25 +27,33 @@ class LegacyCenteredBackdrop extends React.Component {
              Perhaps clone with an external switch to handle the 'reversed' and 'rs' variants
              */
             }
+            let defaultColor ='#fff',
+                defaultBG = '#000';
 
-            let {cardColor, cardBackground, cardThemeColor, cardButtonBackground, CardButtonHoverBackground, cardThemeFont, cardButton, header, subheader, button, legalText, textSide, media} = this.props.data;
+            let {
+                cardColor = defaultBG,
+                cardBackground,
+                cardThemeColor = defaultColor,
+                cardButtonBackground = this.props.brandColor,
+                CardButtonHoverBackground,
+                cardThemeFont,
+                cardButton = defaultColor,
+                header, subheader, button, legalText, textSide, media} = this.props.data;
 
             // alignX, alignY, and theme need to be assumed in the css since they will not be available in the data
             let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-center`, `theme-light m-hero-item`);
 
-            let buttonBG = cardButtonBackground || this.props.brandColor;
-
-
             let btnStyle = {
                 color: cardButton,
-                background: buttonBG
+                background: cardButtonBackground
             };
 
             let templateStyle = {
-                background: cardBackground,
+                backgroundColor: cardColor,
+                backgroundImage: cardBackground,
+                color: cardThemeColor,
                 backgroundRepeat: 'no-repeat',
-                backgroundSize: '100% auto',
-                color: cardColor,
+                backgroundSize: '100% auto'
             };
 
             {/*

@@ -53,31 +53,32 @@ class LegacyFeature extends React.Component {
             This component renders both feature and featureCTA
         */ }
         if(propsAreValid(this.props.data, this)) {
-            let {style, textSide, header, logo, text1, text2, text3, media, button, legalText, cardButtonBackground} = this.props.data;
+                let {
+                    cardButtonBackground = this.props.brandColor,
+                    cardButton = '#fff',
+                    style, textSide, header, logo, text1, text2, text3, media, button, legalText} = this.props.data;
 
-            let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
+                let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
 
-            let buttonBG = cardButtonBackground || this.props.brandColor;
-
-            let btnStyle = {
-                background: buttonBG,
-                color: '#FFF',
-                marginLeft: '0',
-                marginRight: '0'
-            };
+                let btnStyle = {
+                    background: cardButtonBackground,
+                    color: cardButton,
+                    marginLeft: '0',
+                    marginRight: '0'
+                };
 
             return (
-                <div className="m-feature legacy-feature" data-grid="col-12">
+                <div className="m-feature legacy-feature" data-grid="col-12" style={style ? style : null}>
                     <div className={templateClass}>
-                        {media.blockType === 'gif' ? <picture className="feature-image">
+                        {media.blockType && media.blockType === 'gif' ? <picture className="feature-image">
                                 <source srcSet={media.src}/>
                                 <img srcSet={media.src} src={media.src}/>
                             </picture> : null }
-                        {media.blockType === 'img' ? <picture className="feature-image">
+                        {media.blockType && media.blockType === 'img' ? <picture className="feature-image">
                                 <source srcSet={media.src}/>
                                 <img srcSet={media.src} src={media.src}/>
                             </picture> : null }
-                        {media.blockType === 'video' ?
+                        {media.blockType && media.blockType === 'video' ?
                             <div id="videoPlayer1" className="c-video">
                                 <video className="f-video-player" preload="metadata" loop muted
                                        aria-labelledby="videoPlayer1Name" aria-describedby="videoPlayer1Description"
