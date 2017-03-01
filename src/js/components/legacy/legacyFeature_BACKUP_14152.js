@@ -89,7 +89,6 @@ class LegacyFeature extends React.Component {
                             : null}
                         <div>
                             <div>
-			        {logo ? <img className="logo" src={logo} /> : null}
                                 {header ? <h1 className="c-heading"
                                               dangerouslySetInnerHTML={{__html: this._cleanHtml(header)}}/> : null }
                                 {text1 ? <p className="c-paragraph-1"
@@ -104,6 +103,20 @@ class LegacyFeature extends React.Component {
                                             dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}}/> : null }
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+                : null}
+                <div>
+                    <div>
+                        {logo ? <img className="logo"  src={logo} /> : null}
+                        {header ? <h1 className="c-heading"  dangerouslySetInnerHTML={{ __html: this._cleanHtml(header) }} /> : null }
+                        {text1 ? <p className="c-paragraph-1" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text1) }} /> : null }
+                        {text2 ? <p className="c-paragraph" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text2) }} /> : null }
+                        {text3 ? <p className="c-paragraph" dangerouslySetInnerHTML={{ __html: this._cleanHtml(text3) }} /> : null }
+                    </div>
+                    {button ? <Button data={this.props.data} style={btnStyle} /> : null }
+                    {legalText ? <p className="c-paragraph-4" dangerouslySetInnerHTML={{ __html: this._cleanHtml(legalText) }} /> : null }
+>>>>>>> e8f99d353bf77e091345040794715dd35f6dc9d5
                 </div>
             )
         }

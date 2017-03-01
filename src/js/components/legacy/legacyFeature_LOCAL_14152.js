@@ -89,7 +89,6 @@ class LegacyFeature extends React.Component {
                             : null}
                         <div>
                             <div>
-			        {logo ? <img className="logo" src={logo} /> : null}
                                 {header ? <h1 className="c-heading"
                                               dangerouslySetInnerHTML={{__html: this._cleanHtml(header)}}/> : null }
                                 {text1 ? <p className="c-paragraph-1"
