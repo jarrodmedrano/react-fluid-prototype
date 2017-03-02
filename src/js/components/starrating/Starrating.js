@@ -14,11 +14,11 @@ class Starrating extends React.Component {
                     <span itemProp="bestRating">{this.props.data.bestRating}</span>
                 </p>
                 <div aria-hidden="true">
-                    <span className="c-glyph f-full"></span>
-                    <span className="c-glyph f-full"></span>
-                    <span className="c-glyph f-full"></span>
-                    <span className="c-glyph f-full"></span>
-                    <span className="c-glyph f-none"></span>
+                    <span className="c-glyph f-full" />
+                    <span className="c-glyph f-full" />
+                    <span className="c-glyph f-full" />
+                    <span className="c-glyph f-full" />
+                    <span className="c-glyph f-none" />
                 </div>
 
                 <span className="c-label"><a

@@ -2,16 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import './legacy.scss!';
 import Button from '../button/Button';
+import Video from '../video/Video';
 import sanitizeHtml from 'sanitize-html';
-import propsAreValid from '../../lib/util';
-import _ from 'lodash';
+import propsAreValid, {_cssSplit} from '../../lib/util';
 
 class LegacyFeature extends React.Component {
-
-    componentWillReceiveProps(nextProps) {
-        this._handleVideo(nextProps.active);
-        nextProps.updated === true ? this._resetVideo() : null;
-    }
 
     _cleanHtml(dirty) {
         return sanitizeHtml(dirty, {
@@ -24,39 +19,7 @@ class LegacyFeature extends React.Component {
             }
         });
     }
-    //TODO: stub out video component
-    componentDidMount() {
-        this._resetVideo();
-    }
 
-    componentWillUnmount() {
-        this._resetVideo();
-    }
-
-    _handleVideo(play) {
-        if(this.refs.vidRef) {
-            if(play === true && this.refs.vidRef.paused) {
-                this.refs.vidRef.play();
-            } else if(play === false && !this.refs.vidRef.paused) {
-                this.refs.vidRef.pause();
-            }
-        }
-    }
-
-    _resetVideo() {
-        if(this.refs.vidRef) {
-            this.refs.vidRef.currentTime = 0;
-        }
-    }
-
-    _cssSplit(str){
-        var O= {},
-            S= str.match(/([^ :;]+)/g) || [];
-        while(S.length){
-            O[S.shift()]= S.shift() || '';
-        }
-        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
-    }
 
     render() {
         {/* 
@@ -70,7 +33,7 @@ class LegacyFeature extends React.Component {
 
             let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
 
-            let templateStyle = style ? this._cssSplit(style) : null;
+            let templateStyle = style ? _cssSplit(style) : null;
 
             let btnStyle = {
                 background: cardButtonBackground,
@@ -96,11 +59,7 @@ class LegacyFeature extends React.Component {
                             </picture> : null }
                         {media.blockType && media.blockType === 'video' ?
                             <div id="videoPlayer1" className="c-video">
-                                <video className="f-video-player" preload="metadata" loop muted
-                                       aria-labelledby="videoPlayer1Name" aria-describedby="videoPlayer1Description"
-                                       ref="vidRef">
-                                    <source src={media.src} type="video/mp4"/>
-                                </video>
+                                <Video updated={this.props.updated} active={this.props.active} data={this.props.data} />
                                 <div className="f-video-cc-overlay" aria-hidden="true"></div>
                             </div>
                             : null}

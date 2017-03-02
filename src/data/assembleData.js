@@ -14,7 +14,8 @@ import dummyDefault from './legacy/dummyDefault.json!';
 import dummyStyle from './legacy/dummyStyleExample.json!';
 import dummyHp from './legacy/dummyHP.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
-
+let data = {};
+if(!window.RDX) {
 let defaultVertical = {
     "layout": "VerticalPage",
     "deviceInformation": {
@@ -38,8 +39,9 @@ let defaultVertical = {
 //sample surface data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
-defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
-//let data = defaultVertical;
+//defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+//data = defaultVertical;
 //HP data
-let data = dummyHp;
+data = dummyHp;
+}
 export default data;

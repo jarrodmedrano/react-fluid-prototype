@@ -3,8 +3,7 @@ import classNames from 'classnames';
 import Button from '../button/Button';
 import './legacy.scss!';
 import sanitizeHtml from 'sanitize-html';
-import propsAreValid from '../../lib/util';
-import _ from 'lodash';
+import propsAreValid, {_cssSplit} from '../../lib/util';
 
 class LegacyKSP extends React.Component {
     //TODO: stub this out into ../../lib/util
@@ -18,15 +17,6 @@ class LegacyKSP extends React.Component {
                 'p': ['style']
             }
         });
-    }
-
-    _cssSplit(str){
-        var O= {},
-            S= str.match(/([^ :;]+)/g) || [];
-        while(S.length){
-            O[S.shift()]= S.shift() || '';
-        }
-        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
     }
 
     render() {
@@ -45,8 +35,7 @@ class LegacyKSP extends React.Component {
 
             let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
 
-            let templateStyle = style ? this._cssSplit(style) : null;
-
+            let templateStyle = style ? _cssSplit(style) : null;
 
             let btnStyle = {
                 background: cardButtonBackground,

@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Heading from '../heading/Heading';
 import './Hero.scss!';
 import Picture from '../picture/Picture';
+import Video from '../video/Video';
 import propsAreValid from '../../lib/util';
 import dataPropTypes, {heroPropTypes} from '../../../data/dataProps';
 
@@ -53,9 +54,7 @@ class Hero extends React.Component {
                 if (this.props.data.video) {
                     return (
                         <div>
-                            <video ref="vidRef" className="video-fullscreen fixed" loop>
-                                <source src={this.props.data.video} type="video/mp4"/>
-                            </video>
+                            <Video updated={this.props.updated} active={this.props.active} data={this.props.data} className="video-fullscreen fixed" />
                         </div>
                     )
                 }

@@ -1,3 +1,5 @@
+import React from 'react';
+import _ from 'lodash';
 export function externalNavigate(e) {
     if(window.RDX) {
         e.preventDefault();
@@ -15,6 +17,15 @@ export function impressionEvent(visible, group, section) {
     if(window.RDX) {
         window.RDX.impressionEvent(visible, group, section);
     }
+}
+
+export function _cssSplit(str){
+    var O= {},
+        S= str.match(/([^ :;]+)/g) || [];
+    while(S.length){
+        O[S.shift()]= S.shift() || '';
+    }
+    return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
 }
 
 export default function propsAreValid(props, componentName = 'ANONYMOUS') {

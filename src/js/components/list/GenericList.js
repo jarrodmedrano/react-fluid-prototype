@@ -1,7 +1,6 @@
 import React from 'react'
-import _ from 'lodash'
 import GenericListItem from './GenericListItem';
-import propsAreValid, {entries} from '../../lib/util';
+import propsAreValid from '../../lib/util';
 import {listPropTypes} from '../../../data/dataProps';
 
 class GenericList extends React.Component {

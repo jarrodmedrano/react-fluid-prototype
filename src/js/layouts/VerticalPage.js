@@ -191,6 +191,12 @@ class VerticalPage extends React.Component {
                 }
             });
 
+            let compareModels = _.find(oemGroup, function (result) {
+                if (result.layout === 'compare') {
+                    return result
+                }
+            });
+
             let retailerGroup = _.find(groups, function (result) {
                 if (result.groupIdentifier === 'retailer') {
                     return result
@@ -205,9 +211,9 @@ class VerticalPage extends React.Component {
             return (
                 <div>
                     {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
-                    {oemGroup ? 
+                    {oemGroup && compareModels ?
                         <StickyBanner data={oemGroup}>
-                            { oemGroup.brand.price ? 
+                            {oemGroup.brand.price ?
                                 <Price data={oemGroup.brand.price}/> 
                             : null }
                             
@@ -229,6 +235,9 @@ class VerticalPage extends React.Component {
                             : null
                         }
                     </main>
+                    {/*
+                        if there aren't any legacy layouts, render the new footer style, else render the down arrow
+                    */}
                     {this.state.currentPage.sections && !legacyLayouts ? <Footer data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleNext(event)} />}
                 </div>
             )

@@ -1,6 +1,6 @@
 import React from 'react';
 import propsAreValid from '../../lib/util';
-
+//This is the price component displayed in the header
 class Price extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {

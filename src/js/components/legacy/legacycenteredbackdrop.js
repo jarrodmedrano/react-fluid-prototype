@@ -2,10 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import './legacy.scss!';
 import Button from '../button/Button';
-import Picture from '../picture/Picture';
 import sanitizeHtml from 'sanitize-html';
-import propsAreValid from '../../lib/util';
-import _ from 'lodash';
+import propsAreValid, {_cssSplit} from '../../lib/util';
 
 class LegacyCenteredBackdrop extends React.Component {
 
@@ -19,15 +17,6 @@ class LegacyCenteredBackdrop extends React.Component {
                 'p': ['style']
             }
         });
-    }
-
-    _cssSplit(str){
-        var O= {},
-            S= str.match(/([^ :;]+)/g) || [];
-        while(S.length){
-            O[S.shift()]= S.shift() || '';
-        }
-        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
     }
 
     render() {
@@ -67,25 +56,8 @@ class LegacyCenteredBackdrop extends React.Component {
                 backgroundSize: '100% auto'
             };
 
-            let mergedStyle = style && templateStyle ? Object.assign(templateStyle, this._cssSplit(style)) : null;
-
-            {/*
-             'style' was included to adjust local values.  We may need to inventory to see what has been used here.
-
-             in the first list consider all values optional
-             referr to the original template centeredBackdropTemplate.html for how style was applied
-
-             if button != null
-             button.blockType will be "buttonExternal" or "buttonInternal"
-             button.text
-             if external
-             button.link
-             else if internal
-             button.toPage
-
-             Need style elements for all of these to make it look similar to the previous layout
-             */
-            }
+            //take template style and style and merge them (if style exists)
+            let mergedStyle = style && templateStyle ? Object.assign(templateStyle, _cssSplit(style)) : null;
 
             return (
                 <div className={templateClass} style={mergedStyle || templateStyle} >
