@@ -33,10 +33,13 @@ let defaultVertical = {
     },
     "groups": []
 };
-//sample surface data
+//Sample fscreen video by itself
 //defaultVertical.groups.push(dummyFVideo, dummyRetailer);
+//sample surface data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
 defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
-let data = defaultVertical;
+//let data = defaultVertical;
+//HP data
+let data = dummyHp;
 export default data;

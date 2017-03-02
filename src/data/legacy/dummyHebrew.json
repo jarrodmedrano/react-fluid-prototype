@@ -1,0 +1,288 @@
+{
+  "layout": "VerticalPage",
+  "deviceInformation": {
+    "ManufacturerName": "Microsoft",
+    "ModelName": "Surface Book",
+    "price": "$1499",
+    "salePrice": "$1399",
+    "saleExpires": "11/1/16",
+    "label": "Starting at:",
+    "appmode": "rdx",
+    "model": "Surface Book",
+    "staging": "True",
+    "version": "RS2",
+    "campaignname": "",
+    "HasWinBioUnits": "False",
+    "platform": "Desktop",
+    "locale": "Hebrew (he)",
+    "signatureDevice": "False",
+    "oem": "Microsoft",
+    "retailer": "COIN",
+    "PenEnabled": "False",
+    "rac": "COINDemoHubTest"
+  },
+  "ratings": {
+    "rating": "3",
+    "bestRating": "5",
+    "ratingText": "See reviews",
+    "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
+  },
+  "groups": [
+    {
+      "groupIdentifier": "oem",
+      "brand": {
+        "logo": "oem_assets/ms-logo.png",
+        "anchorTitle": "Surface Book",
+        "tabColor": "#ffffff",
+        "logoTab": "oem_assets/surfacebook-logo.png",
+        "groupIdentifier": "oem"
+      },
+      "sections": [
+        {
+          "ordinal": "100",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Section2",
+          "layout": "fullscreen",
+          "anchorLink": "true",
+          "anchorTitle": "Explore Surface Book",
+          "heading": "Surface Book Pro",
+          "altText": "Surface Book Pro",
+          "ariaLabel": "Surface Book Pro",
+          "pictures": [
+            {
+              "src": "oem_assets/surface-hero.jpg"
+            }
+          ],
+          "alignX": "center",
+          "alignY": "center",
+          "theme": "theme-light"
+        },
+        {
+          "ordinal": "200",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Keyboard",
+          "layout": "fullscreen",
+          "anchorLink": "true",
+          "anchorTitle": "Keyboard",
+          "heading": "Five-point touchpad",
+          "altText": "Five-point touchpad",
+          "ariaLabel": "Five-point touchpad",
+          "pictures": [
+            {
+              "src": "oem_assets/keyboard-hero.jpg"
+            }
+          ],
+          "alignX": "center",
+          "alignY": "bottom",
+          "theme": "theme-light"
+        },
+        {
+          "ordinal": "300",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "SurfacePen",
+          "layout": "fullscreen",
+          "anchorLink": "true",
+          "anchorTitle": "Surface Pen",
+          "video": "oem_assets/Hero-pen.mp4"
+        },
+        {
+          "ordinal": "500",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Accessories",
+          "layout": "mosaic",
+          "anchorLink": "true",
+          "anchorTitle": "Accessories",
+          "theme": "theme-dark",
+          "mosaicLayout": "mosaic-3",
+          "tiles": [
+            {
+              "heading": "Accessories",
+              "subheading": "The perfect complements to your Surface",
+              "backgroundColor": "#0078D7",
+              "textColor": "#FFF",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "blue"
+              }
+            },
+            {
+              "button": {
+                "link": "http://www.microsoft.com",
+                "overlay": "#000"
+              },
+              "pictures": [
+                {
+                  "src": "oem_assets/mosaic-surface-8.jpg"
+                }
+              ]
+            },
+            {
+              "button": {
+                "link": "http://www.microsoft.com",
+                "overlay": "#000"
+              },
+              "pictures": [
+                {
+                  "src": "oem_assets/mosaic-surface-5.jpg"
+                }
+              ]
+            },
+            {
+              "button": {
+                "link": "http://www.microsoft.com",
+                "overlay": "#000"
+              },
+              "pictures": [
+                {
+                  "src": "oem_assets/mosaic-ports.jpg"
+                }
+              ]
+            },
+            {
+              "button": {
+                "link": "http://www.microsoft.com",
+                "overlay": "#000"
+              },
+              "pictures": [
+                {
+                  "src": "oem_assets/mosaic-headphones.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "windows",
+      "brand": {
+        "groupIdentifier": "windows",
+        "logo": "windows_assets/GSA_nav_946x220_0004_Windows-LO.png",
+        "logoTab": "windows_assets/GSA_nav_946x220_0004_Windows-LO.png",
+        "color": "#00BCF2"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "media": {
+            "src": "windows_assets/Devices_cropped_0005_Just-Works-Cortana.png",
+            "blockType": "img"
+          },
+          "textSide": "left",
+          "legalText": "",
+          "logo": "",
+          "text1": "ל- Windows 10 יש יותר הגנות אבטחה מובנות, ותכונות חדשות מסופקות כעת באמצעות עדכונים כדי לעזור לך להיות מעודכן.",
+          "header": "יותר הגנה.  עדכונים בזמן.",
+          "style": "direction: rtl;",
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Worksright",
+          "ordinal": "100"
+        },
+        {
+          "text1": "קבל חוויית אינטרנט טובה יותר עם הדפדפן החדש והחדיש: מאמרים ללא הפרעות והיכולת לכתוב בדפי אינטרנט כדי לשתף עם חברים.",
+          "media": {
+            "blockType": "img",
+            "src": "windows_assets/Devices_cropped_0002_Spartan.png"
+          },
+          "logo": "",
+          "button": {
+            "link": "Microsoft-edge:about:demo",
+            "text": "נסה את Microsoft Edge",
+            "blockType": "buttonExternal"
+          },
+          "header": "סמן ושתף דפי אינטרנט",
+          "legalText": "",
+          "layout": "featureCta",
+          "textSide": "left",
+          "style": "direction: rtl;",
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "All-newbrowser",
+          "ordinal": "200"
+        },
+        {
+          "button": {
+            "text": "עבור לאפליקציה",
+            "link": "ms-windows-store://home",
+            "blockType": "buttonExternal"
+          },
+          "textSide": "left",
+          "logo": "",
+          "media": {
+            "src": "windows_assets/Devices_cropped_0004_Store.png",
+            "blockType": "img"
+          },
+          "legalText": "*אפליקציות ותכנים מסוימים נמכרים בנפרד. הזמינות של תכונות ושל אפליקציות עשויה להשתנות בהתאם לשוק ולמכשיר.",
+          "layout": "featureCta",
+          "header": "עשה יותר עם חנות Windows החדשה.",
+          "text1": "אנו מציגים את חנות Windows החדשה, חוויית קנייה אחידה לכל האפליקציות, המשחקים, המוסיקה ותוכן הווידאו, בכל מכשיר Windows 10.*",
+          "style": "direction: rtl;",
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "WindowsStore",
+          "ordinal": "300"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "office",
+      "brand": {
+        "groupIdentifier": "office",
+        "logo": "office_assets/Office_Desktop_Logo.png",
+        "logoTab": "office_assets/Office_Desktop_Logo.png",
+        "color": "#dc3c00"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>היכולת</span> להגיע להישגים שעולים על הציפיות.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/RDX Demo Image_Pg1.png"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>Office מעניק לך את היכולת</span> להגיע להישגים שעולים על הציפיות.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/RDX Demo Images_Pillars.png"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>מה חדש ב- </span> Office 365?</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/RDX Demo Images_WhatsNew.png"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>גלה את Office</span> המתאים לך.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/Office_Chart_V3.gif"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page4",
+          "ordinal": "400"
+        }
+      ]
+    }
+  ]
+}

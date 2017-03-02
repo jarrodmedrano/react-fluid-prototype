@@ -55,8 +55,8 @@ class LegacyKSP extends React.Component {
                 marginRight: '0'
             };
 
-            let headerStyle = { 
-                color: this.props.brandColor 
+            let headerStyle = {
+                color: this.props.brandColor
             };
 
             return (
