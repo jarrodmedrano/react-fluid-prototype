@@ -34,9 +34,9 @@ class Vertical extends React.Component {
         if(propsAreValid(this.props.data, this)) {
             let active = this.state.active ? 'active' : 'inactive';
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier, active);
-            let {layout, sectionIdentifier} = this.props.data;
+            let {layout, sectionIdentifier, readingDirection} = this.props.data;
             return (
-                <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier} style={{position: 'relative'}} >
+                <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier} dir={readingDirection ? readingDirection : null}>
                     {layout == 'hero' || layout == 'immersive-hero' || layout == 'fullscreen' || layout == 'card' ?
                         <Hero data={this.props.data} brandColor={this.props.brandColor ? this.props.brandColor : null} active={this.state.active} updated={this.state.updated} /> : null
                     }
@@ -57,9 +57,6 @@ class Vertical extends React.Component {
                     }
                     {/*  Implement as variants of 'ksp'?
                      {layout == 'ksp_reversed' ?
-                     <LegacyKSP data={this.props.data}/> : null
-                     }
-                     {layout == 'ksp_rs' ?
                      <LegacyKSP data={this.props.data}/> : null
                      }
                      */}
