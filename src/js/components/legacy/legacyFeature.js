@@ -63,26 +63,25 @@ class LegacyFeature extends React.Component {
             This component renders both feature and featureCTA
         */ }
         if(propsAreValid(this.props.data, this)) {
-                let {
-                    cardButtonBackground = this.props.brandColor,
-                    cardButton = '#fff',
-                    style, textSide, header, logo, text1, text2, text3, media, button, legalText} = this.props.data;
+            let {
+                cardButtonBackground = this.props.brandColor,
+                cardButton = '#fff',
+                style, textSide, header, logo, text1, text2, text3, media, button, legalText} = this.props.data;
 
-                let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
+            let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
 
-                let templateStyle = this._cssSplit(style);
-                console.log(templateStyle);
+            let templateStyle = style ? this._cssSplit(style) : null;
 
-                let btnStyle = {
-                    background: cardButtonBackground,
-                    color: cardButton,
-                    marginLeft: '0',
-                    marginRight: '0'
-                };
+            let btnStyle = {
+                background: cardButtonBackground,
+                color: cardButton,
+                marginLeft: '0',
+                marginRight: '0'
+            };
 
             let headerStyle = {
                 color: this.props.brandColor
-            }
+            };
 
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12" style={templateStyle ? templateStyle : null}>

@@ -67,7 +67,7 @@ class LegacyCenteredBackdrop extends React.Component {
                 backgroundSize: '100% auto'
             };
 
-            let mergedStyle = Object.assign(templateStyle, this._cssSplit(style));
+            let mergedStyle = style && templateStyle ? Object.assign(templateStyle, this._cssSplit(style)) : null;
 
             {/*
              'style' was included to adjust local values.  We may need to inventory to see what has been used here.
@@ -88,7 +88,7 @@ class LegacyCenteredBackdrop extends React.Component {
             }
 
             return (
-                <div className={templateClass} style={mergedStyle} >
+                <div className={templateClass} style={mergedStyle || templateStyle} >
                     <div>
                         <div className="content-animate">
                             <div>

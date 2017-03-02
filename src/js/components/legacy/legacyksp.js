@@ -45,7 +45,8 @@ class LegacyKSP extends React.Component {
 
             let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
 
-            let templateStyle = this._cssSplit(style);
+            let templateStyle = style ? this._cssSplit(style) : null;
+
 
             let btnStyle = {
                 background: cardButtonBackground,
@@ -56,7 +57,7 @@ class LegacyKSP extends React.Component {
 
             let headerStyle = { 
                 color: this.props.brandColor 
-            }
+            };
 
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12" style={templateStyle ? templateStyle : null}>
@@ -68,8 +69,7 @@ class LegacyKSP extends React.Component {
                         <div>
                             <div>
                                 {logo ? <img className="logo" alt={header} src={logo} /> : null }
-                                {header ? <h1 className="c-heading-3" className="c-heading" style={headerStyle}
-                                              dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
+                                {header ? <h1 className="c-heading" style={headerStyle} dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
                                 <div data-grid="col-12" className="c-structured-list">
                                     <ul className="f-column">
                                         <li className="f-row">
