@@ -1,0 +1,223 @@
+{
+  "layout": "VerticalPage",
+  "deviceInformation": {
+    "ManufacturerName": "Microsoft",
+    "ModelName": "Surface Book",
+    "price": "$1499",
+    "salePrice": "$1399",
+    "saleExpires": "11/1/16",
+    "label": "Starting at:"
+  },
+  "ratings": {
+    "rating": "3",
+    "bestRating": "5",
+    "ratingText": "See reviews",
+    "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
+  },
+  "groups": [
+    {
+      "groupIdentifier": "oem",
+      "brand": {
+        "groupIdentifier": "oem",
+        "logo": "oem_assets/hplogowhite.png",
+        "logoTab": "oem_assets/hplogowhite.png",
+        "color": "#a81b2b"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "logo": "oem_assets/OMEN_Logo.png",
+          "textSide": "left",
+          "header": "WAKE UP. BATTLE. CONQUER. REPEAT.",
+          "style": "background-image: url('img/oem_assets/background.png'); color: white;",
+          "media": {
+            "blockType": "img",
+            "src": "oem_assets/CPC197860_Griffin11_RD1_Product_Card_1.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "ksp_rs",
+          "logo": "oem_assets/OMEN_Logo.png",
+          "textSide": "left",
+          "header": "WAKE UP. BATTLE. CONQUER. REPEAT.",
+          "icon2": "oem_assets/Icons_50X50-01.png",
+          "itemheading2": "Gear up for glory",
+          "itembody1": "Equipped with powerful hardware and a venomous design, the OMEN Laptop is ready for the challenge, anytime, anywhere. ",
+          "itembody2": "Quad-core Intel® Core™ processor and NVIDIA® GTX™ graphics. This powerful arsenal is ready for you to take on any challenge.",
+          "style": "background-image: url('oem_assets/background.png'); color: white;",
+          "media": {
+            "blockType": "img",
+            "src": "oem_assets/CPC197860_Griffin11_RD1_Product_Card_2.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "ksp_rs",
+          "logo": "oem_assets/OMEN_Logo.png",
+          "textSide": "left",
+          "header": "WAKE UP. BATTLE. CONQUER. REPEAT.",
+          "icon1": "oem_assets/Icons_50X50-04.png",
+          "icon2": "oem_assets/Icons_50X50-05.png",
+          "itemheading1": "Immersed in the competition",
+          "itemheading2": "Built for greatness",
+          "itembody1": "Sense every pulse-pounding moment with optional 4k* IPS display and Audio by Bang & Olufsen",
+          "itembody2": "With a sleek design and Dragon Red backlit keyboard, you're ready for the competition.",
+          "legalText": "*On select models. 4K content required to view full 4K images.",
+          "style": "background-image: url('oem_assets/background.png'); color: white;",
+          "media": {
+            "blockType": "img",
+            "src": "oem_assets/CPC197860_Griffin11_RD1_Product_Card_3.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "windows",
+      "brand": {
+        "groupIdentifier": "windows",
+        "logo": "windows_assets/Windows_Desktop_Logo.png",
+        "logoTab": "windows_assets/Windows_Desktop_Logo.png",
+        "color": "#00bcf2"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Easily manage everything on your desktop",
+          "text1": "Fast, familiar, and more secure with great multi-tasking features, like the ability to create new desktops when you need more space.",
+          "media": {
+            "blockType": "video",
+            "src": "windows_assets/RDX_Manage_laptop_v2.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "ManageDesktop",
+          "ordinal": "100"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Access hours of fun",
+          "text1": "Discover popular, new, free, and paid games, all certified by Microsoft and available in the Windows Store.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Browse games",
+            "link": "ms-windows-store://navigatetopage/?Id=Games",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "windows_assets/RDX_Casual_Gaming_v7.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "CasualGaming",
+          "ordinal": "200"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Meet Cortana, your personal assistant",
+          "text1": "You can ask Cortana anything, get her help with planning itineraries and reminders, and she'll even make timely suggestions based on what she knows about you.",
+          "legalText": "Cortana available in select global markets; experience may vary by region and device.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Talk to Cortana",
+            "link": "ms-cortana://"
+          },
+          "media": {
+            "blockType": "gif",
+            "src": "windows_assets/Page2.gif"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Cortana",
+          "ordinal": "300"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Introducing Microsoft Edge. Go beyond browsing. ",
+          "text1": "Write on webpages, find things faster, and read distraction-free with Microsoft’s newest browser.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Try it now",
+            "link": "http://www.microsoft.com/en-us/windows/microsoft-edge",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "windows_assets/EDGE_2IN1_v3.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Edge",
+          "ordinal": "400"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "office",
+      "brand": {
+        "groupIdentifier": "office",
+        "logo": "office_assets/Office_Desktop_Logo.png",
+        "logoTab": "office_assets/Office_Desktop_Logo.png",
+        "color": "#dc3c00"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>היכולת</span> להגיע להישגים שעולים על הציפיות.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/RDX Demo Image_Pg1.png"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>Office מעניק לך את היכולת</span> להגיע להישגים שעולים על הציפיות.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/RDX Demo Images_Pillars.png"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>מה חדש ב- </span> Office 365?</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/RDX Demo Images_WhatsNew.png"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>גלה את Office</span> המתאים לך.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "office_assets/Office_Chart_V3.gif"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page4",
+          "ordinal": "400"
+        }
+      ]
+    }
+  ]
+}

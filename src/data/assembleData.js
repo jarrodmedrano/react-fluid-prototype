@@ -11,6 +11,7 @@ import dummyOffice from './legacy/dummyOffice.json!';
 import dummyRetailer from './legacy/dummyRetailer.json!';
 import dummyWindows from './legacy/dummyWindows.json!';
 import dummyDefault from './legacy/dummyDefault.json!';
+import dummyStyle from './legacy/dummyStyleExample.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
 
 let defaultVertical = {

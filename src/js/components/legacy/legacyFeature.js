@@ -4,6 +4,7 @@ import './legacy.scss!';
 import Button from '../button/Button';
 import sanitizeHtml from 'sanitize-html';
 import propsAreValid from '../../lib/util';
+import _ from 'lodash';
 
 class LegacyFeature extends React.Component {
 
@@ -48,6 +49,15 @@ class LegacyFeature extends React.Component {
         }
     }
 
+    _cssSplit(str){
+        var O= {},
+            S= str.match(/([^ :;]+)/g) || [];
+        while(S.length){
+            O[S.shift()]= S.shift() || '';
+        }
+        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
+    }
+
     render() {
         {/* 
             This component renders both feature and featureCTA
@@ -60,6 +70,9 @@ class LegacyFeature extends React.Component {
 
                 let templateClass = classNames(`f-x-${textSide}`, `f-y-center`, `f-align-${textSide}`, `c-feature`);
 
+                let templateStyle = this._cssSplit(style);
+                console.log(templateStyle);
+
                 let btnStyle = {
                     background: cardButtonBackground,
                     color: cardButton,
@@ -68,7 +81,7 @@ class LegacyFeature extends React.Component {
                 };
 
             return (
-                <div className="m-feature legacy-feature" data-grid="col-12" style={style ? style : null}>
+                <div className="m-feature legacy-feature" data-grid="col-12" style={templateStyle ? templateStyle : null}>
                     <div className={templateClass}>
                         {media.blockType && media.blockType === 'gif' ? <picture className="feature-image">
                                 <source srcSet={media.src}/>

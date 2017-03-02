@@ -5,6 +5,7 @@ import Button from '../button/Button';
 import Picture from '../picture/Picture';
 import sanitizeHtml from 'sanitize-html';
 import propsAreValid from '../../lib/util';
+import _ from 'lodash';
 
 class LegacyCenteredBackdrop extends React.Component {
 
@@ -18,6 +19,15 @@ class LegacyCenteredBackdrop extends React.Component {
                 'p': ['style']
             }
         });
+    }
+
+    _cssSplit(str){
+        var O= {},
+            S= str.match(/([^ :;]+)/g) || [];
+        while(S.length){
+            O[S.shift()]= S.shift() || '';
+        }
+        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
     }
 
     render() {
@@ -57,7 +67,7 @@ class LegacyCenteredBackdrop extends React.Component {
                 backgroundSize: '100% auto'
             };
 
-            let mergedStyle = Object.assign(templateStyle, style);
+            let mergedStyle = Object.assign(templateStyle, this._cssSplit(style));
 
             {/*
              'style' was included to adjust local values.  We may need to inventory to see what has been used here.
@@ -78,7 +88,7 @@ class LegacyCenteredBackdrop extends React.Component {
             }
 
             return (
-                <div className={templateClass} style={mergedStyle} onScroll={this._handleScroll}>
+                <div className={templateClass} style={mergedStyle} >
                     <div>
                         <div className="content-animate">
                             <div>
