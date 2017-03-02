@@ -1,0 +1,239 @@
+{
+  "layout": "VerticalPage",
+  "deviceInformation": {
+    "ManufacturerName": "Microsoft",
+    "ModelName": "Surface Book",
+    "price": "$1499",
+    "salePrice": "$1399",
+    "saleExpires": "11/1/16",
+    "label": "Starting at:",
+    "region": "United States (US)",
+    "appmode": "rdx",
+    "model": "Omen (KirinGriffin 2c16)",
+    "staging": "True",
+    "version": "RS2",
+    "campaignname": "",
+    "HasWinBioUnits": "False",
+    "platform": "Desktop",
+    "signatureDevice": "False",
+    "oem": "HP",
+    "retailer": "COIN",
+    "PenEnabled": "False",
+    "rac": "COINDemoHubTest"
+  },
+  "ratings": {
+    "rating": "3",
+    "bestRating": "5",
+    "ratingText": "See reviews",
+    "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
+  },
+  "groups": [
+    {
+      "groupIdentifier": "oem",
+      "brand": {
+        "groupIdentifier": "oem",
+        "logo": "img/oem_assets/hp/hplogowhite.png",
+        "logoTab": "img/oem_assets/hp/hplogowhite.png",
+        "color": "#a81b2b"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "logo": "img/oem_assets/hp/OMEN_Logo.png",
+          "textSide": "left",
+          "header": "WAKE UP. BATTLE. CONQUER. REPEAT.",
+          "style": "background-image: url('img/oem_assets/hp/background.png'); color: white;",
+          "media": {
+            "blockType": "img",
+            "src": "img/oem_assets/hp/CPC197860_Griffin11_RD1_Product_Card_1.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "ksp_rs",
+          "logo": "img/oem_assets/hp/OMEN_Logo.png",
+          "textSide": "left",
+          "header": "WAKE UP. BATTLE. CONQUER. REPEAT.",
+          "icon2": "img/oem_assets/hp/Icons_50X50-01.png",
+          "itemheading2": "Gear up for glory",
+          "itembody1": "Equipped with powerful hardware and a venomous design, the OMEN Laptop is ready for the challenge, anytime, anywhere. ",
+          "itembody2": "Quad-core Intel® Core™ processor and NVIDIA® GTX™ graphics. This powerful arsenal is ready for you to take on any challenge.",
+          "style": "background-image: url('img/oem_assets/hp/background.png'); color: white;",
+          "media": {
+            "blockType": "img",
+            "src": "img/oem_assets/hp/CPC197860_Griffin11_RD1_Product_Card_2.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "ksp_rs",
+          "logo": "img/oem_assets/hp/OMEN_Logo.png",
+          "textSide": "left",
+          "header": "WAKE UP. BATTLE. CONQUER. REPEAT.",
+          "icon1": "img/oem_assets/hp/Icons_50X50-04.png",
+          "icon2": "img/oem_assets/hp/Icons_50X50-05.png",
+          "itemheading1": "Immersed in the competition",
+          "itemheading2": "Built for greatness",
+          "itembody1": "Sense every pulse-pounding moment with optional 4k* IPS display and Audio by Bang & Olufsen",
+          "itembody2": "With a sleek design and Dragon Red backlit keyboard, you're ready for the competition.",
+          "legalText": "*On select models. 4K content required to view full 4K images.",
+          "style": "background-image: url('img/oem_assets/hp/background.png'); color: white;",
+          "media": {
+            "blockType": "img",
+            "src": "img/oem_assets/hp/CPC197860_Griffin11_RD1_Product_Card_3.png"
+          },
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "windows",
+      "brand": {
+        "groupIdentifier": "windows",
+        "logo": "img/windows_assets/hp/Windows_Desktop_Logo.png",
+        "logoTab": "img/windows_assets/hp/Windows_Desktop_Logo.png",
+        "color": "#00bcf2"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Easily manage everything on your desktop",
+          "text1": "Fast, familiar, and more secure with great multi-tasking features, like the ability to create new desktops when you need more space.",
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/hp/RDX_Manage_laptop_v2.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "ManageDesktop",
+          "ordinal": "100"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Access hours of fun",
+          "text1": "Discover popular, new, free, and paid games, all certified by Microsoft and available in the Windows Store.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Browse games",
+            "link": "ms-windows-store://navigatetopage/?Id=Games",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/hp/RDX_Casual_Gaming_v7.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "CasualGaming",
+          "ordinal": "200"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Meet Cortana, your personal assistant",
+          "text1": "You can ask Cortana anything, get her help with planning itineraries and reminders, and she'll even make timely suggestions based on what she knows about you.",
+          "legalText": "Cortana available in select global markets; experience may vary by region and device.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Talk to Cortana",
+            "link": "ms-cortana://"
+          },
+          "media": {
+            "blockType": "gif",
+            "src": "img/windows_assets/hp/Page2.gif"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Cortana",
+          "ordinal": "300"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Introducing Microsoft Edge. Go beyond browsing. ",
+          "text1": "Write on webpages, find things faster, and read distraction-free with Microsoft’s newest browser.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Try it now",
+            "link": "http://www.microsoft.com/en-us/windows/microsoft-edge",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/hp/EDGE_2IN1_v3.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Edge",
+          "ordinal": "400"
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "office",
+      "brand": {
+        "groupIdentifier": "office",
+        "logo": "img/office_assets/hp/Office_Desktop_Logo.png",
+        "logoTab": "img/office_assets/hp/Office_Desktop_Logo.png",
+        "color": "#dc3c00"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "The Power to overachieve",
+          "text1": "Made for doing, made to collaborate, and made to move just like you.",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/hp/Office_Holiday_Architect_30sec_EN-US.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Create amazing documents",
+          "text1": "Discover easy, built in research and smart proofing tools.",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/hp/Office_Holiday_Feature_Final_720p_en_us.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Move with OneDrive",
+          "text1": "Share documents, photos and work across all your devices.",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/hp/Media1.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Discover the Office that is right for you.",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/hp/EN-US_Office_Holiday_Architect_Sku_Animation_1080p.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page4",
+          "ordinal": "400"
+        }
+      ]
+    }
+  ]
+}

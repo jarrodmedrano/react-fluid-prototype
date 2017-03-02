@@ -69,7 +69,7 @@ class LegacyKSP extends React.Component {
                         <div>
                             <div>
                                 {logo ? <img className="logo" alt={header} src={logo} /> : null }
-                                {header ? <h1 className="c-heading-3" className="c-heading" style={headerStyle}
+                                {header ? <h1 className="c-heading" style={headerStyle}
                                               dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
 
                                 <div data-grid="col-12" className="c-structured-list">

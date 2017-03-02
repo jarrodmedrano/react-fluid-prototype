@@ -28,7 +28,7 @@
           "ordinal": "100",
           "groupIdentifier": "hero",
           "sectionIdentifier": "Section2",
-          "layout": "fullscreen",
+          "layout": "nothing",
           "anchorLink": "true",
           "anchorTitle": "Explore Surface Book",
           "altText": "Surface Book Pro",
