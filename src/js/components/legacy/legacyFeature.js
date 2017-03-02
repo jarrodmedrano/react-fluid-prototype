@@ -80,6 +80,10 @@ class LegacyFeature extends React.Component {
                     marginRight: '0'
                 };
 
+            let headerStyle = {
+                color: this.props.brandColor
+            }
+
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12" style={templateStyle ? templateStyle : null}>
                     <div className={templateClass}>
@@ -104,7 +108,7 @@ class LegacyFeature extends React.Component {
                         <div>
                             <div>
 			                    {logo ? <img className="logo" alt={header} src={logo} /> : null}
-                                {header ? <h1 className="c-heading" dangerouslySetInnerHTML={{__html: this._cleanHtml(header)}}/> : null }
+                                {header ? <h1 className="c-heading" style={headerStyle} dangerouslySetInnerHTML={{__html: this._cleanHtml(header)}}/> : null }
                                 {text1 ? <p className="c-paragraph-1" dangerouslySetInnerHTML={{__html: this._cleanHtml(text1)}}/> : null }
                                 {text2 ? <p className="c-paragraph" dangerouslySetInnerHTML={{__html: this._cleanHtml(text2)}}/> : null }
                                 {text3 ? <p className="c-paragraph"

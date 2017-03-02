@@ -54,6 +54,10 @@ class LegacyKSP extends React.Component {
                 marginRight: '0'
             };
 
+            let headerStyle = { 
+                color: this.props.brandColor 
+            }
+
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12" style={templateStyle ? templateStyle : null}>
                     <div className={templateClass}>
@@ -64,7 +68,7 @@ class LegacyKSP extends React.Component {
                         <div>
                             <div>
                                 {logo ? <img className="logo" alt={header} src={logo} /> : null }
-                                {header ? <h1 className="c-heading-3"
+                                {header ? <h1 className="c-heading-3" className="c-heading" style={headerStyle}
                                               dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
                                 <div data-grid="col-12" className="c-structured-list">
                                     <ul className="f-column">
