@@ -25,6 +25,7 @@
 
 .m-feature {
   background: #fff;
+  background-size: cover;
 
   &.legacy-feature {
     padding-left: 0;
@@ -32,7 +33,7 @@
   }
 
   .logo {
-    max-width: 100%;
+    max-width: 200px;
     max-height: 120px;
   }
 
@@ -52,9 +53,13 @@
       transform: translateY(-50%);
     }
   }
+
+  @media only screen and (min-width: 1400px) {
+    .c-structured-list .f-column .f-row [data-grid=col-10] {
+      padding-left: 0;
+    }
+  }
 }
-
-
 
 
 .c-hero.theme-dark {

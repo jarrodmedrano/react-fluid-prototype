@@ -39,9 +39,9 @@ let defaultVertical = {
 //sample surface data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
-//defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
-//data = defaultVertical;
+defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+data = defaultVertical;
 //HP data
-data = dummyHp;
+//data = dummyHp;
 }
 export default data;

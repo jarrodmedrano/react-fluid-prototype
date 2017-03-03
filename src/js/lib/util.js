@@ -20,9 +20,9 @@ export function impressionEvent(visible, group, section) {
 }
 
 export function _cssSplit(str){
-    var O= {},
-        S= str.match(/([^ :;]+)/g) || [];
-    while(S.length){
+    let O = {},
+        S = str.match(/([^ :;]+)/g) || [];
+    while(S.length) {
         O[S.shift()]= S.shift() || '';
     }
     return _.mapKeys(O, function (v, k) {return _.camelCase(k)});

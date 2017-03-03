@@ -30,7 +30,7 @@ class LegacyKSP extends React.Component {
             let {
                 cardButtonBackground = this.props.brandColor,
                 cardButton = '#fff',
-                style, textSide, header, logo, text1, text2, itemBody1, itemHeading1, caption1, caption2, icon1, icon2, media, button, legalText
+                style, textSide, header, logo, text1, text2, itembody1, itembody2, itemheading1, itemheading2, caption1, caption2, icon1, icon2, media, button, legalText
             } = this.props.data;
 
             let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
@@ -57,8 +57,8 @@ class LegacyKSP extends React.Component {
                             </picture> : null }
                         <div>
                             <div>
-                                {logo ? <img className="logo" alt={header} src={logo} /> : null }
-                                {header ? <h1 className="c-heading" style={headerStyle}
+                                {logo ? <img className="logo c-image" alt={header} src={logo} /> : null }
+                                {header ? <h1 className="c-heading c-logo" style={headerStyle}
                                               dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
 
                                 <div data-grid="col-12" className="c-structured-list">
@@ -70,12 +70,12 @@ class LegacyKSP extends React.Component {
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
-                                                    {caption1 || itemHeading1 ? <strong
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itemHeading1)}}/> : null }
+                                                    {text1 || itemheading1 ? <strong
+                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text1 ? text1 : itemheading1 ? itemheading1 : null)}}/> : null }
                                                 </p>
-                                                {text1 || itemBody1 ?
+                                                {caption1 || itembody1 ?
                                                     <p className="c-paragraph-4"
-                                                       dangerouslySetInnerHTML={{__html: this.cleanHtml(text1 ? text1 : itemBody1)}}/> : null }
+                                                       dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itembody1 ? itembody1 : null)}}/> : null }
                                             </div>
                                         </li>
                                         <li className="f-row">
@@ -85,11 +85,11 @@ class LegacyKSP extends React.Component {
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
-                                                    {caption2 ? <strong
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text2)}}/> : null }
+                                                    {text2 || itemheading2 ? <strong
+                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text2 ? text2 : itemheading2 ? itemheading2 : null)}}/> : null }
                                                 </p>
-                                                {text2 ? <p className="c-paragraph-4"
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2)}}/> : null }
+                                                {caption2 || itembody2 ? <p className="c-paragraph-4"
+                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2 ? caption2 : itembody2 ? itembody2 : null)}}/> : null }
                                             </div>
                                         </li>
                                     </ul>
