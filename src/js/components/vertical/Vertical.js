@@ -5,7 +5,7 @@ import Hero from '../hero/Hero';
 import Mosaic from '../mosaic/Mosaic';
 import CompareTable from '../compare/CompareTable';
 import LegacyFeature from '../legacy/legacyFeature';
-import LegacyKSP from '../legacy/legacyKsp';
+import LegacyKSP from '../legacy/legacyksp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 import propsAreValid from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';

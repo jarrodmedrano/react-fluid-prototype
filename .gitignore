@@ -19,6 +19,7 @@ npm-debug.log*
 src/img/*_assets
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+src/img/hebrew
 
 # Build results
 [Dd]ebug/

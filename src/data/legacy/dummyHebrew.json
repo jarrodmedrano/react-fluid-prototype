@@ -50,7 +50,7 @@
           "ariaLabel": "Surface Book Pro",
           "pictures": [
             {
-              "src": "oem_assets/surface-hero.jpg"
+              "src": "img/hebrew/oem_assets/surface-hero.jpg"
             }
           ],
           "alignX": "center",
@@ -69,7 +69,7 @@
           "ariaLabel": "Five-point touchpad",
           "pictures": [
             {
-              "src": "oem_assets/keyboard-hero.jpg"
+              "src": "img/hebrew/oem_assets/keyboard-hero.jpg"
             }
           ],
           "alignX": "center",
@@ -115,7 +115,7 @@
               },
               "pictures": [
                 {
-                  "src": "oem_assets/mosaic-surface-8.jpg"
+                  "src": "img/hebrew/oem_assets/mosaic-surface-8.jpg"
                 }
               ]
             },
@@ -126,7 +126,7 @@
               },
               "pictures": [
                 {
-                  "src": "oem_assets/mosaic-surface-5.jpg"
+                  "src": "img/hebrew/oem_assets/mosaic-surface-5.jpg"
                 }
               ]
             },
@@ -137,7 +137,7 @@
               },
               "pictures": [
                 {
-                  "src": "oem_assets/mosaic-ports.jpg"
+                  "src": "img/hebrew/oem_assets/mosaic-ports.jpg"
                 }
               ]
             },
@@ -148,7 +148,7 @@
               },
               "pictures": [
                 {
-                  "src": "oem_assets/mosaic-headphones.jpg"
+                  "src": "img/hebrew/oem_assets/mosaic-headphones.jpg"
                 }
               ]
             }
@@ -168,7 +168,7 @@
         {
           "layout": "feature",
           "media": {
-            "src": "windows_assets/Devices_cropped_0005_Just-Works-Cortana.png",
+            "src": "img/hebrew/windows_assets/Devices_cropped_0005_Just-Works-Cortana.png",
             "blockType": "img"
           },
           "textSide": "left",
@@ -185,7 +185,7 @@
           "text1": "קבל חוויית אינטרנט טובה יותר עם הדפדפן החדש והחדיש: מאמרים ללא הפרעות והיכולת לכתוב בדפי אינטרנט כדי לשתף עם חברים.",
           "media": {
             "blockType": "img",
-            "src": "windows_assets/Devices_cropped_0002_Spartan.png"
+            "src": "img/hebrew/windows_assets/Devices_cropped_0002_Spartan.png"
           },
           "logo": "",
           "button": {
@@ -211,7 +211,7 @@
           "textSide": "left",
           "logo": "",
           "media": {
-            "src": "windows_assets/Devices_cropped_0004_Store.png",
+            "src": "img/hebrew/windows_assets/Devices_cropped_0004_Store.png",
             "blockType": "img"
           },
           "legalText": "*אפליקציות ותכנים מסוימים נמכרים בנפרד. הזמינות של תכונות ושל אפליקציות עשויה להשתנות בהתאם לשוק ולמכשיר.",
@@ -240,7 +240,7 @@
           "header": "<span><b><span style='color:#58585a'>היכולת</span> להגיע להישגים שעולים על הציפיות.</b></span>",
           "media": {
             "blockType": "img",
-            "src": "office_assets/RDX Demo Image_Pg1.png"
+            "src": "img/hebrew/office_assets/RDX Demo Image_Pg1.png"
           },
           "groupIdentifier": "office",
           "sectionIdentifier": "Page1",
@@ -252,7 +252,7 @@
           "header": "<span><b><span style='color:#58585a'>Office מעניק לך את היכולת</span> להגיע להישגים שעולים על הציפיות.</b></span>",
           "media": {
             "blockType": "img",
-            "src": "office_assets/RDX Demo Images_Pillars.png"
+            "src": "img/hebrew/office_assets/RDX Demo Images_Pillars.png"
           },
           "groupIdentifier": "office",
           "sectionIdentifier": "Page2",
@@ -264,7 +264,7 @@
           "header": "<span><b><span style='color:#58585a'>מה חדש ב- </span> Office 365?</b></span>",
           "media": {
             "blockType": "img",
-            "src": "office_assets/RDX Demo Images_WhatsNew.png"
+            "src": "img/hebrew/office_assets/RDX Demo Images_WhatsNew.png"
           },
           "groupIdentifier": "office",
           "sectionIdentifier": "Page3",
@@ -276,7 +276,7 @@
           "header": "<span><b><span style='color:#58585a'>גלה את Office</span> המתאים לך.</b></span>",
           "media": {
             "blockType": "img",
-            "src": "office_assets/Office_Chart_V3.gif"
+            "src": "img/hebrew/office_assets/Office_Chart_V3.gif"
           },
           "groupIdentifier": "office",
           "sectionIdentifier": "Page4",

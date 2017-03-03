@@ -4,6 +4,7 @@ import Button from '../button/Button';
 import './legacy.scss!';
 import sanitizeHtml from 'sanitize-html';
 import propsAreValid, {_cssSplit} from '../../lib/util';
+import _ from 'lodash';
 
 class LegacyKSP extends React.Component {
     //TODO: stub this out into ../../lib/util
@@ -33,9 +34,13 @@ class LegacyKSP extends React.Component {
                 style, textSide, header, logo, text1, text2, itembody1, itembody2, itemheading1, itemheading2, caption1, caption2, icon1, icon2, media, button, legalText
             } = this.props.data;
 
-            let templateClass = classNames(`f-align-${textSide}`, `c-feature`);
+            let splitStyle = _cssSplit(style);
 
-            let templateStyle = style ? _cssSplit(style) : null;
+            let rtl = _.includes(splitStyle, 'rtl');
+
+            let templateClass = classNames(`f-align-${rtl === true ? `right` : textSide}`, `c-feature`);
+
+            let templateStyle = splitStyle;
 
             let btnStyle = {
                 background: cardButtonBackground,

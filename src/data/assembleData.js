@@ -13,35 +13,35 @@ import dummyWindows from './legacy/dummyWindows.json!';
 import dummyDefault from './legacy/dummyDefault.json!';
 import dummyStyle from './legacy/dummyStyleExample.json!';
 import dummyHp from './legacy/dummyHP.json!';
+import dummyHebrew from './legacy/dummyHebrew.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
 let data = {};
 if(!window.RDX) {
-let defaultVertical = {
-    "layout": "VerticalPage",
-    "deviceInformation": {
-        "ManufacturerName": "Microsoft",
-        "ModelName": "Surface Book",
-        "price": "$1499",
-        "salePrice": "$1399",
-        "saleExpires": "11/1/16",
-        "label": "Starting at:"
-    },
-    "ratings": {
-        "rating": "3",
-        "bestRating": "5",
-        "ratingText": "See reviews",
-        "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
-    },
-    "groups": []
-};
+    let defaultVertical = {
+        "layout": "VerticalPage",
+        "deviceInformation": {
+            "ManufacturerName": "Microsoft",
+            "ModelName": "Surface Book",
+            "price": "$1499",
+            "salePrice": "$1399",
+            "saleExpires": "11/1/16",
+            "label": "Starting at:"
+        },
+        "ratings": {
+            "rating": "3",
+            "bestRating": "5",
+            "ratingText": "See reviews",
+            "reviewLink": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Book/productID.325716000#ratingsandreviews"
+        },
+        "groups": []
+    };
 //Sample fscreen video by itself
 //defaultVertical.groups.push(dummyFVideo, dummyRetailer);
 //sample surface data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
 defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
-data = defaultVertical;
-//HP data
-//data = dummyHp;
+    data = defaultVertical;
 }
+//data = defaultVertical;
 export default data;

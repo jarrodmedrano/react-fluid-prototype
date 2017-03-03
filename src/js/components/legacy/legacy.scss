@@ -13,7 +13,12 @@
     width: 60%;
     max-width: 60%;
   }
-  .c-feature.f-align-left>div, .c-feature.f-align-right>div {
+
+  .c-feature.f-align-right > div {
+    left: 60%;
+  }
+
+  .c-feature.f-align-left > div, .c-feature.f-align-right > div {
     width: 40%;
   }
 

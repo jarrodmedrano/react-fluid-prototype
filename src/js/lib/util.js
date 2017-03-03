@@ -20,12 +20,14 @@ export function impressionEvent(visible, group, section) {
 }
 
 export function _cssSplit(str){
-    let O = {},
-        S = str.match(/([^ :;]+)/g) || [];
-    while(S.length) {
-        O[S.shift()]= S.shift() || '';
+    if(str) {
+        let O = {},
+            S = str.match(/([^ :;]+)/g) || [];
+        while(S.length) {
+            O[S.shift()]= S.shift() || '';
+        }
+        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
     }
-    return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
 }
 
 export default function propsAreValid(props, componentName = 'ANONYMOUS') {
