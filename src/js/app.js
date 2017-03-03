@@ -96,9 +96,9 @@ class RenderForcer extends React.Component {
     render() {
         return (
             <Router history={appHistory}>
-                <Route path="/" component={App} onChange={this._handleChange}>
+                <Route path="/" component={App} onChange={this._handleChange} key={Math.random()}>
                     <IndexRoute onChange={this._changeHandler} title={Index.groupIdentifier}
-                                component={(props, state, params) => <MasterLayout {...props} updatedId={this.state.updatedId} />}/>
+                                component={(props, state, params) => <MasterLayout {...props} updatedId={Math.random()} />}/>
                     {Routes.map(function (result, id) {
                         return <Route onChange={this._changeHandler} key={id} path={result.groupIdentifier} title={result.groupIdentifier}
                                       component={(props, state, params) => <MasterLayout  {...props} updatedId={this.state.updatedId} />} />;

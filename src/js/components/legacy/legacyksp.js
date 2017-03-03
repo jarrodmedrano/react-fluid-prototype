@@ -66,7 +66,7 @@ class LegacyKSP extends React.Component {
                                 {header ? <h1 className="c-heading c-logo" style={headerStyle}
                                               dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
 
-                                <div data-grid="col-12" className="c-structured-list">
+                                <div data-grid="col-12" className="c-structured-list" style={rtl ? {textAlign: 'right'} : null}>
                                     <ul className="f-column">
                                         <li className="f-row">
                                             {icon1 ?
@@ -83,7 +83,7 @@ class LegacyKSP extends React.Component {
                                                        dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itembody1 ? itembody1 : null)}}/> : null }
                                             </div>
                                         </li>
-                                        <li className="f-row">
+                                        <li className="f-row" >
                                             {icon2 ?
                                                 <div data-grid="col-2 stack-2">
                                                     <img className="c-image" src={icon2}/>

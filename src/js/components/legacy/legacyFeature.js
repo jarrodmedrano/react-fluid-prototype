@@ -71,7 +71,7 @@ class LegacyFeature extends React.Component {
                                 <div className="f-video-cc-overlay" aria-hidden="true"></div>
                             </div>
                             : null}
-                        <div>
+                        <div style={rtl ? {textAlign: 'right'} : null}>
                             <div>
                                 {logo ? <img className="logo c-image" alt={header} src={logo}/> : null}
                                 {header ? <h1 className="c-heading c-logo" style={headerStyle}
