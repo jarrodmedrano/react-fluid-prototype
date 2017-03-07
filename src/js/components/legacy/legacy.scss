@@ -16,6 +16,15 @@
 
   .c-feature.f-align-right > div {
     left: 60%;
+    a.c-call-to-action {
+      padding: 10px 24px 7px 44px;
+
+      &:after {
+        content: '\e76b' !important;
+        margin-right: 4px;
+        margin-left: 0;
+      }
+    }
   }
 
   .c-feature.f-align-left > div, .c-feature.f-align-right > div {
