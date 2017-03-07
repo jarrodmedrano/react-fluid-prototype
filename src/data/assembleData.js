@@ -40,10 +40,10 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
-// defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
-//     data = defaultVertical;
+ defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+ data = defaultVertical;
     //data = dummyHp;
-    data = dummyHebrew;
+    //data = dummyHebrew;
 }
 //data = defaultVertical;
 export default data;

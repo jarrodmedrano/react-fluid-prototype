@@ -24,11 +24,15 @@ class ButtonLink extends React.Component {
 
     cleanHtml(dirty) {
         return sanitizeHtml(dirty, {
-            allowedTags: [],
-            allowedAttributes: []
+            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span'],
+            allowedAttributes: {
+                'a': ['href', 'style'],
+                'span': ['style'],
+                'b': ['style'],
+                'p': ['style']
+            }
         });
     }
-
 
     render() {
 

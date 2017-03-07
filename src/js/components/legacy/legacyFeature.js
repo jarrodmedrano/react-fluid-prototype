@@ -83,7 +83,7 @@ class LegacyFeature extends React.Component {
                                 {text3 ? <p className="c-paragraph"
                                             dangerouslySetInnerHTML={{__html: this._cleanHtml(text3)}}/> : null }
                             </div>
-                            {button ? <Button data={this.props.data} style={btnStyle}/> : null }
+                            {button ? <Button data={this.props.data} style={btnStyle} /> : null }
                             {legalText ? <p className="c-paragraph-4"
                                             dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}}/> : null }
                         </div>
