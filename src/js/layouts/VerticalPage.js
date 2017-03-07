@@ -228,7 +228,7 @@ class VerticalPage extends React.Component {
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
                                     <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.state.currentPage}-sceneRef-${id}`} itemRef={id}>
-                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} updatedId={this.props.updatedId} myId={id} />
+                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} myId={id} />
                                     </Element>
                                 )
                             }, this)

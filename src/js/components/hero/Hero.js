@@ -54,7 +54,7 @@ class Hero extends React.Component {
                 if (this.props.data.video) {
                     return (
                         <div>
-                            <Video updated={this.props.updated} active={this.props.active} data={this.props.data} className="video-fullscreen fixed" />
+                            <Video active={this.props.active} data={this.props.data} className="video-fullscreen fixed" />
                         </div>
                     )
                 }

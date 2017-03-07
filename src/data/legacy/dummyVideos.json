@@ -1,0 +1,58 @@
+{
+  "groupIdentifier": "videos",
+  "brand": {
+    "groupIdentifier": "videos",
+    "logo": "img/retailer_assets/Office_logo.png",
+    "color": "#dc3c00"
+  },
+  "sections": [
+    {
+      "layout": "feature",
+      "textSide": "left",
+      "header": "<span><b><span style='color:#58585a'>The Power to</span> overachieve.</b></span>",
+      "media": {
+        "blockType": "video",
+        "src": "img/sample_videos/bunny.mp4"
+      },
+      "groupIdentifier": "videos",
+      "sectionIdentifier": "Page1",
+      "ordinal": "100"
+    },
+    {
+      "layout": "feature",
+      "textSide": "left",
+      "header": "Create <span><b><span style='color:#58585a'>amazing documents with ease using built in research and smart proofing tools.</span></b></span>",
+      "media": {
+        "blockType": "video",
+        "src": "img/sample_videos/legos.mp4"
+      },
+      "groupIdentifier": "videos",
+      "sectionIdentifier": "Page2",
+      "ordinal": "200"
+    },
+    {
+      "layout": "feature",
+      "textSide": "left",
+      "header": "Move <span><b><span style='color:#58585a'>with OneDrive.  Share documents, photos and work across all your devices.</span></b></span>",
+      "media": {
+        "blockType": "video",
+        "src": "img/sample_videos/trailer.mp4"
+      },
+      "groupIdentifier": "videos",
+      "sectionIdentifier": "Page3",
+      "ordinal": "300"
+    },
+    {
+      "layout": "feature",
+      "textSide": "left",
+      "header": "<span><b><span style='color:#58585a'>Discover the Office</span> that is right for you.</b></span>",
+      "media": {
+        "blockType": "img",
+        "src": "img/office_assets/Office_Chart_V3.gif"
+      },
+      "groupIdentifier": "videos",
+      "sectionIdentifier": "Page4",
+      "ordinal": "400"
+    }
+  ]
+}

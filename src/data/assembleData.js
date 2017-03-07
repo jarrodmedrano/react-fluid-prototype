@@ -14,6 +14,7 @@ import dummyDefault from './legacy/dummyDefault.json!';
 import dummyStyle from './legacy/dummyStyleExample.json!';
 import dummyHp from './legacy/dummyHP.json!';
 import dummyHebrew from './legacy/dummyHebrew.json!';
+import dummyVideos from './legacy/dummyVideos.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
 let data = {};
 if(!window.RDX) {
@@ -40,7 +41,7 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
- defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+ defaultVertical.groups.push(dummyVideos, dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
  data = defaultVertical;
     //data = dummyHp;
     //data = dummyHebrew;

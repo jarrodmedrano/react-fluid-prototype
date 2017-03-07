@@ -15,20 +15,15 @@ class Vertical extends React.Component {
     
     constructor(props){
         super(props);
-        let updatedId = this.props.updatedId;
 
         this.state = {
             active: false,
-            updatedId: updatedId,
-            updated: false
         }
     }
 
     componentWillReceiveProps(nextProps) {
         //if vertical is scrolled to, set active to true
         nextProps.activeId === this.props.myId ? this.setState({active: true}) : this.setState({active: false});
-        //if page is updated, set updated to true
-        this.state.updatedId != nextProps.updatedId ? this.setState({updated: true}) && this.setState({updatedId: nextProps.updated}) : null;
     }
 
     render() {
@@ -44,37 +39,37 @@ class Vertical extends React.Component {
                         {layout == 'hero' || layout == 'immersive-hero' || layout == 'fullscreen' || layout == 'card' ?
                             <Hero data={this.props.data}
                                   brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                  active={this.state.active} updated={this.state.updated}/> : null
+                                  active={this.state.active} myId={this.props.myId} /> : null
                         }
                         {layout == 'mosaic' ?
                             <Mosaic data={this.props.data}
                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                    active={this.state.active} updated={this.state.updated}/> : null
+                                    active={this.state.active} myId={this.props.myId} /> : null
                         }
                         {layout == 'compare' ?
                             <CompareTable data={this.props.data}
                                           brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                          active={this.state.active} updated={this.state.updated}/> : null
+                                          active={this.state.active} myId={this.props.myId} /> : null
                         }
                         {layout == 'feature' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                           active={this.state.active} updated={this.state.updated}/> : null
+                                           active={this.state.active} myId={this.props.myId} /> : null
                         }
                         {layout == 'featureCta' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                           active={this.state.active} updated={this.state.updated}/> : null
+                                           active={this.state.active} myId={this.props.myId} /> : null
                         }
                         {layout == 'ksp' || layout == 'ksp_rs' || layout == 'ksp_reversed' ?
                             <LegacyKSP data={this.props.data}
                                        brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                       active={this.state.active} updated={this.state.updated}/> : null
+                                       active={this.state.active} myId={this.props.myId} /> : null
                         }
                         {layout == 'centeredBackdropTemplate' ?
                             <LegacyCenteredBackdrop data={this.props.data}
                                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                                    active={this.state.active} updated={this.state.updated}/> : null
+                                                    active={this.state.active} myId={this.props.myId} /> : null
                         }
                     </section>
                 )

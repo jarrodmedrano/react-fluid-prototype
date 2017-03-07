@@ -53,6 +53,8 @@ class LegacyFeature extends React.Component {
                 color: this.props.brandColor
             };
 
+            console.log(this.props.myId);
+
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12"
                      style={templateStyle ? templateStyle : null}>
@@ -67,7 +69,7 @@ class LegacyFeature extends React.Component {
                             </picture> : null }
                         {media.blockType && media.blockType === 'video' ?
                             <div id="videoPlayer1" className="c-video">
-                                <Video updated={this.props.updated} active={this.props.active} data={this.props.data}/>
+                                <Video active={this.props.active} data={this.props.data} myId={this.props.myId} />
                                 <div className="f-video-cc-overlay" aria-hidden="true"></div>
                             </div>
                             : null}

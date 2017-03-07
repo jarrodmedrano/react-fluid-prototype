@@ -3,9 +3,22 @@ import propsAreValid from '../../lib/util';
 
 class Video extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            mute: true
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         this._handleVideo(nextProps.active);
-        nextProps.updated === true ? this._resetVideo() : null;
+    }
+
+    shouldComponentUpdate(nextProps) {
+        //nextProps.updated === true ? this._resetVideo() : null;
+        nextProps.myId === 0 ? this.setState({mute: true}) : this.setState({mute: false});
+        return true;
     }
 
     componentDidMount() {
@@ -41,7 +54,7 @@ class Video extends React.Component {
                 //TODO: fix aria labels
                 <video className={className ? className : 'f-video-player'} preload="metadata" loop
                        aria-labelledby="" aria-describedby=""
-                       ref="vidRef">
+                       ref="vidRef" muted={this.state.mute}>
                     <source src={media ? media.src : video ? video : null} type="video/mp4"/>
                 </video>
             )

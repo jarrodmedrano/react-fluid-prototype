@@ -29,12 +29,14 @@ const Routes = myData.groups.filter(function (result, index) {
 });
 
 //Navigate to Home
-window.home = () => appHistory.push('/');
+window.home = () => {
+    appHistory.push('/');
+};
 
 //Reset function
 window.reset = () => {
     let reset = new Promise(function(resolve){
-        appHistory.replace('/');
+        appHistory.push('/');
         ReactDOM.unmountComponentAtNode(document.getElementById('app'), resolve)
     });
     reset.then(ReactDOM.render(<RenderForcer />, document.getElementById('app')));
@@ -78,9 +80,6 @@ class RenderForcer extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            updatedId: Math.random()
-        };
 
         this._changeHandler = this._changeHandler.bind(this);
     }
@@ -90,18 +89,17 @@ class RenderForcer extends React.Component {
     }
 
     _changeHandler() {
-        this.setState({updatedId: Math.random()});
     }
 
     render() {
         return (
-            <Router history={appHistory}>
-                <Route path="/" component={App} onChange={this._handleChange} key={Math.random()}>
-                    <IndexRoute onChange={this._changeHandler} title={Index.groupIdentifier}
-                                component={(props, state, params) => <MasterLayout {...props} updatedId={Math.random()} />}/>
+            <Router history={appHistory} onChange={this._changeHandler}>
+                <Route path="/" component={App} onChange={this._handleChange}>
+                    <IndexRoute title={Index.groupIdentifier}
+                                component={(props, state, params) => <MasterLayout {...props} />}/>
                     {Routes.map(function (result, id) {
-                        return <Route onChange={this._changeHandler} key={id} path={result.groupIdentifier} title={result.groupIdentifier}
-                                      component={(props, state, params) => <MasterLayout  {...props} updatedId={this.state.updatedId} />} />;
+                        return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
+                                      component={(props, state, params) => <MasterLayout  {...props} />} />;
                     }, this)}
                 </Route>
             </Router>
