@@ -53,8 +53,6 @@ class LegacyFeature extends React.Component {
                 color: this.props.brandColor
             };
 
-            console.log(this.props.myId);
-
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12"
                      style={templateStyle ? templateStyle : null}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
-import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import Scroll  from 'react-scroll';
@@ -66,12 +66,13 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <ReactCSSTransitionGroup component="div" transitionName="page-transition"
+                transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                     {React.cloneElement(this.props.children, {
                         key: this.props.location.pathname,
                         data: myData
                     })}
-            </div>
+            </ReactCSSTransitionGroup>
         );
     }
 }

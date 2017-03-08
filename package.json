@@ -32,6 +32,7 @@
       "lodash": "npm:lodash@^4.16.4",
       "picturefill": "npm:picturefill@^3.0.2",
       "react": "npm:react@^15.2.1",
+      "react-addons-css-transition-group": "npm:react-addons-css-transition-group@^15.4.2",
       "react-dom": "npm:react-dom@^15.2.1",
       "react-keydown": "npm:react-keydown@^1.6.5",
       "react-router": "npm:react-router@^2.6.0",

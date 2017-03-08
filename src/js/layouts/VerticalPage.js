@@ -15,8 +15,8 @@ import DownArrow from '../components/downarrow/DownArrow';
 import _ from 'lodash';
 import keydown from 'react-keydown';
 import Element from '../components/scrollElement/Element';
-import Scroll  from 'react-scroll';
-let scroller = Scroll.scroller;
+//import Scroll  from 'react-scroll';
+// let scroller = Scroll.scroller;
 let myWinHeight = window.innerHeight + 200;
 
 class VerticalPage extends React.Component {
@@ -118,11 +118,15 @@ class VerticalPage extends React.Component {
         e.preventDefault();
         let sectionKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 
+
         sectionKeys.map(function (result, id) {
             if (id < this.state.currentSections.length && e.which === result) {
-                return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
+                let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${id}`]);
+                window.scrollTo(0, ref.offsetTop);
+                // return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
             }
         }, this);
+
     }
 
     _handleNext(e) {
@@ -135,20 +139,28 @@ class VerticalPage extends React.Component {
     }
 
     _goNext() {
+        let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${this.state.currentSection += 1}`]);
+
         this.setState({currentSection: this.state.currentSection += 1},
-            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
+            window.scrollTo(0, ref.offsetTop)
+            // window.scrollTo(0, findDOMNode(this.refs[0]))
+            // scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
         );
     }
 
     _goPrevious() {
+        let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${this.state.currentSection -= 1}`]);
+
         this.setState({currentSection: this.state.currentSection -= 1},
-            scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
+            window.scrollTo(0, ref.offsetTop)
+            //window.scrollTo(0, findDOMNode(this.refs[0]))
+            // scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
         );
     }
 
     _goTop() {
         this.setState({currentSection: 0});
-        scroller.scrollTo(`${this.state.currentTitle}-section-0`);
+        //scroller.scrollTo(`${this.state.currentTitle}-section-0`);
     }
 
     _updateDimensions() {
@@ -165,6 +177,7 @@ class VerticalPage extends React.Component {
     }
 
     _checkSceneVisible() {
+        //map through all refs and check if element is visible in the viewport
         let refs = _.map(this.refs);
         refs.map(function(result) {
             result.rect = findDOMNode(result).getBoundingClientRect();
@@ -227,7 +240,7 @@ class VerticalPage extends React.Component {
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
-                                    <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.state.currentPage}-sceneRef-${id}`} itemRef={id}>
+                                    <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.props.route.title}-section-${id}`} itemRef={id}>
                                         <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} myId={id} />
                                     </Element>
                                 )

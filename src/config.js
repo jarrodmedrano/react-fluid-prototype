@@ -27,6 +27,7 @@ System.config({
     "lodash": "npm:lodash@4.16.6",
     "picturefill": "npm:picturefill@3.0.2",
     "react": "npm:react@15.4.2",
+    "react-addons-css-transition-group": "npm:react-addons-css-transition-group@15.4.2",
     "react-dom": "npm:react-dom@15.4.2",
     "react-intl": "npm:react-intl@2.1.3",
     "react-keydown": "npm:react-keydown@1.6.5",
@@ -426,7 +427,7 @@ System.config({
     },
     "npm:isomorphic-fetch@2.2.1": {
       "node-fetch": "npm:node-fetch@1.6.3",
-      "whatwg-fetch": "npm:whatwg-fetch@2.0.2"
+      "whatwg-fetch": "npm:whatwg-fetch@2.0.3"
     },
     "npm:js-base64@2.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
@@ -522,6 +523,11 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:react-addons-css-transition-group@15.4.2": {
+      "fbjs": "npm:fbjs@0.8.9",
+      "object-assign": "npm:object-assign@4.1.1",
+      "react": "npm:react@15.4.2"
     },
     "npm:react-dom@15.4.2": {
       "fbjs": "npm:fbjs@0.8.9",
