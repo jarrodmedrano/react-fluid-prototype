@@ -39,9 +39,9 @@ if(!window.RDX) {
 //Sample fscreen video by itself
 //defaultVertical.groups.push(dummyFVideo, dummyRetailer);
 //sample surface data
-//defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
+defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
 //Sample retailer data
- defaultVertical.groups.push(dummyVideos, dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+ //defaultVertical.groups.push(dummyVideos, dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
  data = defaultVertical;
     //data = dummyHp;
     //data = dummyHebrew;

@@ -160,6 +160,7 @@ class VerticalPage extends React.Component {
 
     _goTop() {
         this.setState({currentSection: 0});
+        window.scrollTo(0, 0);
         //scroller.scrollTo(`${this.state.currentTitle}-section-0`);
     }
 
