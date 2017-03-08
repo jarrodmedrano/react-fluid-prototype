@@ -1,5 +1,5 @@
 import React from 'react';
-import Picture from '../picture/Picture';
+import MosaicPicture from '../picture/MosaicPicture';
 import classNames from 'classnames';
 import Heading from '../heading/Heading';
 import ButtonLink from '../link/ButtonLink'
@@ -23,7 +23,7 @@ class MosaicTile extends React.Component {
                     <ButtonLink to={this.props.data.button.link} layout="mosaic">
                         <section className="c-mosaic-placement c-placement" style={tileStyle}>
                             {overlay ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: overlay}}></div> : null }
-                            {pictures ? <Picture data={this.props.data} /> : null}
+                            {pictures ? <MosaicPicture data={this.props.data} /> : null}
                             {this.props.data.button.text && (this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
                         </section>
                     </ButtonLink>
@@ -31,7 +31,7 @@ class MosaicTile extends React.Component {
             } else {
                 return (
                     <section className="c-mosaic-placement">
-                        {pictures ? <Picture data={this.props.data} /> : null}
+                        {pictures ? <MosaicPicture data={this.props.data} /> : null}
                         {(this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
                     </section>
                 )

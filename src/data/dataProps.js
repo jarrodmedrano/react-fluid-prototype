@@ -18,6 +18,8 @@ export let picturePropTypes = {
     altText: string
 };
 
+export let MosaicPicturePropTypes = picturePropTypes;
+
 export let headingPropTypes = {
     heading: string,
     subheading: string,
