@@ -9,30 +9,30 @@ import dataPropTypes, {tilePropTypes} from '../../../data/dataProps';
 class MosaicTile extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let { textColor, backgroundColor, pictures } = this.props.data;
+            let { headingBlock, pictureBlock } = this.props.data;
+            let { textColor, backgroundColor, } = headingBlock;
 
             let tileStyle = {
                 background: backgroundColor,
                 color: textColor
             };
 
-            if(propsAreValid(this.props.data.button)) {
-                let { overlay } = this.props.data.button;
-
+            if(propsAreValid(headingBlock.button, this)) {
+                let { overlay } = headingBlock.button;
                 return (
-                    <ButtonLink to={this.props.data.button.link} layout="mosaic">
+                    <ButtonLink to={headingBlock.button.link} layout="mosaic">
                         <section className="c-mosaic-placement c-placement" style={tileStyle}>
                             {overlay ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: overlay}}></div> : null }
-                            {pictures ? <MosaicPicture data={this.props.data} /> : null}
-                            {this.props.data.button.text && (this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
+                            {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
+                            {headingBlock && (this.props.size != 'small') ? <Heading data={headingBlock} /> : null}
                         </section>
                     </ButtonLink>
                 )
             } else {
                 return (
                     <section className="c-mosaic-placement">
-                        {pictures ? <MosaicPicture data={this.props.data} /> : null}
-                        {(this.props.size != 'small') ? <Heading data={this.props.data} /> : null}
+                        {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
+                        {headingBlock && (this.props.size != 'small') ? <Heading data={headingBlock} /> : null}
                     </section>
                 )
             }

@@ -71,7 +71,7 @@ class LegacyCenteredBackdrop extends React.Component {
                                                     dangerouslySetInnerHTML={{__html: this._cleanHtml(subheader)}}/> : null }
                                 </div>
                             </div>
-                            {button ? <Button data={this.props.data} style={btnStyle} /> : null }
+                            {button ? <Button data={this.props.data.button} style={btnStyle} /> : null }
                             {legalText ? <p className="c-paragraph-4"
                                             dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}} /> : null }
                         </div>

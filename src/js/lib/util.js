@@ -30,14 +30,18 @@ export function _cssSplit(str){
     }
 }
 
+export let logError = (...args) => {
+    if(window.RDX) {
+        window.RDX.logError(...args);
+    } else {
+        console.error(...args);
+    }
+};
+
 export default function propsAreValid(props, componentName = 'ANONYMOUS') {
     //TODO better validation of all props
     if(!props) {
-        if(window.RDX) {
-            window.RDX.logError('Error: no props were passed to component', componentName);
-        } else {
-            console.error('Error: no props were passed to component', componentName);
-        }
+        logError('Error: invalid props were passed to component:', props, 'was passed to:', componentName);
         return false
     } else {
         return true

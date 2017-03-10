@@ -5,8 +5,11 @@ import React from 'react';
     ONLY RUNS IN DEVELOPMENT, NOT IN PRODUCTION
 */}
 
-let string = React.PropTypes.string;
-let requiredString = React.PropTypes.string.isRequired;
+let string = React.PropTypes.string,
+    requiredString = React.PropTypes.string.isRequired,
+    requiredNum = React.PropTypes.number.isRequired,
+    requiredObj = React.PropTypes.object.isRequired,
+    requiredBool = React.PropTypes.bool.isRequired;
 
 export let picturePropTypes = {
     pictures: React.PropTypes.arrayOf(
@@ -106,8 +109,14 @@ export let linkPropTypes = {
 };
 
 export let verticalPropTypes = {
-    layout: requiredString,
-    ordinal: requiredString,
+    layout: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.object
+    ]).isRequired,
+    ordinal: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number
+    ]).isRequired,
     groupIdentifier: requiredString,
     sectionIdentifier: requiredString
 };
@@ -116,8 +125,8 @@ export let sectionPropTypes = {
     sections: React.PropTypes.arrayOf(React.PropTypes.shape({
         groupIdentifier: requiredString,
         sectionIdentifier: requiredString,
-        layout: requiredString,
-        anchorLink: string,
+        layout: Object.assign(verticalPropTypes.layout),
+        anchorLink: React.PropTypes.bool,
     }))
 };
 
@@ -165,7 +174,7 @@ export default function dataPropTypes(component) {
 //             sections: React.PropTypes.arrayOf(React.PropTypes.shape({
 //                 groupIdentifier: requiredString,
 //                 sectionIdentifier: requiredString,
-//                 layout: requiredString,
+//                 layout: requiredObj,
 //                 anchorLink: requiredString,
 //                 title: requiredString,
 //                 heading: string,

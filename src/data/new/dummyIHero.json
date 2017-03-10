@@ -1,5 +1,5 @@
 {
-  "groupIdentifier": "immersive-hero",
+  "groupIdentifier": "immersiveHero",
   "brand": {
     "logoTab": "",
     "color": "#3076BC",
@@ -7,102 +7,112 @@
   },
   "sections": [
     {
-      "ordinal": "100",
-      "groupIdentifier": "immersive-hero",
+      "ordinal": 100,
+      "groupIdentifier": "immersiveHero",
       "sectionIdentifier": "Immersive Hero",
-      "layout": "immersive-hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Center Top Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "picture": "http://placehold.it/1259x472/2F2F2F/171717",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-dark",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400px"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400px"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "http://www.microsoft.com",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignY": "top",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "200",
-      "groupIdentifier": "immersive-hero",
+      "ordinal": 200,
+      "groupIdentifier": "immersiveHero",
       "sectionIdentifier": "Immersive Hero",
-      "layout": "immersive-hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Center Bottom Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "picture": "http://placehold.it/1259x472/2F2F2F/171717",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-dark",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400px"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400px"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "http://www.microsoft.com",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignY": "bottom",
-      "theme": "theme-dark"
+      }
     }
   ]
 }

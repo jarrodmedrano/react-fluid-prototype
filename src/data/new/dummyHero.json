@@ -7,454 +7,508 @@
   },
   "sections": [
     {
-      "ordinal": "100",
+      "ordinal": 100,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section1",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Right Center Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "right",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "right",
-      "alignY": "center",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "200",
+      "ordinal": 200,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section2",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Right Top Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "right",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "right",
-      "alignY": "top",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "300",
+      "ordinal": 300,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section3",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Right Bottom Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "right",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "right",
-      "alignY": "bottom",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "400",
+      "ordinal": 400,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section4",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Center Center Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "center",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "center",
-      "alignY": "center",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "500",
+      "ordinal": 500,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section5",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Center Top Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "center",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "center",
-      "alignY": "top",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "600",
+      "ordinal": 600,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section6",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Center Bottom Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "center",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "center",
-      "alignY": "bottom",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "700",
+      "ordinal": 700,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section7",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Left Center Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "left",
-      "alignY": "center",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "800",
+      "ordinal": 800,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section7",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Left Top Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "left",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "left",
-      "alignY": "top",
-      "theme": "theme-dark"
+      }
     },
     {
-      "ordinal": "900",
+      "ordinal": 900,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section8",
-      "layout": "hero",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorTitle": "-- Left Bottom Dark --",
-      "heading": "-- Hero Heading --",
-      "subheading": "-- Subheading --",
-      "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
-      "altText": "AltText",
-      "ariaLabel": "AriaLabel",
-      "pictures": [
-        {
-          "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-          "minwidth": "1779"
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "left",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         },
-        {
-          "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-          "minwidth": "1400"
-        },
-        {
-          "src": "http://placehold.it/1259x472/2F2F2F/171717",
-          "minwidth": "1084"
-        },
-        {
-          "src": "http://placehold.it/1083x609/2F2F2F/171717",
-          "minwidth": "768"
-        },
-        {
-          "src": "http://placehold.it/767x431/2F2F2F/171717",
-          "minwidth": "540"
-        },
-        {
-          "src": "http://placehold.it/539x303/2F2F2F/171717",
-          "minwidth": "0"
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
-      ],
-      "button": {
-        "layout": "button",
-        "link": "#/windows",
-        "text": "Call to action",
-        "ariaLabel": "ariaLabel",
-        "textColor": "white",
-        "backgroundColor": "#0078D7"
-      },
-      "alignX": "left",
-      "alignY": "bottom",
-      "theme": "theme-dark"
+      }
     }
   ]
 }

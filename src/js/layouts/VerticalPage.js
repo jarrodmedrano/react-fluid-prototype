@@ -206,7 +206,7 @@ class VerticalPage extends React.Component {
             });
 
             let compareModels = _.find(oemGroup, function (result) {
-                if (result.layout === 'compare') {
+                if (typeof result.layout === 'object' && result.layout.type === 'compare') {
                     return result
                 }
             });

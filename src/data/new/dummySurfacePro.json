@@ -20,118 +20,157 @@
       "brand": {
         "logo": "img/vertical/ms-logo.png",
         "anchorTitle": "Surface Book",
-        "tabColor": "#ffffff",
+        "color": "#ffffff",
         "logoTab": "img/vertical/surfacebook-logo.png"
       },
       "sections": [
         {
-          "ordinal": "100",
+          "ordinal": 100,
           "groupIdentifier": "hero",
           "sectionIdentifier": "Section2",
-          "layout": "nothing",
-          "anchorLink": "true",
-          "anchorTitle": "Explore Surface Book",
-          "altText": "Surface Book Pro",
-          "ariaLabel": "Surface Book Pro",
-          "pictures": [
-            {
-              "src": "img/vertical/surface-hero.jpg",
-              "minwidth": "1779"
-            },
-            {
-              "src": "img/vertical/surface-hero.jpg",
-              "minwidth": "1400"
-            },
-            {
-              "src": "img/vertical/surface-hero.jpg",
-              "minwidth": "1084"
-            },
-            {
-              "src": "img/vertical/surface-hero.jpg",
-              "minwidth": "768px"
-            },
-            {
-              "src": "img/vertical/surface-hero.jpg",
-              "minwidth": "540"
-            },
-            {
-              "src": "img/vertical/surface-hero.jpg",
-              "minwidth": "0"
-            }
-          ],
           "alignX": "center",
           "alignY": "center",
-          "theme": "theme-light"
+          "theme": "theme-light",
+          "anchorLink": true,
+          "anchorTitle": "Explore Surface Book",
+          "layout": {
+            "type": "fullscreen",
+            "media": {
+              "pictureBlock": {
+                "altText": "Surface Book Pro",
+                "ariaLabel": "Surface Book Pro",
+                "pictures": [
+                  {
+                    "src": "img/vertical/surface-hero.jpg",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "img/vertical/surface-hero.jpg",
+                    "minWidth": "1400"
+                  },
+                  {
+                    "src": "img/vertical/surface-hero.jpg",
+                    "minWidth": "1084"
+                  },
+                  {
+                    "src": "img/vertical/surface-hero.jpg",
+                    "minWidth": "768px"
+                  },
+                  {
+                    "src": "img/vertical/surface-hero.jpg",
+                    "minWidth": "540"
+                  },
+                  {
+                    "src": "img/vertical/surface-hero.jpg",
+                    "minWidth": "0"
+                  }
+                ]
+              }
+            }
+          }
         },
         {
-          "ordinal": "200",
+          "ordinal": 200,
           "groupIdentifier": "oem",
           "sectionIdentifier": "Keyboard",
-          "layout": "fullscreen",
-          "anchorLink": "true",
+          "anchorLink": true,
           "anchorTitle": "Keyboard",
-          "heading": "Five-point touchpad",
-          "picture": "img/vertical/keyboard-hero.jpg",
-          "altText": "AltText",
-          "ariaLabel": "AriaLabel",
-          "pictures": [
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minwidth": "1779"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minwidth": "1400"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minwidth": "1084"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minwidth": "768"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minwidth": "540"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minwidth": "0"
-            }
-          ],
           "alignY": "bottom",
-          "theme": "theme-light"
+          "theme": "theme-light",
+          "layout": {
+            "type": "hero",
+            "alignY": "bottom",
+            "headingBlock": {
+              "heading": "Five-point touchpad"
+            },
+            "pictureBlock": {
+              "picture": "img/vertical/keyboard-hero.jpg",
+              "altText": "AltText",
+              "ariaLabel": "AriaLabel",
+              "pictures": [
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "0"
+                }
+              ]
+            }
+          }
         },
         {
-          "ordinal": "300",
+          "ordinal": 300,
           "groupIdentifier": "oem",
           "sectionIdentifier": "SurfacePen",
-          "layout": "fullscreen",
-          "anchorLink": "true",
+          "anchorLink": true,
           "anchorTitle": "Surface Pen",
-          "video": "img/vertical/Hero-pen.mp4"
+          "layout": {
+            "type": "fullscreen",
+            "media": {
+              "videoBlock": {
+                "src": "img/vertical/Hero-pen.mp4"
+              }
+            }
+          }
         },
         {
-          "ordinal": "400",
+          "ordinal": 400,
           "groupIdentifier": "oem",
           "sectionIdentifier": "Apps",
-          "layout": "fullscreen",
-          "anchorLink": "true",
+          "anchorLink": true,
           "anchorTitle": "Apps",
-          "heading": "-- Apps Heading --"
-        },
-        {
-          "ordinal": "500",
-          "groupIdentifier": "partner",
-          "sectionIdentifier": "Accessories",
-          "layout": "mosaic",
-          "anchorLink": "true",
-          "anchorTitle": "Accessories",
-          "theme": "theme-dark",
-          "mosaicLayout": "mosaic-3",
-          "tiles": [
-            {
+          "layout": {
+            "type": "card",
+            "pictureBlock": {
+              "picture": "img/vertical/keyboard-hero.jpg",
+              "altText": "AltText",
+              "ariaLabel": "AriaLabel",
+              "pictures": [
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "img/vertical/keyboard-hero.jpg",
+                  "minWidth": "0"
+                }
+              ]
+            },
+            "headingBlock": {
               "heading": "Accessories",
               "subheading": "The perfect complements to your Surface",
               "backgroundColor": "#0078D7",
@@ -143,233 +182,270 @@
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
-            },
-            {
-              "button": {
-                "link": "http://www.microsoft.com",
-                "overlay": "#000"
-              },
-              "pictures": [
-                {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
-                  "minwidth": "1779"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
-                  "minwidth": "1400"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
-                  "minwidth": "1084"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
-                  "minwidth": "768"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
-                  "minwidth": "540"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
-                  "minwidth": "0"
+            }
+          }
+        },
+        {
+          "ordinal": 500,
+          "groupIdentifier": "partner",
+          "sectionIdentifier": "Accessories",
+          "anchorLink": true,
+          "anchorTitle": "Accessories",
+          "theme": "theme-dark",
+          "layout": {
+            "type": "mosaic",
+            "mosaicLayout": "mosaic-3",
+            "tiles": [
+              {
+                "headingBlock": {
+                  "heading": "Accessories",
+                  "subheading": "The perfect complements to your Surface",
+                  "backgroundColor": "#0078D7",
+                  "textColor": "#FFF",
+                  "button": {
+                    "layout": "link",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
+                    "textColor": "white",
+                    "backgroundColor": "blue"
+                  }
                 }
-              ]
-            },
-            {
-              "button": {
-                "link": "http://www.microsoft.com",
-                "overlay": "#000"
               },
-              "pictures": [
-                {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
-                  "minwidth": "1779"
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "http://www.microsoft.com",
+                    "overlay": "#000"
+                  }
                 },
-                {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
-                  "minwidth": "1400"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
-                  "minwidth": "1084"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
-                  "minwidth": "768"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
-                  "minwidth": "540"
-                },
-                {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
-                  "minwidth": "0"
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/vertical/mosaic-surface-8.jpg",
+                      "minWidth": "1779"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-8.jpg",
+                      "minWidth": "1400"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-8.jpg",
+                      "minWidth": "1084"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-8.jpg",
+                      "minWidth": "768"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-8.jpg",
+                      "minWidth": "540"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-8.jpg",
+                      "minWidth": "0"
+                    }
+                  ]
                 }
-              ]
-            },
-            {
-              "button": {
-                "link": "http://www.microsoft.com",
-                "overlay": "#000"
               },
-              "pictures": [
-                {
-                  "src": "img/vertical/mosaic-ports.jpg",
-                  "minwidth": "1779"
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "http://www.microsoft.com",
+                    "overlay": "#000"
+                  }
                 },
-                {
-                  "src": "img/vertical/mosaic-ports.jpg",
-                  "minwidth": "1400"
-                },
-                {
-                  "src": "img/vertical/mosaic-ports.jpg",
-                  "minwidth": "1084"
-                },
-                {
-                  "src": "img/vertical/mosaic-ports.jpg",
-                  "minwidth": "768"
-                },
-                {
-                  "src": "img/vertical/mosaic-ports.jpg",
-                  "minwidth": "540"
-                },
-                {
-                  "src": "img/vertical/mosaic-ports.jpg",
-                  "minwidth": "0"
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/vertical/mosaic-surface-5.jpg",
+                      "minWidth": "1779"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-5.jpg",
+                      "minWidth": "1400"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-5.jpg",
+                      "minWidth": "1084"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-5.jpg",
+                      "minWidth": "768"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-5.jpg",
+                      "minWidth": "540"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-surface-5.jpg",
+                      "minWidth": "0"
+                    }
+                  ]
                 }
-              ]
-            },
-            {
-              "button": {
-                "link": "http://www.microsoft.com",
-                "overlay": "#000"
               },
-              "pictures": [
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "http://www.microsoft.com",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/vertical/mosaic-ports.jpg",
+                      "minWidth": "1779"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-ports.jpg",
+                      "minWidth": "1400"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-ports.jpg",
+                      "minWidth": "1084"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-ports.jpg",
+                      "minWidth": "768"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-ports.jpg",
+                      "minWidth": "540"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-ports.jpg",
+                      "minWidth": "0"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "http://www.microsoft.com",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/vertical/mosaic-headphones.jpg",
+                      "minWidth": "1779"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-headphones.jpg",
+                      "minWidth": "1400"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-headphones.jpg",
+                      "minWidth": "1084"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-headphones.jpg",
+                      "minWidth": "768"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-headphones.jpg",
+                      "minWidth": "540"
+                    },
+                    {
+                      "src": "img/vertical/mosaic-headphones.jpg",
+                      "minWidth": "0"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ordinal": 600,
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Compare",
+          "anchorLink": true,
+          "anchorTitle": "Compare",
+          "layout": {
+            "type": "compare",
+            "headingBlock": {
+              "heading": "-- Compare Heading --"
+            },
+            "compare": {
+              "models": [
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
-                  "minwidth": "1779"
+                  "heading": "-- Hero Heading --",
+                  "specs": [
+                    "processor: Intel Core i7",
+                    "storage: 1 TB",
+                    "memory: 16 GB + dGPU"
+                  ],
+                  "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                  ]
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
-                  "minwidth": "1400"
+                  "specs": [
+                    "processor: Intel Core i7",
+                    "storage: 1 TB",
+                    "memory: 16 GB + dGPU"
+                  ],
+                  "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                  ]
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
-                  "minwidth": "1084"
+                  "specs": [
+                    "processor: Intel Core i7",
+                    "storage: 1 TB",
+                    "memory: 16 GB + dGPU"
+                  ],
+                  "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                  ]
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
-                  "minwidth": "768"
+                  "specs": [
+                    "processor: Intel Core i7",
+                    "storage: 1 TB",
+                    "memory: 16 GB + dGPU"
+                  ],
+                  "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                  ]
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
-                  "minwidth": "540"
+                  "specs": [
+                    "processor: Intel Core i7",
+                    "storage: 1 TB",
+                    "memory: 16 GB + dGPU"
+                  ],
+                  "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                  ]
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
-                  "minwidth": "0"
+                  "specs": [
+                    "processor: Intel Core i7",
+                    "storage: 1 TB",
+                    "memory: 16 GB + dGPU"
+                  ],
+                  "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                  ]
                 }
               ]
             }
-          ]
-        },
-        {
-          "ordinal": "600",
-          "groupIdentifier": "oem",
-          "sectionIdentifier": "Compare",
-          "layout": "compare",
-          "anchorLink": "true",
-          "anchorTitle": "Compare",
-          "heading": "-- Compare Heading --",
-          "compare": {
-            "models": [
-              {
-                "heading": "-- Hero Heading --",
-                "specs":
-                [
-                  "processor: Intel Core i7",
-                  "storage: 1 TB",
-                  "memory: 16 GB + dGPU"
-                ],
-                "features":
-                [
-                  "Light online browsing",
-                  "Send emails",
-                  "Check mail"
-                ]
-              },
-              {
-                "specs":
-                [
-                  "processor: Intel Core i7",
-                  "storage: 1 TB",
-                  "memory: 16 GB + dGPU"
-                ],
-                "features":
-                [
-                  "Light online browsing",
-                  "Send emails",
-                  "Check mail"
-                ]
-              },
-              {
-                "specs":
-                [
-                  "processor: Intel Core i7",
-                  "storage: 1 TB",
-                  "memory: 16 GB + dGPU"
-                ],
-                "features":
-                [
-                  "Light online browsing",
-                  "Send emails",
-                  "Check mail"
-                ]
-              },
-              {
-                "specs":
-                [
-                  "processor: Intel Core i7",
-                  "storage: 1 TB",
-                  "memory: 16 GB + dGPU"
-                ],
-                "features":
-                [
-                  "Light online browsing",
-                  "Send emails",
-                  "Check mail"
-                ]
-              },
-              {
-                "specs":
-                [
-                  "processor: Intel Core i7",
-                  "storage: 1 TB",
-                  "memory: 16 GB + dGPU"
-                ],
-                "features":
-                [
-                  "Light online browsing",
-                  "Send emails",
-                  "Check mail"
-                ]
-              },
-              {
-                "specs":
-                [
-                  "processor: Intel Core i7",
-                  "storage: 1 TB",
-                  "memory: 16 GB + dGPU"
-                ],
-                "features":
-                [
-                  "Light online browsing",
-                  "Send emails",
-                  "Check mail"
-                ]
-              }
-            ]
           }
         }
       ]

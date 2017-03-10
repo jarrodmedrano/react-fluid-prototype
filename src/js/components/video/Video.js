@@ -47,7 +47,7 @@ class Video extends React.Component {
 
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {media, video} = this.props.data,
+            let {src} = this.props.data,
                 className = this.props;
 
             return (
@@ -55,7 +55,7 @@ class Video extends React.Component {
                 <video className={className ? className : 'f-video-player'} preload="metadata" loop
                        aria-labelledby="" aria-describedby=""
                        ref="vidRef" muted={this.state.mute}>
-                    <source src={media ? media.src : video ? video : null} type="video/mp4"/>
+                    <source src={src ? src : null} type="video/mp4"/>
                 </video>
             )
         }

@@ -7,7 +7,7 @@ import CompareTable from '../compare/CompareTable';
 import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyksp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
-import propsAreValid from '../../lib/util';
+import propsAreValid, {logError} from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 import _ from 'lodash';
 
@@ -31,42 +31,43 @@ class Vertical extends React.Component {
             let active = this.state.active ? 'active' : 'inactive';
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier, active);
             let {layout, sectionIdentifier, readingDirection} = this.props.data;
-            let acceptedLayouts = ['hero', 'immersive-hero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate'];
-            if(layout && _.includes(acceptedLayouts, layout)) {
+            let myLayout = typeof layout === 'object' ? layout.type : layout;
+            let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate'];
+            if(myLayout && _.includes(acceptedLayouts, myLayout)) {
                 return (
                     <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier}
                              dir={readingDirection ? readingDirection : null}>
-                        {layout == 'hero' || layout == 'immersive-hero' || layout == 'fullscreen' || layout == 'card' ?
-                            <Hero data={this.props.data}
+                        {myLayout == 'hero' || myLayout == 'immersiveHero' || myLayout == 'fullscreen' || myLayout == 'card' ?
+                            <Hero data={this.props.data.layout}
                                   brandColor={this.props.brandColor ? this.props.brandColor : null}
                                   active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {layout == 'mosaic' ?
-                            <Mosaic data={this.props.data}
+                        {myLayout == 'mosaic' ?
+                            <Mosaic data={this.props.data.layout}
                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
                                     active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {layout == 'compare' ?
-                            <CompareTable data={this.props.data}
+                        {myLayout == 'compare' ?
+                            <CompareTable data={this.props.data.layout}
                                           brandColor={this.props.brandColor ? this.props.brandColor : null}
                                           active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {layout == 'feature' ?
+                        {myLayout == 'feature' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={this.props.brandColor ? this.props.brandColor : null}
                                            active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {layout == 'featureCta' ?
+                        {myLayout == 'featureCta' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={this.props.brandColor ? this.props.brandColor : null}
                                            active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {layout == 'ksp' || layout == 'ksp_rs' || layout == 'ksp_reversed' ?
+                        {myLayout == 'ksp' || myLayout == 'ksp_rs' || myLayout == 'ksp_reversed' ?
                             <LegacyKSP data={this.props.data}
                                        brandColor={this.props.brandColor ? this.props.brandColor : null}
                                        active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {layout == 'centeredBackdropTemplate' ?
+                        {myLayout == 'centeredBackdropTemplate' ?
                             <LegacyCenteredBackdrop data={this.props.data}
                                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
                                                     active={this.state.active} myId={this.props.myId} /> : null
@@ -74,7 +75,9 @@ class Vertical extends React.Component {
                     </section>
                 )
             }
-        } return null
+            logError('Error: invalid layout of type', myLayout, 'supplied to', this, 'Layout must be one of type: ', acceptedLayouts);
+        }
+        return null
     }
 }
 

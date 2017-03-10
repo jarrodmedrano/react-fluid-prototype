@@ -1,6 +1,7 @@
 // import dummyData from './hubRoot.json!';
 import dummyHero from './new/dummyHero.json!';
 import dummyMosaic from './new/dummyMosaic.json!';
+import dummyAccMosaic from './new/dummyAccessoriesMosaic.json!';
 import dummyIHero from './new/dummyIHero.json!';
 import dummyFullScreen from './new/dummyFullScreen.json!';
 import dummySurfacePro from './new/dummySurfacePro.json!';
@@ -15,6 +16,8 @@ import dummyStyle from './legacy/dummyStyleExample.json!';
 import dummyHp from './legacy/dummyHP.json!';
 import dummyHebrew from './legacy/dummyHebrew.json!';
 import dummyVideos from './legacy/dummyVideos.json!';
+//final RDX schema from Chuck
+import rdx from './rdx.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
 let data = {};
 if(!window.RDX) {
@@ -39,10 +42,11 @@ if(!window.RDX) {
 //Sample fscreen video by itself
 //defaultVertical.groups.push(dummyFVideo, dummyRetailer);
 //sample surface data
-defaultVertical.groups.push(dummySurfaceGroup, dummyRetailer);
+//defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
- //defaultVertical.groups.push(dummyVideos, dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
- data = defaultVertical;
+defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows);
+data = defaultVertical;
+    //data = dummySurfacePro;
     //data = dummyHp;
     //data = dummyHebrew;
 }

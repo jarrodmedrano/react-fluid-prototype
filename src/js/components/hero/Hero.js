@@ -8,80 +8,62 @@ import propsAreValid from '../../lib/util';
 import dataPropTypes, {heroPropTypes} from '../../../data/dataProps';
 
 class Hero extends React.Component {
-
-    componentWillReceiveProps(nextProps) {
-        this._handleVideo(nextProps.active);
-    }
-
-    componentWillUnmount() {
-        if(this.refs.vidRef) {
-            this.refs.vidRef.currentTime = 0;
-        }
-    }
-
-    _handleVideo(play) {
-        if(this.refs.vidRef) {
-            if(play === true && this.refs.vidRef.paused) {
-                this.refs.vidRef.play();
-            } else if(play === false && !this.refs.vidRef.paused) {
-                this.refs.vidRef.pause();
-            }
-        }
-    }
-
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {alignX, alignY, theme, layout} = this.props.data;
+            let {alignX, alignY, theme, type, media, pictureBlock, headingBlock} = this.props.data;
             let heroClass = classNames(
-                alignX ? `f-x-${alignX}` : null,
-                alignX ? `f-align-${alignX}` : null,
-                alignY ? `f-y-${alignY}` : null,
-                alignY ? `f-align-${alignY}` : null,
-                theme ? theme : null,
-                layout ? `m-${layout}-item` : null);
-            if (layout === 'immersive-hero') {
+                alignX ? `f-x-${alignX}` : 'f-x-center',
+                alignX ? `f-align-${alignX}` : 'f-align-center',
+                alignY ? `f-y-${alignY}` : 'f-y-center',
+                alignY ? `f-align-${alignY}` : 'f-align-top',
+                theme ? theme : 'theme-light',
+                type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item');
+            if (type === 'immersiveHero') {
                 return (
                     <div className={heroClass}>
                         <div>
-                            <Heading data={this.props.data}/>
-                            <Picture data={this.props.data}/>
+                            <Heading data={headingBlock}/>
+                            <Picture data={pictureBlock}/>
                         </div>
                     </div>
                 )
             }
-            else if (layout === 'fullscreen') {
+            else if (type === 'fullscreen') {
                 let heroClassFScreen = classNames(heroClass, 'm-image-intro f-transparent');
-                if (this.props.data.video) {
-                    return (
-                        <div>
-                            <Video active={this.props.active} data={this.props.data} className="video-fullscreen fixed" />
-                        </div>
-                    )
-                }
-                else {
-                    return (
-                        <div className={heroClassFScreen}>
-                            <Heading data={this.props.data}/>
-                            <Picture data={this.props.data}/>
-                        </div>
-                    )
+                if (media) {
+                    let {videoBlock, pictureBlock} = media;
+                    if(videoBlock) {
+                        return (
+                            <div>
+                                <Video active={this.props.active} data={videoBlock} className="video-fullscreen fixed" />
+                            </div>
+                        )
+                    }
+                    else if(pictureBlock){
+                        return (
+                            <div className={heroClassFScreen}>
+                                <Picture data={pictureBlock}/>
+                                {headingBlock ? <Heading data={headingBlock}/> : null }
+                            </div>
+                        )
+                    }
                 }
             }
-            else if (layout === 'card') {
+            else if (type === 'card') {
                 let heroClassCard = classNames(heroClass, 'm-highlight-feature');
                 return (
                     <div data-grid="col-12" className={heroClassCard}>
-                        <Picture data={this.props.data}/>
+                        <Picture data={pictureBlock}/>
                         <div>
-                            <Heading data={this.props.data}/>
+                            <Heading data={headingBlock}/>
                         </div>
                     </div>
                 )
             } else {
                 return (
                     <div className={heroClass}>
-                        <Picture data={this.props.data}/>
-                        <Heading data={this.props.data}/>
+                        <Picture data={pictureBlock}/>
+                        <Heading data={headingBlock}/>
                     </div>
                 )
             }

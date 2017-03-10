@@ -1,0 +1,316 @@
+{
+  "layout": "VerticalPage",
+  "deviceInformation": {
+    "ManufacturerName": "commodo exercitation laboris consequat",
+    "ModelName": "sint",
+    "price": "enim ",
+    "salesPrice": "culpa magna",
+    "label": "est exercitation id"
+  },
+  "ratings": {
+    "bestRating": 5,
+    "rating": 4
+  },
+  "groups": [
+    {
+      "ordinal": -48232434,
+      "condition": "ipsum magna dolor",
+      "groupIdentifier": "esse",
+      "brand": {
+        "logo": "pariatur",
+        "logoTab": "sample",
+        "selectedLogoTab": "image",
+        "anchorTitle": "sampleAnchorTitle",
+        "color": "sampleColor"
+      },
+      "sections": [
+        {
+          "sectionIdentifier": "id voluptate",
+          "anchorTitle": "fugiat in consectetur ut",
+          "anchorLink": false,
+          "layout": {
+            "type": "hero",
+            "pictureBlock": {
+              "altText": "cupidatat amet",
+              "ariaLabel": "sit in",
+              "picture": {
+                "src": "irure",
+                "minWidth": -18938877
+              }
+            },
+            "headingBlock": {
+              "heading": "incididunt veniam aliqua in sed",
+              "subheading": "velit quis in consectetur",
+              "paragraph": "enim occaecat proident",
+              "button": {
+                "layout": "button",
+                "text": "labore ex qui sint",
+                "textColor": "laborum mini",
+                "backgroundColor": "incididunt",
+                "ariaLabel": "est"
+              }
+            },
+            "alignY": "top",
+            "alignX": "center"
+          }
+        },
+        {
+          "sectionIdentifier": "deserunt sit",
+          "anchorTitle": "consequat amet Ut nisi",
+          "anchorLink": false,
+          "layout": {
+            "type": "fullscreen",
+            "media": {
+              "altText": "aliquip dolore eiusmod",
+              "ariaLabel": "mollit in nostrud reprehenderit",
+              "picture": {
+                "src": "tempor Excepteur ex dolore",
+                "minWidth": -48695899
+              }
+            }
+          },
+          "groupIdentifier": "veniam Lorem cons"
+        },
+        {
+          "sectionIdentifier": "",
+          "anchorTitle": "magna qui offici",
+          "anchorLink": false,
+          "layout": {
+            "type": "hero",
+            "theme": "theme-light",
+            "pictureBlock": {
+              "altText": "nulla",
+              "ariaLabel": "reprehenderit exercitation adipisicing magna",
+              "picture": {
+                "src": "mollit in anim adipisicing",
+                "minWidth": -43397256
+              }
+            },
+            "headingBlock": {
+              "heading": "incididunt veniam aliqua in sed",
+              "subheading": "velit quis in consectetur",
+              "paragraph": "enim occaecat proident",
+              "button": {
+                "layout": "button",
+                "text": "labore ex qui sint",
+                "textColor": "laborum mini",
+                "backgroundColor": "incididunt",
+                "ariaLabel": "est"
+              }
+            }
+          }
+        },
+        {
+          "readingDirection": "ltr",
+          "groupIdentifier": "gi",
+          "sectionIdentifier": "si",
+          "anchorTitle": "atitle",
+          "anchorGlyph": "ag",
+          "anchorLink": true,
+          "condition": "sed ",
+          "ordinal": -63272974,
+          "anchorIcon": "Ut",
+          "layout": {
+            "type": "immersiveHero",
+            "theme": "theme-dark",
+            "alignY": "top",
+            "pictureBlock": {
+              "altText": "veniam Ut Excepteur laboris",
+              "ariaLabel": "et Duis nisi",
+              "picture": {
+                "src": "in pariatur reprehenderit",
+                "minWidth": -44449870
+              }
+            },
+            "headingBlock": {
+              "heading": "incididunt veniam aliqua in sed",
+              "subheading": "velit quis in consectetur",
+              "paragraph": "enim occaecat proident",
+              "button": {
+                "layout": "button",
+                "text": "labore ex qui sint",
+                "textColor": "laborum mini",
+                "backgroundColor": "incididunt",
+                "ariaLabel": "est"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "occaecat amet Duis dolor ea",
+      "ordinal": 71014831,
+      "sections": [
+        {
+          "sectionIdentifier": "elit nisi in",
+          "anchorTitle": "in molli",
+          "anchorLink": true,
+          "layout": {
+            "type": "mosaic",
+            "mosaicLayout": "mosaic-7",
+            "tiles": [
+              {
+                "pictureBlock": {
+                  "altText": "pariatur",
+                  "ariaLabel": "elit irure aute dolor sint",
+                  "picture": {
+                    "src": "enim in do eu",
+                    "minWidth": -74753239
+                  }
+                },
+                "headingBlock": {
+                  "heading": "consectetur id ad",
+                  "paragraph": "incididunt ex eu"
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "anim in culpa",
+                  "ariaLabel": "Lorem sint nostrud",
+                  "picture": {
+                    "src": "exercitation dolore"
+                  }
+                }
+              }
+            ]
+          },
+          "ordinal": -8001457
+        },
+        {
+          "sectionIdentifier": "anim elit id culpa",
+          "anchorTitle": "irure in",
+          "anchorLink": false,
+          "layout": {
+            "type": "mosaic",
+            "theme": "theme-dark",
+            "mosaicLayout": "mosaic-4",
+            "tiles": [
+              {
+                "pictureBlock": {
+                  "altText": "dolore",
+                  "ariaLabel": "laboris minim dolor",
+                  "picture": {
+                    "src": "sint laborum sit eu",
+                    "minWidth": 7346332
+                  }
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "ea incididunt",
+                  "ariaLabel": "Duis dolore ut dolor",
+                  "picture": {
+                    "src": "Lorem"
+                  }
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "pariatu",
+                  "ariaLabel": "minim",
+                  "picture": {
+                    "src": "elit adipisicing",
+                    "minWidth": 22866553
+                  }
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "id qui sed",
+                  "ariaLabel": "sit",
+                  "picture": {
+                    "src": "cupidatat aliquip in",
+                    "minWidth": -88581229
+                  }
+                }
+              }
+            ]
+          },
+          "readingDirection": "ltr"
+        },
+        {
+          "sectionIdentifier": "Excepteur Ut sit labore mollit",
+          "anchorTitle": "fugiat laborum in culpa",
+          "anchorLink": true,
+          "layout": {
+            "type": "mosaic",
+            "theme": "theme-dark",
+            "mosaicLayout": "mosaic-8",
+            "tiles": [
+              {
+                "pictureBlock": {
+                  "altText": "in Ut fugiat conse",
+                  "ariaLabel": "ea occaecat in dolor elit",
+                  "picture": {
+                    "src": "irure labore",
+                    "minWidth": -3771808
+                  }
+                },
+                "headingBlock": {
+                  "heading": "ullamco minim",
+                  "subheading": "mollit Ut",
+                  "paragraph": "elit proident ullamco amet",
+                  "button": {
+                    "layout": "button",
+                    "text": "aliqua adipisicing culpa eiusmo",
+                    "ariaLabel": "quis consequat aute",
+                    "textColor": "pariatur in",
+                    "backgroundColor": "Ut voluptate irure officia sit"
+                  }
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "molli",
+                  "ariaLabel": "in ",
+                  "picture": {
+                    "src": "eius",
+                    "minWidth": -67050483
+                  }
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "veniam dol",
+                  "ariaLabel": "ullamco",
+                  "picture": {
+                    "src": "eu nostrud dolore",
+                    "minWidth": -38786615
+                  }
+                },
+                "headingBlock": {
+                  "paragraph": "officia",
+                  "heading": "ex id ut consequat"
+                }
+              },
+              {
+                "pictureBlock": {
+                  "altText": "esse anim proident consequat",
+                  "ariaLabel": "sit esse nisi",
+                  "picture": {
+                    "src": "es",
+                    "minWidth": -46291008
+                  }
+                }
+              }
+            ]
+          },
+          "anchorIcon": "",
+          "readingDirection": "rtl"
+        }
+      ]
+    }
+  ],
+  "ordinalOverride": {
+    "overrideLevel": 100,
+    "overrides": [
+      {
+        "windows ink": 100
+      },
+      {
+        "windows": 200
+      }
+    ]
+  }
+}

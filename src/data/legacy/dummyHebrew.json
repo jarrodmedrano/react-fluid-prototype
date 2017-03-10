@@ -33,7 +33,7 @@
       "brand": {
         "logo": "oem_assets/ms-logo.png",
         "anchorTitle": "Surface Book",
-        "tabColor": "#ffffff",
+        "color": "#ffffff",
         "logoTab": "oem_assets/surfacebook-logo.png",
         "groupIdentifier": "oem"
       },

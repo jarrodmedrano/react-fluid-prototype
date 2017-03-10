@@ -35,7 +35,6 @@ class ButtonLink extends React.Component {
     }
 
     render() {
-
         if(propsAreValid(this.props, this)) {
             const {to, children, iconFont, layout, icon, ...rest} = this.props;
             const _isInternal = this._isInternal(to);

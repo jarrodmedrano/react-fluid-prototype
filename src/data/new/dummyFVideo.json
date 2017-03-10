@@ -3,19 +3,25 @@
   "brand": {
     "logo": "img/vertical/ms-logo.png",
     "anchorTitle": "Surface Book",
-    "tabColor": "#ffffff",
+    "color": "#ffffff",
     "logoTab": "img/vertical/surfacebook-logo.png"
   },
   "sections": [
     {
-      "ordinal": "300",
+      "ordinal": 300,
       "groupIdentifier": "oem",
       "sectionIdentifier": "SurfacePen",
-      "layout": "fullscreen",
-      "anchorLink": "true",
+      "anchorLink": true,
       "anchorGlyph": "glyph-draw",
       "anchorTitle": "Surface Pen",
-      "video": "img/vertical/Hero-pen.mp4"
+      "layout": {
+        "type": "fullscreen",
+        "media": {
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        }
+      }
     }
   ]
 }

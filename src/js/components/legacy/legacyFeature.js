@@ -67,7 +67,7 @@ class LegacyFeature extends React.Component {
                             </picture> : null }
                         {media.blockType && media.blockType === 'video' ?
                             <div id="videoPlayer1" className="c-video">
-                                <Video active={this.props.active} data={this.props.data} myId={this.props.myId} />
+                                <Video active={this.props.active} data={media} myId={this.props.myId} />
                                 <div className="f-video-cc-overlay" aria-hidden="true"></div>
                             </div>
                             : null}
@@ -83,7 +83,7 @@ class LegacyFeature extends React.Component {
                                 {text3 ? <p className="c-paragraph"
                                             dangerouslySetInnerHTML={{__html: this._cleanHtml(text3)}}/> : null }
                             </div>
-                            {button ? <Button data={this.props.data} style={btnStyle} /> : null }
+                            {button ? <Button data={button} style={btnStyle} /> : null }
                             {legalText ? <p className="c-paragraph-4"
                                             dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}}/> : null }
                         </div>
