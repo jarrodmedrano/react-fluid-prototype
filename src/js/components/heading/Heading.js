@@ -14,7 +14,7 @@ class Heading extends React.Component {
                     {heading ? <h1 className="c-heading">{heading}</h1> : null }
                     {subheading ? <p className="c-subheading">{subheading}</p> : null }
                     {paragraph ? <p className="c-paragraph">{paragraph}</p> : null }
-                    {button ? <Button data={button}  /> : null }
+                    {button ? <Button data={button} /> : null }
                 </div>
             </div>
             )
