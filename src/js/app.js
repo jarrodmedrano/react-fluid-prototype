@@ -79,23 +79,14 @@ class App extends React.Component {
 
 class RenderForcer extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this._changeHandler = this._changeHandler.bind(this);
-    }
-
     componentWillMount() {
         this.forceUpdate();
     }
 
-    _changeHandler() {
-    }
-
     render() {
         return (
-            <Router history={appHistory} onChange={this._changeHandler}>
-                <Route path="/" component={App} onChange={this._handleChange}>
+            <Router history={appHistory}>
+                <Route path="/" component={App}>
                     <IndexRoute title={Index.groupIdentifier}
                                 component={(props, state, params) => <MasterLayout {...props} />}/>
                     {Routes.map(function (result, id) {

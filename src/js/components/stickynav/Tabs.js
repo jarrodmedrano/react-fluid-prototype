@@ -3,6 +3,7 @@ import './tabs.scss!'
 import dataPropTypes, {verticalPagePropTypes} from '../../../data/dataProps';
 import { Link, IndexLink } from 'react-router';
 import propsAreValid, {navigateEvent} from '../../lib/util';
+import _ from 'lodash';
 
 class Tabs extends React.Component {
     constructor(props) {
@@ -28,8 +29,9 @@ class Tabs extends React.Component {
         this.state = Object.assign(this.state, {logos}, {logoColors});
     }
 
-    _handleClick(e) {
-        navigateEvent(e);
+    _handleClick(group, index) {
+        let sectionId = _.find(this.props.data.groups[index].sections, 'sectionIdentifier');
+        navigateEvent(group, sectionId.sectionIdentifier, 'tab click');
     }
 
     render() {
@@ -43,7 +45,7 @@ class Tabs extends React.Component {
                 <div className="tabs">
                     <ul>
                         <li className="c-hyperlink">
-                            <IndexLink to={rootRoute.path} onClick={() => this._handleClick(indexTitle)} activeClassName="active" activeStyle={{background: this.state.logoColors[0]}}>
+                            <IndexLink to={rootRoute.path} onClick={() => this._handleClick(indexTitle, 0)} activeClassName="active" activeStyle={{background: this.state.logoColors[0]}}>
                                 {this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle}/> : indexTitle}
                             </IndexLink>
                         </li>
@@ -52,7 +54,7 @@ class Tabs extends React.Component {
                                     <Link
                                         activeClassName="active"
                                         activeStyle={{background: this.state.logoColors[index + 1]}}
-                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '')}>
+                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '', index + 1)}>
                                         {this.state.logos[index + 1] ?
                                             <img src={this.state.logos[index + 1]} alt={item.title}/> :
                                             <p>{item.title}</p>}

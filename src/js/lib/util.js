@@ -7,15 +7,19 @@ export function externalNavigate(e) {
     }
 }
 
-export function navigateEvent(group, section) {
+export function navigateEvent(group, section, source) {
     if(window.RDX) {
-        window.RDX.navigateEvent(group, section);
+        window.RDX.navigateEvent(group, section, source);
+    } else {
+        console.log('group', group, 'section', section, 'source', source);
     }
 }
 
 export function impressionEvent(visible, group, section) {
     if(window.RDX) {
         window.RDX.impressionEvent(visible, group, section);
+    } else {
+        console.log('visible', visible, 'group', group, 'section', section)
     }
 }
 
