@@ -3,6 +3,8 @@
   "brand": {
     "groupIdentifier": "office",
     "logo": "img/retailer_assets/Office_logo.png",
+    "selectedLogoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
+    "logoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
     "color": "#dc3c00"
   },
   "sections": [
