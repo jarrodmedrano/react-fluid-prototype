@@ -20,7 +20,6 @@ class Tabs extends React.Component {
         }, {});
 
         let selectedLogos = this.props.data.groups.reduce(function(newVal, previousVal, key) {
-            console.log(previousVal.brand.selectedLogoTab);
             if(previousVal.brand.selectedLogoTab != null) {
                 newVal[key] = previousVal.brand.selectedLogoTab;
             }
