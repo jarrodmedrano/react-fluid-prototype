@@ -16,6 +16,7 @@ import dummyStyle from './legacy/dummyStyleExample.json!';
 import dummyHp from './legacy/dummyHP.json!';
 import dummyHebrew from './legacy/dummyHebrew.json!';
 import dummyVideos from './legacy/dummyVideos.json!';
+import dummyBestBuyStPatricks from './partner/bby/datasource.json!';
 //final RDX schema from Chuck
 import rdx from './rdx.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
@@ -45,7 +46,7 @@ if(!window.RDX) {
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
 defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows);
-data = defaultVertical;
+data = dummyBestBuyStPatricks;
     //data = dummySurfacePro;
     //data = dummyHp;
     //data = dummyHebrew;

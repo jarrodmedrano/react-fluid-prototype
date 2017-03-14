@@ -60,11 +60,11 @@ class Tabs extends React.Component {
                                activeClassName="active"
                                activeStyle={{background: this.state.logoColors[0]}}
                             >
-                                {this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle}/> : <p>{indexTitle}</p>}
+                                {this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} /> : <p>{indexTitle}</p>}
 
                                 {this.state.selectedLogos[0] ?
                                     <img src={this.state.selectedLogos[0]} alt={indexTitle} className="selected" /> :
-                                    this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle}/> :
+                                    this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} className="selected"/> :
                                     <p className="selected">{indexTitle}</p>
                                 }
                             </IndexLink>
