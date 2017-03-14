@@ -1,0 +1,51 @@
+﻿{
+	"identifier": "BBY_StPatricks_2017",
+	"logo": "bby_stpats_assets/StPattys_Logo2.png",
+	"themeColor": "#003b64",
+	"pages": [
+	  {
+		"pageName": "FreshPaint 1",
+		"layout": "centeredBackdropTemplate",
+		"style": "font-family: 'Segoe UI', 'Segoe UI';",
+		"textSide": "center",
+		"cardnumber": "1",
+		"header": "",
+		"subheader": "",
+		"cardColor": "#d1d1d1",
+		"cardThemeColor": "#003b64",
+		"cardThemeFont": "Segoe MDL2 Assets",
+		"cardBackground": "url('bby_stpats_assets/StPatricksDay_Illustration.png')",
+		"cardButton": "white",
+		"cardButtonBackground": "#003b64",
+		"cardButtonHover": "#003b64",
+		"cardButtonHoverBackground": "white",
+		"button": {
+			"blockType": "buttonExternal",
+			"text": "Paint this scene!",
+			"link": "ms-retaildemo://StPatricksDay_Partial.fppx"
+		   }
+	},
+	  {
+		"pageName": "MSN Page",
+		"layout": "centeredBackdropTemplate",
+		"style": "font-family: 'Segoe UI', 'Segoe UI';",
+		"textSide": "center",
+		"cardnumber": "3",
+		"header": "",
+		"subheader": "",
+		"cardColor": "#d1d1d1",
+		"cardThemeColor": "yellow",
+		"cardThemeFont": "Segoe MDL2 Assets",
+		"cardBackground": "url('bby_stpats_assets/StPatricks_slider_withHeadline.png')",
+		"cardButton": "white",
+		"cardButtonBackground": "#003b64",
+		"cardButtonHover": "#003b64",
+		"cardButtonHoverBackground": "white",
+		"button": {
+			"blockType": "buttonExternal",
+			"text": "Learn more!",
+			"link": "http://www.msn.com/en-us/travel/tripideas/10-places-to-celebrate-st-patricks-day-in-the-usa/ss-BBqzObO"
+		   }
+	}
+	]
+}

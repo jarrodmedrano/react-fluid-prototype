@@ -11,7 +11,7 @@ class LegacyFeature extends React.Component {
 
     _cleanHtml(dirty) {
         return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span'],
+            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br'],
             allowedAttributes: {
                 'a': ['href', 'style'],
                 'span': ['style'],

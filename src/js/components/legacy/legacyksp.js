@@ -10,7 +10,7 @@ class LegacyKSP extends React.Component {
     //TODO: stub this out into ../../lib/util
     cleanHtml(dirty) {
         return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span'],
+            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br'],
             allowedAttributes: {
                 'a': ['href', 'style'],
                 'span': ['style'],

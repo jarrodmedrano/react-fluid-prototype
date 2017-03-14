@@ -20,6 +20,7 @@ src/img/*_assets
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 src/img/hebrew
+*/**/*_assets/
 
 # Build results
 [Dd]ebug/
