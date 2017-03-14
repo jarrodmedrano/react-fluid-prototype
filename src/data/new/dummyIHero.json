@@ -1,7 +1,9 @@
 {
   "groupIdentifier": "immersiveHero",
   "brand": {
+    "logo": "",
     "logoTab": "",
+    "selectedLogoTab": "",
     "color": "#3076BC",
     "anchorTitle": "-- Immersive Hero --"
   },

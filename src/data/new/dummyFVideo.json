@@ -4,7 +4,8 @@
     "logo": "img/vertical/ms-logo.png",
     "anchorTitle": "Surface Book",
     "color": "#ffffff",
-    "logoTab": "img/vertical/surfacebook-logo.png"
+    "logoTab": "img/vertical/surfacebook-logo.png",
+    "selectedLogoTab": "img/vertical/surfacebook-logo.png"
   },
   "sections": [
     {

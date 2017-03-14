@@ -1,0 +1,5 @@
+{
+  "title": "RDX Single Group Datasource",
+  "description": "JSON schema used for Windows Retail Demo of a sigle group",
+  "$ref": "rdxschema.json#/definitions/group"
+}

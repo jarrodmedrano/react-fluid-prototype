@@ -1,7 +1,9 @@
 {
   "groupIdentifier": "fullscreen",
   "brand": {
+    "logo": "",
     "logoTab": "",
+    "selectedLogoTab": "",
     "color": "#3076BC",
     "anchorTitle": "-- Full Screen --"
   },

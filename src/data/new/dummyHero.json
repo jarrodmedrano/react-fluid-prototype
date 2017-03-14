@@ -1,9 +1,11 @@
 {
   "groupIdentifier": "hero",
   "brand": {
+    "logo": "",
     "logoTab": "",
+    "selectedLogoTab": "",
     "color": "#3076BC",
-    "text": "-- Hero --"
+    "anchorTitle": "-- Hero --"
   },
   "sections": [
     {

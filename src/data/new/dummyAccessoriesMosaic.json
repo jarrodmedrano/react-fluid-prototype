@@ -1,21 +1,20 @@
 {
   "ordinal": 500,
-  "groupIdentifier": "partner",
-  "sectionIdentifier": "Accessories",
-  "anchorLink": true,
-  "anchorTitle": "Accessories",
-  "theme": "theme-dark",
+  "groupIdentifier": "oem",
   "brand": {
     "logo": "",
     "anchorTitle": "-- Mosaic --",
     "color": "#003b64",
-    "logoTab": ""
+    "logoTab": "",
+    "selectedLogoTab": ""
   },
   "sections": [
     {
       "groupIdentifier": "oem",
-      "ordinal": "500",
+      "ordinal": 500,
       "sectionIdentifier": "Mosaic",
+      "anchorLink": true,
+      "anchorTitle": "Accessories",
       "layout": {
         "type": "mosaic",
         "mosaicLayout": "mosaic-3",

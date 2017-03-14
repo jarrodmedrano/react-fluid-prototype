@@ -4,7 +4,8 @@
     "logo": "",
     "anchorTitle": "-- Mosaic --",
     "color": "#003b64",
-    "logoTab": ""
+    "logoTab": "",
+    "selectedLogoTab": ""
   },
   "sections": [
     {
@@ -865,10 +866,10 @@
       "ordinal": 500,
       "groupIdentifier": "partner",
       "sectionIdentifier": "mosaic-5",
+      "anchorLink": true,
+      "anchorTitle": "mosaic-5",
       "layout": {
         "type": "mosaic",
-        "anchorLink": true,
-        "anchorTitle": "mosaic-5",
         "theme": "theme-dark",
         "mosaicLayout": "mosaic-5",
         "tiles": [
@@ -1931,9 +1932,9 @@
       "sectionIdentifier": "mosaic-9",
       "anchorLink": true,
       "anchorTitle": "mosaic-9",
-      "theme": "theme-dark",
       "layout": {
         "type": "mosaic",
+        "theme": "theme-dark",
         "mosaicLayout": "mosaic-9",
         "tiles": [
           {
