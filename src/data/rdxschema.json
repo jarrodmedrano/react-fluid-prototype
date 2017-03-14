@@ -5,7 +5,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "layout",
     "groups"
   ],
   "properties": {
@@ -36,7 +35,6 @@
       "type": "object",
       "required": [
         "groupIdentifier",
-        "ordinal",
         "sections"
       ],
       "additionalProperties": false,
