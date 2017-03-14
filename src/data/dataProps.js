@@ -12,7 +12,7 @@ let string = React.PropTypes.string,
     requiredBool = React.PropTypes.bool.isRequired;
 
 export let picturePropTypes = {
-    picture: React.PropTypes.arrayOf(
+    pictures: React.PropTypes.arrayOf(
         React.PropTypes.shape({
             src: string.isRequired,
             minwidth: string,
@@ -74,7 +74,7 @@ export let tilePropTypes = {
   tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
       heading: Object.assign(headingPropTypes.heading),
       size: string,
-      picture: Object.assign(picturePropTypes.picture),
+      pictures: Object.assign(picturePropTypes.pictures),
       button: Object.assign(buttonPropTypes.button)
   }))
 };
@@ -92,7 +92,7 @@ export let heroPropTypes = {
     alignY: string,
     theme: string,
     layout: string,
-    picture: Object.assign(picturePropTypes.picture),
+    pictures: Object.assign(picturePropTypes.pictures),
     button: Object.assign(buttonPropTypes.button)
 };
 
@@ -182,7 +182,7 @@ export default function dataPropTypes(component) {
 //                 paragraph: string,
 //                 altText: string,
 //                 ariaLabel: string,
-//                 picture: React.PropTypes.arrayOf(React.PropTypes.shape({
+//                 pictures: React.PropTypes.arrayOf(React.PropTypes.shape({
 //                     src: string,
 //                     minwidth: string,
 //                 })),
@@ -205,7 +205,7 @@ export default function dataPropTypes(component) {
 //                         heading: string,
 //                         subheading: string,
 //                         size: string,
-//                         picture: React.PropTypes.arrayOf(React.PropTypes.shape({
+//                         pictures: React.PropTypes.arrayOf(React.PropTypes.shape({
 //                             src: string,
 //                             minwidth: string,
 //                         })),

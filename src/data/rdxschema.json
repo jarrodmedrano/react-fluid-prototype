@@ -1,7 +1,7 @@
 {
   "title": "RDX Datasource",
   "id": "http://windowsretaildemo.com/rdx-20/datasource.json#",
-  "description": "JSON schema used for Windows Retail Demo",
+  "description": "JSON schema used for Windows Retail Demos",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -389,12 +389,6 @@
         },
         "ariaLabel": {
           "type": "string"
-        },
-        "link": {
-          "type": "string"
-        },
-        "overlay": {
-          "type": "string"
         }
       }
     },
@@ -407,12 +401,6 @@
             "theme-dark",
             "theme-light"
           ]
-        },
-        "textColor": {
-          "type": "string"
-        },
-        "backgroundColor": {
-          "type": "string"
         },
         "pictureBlock": {
           "$ref": "#/definitions/pictureBlock"
@@ -445,6 +433,13 @@
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/tile"
+      }
+    },
+    "pictures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/picture"
       }
     }
   }

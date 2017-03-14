@@ -21,26 +21,25 @@
         "logo": "img/vertical/ms-logo.png",
         "anchorTitle": "Surface Book",
         "color": "#ffffff",
-        "logoTab": "img/vertical/surfacebook-logo.png",
-        "selectedLogoTab": "img/vertical/surfacebook-logo.png"
+        "logoTab": "img/vertical/surfacebook-logo.png"
       },
       "sections": [
         {
           "ordinal": 100,
           "groupIdentifier": "hero",
           "sectionIdentifier": "Section2",
+          "alignX": "center",
+          "alignY": "center",
+          "theme": "theme-light",
           "anchorLink": true,
           "anchorTitle": "Explore Surface Book",
           "layout": {
             "type": "fullscreen",
-            "theme": "theme-light",
-            "alignX": "center",
-            "alignY": "center",
             "media": {
               "pictureBlock": {
                 "altText": "Surface Book Pro",
                 "ariaLabel": "Surface Book Pro",
-                "picture": [
+                "pictures": [
                   {
                     "src": "img/vertical/surface-hero.jpg",
                     "minWidth": "1779"
@@ -76,9 +75,10 @@
           "sectionIdentifier": "Keyboard",
           "anchorLink": true,
           "anchorTitle": "Keyboard",
+          "alignY": "bottom",
+          "theme": "theme-light",
           "layout": {
             "type": "hero",
-            "theme": "theme-light",
             "alignY": "bottom",
             "headingBlock": {
               "heading": "Five-point touchpad"
@@ -87,7 +87,7 @@
               "picture": "img/vertical/keyboard-hero.jpg",
               "altText": "AltText",
               "ariaLabel": "AriaLabel",
-              "picture": [
+              "pictures": [
                 {
                   "src": "img/vertical/keyboard-hero.jpg",
                   "minWidth": "1779"
@@ -139,12 +139,11 @@
           "anchorTitle": "Apps",
           "layout": {
             "type": "card",
-            "backgroundColor": "#0078D7",
-            "textColor": "#FFF",
             "pictureBlock": {
+              "picture": "img/vertical/keyboard-hero.jpg",
               "altText": "AltText",
               "ariaLabel": "AriaLabel",
-              "picture": [
+              "pictures": [
                 {
                   "src": "img/vertical/keyboard-hero.jpg",
                   "minWidth": "1779"
@@ -174,6 +173,8 @@
             "headingBlock": {
               "heading": "Accessories",
               "subheading": "The perfect complements to your Surface",
+              "backgroundColor": "#0078D7",
+              "textColor": "#FFF",
               "button": {
                 "layout": "link",
                 "link": "http://www.microsoft.com",
@@ -190,17 +191,17 @@
           "sectionIdentifier": "Accessories",
           "anchorLink": true,
           "anchorTitle": "Accessories",
+          "theme": "theme-dark",
           "layout": {
             "type": "mosaic",
-            "theme": "theme-dark",
             "mosaicLayout": "mosaic-3",
             "tiles": [
               {
-                "backgroundColor": "#0078D7",
-                "textColor": "#FFF",
                 "headingBlock": {
                   "heading": "Accessories",
                   "subheading": "The perfect complements to your Surface",
+                  "backgroundColor": "#0078D7",
+                  "textColor": "#FFF",
                   "button": {
                     "layout": "link",
                     "link": "http://www.microsoft.com",
@@ -218,7 +219,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "picture": [
+                  "pictures": [
                     {
                       "src": "img/vertical/mosaic-surface-8.jpg",
                       "minWidth": "1779"
@@ -254,7 +255,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "picture": [
+                  "pictures": [
                     {
                       "src": "img/vertical/mosaic-surface-5.jpg",
                       "minWidth": "1779"
@@ -290,7 +291,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "picture": [
+                  "pictures": [
                     {
                       "src": "img/vertical/mosaic-ports.jpg",
                       "minWidth": "1779"
@@ -326,7 +327,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "picture": [
+                  "pictures": [
                     {
                       "src": "img/vertical/mosaic-headphones.jpg",
                       "minWidth": "1779"

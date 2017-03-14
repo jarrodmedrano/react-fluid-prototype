@@ -43,7 +43,7 @@
           "pictureBlock": {
             "altText": "AltText",
             "ariaLabel": "AriaLabel",
-            "picture": [
+            "pictures": [
               {
                 "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                 "minWidth": "1779"
@@ -93,7 +93,7 @@
           "pictureBlock": {
             "altText": "AltText",
             "ariaLabel": "AriaLabel",
-            "picture": [
+            "pictures": [
               {
                 "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                 "minWidth": "1779"
@@ -143,7 +143,7 @@
           "pictureBlock": {
             "altText": "AltText",
             "ariaLabel": "AriaLabel",
-            "picture": [
+            "pictures": [
               {
                 "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                 "minWidth": "1779"

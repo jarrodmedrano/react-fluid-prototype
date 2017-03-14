@@ -4,10 +4,10 @@ import dataPropTypes, {MosaicPicturePropTypes} from '../../../data/dataProps';
 class MosaicPicture extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let {picture, altText, ariaLabel} = this.props.data;
+            let {pictures, altText, ariaLabel} = this.props.data;
 
             let bgStyle = {
-                backgroundImage: `url('${picture[0].src}')`,
+                backgroundImage: `url('${pictures[0].src}')`,
                 backgroundSize: 'cover',
                 overflow: 'hidden',
                 width: '100%',
@@ -17,7 +17,7 @@ class MosaicPicture extends React.Component {
 
             return (
                 <canvas className="c-image" style={bgStyle} ref="canvas">
-                    <img srcSet={picture[0].src} src={picture[0].src} alt={altText ? altText : null} aria-label={ ariaLabel ? ariaLabel : null}/>/>
+                    <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText ? altText : null} aria-label={ ariaLabel ? ariaLabel : null}/>/>
                 </canvas>
             );
         } return null
@@ -26,7 +26,7 @@ class MosaicPicture extends React.Component {
 
 MosaicPicture.defaultProps = {
     data: {
-        picture: [{src: '', minWidth: ''}],
+        pictures: [{src: '', minWidth: ''}],
         altText: '',
         ariaLabel: ''
     }
