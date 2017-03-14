@@ -3,6 +3,7 @@
   "brand": {
     "groupIdentifier": "retailer",
     "logo": "img/retailer_assets/BBY_Logo_946x220.png",
+    "logoTab": "img/retailer_assets/BBY_Logo_946x220.png",
     "color": "#003b64",
     "button": {
       "blockType": "buttonExternal",
@@ -31,7 +32,7 @@
         "src": "img/retailer_assets/bby_slide1.png"
       },
       "groupIdentifier": "retailer",
-      "sectionIdentifier": "Page3",
+      "sectionIdentifier": "Retailer Section 1",
       "ordinal": "100"
     },
     {

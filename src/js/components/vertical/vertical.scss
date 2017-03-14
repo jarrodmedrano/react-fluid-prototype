@@ -13,11 +13,6 @@ $linkband-height: 74px;
 //$video-offset: 0;
 $video-offset: -10vh;
 $video-offset-portrait: 0;
-@media (orientation: portrait) {
-  body {
-    margin-top: 106px;
-  }
-}
 
 .scene-vertical {
   flex: 1;
@@ -30,33 +25,20 @@ $video-offset-portrait: 0;
   transition: height .5s;
   background: $default-bg;
   z-index: 2;
+
   > div {
     height: 100vh;
   }
-  //padding-bottom: 60px;
 
   @media (orientation: portrait) {
-    min-height: 100vh;
+    min-height: 0;
     height: auto;
 
     > div {
-      min-height: 100vh;
+      min-height: 0;
       height: auto;
     }
-    //top: $linkband-height;
   }
-
-  .header-offset {
-    padding-top: $linkband-height;
-  }
-
-  //&.peek-slide {
-  //  //height: 200vh;
-  //
-  //  @media (orientation: portrait) {
-  //    height: auto;
-  //  }
-  //}
 
   &.pen-hero-2 {
     background: $default-text-alt;
@@ -90,18 +72,6 @@ $video-offset-portrait: 0;
   .configs{
     align-items: flex-start !important;
   }
-
-
-  //&.peek-slide {
-  //  transition: height 0.5s;
-  //  height: 100vh;
-  //
-  //  &.enter-scene {
-  //    height: 90vh;
-  //  }
-  //}
-
-
 }
 
 .keyboard-text {

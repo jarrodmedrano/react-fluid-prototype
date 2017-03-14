@@ -4,7 +4,8 @@
     "logo": "img/vertical/ms-logo.png",
     "anchorTitle": "Surface Book",
     "color": "#ffffff",
-    "logoTab": "img/vertical/surfacebook-logo.png",
+    "logoTab": "img/vertical/surface-logo.png",
+    "selectedLogoTab": "img/vertical/surface-logo-selected.png",
     "price": "$1,499.00"
   },
   "ratings": {
@@ -194,9 +195,7 @@
               "button": {
                 "layout": "link",
                 "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
+                "text": "Call to action"
               }
             }
           },

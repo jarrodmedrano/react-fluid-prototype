@@ -40,9 +40,19 @@
     height: 100%;
     padding: 0 10px;
     color: #FFF;
+
+    img, svg, p {
+      &.selected {
+        display: none;
+      }
+    }
   }
 
-  a.active img, a.active svg {
-    filter: none;
+  a.active img, a.active svg, a.active p {
+    display: none;
+
+    &.selected {
+      display: block;
+    }
   }
 }

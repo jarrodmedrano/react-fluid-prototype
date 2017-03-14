@@ -4,7 +4,7 @@ import '../../styles/mwf-west-european-default.min.css!';
 import '../../styles/mwf-ie9-west-european-default.min.css!';
 import '../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
-import propsAreValid, {impressionEvent} from '../lib/util';
+import propsAreValid, {impressionEvent, navigateEvent} from '../lib/util';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/stickynav/Tabs';
@@ -22,19 +22,28 @@ let myWinHeight = window.innerHeight + 200;
 class VerticalPage extends React.Component {
     constructor(props) {
         super(props);
+
         let title = this.props.route.title;
-        let {groups} = this.props.data;
 
         //Find the title of the group and if it's the same title as the route, that's the current page
-        let currentPage = _.find(groups, function (result) {
-            return result.groupIdentifier === title
-        });
+        let currentPage = this._getCurrentPage();
 
         let currentBrandColor = currentPage.brand.color,
             currentPaths = _.map(this.props.routes[0].childRoutes, 'path'),
-            currentId = currentPaths.indexOf(title),
+            currentId,
             currentSections = currentPage.sections,
             currentSectionClass = `${title}-section-`;
+
+        //TODO: get array of paths from routes without mutations
+        //tack index path onto the currentPaths array. kind of a hack.
+        currentPaths.unshift('/');
+
+        //if current page is homepage, set current id to 0, else find the index of the current title
+        if(this.props.location.pathname === '/') {
+            currentId = currentPaths.indexOf('/')
+        } else {
+            currentId = currentPaths.indexOf(title)
+        }
 
         //set Current page in the state
         this.state = {
@@ -43,6 +52,7 @@ class VerticalPage extends React.Component {
             currentSections: currentSections,
             currentPaths: currentPaths,
             currentId: currentId,
+            currentPath: currentPaths[currentId],
             currentSection: 0,
             currentSectionClass: currentSectionClass,
             currentTitle: title,
@@ -50,6 +60,7 @@ class VerticalPage extends React.Component {
             winHeight: myWinHeight
         };
 
+        this._getCurrentPage = this._getCurrentPage.bind(this);
         this._updateDimensions = _.debounce(this._updateDimensions, 1000);
         this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
     }
@@ -72,52 +83,59 @@ class VerticalPage extends React.Component {
     }
 
     @keydown('cmd+right', 'ctrl+right')
-    _nextGroup(e) {
+    _handleNextGroup(e) {
         e.preventDefault();
-        if (this.state.currentId < this.state.currentPaths.length - 1) {
-            return this.props.history.push(this.state.currentPaths[this.state.currentId + 1]);
+        let currentId = this.state.currentId,
+            paths = this.state.currentPaths,
+            nextPath = paths[currentId + 1],
+            firstPath = paths[0];
+        //if we are not on the last id
+        if (currentId < paths.length - 1) {
+            this._goNextGroup('forward', nextPath, 'ctrl+right');
         } else {
-            return this.props.history.push("/");
+            this._goNextGroup('first', firstPath, 'ctrl+right');
         }
     }
 
     @keydown('cmd+left', 'ctrl+left')
-    _prevGroup(e) {
+    _handlePrevGroup(e) {
         e.preventDefault();
-        if (this.state.currentId === -1) {
-            return this.props.history.push(this.state.currentPaths[this.state.currentPaths.length - 1]);
-        } else if (this.state.currentId > 0) {
-            return this.props.history.push(this.state.currentPaths[this.state.currentId - 1]);
+        let currentId = this.state.currentId,
+            paths = this.state.currentPaths,
+            lastPath = paths[paths.length - 1],
+            nextPath = paths[currentId - 1];
+
+        if (currentId > 0 && currentId < paths.length) {
+            this._goNextGroup('back', nextPath, 'ctrl+left');
         } else {
-            return this.props.history.push("/");
+            this._goNextGroup('last', lastPath, 'ctrl+left');
         }
     }
 
     @keydown('cmd+down', 'ctrl+down')
-    _nextSection(e) {
+    _handleNextSection(e) {
         e.preventDefault();
         if (this.state.currentSection + 1 < this.state.currentSections.length) {
-            this._goNext();
+            this._goNextSection('ctrl+down');
         } else {
             return false
         }
     }
 
     @keydown('cmd+up', 'ctrl+up')
-    _prevSection(e) {
+    _handlePrevSection(e) {
         e.preventDefault();
         if (this.state.currentSection - 1 >= 0) {
-            this._goPrevious();
+            this._goPrevSection('ctrl+up');
         } else {
             return false
         }
     }
 
     @keydown('alt+0', 'alt+1', 'alt+2', 'alt+3', 'alt+4', 'alt+5', 'alt+6', 'alt+7', 'alt+8', 'alt+9')
-    _toSection(e) {
+    _teleportSection(e) {
         e.preventDefault();
         let sectionKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
-
 
         sectionKeys.map(function (result, id) {
             if (id < this.state.currentSections.length && e.which === result) {
@@ -126,41 +144,85 @@ class VerticalPage extends React.Component {
                 // return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
             }
         }, this);
-
     }
 
-    _handleNext(e) {
+    _getCurrentPage() {
+        let {groups} = this.props.data;
+        let title = this.props.route.title;
+        //if the title of the route matches the title of the group, that is the current page.
+        return _.find(groups, function (result) {
+            return result.groupIdentifier === title
+        });
+    }
+
+    _goNextGroup(dir, path, source) {
+        let callBack = (currentId) => {
+            this.props.history.push(path);
+            navigateEvent(this.state.currentPaths[currentId], this.props.data.groups[currentId].sections[0].sectionIdentifier, source);
+        };
+
+        dir === 'forward' ? this.setState({currentId: this.state.currentId += 1},
+            callBack(this.state.currentId)
+        ) :
+        dir === 'back' ? this.setState({currentId: this.state.currentId -= 1},
+            callBack(this.state.currentId)
+        ) :
+        dir === 'first' ? this.setState({currentId: 0},
+            callBack(0)
+        ) :
+        dir === 'last' ? this.setState({currentId: this.state.currentPaths.length - 1},
+           callBack(this.state.currentPaths.length - 1)
+        ) : null
+    }
+
+    _handleDownArrow(e) {
         e.preventDefault();
+        //if current section plus one is less than the total sections, go down
         if (this.state.currentSection + 1 < this.state.currentSections.length) {
-            this._goNext();
-        } else if (this.state.currentSection - 1 >= 0) {
-            this._goTop();
+            this._goNextSection('down arrow');
+            //if on the last section, go to the top.
+        } else {
+            this._goTop('down arrow');
         }
     }
 
-    _goNext() {
-        let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${this.state.currentSection += 1}`]);
+    _goNextSection(source) {
+        let callBack = (currentSection) => {
+            let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
+            window.scrollTo(0, ref.offsetTop);
+            navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
+        };
 
         this.setState({currentSection: this.state.currentSection += 1},
-            window.scrollTo(0, ref.offsetTop)
-            // window.scrollTo(0, findDOMNode(this.refs[0]))
+            callBack(this.state.currentSection)
+        // window.scrollTo(0, findDOMNode(this.refs[0]))
             // scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
         );
     }
 
-    _goPrevious() {
-        let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${this.state.currentSection -= 1}`]);
+    _goPrevSection(source) {
+        let callBack = (currentSection) => {
+            let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
+            navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
+            window.scrollTo(0, ref.offsetTop)
+        };
 
         this.setState({currentSection: this.state.currentSection -= 1},
-            window.scrollTo(0, ref.offsetTop)
+            callBack(this.state.currentSection)
             //window.scrollTo(0, findDOMNode(this.refs[0]))
             // scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
         );
     }
 
-    _goTop() {
-        this.setState({currentSection: 0});
-        window.scrollTo(0, 0);
+    _goTop(source) {
+        let callBack = (currentSection) => {
+            let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
+            navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
+            window.scrollTo(0, ref.offsetTop)
+        };
+
+        this.setState({currentSection: 0}, callBack(0));
+
         //scroller.scrollTo(`${this.state.currentTitle}-section-0`);
     }
 
@@ -170,11 +232,11 @@ class VerticalPage extends React.Component {
 
     _onEnterViewport(scene) {
         this.setState({currentSection: scene.props.itemRef},
-        impressionEvent(true, this.props.data.groupIdentifier, scene));
+        impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, scene.props.name));
     }
 
     _onLeaveViewport(scene) {
-        impressionEvent(false, this.props.data.groupIdentifier, scene)
+        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, scene.props.name)
     }
 
     _checkSceneVisible() {
@@ -252,7 +314,7 @@ class VerticalPage extends React.Component {
                     {/*
                         if there aren't any legacy layouts, render the new footer style, else render the down arrow
                     */}
-                    {this.state.currentPage.sections && !legacyLayouts ? <Footer data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleNext(event)} />}
+                    {this.state.currentPage.sections && !legacyLayouts ? <Footer data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
                 </div>
             )
         }

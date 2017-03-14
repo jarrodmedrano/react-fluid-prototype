@@ -16,6 +16,10 @@
   height: auto;
 }
 
+a.mosaic-link:after {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .c-mosaic [data-f-mosaic~="f-vp3-quarter"] {
     width: 25%;
@@ -58,6 +62,14 @@
 .theme-light .theme-dark .c-placement .c-image-overlay {
   background-color: #000000;
   opacity: .2;
+}
+
+@media (orientation: portrait) {
+  .c-mosaic [data-f-mosaic~=f-height-medium], .c-mosaic [data-f-mosaic~=f-height-large] {
+    height: 100%;
+
+
+  }
 }
 
 @media only screen and (min-width: 768px) {

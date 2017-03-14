@@ -26,7 +26,7 @@
         "toPage": "Acer"
       },
       "groupIdentifier": "oem",
-      "sectionIdentifier": "Holiday0",
+      "sectionIdentifier": "OEM section 1",
       "ordinal": "100"
     },
     {
@@ -51,7 +51,7 @@
         "src": "img/oem_assets/P1-content.png"
       },
       "groupIdentifier": "oem",
-      "sectionIdentifier": "Page_1_name",
+      "sectionIdentifier": "OEM section 2",
       "ordinal": "200"
     },
     {
@@ -66,7 +66,7 @@
         "src": "img/oem_assets/P2-content.png"
       },
       "groupIdentifier": "oem",
-      "sectionIdentifier": "Acer",
+      "sectionIdentifier": "OEM section 3",
       "ordinal": "300"
     },
     {
@@ -86,28 +86,8 @@
         "src": "img/oem_assets/P3-content.png"
       },
       "groupIdentifier": "oem",
-      "sectionIdentifier": "Acer",
+      "sectionIdentifier": "OEM section 4",
       "ordinal": "400"
-    },
-    {
-      "layout": "threeColSpecs",
-      "textSide": "left",
-      "header": "Specifications",
-      "1-1-lead": "Operating system",
-      "1-1-text": "Windows 10",
-      "1-2-lead": "Display resolution",
-      "1-2-text": "RetailInfo.rawScreenResolution",
-      "2-1-lead": "Screen size",
-      "2-1-text": "RetailInfo.ScreenSize",
-      "2-2-lead": "Processor",
-      "2-2-text": "RetailInfo.ProcessorDescription",
-      "3-1-lead": "System memory (RAM)",
-      "3-1-text": "RetailInfo.Memory",
-      "3-2-lead": "Hard drive capacity",
-      "3-2-text": "RetailInfo.StorageDescription",
-      "groupIdentifier": "oem",
-      "sectionIdentifier": "Page_4_name",
-      "ordinal": "500"
     }
   ]
 }
