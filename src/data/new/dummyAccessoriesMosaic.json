@@ -21,11 +21,11 @@
         "mosaicLayout": "mosaic-3",
         "tiles": [
           {
+            "backgroundColor": "#0078D7",
+            "textColor": "#FFF",
             "headingBlock": {
               "heading": "Accessories",
               "subheading": "The perfect complements to your Surface",
-              "backgroundColor": "#0078D7",
-              "textColor": "#FFF",
               "button": {
                 "layout": "link",
                 "link": "http://www.microsoft.com",
@@ -43,7 +43,7 @@
               }
             },
             "pictureBlock": {
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/vertical/mosaic-surface-8.jpg",
                   "minWidth": "1779"
@@ -79,7 +79,7 @@
               }
             },
             "pictureBlock": {
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/vertical/mosaic-surface-5.jpg",
                   "minWidth": "1779"
@@ -115,7 +115,7 @@
               }
             },
             "pictureBlock": {
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/vertical/mosaic-ports.jpg",
                   "minWidth": "1779"
@@ -151,7 +151,7 @@
               }
             },
             "pictureBlock": {
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/vertical/mosaic-headphones.jpg",
                   "minWidth": "1779"

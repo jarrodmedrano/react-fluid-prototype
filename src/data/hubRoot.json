@@ -47,7 +47,7 @@
             "pictureBlock": {
               "altText": "AltText",
               "ariaLabel": "ariaLabel",
-              "pictures": [
+              "picture": [
                 {
                   "src": "http://placehold.it/2400x1350/2F2F2F/171717"
                 }
@@ -83,7 +83,7 @@
             "pictureBlock": {
               "altText": "AltText",
               "ariaLabel": "AriaLabel",
-              "pictures": [
+              "picture": [
                 {
                   "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                   "minWidth": "1779"
@@ -221,6 +221,8 @@
             "mosaicLayout": "mosaic-3",
             "tiles": [
               {
+                "backgroundColor": "#0078D7",
+                "textColor": "#FFF",
                 "headingBlock": {
                   "heading": "-- mosaic title 1 --",
                   "subheading": "-- mosaic subtitle 1 --",
@@ -233,7 +235,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "pictures": [
+                  "picture": [
                     {
                       "src": "http://placehold.it/890x950/171717/2F2F2F",
                       "minWidth": "1779"
@@ -259,9 +261,7 @@
                       "minWidth": "0"
                     }
                   ]
-                },
-                "backgroundColor": "#0078D7",
-                "textColor": "#FFF"
+                }
               },
               {
                 "headingBlock": {
@@ -315,7 +315,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "pictures": [
+                  "picture": [
                     {
                       "src": "http://placehold.it/425x425/464646/333333",
                       "minWidth": "1779"
@@ -356,7 +356,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "pictures": [
+                  "picture": [
                     {
                       "src": "http://placehold.it/425x425/5E5E5E/505050",
                       "minWidth": "1779"
@@ -397,7 +397,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "pictures": [
+                  "picture": [
                     {
                       "src": "http://placehold.it/215x215/767676/666666",
                       "minWidth": "1779"
@@ -438,7 +438,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "pictures": [
+                  "picture": [
                     {
                       "src": "http://placehold.it/215x215/919191/777777",
                       "minWidth": "1779"
@@ -479,7 +479,7 @@
                   }
                 },
                 "pictureBlock": {
-                  "pictures": [
+                  "picture": [
                     {
                       "src": "http://placehold.it/425x215/ACACAC/888888",
                       "minWidth": "1779"

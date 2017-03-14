@@ -48,7 +48,7 @@
           "heading": "Surface Book Pro",
           "altText": "Surface Book Pro",
           "ariaLabel": "Surface Book Pro",
-          "pictures": [
+          "picture": [
             {
               "src": "img/hebrew/oem_assets/surface-hero.jpg"
             }
@@ -67,7 +67,7 @@
           "heading": "Five-point touchpad",
           "altText": "Five-point touchpad",
           "ariaLabel": "Five-point touchpad",
-          "pictures": [
+          "picture": [
             {
               "src": "img/hebrew/oem_assets/keyboard-hero.jpg"
             }
@@ -113,7 +113,7 @@
                 "link": "http://www.microsoft.com",
                 "overlay": "#000"
               },
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/hebrew/oem_assets/mosaic-surface-8.jpg"
                 }
@@ -124,7 +124,7 @@
                 "link": "http://www.microsoft.com",
                 "overlay": "#000"
               },
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/hebrew/oem_assets/mosaic-surface-5.jpg"
                 }
@@ -135,7 +135,7 @@
                 "link": "http://www.microsoft.com",
                 "overlay": "#000"
               },
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/hebrew/oem_assets/mosaic-ports.jpg"
                 }
@@ -146,7 +146,7 @@
                 "link": "http://www.microsoft.com",
                 "overlay": "#000"
               },
-              "pictures": [
+              "picture": [
                 {
                   "src": "img/hebrew/oem_assets/mosaic-headphones.jpg"
                 }
