@@ -21,20 +21,21 @@
         "logo": "img/vertical/ms-logo.png",
         "anchorTitle": "Surface Book",
         "color": "#ffffff",
-        "logoTab": "img/vertical/surfacebook-logo.png"
+        "logoTab": "img/vertical/surfacebook-logo.png",
+        "selectedLogoTab": "img/vertical/surfacebook-logo.png"
       },
       "sections": [
         {
           "ordinal": 100,
           "groupIdentifier": "hero",
           "sectionIdentifier": "Section2",
-          "alignX": "center",
-          "alignY": "center",
-          "theme": "theme-light",
           "anchorLink": true,
           "anchorTitle": "Explore Surface Book",
           "layout": {
             "type": "fullscreen",
+            "alignX": "center",
+            "alignY": "center",
+            "theme": "theme-light",
             "media": {
               "pictureBlock": {
                 "altText": "Surface Book Pro",
@@ -75,16 +76,14 @@
           "sectionIdentifier": "Keyboard",
           "anchorLink": true,
           "anchorTitle": "Keyboard",
-          "alignY": "bottom",
-          "theme": "theme-light",
           "layout": {
             "type": "hero",
             "alignY": "bottom",
+            "theme": "theme-light",
             "headingBlock": {
               "heading": "Five-point touchpad"
             },
             "pictureBlock": {
-              "picture": "img/vertical/keyboard-hero.jpg",
               "altText": "AltText",
               "ariaLabel": "AriaLabel",
               "pictures": [
@@ -140,7 +139,6 @@
           "layout": {
             "type": "card",
             "pictureBlock": {
-              "picture": "img/vertical/keyboard-hero.jpg",
               "altText": "AltText",
               "ariaLabel": "AriaLabel",
               "pictures": [
@@ -173,8 +171,6 @@
             "headingBlock": {
               "heading": "Accessories",
               "subheading": "The perfect complements to your Surface",
-              "backgroundColor": "#0078D7",
-              "textColor": "#FFF",
               "button": {
                 "layout": "link",
                 "link": "http://www.microsoft.com",
@@ -191,17 +187,15 @@
           "sectionIdentifier": "Accessories",
           "anchorLink": true,
           "anchorTitle": "Accessories",
-          "theme": "theme-dark",
           "layout": {
             "type": "mosaic",
+            "theme": "theme-dark",
             "mosaicLayout": "mosaic-3",
             "tiles": [
               {
                 "headingBlock": {
                   "heading": "Accessories",
                   "subheading": "The perfect complements to your Surface",
-                  "backgroundColor": "#0078D7",
-                  "textColor": "#FFF",
                   "button": {
                     "layout": "link",
                     "link": "http://www.microsoft.com",

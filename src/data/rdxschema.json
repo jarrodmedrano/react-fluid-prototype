@@ -164,15 +164,7 @@
           "$ref": "#/definitions/headingBlock"
         },
         "media": {
-          "type": "object",
-          "oneOf": [
-            {
-              "$ref": "#/definitions/videoBlock"
-            },
-            {
-              "$ref": "#/definitions/pictureBlock"
-            }
-          ]
+          "$ref": "#/definitions/media"
         },
         "theme": {
           "enum": [
@@ -319,7 +311,7 @@
           "type": "string"
         },
         "minWidth": {
-          "type": "integer"
+          "type": "string"
         }
       }
     },
@@ -327,9 +319,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "altText",
-        "ariaLabel",
-        "picture"
+        "pictures"
       ],
       "properties": {
         "altText": {
@@ -338,8 +328,8 @@
         "ariaLabel": {
           "type": "string"
         },
-        "picture": {
-          "$ref": "#/definitions/picture"
+        "pictures": {
+          "$ref": "#/definitions/pictures"
         }
       }
     },
@@ -347,8 +337,6 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "altText",
-        "ariaLabel",
         "src"
       ],
       "properties": {
@@ -367,9 +355,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "layout",
-        "text",
-        "ariaLabel"
+        "link"
       ],
       "properties": {
         "layout": {
@@ -377,6 +363,9 @@
             "button",
             "link"
           ]
+        },
+        "link": {
+          "type": "string"
         },
         "text": {
           "type": "string"
@@ -388,6 +377,9 @@
           "type": "string"
         },
         "ariaLabel": {
+          "type": "string"
+        },
+        "overlay": {
           "type": "string"
         }
       }
@@ -440,6 +432,15 @@
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/picture"
+      }
+    },
+    "media": {
+      "type": "object",
+      "pictureBlock": {
+        "$ref": "#/definitions/videoBlock"
+      },
+      "videoBlock": {
+        "$ref": "#/definitions/pictureBlock"
       }
     }
   }

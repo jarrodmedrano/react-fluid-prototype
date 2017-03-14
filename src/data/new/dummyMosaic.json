@@ -25,13 +25,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -67,13 +67,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -123,13 +123,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -165,13 +165,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -207,13 +207,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -249,13 +249,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -305,13 +305,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -347,13 +347,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -389,13 +389,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -431,13 +431,13 @@
               "subheading": "-- mosaic subtitle 4 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -473,13 +473,13 @@
               "subheading": "-- mosaic subtitle 5 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -515,13 +515,13 @@
               "subheading": "-- mosaic subtitle 6 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -557,13 +557,13 @@
               "subheading": "-- mosaic subtitle 7 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -613,13 +613,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -655,13 +655,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -697,13 +697,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -739,13 +739,13 @@
               "subheading": "-- mosaic subtitle 4 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -781,13 +781,13 @@
               "subheading": "-- mosaic subtitle 5 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -823,13 +823,13 @@
               "subheading": "-- mosaic subtitle 6 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -879,13 +879,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -921,13 +921,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -963,13 +963,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1005,13 +1005,13 @@
               "subheading": "-- mosaic subtitle 4 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1047,13 +1047,13 @@
               "subheading": "-- mosaic subtitle 5 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1089,13 +1089,13 @@
               "subheading": "-- mosaic subtitle 6 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1131,13 +1131,13 @@
               "subheading": "-- mosaic subtitle 7 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1173,13 +1173,13 @@
               "subheading": "-- mosaic subtitle 8 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1229,13 +1229,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1271,13 +1271,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1313,13 +1313,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1355,13 +1355,13 @@
               "subheading": "-- mosaic subtitle 4 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1397,13 +1397,13 @@
               "subheading": "-- mosaic subtitle 5 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1439,13 +1439,13 @@
               "subheading": "-- mosaic subtitle 6 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1481,13 +1481,13 @@
               "subheading": "-- mosaic subtitle 7 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1523,13 +1523,13 @@
               "subheading": "-- mosaic subtitle 8 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1565,13 +1565,13 @@
               "subheading": "-- mosaic subtitle 9 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1621,13 +1621,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1663,13 +1663,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1705,13 +1705,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1747,13 +1747,13 @@
               "subheading": "-- mosaic subtitle 4 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1803,13 +1803,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1845,13 +1845,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1887,13 +1887,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1943,13 +1943,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -1985,13 +1985,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -2027,13 +2027,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -2083,13 +2083,13 @@
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -2125,13 +2125,13 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -2167,13 +2167,13 @@
               "subheading": "-- mosaic subtitle 3 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {
@@ -2209,13 +2209,13 @@
               "subheading": "-- mosaic subtitle 4 --",
               "button": {
                 "layout": "link",
-                "path": "http://www.microsoft.com",
+                "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }
             },
-            "size": "1",
+
             "pictureBlock": {
               "pictures": [
                 {

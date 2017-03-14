@@ -23,8 +23,6 @@
             "headingBlock": {
               "heading": "Accessories",
               "subheading": "The perfect complements to your Surface",
-              "backgroundColor": "#0078D7",
-              "textColor": "#FFF",
               "button": {
                 "layout": "link",
                 "link": "http://www.microsoft.com",
