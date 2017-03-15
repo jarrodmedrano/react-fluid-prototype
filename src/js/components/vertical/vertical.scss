@@ -16,7 +16,6 @@ $video-offset-portrait: 0;
 
 .scene-vertical {
   flex: 1;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -26,7 +25,9 @@ $video-offset-portrait: 0;
   background: $default-bg;
   z-index: 2;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    height: 100vh;
+
     > div {
       height: 100vh;
     }

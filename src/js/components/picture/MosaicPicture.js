@@ -16,9 +16,9 @@ class MosaicPicture extends React.Component {
             };
 
             return (
-                <canvas className="c-image" style={bgStyle} ref="canvas">
-                    <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText ? altText : null} aria-label={ ariaLabel ? ariaLabel : null}/>/>
-                </canvas>
+                <picture className="c-image" style={bgStyle} ref="canvas">
+                    <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText ? altText : null} aria-label={ ariaLabel ? ariaLabel : null} draggable="false"/>/>
+                </picture>
             );
         } return null
     }
