@@ -1,0 +1,286 @@
+---
+title: Sample documentation/article
+removeContainer: true
+---
+
+{{> universal-header-template doc-page-example.default-header }}
+<main id="mainContent" data-grid="container" class="context-doc-page">
+    <div data-grid="col-12 pad-12x">
+        <div data-grid="col-12">
+            <nav>
+                <ul class="c-breadcrumb">
+                    <li>
+                        <a class="c-hyperlink" href="#">Docs</a>
+                    </li>
+                    <li>
+                        <a class="c-hyperlink" href="#">.NET Home</a>
+                    </li>
+                    <li>Documentation</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div data-grid="col-12 stack-2" class="x-clearfix">
+        <div data-grid="col-2" class="x-offset-sidebar">
+            <form class="c-search" autocomplete="off" name="form1" target="_self">
+                <input aria-label="Enter your search" type="search" name="search-field" placeholder="Filter">
+                <button class="c-glyph" name="search-button">
+                    <span class="x-screen-reader">Filter</span>
+                </button>
+            </form>
+            <div class="m-supplemental-nav">
+                <nav>
+                    <nav>
+                        <button aria-controls="navTargetItem1" data-state="collapsed">About .Net</button>
+                        <nav id="navTargetItem1">
+                            <a href="#">.NET Products</a>
+                        </nav>
+                    </nav>
+                    <nav>
+                        <button aria-controls="navTargetItem2" data-state="collapsed">.NET Standard</button>
+                        <nav id="navTargetItem2">
+                            <a href="#">.NET Standard Library</a>
+                            <a href="#">Frameworks</a>
+                            <a href="#">What is "managed code"?</a>
+                            <a href="#">Common Language Runtime (CLR)</a>
+                            <a href="#">Langauge Independence</a>
+                            <a href="#">Framework Libraries</a>
+                            <a href="#">.NET Class Libraries</a>
+                            <a href="#">Portability Analyzer</a>
+                            <a href="#">Handling and throwing exceptions</a>
+                            <a href="#">.NET Assembly File Format</a>
+                            <a href="#">Generic types</a>
+                        </nav>
+                    </nav>
+                    <nav>
+                        <button aria-controls="navTargetItem3" data-state="expanded">.NET Core Guide</button>
+                        <nav id="navTargetItem3">
+                            <a href="#" class="f-active">Getting started</a>
+                            <a href="#">Windows Prerequisites</a>
+                            <a href="#">Tutorials</a>
+                            <a href="#">Packages, Metapackages and Frameworks</a>
+                            <a href="#">Application Deployment</a>
+                            <a href="#">Docker</a>
+                            <a href="#">Unit Testing</a>
+                            <a href="#">Releases</a>
+                            <a href="#">Runtime IDentifier catalog</a>
+                            <a href="#">.NET Core Tools</a>
+                            <a href="#">Porting from .NET Framework</a>
+                            <a href="#">Migrating from DNX</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+        <div data-grid="col-2" class="x-float-right x-offset-sidebar">
+            <div class="c-drawer f-responsive f-show">
+                <button class="c-glyph x-hidden x-visible-vp2-block x-visible-vp1-block" aria-expanded="true" aria-controls="responsive-drawer" disabled="disabled">Options</button>
+                <div id="responsive-drawer" aria-hidden="false">
+                    <ul class="c-list f-bare">
+                        <li><a class="c-action-trigger c-glyph glyph-edit" href="#">Comments</a></li>
+                        <li><a class="c-action-trigger c-glyph glyph-edit" href="#">Edit</a></li>
+                        <li><a class="c-action-trigger c-glyph glyph-share" href="#">Share</a></li>
+                    </ul>
+                    <div class="c-label">Theme</div>
+                    <form name="default" target="_self">
+                        <div class="c-select">
+                            <select aria-label="Select">
+                                <option>Light</option>
+                                <option>Dark</option>
+                            </select>
+                        </div>
+                    </form>
+                    <h4 class="c-heading-5">In This Article</h4>
+                    <ul class="c-list f-bare f-lean">
+                        <li><a class="c-hyperlink" href="#">Composition</a></li>
+                        <li><a class="c-hyperlink" href="#">Acquisition</a></li>
+                        <li><a class="c-hyperlink" href="#">Architecture</a></li>
+                        <li><a class="c-hyperlink" href="#">Comparisons to other .NET Platforms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-grid="col-8">
+            <div class="x-offset-content">
+                <h1 class="c-heading-2">.NET Core</h1>
+                <div class="m-media">
+                    <img class="c-image f-round" src="http://placehold.it/36x36" alt="Placeholder with grey background and dimension watermark without any imagery">
+                    <p class="c-heading-6"><a class="c-hyperlink" href="#">Rich Lander</a></p>
+                    <p class="c-meta-text">9/14/2016 &#8226; 8min to read<span><span>&#8226; </span>Contributors<img class="c-image f-round x-visible-inline" src="http://placehold.it/14x14" alt="Placeholder with grey background and dimension watermark without any imagery"><img class="c-image f-round x-visible-inline" src="http://placehold.it/14x14" alt="Placeholder with grey background and dimension watermark without any imagery"><img class="c-image f-round x-visible-inline" src="http://placehold.it/14x14" alt="Placeholder with grey background and dimension watermark without any imagery"></span></p>
+                </div>
+                <blockquote>
+                    <p class="c-paragraph-4">Check out the <a href="getting-started" class="c-hyperlink">"Getting Started" tutorials</a> to learn how to create a simple .NET Core application. It only takes a few minutes to get your first app up and running.</p>
+                </blockquote>
+                <p class="c-paragraph-3">.NET Core is a general purpose development platform maintained by Microsoft and the .NET community on <a class="c-hyperlink" href="https://github.com/dotnet/core">GitHub</a>. It is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</p>
+                <p class="c-paragraph-3">The following characteristics best define .NET Core:</p>
+                <ul class="c-list">
+                    <li>
+                        Flexible deployment: Can be included in your app or installed side-by-side user- or machine-wide.
+                    </li>
+                    <li>
+                        Cross-platform: Runs on Windows, macOS and Linux; can be ported to other OSes. The <a class="c-hyperlink" href="https://github.com/dotnet/core/blob/master/roadmap.md">supported Operating Systems (OS)</a>, CPUs and application scenarios will grow over time, provided by Microsoft, other companies, and individuals.
+                    </li>
+                    <li>
+                        Command-line tools: All product scenarios can be exercised at the command-line.
+                    </li>
+                    <li>
+                        Compatible: .NET Core is compatible with .NET Framework, Xamarin and Mono, via the <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard Library</a>.
+                    </li>
+                    <li>
+                        Open source: The .NET Core platform is open source, using MIT and Apache 2 licenses. Documentation is licensed under <a class="c-hyperlink" href="http://creativecommons.org/licenses/by/4.0/">CC-BY</a>. .NET Core is a <a class="c-hyperlink" href="http://www.dotnetfoundation.org/">.NET Foundation</a> project.
+                    </li>
+                    <li>
+                        Supported by Microsoft: .NET Core is supported by Microsoft, per <a class="c-hyperlink" href="https://www.microsoft.com/net/core/support/">.NET Core Support</a>
+                    </li>
+                </ul>
+
+                <h2 class="c-heading-4">Composition</h2>
+                <p class="c-paragraph-3">.NET Core is composed of the following parts:</p>
+                <ul class="c-list">
+                    <li>
+                        A <a class="c-hyperlink" href="https://github.com/dotnet/coreclr">.NET runtime</a>, which provides a type system, assembly loading, a garbage collector, native interop and other basic services.
+                    </li>
+                    <li>
+                        A set of <a class="c-hyperlink" href="https://github.com/dotnet/corefx">framework libraries</a>, which provide primitive data types, app composition types and fundamental utilities.
+                    </li>
+                    <li>
+                        A <a class="c-hyperlink" href="https://github.com/dotnet/cli">set of SDK tools</a> and <a class="c-hyperlink" href="https://github.com/dotnet/roslyn">language compilers</a> that enable the base developer experience, available in the <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/core/sdk">.NET Core SDK</a>.
+                    </li>
+                    <li>
+                        The 'dotnet' app host, which is used to launch .NET Core apps. It selects the runtime and hosts the runtime, provides an assembly loading policy and launches the app. The same host is also used to launch SDK tools in much the same way.
+                    </li>
+                </ul>
+
+                <h3 class="c-heading-6"><b>Languages</b></h3>
+                <p class="c-paragraph-3">The C# and F# languages (Visual Basic is coming) can be used to write applications and libraries for .NET Core. The compilers run on .NET Core, enabling you to develop for .NET Core anywhere it runs. In general, you will not use the compilers directly, but indirectly using the SDK tools.</p>
+                <p class="c-paragraph-3">The C# and F# compilers and the .NET Core tools are or can be integrated into several text editors and IDEs, including Visual Studio, <a class="c-hyperlink" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">Visual Studio Code</a>, Sublime Text and Vim, making .NET Core development an option in your favorite coding environment and OS. This integration is provided, in part, by the good folks of the <a class="c-hyperlink" href="http://www.omnisharp.net/">OmniSharp project</a>.</p>
+
+                <h3 class="c-heading-6"><b>.NET APIs and Compatibility</b></h3>
+                <p class="c-paragraph-3">.NET Core can be thought of as a cross-platform version of the .NET Framework, at the layer of the .NET Framework Base Class Libraries (BCL). It implements the <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard Library</a> specification. .NET Core provides a subset of the APIs that are available in the .NET Framework or Mono/Xamarin. In some cases, types are not fully implemented (some members are not available or have been moved).</p>
+                <p class="c-paragraph-3">Look at the <a class="c-hyperlink" href="https://github.com/dotnet/core/blob/master/roadmap.md">.NET Core roadmap</a> to learn more about the .NET Core API roadmap.</p>
+
+                <h3 class="c-heading-6"><b>Relationship to the .NET Standard Library</b></h3>
+                <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard Library</a> is an API spec that describes the consistent set of .NET APIs that developers can expect in each .NET implementation. .NET implementations need to implement this spec in order to be considered .NET Standard Library compliant and to support libraries that target the .NET Standard Library.</p>
+                <p class="c-paragraph-3">.NET Core implements the .NET Standard Library, and therefore supports .NET Standard Libraries.</p>
+
+                <h3 class="c-heading-6"><b>Workloads</b></h3>
+                <p class="c-paragraph-3">By itself, .NET Core includes a single application model -- console apps -- which is useful for tools, local services and text-based games. Additional application models have been built on top of .NET Core to extend its functionality, such as:</p>
+                <ul class="c-list">
+                    <li>
+                        <a class="c-hyperlink" href="http://asp.net/">ASP.NET Core</a>
+                    </li>
+                    <li>
+                        <a class="c-hyperlink" href="https://developer.microsoft.com/windows">Windows 10 Universal Windows Platform (UWP)</a>
+                    </li>
+                    <li>
+                        <a class="c-hyperlink" href="https://www.xamarin.com/forms">Xamarin.Forms</a>
+                    </li>
+                </ul>
+
+                <h3 class="c-heading-6"><b>Open Source</b></h3>
+                <p class="c-paragraph-3"><a class="c-hyperlink" href="https://github.com/dotnet/core">.NET Core</a> is open source (MIT license) and was contributed to the <a class="c-hyperlink" href="http://dotnetfoundation.org/">.NET Foundation</a> by Microsoft in 2014. It is now one of the most active .NET Foundation projects. It can be freely adopted by individuals and companies, including for personal, academic or commercial purposes. Multiple companies use .NET Core as part of apps, tools, new platforms and hosting services. Some of these companies make significant contributions to .NET Core on GitHub and provide guidance on the product direction as part of the <a class="c-hyperlink" href="http://www.dotnetfoundation.org/blog/tsg-welcome">.NET Foundation Technical Steering Group</a>.</p>
+
+                <h2 class="c-heading-4">Acquisition</h2>
+                <p class="c-paragraph-3">.NET Core is distributed in two main ways, as packages on NuGet.org and as standalone distributions.</p>
+
+                <h3 class="c-heading-6"><b>Distributions</b></h3>
+                <p class="c-paragraph-3">You can download .net Core at the <a class="c-hyperlink" href="https://www.microsoft.com/net/core">.NET Core Getting Started page<a>.</p>
+                <ul class="c-list">
+                    <li>
+                        The <em>Microsoft .NET Core</em> distribution includes the CoreCLR runtime, associated libraries, a console application host and the <code>dotnet</a></code> app launcher. It is described by the <code><a class="c-hyperlink" href="https://www.nuget.org/packages/Microsoft.NETCore.App">Microsoft.NETCore.App metapackage</a></code>.
+                    </li>
+                    <li>
+                        The <em>Microsoft .NET Core SDK</em> distribution includes .NET Core and a set of tools for restoring NuGet packages and compiling and building apps.
+                    </li>
+                </ul>
+                <p class="c-paragraph">Typically you will first install the .NET Core SDK to get started with .NET Core development. You may choose to install additional .NET Core (perhaps pre-release) builds.</p>
+
+                <h3 class="c-heading-6"><b>Packages</b></h3>
+                <ul class="c-list">
+                    <li>
+                        <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/core/packages">.NET Core Packages</a> contain the .NET Core runtime and libraries (reference assemblies and implementations). For example, <a class="c-hyperlink" href="https://www.nuget.org/packages/System.Net.Http/">System.Net.Http</a>.
+                    </li>
+                    <li>
+                        <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/core/packages">.NET Core Metapackages</a> describe various layers and app-models by referencing the appropriate set of versioned library packages.
+                    </li>
+                </ul>
+
+                <h2 class="c-heading-4">Architecture</h2>
+                <p class="c-paragraph-3">.NET Core is a cross-platform .NET implementation. The primary architectural concerns unique to .NET Core are related to providing platform-specific implementations for supported platforms.</p>
+
+                <h3 class="c-heading-6"><b>Environments</b></h3>
+                <p class="c-paragraph-3">.NET Core is supported by Microsoft on Windows, macOS and Linux. On Linux, Microsoft primarily supports .NET Core running on Red Hat Enterprise Linux (RHEL) and Debian distribution families.</p>
+                <p class="c-paragraph-3">.NET Core currently supports X64 CPUs. On Windows, X86 is also supported. ARM64 and ARM32 are in progress.</p>
+                <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://github.com/dotnet/core/blob/master/roadmap.md">.NET Core Roadmap</a>provides more detailed information on workload and OS and CPU environment support and plans.</p>
+                <p class="c-paragraph-3">Other companies or groups may support .NET Core for other app types and environment.</p>
+
+                <h3 class="c-heading-6"><b>Designed for Adaptability</b></h3>
+                <p class="c-paragraph-3">.NET Core has been built as a very similar but unique product relative to other .NET products. It has been designed to enable broad adaptability to new platforms, for new workloads and with new compiler toolchains. It has several OS and CPU ports in progress and may be ported to many more. An example is the <a class="c-hyperlink" href="https://github.com/dotnet/llilc">LLILC</a> project, which is an early prototype of native compilation for .NET Core via the <a class="c-hyperlink" href="http://llvm.org/">LLVM</a> compiler.</p>
+                <p class="c-paragraph-3">The product is broken into several pieces, enabling the various parts to be adapted to new platforms on different schedules. The runtime and platform-specific foundational libraries must be ported as a unit. Platform-agnostic libraries should work as-is on all platforms, by construction. There is a project bias to reducing platform-specific implementations to increase developer efficiency, preferring platform-neutral C# code whenever an algorithm or API can be implemented in-full or in-part that way.</p>
+                <p class="c-paragraph-3">People commonly ask how .NET Core is implemented in order to support multiple operating systems. They typically ask if there are separate implementations or if <a class="c-hyperlink" href="https://en.wikipedia.org/wiki/Conditional_compilation">conditional compilation</a> is used. It's both, with a strong bias towards conditional compilation.</p>
+                <p class="c-paragraph-3">You can see in the chart below that the vast majority of <a class="c-hyperlink" href="https://github.com/dotnet/corefx">CoreFX</a> is platform-neutral code that is shared across all platforms. Platform-neutral code can be implemented as a single portable assembly that be used on all platforms.</p>
+                <img class="c-image f-pad-top-6x" src="images/corefx-platforms-loc.png" alt="Graph illustrating CoreFX C# Code by Operating stystem">
+                <p class="c-paragraph-3">Windows and Unix implementations are similar in size. Windows has a larger implementation since CoreFX implements some Windows-only features, such as <a class="c-hyperlink" href="https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry">Microsoft.Win32.Registry</a> but does not yet implement any Unix-only concepts. You will also see that the majority of the Linux and macOS implementations are shared across a Unix implementation, while the Linux- and macOS-specific implementations are roughly similar in size.</p>
+                <p class="c-paragraph-3">There are a mix of platform-specific and platform-neutral libraries in .NET Core. You can see the pattern in a few examples:</p>
+                <ul class="c-list">
+                    <li>
+                        <a class="c-hyperlink" href="https://github.com/dotnet/coreclr">CoreCLR</a> is platform-specific. It's built in C/C++, so is platform-specific by construction.
+                    </li>
+                    <li>
+                        <a class="c-hyperlink" href="https://github.com/dotnet/corefx/tree/master/src/System.IO">System.IO</a> and <a class="c-hyperlink" href="https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms">System.Security.Cryptography.Algorithms</a> are platform-specific, given that the storage and cryptography APIs differ significantly on each OS.
+                    </li>
+                    <li>
+                        <a class="c-hyperlink" href="https://github.com/dotnet/corefx/tree/master/src/System.Collections">System.Collections</a> and <a class="c-hyperlink" href="https://github.com/dotnet/corefx/tree/master/src/System.Linq">System.Linq</a> are platform-neutral, given that they create and operate over data structures.
+                    </li>
+                </ul>
+
+                <h2 class="c-heading-4">Comparisons to other .NET Platforms</h2>
+                <p class="c-paragraph-3">It is perhaps easiest to understand the size and shape of .NET Core by comparing it to existing .NET platforms.</p>
+
+                <h3 class="c-heading-6"><b>Comparison with .NET Framework</b></h3>
+                <p class="c-paragraph-3">The .NET platform was first announced by Microsoft in 2000 and then evolved from there. The .NET Framework has been the primary .NET product produced by Microsoft during that 15+ year span.</p>
+                <p class="c-paragraph">The major differences between .NET Core and the .NET Framework:</p>
+                <ul class="c-list">
+                    <li>
+                        App-models -- .NET Core does not support all the .NET Framework app-models, in part because many of them are built on Windows technologies, such as WPF (built on top of DirectX). The console and ASP.NET Core app-models are supported by both .NET Core and .NET Framework.
+                    </li>
+                    <li>
+                        APIs -- .NET Core contains many of the same, but fewer, APIs as the .NET Framework, and with a different factoring (assembly names are different; type shape differs in key cases). These differences currently typically require changes to port source to .NET Core. .NET Core implements the <a class="c-hyperlink" href="https://stage.docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard Library API</a>, which will grow to include more of the .NET Framework BCL API over time.
+                    </li>
+                    <li>
+                        Subsystems -- .NET Core implements a subset of the subsystems in the .NET Framework, with the goal of a simpler implementation and programming model. For example, Code Access Security (CAS) is not supported, while reflection is supported.
+                    </li>
+                    <li>
+                        Platforms -- The .NET Framework supports Windows and Windows Server while .NET Core also supports macOS and Linux.
+                    </li>
+                    <li>
+                        Open Source -- .NET Core is open source, while a <a class="c-hyperlink" href="https://github.com/microsoft/referencesource">read-only subset of the .NET Framework</a> is open source.
+                    </li>
+                </ul>
+                <p class="c-paragraph-3">While .NET Core is unique and has significant differences to the .NET Framework and other .NET platforms, it is straightforward to share code, using either source or binary sharing techniques.</p>
+
+                <h3 class="c-heading-6"><b>Comparison with Mono</b></h3>
+                <p class="c-paragraph-3"><a class="c-hyperlink" href="http://www.mono-project.com/">Mono</a> is the original cross-platform and <a class="c-hyperlink" href="https://github.com/mono/mono">open source</a> .NET implementation, first shipping in 2004. It can be thought of as a community clone of the .NET Framework. The Mono project team relied on the open <a class="c-hyperlink" href="https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md">.NET standards</a> (notably ECMA 335) published by Microsoft in order to provide a compatible implementation.</p>
+                <p class="c-paragraph">The major differences between .NET Core and Mono:</p>
+                <ul class="c-list">
+                    <li>
+                        App-models -- Mono supports a subset of the .NET Framework app-models (for example, Windows Forms) and some additional ones (for example, <a class="c-hyperlink" href="https://www.xamarin.com/platform">Xamarin.iOS</a>) through the Xamarin product. .NET Core doesn't support these.
+                    </li>
+                    <li>
+                        APIs -- Mono supports a <a class="c-hyperlink" href="http://docs.go-mono.com/?link=root%3a%2fclasslib">large subset</a> of the .NET Framework APIs, using the same assembly names and factoring.
+                    </li>
+                    <li>
+                        Platforms -- Mono supports many platforms and CPUs.
+                    </li>
+                    <li>
+                        Open Source -- Mono and .NET Core both use the MIT license and are .NET Foundation projects.
+                    </li>
+                    <li>
+                        Focus -- The primary focus of Mono in recent years is mobile platforms, while .NET Core is focused on cloud workloads.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+{{> universal-footer-template doc-page-example.default-footer }}

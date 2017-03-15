@@ -1,0 +1,33 @@
+{
+    "name": "skip to main",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10591607,
+            "description": "fixes contrast between text and background"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9771160,
+            "description": "fixes an issue where the module was not overlaying the UHF"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9574492,
+            "description": "changed dotted outline on focus state to be visible"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "new",
+            "ticket-id": 8629036,
+            "description": "adds a skip to main module for accessibility; will be first item in DOM"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+.m-email-sign-up {
+    padding-#{$left}: 0;
+    padding-#{$right}: 0;
+
+    .c-group {
+        > input.c-text-field {
+            margin-top: 12px;
+            margin-#{$right}: 12px;
+            height: auto;
+
+            + .c-button {
+                margin-#{$right}: 20px;
+
+                + .c-hyperlink {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .c-checkbox {
+        .c-label {
+            margin-#{$right}: 0;
+        }
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        @include left-right-padding($base-9x);
+    }
+
+    @media only screen and (max-width: $vp2) {
+        @include left-right-padding($base-6x);
+    }
+}

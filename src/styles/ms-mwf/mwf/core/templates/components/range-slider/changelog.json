@@ -1,0 +1,19 @@
+{
+    "name": "range slider",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "new",
+            "ticket-id": 10889482,
+            "description": "adds TypeScript bindings file for behaviors"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9681422,
+            "description": "adds component"
+        }
+    ]
+}

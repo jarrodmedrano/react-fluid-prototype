@@ -1,0 +1,29 @@
+{
+    "name": "checkbox",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9925647,
+            "description": "adds pub-sub to checkbox"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9925647,
+            "description": "adds aria-checked to checkbox to pass validation"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9435953,
+            "description": "fixes issue with focus rectangle incorrectly appearing on mouse cick"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8525092,
+            "description": "adds an aria-label to input for improved accessibility on screen readers"
+        }
+    ]
+}

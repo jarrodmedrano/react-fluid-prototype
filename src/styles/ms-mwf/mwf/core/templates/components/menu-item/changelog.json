@@ -1,0 +1,19 @@
+{
+    "name": "menu item",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9927452,
+            "description": "removes invalid aria-selected attribute from elements with the menuitemradio role"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8737292,
+            "description": "fixes hover state on f-product spans"
+        }
+    ]
+}

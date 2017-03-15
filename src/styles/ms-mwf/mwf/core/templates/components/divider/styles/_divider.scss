@@ -1,0 +1,42 @@
+// ==========================================================================
+// Component: Divider
+// ==========================================================================
+
+@mixin divider-base() {
+    border: 0;
+    margin: 0;
+
+    &.f-pad-bottom-3x {
+        margin-bottom: $base-3x;
+    }
+
+    &.f-pad-bottom-6x {
+        margin-bottom: $base-6x;
+    }
+
+    &.f-pad-top-3x {
+        margin-top: $base-3x;
+    }
+
+    &.f-pad-top-6x {
+        margin-top: $base-6x;
+    }
+
+    &.f-pad-vertical-3x {
+        margin: $base-3x 0;
+    }
+
+    &.f-pad-vertical-6x {
+        margin: $base-6x 0;
+    }
+}
+
+hr.c-divider {
+    @include divider-base();
+    border-top: 1px solid $color-foreground-20;
+}
+
+hr.c-subdivider {
+    @include divider-base();
+    border-top: 1px solid $color-foreground-10;
+}

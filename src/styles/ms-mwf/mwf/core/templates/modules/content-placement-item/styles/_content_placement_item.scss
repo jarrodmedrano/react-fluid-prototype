@@ -1,0 +1,146 @@
+// ==========================================================================
+// Module: Content placement item
+// ==========================================================================
+// Using mixin as we need to support .m-content-placement-item
+// with and without an <a> tag until v.2.0 (shape addition).
+// At that time, the old shape no longer needs to be supported and this can be removed
+@mixin content-placement-base {
+    .c-heading {
+        @include apply-type(t5, false, true);
+        font-weight: $font-weight-normal;
+        padding-top: 12px;
+        padding-bottom: 2px;
+    }
+
+    .c-paragraph {
+        padding-top: 2px;
+    }
+
+    .c-heading,
+    .c-paragraph {
+        padding-#{$right}: 12px;
+    }
+
+    .c-call-to-action {
+        @include c-call-to-action-lightweight;
+    }
+
+    .c-badge {
+        margin: 12px 0 4px;
+
+        + .c-heading {
+            // necessary to override style across all viewports
+            @media only screen and (min-width: $vp1) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .c-video {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        #{$left}: 0;
+
+        video {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    > picture {
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        .c-heading {
+            @include apply-type(t6, false, true);
+            font-weight: $font-weight-normal;
+        }
+    }
+}
+
+// .c-content-placement deprecated v.1.7.0.
+// use m-content-placement-item instead
+// TODO: Remove c-content-placement in v.2.0
+.m-content-placement-item,
+.c-content-placement {
+    // this call to mixin exists to support previous version
+    // of the shape which are not wrapped inside an a tag
+    @include content-placement-base;
+    @include left-right-padding($base-0);
+    padding-top: 0;
+    margin-top: $base-12x;
+
+    > .c-group {
+        display: block;
+        overflow: visible;
+
+        > .c-call-to-action {
+            margin-top: 0;
+
+            + .c-call-to-action {
+                &:focus {
+                    padding-#{$left}: 24px;
+                    margin-#{$left}: -24px;
+                }
+            }
+        }
+    }
+
+    > a {
+        &:first-child {
+            @include content-placement-base;
+            display: block;
+
+            &:hover {
+                picture {
+                    img {
+                        opacity: 0.9;
+                    }
+                }
+
+                .c-heading {
+                    text-decoration: underline;
+                }
+
+                + .c-call-to-action {
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+
+                + .c-group {
+                    > .c-call-to-action {
+                        &:first-child {
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:active {
+                picture {
+                    img {
+                        opacity: 0.8;
+                    }
+                }
+
+                .c-heading {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

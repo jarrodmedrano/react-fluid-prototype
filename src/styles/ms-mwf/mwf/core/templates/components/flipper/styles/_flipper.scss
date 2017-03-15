@@ -1,0 +1,100 @@
+// ==========================================================================
+// Component: Flipper
+// ==========================================================================
+
+.c-flipper {
+    display: inline-block;
+    width: 24px;
+    height: 48px;
+    border: 0;
+    padding: 0;
+    background: flatten-overlay($color-shade, $color-tint, 80);
+    color: flatten-overlay($color-tint, $color-shade, 80);
+    opacity: 0.8;
+    font-family: $font-family-glyphs;
+
+    &:before {
+        // Prevent IE button press effect
+        position: relative;
+        #{$left}: 0;
+        top: 0;
+    }
+
+    &.f-large {
+        width: 48px;
+        height: 96px;
+
+        &:before {
+            @include apply-type(t4, false, true);
+        }
+    }
+
+    /* Use .f-previous and .f-next
+    * .f-left and f-left deprecated v1.3.0 */
+
+    &.f-left,
+    &.f-previous {
+        &:before {
+            content: set-direction-based-value($glyph-chevron-left, $glyph-chevron-right);
+        }
+    }
+
+    &.f-right,
+    &.f-next {
+        &:before {
+            content: set-direction-based-value($glyph-chevron-right, $glyph-chevron-left);
+        }
+    }
+
+    &:focus {
+        outline: 1px dashed $color-foreground;
+        background: $color-foreground-20;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        background: flatten-overlay($color-shade, $color-tint, 70);
+        color: $color-foreground;
+    }
+
+    #{$theme-light} {
+        background: flatten-overlay($color-shade, $color-tint, 90);
+        color: flatten-overlay($color-tint, $color-shade, 80);
+        opacity: 0.8;
+
+        &:focus {
+            outline-color: $color-shade;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:active {
+            background: $color-tint;
+            color: $color-shade;
+        }
+    }
+
+    #{$theme-dark} {
+        background: flatten-overlay($color-tint, $color-shade, 90);
+        color: flatten-overlay($color-shade, $color-tint, 85);
+        opacity: 0.8;
+
+        &:focus {
+            outline-color: $color-tint;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:active {
+            background: $color-shade;
+            color: $color-tint;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+%f-active-styles {
+    background: $color-foreground-10;
+    color: $color-shade;
+    text-decoration: none;
+    border-left-color: $color-foreground-10;
+    border-right-color: $color-foreground-10;
+    border-top-color: $color-foreground-10;
+    animation: fadeIn 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.c-action-menu {
+    position: relative;
+    display: inline-block;
+
+    > button.c-action-trigger {
+        position: relative;
+        height: 100%;
+        border: 1px solid transparent;
+        border-bottom: 0;
+
+        &:hover:not(.x-hidden-focus),
+        &:focus:not(.x-hidden-focus) {
+            background: $color-foreground-10;
+            color: $color-shade;
+        }
+
+        &:focus:not(.x-hidden-focus) {
+            outline: 2px solid $color-accent;
+        }
+
+        &:active {
+            background: $color-foreground-20;
+        }
+
+        &[disabled] {
+            &:hover,
+            &:focus {
+                background: none;
+                color: $color-foreground-20;
+                cursor: not-allowed;
+            }
+        }
+
+        &[aria-expanded="false"] {
+            + ul {
+                display: none;
+            }
+        }
+
+        &:not([aria-label]) {
+            padding: set-direction-based-value(8px 24px 8px 8px, 8px 8px 8px 24px);
+
+            &:after {
+                @include apply-glyph($glyph-chevron-down);
+                position: absolute;
+                font-size: 8px;
+                color: $color-foreground-80;
+                font-weight: $font-weight-bold;
+                #{$right}: 8px;
+                padding-top: 7px;
+            }
+
+            &[disabled] {
+                &:after {
+                    color: $color-foreground-20;
+                }
+            }
+        }
+    }
+
+    > .c-context-menu {
+        position: absolute;
+    }
+
+    > button.c-action-trigger.f-active,
+    .no-js &:hover > button.c-action-trigger:not([disabled]) {
+        @extend %f-active-styles;
+
+        &:focus:not(.x-hidden-focus) {
+            outline: none;
+        }
+    }
+
+    .no-js &:hover > .c-context-menu:not([aria-disabled]),
+    .js & > .c-context-menu ul[aria-expanded="true"] {
+        display: block;
+        animation: fadeIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+}

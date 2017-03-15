@@ -1,0 +1,45 @@
+{
+    "name": "combo",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10145677,
+            "description": "fixes tabbing through the combo without making a selection"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10145477,
+            "description": "fixes alt theme list item hover color to white"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10145159,
+            "description": "fixes dropdown width in IE9"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9101130,
+            "description": "fixes undesired window scrolling when clicked"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525110,
+            "description": "updates several items to improve accessibility including: changing the aria label text to be more descriptive, adding the role combobox to the input element, adding the role button to the button, adding the role listbox to the ul element, switching the aria hidden attribute to the aria expanded attribute on the ul element, and adding the role option to the list items"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "slider",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10071720,
+            "description": "fixes issue where value and aria-valuenow attributes were getting set to invalid values (eg, 00:12)"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8884803,
+            "description": "updates several items to improve accessibility including: adding the aria-valuemin, aria-valuemax, aria-valuenow, and aria-valuetext role=slider to the slider button; allowing for more robust keyboard support including: home to go to slider min, end to go to slider max, page up to increase by double the step, and page down to decrease by double the step; providing more descriptive labels and aria values"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "new",
+            "ticket-id": 8188712,
+            "description": "adds a vertical option to slider"
+        }
+    ]
+}

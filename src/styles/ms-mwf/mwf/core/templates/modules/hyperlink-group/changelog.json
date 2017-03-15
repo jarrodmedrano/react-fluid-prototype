@@ -1,0 +1,40 @@
+{
+    "name": "hyperlink group",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9188047,
+            "description": "updates hyperlink group content placement images to better match the intended reflow and remove inconsistencies"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9620078,
+            "description": "fixes an issue where unsupported styles were not being applied adding extra top padding in Internet Explorer"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8889522,
+            "description": "removes maxlines and increases top and bottom padding"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8703525,
+            "description": "fixes an issue where hyperlink group in mosaic placement was not center aligned"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7976654,
+            "description": "updates layout rules to achieve flexible height"
+        }
+    ]
+}

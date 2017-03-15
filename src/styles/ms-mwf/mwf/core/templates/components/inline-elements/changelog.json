@@ -1,0 +1,5 @@
+{
+    "name": "inline elements",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md"
+}

@@ -1,0 +1,45 @@
+{
+    "name": "choice summary",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10803201,
+            "description": "fixes issue with hover state being off due to change in action trigger margins"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9925726,
+            "description": "restrict hover and focus states to only the actionable part of component"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9943957,
+            "description": "fixes an issue where Internet Explorer is inferring styles on before elements"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8790072,
+            "description": "updates component shape to use an anchor instead of a button per accessibility standards"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525008,
+            "description": "updates accessibility by updating choice summary aria-label to describe what action is occurring and adding aria-live example and documentation"
+       }
+    ],
+    "v1.8.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7845315,
+            "description": "updates component button to allow for radio option UI"
+       }
+    ]
+}

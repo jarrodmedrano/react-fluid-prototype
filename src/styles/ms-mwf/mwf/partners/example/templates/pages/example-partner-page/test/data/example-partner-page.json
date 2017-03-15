@@ -1,0 +1,3612 @@
+{
+    "lead-hero": {
+        "config": {
+            "content-type": "hero",
+            "multi-slide": true
+        },
+        "content": {
+            "label": "Label",
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "sequence-indicator": {
+                "content": {
+                    "items": [
+                        {
+                            "config": {
+                                "checked": true
+                            },
+                            "content": {
+                                "label": "View x-align left",
+                                "title": "x-align-left",
+                                "id": "x-align-left"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View x-align center",
+                                "title": "x-align-center",
+                                "id": "x-align-center"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View x-align right",
+                                "title": "x-align-right",
+                                "id": "x-align-right"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View y-align top",
+                                "title": "y-align-top",
+                                "id": "y-align-top"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View y-align center",
+                                "title": "y-align-center",
+                                "id": "y-align-center"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View y-align bottom",
+                                "title": "y-align-bottom",
+                                "id": "y-align-bottom"
+                            }
+                        }
+                    ]
+                }
+            },
+            "items": [
+                {
+                    "id": "x-align-left",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "x-align-left",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "http://www.microsoftstore.com"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "images/hero-16x6-vp6.jpg",
+                            "vp5": "images/hero-16x6-vp5.jpg",
+                            "vp4": "images/hero-16x6-vp4.jpg",
+                            "vp3": "images/hero-16x9-vp3.jpg",
+                            "vp2": "images/hero-16x9-vp2.jpg",
+                            "vp1": "images/hero-16x9-vp1.jpg",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "x-align-center",
+                    "config": {
+                        "x-align": "center",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "x-align-center",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "http://www.msn.com"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "images/hero-16x6-vp6.jpg",
+                            "vp5": "images/hero-16x6-vp5.jpg",
+                            "vp4": "images/hero-16x6-vp4.jpg",
+                            "vp3": "images/hero-16x9-vp3.jpg",
+                            "vp2": "images/hero-16x9-vp2.jpg",
+                            "vp1": "images/hero-16x9-vp1.jpg",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "x-align-right",
+                    "config": {
+                        "x-align": "right",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "x-align-right",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "images/hero-16x6-vp6.jpg",
+                            "vp5": "images/hero-16x6-vp5.jpg",
+                            "vp4": "images/hero-16x6-vp4.jpg",
+                            "vp3": "images/hero-16x9-vp3.jpg",
+                            "vp2": "images/hero-16x9-vp2.jpg",
+                            "vp1": "images/hero-16x9-vp1.jpg",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "y-align-top",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "y-align-top",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "images/hero-16x6-vp6.jpg",
+                            "vp5": "images/hero-16x6-vp5.jpg",
+                            "vp4": "images/hero-16x6-vp4.jpg",
+                            "vp3": "images/hero-16x9-vp3.jpg",
+                            "vp2": "images/hero-16x9-vp2.jpg",
+                            "vp1": "images/hero-16x9-vp1.jpg",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "y-align-center",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "center",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "y-align-center",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "images/hero-16x6-vp6.jpg",
+                            "vp5": "images/hero-16x6-vp5.jpg",
+                            "vp4": "images/hero-16x6-vp4.jpg",
+                            "vp3": "images/hero-16x9-vp3.jpg",
+                            "vp2": "images/hero-16x9-vp2.jpg",
+                            "vp1": "images/hero-16x9-vp1.jpg",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "y-align-bottom",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "bottom",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "y-align-bottom",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "images/hero-16x6-vp6.jpg",
+                            "vp5": "images/hero-16x6-vp5.jpg",
+                            "vp4": "images/hero-16x6-vp4.jpg",
+                            "vp3": "images/hero-16x9-vp3.jpg",
+                            "vp2": "images/hero-16x9-vp2.jpg",
+                            "vp1": "images/hero-16x9-vp1.jpg",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "pattern-two": {
+        "config": {
+            "pattern": 2
+        },
+        "content": {
+            "items": {
+                "one": {
+                    "config": {
+                        "theme": "dark",
+                        "background": "neutral-90"
+                    },
+                    "content": {
+                        "heading": "Pattern 2 Item 1 - Title",
+                        "subheading": "Pattern 2 Item 1 - Subtitle",
+                        "background-image": {
+                            "vp6": "http://placehold.it/890x800/171717/2F2F2F",
+                            "vp5": "http://placehold.it/800x800/171717/2F2F2F",
+                            "vp4": "http://placehold.it/700x800/171717/2F2F2F",
+                            "vp3": "http://placehold.it/1083x400/171717/2F2F2F",
+                            "vp2": "http://placehold.it/768x400/171717/2F2F2F",
+                            "vp1": "http://placehold.it/540x300/171717/2F2F2F",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        }
+                    }
+                },
+                "two": {
+                    "config": {
+                        "theme": "dark",
+                        "background": "neutral-80"
+                    },
+                    "content": {
+                        "heading": "Pattern 2 Item 2 - Title",
+                        "subheading": "Pattern 2 Item 2 - Subtitle",
+                        "background-image": {
+                            "vp6": "http://placehold.it/425x425/2F2F2F/222222",
+                            "vp5": "http://placehold.it/400x400/2F2F2F/222222",
+                            "vp4": "http://placehold.it/350x400/2F2F2F/222222",
+                            "vp3": "http://placehold.it/542x400/2F2F2F/222222",
+                            "vp2": "http://placehold.it/384x400/2F2F2F/222222",
+                            "vp1": "http://placehold.it/540x300/2F2F2F/222222",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        }
+                    }
+                },
+                "three": {
+                    "config": {
+                        "theme": "dark",
+                        "background": "neutral-75"
+                    },
+                    "content": {
+                        "heading": "Pattern 2 Item 3 - Title",
+                        "subheading": "Pattern 2 Item 3 - Subtitle",
+                        "background-image": {
+                            "vp6": "http://placehold.it/425x425/464646/333333",
+                            "vp5": "http://placehold.it/400x400/464646/333333",
+                            "vp4": "http://placehold.it/350x400/464646/333333",
+                            "vp3": "http://placehold.it/542x400/464646/333333",
+                            "vp2": "http://placehold.it/384x400/464646/333333",
+                            "vp1": "http://placehold.it/540x300/464646/333333",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        }
+                    }
+                },
+                "four": {
+                    "config": {
+                        "theme": "dark",
+                        "background": "neutral-65"
+                    },
+                    "content": {
+                        "heading": "Pattern 2 Item 4 - Title",
+                        "subheading": "Pattern 2 Item 4 - Title",
+                        "background-image": {
+                            "vp6": "http://placehold.it/850x425/5E5E5E/505050",
+                            "vp5": "http://placehold.it/800x400/5E5E5E/505050",
+                            "vp4": "http://placehold.it/700x400/5E5E5E/505050",
+                            "vp3": "http://placehold.it/1084x400/5E5E5E/505050",
+                            "vp2": "http://placehold.it/768x400/5E5E5E/505050",
+                            "vp1": "http://placehold.it/540x300/5E5E5E/505050",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "context-carousel": {
+        "config": {
+            "content-type": "hero",
+            "multi-slide": true
+        },
+        "content": {
+            "label": "New Products",
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "sequence-indicator": {
+                "content": {
+                    "items": [
+                        {
+                            "config": {
+                                "checked": true
+                            },
+                            "content": {
+                                "label": "Accessory hero",
+                                "title": "accessory-hero",
+                                "id": "accessory-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "App hero",
+                                "title": "app-hero",
+                                "id": "app-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Article hero",
+                                "title": "article-hero",
+                                "id": "article-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Device hero",
+                                "title": "device-hero",
+                                "id": "device-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Game hero",
+                                "title": "game-hero",
+                                "id": "game-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Movie hero",
+                                "title": "movie-hero",
+                                "id": "movie-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Music album hero",
+                                "title": "music-album-hero",
+                                "id": "music-album-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Music artist hero",
+                                "title": "music-artist-hero",
+                                "id": "music-artist-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "Software hero",
+                                "title": "software-hero",
+                                "id": "software-hero"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "TV-show hero",
+                                "title": "tv-show-hero",
+                                "id": "tv-show-hero"
+                            }
+                        }
+                    ]
+                }
+            },
+            "items": [
+                {
+                    "id": "accessory-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "Accessory hero",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "app-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "app",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "app-icon": {
+                            "src": "https://placehold.it/64x64/E3E3E3",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "heading": "App hero",
+                        "subheading": "Subheading",
+                        "rating": {
+                            "config": {
+                                "read-only": true,
+                                "community-rating": 3.2
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "article-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "article",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "Article hero",
+                        "description": "[description]",
+                        "publisher": {
+                            "content": {
+                                "label": "[publisher-label]",
+                                "logotype": "[Publisher Name]"
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "device-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "device",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "Device hero",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "game-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "game",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "product-title": "Game hero",
+                        "product-subtitle": "[product-subtitle]",
+                        "rating": {
+                            "config": {
+                                "read-only": true,
+                                "community-rating": 3.2
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "movie-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "movie",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "product-title": "Movie hero",
+                        "product-subtitle": "[product-subtitle]",
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "music-album-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "music-album",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "product-title": "Music-album hero",
+                        "product-subtitle": "[product-subtitle]",
+                        "image": {
+                            "src": "http://placehold.it/120x120/E3E3E3",
+                            "alt": "[Album cover]"
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "music-artist-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "music-artist",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "product-title": "Music-artist hero",
+                        "product-subtitle": "[product-subtitle]",
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "software-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "software",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "Software hero",
+                        "subheading": "Subheading",
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "TV-show-hero",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "tv-show",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "product-title": "TV show hero",
+                        "product-subtitle": "[product-subtitle]",
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "./"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/2048x600",
+                            "vp5": "http://placehold.it/1778x600",
+                            "vp4": "http://placehold.it/1399x600",
+                            "vp3": "http://placehold.it/1083x500",
+                            "vp2": "http://placehold.it/767x400",
+                            "vp1": "http://placehold.it/539x300",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "heading-4": {
+        "config": {
+            "tag": "h2",
+            "level": 3
+        },
+        "content": {
+            "text": "Heading 4"
+        }
+    },
+    "hyperlink-content-placement": {
+        "hyperlink-group": {
+            "config": {
+                "background": "accent",
+                "theme": "dark",
+                "context": "three-up",
+                "vertical-center": false
+            },
+            "content": {
+                "label": {
+                    "title": "Navigation Label"
+                },
+                "links": [
+                    {
+                        "content": {
+                            "text": "Hyperlink",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Hyperlink",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Hyperlink",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "three-up": {
+            "config": {
+                "size": "medium",
+                "type": "three-up"
+            },
+            "content": {
+                "one": {
+                    "config": {
+                        "context": "article"
+                    },
+                    "content": {
+                        "heading": {
+                            "level": 3,
+                            "text": "Heading one"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "featured-image": {
+                            "vp1": "http://placehold.it/540x280",
+                            "vp2": "http://placehold.it/540x280",
+                            "vp3": "http://placehold.it/253x120",
+                            "vp4": "http://placehold.it/376x200",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                "two": {
+                    "config": {
+                        "context": "article"
+                    },
+                    "content": {
+                        "heading": {
+                            "level": 3,
+                            "text": "Heading two"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "featured-image": {
+                            "vp1": "http://placehold.it/540x280",
+                            "vp2": "http://placehold.it/540x280",
+                            "vp3": "http://placehold.it/253x120",
+                            "vp4": "http://placehold.it/376x200",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                "three": {
+                    "config": {
+                        "context": "article"
+                    },
+                    "content": {
+                        "heading": {
+                            "level": 3,
+                            "text": "Heading three"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "CALL TO ACTION",
+                                "href": "#"
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "featured-image": {
+                            "vp1": "http://placehold.it/540x280",
+                            "vp2": "http://placehold.it/540x280",
+                            "vp3": "http://placehold.it/253x120",
+                            "vp4": "http://placehold.it/376x200",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "bring-ideas": {
+        "config": {
+            "align": "left"
+        },
+        "content": {
+            "heading": "Bring ideas to life",
+            "body": "Microsoft HoloLens is the first fully untethered, holographic computer, enabling you to interact with high‑definition holograms in your world.",
+            "image": {
+                "vp6": "http://placehold.it/800x400",
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "WATCH THE VIDEO",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "advanced-tech": {
+        "config": {
+            "align": "center"
+        },
+        "content": {
+            "heading": "Advanced technology only from Microsoft",
+            "body": "Microsoft HoloLens is the world’s most advanced holographic computer. Find out more about its advanced optics, multiple sensors, custom holographic processing unit, and more.",
+            "image": {
+                "vp5": "http://placehold.it/1600x400/0078D7/FFFFFF",
+                "vp4": "http://placehold.it/1399x400/0078D7/FFFFFF",
+                "vp3": "http://placehold.it/1083x300/0078D7/FFFFFF",
+                "vp2": "http://placehold.it/767x300/0078D7/FFFFFF",
+                "vp1": "http://placehold.it/539x200/0078D7/FFFFFF",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "SEE THE HARDWARE",
+                    "href": "./"
+                }
+            }
+        }
+    },
+    "prod-shot": {
+        "content": {
+            "image": {
+                "content": {
+                    "background-image": {
+                        "vp6": "http://placehold.it/2048x600",
+                        "vp5": "http://placehold.it/1778x600",
+                        "vp4": "http://placehold.it/1399x600",
+                        "vp3": "http://placehold.it/1083x500",
+                        "vp2": "http://placehold.it/767x400",
+                        "vp1": "http://placehold.it/539x300",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            }
+        }
+    },
+    "windows": {
+        "content": {
+            "background-image": {
+                "vp6": "http://placehold.it/2048x600/0078D7/FFFFFF",
+                "vp5": "http://placehold.it/1778x600/0078D7/FFFFFF",
+                "vp4": "http://placehold.it/1399x600/0078D7/FFFFFF",
+                "vp3": "http://placehold.it/1083x500/0078D7/FFFFFF",
+                "vp2": "http://placehold.it/767x400/0078D7/FFFFFF",
+                "vp1": "http://placehold.it/539x300/0078D7/FFFFFF",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            }
+        }
+    },
+    "call-to-action": {
+        "content": {
+            "text": "CALL TO ACTION",
+            "href": "#"
+        }
+    },
+    "picture-element": {
+        "content": {
+            "background-image": {
+                "vp6": "http://placehold.it/2048x600",
+                "vp5": "http://placehold.it/1778x600",
+                "vp4": "http://placehold.it/1399x600",
+                "vp3": "http://placehold.it/1083x500",
+                "vp2": "http://placehold.it/767x400",
+                "vp1": "http://placehold.it/539x300",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            }
+        }
+    },
+    "l3-heading": {
+        "config": {
+            "tag": "h3",
+            "level": 3
+        },
+        "content": {
+            "text": "{{lorem.sentence}}"
+        }
+    },
+    "l4-subhead-paragraph": {
+        "config": {
+            "level": 4
+        },
+        "content": {
+            "text": "{{lorem.sentences}}"
+        }
+    },
+    "small-header": {
+        "config": {
+            "tag": "h5",
+            "level": 5
+        },
+        "content": {
+            "text": "{{lorem.sentence}}"
+        }
+    },
+    "heading-call-to-action": {
+        "content": {
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 3
+                },
+                "content": {
+                    "text": "Heading text for Banner with Heading and Call to action"
+                }
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "product-placement-large": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "large",
+            "context": "software"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Heading",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "See all",
+                            "label": "See all Heading"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "See all",
+                "href": "./"
+            },
+            "items": [
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "software",
+                        "size": "large"
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Paragraph text.",
+                        "featured-image": {
+                            "vp2": "http://placehold.it/358x300",
+                            "vp1": "http://placehold.it/272x272",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        },
+                        "href": "./"
+                    }
+                }
+            ]
+        }
+    },
+    "l-feature": {
+        "config": {
+            "align": "left"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "badge": {
+                "config": {
+                    "size": "small",
+                    "type": "highlight"
+                },
+                "content": {
+                    "text": "BADGE"
+                }
+            },
+            "image": {
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "./"
+                }
+            }
+        }
+    },
+    "r-feature": {
+        "config": {
+            "align": "right"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "badge": {
+                "config": {
+                    "size": "small",
+                    "type": "highlight"
+                },
+                "content": {
+                    "text": "BADGE"
+                }
+            },
+            "image": {
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "./"
+                }
+            }
+        }
+    },
+    "h-computing-three-up": {
+        "config": {
+            "size": "medium",
+            "type": "three-up"
+        },
+        "content": {
+            "one": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Sign up for newsletter"
+                    },
+                    "paragraph": "Be the first to learn about Microsoft HoloLens news, events, and updates.",
+                    "featured-image": {
+                        "vp1": "images/hololens-landing-newsletter-placement-vp1.jpg",
+                        "vp2": "images/hololens-landing-newsletter-placement-vp2.jpg",
+                        "vp3": "images/hololens-landing-newsletter-placement-vp3.jpg",
+                        "vp4": "images/hololens-landing-newsletter-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "two": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Share your idea"
+                    },
+                    "paragraph": "You chose Galaxy Explorer Project. We built it and now the source code is yours.",
+                    "featured-image": {
+                        "vp1": "images/hololens-landing-share-placement-vp1.jpg",
+                        "vp2": "images/hololens-landing-share-placement-vp2.jpg",
+                        "vp3": "images/hololens-landing-share-placement-vp3.jpg",
+                        "vp4": "images/hololens-landing-share-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "three": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Developer tutorials"
+                    },
+                    "paragraph": "Learn about the Windows Holographic platform in our online academy.",
+                    "featured-image": {
+                        "vp1": "images/hololens-landing-newsletter-placement-vp1.jpg",
+                        "vp2": "images/hololens-landing-newsletter-placement-vp2.jpg",
+                        "vp3": "images/hololens-landing-newsletter-placement-vp3.jpg",
+                        "vp4": "images/hololens-landing-newsletter-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            }
+        }
+    },
+    "info-three-up": {
+        "config": {
+            "size": "medium",
+            "type": "three-up"
+        },
+        "content": {
+            "one": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "paragraph": "Do you have a question about developing for Microsoft HoloLens?",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/720x405",
+                        "vp3": "http://placehold.it/321x180",
+                        "vp4": "http://placehold.it/380x214",
+                        "vp5": "http://placehold.it/485x273",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "two": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "paragraph": "Learn about the Windows Holographic platform in our online academy.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/720x405",
+                        "vp3": "http://placehold.it/321x180",
+                        "vp4": "http://placehold.it/380x214",
+                        "vp5": "http://placehold.it/485x273",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "three": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "paragraph": "Learn about the Windows Holographic platform in our online academy.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/720x405",
+                        "vp3": "http://placehold.it/321x180",
+                        "vp4": "http://placehold.it/380x214",
+                        "vp5": "http://placehold.it/485x273",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            }
+        }
+    },
+    "logo-rich-heading": {
+        "config": {
+            "theme": "dark",
+            "background": "f-accent"
+        },
+        "content": {
+            "heading": {
+                "config": {
+                    "tag": "h3",
+                    "level": 3
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "paragraph": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "Paragraph"
+                }
+            },
+            "logo": {
+                "content": {
+                    "label": "Microsoft corp.",
+                    "logotype": "Microsoft",
+                    "image": {
+                        "src": "http://placehold.it/200x130/0078D7/FFFFFF",
+                        "alt": "Placeholder logo image"
+                    }
+                }
+            }
+        }
+    },
+    "win10-four": {
+        "config": {
+            "size": "medium",
+            "type": "four-up"
+        },
+        "content": {
+            "one": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Windows Store"
+                    },
+                    "paragraph": "Download exclusive apps only for Microsoft HoloLens, in addition to hundreds of Universal Windows Platform apps available to Windows 10 devices.",
+                    "featured-image": {
+                        "vp1": "images/hololens-apps-store-placement-vp1.jpg",
+                        "vp2": "images/hololens-apps-store-placement-vp2.jpg",
+                        "vp3": "images/hololens-apps-store-placement-vp3.jpg",
+                        "vp4": "images/hololens-apps-store-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "two": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Microsoft Edge"
+                    },
+                    "paragraph": "Microsoft Edge is the browser available exclusively on Windows 10 that makes the web work the way you do.",
+                    "featured-image": {
+                        "vp1": "images/hololens-apps-edge-placement-vp1.jpg",
+                        "vp2": "images/hololens-apps-edge-placement-vp2.jpg",
+                        "vp3": "images/hololens-apps-edge-placement-vp3.jpg",
+                        "vp4": "images/hololens-apps-edge-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "three": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Cortana"
+                    },
+                    "paragraph": "Cortana is your truly personal assistant. She can answer your questions, help you search the web, complete system tasks, and more.",
+                    "featured-image": {
+                        "vp1": "images/hololens-apps-cortana-placement-vp1.jpg",
+                        "vp2": "images/hololens-apps-cortana-placement-vp2.jpg",
+                        "vp3": "images/hololens-apps-cortana-placement-vp3.jpg",
+                        "vp4": "images/hololens-apps-cortana-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "four": {
+                "config": {
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Mixed Reality Capture"
+                    },
+                    "paragraph": "Capture all your holograms in the context of your environment, and share them with the world.",
+                    "featured-image": {
+                        "vp1": "images/hololens-apps-capture-placement-vp1.jpg",
+                        "vp2": "images/hololens-apps-capture-placement-vp2.jpg",
+                        "vp3": "images/hololens-apps-capture-placement-vp3.jpg",
+                        "vp4": "images/hololens-apps-capture-placement-vp4.jpg",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            }
+        }
+    },
+    "header": {
+        "mobile": {
+            "content": {
+                "scroll-left": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-left",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                },
+                "scroll-right": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-right",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                }
+            }
+        },
+        "global": {
+            "content": {
+                "logo": {
+                    "content": {
+                        "image": {
+                            "src": "images/microsoft-logo.png",
+                            "alt": "Microsoft Logo"
+                        },
+                        "href": "#",
+                        "logotype": "Microsoft"
+                    }
+                },
+                "skip-nav-link": {
+                    "content": {
+                        "text": "Skip to main content.",
+                        "href": "#mainContent"
+                    }
+                },
+                "hamburger": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-global-nav-button",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Menu"
+                    }
+                },
+                "search-back": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-arrow-htmllegacy",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Back"
+                    }
+                },
+                "shopping-cart": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-shopping-cart",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Shopping cart",
+                        "href": "./"
+                    }
+                },
+                "language-selector": {
+                    "config": {
+                        "id": "language-selector",
+                        "menu-id": "uhf-l-nav",
+                        "hidden": true
+                    },
+                    "content": {
+                        "title": "EN",
+                        "menu-items": [
+                            {
+                                "content": {
+                                    "text": "EN - English",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "FR - Français",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "search": {
+                    "config": {
+                        "is-form": true,
+                        "autofocus": false
+                    },
+                    "content": {
+                        "label": "Enter your search",
+                        "input-name": "search-field",
+                        "button-name": "search-button",
+                        "placeholder": "Search MicrosoftStore.com",
+                        "auto-suggest": {
+                            "config": {
+                                "scroll": false,
+                                "aria-hidden": true,
+                                "aria-expanded": false,
+                                "aria-haspopup": true,
+                                "id": "universal-header-search-auto-suggest-transparent",
+                                "position": "default"
+                            },
+                            "content": {
+                                "strings": [
+                                    "Windows",
+                                    "Window",
+                                    "Windows Store",
+                                    "Microsoft",
+                                    "Bing",
+                                    "Xbox"
+                                ],
+                                "products": [
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamics CRM",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Apps",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamics CRM album",
+                                            "imageSrc": "//placehold.it/60x80",
+                                            "category": "Albums",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic artist",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Artists",
+                                            "isArtist": true
+                                        }
+                                    },
+                                    {
+                                        "content": {
+                                            "title": "Dynamics with a long title name that is long",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Movies",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic transparent",
+                                            "imageSrc": "//store-images.microsoft.com/image/apps.6221.9007199266252643.9e83943d-d51f-4371-8567-06e1e21ced31.e47a968c-b6a8-490a-819e-70a7fc0c7933?w=100&h=100",
+                                            "category": "Apps",
+                                            "isArtist": false,
+                                            "bgColor": "#1006FE"
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic no category",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "isArtist": false
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "me-control": {
+                    "name": {
+                        "content": {
+                            "text": "Roland",
+                            "href": "#"
+                        }
+                    },
+                    "image": {
+                        "config": {
+                            "image-element": true,
+                            "round-image": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/32x32",
+                            "alt": "Placeholder with grey background and dimension watermark"
+                        }
+                    }
+                },
+                "navigation": {
+                    "store": {
+                        "config": {
+                            "id": "store-navigation",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Store",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Store Home",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-devices",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Devices",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Surface",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PCs & tablets",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Accessories",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Band",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Wearables",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-software",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Software",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Office",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Additional software",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-apps",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Apps",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone apps",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-games",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Games",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Xbox One games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox 360 games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PC games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone games",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-entertainment",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Entertainment",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All Entertainment",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Moviees & TV",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Music",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-business-and-education",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Business & Education",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Business Store",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Education Store",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Sale",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Find a store",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Gift cards",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "products": {
+                        "config": {
+                            "id": "products-navigation",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Products",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-software-and-services",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Software & services",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Windows",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Office",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Free downloads & security",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Internet Explorer",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Skype",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneNote",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneDrive",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Health",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "MSN",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Bing",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Groove",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Movies & TV",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-devices-and-xbox",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Devices & Xbox",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All Microsoft devices",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Surface",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "All Windows PCs and tablets",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PC accessories",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox & games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Band",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Lumia",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "All Windows phones",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft HoloLens",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-business",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For business",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Cloud Platform",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Azure",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Dynamics",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Office for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Skype for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Surface for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Enterprise solutions",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Small Business solutions",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Find a solutions provider",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-developers-and-it-pros",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For developers & IT pros",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Develop Windows apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Azure",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "MSDN",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "TechNet",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Visual Studio",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-students-and-educators",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For Students & educators",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Office for students",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneNote in classroom",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Shop PCs and tablets perfect for students",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft in Education",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "category": {
+            "config": {
+                "theme": "light"
+            },
+            "content": {
+                "logo": {
+                    "content": {
+                        "label": "Microsoft Store",
+                        "logotype": "Store",
+                        "href": "#"
+                    }
+                },
+                "CTA": {
+                    "content": {
+                        "text": "CALL TO ACTION",
+                        "href": "#"
+                    }
+                },
+                "navigation": {
+                    "devices": {
+                        "config": {
+                            "id": "devices",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Devices",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "surface",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Surface",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Get started",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Design",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Develop",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Publish",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Accessories",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Microsoft Band",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Wearables",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "software": {
+                        "config": {
+                            "id": "software",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Software",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "windows-phone",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Windows Phone",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Whats a Windows Universal app",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Get set up",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Sign up",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Your first app",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "New for Windows 10",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Additional software",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "apps": {
+                        "config": {
+                            "id": "apps",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Apps",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "surface",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Surface",
+                                        "href": "#",
+                                        "menu-items": [
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "get-started",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Get started",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Whats a Windows Universal app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Get set up",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Sign up",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Your first app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "New for Windows 10",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "design",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Design",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Basics",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Guidelines",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Downloads",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "develop",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Develop",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "How-to-guides",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "API reference",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Services",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Windows 8.x guides",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Windows Phone Silverlight 8.1 guides",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "publish",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Publish",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Submit your app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Promote and engage",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "View analytics",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Store Policies",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Accessories",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Microsoft Band",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Wearables",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "games": {
+                        "config": {
+                            "id": "games",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Games",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Xbox One games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox 360 games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "PC games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone games",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "entertainment": {
+                        "config": {
+                            "id": "entertainment",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Entertainment",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "All entertainment",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Movies & TV",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Music",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "business-and-education": {
+                        "config": {
+                            "id": "business-and-education",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Find a store",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Business Store",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Education Store",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "footer": {
+        "config": {
+            "nav": true
+        },
+        "section-1": {
+            "config": {
+                "id": "section-1",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 1",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-2": {
+            "config": {
+                "id": "section-2",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 2",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-3": {
+            "config": {
+                "id": "section-3",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 3",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-4": {
+            "config": {
+                "id": "section-4",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 4",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-5": {
+            "config": {
+                "id": "section-5",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 5",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-6": {
+            "config": {
+                "id": "section-6",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 6",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "footer": {
+            "config": {
+                "locale": "English (United States)",
+                "copyright": "© 2016 Microsoft"
+            },
+            "content": {
+                "footer-items": [
+                    {
+                        "content": {
+                            "text": "Contact us",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Privacy & cookies",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Terms of use",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Trademarks",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "[Page or site legal]",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "device": {
+        "config": {
+            "size": "medium",
+            "x-align": "center",
+            "y-align": "bottom",
+            "context": "device",
+            "theme": "dark"
+        },
+        "content": {
+            "heading": "Introducing Surface Book & Surface Pro 4",
+            "price": {
+                "config": {
+                    "currency-symbol": "{{finance.currencySymbol}}",
+                    "currency-code": "{{finance.currencyCode}}"
+                },
+                "content": {
+                    "price": "{{random.number}}",
+                    "discounted-price": null
+                }
+            },
+            "calls-to-action": [
+                {
+                    "content": {
+                        "text": "SHOP NOW",
+                        "href": "#"
+                    }
+                }
+            ],
+            "background-image": {
+                "vp6": "images/default_light_vp6.jpg",
+                "vp5": "images/default_light_vp5.jpg",
+                "vp4": "images/default_light_vp4.jpg",
+                "vp3": "images/default_light_vp3.jpg",
+                "vp2": "images/default_light_vp2.jpg",
+                "vp1": "images/default_light_vp1.jpg",
+                "alt": "View of a surface",
+                "mask": 2
+            }
+        }
+    }
+}

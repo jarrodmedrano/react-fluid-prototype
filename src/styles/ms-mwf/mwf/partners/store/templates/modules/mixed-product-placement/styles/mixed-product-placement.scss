@@ -1,0 +1,18 @@
+.m-product-placement {
+    &.f-mixed {
+        .m-product-placement-item {
+            &.context-app,
+            &.context-game {
+                margin-top: 75px;
+            }
+
+            &.f-size-large {
+                .c-heading {
+                    @include apply-type(t7, false, true);
+                    @include apply-maxlines(3, t7, true);
+                    font-weight: $font-weight-normal;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+// ==========================================================================
+// Component: Action toggle
+// ==========================================================================
+button.c-action-toggle {
+    @include apply-type(t7, false, true);
+    max-width: 374px;
+    min-width: 36px;
+    display: inline-block;
+    padding: 6px 10px 8px;
+    color: $color-accent;
+    border: solid 1px transparent;
+    background: none;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: 1px dashed transparent;
+    text-decoration: none;
+
+    &[aria-hidden=true] {
+        display: none;
+    }
+
+    &:hover {
+        color: $color-background;
+        background: $color-accent;
+    }
+
+    &:focus {
+        outline: 1px dashed $color-foreground;
+    }
+
+    &:active {
+        outline: 1px solid transparent;
+    }
+
+    &[disabled] {
+        color: $color-foreground-20;
+        cursor: not-allowed;
+
+        &:hover {
+            background: inherit;
+        }
+    }
+
+    &.c-glyph {
+        min-width: 120px;
+        padding-#{$left}: 0;
+
+        &:before {
+            position: relative;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            margin-#{$left}: 10px;
+            margin-#{$right}: 10px;
+        }
+
+        &[aria-label] {
+            min-width: 0;
+            margin-#{$right}: 10px;
+            padding-#{$right}: 0;
+        }
+
+        &.f-align-margin {
+            margin-#{$left}: -10px;
+        }
+    }
+
+    #{$theme-light},
+    #{$theme-dark} {
+        background: transparent;
+        text-decoration: none;
+
+        &:active {
+            outline: 1px solid transparent;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+            background: inherit;
+        }
+    }
+
+    #{$theme-light} {
+        color: $color-shade;
+
+        &:focus {
+            outline-color: $color-shade;
+        }
+
+        &:hover {
+            color: $color-tint;
+            background: $color-shade;
+        }
+
+        &[disabled] {
+            color: $color-foreground-20;
+        }
+    }
+
+    #{$theme-dark} {
+        color: $color-tint;
+
+        &:focus {
+            outline-color: $color-tint;
+        }
+
+        &:hover {
+            color: $color-shade;
+            background: $color-tint;
+        }
+
+        &[disabled] {
+            color: $color-tint-60;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "name": "drawer",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10663368,
+            "description": "fixes an issue where drawer would always initialize as open regardless of aria-expanded state"
+        },
+        {
+            "type": "new",
+            "ticket-id": 10680934,
+            "description": "adds an example of a simple drawer with text content"
+        },
+        {
+            "type": "new",
+            "ticket-id": 9255743,
+            "description": "adds responsive drawer to core"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 10191887,
+            "description": "adds option to add divider to default drawer"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9745233,
+            "description": "adds option to remove divider from responsive drawers"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8468855,
+            "description": "changes opacity of button text from 60% to 100% opacity"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8582790,
+            "internal": true,
+            "description": "adds space between responsive drawer class names so it renders correctly"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7559133,
+            "internal": true,
+            "description": "removes drawer with header example"
+        }
+    ]
+}

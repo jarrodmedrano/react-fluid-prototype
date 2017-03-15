@@ -1,0 +1,230 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ms-mwf/mwf@1.19.2",
+        "scope": "ms-mwf",
+        "escapedName": "ms-mwf%2fmwf",
+        "name": "ms-mwf/mwf",
+        "rawSpec": "1.19.2",
+        "spec": "1.19.2",
+        "type": "version"
+      },
+      "C:\\src\\RDX-RS2-MWF"
+    ]
+  ],
+  "_from": "ms-mwf/mwf@1.19.2",
+  "_id": "ms-mwf/mwf@1.19.2",
+  "_inCache": true,
+  "_location": "/ms-mwf/mwf",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ms-mwf/mwf@1.19.2",
+    "scope": "ms-mwf",
+    "escapedName": "ms-mwf%2fmwf",
+    "name": "ms-mwf/mwf",
+    "rawSpec": "1.19.2",
+    "spec": "1.19.2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://microsoft.pkgs.visualstudio.com/_packaging/4d279dfd-635c-494b-8aeb-bcc725690daf/npm/registry/ms-mwf/mwf/-/mwf-1.19.2.tgz",
+  "_shasum": "aa372e46e78dd512996bc7e07de24dd3f8d092f4",
+  "_shrinkwrap": null,
+  "_spec": "ms-mwf/mwf@1.19.2",
+  "_where": "C:\\src\\RDX-RS2-MWF",
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "contributors": [
+    {
+      "name": "Jason Falk",
+      "email": "jasfalk@microsoft.com"
+    },
+    {
+      "name": "Aaron Wentzel",
+      "email": "awentzel@microsoft.com"
+    },
+    {
+      "name": "Nick Rice",
+      "email": "v-nichor@microsoft.com"
+    },
+    {
+      "name": "Andrew Ng",
+      "email": "andrewn@microsoft.com"
+    },
+    {
+      "name": "Lorine Chen",
+      "email": "lochen@microsoft.com"
+    },
+    {
+      "name": "Bryan Anaya",
+      "email": "v-anayab@microsoft.com"
+    },
+    {
+      "name": "Nicolas LoGiudice",
+      "email": "v-nilogi@microsoft.com"
+    },
+    {
+      "name": "Jake Torset",
+      "email": "jaket@microsoft.com"
+    },
+    {
+      "name": "Dhaumya Mehta",
+      "email": "dhmeht@microsoft.com"
+    },
+    {
+      "name": "Jane Chu",
+      "email": "v-janchu@microsoft.com"
+    },
+    {
+      "name": "Carrie Sapp",
+      "email": "carrisa@microsoft.com"
+    },
+    {
+      "name": "Dale Sande",
+      "email": "v-dals@microsoft.com"
+    },
+    {
+      "name": "Chris Holt",
+      "email": "v-hochr@microsoft.com"
+    },
+    {
+      "name": "Luis Berrios",
+      "email": "v-luibe@microsoft.com"
+    },
+    {
+      "name": "Jeff Stride",
+      "email": "jeffstri@microsoft.com"
+    },
+    {
+      "name": "Adam Sivins",
+      "email": "adamsiv@microsoft.com"
+    },
+    {
+      "name": "Bruk Belachew",
+      "email": "brukb@microsoft.com"
+    },
+    {
+      "name": "David Smiley",
+      "email": "dasmiley@microsoft.com"
+    },
+    {
+      "name": "John Lemire",
+      "email": "johnlemi@microsoft.com"
+    },
+    {
+      "name": "Katie Ellison",
+      "email": "kellison@microsoft.com"
+    },
+    {
+      "name": "Sean Keating",
+      "email": "sekeatin@microsoft.com"
+    }
+  ],
+  "dependencies": {
+    "access-sniff": "2.4.4",
+    "autoprefixer": "^6.4.1",
+    "glob": "^7.0.3",
+    "grunt": "^0.4.5",
+    "grunt-assemble": "^0.4.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "^1.4.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-exec": "^1.0.0",
+    "grunt-html": "^5.0.1",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-jsbeautifier": "^0.2.12",
+    "grunt-json-schema-validation": "^0.0.1",
+    "grunt-jsonlint": "^1.0.7",
+    "grunt-notify": "^0.4.1",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-flatten": "^0.2.0",
+    "gulp-html5-lint": "^1.1.0",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^6.0.0",
+    "gulp-typescript": "^2.12.2",
+    "gulp-util": "^3.0.7",
+    "jit-grunt": "^0.9.1",
+    "normalize.css": "^3.0.3",
+    "picturefill": "^3.0.2",
+    "sass-lint": "^1.10.2",
+    "static-server": "^2.0.3",
+    "time-grunt": "^1.3.0",
+    "tslint": "^3.14.0-dev.2",
+    "typescript": "2.0.10"
+  },
+  "description": "Microsoft Web Framework",
+  "devDependencies": {
+    "assemble": "^0.17.1",
+    "async": "^1.5.2",
+    "grunt-bless": "^0.2.0",
+    "grunt-browserify": "^4.0.1",
+    "grunt-bump": "^0.7.0",
+    "grunt-contrib-compress": "^0.14.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-convert": "^0.1.12",
+    "grunt-curl": "^2.2.0",
+    "grunt-focus": "^0.1.1",
+    "grunt-gzip": "^0.1.0",
+    "grunt-md2html": "^0.3.1",
+    "grunt-minified": "^0.0.6",
+    "grunt-replace": "^0.11.0",
+    "grunt-sftp-deploy": "^0.2.4",
+    "grunt-uncss": "^0.4.4",
+    "grunt-zip": "^0.17.1",
+    "gulp-extname": "^0.2.2",
+    "helper-markdown": "^0.2.1",
+    "html-minifier": "^1.4.0",
+    "inquirer": "^2.0.0",
+    "js-beautify": "^1.6.2",
+    "lodash": "^4.6.1",
+    "open": "0.0.5",
+    "parallel-webpack": "^1.4.0",
+    "phantomjs-prebuilt": "^2.1.11",
+    "serve-static": "^1.11.1",
+    "ts-loader": "^0.8.2",
+    "webpack": "1.14.0",
+    "yargs": "^4.7.1"
+  },
+  "directories": null,
+  "dist": {
+    "shasum": "aa372e46e78dd512996bc7e07de24dd3f8d092f4",
+    "tarball": "https://microsoft.pkgs.visualstudio.com/_packaging/4d279dfd-635c-494b-8aeb-bcc725690daf/npm/registry/ms-mwf/mwf/-/mwf-1.19.2.tgz"
+  },
+  "homepage": "http://www.getmwf.com",
+  "name": "ms-mwf/mwf",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "registry": "https://microsoft.pkgs.visualstudio.com/_packaging/mwf/npm/registry"
+  },
+  "readme": "ERROR: No README data found!",
+  "registry": "https://registry.npmjs.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://microsoft.visualstudio.com/DefaultCollection/Universal%20Store/_git/SSD.Framework.OneUI"
+  },
+  "scripts": {
+    "debugBundle": "webpack --progress --colors --mode=dev",
+    "debugVarBundle": "webpack --colors --mode=dev --variants=var",
+    "oneplayerDebugBundle": "webpack --config oneplayer.webpack.config.js --progress --colors --mode=dev",
+    "oneplayerReleaseBundle": "webpack --config oneplayer.webpack.config.js --progress --colors --mode=prod",
+    "releaseBundle": "webpack --mode=prod && webpack --mode=prodNoVendor",
+    "tsCoverageGate": "node helpers/gulp/karma-coverage-gate/index.js --coverageIndex \"js-test-files/coverage/PhantomJS 2.1.1 (Windows 8 0.0.0)/source/index.html\" --percentageRequired 63"
+  },
+  "version": "1.19.2"
+}

@@ -1,0 +1,41 @@
+// ==========================================================================
+// Mixins for selectors
+// ==========================================================================
+
+@mixin get-foundation-selector($selector: "", $config-namespace: "", $namespace-class: "") {
+    // params:
+    // -- $selector:           the selector prefix required, should include namespace variable
+    // -- $config-namespace:   namespace Sass variable set via config for core or partners
+    // -- $namespace-class:    expected class selector for that namespace setting
+    // If the namespace value has been set, include it as a selector prefix.
+    // This takes advantage of Sass nesting to wrap the prefix around any selector content
+    // passed in so that it will be prepended to selectors when Sass is compiled.
+    // Otherwise just output all selector content as-is.
+
+    @if str_index($config-namespace, $namespace-class) != null {
+        // this scenario is when the namespace is set and matches the expected class
+        // example: wrap the UHF namespace around the regular normalize selectors
+        // -- "namespace" {
+        // ------ (normalize selectors/properties);
+        // -- }
+        #{unquote($config-namespace)} {
+            @content;
+        }
+    } @else {
+        @if str_index($config-namespace, $selector) == null {
+            // this scenario is when the namespace is NOT set and the $selector does NOT match the expected class
+            // example: wrap the HTML tag ($selector) around the regular normalize HTML properties
+            // -- html {
+            // ------ (normalize HTML properties);
+            // -- }
+            #{$selector} {
+                @content;
+            }
+        } @else {
+            // this scenario is when the namespace is NOT set and the $selector matches the expected class
+            // example: just output the content as passed in, as-is
+            // -- (normalize selectors/properties);
+            @content;
+        }
+    }
+}

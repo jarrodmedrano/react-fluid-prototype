@@ -1,0 +1,12 @@
+{
+    "name": "feature channel",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7978956,
+            "description": "moves title to overlay image, adds paragraph content, and aligns vp3 with vp4-6 layout style"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+// ==========================================================================
+// Component: Pivot
+// ==========================================================================
+
+.c-pivot {
+    &:not(.f-disabled) {
+        > header {
+            > a {
+                &.f-active {
+                    position: relative;
+                    font-weight: $font-weight-semibold;
+                    color: $color-foreground;
+                    border-bottom: 2px solid $color-accent;
+
+                    &:focus {
+                        outline: transparent;
+                        background: $color-accent-10 content-box;
+                    }
+
+                    &:hover {
+                        color: $color-foreground-80;
+                    }
+                }
+            }
+        }
+    }
+
+    > header {
+        display: flex;
+
+        > a {
+            @include apply-type(t5);
+            box-sizing: border-box;
+            height: 36px;
+            line-height: 36px;
+            display: inline-block;
+            flex-shrink: 0;
+            font-weight: $font-weight-normal;
+            white-space: nowrap;
+            margin: 0 12px;
+            color: $color-foreground-60;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-foreground-80;
+            }
+
+            &:first-child {
+                margin-#{$left}: 0;
+            }
+        }
+    }
+
+    > section[aria-hidden="true"] {
+        display: none;
+        overflow: hidden;
+    }
+
+    > section[aria-hidden="false"] {
+        display: block;
+    }
+
+    &.f-disabled {
+        > header {
+            > a {
+                color: $color-foreground-20;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    #{$theme-light} {
+        &:not(.f-disabled) {
+            > header {
+                > a {
+                    &.f-active {
+                        border-color: $color-shade;
+
+                        &:focus {
+                            background: none;
+                            outline: 1px dashed $color-shade;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #{$theme-dark} {
+        &:not(.f-disabled) {
+            > header {
+                > a {
+                    color: $color-tint-60;
+
+                    &.f-active {
+                        color: $color-tint;
+                        border-color: $color-tint;
+
+                        &:focus {
+                            background: none;
+                            outline: 1px dashed $color-tint;
+                        }
+                    }
+
+                    &:hover {
+                        color: $color-tint-80;
+                    }
+                }
+            }
+        }
+
+        &.f-disabled {
+            > header {
+                > a {
+                    color: $color-tint-20;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "refine menu",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding duplicate id's"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525533,
+            "description": "changes markup to provide an intuitive interface for screen readers"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8403315,
+            "description": "adds sublevel menus with expand and collapse functionality"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7993856,
+            "description": "updates to allow for anchor tag option on DOM"
+        }
+    ]
+}

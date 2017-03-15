@@ -1,0 +1,166 @@
+// ==========================================================================
+// Module: Alert
+// ==========================================================================
+
+$color-yellow:                      #FFF100;
+$color-alert-warning:               #D02E00;
+$color-alert-copy:                  #231F20;
+$color-alert-information:           flatten-overlay($color-tint, $color-shade, 05);
+$color-alert-error:                 flatten-overlay($color-tint, $color-yellow, 40);
+$color-alert-warning-background:    flatten-overlay($color-tint, $color-alert-warning, 100);
+
+/* .c-alert deprecated v.1.6.0 - use m-alert */
+/* TODO: Remove c-alert in v.2.0 */
+.c-alert[role="alert"],
+.m-alert[role="alert"] {
+    @include left-right-padding($base-0);
+    padding-top: 0;
+    margin-top: 24px;
+    position: relative;
+
+    a.c-action-trigger {
+        // Remove with #10678443
+        color: flatten-overlay($color-accent, $color-shade, 14.5);
+    }
+
+    &.f-information {
+        background: $color-alert-information;
+        color: $color-alert-copy;
+    }
+
+    &.f-warning {
+        background: $color-alert-warning-background;
+        color: $color-tint;
+
+        .c-action-trigger {
+            color: $color-tint;
+            text-decoration: underline;
+        }
+    }
+
+    &.f-error {
+        background: $color-alert-error;
+        color: $color-alert-copy;
+    }
+
+    .c-paragraph {
+        vertical-align: middle;
+        line-height: 24px;
+    }
+
+    .c-glyph {
+        float: $left;
+        margin-top: 1px;
+        margin-#{$left}: -8px;
+        margin-#{$right}: 12px;
+
+        &:before {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        + .c-heading {
+            padding-top: 0;
+        }
+
+        ~ p.c-paragraph {
+            margin-#{$left}: 28px;
+        }
+    }
+
+    > .c-glyph.c-action-trigger.glyph-cancel {
+        height: 48px;
+        width: 48px;
+        position: absolute;
+        #{$right}: 1px;
+        #{$left}: auto;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        z-index: map-get($z-index, neutral);
+        float: $right;
+        color: currentColor;
+
+        &:before {
+            font-size: 15px;
+        }
+    }
+
+    > div {
+        max-width: $max-content-width;
+        margin: 0 auto;
+        padding: set-direction-based-value(13px 48px 13px 20px, 13px 20px 13px 48px);
+        float: inherit;
+
+        > .c-heading {
+            @include apply-type-component(h6);
+            padding: 2px 0 8px;
+
+            + .c-paragraph {
+                line-height: inherit;
+            }
+        }
+
+        > .c-paragraph {
+            @include apply-type(t8, true, false);
+            padding-top: 0;
+            margin: 0;
+
+            .c-group {
+                overflow: visible;
+                // Known duplicate. Needed for IE9
+                display: block;
+
+                @if $ltie8 {
+                    float: $right;
+                }
+
+                .c-action-trigger {
+                    @include apply-type(t8, true);
+
+                    &:first-child {
+                        padding: set-direction-based-value(0 10px 0 0, 0 0 0 10px);
+                    }
+
+                    &:last-child {
+                        padding: set-direction-based-value(0 4px 0 0, 0 0 0 4px);
+                    }
+
+                    @if $ltie8 {
+                        display: inline;
+                    }
+                }
+
+                @media only screen and (max-width: $vp2-max) {
+                    display: flex;
+                    margin-#{$left}: -12px;
+                    margin-#{$right}: -12px;
+
+                    .c-action-trigger {
+                        margin-top: 0;
+                        vertical-align: baseline;
+                    }
+                }
+
+                @media only screen and (min-width: $vp3) {
+                    display: inline;
+                    padding-#{$left}: 15px;
+                    float: $right;
+
+                    .c-action-trigger {
+                        margin: -7px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.f-fixed {
+        margin-top: 0;
+        z-index: map-get($z-index, flyout);
+
+        > div {
+            max-width: none;
+        }
+    }
+}

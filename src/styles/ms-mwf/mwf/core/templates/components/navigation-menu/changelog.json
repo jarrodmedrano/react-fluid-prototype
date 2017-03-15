@@ -1,0 +1,17 @@
+{
+    "name": "navigation menu",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10305630,
+            "description": "removes unused TypeScript code"
+        },
+        {
+            "type": "new",
+            "ticket-id": 10305630,
+            "description": "adds navigation menu component"
+        }
+    ]
+}

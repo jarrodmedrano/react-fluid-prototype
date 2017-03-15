@@ -1,0 +1,529 @@
+// =========================================================================
+// Module: Product detail hero
+// =========================================================================
+.m-product-detail-hero {
+    padding-top: 0;
+
+    .m-product-detail-hero-carousel {
+        padding-top: 0;
+        display: none;
+
+        > div[data-grid="col-12"] {
+            padding-top: 36px;
+
+            .c-image {
+                float: $left;
+                padding-#{$right}: $base-5x;
+            }
+
+            > div[data-grid="col-6"] {
+                h2 {
+                    padding-top: 0;
+
+                    + p {
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: $vp3) {
+            display: block;
+        }
+    }
+
+    .context-image-cover {
+        padding-top: percentage(9 / 16); // Sets a padding to the top of the element, and because the height is zero (0), this padding is based on the width. This percentage is a representation of the 16x9 aspect ratio.
+        position: absolute; // Setting the position to absolute and setting all four sides, top right bottom left, expands the visible space of the element to fill the possible space created by the before mentioned padding.
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: map-get($z-index, below);
+        background-size: cover;
+        background-position: top center;
+
+        &[data-treatment="blur"] {
+            overflow: hidden;
+            filter: blur(15px);
+            background-position: center center;
+        }
+
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: map-get($z-index, neutral);
+            content: '';
+            background: linear-gradient(to bottom, rgba($color-tint, 0) 0%, $color-tint 95%);
+        }
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: map-get($z-index, default);
+            content: '';
+            background: $color-tint-80;
+        }
+    }
+
+    .c-carousel {
+        margin-top: $base-12x;
+        margin-bottom: 36px;
+
+        .c-flipper.f-previous,
+        .c-flipper.f-left {
+            #{$left}: auto;
+            #{$right}: 100%;
+        }
+
+        .c-flipper.f-next,
+        .c-flipper.f-right {
+            #{$right}: auto;
+            #{$left}: 100%;
+        }
+
+        .c-sequence-indicator {
+            top: 100%;
+            bottom: auto;
+            margin-top: $base-5x;
+        }
+    }
+
+    .m-product-detail-hero-product-placement {
+        padding-top: $base-6x;
+        padding-bottom: $base-6x;
+
+        > .c-image {
+            max-width: 179px;
+            margin-top: $base-6x;
+            padding-bottom: $base-4x;
+            float: $left;
+
+            img {
+                outline: 1px solid $color-foreground-10;
+
+                &:hover,
+                &:focus {
+                    outline: 1px solid $color-foreground-60;
+                }
+            }
+        }
+
+        .context-product-placement-data {
+            float: $left;
+
+            .c-heading-2 {
+                word-wrap: break-word;
+            }
+
+            dl {
+                dd {
+                    padding: 0 0 24px;
+
+                    .c-rating,
+                    .c-price,
+                    .c-group,
+                    .context-configuration-buttons,
+                    [class*="c-paragraph"] {
+                        padding: 0;
+                    }
+                }
+            }
+
+            .c-button[type="button"] {
+                border: solid 1px $color-shade;
+            }
+        }
+
+        .context-buy-box-badge {
+            + h1 {
+                padding-top: $base;
+            }
+        }
+
+        h1 {
+            padding-top: $base-6x;
+            padding-bottom: 6px;
+        }
+
+        .c-rating {
+            padding-bottom: $base-5x;
+
+            &,
+            + .c-meta-text {
+                display: inline-block;
+            }
+        }
+
+        .c-carousel {
+            display: inline-block;
+
+            @media screen and (min-width: $vp3) {
+                display: none;
+            }
+        }
+
+        .c-meta-text {
+            color: $color-foreground;
+            position: relative;
+            top: -2px;
+        }
+
+        .c-price {
+            @include apply-type(t4);
+            padding: 0 0 $base-6x;
+            clear: both;
+            font-weight: $font-weight-semilight;
+
+            &.c-label {
+                @include apply-type(t4);
+                line-height: inherit;
+            }
+
+            .context-sale-data {
+                @include apply-type(t4);
+                padding-#{$left}: $base-2x;
+                font-weight: $font-weight-semilight;
+
+                .c-badge {
+                    position: relative;
+                    bottom: 2px;
+                    float: none;
+                }
+            }
+        }
+
+        .c-combo {
+            margin: 0;
+        }
+
+        .c-label {
+            padding-bottom: 4px;
+            margin-top: 0;
+        }
+
+        .c-group {
+            padding-bottom: 24px;
+        }
+
+        .c-select-button {
+            margin-top: 0;
+            margin-bottom: $base-2x;
+        }
+
+        .context-configuration-buttons {
+            padding-bottom: 28px;
+
+            > .c-group {
+                padding: 0;
+
+                .c-select-button {
+                    @include apply-type(t8);
+                    @include apply-maxlines(2, t8, true);
+                    white-space: normal;
+                }
+            }
+        }
+
+        .c-heading-5 {
+            padding-top: 0;
+        }
+
+        button[type="submit"] {
+            margin-top: 0;
+
+            + .c-caption-2 {
+                padding-top: $base-2x;
+                padding-bottom: $base-6x;
+            }
+        }
+    }
+
+    .m-product-hero-age-rating {
+        padding: 0 0 $base-6x;
+
+        &:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .m-product-detail-hero-age-rating {
+        padding-top: 0;
+        padding-#{$left}: $base-6x;
+    }
+
+    .m-product-detail-hero-social {
+        padding-top: 0;
+        padding-#{$left}: $base-6x;
+
+        > .c-paragraph-4 {
+            padding-top: $base-3x;
+        }
+
+        .m-social {
+            padding-top: 0;
+            margin-top: $base-3x;
+
+            > .c-hyperlink,
+            .c-image {
+                width: 48px;
+                height: 48px;
+                margin-#{$right}: 2px;
+
+                float: $left;
+
+                @media only screen and (min-width: $vp3) {
+                    margin-#{$right}: $base;
+                }
+
+                @media only screen and (min-width: $vp5) {
+                    width: 60px;
+                    height: 60px;
+                    margin-#{$right}: $base-2x;
+                }
+
+                &:before {
+                    border-radius: 50%;
+                }
+            }
+
+            .context-friend-count {
+                width: $base-12x;
+                height: $base-12x;
+                padding: 0;
+                margin-#{$right}: 2px;
+
+                float: $left;
+
+                display: inline-block;
+                text-align: center;
+                line-height: $base-12x;
+
+                border-radius: 50%;
+                background-color: $color-tint;
+
+                @media only screen and (min-width: $vp3) {
+                    margin-#{$right}: 4px;
+                }
+
+                @media only screen and (min-width: $vp5) {
+                    width: 60px;
+                    height: 60px;
+                    margin-#{$right}: $base-2x;
+                    line-height: 60px;
+                }
+            }
+        }
+
+        + .m-product-detail-hero-age-rating {
+            padding-top: $base-5x;
+        }
+
+        @media only screen and (min-width: $vp4) {
+            padding-#{$right}: 0;
+        }
+    }
+
+    .c-paragraph-warning {
+        padding: 0 0 $base-6x;
+        color: $color-brand-red;
+    }
+
+    .context-large-product-image {
+        position: relative;
+
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            padding-top: $base-6x;
+        }
+    }
+
+    .c-select-menu {
+        > a {
+            background: $color-tint;
+        }
+
+        .c-menu {
+            margin-#{$left}: -1px;
+        }
+    }
+
+    &.m-digital-good-hero {
+        min-height: 400px;
+        position: relative;
+
+        .m-product-detail-hero-product-placement {
+            > .c-image {
+                padding-top: 40px;
+                margin-top: 0;
+            }
+        }
+
+        .context-product-placement-data {
+            width: 100%;
+
+            + h1 {
+                padding-top: 0;
+            }
+
+            .c-rating {
+                .c-glyph {
+                    &:after {
+                        color: $color-shade;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $vp2) {
+                width: 72%;
+            }
+
+            @media only screen and (min-width: $vp3) {
+                width: 66%;
+            }
+
+            @media only screen and (min-width: $vp5) {
+                width: 72%;
+            }
+        }
+
+        .context-product-details {
+            > * {
+                padding: 0 0 8px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        > [data-grid*="col-"] {
+            position: relative;
+        }
+
+        .c-caption-2 {
+            padding-top: $base-2x;
+            display: inline-block;
+        }
+    }
+
+    @media only screen and (min-width: $vp2) {
+        .m-product-detail-hero-product-placement {
+            padding-top: $base-6x;
+
+            > .c-image {
+                padding-top: $base-4x;
+            }
+
+            .context-product-placement-data {
+                padding-#{$left}: $base-6x;
+            }
+        }
+
+        .m-product-detail-hero-age-rating,
+        .m-product-detail-hero-social {
+            width: 50%;
+            padding-top: 0;
+            display: inline-block;
+            float: $left;
+        }
+
+        .m-product-detail-hero-social {
+            + .m-product-detail-hero-age-rating {
+                padding-top: $base-5x;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp3) {
+        .m-product-detail-hero-social {
+            + .m-product-detail-hero-age-rating {
+                padding-top: $base-5x;
+            }
+        }
+
+        .m-product-detail-hero-product-placement {
+            > .c-image {
+                padding-top: 40px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp4) {
+        .m-product-detail-hero-product-placement {
+            padding-top: 36px;
+            padding-bottom: 0;
+
+            > .c-image {
+                padding-top: 40px;
+            }
+        }
+
+        .m-product-detail-hero-age-rating,
+        .m-product-detail-hero-social {
+            width: 100%;
+            padding-top: 0;
+            padding-#{$left}: 0;
+            display: block;
+            float: none;
+        }
+
+        .m-product-detail-hero-age-rating {
+            padding-top: 108px;
+        }
+
+        .m-product-detail-hero-social {
+            padding-top: 88px;
+
+            + .m-product-detail-hero-age-rating {
+                padding-top: 20px;
+            }
+        }
+
+        .context-large-product-image {
+            text-align: left;
+
+            img {
+                max-width: none;
+                padding-top: 64px;
+
+                position: absolute;
+                #{$right}: 0;
+                z-index: map-get($z-index, below);
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        .context-product-placement-data {
+            .c-heading-2 {
+                padding-top: $base-2x;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        .m-product-detail-hero-product-placement {
+            .context-configuration-buttons {
+                > .c-group {
+                    .c-select-button {
+                        width: 100%;
+                        margin-#{$right}: 0;
+                    }
+                }
+            }
+        }
+    }
+}

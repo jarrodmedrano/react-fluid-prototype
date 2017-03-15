@@ -1,0 +1,17 @@
+{
+    "name": "toggle",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7743869,
+            "description": "address issue where action toggle and label were not aligned"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7804106,
+            "description": "address issue where :hover UX was pointer on disabled nodes"
+        }
+    ]
+}

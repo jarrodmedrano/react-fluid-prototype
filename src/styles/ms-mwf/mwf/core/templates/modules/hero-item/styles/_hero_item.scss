@@ -1,0 +1,770 @@
+// ==========================================================================
+// Notes:
+// - Cal() and Transform are used together because they have very similar
+// browser support. If the browser does not support these, it will fall
+// back to the default position set.
+// ==========================================================================
+
+$hero-content-max: 2048px;
+
+// .c-hero deprecated as of v.1.6, use .m-hero
+// TODO: Remove .c-hero references as of v.2.0
+.m-hero-item,
+.c-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0 5%; // Match grid
+    width: 100%;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+
+        // SET ASPECT RATIO
+        padding-top: 41.5%; // This allows for 16:6 image to maintain aspect ratio at VP4 & ABOVE
+        @media only screen and (max-width: $vp3-max) {
+            padding-top: 60.2%; // This allows for 16:9 image to maintain aspect ratio at VP3 & BELOW
+        }
+    }
+
+    // Set the hover cursor to default for the entire hero-item when it is non sloppy clickable
+    // or else it will appear as I-beam over the text.
+    &:hover {
+        cursor: default;
+    }
+
+    // Set the hover cursor to pointer for the entire hero-item when it is sloppy clickable.
+    &[data-js-href] {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    picture {
+        display: block;
+    }
+
+    > picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: map-get($z-index, default);
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: calc(50%);
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: relative;
+            z-index: map-get($z-index, neutral);
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.f-transparent {
+        &:before {
+            padding-top: 60.2%; // This allows for 16:9 image ratio at all viewports
+        }
+    }
+
+    > div {
+        width: 88%;
+        height: 100%;
+        max-width: $hero-content-max;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: map-get($z-index, neutral);
+        margin: 0 auto;
+        overflow: hidden;
+
+        @media only screen and (max-width: $vp2-max) {
+            position: relative;
+        }
+
+        // Hero content container
+        > div {
+            position: absolute;
+            z-index: map-get($z-index, neutral);
+            max-width: 520px;
+
+            // Hero CTA container; keying off of div as to not introduce breaking change
+            > div {
+                margin-top: 24px;
+                padding: 0 2px;
+            }
+        }
+    }
+
+
+    // ========================================================================
+    // Type Instances
+    // ========================================================================
+    .c-heading {
+        @include apply-type-component(h2);
+        @include apply-maxlines(2, h2, true);
+
+        @media only screen and (max-width: $vp4-max) {
+            @include apply-type-component(h4);
+            @include apply-maxlines(2, h4);
+        }
+    }
+
+    .c-subheading {
+        @include apply-type-component(sh2);
+        @include apply-maxlines(2, sh2, true);
+
+        @media only screen and (max-width: $vp4-max) {
+            @include apply-type-component(sh5);
+            @include apply-maxlines(2, sh5);
+        }
+
+        @media only screen and (max-width: $vp2-max) {
+            @include apply-type-component(sh4);
+            @include apply-maxlines(2, sh4, true);
+        }
+    }
+
+    .c-paragraph {
+        @include apply-type-component(p4);
+        @include apply-maxlines(4, p4, true);
+    }
+
+    .c-product-title,
+    .c-product-subtitle {
+        @include apply-type(t3, false, false);
+        @include apply-maxlines(2, t3, true);
+        line-height: 44px;
+        max-height: 88px;
+        padding: 0;
+
+        @media only screen and (max-width: $vp4-max) {
+            @include apply-type(t4, false, false);
+            @include apply-maxlines(2, t4, true);
+            line-height: 32px;
+            max-height: 64px;
+        }
+    }
+
+    .c-product-title {
+        font-weight: $font-weight-bold;
+    }
+
+    .c-product-subtitle {
+        font-weight: $font-weight-light;
+    }
+
+    .c-price {
+        @include apply-type(t5, false, true);
+        display: inline-block;
+    }
+
+    .c-rating {
+        margin-top: 12px;
+    }
+
+    .c-group {
+        display: block;
+        overflow: visible;
+
+        > .c-call-to-action {
+            margin-#{$right}: 24px;
+
+            + .c-call-to-action {
+                @include c-call-to-action-lightweight();
+                padding: set-direction-based-value(10px 43px 7px 25px, 10px 25px 7px 43px);
+            }
+        }
+    }
+
+    &.theme-dark {
+        .c-group {
+            > .c-call-to-action {
+                + .c-call-to-action {
+                    color: $color-tint;
+
+                    &:focus:not(.x-hidden-focus) {
+                        color: $color-tint;
+                        background: $color-tint-10 content-box;
+                    }
+                }
+            }
+        }
+    }
+
+    &.theme-light {
+        .c-group {
+            > .c-call-to-action {
+                + .c-call-to-action {
+                    color: $color-shade;
+
+                    &:focus:not(.x-hidden-focus) {
+                        color: $color-shade;
+                        background: $color-shade-10 content-box;
+                    }
+                }
+            }
+        }
+    }
+
+    &.theme-light,
+    &.theme-dark {
+        .c-group {
+            &.f-accent {
+                > .c-call-to-action {
+                    margin-#{$right}: 24px;
+
+                    + .c-call-to-action {
+                        color: $color-brand-primary;
+
+                        &:focus:not(.x-hidden-focus) {
+                            color: $color-accent;
+                            background: $color-accent-10 content-box;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .c-logo {
+        margin-top: 12px;
+    }
+
+    &.context-app {
+        .c-heading {
+            @include apply-maxlines(1, h2, true);
+
+            @media only screen and (max-width: $vp4-max) {
+                @include apply-maxlines(1, h3, true);
+            }
+        }
+    }
+
+    &.context-article {
+        .c-heading {
+            @include apply-type-component(h3);
+            @include apply-maxlines(2, h3, true);
+        }
+    }
+
+    &.context-game {
+        .c-rating {
+            margin-top: 60px;
+        }
+    }
+
+    &.context-music-album {
+        .c-product-title {
+            margin-top: 12px;
+        }
+
+        @media only screen and (max-width: $vp4-max) {
+            picture {
+                img {
+                    &.c-image {
+                        max-width: 64px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.context-device,
+    &.context-accessory,
+    &.context-article,
+    &.context-game {
+        > div > div > div {
+            margin-top: 12px;
+        }
+    }
+
+    // ========================================================================
+    // Layout: x-axis
+    // ========================================================================
+    &.f-x-left {
+        > div > div {
+            left: 0;
+        }
+    }
+
+    &.f-x-center {
+        text-align: center;
+
+        .c-group {
+            justify-content: center;
+        }
+
+        > div > div {
+            min-width: 50%;
+            // sass-lint:disable no-duplicate-properties
+            left: 30%; // Try to get close to centered for older browsers
+            left: calc(50%);
+            // sass-lint:enable no-duplicate-properties
+            transform: translateX(-50%);
+
+            .c-image {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &.f-x-right {
+        > div > div {
+            right: 0;
+        }
+    }
+
+    // ========================================================================
+    // Layout: y-axis
+    // ========================================================================
+    &.f-y-top {
+        > div > div {
+            top: 60px; // TODO update this because we've removed top-margin on everything
+
+            @media only screen and (max-width: $vp4-max) {
+                top: 24px;
+            }
+        }
+
+        &.f-transparent {
+            > div > div {
+                top: 140px;
+
+                @media only screen and (max-width: $vp3-max) {
+                    top: 120px;
+                }
+            }
+        }
+    }
+
+    &.f-y-center {
+        .c-heading {
+            &:first-child {
+                // Remove top padding if heading is the first child because
+                // otherwise the content does not look visually centered
+                padding-top: 0;
+            }
+        }
+
+        > div > div {
+            // sass-lint:disable no-duplicate-properties
+            top: 120px;
+            top: calc(50%);
+            // sass-lint:enable no-duplicate-properties
+            transform: translateY(-50%);
+        }
+
+        &.f-transparent {
+            > div > div {
+                // sass-lint:disable no-duplicate-properties
+                top: 120px;
+                top: calc(55%);
+                // sass-lint:enable no-duplicate-properties
+                transform: translateY(-50%);
+            }
+        }
+
+        // ========================================================================
+        // Layout: x and y centered. Required because transform syntax changes
+        // ========================================================================
+        &.f-x-center {
+            > div > div {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &.f-y-bottom {
+        > div > div {
+            bottom: 60px;
+
+            @media only screen and (max-width: $vp4-max) {
+                bottom: 48px;
+            }
+        }
+    }
+
+    // ========================================================================
+    // Image masks
+    // ========================================================================
+    &[class*="f-mask"] {
+        &.theme-light {
+            @if $ltie8 == false {
+                > picture:after {
+                    background: $color-tint;
+                }
+            }
+
+            &.f-x-left {
+                &.f-y-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top left, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center left, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom left, $color-tint, $color-transparent 80%);
+                    }
+                }
+            }
+
+            &.f-x-center {
+                &.f-y-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top center, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center center, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom center, $color-tint, $color-transparent 80%);
+                    }
+                }
+            }
+
+            &.f-x-right {
+                &.f-y-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top right, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center right, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom right, $color-tint, $color-transparent 80%);
+                    }
+                }
+            }
+        }
+
+        &.theme-dark {
+            @if $ltie8 == false {
+                > picture:after {
+                    background: $color-shade;
+                }
+            }
+
+            &.f-x-left {
+                &.f-y-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top left, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center left, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom left, $color-shade, $color-transparent 80%);
+                    }
+                }
+            }
+
+            &.f-x-center {
+                &.f-y-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top center, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center center, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom center, $color-shade, $color-transparent 80%);
+                    }
+                }
+            }
+
+            &.f-x-right {
+                &.f-y-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top right, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center right, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-y-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom right, $color-shade, $color-transparent 80%);
+                    }
+                }
+            }
+        }
+    }
+
+    &.f-mask-20 {
+        > picture:after {
+            @if $ltie8 {
+                // scss-lint:disable VendorPrefix
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+                // scss-lint:enable VendorPrefix
+            }
+
+            opacity: 0.2;
+        }
+    }
+
+    &.f-mask-40 {
+        > picture:after {
+            @if $ltie8 {
+                // scss-lint:disable VendorPrefix
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+                // scss-lint:enable VendorPrefix
+            }
+
+            opacity: 0.4;
+        }
+    }
+
+    &.f-mask-60 {
+        > picture:after {
+            @if $ltie8 {
+                // scss-lint:disable VendorPrefix
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+                // scss-lint:enable VendorPrefix
+            }
+
+            opacity: 0.6;
+        }
+    }
+
+    &.f-mask-80 {
+        > picture:after {
+            @if $ltie8 {
+                // scss-lint:disable VendorPrefix
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+                // scss-lint:enable VendorPrefix
+            }
+
+            opacity: 0.8;
+        }
+    }
+
+    &.f-mask-100 {
+        > picture:after {
+            @if $ltie8 {
+                // We can't ever be fully opaque in IE8 because IE8 applies
+                // a mask to the whole image (doesn't support gradient overlay).
+                // To prevent totally obsucring the image, set opacity to 80
+                // scss-lint:disable VendorPrefix
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+                // scss-lint:enable VendorPrefix
+            }
+
+            opacity: 1;
+        }
+    }
+    // ========================================================================
+    // Responsive layout
+    // ========================================================================
+
+    .c-video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        left: 0;
+
+        > h1 {
+            display: none;
+        }
+
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            z-index: map-get($z-index, buried);
+            background-size: cover;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    @media only screen and (max-width: $vp4-max) {
+        // Context container
+        > div > div {
+            max-width: 440px;
+        }
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        // Context container
+        > div > div {
+            max-width: 340px;
+        }
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        height: auto;
+        padding: 0;
+        text-align: center;
+
+        &[class*="f-x"][class*="f-y"] {
+            > picture {
+                img {
+                    top: 0;
+                    // sass-lint:disable no-duplicate-properties
+                    left: 0;
+                    left: calc(50%);
+                    // sass-lint:enable no-duplicate-properties
+                    transform: translateX(-50%);
+                }
+
+                &:after {
+                    // Hide overlay
+                    display: none;
+                }
+            }
+
+            > div > div {
+                position: relative;
+                margin: 0 auto;
+                left: 0;
+                // sass-lint:disable no-duplicate-properties
+                top: 0;
+                top: calc(50%);
+                // sass-lint:enable no-duplicate-properties
+                transform: translateY(-50%);
+                max-width: 100%;
+            }
+        }
+
+        > div {
+            padding: 12px;
+            height: 280px;
+
+            picture {
+                display: none;
+            }
+        }
+
+        .c-paragraph {
+            @include apply-maxlines(2, p4);
+        }
+
+        .c-heading,
+        &.context-article .c-heading {
+            @include apply-type-component(h5);
+            @include apply-maxlines(5, h5, true);
+        }
+
+        .c-heading,
+        &.context-app .c-heading,
+        &.context-article .c-heading {
+            padding-top: 0;
+        }
+
+        > div > div > div {
+            justify-content: center;
+        }
+
+        .c-group {
+            > .c-call-to-action {
+                margin: 0;
+
+                + .c-call-to-action {
+                    margin: 0;
+                }
+            }
+        }
+
+        &.theme-light,
+        &.theme-dark {
+            .c-group {
+                &.f-accent {
+                    > .c-call-to-action {
+                        margin: 0;
+
+                        + .c-call-to-action {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-subheading {
+            display: none;
+        }
+
+        &.context-game {
+            .c-rating {
+                margin-top: 12px;
+            }
+        }
+
+        &.context-music-album {
+            .c-product-title {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        .c-price,
+        .c-rating,
+        .c-paragraph {
+            display: none;
+        }
+    }
+}
+
+[class^="m-"] {
+    + .m-hero-item {
+        margin-top: $base-12x;
+        float: $left; // fixes clearing issues when following certain modules
+        clear: both;
+    }
+}

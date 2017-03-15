@@ -1,0 +1,38 @@
+{
+    "name": "supplemental navigation",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9749208,
+            "description": "fixes hover state of buttons"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9259895,
+            "description": "fixes the button focus state styling in supplemental nav"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9179883,
+            "description": "fixes the focus state missing on supplemental nav and add keyboard support for expanding collapsed items on code examples"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9259895,
+            "description": "fixes the focus state missing on supplemental nav and add keyboard support for expanding collapsed items"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7891517,
+            "description": "fixes the links without child items to be selectable"
+        }
+    ]
+}

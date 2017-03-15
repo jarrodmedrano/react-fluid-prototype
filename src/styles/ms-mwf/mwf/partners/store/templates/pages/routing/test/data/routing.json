@@ -1,0 +1,1727 @@
+{
+    "hero-carousel": {
+        "config": {
+            "content-type": "hero",
+            "multi-slide": true
+        },
+        "content": {
+            "label": "New Products",
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous hero slide"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next hero slide"
+                }
+            },
+            "sequence-indicator": {
+                "content": {
+                    "items": [
+                        {
+                            "config": {
+                                "checked": true
+                            },
+                            "content": {
+                                "label": "View slide one",
+                                "title": "Slide one",
+                                "id": "hero-slide-one"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View slide two",
+                                "title": "Slide two",
+                                "id": "hero-slide-two"
+                            }
+                        }
+                    ]
+                }
+            },
+            "items": [
+                {
+                    "id": "hero-slide-one",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "bottom",
+                        "context": "software",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": "Universal apps at your fingertips",
+                        "subheading": "Great app experiences across great devices are available right when you want it. Our most comprehensive platform ever is ready to help you do great things.",
+                        "call-to-action": {
+                            "content": {
+                                "itemprop": "Product name",
+                                "text": "See universal apps",
+                                "href": "#"
+                            }
+                        },
+                        "background-image": {
+                            "vp6": "https://placehold.it/1600x600",
+                            "vp5": "images/routing-hero-dark-vp6.jpg",
+                            "vp4": "images/routing-hero-dark-vp4.jpg",
+                            "vp3": "images/routing-hero-dark-vp3.jpg",
+                            "vp2": "images/routing-hero-dark-vp2.jpg",
+                            "vp1": "https://placehold.it/539x300",
+                            "alt": "A windows tablet showing an abundance of apps overflowing off the screen to the left."
+                        }
+                    }
+                },
+                {
+                    "id": "hero-slide-two",
+                    "config": {
+                        "x-align": "center",
+                        "y-align": "center",
+                        "context": "app",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "itemprop": "product name",
+                        "heading": "Uber",
+                        "subheading": "Find a driver in over 40 countries",
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 3.5
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "app-icon": {
+                            "src": "https://placehold.it/64x64",
+                            "alt": "A solid background placeholder image"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "Download app",
+                                "href": "#"
+                            }
+                        },
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "A determined woman exits a vehicle in the city"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "windows-apps-feature": {
+        "config": {
+            "align": "left"
+        },
+        "content": {
+            "heading": "Windows Apps",
+            "body": "Enhance your Windows experience with a world of exciting apps. Get access to top titles and app recommendations just for you. With notifications and innovative design, Windows apps will help you do more.",
+            "image": {
+                "vp5": "http://placehold.it/800x450",
+                "vp4": "images/routing-windowsapps.png",
+                "vp3": "http://placehold.it/542x406",
+                "vp2": "images/routing-windowsapps.png",
+                "vp1": "images/routing-windowsapps.png",
+                "alt": "Windows Apps"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "EXPLORE MORE APPS",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "best-rated-windows-apps-carousel": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "medium",
+            "context": "app"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous windows apps"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next windows apps"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Best rated Windows apps",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "Show all",
+                            "label": "Show all"
+                        }
+                    }
+                }
+            },
+            "items": [
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Phototastic Collage"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.2593.9007199267036035.30e95754-17f4-44c5-83c3-5ac7c145970a.acc8eaa5-4234-4e7b-a4c7-ee687d612b2b?w=124&h=124",
+                            "alt": "A camera icon overlaid on a colorful collage background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false,
+                        "background-color": "#107c10"
+                    },
+                    "content": {
+                        "itemprop": "product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Xbox Avatars"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.9
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.25153.13510798884064729.39fe5abc-81c2-451a-a58d-0a1c521f4277.1297ca9a-9253-47c9-a538-db07cd825ec1?w=124&h=124",
+                            "alt": "A picture of an Xbox avatar on a green background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Pin More"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 2.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.36321.9007199266559758.742608f8-0242-45ee-b30a-9a5790f35580.8d03e362-1a31-441b-8607-b5da3ce1a77e?w=124&h=124",
+                            "alt": "Pin more icon of three cards showing a world icon, document icon and steam logo are grouped together on top of a dark tiled background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false,
+                        "background-color": "#008272"
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.15158.9007199267163071.05e06c13-c5a6-4b55-aa49-95ac316ff92b.43c68c78-a422-4b09-acc3-77e6028d568f?w=124&h=124",
+                            "alt": "The Sway icon, featuring an image of a mountain and lines of text, overlaid on a teal background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Player for Soundcloud"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.44251.9007199266435420.ef5c8ddd-9683-4d05-863b-c9c6e7f27c56.728ff5c0-622f-41fb-9c43-981aabaaf755?w=124&h=124",
+                            "alt": "Soundcloud logo showing a cloud, with half of the cloud rendered as sound equalizer bars."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Allthecooks Recipes"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.10620.9007199266244952.22416c74-f693-414c-8267-0822443cdb42.be4c50f8-c06f-401d-96c7-2b6d406f05b9?w=124&h=124",
+                            "alt": "An illustrated icon depicting an avocado on a lime green background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Photo Editor"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.32376.9007199266245757.7c0b3003-e69c-4120-bc7c-734165f8c53e.568730ee-985e-42f9-b192-fc0b63f5fe76?w=124&h=124",
+                            "alt": "Photo Editor logo showing a swirling rainbow coming out of a camera lens."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "NFL on Windows"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.6
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.48178.13510798886184012.a7a1d029-362d-4eba-a691-bb81f0211c48.b8a70332-3375-491c-bfa1-3dd94995534a?w=124&h=124",
+                            "alt": "The NFL logo on a gold background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Flixster"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.2
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.12376.9007199266244090.a61f2fce-7866-4d4d-8268-c2ab91b0d482.2a70489c-a8d6-4928-9c35-05e1d8362131?w=124&h=124",
+                            "alt": "A red and white bag of popcorn, overlaid on a blue background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false,
+                        "background-color": "#C6002B"
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "iHeartRadio"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.64216.9007199266242576.b72d2256-9211-4202-9f4c-a8164999beee.3d5eaaf9-3282-43cf-b682-3defd0dc569b?w=124&h=124",
+                            "alt": "A white heart with a human figure iside hearing sound waves, overlaid on a red background."
+                        },
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    },
+    "windows-phone-apps-feature": {
+        "config": {
+            "align": "right"
+        },
+        "content": {
+            "heading": "Windows Phone Apps",
+            "body": "All your favorite apps and some brand new titles are on Windows Phone. With instant notifications only on Windows phones, you get the info you want, right on your start screen.",
+            "image": {
+                "vp4": "images/routing-windowsphoneapps.png",
+                "vp2": "images/routing-windowsphoneapps.png",
+                "vp1": "images/routing-windowsphoneapps.png",
+                "alt": "Windows Phone showing various screens of apps overlaid,such as Vine, Hulu Plus, Spotify and Slack."
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "EXPLORE MORE APPS",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "new-and-rising-windows-apps-carousel": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "medium",
+            "context": "app"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous new and rising windows apps"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next new and rising windows apps"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "New and rising Windows apps",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "Show all",
+                            "label": "Show all"
+                        }
+                    }
+                }
+            },
+            "items": [
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Wattpad: Free books and stories"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.64216.9007199266242576.b72d2256-9211-4202-9f4c-a8164999beee.3d5eaaf9-3282-43cf-b682-3defd0dc569b?w=124&h=124",
+                            "alt": "A white heart with a human figure iside hearing sound waves, overlaid on a red background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "BB-8 App enabled droid"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.64024.13510798886887131.7d2ca9ca-8373-476a-be09-0f8dfb1873ec.e1d331f6-cd69-42c2-a274-e908e3765a30?w=124&h=124",
+                            "alt": "An image of the BB-8 droid behind the Star Wars logo."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "B612"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.6
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.3927.13510798884695143.30d6baee-0cbb-4833-b465-828f1a7b78eb.de7cc0da-cd1b-42be-b539-2d0a8931aba9?w=124&h=124",
+                            "alt": "Text reading B612 in a white circle with stars over a light blue background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false,
+                        "background-color": "#0078d7"
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Hotspot Shield free VPN"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.13623.9007199266285780.876e1b86-70b9-4569-a22a-8a1990a7741b.aa1070b0-3e6f-4bcd-afd3-b094d6a99f36?w=124&h=124",
+                            "alt": "A white crescent moon in a shield on a blue background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false,
+                        "background-color": "#30B55a"
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Saavn Music Radio"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.64564.13510798886169200.5e60484c-3e0a-4d45-a9d9-9d403d3124a7.871c4221-83ca-4f30-8927-2c733d2d2450?w=124&h=124",
+                            "alt": "A white logo resembling a V and a plant on a green background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Fused: Double exposure video and photo blender"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.21132.13510798885983831.4236c26e-f475-4f3b-96e8-ba895030f5ba.8f2f637d-d196-44da-b0be-3e98692a7ab5?w=124&h=124",
+                            "alt": "Double exposure of a black and off-white triangle, creating a teal triangle."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "I am Throat doctor kids fun"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.36559.13510798886395416.1634407f-f898-423f-9a54-c29be7ef0222.15af2884-0306-4bd4-b144-3ac73ef25dc4?w=124&h=124",
+                            "alt": "A colorful drawing of a moustached man's mouth open wide and being operated on with tweezers and syringes, pulling out fish bones and jewels."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "CamCard"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.44050.9007199266664557.c0b099ee-0bf8-4a39-b6ea-aadfdd91ddcc.bf9234b1-9d66-414f-a144-2542bf178cb0?w=124&h=124",
+                            "alt": "Two C's side by side in white text on a blue background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Photo Story"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.36963.13510798886184204.0e9f9858-02e6-4aca-9e3e-2ef10c125f4d.819f2a79-85f4-44f8-b736-67c0453bd931?w=124&h=124",
+                            "alt": "A white icon of a camera with a play button, on a purple backround."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Talkray"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 3
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.microsoft.com/image/apps.26937.9007199267039833.d3f87f78-2769-46fe-9736-3dcf0fdf9987.597d258f-31e9-4e46-a3e1-79c429286aca?w=124&h=124",
+                            "alt": "A teal speech bubble with a white icon depicting a lowercase t with sound signals coming out of the top, on a black background."
+                        },
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    },
+    "xbox-apps-feature": {
+        "config": {
+            "align": "left"
+        },
+        "content": {
+            "itemprop": "Product name",
+            "heading": "Xbox apps",
+            "body": "Access all of your favorite apps anytime - free on Xbox. Get connected to popular apps on Xbox One, invluding all your favorites like Netflix, Hulu Plus, Twitch, Crackle, Amazon Instant Video, Machinima, and more.",
+            "image": {
+                "vp4": "images/routing-xboxapps.png",
+                "vp2": "images/routing-xboxapps.png",
+                "vp1": "images/routing-xboxapps.png",
+                "alt": "Several images showing the Xbox home screen, including the CW TV Now, FOXNOW, Machinima and Twitch."
+            },
+            "call-to-action": {
+                "content": {
+                    "itemprop": "Product name",
+                    "text": "EXPLORE MORE APPS",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "free-xbox-apps-carousel": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "medium",
+            "context": "app"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous free xbox apps"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next free xbox apps"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Apps available free on Xbox",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "Show all",
+                            "label": "Show all"
+                        }
+                    }
+                }
+            },
+            "items": [
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Asphalt 8: Airborne"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.61153.9007199266242715.02266e52-962c-427a-968c-3f1e3c314849.8e58f43c-98a0-4983-b1fd-af603794c788?w=124&h=124",
+                            "alt": "Futuristic grey and orange car on a dark background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Despicable Me: Minion Rush"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.10854.9007199266280866.80a53e71-65ab-46fb-81d8-fb3659808605.e96fa813-c6be-4409-8151-d47344c7f14b?w=124&h=124",
+                            "alt": "Depiction of a minion running from another minion."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Crossy Road"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.54012.13510798883898003.6a054579-7cd2-4ada-85f0-86e9b5270aae.21c50107-0c34-4625-a70e-d91f62de0644?w=124&h=124",
+                            "alt": "Isometric picture of a chicken on a blue background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Microsoft Jigsaw"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.3
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.14668.9007199266251897.29314cb3-f9dd-42ee-a78b-e9fb6ab2a3ca.75726e49-95b2-4010-a4ff-d13179e64e15?w=124&h=124",
+                            "alt": "Images of puzzle pieces next to a box on a red and purple background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Cut the Rope 2"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.8432.13510798882929396.c9f9e332-fd93-4d3a-9098-13df799fc3e1.f4d26cfa-7c02-4a5a-89cd-4c7181b20194?w=124&h=124",
+                            "alt": "Playful illustration of a frog-like creature over a tropical background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Shadow Fight 2"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.58310.9007199266280274.846effaf-392e-46e7-80a8-9f995e8190d9.6f796e44-8dcf-49f3-be0a-38bfa177616e?w=124&h=124",
+                            "alt": "Futuristic grey and blue car on a dark background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Microsoft Sudoku"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.5
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.22590.9007199266248115.b91f8903-e718-464d-998f-434af32680cf.e49be1df-1250-4f3a-9074-df378ef25b81?w=124&h=124",
+                            "alt": "Image of sudoku board with a 9 and 3 tile off-board, and the Microsoft Sudoku title and icon, which is a pencil of a 2x2 sudoku board in white."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Modern Combat 5: Blackout"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.45593.9007199266324985.37c75ac4-89f1-4a88-80f8-b4b5709a9be3.eab3035a-58bd-418e-8092-6604c73a9db5?w=124&h=124",
+                            "alt": "Realistic picture of a soldier's face on a dark red background."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Disney Infinity Toy Box"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 3.6
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.15399.9007199266368432.0f742d4e-3dd1-4165-abd4-33be5011966a.1a217c78-ecb8-4f9e-b726-595a67943ce7?w=124&h=124",
+                            "alt": "A tryptic of illustrations featuring Captain Jack Sparrow, James P. Sullivan, and Mr. Incredible."
+                        },
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": false
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Hungry Shark Evolution"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "featured-image": {
+                            "vp1": "https://store-images.s-microsoft.com/image/apps.27451.9007199266244745.9edea785-d805-48c1-9d76-9c3897c93809.532373c1-4b75-4aa6-949a-452c7175f3dc?w=124&h=124",
+                            "alt": "An illustration of a shark about to eat a girl who is swimming towards the water surface."
+                        },
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    }
+}

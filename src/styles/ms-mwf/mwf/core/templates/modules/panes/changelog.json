@@ -1,0 +1,31 @@
+{
+    "name": "panes",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10354379,
+            "description": "fixes an issue where older browsers were not recognizing the flex property shorthand references"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10012003,
+            "description": "fixes issue with the max width of images causing unwanted behavior when rendering in viewports 4-6"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9851912,
+            "description": "updates module styles for compatibility in IE 10/11"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9452578,
+            "description": "adds the panes module, consisting of several placement patterns containing imagery, text, price, rating, and call to action"
+        }
+    ]
+}

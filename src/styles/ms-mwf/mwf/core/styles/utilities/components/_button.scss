@@ -1,0 +1,116 @@
+@mixin primary-button() {
+    // This is designed to override the colors of the .c-button. This will not
+    // work as expcted if it does not get applied to an element that is a
+    // .c-button
+    color: $color-tint;
+    background-color: $color-accent;
+
+    &:focus:not(.x-hidden-focus) {
+        outline: 2px solid $color-foreground;
+    }
+
+    &:focus:not(.x-hidden-focus),
+    &:hover {
+        background: flatten-overlay($color-accent, $color-foreground, 10%);
+    }
+
+    &:active {
+        background: flatten-overlay($color-accent, $color-foreground, 20%);
+        transform: scale(0.98);
+    }
+
+    &[disabled] {
+        color: $color-foreground-20;
+        background-color: $color-accent-20;
+        border-color: transparent;
+    }
+
+    #{$theme-light} {
+        color: $color-tint;
+        background-color: $color-shade;
+        border-color: transparent;
+
+        &:focus:not(.x-hidden-focus) {
+            outline-color: $color-tint;
+        }
+
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            background: flatten-overlay($color-shade, $color-tint, 10%);
+        }
+
+        &:active {
+            background: flatten-overlay($color-shade, $color-tint, 20%);
+        }
+
+        &[disabled] {
+            background-color: $color-shade-20;
+            color: $color-shade-20;
+        }
+    }
+
+    #{$theme-dark} {
+        color: $color-shade;
+        background-color: $color-tint;
+        border-color: transparent;
+
+        &:focus:not(.x-hidden-focus) {
+            outline-color: $color-shade;
+        }
+
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            background: flatten-overlay($color-tint, $color-shade, 10%);
+        }
+
+        &:active {
+            background: flatten-overlay($color-tint, $color-shade, 20%);
+        }
+
+        &[disabled] {
+            background-color: $color-tint-20;
+            color: $color-tint-20;
+        }
+    }
+}
+
+@mixin light-button() {
+    // This is designed to override the colors of the .c-button. This will not
+    // work as expcted if it does not get applied to an element that is a
+    // .c-button
+    @include free-text-states;
+    color: $color-accent;
+    background: transparent;
+    border: 0;
+    padding: 10px 12px 11px;
+
+    &:focus:not(.x-hidden-focus) {
+        outline: 0;
+    }
+
+    &[disabled] {
+        color: $color-foreground-20;
+        text-decoration: none;
+        cursor: not-allowed;
+    }
+
+    #{$theme-light} {
+        color: $color-shade;
+        background: transparent;
+
+        &[disabled] {
+            color: $color-shade-40;
+            background: transparent;
+        }
+    }
+
+    #{$theme-dark} {
+        color: $color-tint;
+        background: transparent;
+
+        &[disabled] {
+            color: $color-tint-40;
+            background: transparent;
+        }
+    }
+}

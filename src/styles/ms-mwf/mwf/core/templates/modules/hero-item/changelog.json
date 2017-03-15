@@ -1,0 +1,105 @@
+{
+    "name": "hero item",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10747274,
+            "description": "refactored to extend from hero-item-base (new script dependency)"
+        }
+    ],
+    "v1.18": [
+        {
+            "type": "fixed",
+            "ticket-id": 10381444,
+            "description": "fixes issue with pointer cursor showing when hero-item not sloppy clickable"
+        }
+    ],
+    "v1.17.2": [
+        {
+            "type": "fixed",
+            "ticket-id": 10229083,
+            "description": "fixes issue with touch events being double-counted"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10229332,
+            "description": "fixes issue with middle-mouse click and right-mouse click being treated like a left-mouse click"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9607222,
+            "description": "fixes clicking in non call-to-action area of hero item and adds pub/sub support for hero-item clicked notification"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10065767,
+            "description": "fixes various issues with touch and tapping/clicking not working in non-MSFT browsers"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9360141,
+            "description": "updates vp3/vp4 hero content block layouts to narrow them so they don't overlap so much of the image"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8578011,
+            "description": "updates vertical spacing to match other modules when hero follows other modules"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8377875,
+            "description": "removes darken effect on hover"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "new",
+            "ticket-id": 8661390,
+            "description": "adds option for use with transparent header"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8122713,
+            "description": "updates hero typography sizes in viewports 5 and 6"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7700635,
+            "description": "changes content container width in centered layouts to allow for longer text strings before line breaks"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7888744,
+            "description": "updates default functionality to include making the entire hero item clickable"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 7977003,
+            "description": "changes module to allow images to maintain a fixed aspect ratio instead of cropping"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8062282,
+            "description": "updates default behavior to include opacity over the image when the hero item is hovered"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7842593,
+            "description": "removes default background color; IE8 does not recognize the overriding gradient"
+        }
+    ]
+}

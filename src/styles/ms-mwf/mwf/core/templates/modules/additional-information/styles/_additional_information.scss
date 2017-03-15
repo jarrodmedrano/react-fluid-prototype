@@ -1,0 +1,33 @@
+// ==========================================================================
+// Module: Additional information
+// ==========================================================================
+
+.m-additional-information {
+    width: 100%;
+    float: $left;
+
+    .c-content-toggle p {
+        padding-top: 0;
+    }
+
+    .c-list,
+    .c-age-rating,
+    .c-content-toggle {
+        margin-bottom: 24px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    [class*="heading"] {
+        padding-top: 0;
+        margin-bottom: 24px;
+    }
+
+    @media only screen and (min-width: $vp2) {
+        [data-grid="col-6"] > [data-grid="col-6"] {
+            padding-#{$right}: $base-12x;
+        }
+    }
+}

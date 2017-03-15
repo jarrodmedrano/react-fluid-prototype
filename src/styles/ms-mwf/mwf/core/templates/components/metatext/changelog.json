@@ -1,0 +1,12 @@
+{
+    "name": "metatext",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 9925935,
+            "description": "adds example using em"
+        }
+    ]
+}

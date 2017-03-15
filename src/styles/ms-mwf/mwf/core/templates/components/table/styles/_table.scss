@@ -1,0 +1,180 @@
+// ==========================================================================
+// Component: Table
+// ==========================================================================
+
+.c-table {
+    overflow: visible;
+    margin-top: 8px;
+
+    &.f-divided {
+        tbody {
+            tr {
+                border-bottom: 1px solid $color-foreground-10;
+            }
+        }
+    }
+
+    td {
+        &.f-image {
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        .c-checkbox {
+            .c-label {
+                margin-top: 0;
+
+            }
+
+            input[type="checkbox"] + span {
+                display: inline;
+            }
+        }
+    }
+
+    table {
+        width: 100%; // Should always fill its container
+    }
+
+    caption {
+        @include apply-type-component(h6);
+        text-align: $left;
+    }
+
+    thead {
+        border-bottom: 1px solid $color-foreground-20;
+
+        th {
+            @include apply-type(t9, false, true);
+            vertical-align: bottom;
+            color: $color-foreground-60;
+
+            button {
+                @include apply-type(t9, false, true);
+                font-weight: $font-weight-normal;
+                color: $color-foreground-60;
+                background: transparent;
+                border: 0;
+                padding-#{$left}: 0;
+
+                &:hover {
+                    color: $color-foreground-80;
+                }
+
+                &:focus {
+                    outline: 1px dashed $color-foreground-60;
+                }
+
+                &:active {
+                    color: $color-foreground;
+                    outline: 1px solid transparent;
+                }
+
+                &.c-glyph {
+                    &:after {
+                        display: inline-block;
+                        margin-#{$left}: 8px;
+                        vertical-align: top;
+                    }
+                }
+
+                &.f-ascending {
+                    color: $color-foreground;
+
+                    &:after {
+                        content: $glyph-up;
+                    }
+                }
+
+                &.f-descending {
+                    color: $color-foreground;
+
+                    &:after {
+                        content: $glyph-down;
+                    }
+                }
+            }
+        }
+
+        th[colspan]:not([colspan="1"]) {
+            // Center category headers. Ignores colspan="1" because it is never
+            // a category header, however someone might add colspan="1"
+            text-align: center;
+        }
+
+        tr + tr {
+            th {
+                &,
+                &:last-child {
+                    // Center align all `th` elements that are sub-category headings
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    td,
+    th {
+        font-weight: $font-weight-normal;
+        padding: 10px 12px;
+        text-align: $left;
+
+        &:first-child {
+            padding-#{$left}: 19px;
+        }
+
+        &.f-sub-categorical,
+        &.f-numerical {
+            text-align: center;
+        }
+
+        .c-price {
+            float: $right;
+
+            button,
+            span {
+                text-align: $right;
+                display: flex;
+            }
+        }
+    }
+
+    &[data-table="structured"] {
+        margin-top: 20px;
+
+        table {
+            table-layout: fixed;
+
+            td {
+                width: 50%;
+            }
+        }
+    }
+
+    // ==========================================================================
+    // Component: List over-rides on other components
+    // ==========================================================================
+    ul.c-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            padding: 0 0 8px;
+            list-style: none;
+        }
+    }
+
+    .c-paragraph {
+        padding: 0;
+    }
+
+    .c-call-to-action {
+        @include c-call-to-action-lightweight();
+        margin-top: 10px;
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}

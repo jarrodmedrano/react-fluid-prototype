@@ -1,0 +1,12 @@
+{
+    "name": "action menu",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "new",
+            "ticket-id": 10305624,
+            "description": "adds action menu as a new component"
+        }
+    ]
+}

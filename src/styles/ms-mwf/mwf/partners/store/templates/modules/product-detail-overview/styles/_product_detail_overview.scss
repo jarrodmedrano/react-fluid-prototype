@@ -1,0 +1,224 @@
+// Product detail overview module
+.m-product-detail-overview {
+    // Age gate can be within Product detail overview
+    .m-age-gate {
+        margin-#{$right}: 24px;
+        margin-top: 24px;
+
+        @media only screen and (max-width: $vp2-max) {
+            margin-#{$right}: 0;
+        }
+    }
+
+    // Product detail gallery
+    .m-product-detail-gallery {
+        padding-top: 0;
+        padding-#{$left}: 0;
+        padding-#{$right}: 24px;
+
+        [class*="c-heading"] {
+            padding-top: $base-3x;
+        }
+
+        .c-image {
+            > img {
+                display: inline-block;
+
+                outline: 1px solid $color-foreground-10;
+
+                &:hover,
+                &:focus {
+                    outline: 1px solid $color-foreground-60;
+                }
+            }
+
+            @media only screen and (max-width: $vp2-max) {
+                > img {
+                    display: inline-block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        > [data-grid*="col-12"] {
+            > [data-grid*="col-12"] {
+                padding-right: 24px;
+
+                .c-image {
+                    > img {
+                        display: inline-block;
+                        margin: 24px auto 0;
+                        width: 100%;
+                        height: auto;
+
+                        @media only screen and (max-width: $vp2-max) {
+                            padding-#{$right}: 0;
+                        }
+                    }
+                }
+            }
+
+            > [data-grid*="col-6"] {
+                padding-top: 24px;
+                padding-#{$right}: 24px;
+            }
+
+            @media only screen and (max-width: $vp2-max) {
+                > [data-grid*="col-6"] {
+                    padding-#{$right}: 0;
+                    padding-#{$left}: 12px;
+
+                    &:first-child {
+                        padding-#{$right}: 12px;
+                        padding-#{$left}: 0;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: $vp1-max) {
+                > [data-grid*="col-6"] {
+                    padding-#{$right}: 0;
+                    padding-#{$left}: 0;
+
+                    &:first-child {
+                        padding-#{$right}: 0;
+                        padding-#{$left}: 0;
+                    }
+                }
+            }
+
+            a {
+                margin-top: 0;
+                display: block;
+                position: relative;
+
+                // The additional class mimics the client when it comes to mobile, or tall, image. This forces a 16x9 cap to these images. Keep in mind this style is only meant to work within a Four-Three-Two up view (while a data-grid parent exists).
+                &.context-constrain-image {
+                    width: 100%;
+                    padding-top: percentage(9 / 16);
+                    margin: 0 auto;
+                    position: relative;
+                    text-align: center;
+                    background: $color-brand-neutral-20;
+
+                    .c-image {
+                        height: 100%;
+                        width: 100%;
+                        margin: 0 auto;
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        text-align: center;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                .c-label {
+                    position: absolute;
+                    padding: 0;
+                    margin: 0;
+                    margin-#{$left}: -6px;
+                    top: 50%;
+                    #{$left}: 50%;
+                    cursor: pointer;
+                    transform: translate(-50%, -50%);
+
+                    &:after {
+                        @include apply-glyph(set-direction-based-value($glyph-chevron-right, $glyph-chevron-left));
+                        position: absolute;
+                        display: inline-block;
+                        margin-#{$left}: 4px;
+                        margin-top: 1px;
+                        vertical-align: top;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &.theme-dark {
+                    .c-label {
+                        color: $color-tint;
+                    }
+                }
+
+                &.theme-light {
+                    .c-label {
+                        color: $color-shade;
+                    }
+                }
+
+                &.context-overlay {
+                    .c-image {
+                        &:before {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            background: $color-shade-50;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Product detail information
+    .m-product-detail-information {
+        padding-top: 48px;
+        padding-#{$left}: $base-3x;
+        padding-#{$right}: 0;
+
+        &.f-detail-only {
+            padding: 0;
+        }
+
+        .context-supported-platforms {
+            padding-top: 32px;
+
+            > .context-platform-icon {
+                width: 50%;
+                float: $left;
+            }
+
+            > [data-grid*="col-4"],
+            > .context-platform-icon {
+                > img {
+                    padding-top: 36px;
+                    margin: 0 auto;
+                }
+
+                > .c-label {
+                    text-align: center;
+                    margin: 0 auto;
+                    padding-top: 8px;
+                }
+
+                @media only screen and (max-width: $vp1-max) {
+                    width: 50%;
+                    float: $left;
+                }
+            }
+
+            + [data-grid*="col-6"] {
+                padding-top: 48px;
+                padding-#{$left}: 24px;
+
+                @media only screen and (max-width: $vp1-max) {
+                    padding-#{$left}: 0;
+                }
+            }
+        }
+    }
+}

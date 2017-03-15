@@ -1,0 +1,2499 @@
+// ==========================================================================
+// Component: Universal header
+// ==========================================================================
+
+// Global nav dimensions
+$global-nav: (
+    first-child-height: 50px,
+    secondary-height: 70px,
+);
+
+$global-nav-height: map-get($global-nav, first-child-height) - 2px; // 50px actual - 2px leeway for top/bottom focus outline that doesn't cause layout
+$category-nav-height: map-get($global-nav, secondary-height) - 2px; // 70px actual - 2px leeway for top/bottom focus outline that doesn't cause layout
+$category-nav-height-vp4: $category-nav-height - (map-get($global-nav, secondary-height) - map-get($global-nav, first-child-height)); // 68px actual - difference between original row height and vp4 row height
+$global-link-padding-horizontal: 27px;
+$category-logo-padding: 17px;
+$category-button-padding-horizontal: 25px;
+$nav-padding-horizontal: 26px;
+$uhf-menu-padding-right: 38px;
+$mobile-global-nav-button-height: 48px;
+$uhf-multi-column-width: 260px;
+
+// Default header
+$default-category-nav-config: (
+    bar-background: $color-background,
+    default-text: flatten-overlay($color-foreground, $color-background, 15),
+    trigger-opacity: $color-foreground-10,
+    category-1-hover-background: $color-transparent,
+    category-1-open-background: flatten-overlay($color-background, $color-foreground, 5),
+    category-2-hover-background: flatten-overlay($color-background, $color-foreground, 10),
+    category-3-background: flatten-overlay($color-background, $color-foreground, 10),
+    category-3-hover-background: flatten-overlay($color-background, $color-foreground, 15)
+);
+
+// Brand-neutral
+$neutral-category-nav-config: (
+    bar-background: $color-brand-neutral-80,
+    default-text: $color-tint,
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: $color-brand-neutral-75,
+    category-1-open-background: $color-brand-neutral-75,
+    category-2-hover-background: $color-brand-neutral-65,
+    category-3-background: $color-brand-neutral-65,
+    category-3-hover-background: $color-brand-neutral-55
+);
+
+// Brand-blue
+$blue-category-nav-config: (
+    bar-background: $color-brand-blue,
+    default-text: $color-tint,
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: flatten-overlay($color-brand-blue, $color-shade, 10),
+    category-1-open-background: flatten-overlay($color-brand-blue, $color-shade, 10),
+    category-2-hover-background: flatten-overlay($color-brand-blue, $color-shade, 20),
+    category-3-background: flatten-overlay($color-brand-blue, $color-shade, 20),
+    category-3-hover-background: flatten-overlay($color-brand-blue, $color-shade, 30)
+);
+
+// Brand-green
+$green-category-nav-config: (
+    bar-background: $color-brand-green,
+    default-text: $color-tint,
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: flatten-overlay($color-brand-green, $color-shade, 10),
+    category-1-open-background: flatten-overlay($color-brand-green, $color-shade, 10),
+    category-2-hover-background: flatten-overlay($color-brand-green, $color-shade, 20),
+    category-3-background: flatten-overlay($color-brand-green, $color-shade, 20),
+    category-3-hover-background: flatten-overlay($color-brand-green, $color-shade, 30)
+);
+
+// Brand-orange
+$orange-category-nav-config: (
+    bar-background: $color-brand-orange,
+    default-text: $color-tint,
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: flatten-overlay($color-brand-orange, $color-shade, 10),
+    category-1-open-background: flatten-overlay($color-brand-orange, $color-shade, 10),
+    category-2-hover-background: flatten-overlay($color-brand-orange, $color-shade, 20),
+    category-3-background: flatten-overlay($color-brand-orange, $color-shade, 20),
+    category-3-hover-background: flatten-overlay($color-brand-orange, $color-shade, 30)
+);
+
+// Brand-purple
+$purple-category-nav-config: (
+    bar-background: $color-brand-purple,
+    default-text: $color-tint,
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: flatten-overlay($color-brand-purple, $color-shade, 10),
+    category-1-open-background: flatten-overlay($color-brand-purple, $color-shade, 10),
+    category-2-hover-background: flatten-overlay($color-brand-purple, $color-shade, 20),
+    category-3-background: flatten-overlay($color-brand-purple, $color-shade, 20),
+    category-3-hover-background: flatten-overlay($color-brand-purple, $color-shade, 30)
+);
+
+// Brand-dark-blue
+$dark-blue-category-nav-config: (
+    bar-background: $color-brand-dark-blue,
+    default-text: $color-tint,
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: flatten-overlay($color-brand-dark-blue, $color-shade, 10),
+    category-1-open-background: flatten-overlay($color-brand-dark-blue, $color-shade, 10),
+    category-2-hover-background: flatten-overlay($color-brand-dark-blue, $color-shade, 20),
+    category-3-background: flatten-overlay($color-brand-dark-blue, $color-shade, 20),
+    category-3-hover-background: flatten-overlay($color-brand-dark-blue, $color-shade, 30)
+);
+
+// Transparent header
+$transparent-category-nav-light-config: (
+    bar-background: $color-transparent,
+    default-text: flatten-overlay($color-shade, $color-tint, 15),
+    trigger-opacity: $color-shade-10,
+    category-1-hover-background: $color-transparent,
+    category-1-open-background: flatten-overlay($color-tint, $color-shade, 5),
+    category-2-hover-background: flatten-overlay($color-tint, $color-shade, 10),
+    category-3-background: flatten-overlay($color-tint, $color-shade, 10),
+    category-3-hover-background: flatten-overlay($color-tint, $color-shade, 15),
+);
+
+$transparent-category-nav-dark-config: (
+    bar-background: $color-transparent,
+    default-text: flatten-overlay($color-tint, $color-shade, 5),
+    trigger-opacity: $color-tint-10,
+    category-1-hover-background: $color-transparent,
+    category-1-open-background: flatten-overlay($color-shade, $color-tint, 10),
+    category-2-hover-background: flatten-overlay($color-shade, $color-tint, 15),
+    category-3-background: flatten-overlay($color-shade, $color-tint, 15),
+    category-3-hover-background: flatten-overlay($color-shade, $color-tint, 20),
+);
+
+// This mixin sets up the initial Global and Category navs using the
+// above defined nav-configs
+@mixin apply-universal-header-category-theme($nav-config) {
+    // Increased specificity needed below (!important). Will remove with proper fix #9414479). Currently mitigated (#9386625).
+    background: map-get($nav-config, bar-background) !important;
+
+    .c-action-trigger,
+    .c-logo,
+    .c-uhf-nav-link,
+    .c-uhf-menu a,
+    .c-uhf-menu button {
+        color: map-get($nav-config, default-text);
+    }
+
+    .c-logo,
+    .c-uhf-menu > button {
+        &:hover,
+        &:focus {
+            background: map-get($nav-config, category-1-hover-background);
+        }
+    }
+
+    @media screen and (min-width: $vp3) {
+        .c-uhf-nav-link {
+            &:hover,
+            &:focus {
+                background: map-get($nav-config, category-1-hover-background) !important; // TODO Task #10090042: remove !important during c-hyperlink cleanup
+            }
+        }
+    }
+
+    button.c-action-trigger {
+        &[class*="glyph-chevron-"] {
+            border-color: map-get($nav-config, trigger-opacity);
+        }
+    }
+
+    // Category 1 Navigation
+    .c-uhf-menu {
+        ul {
+            border-bottom-color: map-get($nav-config, default-text);
+        }
+
+        > button[aria-expanded="true"],
+        > ul {
+            background: map-get($nav-config, category-1-open-background);
+        }
+
+        // Category 2 navigation container
+        > ul {
+            // Category 2 navigation items
+            > li {
+                > a:hover,
+                > a:focus,
+                > button:hover,
+                > button:focus,
+                > [aria-expanded="true"],
+                > ul {
+                    background: map-get($nav-config, category-2-hover-background) none; // "none" needed to reset rgba "image" from c-menu-item until decoupling completed
+                }
+
+                // C3 navigation container
+                > ul {
+                    > li {
+                        :hover,
+                        :focus {
+                            background: map-get($nav-config, category-3-hover-background);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin apply-thick-underline($bottom, $width-differential, $isSelectMenu: false) {
+    &:before {
+        bottom: $bottom;
+        width: calc(100% - #{$width-differential});
+    }
+}
+
+// border treatment for:
+// -- global menus (all)
+// -- some category menus (default, transparent - both light and dark themes)
+@mixin unbranded-menu-outline($color) {
+    // global c-uhf-menu
+    nav > ul > li > .c-uhf-menu,
+    // category c-uhf-menu
+    .c-uhf-menu {
+        > button {
+            border: 1px solid transparent;
+
+            &[aria-expanded="true"] {
+                border-left-color: $color;
+                border-right-color: $color;
+                border-top-color: $color;
+
+                + ul[aria-hidden="false"] {
+                    border-top: 1px solid $color;
+                    border-#{$left}: 1px solid $color;
+                    border-#{$right}: 1px solid $color;
+                    margin-top: -2px;
+
+                    > li {
+                        > a,
+                        > button {
+                            + ul[aria-hidden="false"] {
+                                border-top: 1px solid $color;
+                                border-#{$right}: 1px solid $color;
+                                margin-top: -1px;
+
+                                &.f-flip {
+                                    border-#{$right}: 0;
+                                    border-#{$left}: 1px solid $color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// border treatment for:
+// -- category menus for brand themes (blue, green, purple, etc.)
+@mixin branded-menu-outline($color) {
+    .c-uhf-menu {
+        > button {
+            border: 1px solid transparent;
+
+            &[aria-expanded="true"] {
+                border-color: transparent;
+
+                + ul[aria-hidden="false"] {
+                    border-top: 0;
+                    border-bottom: 1px solid $color;
+                    border-#{$left}: 1px solid $color;
+                    border-#{$right}: 1px solid $color;
+                    margin-top: -1px;
+
+                    > li {
+                        &:first-child {
+                            margin-top: 1px;
+                        }
+
+                        > a,
+                        > button {
+                            + ul[aria-hidden="false"] {
+                                border-top: 0;
+                                border-#{$right}: 1px solid $color;
+                                border-bottom: 1px solid $color;
+                                margin-top: 0;
+
+                                &.f-flip {
+                                    border-#{$right}: 0;
+                                    border-#{$left}: 1px solid $color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Global positioning class, use when
+// mobile menu open to prevent background scrolling
+.x-fixed {
+    position: fixed;
+}
+
+// Component: UHF menu (refactored from c-select-menu)
+.c-uhf-menu {
+    display: inline-block;
+    position: static; // TODO Task #10287850: remove property during c-select-menu cleanup
+
+    > button {
+        border: 0;
+        background: transparent;
+        text-align: $left;
+        display: inline-block;
+        color: $color-foreground-80;
+        padding: set-direction-based-value(13px $uhf-menu-padding-right 13px $nav-padding-horizontal, 13px $nav-padding-horizontal 13px $uhf-menu-padding-right);
+        margin-top: 1px;
+        z-index: 701;
+        position: relative;
+        transform: none; // TODO Task #10287850: remove property during c-select-menu cleanup
+
+        @media screen and (min-width: $vp3) {
+            z-index: map-get($z-index,  flyout + 1);
+        }
+
+        &:after {
+            @include apply-glyph($glyph-chevron-down);
+            position: absolute;
+            font-size: 8px;
+            display: inline-block;
+            #{$right}: 20px;
+            color: currentColor;
+            font-weight: $font-weight-bold;
+            padding-top: 7px;
+        }
+
+        &:hover {
+            color: $color-foreground;
+        }
+
+        &:focus {
+            border-color: transparent;
+
+            &:not(.x-hidden-focus) {
+                outline: 1px dashed $color-foreground;
+            }
+
+            &:hover {
+                outline: none;
+            }
+        }
+
+        // G-button & C-button
+        // shared thick underline style
+        .c-universal-header & {
+            &:hover,
+            &:focus {
+                &[aria-expanded="true"] {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Category 2 navigation items
+    > li {
+        > a,
+        > button {
+            &:hover {
+                outline: 0;
+            }
+        }
+    }
+
+    .f-multi-column {
+        ul[aria-hidden="false"] {
+            margin-top: 0;
+            border: 0 !important; // remove border on nested interior menu to prevent double border
+        }
+    }
+
+    ul {
+        width: 296px;
+        min-width: 64px;
+        max-width: 368px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        position: absolute;
+        top: 100%; // make menu extend from the bottom of the parent
+        z-index: map-get($z-index, flyout);
+
+        @media screen and (min-width: $vp3) {
+            border-bottom: 2px solid $color-foreground;
+        }
+    }
+
+    li {
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &.f-sub-menu {
+            > a,
+            > button {
+                .no-js &:focus + ul,
+                .no-js &:hover + ul,
+                .no-js & + ul .f-sub-menu:hover > button + ul,
+                .js &[aria-expanded="true"] + ul[aria-hidden="false"] {
+                    animation: none;
+                    display: block;
+                }
+
+                + ul.f-flip {
+                    margin-#{$left}: -2px; // scoot over 2 more pixels to align with target menu (already moved 100% of width)
+                }
+            }
+        }
+    }
+
+    [aria-expanded="false"] + ul[aria-hidden="true"] {
+        display: none;
+    }
+
+    &[aria-disabled="true"] {
+        > button {
+            &,
+            &:hover,
+            &:focus,
+            &:active {
+                color: $color-foreground-20;
+            }
+
+            &:hover {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .no-js &:hover > ul,
+    .no-js & > ul > li:hover > [aria-expanded="false"] + ul[aria-hidden="true"],
+    .js & > [aria-expanded="true"] + ul[aria-hidden="false"],
+    .js & > span[aria-expanded="true"] + ul[aria-hidden="false"] {
+        animation: none;
+        display: block;
+    }
+
+    #{$theme-light} {
+        > button {
+            color: $color-shade-80;
+
+            &:hover {
+                color: $color-shade;
+            }
+
+            &:focus {
+                &:not(.x-hidden-focus) {
+                    outline-color: $color-shade;
+                }
+            }
+        }
+    }
+
+    #{$theme-dark} {
+        > button {
+            color: $color-tint-80;
+
+            &:hover {
+                color: $color-tint;
+            }
+
+            &:focus {
+                &:not(.x-hidden-focus) {
+                    outline-color: $color-tint;
+                }
+            }
+        }
+    }
+}
+
+// Component: UHF nav link (refactored from c-hyperlink)
+.c-uhf-nav-link {
+    position: relative;
+
+    &:focus {
+        background: transparent;
+
+        &:not(.x-hidden-focus) {
+            .theme-light & {
+                outline-color: $color-shade;
+            }
+
+            .theme-dark & {
+                outline-color: $color-tint;
+            }
+        }
+    }
+
+    &.x-hidden-focus {
+        background: none !important;
+        outline-color: transparent !important;
+    }
+}
+
+a.c-uhf-nav-link {
+    text-decoration: none !important; // TODO Task #10090042: remove property during c-hyperlink cleanup
+
+    &:not(.f-image) {
+        &:focus {
+            .theme-light & {
+                background: transparent; // TODO Task #10090042: remove property during c-hyperlink cleanup
+
+                &:not(.x-hidden-focus) {
+                    outline: 1px dashed $color-shade; // TODO Task #10090042: remove property during c-hyperlink cleanup
+                }
+            }
+
+            .theme-dark & {
+                background: transparent; // TODO Task #10090042: remove property during c-hyperlink cleanup
+
+                &:not(.x-hidden-focus) {
+                    outline: 1px dashed $color-tint; // TODO Task #10090042: remove property during c-hyperlink cleanup
+                }
+            }
+        }
+    }
+}
+
+.c-universal-header {
+    margin-top: 0;
+
+    .c-sitewide-promo {
+        height: 100%;
+        min-height: 34px;
+        text-align: center;
+
+        .color-brand-red {
+            background: $color-brand-red;
+        }
+
+        .color-brand-orange {
+            background: $color-brand-orange;
+        }
+
+        .color-brand-yellow {
+            background: $color-brand-yellow;
+        }
+
+        .color-brand-green {
+            background: $color-brand-green;
+        }
+
+        .color-brand-teal {
+            background: $color-brand-teal;
+        }
+
+        .color-brand-blue {
+            background: $color-brand-blue;
+        }
+
+        .color-brand-purple {
+            background: $color-brand-purple;
+        }
+
+        .c-paragraph {
+            @include apply-type(t7, false, true);
+            font-weight: $font-weight-normal;
+            padding: 5px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp6) {
+        margin-top: 12px;
+    }
+
+    // Display bar for title needed because UH may not always have category level
+    .f-mobile-title,
+    // Back button from search expanded replaces hamburger
+    .glyph-arrow-htmllegacy {
+        display: none;
+    }
+
+    // Helper classes to show and hide
+    // elements as appropriate
+    // can use anywhere in c-universal-header
+    .f-show {
+        display: block !important;
+    }
+
+    .f-hide {
+        display: none !important;
+    }
+
+    // Helper classes to show current/active
+    // menu item
+    .f-current {
+        font-weight: $font-weight-bold;
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        // Helper class to slim down menu
+        // items on vp3. Apply on .c-universal-header
+        // class on vertical collision
+        &.f-lean {
+            li {
+                > a,
+                > button {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+
+                &.f-sub-menu {
+                    > button {
+                        &:after {
+                            top: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // default focus styling (color set/overridden by themes or branding on text elements)
+    // elements needed for specificity (:focus too generic)
+    a:not(.x-hidden-focus),
+    button:not(.x-hidden-focus),
+    :not(.x-hidden-focus) a,
+    :not(.x-hidden-focus) button {
+        &:focus {
+            outline: 1px dashed currentColor;
+        }
+    }
+
+    // shared thick underline style
+    .c-uhf-nav-link,                            // G-link & C-link
+    .c-uhf-menu > button,                       // G-button & C-button
+    > div + div .c-logo {                       // C-logo
+        @if $ltie8 {
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        } @else {
+            &:before {
+                background: currentColor;
+                content: "";
+                display: none;
+                height: 2px;
+                position: absolute;
+            }
+
+            &:hover,
+            &:focus {
+                &:before {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp3) {
+        // applies to default and transparent light theme
+        .theme-light {
+            @include unbranded-menu-outline($color-shade-05);
+
+            .c-call-to-action.f-image {
+                background: $color-transparent;
+                color: flatten-overlay($color-foreground, $color-background, 15);
+
+                &:focus {
+                    background: $color-transparent;
+                    outline: 1px dashed $color-shade;
+                }
+            }
+        }
+
+        // applies to default and transparent dark theme
+        .theme-dark {
+            @include unbranded-menu-outline($color-tint-05);
+
+            .c-call-to-action.f-image {
+                background: $color-transparent;
+                color: flatten-overlay($color-tint, $color-shade, 5);
+
+                &:focus {
+                    background: $color-transparent;
+                    outline: 1px dashed $color-tint;
+                }
+            }
+        }
+
+        .c-uhf-menu,
+        li.f-sub-menu {
+            [aria-expanded],
+            a {
+                position: relative;
+                z-index: map-get($z-index,  flyout + 1);
+
+                &:focus:not(.x-hidden-focus) {
+                    // This works for the level 3 of the nav
+                    z-index: (map-get($z-index, flyout) + 2);
+                }
+            }
+        }
+
+        .c-uhf-menu {
+            li {
+                a,
+                button {
+                    // These will apply a BG on hover, but the default color
+                    // should come from the ul itself because the height
+                    // of the menu may have to be taller than the menu-contents
+                    // would make it by default.
+                    background: transparent;
+                }
+            }
+
+            > [aria-expanded="true"] + ul[aria-hidden="false"] {
+                margin-top: -1px;
+            }
+
+            [aria-expanded="true"] {
+                &:focus:not(.x-hidden-focus) + ul {
+                    z-index: (map-get($z-index, flyout) - 1);
+                }
+            }
+        }
+
+        li.f-sub-menu {
+            [aria-expanded="true"] {
+                z-index: map-get($z-index, flyout);
+            }
+        }
+    }
+
+    li {
+        > a,
+        > button {
+            padding-#{$left}: 24px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        &.f-sub-menu {
+            > :after {
+                top: 26px;
+                #{$right}: 24px;
+            }
+
+            button {
+                border: 0;
+                display: block;
+                width: 100%;
+                text-align: $left;
+                padding-#{$right}: 30px;
+            }
+        }
+
+        > a {
+            &.f-product {
+                padding: 8px 12px;
+            }
+        }
+    }
+
+    > div {
+        > div {
+            // Essentially creates grid container
+            @include clearfix();
+            max-width: $max-content-width;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        // Global Nav
+        &:first-child {
+            height: map-get($global-nav, first-child-height);
+            background: $color-background;
+            padding: 0 5%;
+            z-index: map-get($z-index, nav) + 2;
+
+            // Search behavior on vp3
+            // apply to global div wrapper
+            // on focus on vp3 only
+            @media only screen and (max-width: $vp3-max) {
+                @include left-right-padding($base-6x);
+
+                &.f-search-opened {
+                    > div {
+                        nav {
+                            display: none;
+                        }
+
+                        > div {
+                            .c-search {
+                                max-width: 100%;
+                                min-width: 1px;
+                                width: auto;
+
+                                input[type='search'] {
+                                    max-width: 100%;
+                                    width: auto; // placeholder for functionality
+                                    opacity: 1;
+                                    padding: set-direction-based-value(7px 38px 7px 10px, 7px 10px 7px 38px);
+                                }
+                            }
+                        }
+                    }
+
+                    .m-auto-suggest {
+                        display: block;
+                    }
+                }
+
+                .m-auto-suggest {
+                    display: none;
+                }
+            }
+
+            // Container for Search, shopping cart, and ME control
+            > div > div {
+                float: $right;
+
+                // language toggle
+                > .c-uhf-menu {
+                    height: 46px;
+
+                    > button {
+                        color: $color-foreground-60;
+                        margin: set-direction-based-value(1px 8px 0 10px, 1px 10px 0 8px);
+                        padding: set-direction-based-value(13px 26px 13px 13px, 13px 13px 13px 26px);
+
+                        &:after {
+                            #{$right}: 10px;
+                        }
+
+                        // hover underline adjustment based on padding numbers specific to language toggle
+                        &:before {
+                            width: calc(100% - #{13px + 26px});
+                        }
+
+                        &:hover {
+                            color: $color-foreground-80;
+                        }
+
+                        &[aria-expanded="true"] {
+                            + ul[aria-hidden="false"] {
+                                margin-top: 2px;
+                            }
+                        }
+
+                        + ul {
+                            border: 0;
+                        }
+                    }
+
+                    > ul {
+                        #{$right}: 8px;
+                        width: 150px;
+
+                        li {
+                            a {
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .c-action-trigger {
+                margin-top: 0;
+                width: 50px;
+                height: 50px;
+                color: $color-foreground;
+                float: $left;
+
+                &:before {
+                    vertical-align: baseline;
+                    margin: 0;
+                }
+
+                &.glyph-global-nav-button {
+                    font-size: 20px;
+                    display: none;
+
+                    &:before {
+                        width: 20px;
+                        height: 20px;
+                        margin-top: 7px;
+                    }
+                }
+
+                &.glyph-shopping-cart {
+                    padding-#{$left}: 7px;
+                    padding-top: 0;
+                    line-height: 50px;
+                    height: 46px;
+                    width: 40px;
+                    margin: set-direction-based-value(1px 0 0 5px, 1px 5px 0 0);
+                    min-width: 1px;
+                    color: $color-foreground-60;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $color-foreground-80;
+                    }
+
+                    &:focus {
+                        background: none;
+                    }
+
+                    &:active {
+                        color: $color-foreground;
+                    }
+
+                    span {
+                        @include apply-type(t9, false, true);
+                        vertical-align: text-top;
+                        padding-#{$left}: 2px;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .c-search {
+                button {
+                    height: 32px;
+                    background: transparent;
+                    color: $color-foreground-60;
+                    margin-#{$right}: 2px;
+
+                    &:hover {
+                        color: $color-foreground-80;
+                    }
+
+                    &:active {
+                        color: $color-foreground;
+                    }
+
+                    &:focus {
+                        &:not(.x-hidden-focus) {
+                            outline-color: $color-foreground;
+                        }
+                    }
+                }
+            }
+
+            .c-logo {
+                width: 137px;
+                height: 96%;
+                margin-top: 1px;
+                padding: set-direction-based-value(13px 20px 14px 12px, 13px 12px 14px 20px);
+                margin-#{$left}: -12px;
+                float: $left;
+
+                .c-image {
+                    margin-top: -1px;
+                    max-width: none;
+                    width: 108px;
+                }
+            }
+
+            nav {
+                @include clearfix();
+                height: 100%; // needed for IE11 (bug #10681900)
+
+                &,
+                > ul > li {
+                    float: $left;
+                }
+            }
+
+            // G-link
+            .c-uhf-nav-link {
+                @include apply-thick-underline(12px, ($global-link-padding-horizontal * 2));
+                color: flatten-overlay($color-foreground, $color-background, 15);
+                display: inline-block;
+                margin-top: 1px;
+                padding: 14px $global-link-padding-horizontal 10px;
+                height: 48px;
+            }
+
+            .c-uhf-menu {
+                float: $left;
+                position: relative;
+
+                a,
+                button {
+                    background: transparent;
+                    color: flatten-overlay($color-foreground, $color-background, 15);
+                }
+
+                // G-button
+                > button {
+                    @include apply-thick-underline(12px, (26px + 38px), true);
+                    white-space: nowrap;
+
+                    &:hover,
+                    &:focus {
+                        background: $color-background;
+                    }
+
+                    &[aria-expanded="true"] {
+                        background: flatten-overlay($color-background, $color-foreground, 5);
+                    }
+                }
+
+                // G2 Navigation Container
+                > ul {
+                    background: flatten-overlay($color-background, $color-foreground, 5);
+
+                    // G2 Navigation Items
+                    > li {
+                        > :focus,
+                        > :hover,
+                        > [aria-expanded="true"] {
+                            background: flatten-overlay($color-background, $color-foreground, 10);
+                        }
+
+                        > :active,
+                        > :hover {
+                            outline: 0;
+                        }
+
+                        button {
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+
+                        // G3 Navigation Container
+                        > ul {
+                            background: flatten-overlay($color-background, $color-foreground, 10);
+
+                            :focus,
+                            :hover {
+                                background: flatten-overlay($color-background, $color-foreground, 15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Category Nav
+        + div {
+            @include apply-universal-header-category-theme($default-category-nav-config);
+            position: relative;
+            height: map-get($global-nav, secondary-height);
+            width: 100%;
+            padding-#{$left}: calc(5% - 18px);
+            padding-#{$right}: 5%;
+            z-index: map-get($z-index, nav) + 1;
+
+            @media only screen and (max-width: $vp3-max) {
+                padding-#{$right}: 24px;
+                padding-#{$left}: 6px;
+            }
+
+            > div {
+                // Because we're shifting the content to the left by 18px above,
+                // we need to exand the maximum width by 18px so that adjustment
+                // works as intended at the largest viewport.
+                max-width: $max-content-width + 18px;
+                overflow: hidden;
+
+                > .c-call-to-action,
+                > .c-uhf-nav-link {
+                    float: $right;
+                }
+
+                > .c-call-to-action {
+                    margin-top: 16px;
+
+                    &.f-image {
+                        @include apply-type(t7, false, false);
+                        letter-spacing: 0;
+                        padding-#{$left}: 0;
+                        padding-#{$right}: 0;
+                        margin-#{$right}: 1px;
+
+                        &:after {
+                            display: none;
+                        }
+
+                        > .c-image {
+                            display: inline-block;
+                            margin: set-direction-based-value(-20px 8px -8px 0, -20px 0 -8px 8px);
+                            height: 36px;
+                        }
+
+                        > span {
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // C-logo
+            .c-logo {
+                @include apply-thick-underline(21px, ($category-logo-padding * 2));
+                height: $category-nav-height;
+                margin: 1px;
+                padding: $category-logo-padding;
+                float: $left;
+                position: relative;
+
+                img {
+                    max-height: 100%;
+                }
+
+                span {
+                    @include apply-type(t4, false, true);
+                    display: block;
+                    font-weight: $font-weight-semilight;
+                }
+
+                @media only screen and (min-width: $vp3) and (max-width: $vp3-max) {
+                    &:before {
+                        bottom: 20px; // adjust hover/focus underline
+                    }
+
+                    span {
+                        margin-top: -1px;
+                    }
+                }
+            }
+
+            .c-action-trigger {
+                min-width: 0;
+                margin: set-direction-based-value(1px 10px 0 0, 1px 0 0 10px);
+                padding: 0;
+                height: 66px;
+                top: map-get($global-nav, first-child-height);
+
+                &:disabled {
+                    display: none;
+                }
+           }
+
+            nav {
+                overflow: hidden;
+                height: 100%;
+                white-space: nowrap;
+
+                @media screen and (min-width: $vp3) {
+                    // make room for focus rect
+                    padding-#{$left}: 1px;
+                    padding-#{$right}: 1px;
+                }
+
+                .f-hidden {
+                    opacity: 0.6;
+                }
+            }
+
+            // C-link
+            .c-uhf-nav-link {
+                margin: 1px;
+                text-decoration: none;
+                line-height: $category-nav-height;
+                vertical-align: top;
+                display: block;
+
+                @media screen and (min-width: $vp3) {
+                    @include apply-thick-underline(22px, ($nav-padding-horizontal * 2));
+                    display: inline-block;
+                    padding: 0 $nav-padding-horizontal;
+                }
+            }
+
+            // C-button
+            .c-uhf-menu {
+                > button {
+                    @include apply-thick-underline(22px, ($category-button-padding-horizontal + 38px), true);
+                    padding: set-direction-based-value(0 $uhf-menu-padding-right 0 $category-button-padding-horizontal, 0 $category-button-padding-horizontal 0 $uhf-menu-padding-right);
+                    line-height: $category-nav-height - 2px; // subtract additional for borders
+                    margin: 1px 0;
+
+                    &:after {
+                        padding-top: 1px;
+                    }
+                }
+
+                > ul {
+                    > li {
+                        a,
+                        button {
+                            background: transparent;
+                        }
+
+                        button:hover,
+                        [aria-expanded="true"] {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $vp3) {
+                //todo: <joserd> the "!important can be removed in the cleanup after the .c-menu decoupling is completed" the decoupling work is being done by <carrisa>
+                .f-multi-column {
+                    white-space: nowrap;
+                    max-width: none;
+                    width: auto;
+
+                    // Column Menu Containers
+                    // may be able to remove .f-sub-menu class when c-menu-item decoupling completed, needed for specificity override for now
+                    > li.f-sub-menu {
+                        @include clearfix();
+                        display: inline-block;
+                        float: $left;
+                        padding-bottom: 10px;
+                        vertical-align: top;
+
+                        > a,
+                        > button {
+                            font-weight: $font-weight-bold;
+                        }
+
+                        > :after {
+                            content: none;
+                        }
+
+                        ul {
+                            background: transparent !important;
+                            border: 0 !important;
+                            position: relative;
+                            left: auto;
+                            right: auto;
+                            width: $uhf-multi-column-width - 10px;
+
+                            > li {
+                                > a {
+                                    padding-top: 12px;
+                                    padding-bottom: 12px;
+                                }
+                            }
+                        }
+
+                        a {
+                            background: transparent !important;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        button {
+                            background: transparent !important;
+                            cursor: default;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    &[aria-hidden="false"] {
+                        display: flex !important;
+                        flex-flow: row wrap;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $vp3) and (max-width: $vp3-max) {
+                .f-multi-column {
+                    &.f-multi-column-5,
+                    &.f-multi-column-4,
+                    &.f-multi-column-3 {
+                        width: $uhf-multi-column-width * 2;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $vp4) and (max-width: $vp4-max) {
+                .f-multi-column {
+                    &.f-multi-column-5,
+                    &.f-multi-column-3 {
+                        width: $uhf-multi-column-width * 3;
+                    }
+
+                    &.f-multi-column-4 {
+                        width: $uhf-multi-column-width * 2;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $vp5) {
+                .f-multi-column {
+                    &.f-multi-column-5 {
+                        width: $uhf-multi-column-width * 5;
+                    }
+
+                    &.f-multi-column-4 {
+                        width: $uhf-multi-column-width * 4;
+                    }
+
+                    &.f-multi-column-3 {
+                        width: $uhf-multi-column-width * 3;
+                    }
+                }
+            }
+
+            // adjust (shorten) row height for vp4 and under
+            @media only screen and (max-width: $vp4-max) {
+                height: map-get($global-nav, first-child-height);
+
+                .c-action-trigger {
+                    height: map-get($global-nav, first-child-height) - 2px;
+                }
+
+                .c-logo {
+                    height: $category-nav-height-vp4;
+                    padding: 9px $category-logo-padding;
+                }
+
+                .c-uhf-menu {
+                    > button {
+                        line-height: $category-nav-height-vp4 - 2px; // subtract additional for borders
+                    }
+                }
+
+                .c-uhf-nav-link {
+                    line-height: $category-nav-height-vp4;
+                }
+
+                .c-logo,
+                .c-uhf-menu > button,
+                .c-uhf-nav-link {
+                    &:before {
+                        // Adjust position of hover/focus underline
+                        bottom: 10px;
+                    }
+                }
+
+                > div {
+                    > .c-call-to-action {
+                        margin-top: 5px;
+                        margin-#{$left}: 5px;
+                    }
+                }
+            }
+
+            &.f-transparent {
+                &.theme-light {
+                    @include apply-universal-header-category-theme($transparent-category-nav-light-config);
+                }
+
+                &.theme-dark {
+                    @include apply-universal-header-category-theme($transparent-category-nav-dark-config);
+                }
+            }
+        }
+    }
+
+    // Global Nav classes
+    .c-me {
+        // ME control
+        height: 50px;
+        line-height: 50px;
+        float: $left;
+
+        // Since these target our components
+        // we can leave them in even though
+        // we do not own the ME space
+        > .c-hyperlink {
+            margin-top: 1px;
+            padding-top: 0;
+            padding-bottom: 0;
+            color: $color-foreground;
+            line-height: 50px;
+            height: 46px;
+            float: $left;
+            text-decoration: none;
+        }
+
+        > .c-image {
+            float: $left;
+            margin-top: 8px;
+            margin-#{$left}: 12px;
+        }
+    }
+
+    .m-auto-suggest {
+        ul {
+            border: 1px solid $color-foreground-10;
+            top: 36px;
+            max-width: none;
+            z-index: map-get($z-index, flyout);
+        }
+    }
+
+    .c-search {
+        margin-top: 6px;
+        float: $left;
+        @if $ltie8 {
+            width: 276px;
+        }
+
+        input[type='search'] {
+            @if $ltie8 {
+                background: $color-tint;
+            } @else {
+                background: $color-tint-20;
+            }
+            border-color: $color-foreground-40;
+            max-width: 100%;
+            width: 276px;
+            height: 36px;
+
+            &:hover {
+                border-color: $color-foreground-80;
+            }
+
+            &:active,
+            &:focus {
+                border-color: $color-accent;
+            }
+        }
+
+        // Search behavior for vp3
+        @media only screen and (max-width: $vp3-max) {
+            min-width: 0;
+            width: 0;
+
+            input[type='search'] {
+                padding: 0;
+                width: 0;
+                opacity: 0;
+            }
+        }
+    }
+
+    // Category Nav classes
+    .c-action-trigger {
+        &[class*="glyph-chevron-"] {
+            opacity: 0.7;
+            display: none;
+            border-width: 0;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &.glyph-chevron-left {
+            float: $left;
+            border-#{$right}: 1px solid; // color set by theme/brand
+        }
+
+        &.glyph-chevron-right {
+            float: $right;
+            border-#{$left}: 1px solid; // color set by theme/brand
+        }
+    }
+
+    // Theme and brand overrides
+    div[class*="brand-"] {
+        @media only screen and (min-width: $vp3) {
+            @include branded-menu-outline($color-foreground-05);
+        }
+
+        .c-logo,
+        .c-uhf-nav-link,
+        .c-uhf-menu > button {
+            &:before {
+                background: transparent;
+            }
+        }
+
+        ul,
+        ul  > li ul,
+        .f-multi-column {
+            border-bottom: 0;
+        }
+    }
+
+    .brand-blue {
+        @include apply-universal-header-category-theme($blue-category-nav-config);
+    }
+
+    .brand-green {
+        @include apply-universal-header-category-theme($green-category-nav-config);
+    }
+
+    .brand-neutral {
+        @include apply-universal-header-category-theme($neutral-category-nav-config);
+    }
+
+    .brand-orange {
+        @include apply-universal-header-category-theme($orange-category-nav-config);
+    }
+
+    .brand-purple {
+        @include apply-universal-header-category-theme($purple-category-nav-config);
+    }
+
+    .brand-dark-blue {
+        @include apply-universal-header-category-theme($dark-blue-category-nav-config);
+    }
+
+    // Transparent header (top-level)
+    &.f-transparent {
+        position: absolute;
+        top: 0;
+        margin-top: 0;
+        width: 100%;
+
+        @media only screen and (min-width: $vp6) {
+            margin-top: 12px;
+        }
+
+        @media only screen and (min-width: $vp5) and (max-width: $vp5-max) {
+            margin-top: 8px;
+        }
+
+        .c-action-trigger[class*="glyph-chevron-"] {
+            top: 0;
+        }
+
+        .f-transparent {
+            position: absolute;
+            width: 100%;
+        }
+
+        .c-uhf-menu {
+            > ul {
+                top: 100%;
+            }
+        }
+
+        > div {
+            + div {
+                top: map-get($global-nav, first-child-height);
+            }
+        }
+    }
+
+    // Transparent global nav
+    > .f-transparent:first-child {
+        @media only screen and (min-width: $vp3) {
+            &,
+            .c-uhf-menu > button:hover,
+            .c-uhf-menu > button:focus {
+                background: $color-transparent;
+            }
+        }
+
+        .c-action-trigger {
+            color: $color-foreground;
+        }
+
+        @if $ltie8 {
+            .c-uhf-nav-link {
+                &,
+                &:hover,
+                &:focus {
+                    background: $color-background;
+                }
+            }
+        }
+
+        &#{$theme-light-selector} {
+            .c-me > .c-hyperlink,   // ME control
+            .c-action-trigger,
+            .c-action-trigger:active {
+                color: $color-shade;
+            }
+
+            ul {
+                border-bottom-color: $color-shade;
+            }
+
+            .c-uhf-menu {
+                a,
+                button {
+                    color: flatten-overlay($color-shade, $color-tint, 15);
+                }
+
+                > button {
+                    &[aria-expanded="true"]:hover,
+                    &[aria-expanded="true"] {
+                        background: flatten-overlay($color-background, $color-foreground, 5);
+                    }
+
+                    &:before {
+                        background: flatten-overlay($color-shade, $color-tint, 15);
+                    }
+                }
+
+                // G2 Navigation Container
+                > ul {
+                    background: flatten-overlay($color-background, $color-foreground, 5);
+
+                    // G2 Navigation Items
+                    > li {
+                        > a,
+                        > button {
+                            &:focus,
+                            &:hover,
+                            &[aria-expanded="true"] {
+                                background: flatten-overlay($color-tint, $color-shade, 10);
+                            }
+                        }
+
+                        // G3 Navigation Container
+                        > ul {
+                            background: flatten-overlay($color-tint, $color-shade, 10);
+
+                            a,
+                            button {
+                                &:focus,
+                                &:hover {
+                                    background: flatten-overlay($color-tint, $color-shade, 15);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &#{$theme-dark-selector} {
+            @media only screen and (max-width: $vp3-max) {
+                background: $color-shade;
+            }
+
+            .c-uhf-nav-link {
+                color: flatten-overlay($color-tint, $color-shade, 5);
+            }
+
+            .c-me > .c-hyperlink, // ME control
+            .c-action-trigger,
+            .c-action-trigger:active {
+                color: $color-tint;
+            }
+
+            .c-action-trigger {
+                &.glyph-shopping-cart {
+                    color: $color-tint-60;
+
+                    &:hover,
+                    &:focus {
+                        color: $color-tint-80;
+                    }
+                }
+            }
+
+            .c-uhf-menu {
+                a,
+                button {
+                    color: flatten-overlay($color-tint, $color-shade, 5);
+                }
+
+                ul {
+                    border-bottom-color: flatten-overlay($color-tint, $color-shade, 5);
+                }
+
+                > button {
+                    &[aria-expanded="true"]:hover,
+                    &[aria-expanded="true"] {
+                        background: flatten-overlay($color-shade, $color-tint, 10);
+                    }
+
+                    &:hover,
+                    &:focus {
+                        &:before {
+                            background: flatten-overlay($color-tint, $color-shade, 5);
+                        }
+                    }
+                }
+
+                // G2 Navigation Container
+                > ul {
+                    background: flatten-overlay($color-shade, $color-tint, 10);
+
+                    // G2 Navigation Items
+                    > li {
+                        > a,
+                        > button {
+                            &:focus,
+                            &:hover,
+                            &[aria-expanded="true"] {
+                                background: flatten-overlay($color-shade, $color-tint, 15);
+                            }
+                        }
+
+                        // G3 Navigation Container
+                        > ul {
+                            background: flatten-overlay($color-shade, $color-tint, 15);
+
+                            a,
+                            button {
+                                &:focus,
+                                &:hover {
+                                    background: flatten-overlay($color-shade, $color-tint, 20);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Transparent general styles (not dependent on DOM div order, or specific due to class naming, enabling shorter selectors)
+    .f-transparent {
+        &#{$theme-light-selector} {
+            .c-action-trigger {
+                &.glyph-shopping-cart {
+                    color: $color-shade-60;
+
+                    &:hover,
+                    &:focus {
+                        color: $color-shade-80;
+                    }
+                }
+            }
+
+            .c-search {
+                input[type='search'] {
+                    @if $ltie8 {
+                        background: $color-tint;
+                    } @else {
+                        background: $color-tint-20;
+                    }
+                    border-color: $color-shade-40;
+
+                    &:hover {
+                        border-color: $color-shade-80;
+                    }
+
+                    &:active,
+                    &:focus {
+                        border-color: $color-accent;
+                    }
+                }
+
+                button {
+                    background: transparent;
+                    color: $color-shade-60;
+
+                    &:hover {
+                        color: $color-shade-80;
+                    }
+
+                    &:active {
+                        color: $color-shade;
+                    }
+
+                    &:focus {
+                        &:not(.x-hidden-focus) {
+                            outline-color: $color-shade;
+                        }
+                    }
+                }
+            }
+        }
+
+        &#{$theme-dark-selector} {
+            .c-action-trigger {
+                &.glyph-shopping-cart {
+                    color: $color-tint-60;
+
+                    &:hover,
+                    &:focus {
+                        color: $color-tint-80;
+                    }
+                }
+            }
+
+            .c-search {
+                input[type='search'] {
+                    @if $ltie8 {
+                        background: $color-shade;
+                    } @else {
+                        background: $color-tint-10;
+                    }
+                    border-color: $color-tint-40;
+
+                    &:hover {
+                        border-color: $color-tint-80;
+                    }
+
+                    &:active,
+                    &:focus {
+                        border-color: $color-accent;
+                    }
+                }
+
+                button {
+                    background: transparent;
+                    color: $color-tint-60;
+
+                    &:hover {
+                        color: $color-tint-80;
+                    }
+
+                    &:active {
+                        color: $color-tint;
+                    }
+
+                    &:focus {
+                        &:not(.x-hidden-focus) {
+                            outline-color: $color-tint;
+                        }
+                    }
+                }
+            }
+        }
+
+        a:link:not(.c-call-to-action),
+        > div + div .c-logo span,
+        > div + div > div .c-action-trigger {
+            color: $color-foreground;
+        }
+
+        > div + div {
+            > div {
+                .c-action-trigger {
+                    &.glyph-chevron-left {
+                        border-right: 1px solid $color-foreground;
+                    }
+                }
+            }
+        }
+    }
+
+    // Mobile navigation
+    // Use of !important okay until refactored to be mobile-first (enables significantly leaner selectors and less fragile overrides in the long run)
+    @media only screen and (max-width: $vp2-max) {
+        // Helper classes for mobile menu animations
+        // add to the nav or ul element accordingly
+        .f-mobile-next {
+            #{$left}: 100% !important;
+        }
+
+        .f-mobile-previous {
+            #{$left}: -100% !important;
+        }
+
+        .f-mobile-title {
+            margin: 0;
+            padding: 14px 48px 10px;
+            border-top: 1px solid $color-shade-10;
+            border-bottom: 1px solid $color-shade-10;
+            color: $color-shade !important;
+            background: $color-tint;
+            float: none;
+            text-align: center;
+            position: absolute;
+            top: map-get($global-nav, first-child-height);
+            #{$left}: 0;
+            #{$right}: 0;
+            height: map-get($global-nav, first-child-height);
+            width: 100%;
+            z-index: map-get($z-index, nav) + 1;
+
+            &:hover,
+            &:focus {
+                background: $color-tint;
+                cursor: default;
+            }
+
+            .c-action-trigger {
+                height: 100%;
+                width: 35px !important;
+                margin: 0 !important;
+
+                &[class*="glyph-chevron-"] {
+                    display: block;
+                    color: $color-shade !important;
+                    position: absolute;
+                    top: 0;
+                    height: $mobile-global-nav-button-height;
+                }
+
+                &.glyph-chevron-left {
+                    border-#{$right}: 0;
+                    #{$left}: 1px;
+                }
+
+                &.glyph-chevron-right {
+                    border-#{$left}: 0;
+                    #{$right}: 1px;
+                }
+            }
+        }
+
+        .c-uhf-menu,
+        li.f-sub-menu {
+            button {
+                &:after {
+                    content: set-direction-based-value($glyph-chevron-right, $glyph-chevron-left);
+                    #{$right}: 12px;
+                }
+            }
+        }
+
+        .c-uhf-menu {
+            display: block;
+            height: map-get($global-nav, first-child-height);
+
+            > button {
+                display: block;
+                width: calc(100% - 2px);
+                margin: 1px;
+                z-index: map-get($z-index, 'default');
+                color: $color-shade !important;
+                padding-#{$left}: 15px !important;
+                height: $mobile-global-nav-button-height;
+
+                &:after {
+                    color: $color-shade !important;
+                }
+
+                &:hover,
+                &:focus,
+                &[aria-expanded="true"] {
+                    background: $color-transparent !important;
+                }
+
+                &:focus {
+                    &,
+                    &[aria-expanded="true"] {
+                        background: $color-transparent !important;
+
+                        &:not(.x-hidden-focus) {
+                            outline: 1px dashed $color-shade;
+                        }
+                    }
+                }
+            }
+
+            > [aria-expanded="true"] + ul[aria-hidden="false"] {
+                margin-top: 0;
+            }
+
+            ul {
+                background: $color-transparent !important;
+
+                a,
+                button {
+                    color: flatten-overlay($color-shade, $color-tint, 15) !important;
+                    line-height: normal !important;
+                }
+
+                :hover {
+                    background: $color-transparent !important;
+                    color: $color-shade;
+                }
+
+                &[aria-hidden="false"] {
+                    display: block;
+                    top: 0;
+                    width: 100%;
+                    max-width: none;
+                    overflow: auto;
+                    background: flatten-overlay($color-tint, $color-shade, 5) !important;
+                    #{$left}: 0;
+                    transition: all 0.3s ease-in;
+                }
+            }
+
+            li {
+                a {
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .c-uhf-nav-link {
+            background: $color-transparent !important;
+            color: $color-shade !important;
+            display: block;
+            width: 100%;
+            padding-#{$left}: 15px !important;
+            margin: 1px;
+            text-decoration: none !important;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:focus {
+                &:not(.x-hidden-focus) {
+                    outline: 1px dashed $color-shade !important;
+                }
+            }
+        }
+
+        // shared thick underline style removal
+        .c-uhf-nav-link,
+        .c-uhf-menu > button {
+            @if $ltie8 {
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            } @else {
+                &:before {
+                    content: "";
+                    display: none;
+                    width: 0;
+                    height: 0;
+                    background: $color-transparent;
+                    bottom: 0;
+                    #{$left}: 0;
+                }
+
+                &:hover,
+                &:focus {
+                    &:before {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        // Global nav mobile
+        > div:first-child {
+            position: relative;
+            padding-#{$left}: 0;
+            padding-#{$right}: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: map-get($z-index, nav) + 1;
+
+            // Search behavior on mobile
+            // apply to global div wrapper
+            &.f-search-opened {
+                > div {
+                    .c-logo,
+                    .c-me,
+                    .glyph-global-nav-button,
+                    nav {
+                        display: none;
+                    }
+
+                    .glyph-arrow-htmllegacy {
+                        display: block;
+
+                        &:before {
+                            vertical-align: middle;
+                        }
+                    }
+
+                    > div {
+                        .c-search {
+                            display: block;
+                            #{$left}: 50px;
+                            #{$right}: 12px;
+                            position: absolute;
+
+                            input[type='search'] {
+                                opacity: 1;
+                                width: 100%;
+                                border-color: $color-shade-60;
+                                padding: set-direction-based-value(7px 38px 7px 10px, 7px 10px 7px 38px);
+
+                                &:hover {
+                                    border-color: $color-shade-80;
+                                }
+
+                                &:active,
+                                &:focus {
+                                    border-color: $color-accent;
+                                }
+                            }
+                        }
+
+                        .c-action-trigger.glyph-shopping-cart,
+                        // language toggle
+                        > .c-uhf-menu {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            > div {
+                margin: 0;
+
+                // Right side content div wrapper
+                .c-me > .c-hyperlink,
+                .c-me > .c-image,
+                // language toggle
+                > div > .c-uhf-menu {
+                    display: none;
+                }
+            }
+
+            .c-action-trigger {
+                margin: 1px; // room for focus rect
+                width: 48px;
+                color: $color-foreground-60;
+
+                &:focus {
+                    background: $color-transparent;
+                }
+
+                &.glyph-global-nav-button {
+                    display: block;
+                    height: $mobile-global-nav-button-height;
+                    color: $color-foreground;
+                }
+
+                &.glyph-shopping-cart {
+                    height: $mobile-global-nav-button-height;
+                    margin-#{$right}: 1px;
+                }
+
+                &[class*='glyph-chevron-'] {
+                    height: $mobile-global-nav-button-height;
+
+                    &:before {
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            // Helper classes for menu states
+            // add to global nav wrapper div
+
+            // Mobile menu opened state
+            // Show:    ME control
+            // Hide:    Search, cart
+            &.f-opened {
+                .c-search,
+                .c-action-trigger.glyph-shopping-cart {
+                    display: none;
+                }
+
+                // ME control
+                .c-me > .c-image,
+                .f-mobile-title {
+                    display: block;
+                }
+            }
+
+            // Mobile menu closed state
+            // Show:    search, cart
+            // Hide:    ME control, mobile title, all nav
+            &.f-closed {
+                .c-action-trigger.glyph-shopping-cart,
+                .c-search {
+                    display: block;
+                }
+
+                // ME control
+                .c-me > .c-image,
+                .f-mobile-title,
+                nav {
+                    display: none;
+                }
+            }
+
+            .c-uhf-menu {
+                float: none;
+                position: static;
+
+                ul[aria-hidden="false"] {
+                    height: 100%;
+
+                    li {
+                        :after {
+                            top: 20px;
+                            font-size: 9px;
+                        }
+
+                        > a,
+                        > button {
+                            padding: 14px 15px 15px;
+                            height: 100%;
+                            margin: 1px; // room for focus rect
+                            width: calc(100% - 2px);
+
+                            &:hover,
+                            &:focus,
+                            &[aria-expanded="true"] {
+                                background: $color-transparent !important;
+                            }
+                        }
+                    }
+                }
+
+                > button {
+                    &[aria-expanded="true"] {
+                        + ul[aria-hidden="false"] {
+
+                            li {
+                                > a,
+                                > button {
+                                    &:focus {
+                                        &:not(.x-hidden-focus) {
+                                            outline: 1px dashed $color-shade;
+                                        }
+                                    }
+
+                                    &:hover,
+                                    &[aria-expanded="true"] {
+                                        background: $color-transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            nav {
+                position: absolute;
+                display: none;
+                top: 100px;
+                width: 100%;
+                height: calc(100vh - 100px);
+                overflow-y: auto;
+                background: $color-tint;
+                #{$left}: 0;
+                transition: all 0.3s ease-in;
+                z-index: map-get($z-index, nav) + 1;
+
+                > ul {
+                    > li {
+                        display: block;
+                        text-align: $left;
+                        height: map-get($global-nav, first-child-height);
+                        float: none;
+                        border-top: 1px solid $color-transparent;
+                        border-bottom: 1px solid $color-shade-10;
+                    }
+                }
+
+                li.f-sub-menu {
+                    > a,
+                    > button {
+                        + ul {
+                            #{$left}: 0;
+                        }
+                    }
+                }
+            }
+
+            .c-logo {
+                float: none;
+                display: block;
+                position: absolute;
+                #{$left}: calc(50% - 60px);
+                height: auto;
+                margin-top: 1px;
+                padding-top: 11px;
+            }
+        }
+
+        // Category Nav adjustments for mobile
+        > div + div {
+            height: 0;
+
+            > div {
+                overflow: visible;
+                margin: 0 auto;
+                padding: 0;
+                width: 100%;
+            }
+
+            nav,
+            > div > .c-uhf-nav-link, // only CTA nav links should be hidden
+            .c-logo,
+            .c-call-to-action,
+            .c-action-trigger,
+            .c-action-trigger[class*="glyph-chevron-"],
+            .c-action-trigger.glyph-chevron-left + .c-hyperlink,
+            .c-action-trigger.glyph-chevron-left + .c-action-trigger {
+                display: none;
+            }
+
+            nav {
+                position: absolute;
+                top: 50px;
+                height: calc(100vh - 100px);
+                overflow-y: auto; // overflow-x was causing undesired scrollbars
+                background: flatten-overlay($color-tint, $color-shade, 5);
+                #{$left}: 0;
+                #{$right}: 0;
+                transition: all 0.3s ease-in;
+                z-index: map-get($z-index, nav) + 1;
+            }
+       }
+
+        // Category nav mobile
+        > div + div,
+        [class*="brand-"],
+        > div + div[class*="theme-"] {
+            .c-uhf-menu {
+                ul {
+                    position: absolute;
+                    top: 0;
+                    width: 100% !important;
+                    height: calc(100vh - 100px);
+                    overflow: auto;
+                    background: flatten-overlay($color-tint, $color-shade, 5);
+                    border-bottom: 0;
+                    #{$left}: 0;
+                    transition: all 0.3s ease-in;
+                    z-index: map-get($z-index, nav) + 1;
+
+                    &[aria-expanded="true"] {
+                        background: $color-transparent;
+                    }
+
+                    a:hover,
+                    button:hover {
+                        background: $color-transparent;
+                        text-decoration: none;
+                    }
+
+                    > li {
+                        float: none;
+
+                        li.f-sub-menu {
+                            display: block;
+                            float: none;
+                            height: inherit;
+                        }
+
+                        ul {
+                            height: inherit;
+                            top: 0;
+                            width: 100%;
+                            max-width: none;
+                        }
+                    }
+
+                    &[aria-hidden="false"] {
+                        color: $color-shade;
+
+                        a,
+                        button {
+                            margin: 1px; // room for focus rect
+                            padding: 15px 15px 14px;
+                            width: calc(100% - 2px);
+
+                            &:not(.f-current) {
+                                font-weight: normal !important;
+                            }
+
+                            &:focus {
+                                &:not(.x-hidden-focus) {
+                                    outline: 1px dashed $color-shade !important;
+                                }
+                            }
+
+                            &:focus,
+                            &:hover {
+                                background: $color-transparent !important;
+                                text-decoration: none !important;
+                            }
+
+                            &:after {
+                                top: 20px;
+                                font-size: 9px;
+                            }
+                        }
+
+                        [aria-expanded="true"] {
+                            background: $color-transparent;
+                        }
+                    }
+                }
+
+                .c-uhf-nav-link {
+                    &:hover,
+                    &:focus {
+                        background: $color-transparent !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // IE8 specific styles
+    // overrides transparent UH
+    @if $ltie8 {
+        // Category nav
+        > div + div {
+            &,
+            &.f-transparent {
+                background: $color-background;
+
+                .c-logo,
+                .c-uhf-nav-link,
+                .c-uhf-menu > button {
+                    &,
+                    &:hover,
+                    &:focus {
+                        background: $color-background;
+                    }
+                }
+            }
+        }
+
+        .brand-blue {
+            .c-logo,
+            .c-uhf-nav-link,
+            .c-uhf-menu > button {
+                background: $color-brand-blue;
+
+                &:hover,
+                &:focus {
+                    background: flatten-overlay($color-brand-blue, $color-shade, 10);
+                }
+            }
+        }
+
+        .brand-green {
+            .c-logo,
+            .c-uhf-nav-link,
+            .c-uhf-menu > button {
+                background: $color-brand-green;
+
+                &:hover,
+                &:focus {
+                    background: flatten-overlay($color-brand-green, $color-shade, 10);
+                }
+            }
+        }
+
+        .brand-orange {
+            .c-logo,
+            .c-uhf-nav-link,
+            .c-uhf-menu > button {
+                background: $color-brand-orange;
+
+                &:hover,
+                &:focus {
+                    background: flatten-overlay($color-brand-orange, $color-shade, 10);
+                }
+            }
+        }
+
+        .brand-purple {
+            .c-logo,
+            .c-uhf-nav-link,
+            .c-uhf-menu > button {
+                background: $color-brand-purple;
+
+                &:hover,
+                &:focus {
+                    background: flatten-overlay($color-brand-purple, $color-shade, 10);
+                }
+            }
+        }
+
+        .brand-dark-blue {
+            .c-logo,
+            .c-uhf-nav-link,
+            .c-uhf-menu > button {
+                background: $color-brand-dark-blue;
+
+                &:hover,
+                &:focus {
+                    background: flatten-overlay($color-brand-dark-blue, $color-shade, 10);
+                }
+            }
+        }
+
+        .brand-neutral {
+            .c-logo,
+            .c-uhf-nav-link,
+            .c-uhf-menu > button {
+                background: $color-brand-neutral-80;
+
+                &:hover,
+                &:focus {
+                    background: $color-brand-neutral-75;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.m-multi-hero-item {
+    padding: 0;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .c-image {
+        position: relative;
+        display: block;
+        padding-bottom: percentage(9 / 16);
+
+        img {
+            position: absolute;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    a {
+        display: block;
+
+        &:focus {
+            outline: transparent;
+        }
+    }
+
+    .c-heading {
+        @include apply-type(t4, false, true);
+        @include apply-maxlines(2, t4, true, true);
+        font-weight: $font-weight-semilight;
+
+        @media only screen and (max-width: $vp1-max) {
+            @include apply-type(t5, false, true);
+            @include apply-maxlines(2, t5, false, true);
+        }
+
+        @media only screen and (max-width: $vp2-max) {
+            width: auto;
+            margin: 0 24px;
+        }
+    }
+
+    .c-subheading {
+        @include apply-type(t6, false, true);
+        @include apply-maxlines(1, t6, true, true);
+        font-weight: $font-weight-normal;
+
+        @media only screen and (max-width: $vp2-max) {
+            display: none;
+        }
+    }
+
+    > div {
+        position: absolute;
+        bottom: 48px;
+        width: 100%;
+
+        > div {
+            // Intended max-width is 800px, add 32px to compensate for padding.
+            max-width: 832px;
+            padding: 0 16px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &.theme-light {
+        &.f-mask-95 {
+            .c-image {
+                &:after {
+                    background: linear-gradient(0deg, RGBa($color-tint, 0.95), transparent 85%);
+                }
+            }
+        }
+
+        a {
+            &:focus {
+                background: $color-shade-10 content-box;
+                color: $color-shade-90;
+            }
+
+            &:active {
+                color: $color-shade-80;
+            }
+        }
+    }
+
+    &.theme-dark {
+        &.f-mask-95 {
+            .c-image {
+                &:after {
+                    background: linear-gradient(0deg, RGBa($color-shade, 0.95), transparent 85%);
+                }
+            }
+        }
+
+        a {
+            &:focus {
+                background: $color-tint-10 content-box;
+                color: flatten-overlay($color-tint, $color-foreground, 10);
+            }
+
+            &:active {
+                color: flatten-overlay($color-tint, $color-foreground, 20);
+            }
+        }
+    }
+}

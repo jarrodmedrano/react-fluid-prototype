@@ -1,0 +1,27 @@
+{
+    "name": "in-page navigation",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8467649,
+            "description": "fixes the sticky option behavior in IE"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9179895,
+            "internal": true,
+            "description": "fixes the menu click behavior to open the menu instead of jumping to bottom of the page"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8333142,
+            "description": "changes active link with a high contrast ratio"
+        }
+    ]
+}

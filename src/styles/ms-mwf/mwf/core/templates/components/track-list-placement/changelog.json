@@ -1,0 +1,5 @@
+{
+    "name": "track list placement",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md"
+}

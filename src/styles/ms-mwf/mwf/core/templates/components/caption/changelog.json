@@ -1,0 +1,5 @@
+{
+    "name": "caption",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md"
+}

@@ -1,0 +1,58 @@
+// This mixin is designed to reduce releated selectors within the context of a parent selector.
+
+// $List: accepts a complex list variable
+// $selector: string
+// $property: string
+// $nested: boolean
+
+// Example:
+// .parent-selector {
+// $colors: ("00", $color-brand-neutral-00) (10, $color-brand-neutral-10);
+// @include repeater($colors, ".sibling-selector", "css-property");
+// }
+
+// Expected output:
+// .parent-selector.sibling-selector-00 {
+// css-property: color;
+// }
+
+// .parent-selector.sibling-selector-10 {
+// css-property: color;
+// }
+
+// Options:
+// =======================
+// $nested: boolean
+// Will output sibling selector as a child selector within this context
+
+// Example:
+// .parent-selector {
+// $colors: (("00", $color-brand-neutral-00), (10, $color-brand-neutral-10));
+// @include repeater($colors, ".sibling-selector", "css-property", true);
+// }
+
+// Expected output:
+// .parent-selector .sibling-selector-00 {
+// css-property: color;
+// }
+
+// .parent-selector .sibling-selector-10 {
+// css-property: color;
+// } 
+
+@mixin repeater($list: null, $selector: null, $property: null, $nested: null) {
+    $val: null;
+
+    @if $nested == null {
+        $val: '&';
+    } @else {
+        $val: ' ';
+    }
+
+    @each $item in $list {
+        #{$val}#{$selector}#{'-'}#{nth($item, 1)} {
+            #{$property}: nth($item, 2);
+            @content;
+        }
+    }
+}

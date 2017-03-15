@@ -1,0 +1,83 @@
+---
+title: PDP - Physical Goods
+removeContainer: true
+indexedPage: true
+---
+
+{{> page-bar-module pdp-physical-goods.buy-box }}
+
+<div data-grid="container">
+    <section data-grid="col-12 stack-2" class="m-product-detail-hero">
+        <div data-grid="col-6" class="m-product-detail-hero-carousel">
+            {{> carousel-template pdp-physical-goods.hero-carousel }}
+            <div data-grid="col-12" class="x-hidden-vp1 x-hidden-vp2">
+                <img class="c-image" src="{{pdp-physical-goods.hero-carousel.special-offer.src}}" alt="{{pdp-physical-goods.hero-carousel.special-offer.alt}}" />
+                <div data-grid="col-6">
+                    <h2 class="c-heading-5">{{pdp-physical-goods.hero.offering.content.heading}}</h2>
+                    <p class="c-paragraph-3 f-lean">{{pdp-physical-goods.hero.offering.content.text}}</p>
+                    {{> hyperlink-template pdp-physical-goods.hero.offering-hyperlink }}
+                </div>
+            </div>
+        </div>
+        <div data-grid="col-6" class="m-product-detail-hero-product-placement">
+            {{> badge-template pdp-physical-goods.hero.badge }}
+            <h1 class="c-heading-2">
+            {{pdp-physical-goods.hero.heading}}
+        </h1>
+            <div data-grid="col-12">
+                {{> rating-template pdp-physical-goods.hero.rating }}
+                <span class="c-meta-text">{{pdp-physical-goods.hero.rating-meta}}</span> {{> carousel-template pdp-physical-goods.hero-carousel }} {{> rating-template pdp-physical-goods.hero.rating }}
+                <span class="c-meta-text">{{pdp-physical-goods.hero.rating-meta}}</span>
+            </div>
+            {{> price-template pdp-physical-goods.hero.price }}
+            <p class="c-label">{{pdp-physical-goods.hero.colors-label}}</p>
+            <div class="c-group f-wrap-items" role="group" aria-label="{{pdp-physical-goods.hero.colors-label.aria}}">
+                {{> select-button-template pdp-physical-goods.hero.swatch1 }} {{> select-button-template pdp-physical-goods.hero.swatch2 }} {{> select-button-template pdp-physical-goods.hero.swatch3 }} {{> select-button-template pdp-physical-goods.hero.swatch4 }} {{> select-button-template pdp-physical-goods.hero.swatch5 }}
+            </div>
+            <p class="c-label">{{pdp-physical-goods.hero.configuration-label}}</p>
+            <div class="context-configuration-buttons">
+                <div class="c-group f-wrap-items" role="group" aria-label="{{pdp-physical-goods.hero.configurations.aria}}">
+                    {{#each pdp-physical-goods.hero.configurations}} {{> select-button-template this }} {{/each}}
+                </div>
+            </div>
+            {{> button-template pdp-physical-goods.hero.add-to-cart }}
+            <p class="c-caption-2">{{pdp-physical-goods.hero.caption}}</p>
+            <h2 class="c-heading-5">{{pdp-physical-goods.hero.description.content.heading}}</h2>
+            <p class="c-paragraph-3 f-lean">{{pdp-physical-goods.hero.description.content.text}}</p>
+            <div data-grid="col-12 stack-2" class="x-hidden-vp3 x-hidden-vp4 x-hidden-vp5">
+                <img class="c-image x-float-left" src="{{pdp-physical-goods.hero-carousel.special-offer.src}}" alt="{{pdp-physical-goods.hero-carousel.special-offer.alt}}" />
+                <div data-grid="col-6">
+                    <h2 class="c-heading-5">{{pdp-physical-goods.hero.offering.content.heading}}</h2>
+                    <p class="c-paragraph-3 f-lean">{{pdp-physical-goods.hero.offering.content.text}}</p>
+                    {{> hyperlink-template pdp-physical-goods.hero.offering-hyperlink }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{> feature-module pdp-physical-goods.left-feature }}
+    {{> feature-module pdp-physical-goods.center-feature}}
+    {{> feature-module pdp-physical-goods.left-feature }}
+    {{> feature-module pdp-physical-goods.right-feature}}
+    {{> feature-module pdp-physical-goods.left-feature }}
+    {{> feature-module pdp-physical-goods.right-feature}}
+
+    {{> system-requirements-module pdp-physical-goods.system-requirements }}
+
+    {{> compare-chart-module pdp-physical-goods.compare-chart}}
+
+    {{> content-rich-block-module pdp-physical-goods.faq }}
+
+    {{> product-placement-module pdp-physical-goods.product-placement}}
+
+    <header class="m-heading-4">
+        <h3 class="c-heading">The Microsoft difference</h3>
+    </header>
+    {{> content-placement-module pdp-physical-goods.content-placement}}
+
+    {{> ratings-and-reviews-module pdp-physical-goods.ratings-and-reviews}}
+
+    <section data-grid="col-6">
+        {{> content-rich-block-module pdp-physical-goods.subdata }}
+    </section>
+</div>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="For development testing of Microsoft.com Web Framework">
+        <meta name="keywords" content="Development Site">
+        <meta name="author" content="Microsoft Corporation">
+
+        {{#if (or ie8 ie9)}}
+        <!--[if gt IE 9]><!-->
+        {{/if}}
+        <link id="primary-stylesheet"
+                rel="stylesheet"
+                href="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-{{theme-init}}.css"
+                data-dir="ltr"
+                data-market="{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european"
+                data-theme="default"
+                {{#if ticket}}data-ticket="{{ticket}}"{{/if}}
+                data-partner="{{#if partner}}{{partner}}{{else}}mwf{{/if}}"
+                {{#if theme-default}}data-default-ltr="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-default.css"{{/if}}
+                {{#if theme-default}}data-default-rtl="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-arabic-default.css"{{/if}}
+                {{#if theme-alt}}data-alt-ltr="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-alt.css"{{/if}}
+                {{#if theme-alt}}data-alt-rtl="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-arabic-alt.css"{{/if}}>
+        {{#if (or ie8 ie9)}}
+        <!--<![endif]-->
+        <!--[if IE 9]>
+            <link id="primary-stylesheet-ie9"
+                rel="stylesheet"
+                href="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-{{theme-init}}-ie9.css"
+                data-dir="ltr"
+                data-browser="ie9"
+                data-market="{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european"
+                data-theme="default"
+                data-ticket="{{#if ticket}}{{ticket}}{{/if}}"
+                data-partner="{{#if partner}}{{partner}}{{else}}mwf{{/if}}"
+                {{#if theme-default}}data-default-ltr="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-default-ie9.css"{{/if}}
+                {{#if theme-default}}data-default-rtl="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-arabic-default-ie9.css"{{/if}}
+                {{#if theme-alt}}data-alt-ltr="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-alt-ie9.css"{{/if}}
+                {{#if theme-alt}}data-alt-rtl="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-arabic-alt-ie9.css"{{/if}}>
+        <![endif]-->
+        <!--[if IE 8]>
+            <link id="primary-stylesheet-ie8"
+                rel="stylesheet"
+                href="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-{{theme-init}}-ie8.css"
+                data-dir="ltr"
+                data-browser="ie8"
+                data-market="{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european"
+                data-theme="default"
+                data-ticket="{{#if ticket}}{{ticket}}{{/if}}"
+                data-partner="{{#if partner}}{{partner}}{{else}}mwf{{/if}}"
+                {{#if theme-default}}data-default-ltr="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-default-ie8.css"{{/if}}
+                {{#if theme-default}}data-default-rtl="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-arabic-default-ie8.css"{{/if}}
+                {{#if theme-alt}}data-alt-ltr="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-west-european-alt-ie8.css"{{/if}}
+                {{#if theme-alt}}data-alt-rtl="{{#if ticket}}{{ticket}}{{/if}}/css/{{#if partner}}{{partner}}{{else}}mwf{{/if}}-arabic-alt-ie8.css"{{/if}}>
+        <![endif]-->
+        {{/if}}
+
+        {{! Modernizr needed for all browsers to detect js before css loads. Async removed to enable js detection }}
+        <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/modernizr.min.js"></script><noscript></noscript>
+        <!--[if lte IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-shim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-sham.min.js"></script>
+            <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/html5shiv.js"></script>
+            <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/better-dom-legacy.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        {{#unless removeContainer }}
+        <div data-grid="container">
+            <div data-grid="col-12 pad-6x">
+        {{/unless}}
+
+        {{> body }}
+
+        {{#unless removeContainer }}
+            </div>
+        </div>
+        {{/unless}}
+        
+        <!--[if lte IE 9]>
+            <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/better-dom.js" defer></script>
+            <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/better-i18n-plugin.js" defer></script>
+            <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/better-popover-plugin.js" defer></script>
+            <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/vendor/better-form-validation.js" defer></script>
+        <![endif]-->
+        {{#if useDevToolbar}}
+        <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/dev-toolbar.js"></script><noscript></noscript>
+        {{/if}}
+        {{#if useMocks}}
+        <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/mwf-with-mocks/bundle/mwf-with-mocks-main.var.js" defer></script><noscript></noscript>
+        {{else}}
+        <script src="{{#if ticket}}{{ticket}}{{/if}}/scripts/mwf-auto-init/bundle/mwf-auto-init-main.var.js" defer></script><noscript></noscript>
+        {{/if}}
+    </body>
+</html>

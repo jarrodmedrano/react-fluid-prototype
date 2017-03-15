@@ -1,0 +1,461 @@
+// ==========================================================================
+// Component: Feature
+// ==========================================================================
+@mixin large-viewport-styles() {
+    &.f-align-left,
+    &.f-align-right {
+        picture {
+            width: 50%;
+
+            img {
+                #{$right}: 0;
+            }
+        }
+
+        > div {
+            @include left-right-padding($base-9x);
+            padding-bottom: 0;
+            position: absolute;
+            top: calc(50%);
+            transform: translateY(-50%);
+            width: 50%;
+            text-align: $left;
+
+            .c-logo {
+                img {
+                    margin: 0;
+                }
+            }
+
+            &.c-video { // because .c-video picks up the div styles above this specificity provides the correct video width
+                width: 50%;
+                max-width: 50%;
+                overflow: hidden;
+                position: relative;
+                #{$left}: 0;
+                top: auto;
+                transform: none;
+                padding: 0;
+
+                > h1 {
+                    display: none;
+                }
+
+                video {
+                    width: 100%;
+                    min-width: 100%;
+                    height: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .c-heading {
+                padding-top: 0;
+            }
+        }
+    }
+
+    &.f-align-left {
+        > div {
+            #{$left}: 0;
+        }
+
+        picture,
+        .c-video {
+            float: $right;
+        }
+    }
+
+    &.f-align-right {
+        > div {
+            #{$left}: 50%;
+        }
+
+        picture,
+        .c-video {
+            float: $left;
+            #{$left}: 0;
+        }
+
+        &.f-image-priority {
+            > div {
+                #{$left}: 50%;
+
+                &.c-video {
+                    #{$left}: 0;
+                }
+            }
+        }
+    }
+
+    &.f-set-ratio {
+        &.f-align-left,
+        &.f-align-right {
+            position: relative;
+            padding-bottom: 37.5%; // aspect ratio of entire feature
+
+            @media only screen and (min-width: $vp5) {
+                padding-bottom: 28.125%; // aspect ratio of entire feature
+            }
+
+            picture,
+            .c-video {
+                position: absolute;
+            }
+
+            picture {
+                #{$left}: 50%;
+                width: 50%;
+
+                img {
+                    #{$right}: 0;
+                }
+            }
+
+            &.f-image-priority {
+                padding-bottom: 28.1625%; // aspect ratio of entire feature
+
+                @media only screen and (min-width: $vp4) {
+                    padding-bottom: 36.5%;
+                }
+            }
+        }
+
+        &.f-align-left {
+            > div {
+                #{$left}: 0;
+            }
+
+            picture,
+            .c-video {
+                #{$left}: 50%;
+            }
+        }
+
+        &.f-align-right {
+            > div {
+                #{$left}: 50%;
+            }
+
+            picture,
+            .c-video {
+                #{$right}: 50%;
+                #{$left}: 0;
+            }
+
+            &.f-image-priority {
+                > div {
+                    #{$left}: 50%;
+
+                    &.c-video {
+                        #{$left}: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-feature {
+    $colors: (("00", $color-brand-neutral-00),
+        (10, $color-brand-neutral-10),
+        (20, $color-brand-neutral-20),
+        (30, $color-brand-neutral-30),
+        (45, $color-brand-neutral-45),
+        (55, $color-brand-neutral-55),
+        (65, $color-brand-neutral-65),
+        (75, $color-brand-neutral-75),
+        (80, $color-brand-neutral-80),
+        (90, $color-brand-neutral-90),
+        (100, $color-brand-neutral-100));
+
+    @include clearfix;
+    @include repeater($colors, ".f-background-neutral", "background-color");
+    position: relative;
+    height: 100%;
+
+    &.f-background-neutral-00,
+    &.f-background-neutral-10,
+    &.f-background-neutral-20,
+    &.f-background-neutral-30 {
+        .c-call-to-action {
+            color: $color-shade;
+
+            &:focus:not(.x-hidden-focus) {
+                outline: transparent;
+                background: $color-shade-10 content-box;
+            }
+
+            &:focus:not(.x-hidden-focus),
+            &:hover {
+                color: flatten-overlay($color-shade, $color-foreground, 10%);
+            }
+
+            &:active {
+                background: none;
+                color: flatten-overlay($color-shade, $color-foreground, 20%);
+            }
+        }
+    }
+
+    &.f-background-neutral-45,
+    &.f-background-neutral-55,
+    &.f-background-neutral-65,
+    &.f-background-neutral-75,
+    &.f-background-neutral-80,
+    &.f-background-neutral-90,
+    &.f-background-neutral-100,
+    &.f-background-accent {
+        color: $color-tint;
+
+        .c-call-to-action {
+            color: $color-tint;
+
+            &:focus:not(.x-hidden-focus) {
+                outline: transparent;
+                background: $color-tint-10 content-box;
+            }
+
+            &:focus:not(.x-hidden-focus),
+            &:hover {
+                color: flatten-overlay($color-tint, $color-foreground, 10%);
+            }
+
+            &:active {
+                background: none;
+                color: flatten-overlay($color-tint, $color-foreground, 20%);
+            }
+        }
+    }
+
+    .c-call-to-action {
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.f-background-accent {
+        background: $color-accent;
+    }
+
+    > div {
+        text-align: center;
+        margin: 0 auto;
+
+        .c-heading {
+            @include apply-type-component(h5);
+            padding-top: 24px;
+            margin-top: 20px;
+        }
+
+        .c-paragraph {
+            @include apply-type-component(p4);
+        }
+
+        .c-badge,
+        .c-logo {
+            margin-top: 12px;
+
+            + .c-heading {
+                padding-top: 8px;
+            }
+        }
+
+        .c-logo {
+            display: block;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .c-call-to-action {
+            @include c-call-to-action-lightweight();
+            margin-top: 10px;
+        }
+
+        .c-group {
+            display: block;
+            overflow: visible;
+            margin-top: 10px;
+
+            .c-call-to-action {
+                margin-top: 0;
+                margin-#{$right}: 4px;
+            }
+        }
+    }
+
+    picture,
+    .c-video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    picture {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &.f-align-left,
+    &.f-align-right {
+        > div {
+            width: 100%;
+            position: relative;
+            padding: 0 24px 24px;
+        }
+    }
+
+    &.f-align-center {
+        > div {
+            width: auto;
+            padding: 0 24px;
+            max-width: 100%;
+
+            .c-group {
+                display: block;
+
+                .c-call-to-action {
+                    margin: 0 2px;
+                }
+            }
+
+            .c-image {
+                display: inline-block;
+            }
+        }
+
+        picture,
+        .c-video {
+            width: 100%;
+        }
+    }
+
+
+    @media only screen and (min-width: $vp2) {
+        &.f-align-left,
+        &.f-align-right {
+            > div {
+                width: 490px;
+                margin: 0 auto;
+                text-align: center;
+
+                &.c-video { // because .c-video picks up the div styles above this specificity provides the correct video width
+                    width: 100%;
+                }
+            }
+
+            .c-logo {
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp3) {
+        @include large-viewport-styles;
+    }
+
+    @media only screen and (min-width: $vp4) {
+        > div {
+
+            .c-heading {
+                @include apply-type-component(h3);
+                padding-top: 0;
+            }
+
+            .c-paragraph {
+                padding-top: 12px;
+            }
+        }
+
+        &.f-align-right,
+        &.f-align-left {
+
+            &.f-image-priority {
+                picture {
+                    width: 65%;
+                }
+
+                > div {
+                    width: 35%;
+
+                    &.c-video {
+                        width: 65%;
+                        max-width: 65%;
+                    }
+                }
+            }
+        }
+
+        &.f-align-right {
+            &.f-image-priority {
+                > div {
+                    #{$left}: 65%;
+                }
+            }
+        }
+
+        &.f-align-center {
+            > div {
+                max-width: 798px;
+
+                &.c-video { // because .c-video picks up the div styles above this specificity provides the correct video width
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &.f-set-ratio {
+            &.f-align-right {
+                &.f-image-priority {
+                    > div {
+                        #{$left}: 65%;
+                    }
+
+                    picture,
+                    .c-video {
+                        #{$right}: 35%;
+                    }
+                }
+            }
+
+            &.f-align-left {
+                &.f-image-priority {
+                    > div {
+                        #{$right}: 65%;
+                    }
+
+                    picture,
+                    .c-video {
+                        #{$left}: 35%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp5) {
+        &.f-align-right,
+        &.f-align-left {
+            > div {
+                @include left-right-padding($base-12x);
+
+                &.c-video {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    @if $ltie8 {
+        @include large-viewport-styles;
+    }
+}

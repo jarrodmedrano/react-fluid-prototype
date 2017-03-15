@@ -1,0 +1,82 @@
+{
+    "name": "dialog",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10729283,
+            "description": "updates flow dialog to have a max width of 640px"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10575805,
+            "description": "updates behavior on mobile viewports"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10557138,
+            "description": "fixes an issue where dialog was respecting window width in IE at small viewports"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10409204,
+            "description": "fixes dismission interaction model for each dialog type."
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9926277,
+            "description": "adds the ability to hide arbitrary areas of content from screen readers when the dialog is being shown"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9583097,
+            "description": "changes position of lightbox close button"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9583097,
+            "description": "adds onShown and onHidden notifications to IDialogSubscriber"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9743448,
+            "description": "fixes a continuous update loop on IE10"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8382812,
+            "description": "updates behavior to close dialog on button actions when not using lightbox option"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8168987,
+            "description": "updates lightbox to remove border"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7969197,
+            "description": "updates sass to remove interpolation dependency"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7903737,
+            "description": "fixes issue with dialog background color and opacity"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8059358,
+            "description": "updates z-index to fix an issue where the current universal header was overlaying the dialog component"
+        }
+    ]
+}

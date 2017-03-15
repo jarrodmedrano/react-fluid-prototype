@@ -1,0 +1,7 @@
+@mixin fade-in($delay) {
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: $delay;
+}

@@ -1,0 +1,26 @@
+{
+    "name": "search",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding missing title attribute"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525503,
+            "description": "removes title attribute from input for accessibility requirements"
+       }
+   ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8301515,
+            "description": "adds additional information for screen readers"
+       }
+   ]
+}

@@ -1,0 +1,27 @@
+// ==========================================================================
+// Component: Toggle
+// ==========================================================================
+
+.c-content-toggle {
+    p {
+        @include apply-type-component(p3);
+    }
+
+    [data-f-expanded="false"] {
+        overflow: hidden;
+        box-sizing: content-box;
+    }
+
+    button {
+        @include free-text-states;
+        display: inline-block;
+        color: $color-accent;
+        border: 0;
+        background: transparent;
+        padding: 0;
+
+        .no-js & {
+            display: none;
+        }
+    }
+}

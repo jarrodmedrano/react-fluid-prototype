@@ -1,0 +1,41 @@
+a.m-skip-to-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: map-get($z-index, buried);
+
+    &:hover {
+        left: -999px;
+        position: absolute;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: map-get($z-index, buried);
+    }
+
+    &:focus,
+    &:active {
+        background: $color-brand-neutral-10;
+        // Becomes color: $color-accent with #10678443
+        color: flatten-overlay($color-accent, $color-shade, 14.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 24px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        text-decoration: underline;
+        text-align: center;
+        z-index: map-get($z-index, flyout) + 100;
+        outline: none;
+    }
+
+    &:focus {
+        border: 1px dashed $color-shade;
+    }
+}

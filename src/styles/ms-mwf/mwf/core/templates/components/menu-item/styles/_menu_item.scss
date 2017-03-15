@@ -1,0 +1,213 @@
+// ==========================================================================
+// Component: Menu item
+// ==========================================================================
+
+.c-menu-item {
+    a,
+    span,
+    button {
+        display: block;
+        background: $color-foreground-05;
+        padding: 11px 12px 13px;
+        outline: 0;
+        cursor: pointer;
+        white-space: normal;
+
+        &:hover,
+        &:focus {
+            background: $color-foreground-10;
+        }
+
+        &:focus {
+            outline: 1px dashed $color-foreground;
+        }
+
+        &:active {
+            background: $color-foreground-30;
+        }
+
+        &[aria-checked="true"],
+        &[aria-selected="true"] {
+            background: $color-accent;
+            color: $color-tint;
+        }
+
+        #{$theme-light} {
+            background: $color-shade-05;
+            color: $color-shade-80;
+
+            &:hover,
+            &:focus {
+                background: $color-shade-10;
+                color: $color-shade;
+            }
+
+            &:focus {
+                outline: 1px dashed $color-shade;
+            }
+
+            &:active {
+                background: $color-shade-30;
+                color: $color-shade;
+            }
+
+            &[aria-checked="true"],
+            &[aria-selected="true"] {
+                background: $color-accent;
+                color: $color-tint;
+
+                &:hover,
+                &:focus {
+                    background: $color-accent;
+                    color: $color-tint;
+                    outline-color: $color-shade;
+                }
+            }
+        }
+
+        #{$theme-dark} {
+            background: flatten-overlay($color-shade, $color-tint, 15);
+            color: $color-tint-80;
+
+            &:hover,
+            &:focus {
+                background: flatten-overlay($color-shade, $color-tint, 40);
+                color: $color-tint;
+            }
+
+            &:focus {
+                outline: 1px dashed $color-tint;
+            }
+
+            &:active {
+                background: flatten-overlay($color-shade, $color-tint, 60);
+                color: $color-tint;
+            }
+
+            &[aria-checked="true"],
+            &[aria-selected="true"] {
+                background: $color-accent;
+                color: $color-tint;
+
+                &:hover,
+                &:focus {
+                    background: $color-accent;
+                    color: $color-tint;
+                    outline-color: $color-tint;
+                }
+            }
+        }
+    }
+
+    .c-radio {
+        background: $color-foreground-10;
+
+        span {
+            background: none;
+        }
+
+        input[type="radio"] {
+            &:checked + span {
+                &:after {
+                    top: 16px;
+                    #{$left}: 16px;
+                }
+            }
+
+            + span {
+                display: block;
+                padding-#{$left}: 40px;
+                margin-#{$left}: 0;
+
+                &:before {
+                    top: 11px;
+                    #{$left}: 11px;
+                }
+            }
+        }
+
+        .c-label {
+            display: block;
+            margin: 0;
+        }
+    }
+
+    &[aria-disabled="true"] {
+        a,
+        span,
+        button {
+            &,
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-foreground-05;
+                color: $color-foreground-20;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &.f-sub-menu {
+        > a,
+        > button {
+            position: relative;
+
+            &:after {
+                @include apply-glyph(set-direction-based-value($glyph-chevron-right, $glyph-chevron-left));
+                position: absolute;
+                font-size: 6px;
+                #{$right}: 12px;
+                top: 19px;
+            }
+
+            + .c-menu {
+                display: none;
+                position: absolute;
+                #{$left}: 100%;
+                top: 0;
+
+                // Helper class for js to flip menu
+                // when it reaches window bounds
+                &.f-flip {
+                    #{$left}: -100%;
+                }
+            }
+
+            .no-js &:focus + .c-menu,
+            .no-js &:hover + .c-menu,
+            .js &[aria-expanded="true"] + .c-menu[aria-hidden="false"] {
+                display: block;
+                animation: fadeIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+        }
+    }
+
+    a.f-product {
+        padding: 8px 12px;
+        overflow: hidden;
+
+        .c-image {
+            background: $color-brand-neutral-55;
+            width: 40px;
+            vertical-align: top;
+            float: $left;
+        }
+
+        div {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        span {
+            background: none;
+            padding: set-direction-based-value(0 0 0 10px, 0 10px 0 0);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}

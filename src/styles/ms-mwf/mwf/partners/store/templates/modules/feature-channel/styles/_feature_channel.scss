@@ -1,0 +1,309 @@
+// ==========================================================================
+// Module: Feature channel
+// ==========================================================================
+
+$gradient-width: 345px;
+$section-offset: 48px;
+$product-offset: 24px;
+$product-width: 124px + 2px + 24px; // img + border + right spacing
+$product-width-large: 272px + 2px + 24px; // img + border + right spacing
+
+.m-feature-channel {
+    display: block;
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: $section-offset;
+
+    > .c-image {
+        // picture element mask
+        &:after {
+            content: "";
+            display: block;
+            #{$left}: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: map-get($z-index, default); // stack with background gradient/color & content
+        }
+
+        img {
+            #{$left}: 0;
+            max-width: inherit; // override 100% to clip right edge and preserve size in this design
+            position: absolute;
+        }
+    }
+
+    &#{$theme-dark-selector} {
+        > .c-image:after {
+            background: $color-shade-60;
+        }
+    }
+
+    &#{$theme-light-selector} {
+        > .c-image:after {
+            background: $color-tint-60;
+        }
+    }
+
+    > section {
+        #{$left}: 0;
+        position: absolute;
+        #{$right}: 0;
+        z-index: map-get($z-index, neutral); // stack above background gradient/color & picture/mask
+
+        > .c-group {
+            li {
+                display: none;
+            }
+        }
+
+        .c-call-to-action {
+            margin-top: 16px;
+        }
+    }
+
+    > div {
+        height: 100%;
+        position: absolute;
+        #{$right}: 0;
+        top: 0;
+        z-index: map-get($z-index, default); // stack with picture/mask & content
+    }
+
+    // ========================================================================
+    // Responsive variations
+    // ========================================================================
+    @media only screen and (max-width: $vp2-max) {
+        > section {
+            text-align: center;
+            top: calc(50% - #{$section-offset});
+
+            > [class^="c-heading"] {
+                padding-top: 0;
+
+                .c-hyperlink {
+                    display: none;
+                }
+            }
+
+            > p {
+                display: none;
+            }
+        }
+
+        > div {
+            background-image: none !important; // !important needed to override inline style from CMS for gradient in larger viewports
+            #{$left}: 0;
+        }
+    }
+
+    @media only screen and (min-width: $vp2) {
+        height: 260px;
+    }
+
+    @media only screen and (min-width: $vp3) {
+        height: 370px;
+
+        > div {
+            @include flip-direction();
+            #{$right}: 0;
+            width: $gradient-width + ($product-width * 2) + $product-offset; // gradient + products + right margin
+        }
+
+        &#{$theme-dark-selector} {
+            > div {
+                // don't use $right Sass var for RTL, already handled with flip-direction mixin
+                // this is b/c gradient can be overridden in HTML with custom CMS color
+                background: linear-gradient(to right, $color-transparent 0, flatten-overlay($color-tint, $color-shade, 80) $gradient-width);
+            }
+        }
+
+        &#{$theme-light-selector} {
+            > div {
+                // don't use $right Sass var for RTL, already handled with flip-direction mixin
+                // this is b/c gradient can be overridden in HTML with custom CMS color
+                background: linear-gradient(to right, $color-transparent 0, flatten-overlay($color-tint, $color-shade, 10) $gradient-width);
+            }
+        }
+
+        > section {
+            padding: 0 $section-offset;
+
+            > [class^="c-heading"] {
+                padding-top: 90px;
+
+                .c-hyperlink {
+                    position: absolute;
+                    #{$right}: $section-offset;
+                    top: 24px;
+                }
+
+                // increase spacing if CTA directly under heading (i.e. no paragraph)
+                + .c-call-to-action {
+                    margin-top: 24px;
+                }
+            }
+
+            > p {
+                width: calc(100% - #{($product-width * 2)});
+            }
+
+            > .c-group {
+                position: absolute;
+                #{$right}: $product-offset;
+                top: 80px; // + 12px margin-top on .m-product-placement-item
+
+                li:nth-child(-n+2) {
+                    display: inherit; // use default <li> display setting to reverse the display: none set on all product <li>'s in this module
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp4) {
+        height: 370px;
+
+        > section {
+            .c-group {
+                li:nth-child(-n+3) {
+                    display: inherit;
+                }
+            }
+
+            > p {
+                width: calc(100% - #{($product-width * 3)});
+            }
+        }
+
+        > div {
+            width: $gradient-width + ($product-width * 3) + $product-offset; // gradient + products + right margin
+        }
+    }
+
+    @media only screen and (min-width: $vp5) {
+        > section {
+            .c-group {
+                li:nth-child(-n+5) {
+                    display: inherit;
+                }
+            }
+
+            > p {
+                width: calc(100% - #{($product-width * 5)});
+            }
+        }
+
+        > div {
+            width: $gradient-width + ($product-width * 5) + $product-offset; // gradient + products + right margin
+        }
+    }
+
+    @media only screen and (min-width: $vp6) {
+        > section {
+            .c-group {
+                li:nth-child(-n+7) {
+                    display: inherit;
+                }
+            }
+
+            > p {
+                width: calc(100% - #{($product-width * 7)});
+            }
+        }
+
+        > div {
+            width: $gradient-width + ($product-width * 7) + $product-offset; // gradient + products + right margin
+        }
+    }
+
+    &.f-large {
+        > section {
+            > [class^="c-heading"] {
+                .c-hyperlink {
+                    top: 36px;
+                }
+            }
+
+            .c-group {
+                li {
+                    display: none;
+                }
+            }
+
+            .c-call-to-action {
+                margin-top: 32px;
+                color: $color-shade;
+                outline: 2px solid $color-shade;
+                background-color: $color-tint;
+            }
+        }
+
+        @media only screen and (max-width: $vp3-max) {
+            > section {
+                text-align: center;
+
+                > [class^="c-heading"] {
+                    padding-top: 0;
+
+                    .c-hyperlink {
+                        display: none;
+                    }
+                }
+
+                > p,
+                > [class^="c-heading"] {
+                    width: auto;
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp4) {
+            height: 525px;
+
+            > section {
+                > p,
+                > [class^="c-heading"] {
+                    width: calc(100% - #{($product-width-large * 2)});
+                }
+
+                .c-group {
+                    li:nth-child(-n+2) {
+                        display: inherit;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp5) {
+            > section {
+                > p,
+                > [class^="c-heading"] {
+                    width: calc(100% - #{($product-width-large * 3)});
+                }
+
+                .c-group {
+                    li:nth-child(-n+3) {
+                        display: inherit;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp6) {
+            > section {
+                > p,
+                > [class^="c-heading"] {
+                    width: calc(100% - #{($product-width-large * 4)});
+                }
+
+                .c-group {
+                    li:nth-child(-n+4) {
+                        display: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

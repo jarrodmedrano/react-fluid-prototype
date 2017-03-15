@@ -1,0 +1,5 @@
+{
+    "name": "device actions",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md"
+}

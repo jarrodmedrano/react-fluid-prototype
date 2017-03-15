@@ -1,0 +1,119 @@
+@function create-handle($color) {
+    // This source image is encoded with https://codepen.io/yoksel/details/JDqvs/
+    // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16" width="12" height="16"><polygon points="7 1 6 0 0 0 0 16 6 16 7 15 12 8 7 1" style="fill:#{escapeForSvg($color)}"/></svg>
+    @return 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2012%2016%22%20width%3D%2212%22%20height%3D%2216%22%3E%3Cpolygon%20points%3D%227%201%206%200%200%200%200%2016%206%2016%207%2015%2012%208%207%201%22%20style%3D%22fill%3A#{escapeForSvg($color)}%22/%3E%3C/svg%3E';
+}
+
+.c-range-slider {
+    @include clearfix();
+    max-width: $base * 74;
+    padding-bottom: $base * 2;
+
+    .c-text-field[type="number"] {
+        @include apply-type(t8);
+        width: $base * 12;
+        float: $right;
+        margin-bottom: $base * 4;
+        margin-top: 0;
+        // sass-lint:disable no-vendor-prefixes
+        -moz-appearance: textfield;
+
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        // sass-lint:enable no-vendor-prefixes
+
+        &.f-adjusting {
+            border-color: $color-accent;
+        }
+    }
+
+    legend {
+        + label + .c-text-field[type="number"] {
+            float: $left;
+        }
+    }
+
+    label.c-label {
+        @include screen-reader();
+    }
+
+    [role="slider"] {
+        position: absolute;
+        top: -7px;
+        width: 12px;
+        height: 16px;
+
+        @if $ltie8 {
+            background: $color-accent;
+        } @else {
+            background-image: url(create-handle($color-accent));
+        }
+
+        &:focus {
+            outline: 1px dashed $color-foreground;
+
+            @if $ltie8 {
+                background: $color-foreground;
+            } @else {
+                background-image: url(create-handle(flatten-overlay($color-background, $color-foreground, 100)));
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            @if $ltie8 {
+                background: flatten-overlay($color-accent, $color-foreground, 40);
+            } @else {
+                background-image: url(create-handle(flatten-overlay($color-accent, $color-foreground, 40)));
+            }
+        }
+
+        &:first-child {
+            @if $ltie8 {
+                margin-#{$left}: -12px;
+            } @else {
+                @if $dir == 'ltr' {
+                    transform: translateX(set-direction-based-value(-12px, 12px));
+                } @else {
+                    transform: translateX(set-direction-based-value(-12px, 12px)) rotate(180deg);
+                }
+            }
+        }
+
+        + [role="slider"] {
+            @if $ltie8 == false {
+                @if $dir == 'ltr' {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    > div {
+        margin-top: 24px;
+        height: 2px;
+        background: $color-foreground-40;
+        clear: both;
+
+        > div {
+            position: relative;
+            height: 100%;
+            // left and right margin should match the effective width of each range-slider
+            // handle.
+            margin: 0 12px;
+        }
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        top: 0;
+        background: $color-accent;
+        height: 100%;
+    }
+}

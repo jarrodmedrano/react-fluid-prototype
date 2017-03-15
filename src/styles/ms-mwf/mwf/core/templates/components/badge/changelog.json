@@ -1,0 +1,12 @@
+{
+    "name": "badge",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9925772,
+            "description": "replaces the span tag with the more semantically meaningful strong tag"
+        }
+    ]
+}

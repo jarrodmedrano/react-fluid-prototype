@@ -1,0 +1,17 @@
+// ==========================================================================
+// MWF - base mixins & settings required for the primary MWF package (minus UHF),
+// package with:
+// -- mwf_header (to obtain Microsoft license and charset)
+// -- mwf_base (to obtain foundation classes)
+// -- mwf_core (for core components/modules)
+// ==========================================================================
+
+// ==========================================================================
+// Utility mixins / functions
+// ==========================================================================
+@import "utilities/package";
+
+// ==========================================================================
+// Config Variables
+// ==========================================================================
+@import "config/package";

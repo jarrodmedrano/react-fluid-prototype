@@ -1,0 +1,26 @@
+{
+    "name": "button",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10889482,
+            "description": "removes unused TypeScript code"
+        }
+    ],
+    "v1.17.0": [
+       {
+           "type": "new",
+           "ticket-id": 9283760,
+           "description": "adds new option of f-flex to have the text box snap to the full width of the container"
+       }
+   ],
+    "v1.13.0": [
+       {
+           "type": "new",
+           "ticket-id": 8525079,
+           "description": "anchors with role='button' will now emit a click event when the user presses the spacebar on the element"
+       }
+   ]
+}

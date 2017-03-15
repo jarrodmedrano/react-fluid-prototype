@@ -1,0 +1,12 @@
+{
+    "name": "search help",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9620158,
+            "description": "fixes an issue where certain styles were not being applied in Internet Explorer"
+        }
+    ]
+}

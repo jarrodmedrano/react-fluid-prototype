@@ -16,7 +16,7 @@
       "anchorTitle": "mosaic-1",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-light",
+        "theme": "theme-dark",
         "mosaicLayout": "mosaic-1",
         "tiles": [
           {
@@ -28,10 +28,9 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
-
             "pictureBlock": {
               "pictures": [
                 {
@@ -51,11 +50,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -70,7 +69,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -93,11 +92,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -114,7 +113,7 @@
       "anchorTitle": "mosaic-2",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-light",
+        "theme": "theme-dark",
         "mosaicLayout": "mosaic-2",
         "tiles": [
           {
@@ -126,7 +125,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -149,11 +148,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -168,48 +167,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
-              }
-            },
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placeimg.com/818/950/arch",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placeimg.com/818/950/arch",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placeimg.com/1259/472/arch",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placeimg.com/1083/609/arch",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placeimg.com/767/431/arch",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placeimg.com/539/303/arch",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -232,11 +190,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -251,7 +209,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -274,11 +232,53 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
+                  "minWidth": "0"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "heading": "-- mosaic title 3 --",
+              "subheading": "-- mosaic subtitle 3 --",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "blue"
+              }
+            },
+
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "http://placeimg.com/818/950/arch",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "http://placeimg.com/818/950/arch",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "http://placeimg.com/1259/472/arch",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "http://placeimg.com/1083/609/arch",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "http://placeimg.com/767/431",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -295,7 +295,7 @@
       "anchorTitle": "mosaic-3",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-light",
+        "theme": "theme-dark",
         "mosaicLayout": "mosaic-3",
         "tiles": [
           {
@@ -307,7 +307,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -330,11 +330,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -349,7 +349,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -372,11 +372,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -391,7 +391,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -414,11 +414,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -433,7 +433,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -456,11 +456,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -475,7 +475,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -498,11 +498,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -517,7 +517,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -540,11 +540,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -559,7 +559,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -582,11 +582,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -603,7 +603,7 @@
       "anchorTitle": "mosaic-4",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-light",
+        "theme": "theme-dark",
         "mosaicLayout": "mosaic-4",
         "tiles": [
           {
@@ -615,7 +615,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -638,11 +638,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -657,7 +657,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -680,11 +680,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -699,7 +699,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -722,11 +722,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -741,7 +741,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -764,11 +764,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -783,7 +783,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -806,11 +806,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]
@@ -825,7 +825,7 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "#000"
+                "backgroundColor": "blue"
               }
             },
 
@@ -848,11 +848,11 @@
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placeimg.com/767/431/arch",
+                  "src": "http://placeimg.com/767/431",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placeimg.com/539/303/arch",
+                  "src": "http://placeimg.com/539/303",
                   "minWidth": "0"
                 }
               ]

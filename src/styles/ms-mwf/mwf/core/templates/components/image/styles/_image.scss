@@ -1,0 +1,80 @@
+// ==========================================================================
+// Component: Image
+// ==========================================================================
+
+%c-image {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+img.c-image {
+    @extend %c-image;
+
+    &.f-round {
+        border-radius: 50%;
+    }
+}
+
+picture.c-image {
+    img {
+        @extend %c-image;
+    }
+}
+
+picture.c-image,
+img.c-image {
+
+    // vertical
+    &.f-pad-bottom-3x {
+        padding-bottom: $base-3x;
+    }
+
+    &.f-pad-bottom-6x {
+        padding-bottom: $base-6x;
+    }
+
+    &.f-pad-top-3x {
+        padding-top: $base-3x;
+    }
+
+    &.f-pad-top-6x {
+        padding-top: $base-6x;
+    }
+
+    &.f-pad-vertical-3x {
+        padding: $base-3x 0;
+    }
+
+    &.f-pad-vertical-6x {
+        padding: $base-6x 0;
+    }
+
+    // horizontal
+    &.f-pad-left-3x {
+        padding-#{$left}: $base-3x;
+    }
+
+    &.f-pad-left-6x {
+        padding-#{$left}: $base-6x;
+    }
+
+    &.f-pad-right-3x {
+        padding-#{$right}: $base-3x;
+    }
+
+    &.f-pad-right-6x {
+        padding-#{$right}: $base-6x;
+    }
+
+    &.f-pad-horizontal-3x {
+        padding-#{$left}: $base-3x;
+        padding-#{$right}: $base-3x;
+    }
+
+    &.f-pad-horizontal-6x {
+        padding-#{$left}: $base-6x;
+        padding-#{$right}: $base-6x;
+    }
+}

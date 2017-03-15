@@ -1,0 +1,28 @@
+---
+title: MWF - Routing
+removeContainer: true
+indexedPage: true
+---
+
+{{> hero-module routing.hero-carousel }}
+
+<div data-grid="container">
+    <div data-grid="col-12" role="region">
+        {{> feature-module routing.windows-apps-feature }}
+        {{> product-placement-module routing.best-rated-windows-apps-carousel }}
+    </div>
+
+    <hr class="c-divider">
+
+    <div data-grid="col-12" role="region">
+        {{> feature-module routing.windows-phone-apps-feature}}
+        {{> product-placement-module routing.new-and-rising-windows-apps-carousel }}
+    </div>
+
+    <hr class="c-divider">
+
+    <div data-grid="col-12" role="region">
+        {{> feature-module routing.xbox-apps-feature }}
+        {{> product-placement-module routing.free-xbox-apps-carousel }}
+    </div>
+</div>

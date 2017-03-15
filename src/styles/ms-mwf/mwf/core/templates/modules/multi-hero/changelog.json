@@ -1,0 +1,12 @@
+{
+    "name": "multi-hero",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9360331,
+            "description": "adds new module"
+        }
+    ]
+}

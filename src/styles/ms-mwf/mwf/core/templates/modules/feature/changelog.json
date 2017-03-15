@@ -1,0 +1,48 @@
+{
+    "name": "feature",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9821314,
+            "description": "adds an option to set aspect ratio for the entire module to limit flash of content on load"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9564198,
+            "description": "fixes in issue where call to action focus state was incorrect and inaccessable on dark backgrounds"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9186988,
+            "description": "fixes call to action text to be black on light backgrounds"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9444452,
+            "description": "removes 'Microsoft' name from label and logotype on logo"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8232789,
+            "description": "adds image priority option to feature giving a 65/35 split and taller height on image"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8353272,
+            "description": "removes all maxlines restrictions"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8353847,
+            "description": "updates css and image sizes to allow for fixed aspect ratio"
+        }
+    ]
+}

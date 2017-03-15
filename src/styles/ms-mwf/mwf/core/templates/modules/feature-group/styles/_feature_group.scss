@@ -1,0 +1,60 @@
+// Feature group
+.m-feature-group {
+    @include left-right-padding($base-3x);
+
+    @media only screen and (min-width: $vp2) {
+        @include left-right-padding($base-6x);
+    }
+
+    @media only screen and (min-width: $vp3) {
+        @include left-right-padding($base-9x);
+    }
+
+    @media only screen and (min-width: $vp5) {
+        @include left-right-padding($base-12x);
+    }
+
+    @if $ltie8 {
+        @include left-right-padding($base-9x)
+    }
+
+    padding-top: 0;
+    background: $color-foreground-10;
+    margin-top: 48px;
+
+    .m-area-heading {
+        float: none;
+    }
+
+    .m-feature {
+        float: none;
+        margin-bottom: 48px;
+
+        picture {
+            img {
+                width: 100%;
+            }
+        }
+
+        .f-background-neutral-00 {
+            .c-call-to-action {
+                color: $color-accent;
+
+                &:focus:not(.x-hidden-focus) {
+                    outline: transparent;
+                    background: $color-accent-10 content-box;
+                }
+
+                &:focus:not(.x-hidden-focus),
+                &:hover {
+                    color: flatten-overlay($color-accent, $color-foreground, 10%);
+                }
+
+                &:active {
+                    background: none;
+                    color: flatten-overlay($color-accent, $color-foreground, 20%);
+                }
+            }
+        }
+    }
+}

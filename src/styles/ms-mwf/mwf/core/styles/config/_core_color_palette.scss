@@ -1,0 +1,35 @@
+// ====================================================================
+// Brand Palette
+// ====================================================================
+$color-brand-primary:               #0078D7 !default;
+
+$color-brand-blue:                  #0078D7 !default;
+$color-brand-purple:                #5C2D91 !default;
+$color-brand-magenta:               #B4009E !default;
+$color-brand-red:                   #E81123 !default;
+$color-brand-orange:                #D83B01 !default;
+$color-brand-yellow:                #FFB900 !default;
+$color-brand-green:                 #107C10 !default;
+$color-brand-teal:                  #008272 !default;
+$color-brand-dark-blue:             #002050 !default;
+
+// ====================================================================
+// Brand Neutral Palette
+// ====================================================================
+$color-brand-neutral-00:            #FFF    !default;
+$color-brand-neutral-10:            #E3E3E3 !default;
+$color-brand-neutral-20:            #C8C8C8 !default;
+$color-brand-neutral-30:            #ACACAC !default;
+$color-brand-neutral-45:            #919191 !default;
+$color-brand-neutral-55:            #767676 !default;
+$color-brand-neutral-65:            #5E5E5E !default;
+$color-brand-neutral-75:            #464646 !default;
+$color-brand-neutral-80:            #2F2F2F !default;
+$color-brand-neutral-90:            #171717 !default;
+$color-brand-neutral-100:           #000    !default;
+
+$color-shade:                       #000    !default;
+$color-tint:                        #FFF    !default;
+$color-foreground:                  $color-shade !default;
+$color-background:                  $color-tint !default;
+$color-accent:                      $color-brand-primary !default;

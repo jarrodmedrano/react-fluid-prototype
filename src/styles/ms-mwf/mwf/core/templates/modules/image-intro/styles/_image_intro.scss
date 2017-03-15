@@ -1,0 +1,232 @@
+.m-image-intro {
+    @include left-right-padding($base-0);
+    padding-top: 0;
+    position: relative;
+
+    > .c-image {
+        display: block;
+
+        img {
+            width: 100%;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    > div {
+        padding: 16px $base-3x;
+        position: relative;
+        max-width: 100%;
+        text-align: center;
+
+        > .c-heading {
+            @include apply-type-component(h4, true);
+            font-weight: $font-weight-bold;
+            padding-top: 0;
+        }
+
+        .c-paragraph {
+            @include apply-type-component(p4, true);
+            padding-top: 8px;
+        }
+    }
+
+    &.f-align-center,
+    &.f-align-top,
+    &.f-align-bottom {
+        > div {
+            @media only screen and (min-width: $vp2) {
+                position: absolute;
+                min-width: 67%;
+                margin: 0 auto;
+            }
+
+            @media only screen and (min-width: $vp3) {
+                min-width: 50%;
+            }
+        }
+    }
+
+    &.f-align-center {
+        > div {
+            @media only screen and (min-width: $vp2) {
+                left: 50%;
+                top: calc(50% + 24px);
+                transform: translate(-50%, -50%);
+            }
+
+            @media only screen and (min-width: $vp4) {
+                top: 50%;
+            }
+        }
+    }
+
+    &.f-align-top {
+        > div {
+            @media only screen and (min-width: $vp2) {
+                left: 50%;
+                top: 24px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &.f-align-bottom {
+        > div {
+            @media only screen and (min-width: $vp2) {
+                left: 50%;
+                bottom: 24px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &.f-transparent {
+        &.f-align-top {
+            > div {
+                @media only screen and (min-width: $vp2) {
+                    top: 60px;
+                }
+
+                @media only screen and (min-width: $vp3) {
+                    top: 120px;
+                }
+
+                @media only screen and (min-width: $vp5) {
+                    top: 140px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp2) {
+        &[class*="f-mask"] {
+            &.theme-light {
+                @if $ltie8 == false {
+                    > picture:after {
+                        background: $color-tint;
+                    }
+                }
+
+                &.f-align-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top center, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-align-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center center, $color-tint, $color-transparent 80%);
+                    }
+                }
+
+                &.f-align-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom center, $color-tint, $color-transparent 80%);
+                    }
+                }
+            }
+
+            &.theme-dark {
+                @if $ltie8 == false {
+                    > picture:after {
+                        background: $color-shade;
+                    }
+                }
+
+                &.f-align-top {
+                    > picture:after {
+                        background: radial-gradient(circle at top center, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-align-center {
+                    > picture:after {
+                        background: radial-gradient(circle at center center, $color-shade, $color-transparent 80%);
+                    }
+                }
+
+                &.f-align-bottom {
+                    > picture:after {
+                        background: radial-gradient(circle at bottom center, $color-shade, $color-transparent 80%);
+                    }
+                }
+            }
+        }
+
+        &.f-mask-20 {
+            > picture:after {
+                @if $ltie8 {
+                    // scss-lint:disable VendorPrefix
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+                    // scss-lint:enable VendorPrefix
+                }
+
+                opacity: 0.2;
+            }
+        }
+
+        &.f-mask-40 {
+            > picture:after {
+                @if $ltie8 {
+                    // scss-lint:disable VendorPrefix
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+                    // scss-lint:enable VendorPrefix
+                }
+
+                opacity: 0.4;
+            }
+        }
+
+        &.f-mask-60 {
+            > picture:after {
+                @if $ltie8 {
+                    // scss-lint:disable VendorPrefix
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+                    // scss-lint:enable VendorPrefix
+                }
+
+                opacity: 0.6;
+            }
+        }
+
+        &.f-mask-80 {
+            > picture:after {
+                @if $ltie8 {
+                    // scss-lint:disable VendorPrefix
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+                    // scss-lint:enable VendorPrefix
+                }
+
+                opacity: 0.8;
+            }
+        }
+
+        &.f-mask-100 {
+            > picture:after {
+                @if $ltie8 {
+
+                    // We can't ever be fully opaque in IE8 because IE8 applies
+                    // a mask to the whole image (doesn't support gradient overlay).
+                    // To prevent totally obsucring the image, set opacity to 80
+                    // scss-lint:disable VendorPrefix
+
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+                    // scss-lint:enable VendorPrefix
+                }
+
+                opacity: 1;
+            }
+        }
+    }
+}

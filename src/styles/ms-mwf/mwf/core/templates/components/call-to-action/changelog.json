@@ -1,0 +1,33 @@
+{
+    "name": "call to action",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+       {
+           "type": "fixed",
+           "ticket-id": 10572886,
+           "description": "fixes an issue where absolute positioning on the after element was causing issues in certain layouts"
+       }
+   ],
+    "v1.18.0": [
+        {
+           "type": "changed",
+           "ticket-id": 10213524,
+           "description": "changes aria-label text format and makes the attribute optional"
+        }
+   ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9300342,
+            "description": "updates lightweight call to action to allow for longer strings before truncation"
+        }
+    ],
+     "v1.11.0": [
+        {
+            "type": "new",
+            "ticket-id": 8525594,
+            "description": "adds aria-label to emphasize link similar to using styles for sighted users"
+        }
+    ]
+}

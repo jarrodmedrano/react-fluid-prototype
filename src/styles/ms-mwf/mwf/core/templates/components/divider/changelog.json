@@ -1,0 +1,19 @@
+{
+    "name": "divider",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9725282,
+            "description": "adds a new subdivider option"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9718778,
+            "description": "adds new options to provide vertical padding"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "feed hero",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10298565,
+            "description": "fixes an issue where the module was not spanning the full width of the screen"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10107082,
+            "description": "changes higher end viewport imagery to 16:6 ratio and updates padding accordingly"
+        },
+        {
+            "type": "new",
+            "ticket-id": 10073492,
+            "description": "adds new module consisting of a group of feed heroes that carousel"
+        }
+    ]
+}

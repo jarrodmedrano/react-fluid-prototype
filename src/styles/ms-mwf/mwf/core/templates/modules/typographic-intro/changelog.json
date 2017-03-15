@@ -1,0 +1,12 @@
+{
+    "name": "typographic-intro",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.9.0": [
+        {
+            "type": "new",
+            "ticket-id": 7909876,
+            "description": "adds typographic intro as a new module"
+        }
+    ]
+}

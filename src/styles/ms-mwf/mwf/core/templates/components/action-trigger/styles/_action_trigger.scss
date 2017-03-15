@@ -1,0 +1,172 @@
+// ==========================================================================
+// Component: Action trigger
+// ==========================================================================
+
+button.c-action-trigger,
+a.c-action-trigger {
+    @include apply-type(t7);
+    @include free-text-states;
+    max-width: 374px;
+    min-width: 36px;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 0 8px;
+    color: $color-accent;
+    border: solid 1px transparent;
+    background: none;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    outline: 1px dashed transparent;
+
+    &[disabled] {
+        color: $color-foreground-20;
+        cursor: not-allowed;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &.c-glyph {
+        min-width: 120px;
+        padding-right: 10px;
+
+        &:before {
+            width: 16px;
+            height: 16px;
+            margin-#{$left}: 10px;
+            margin-#{$right}: 10px;
+            vertical-align: middle;
+        }
+
+        &[aria-label] {
+            min-width: 0;
+            margin-#{$right}: 10px;
+            padding-#{$right}: 0;
+        }
+
+        &.f-align-margin {
+            margin-#{$left}: -10px;
+        }
+    }
+
+    &.f-heavyweight {
+        padding: 6px 10px 8px;
+        border: 2px solid transparent;
+        color: $color-background;
+        background: $color-accent;
+        transition: scale 0.2s ease-in-out;
+
+        &.c-glyph {
+            padding-#{$left}: 0;
+        }
+
+        &:focus {
+            outline: 2px solid $color-foreground;
+            text-decoration: underline;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus,
+        &:hover {
+            background: flatten-overlay($color-accent, $color-foreground, 10%);
+        }
+
+        &:active {
+            background: flatten-overlay($color-accent, $color-foreground, 20%);
+            transform: scale(0.98);
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+            border-color: transparent;
+            background: flatten-overlay($color-background, $color-accent, 20);
+            color: $color-foreground-20;
+        }
+
+        &.x-hidden-focus {
+            background: $color-accent !important;
+            text-decoration: none;
+        }
+    }
+
+    #{$theme-light} {
+        color: $color-shade;
+        background: transparent;
+
+        &[disabled] {
+            color: $color-foreground-20;
+            cursor: not-allowed;
+        }
+
+        &.f-heavyweight {
+            color: $color-tint;
+            background: $color-shade;
+
+            &:focus {
+                outline-color: $color-tint;
+            }
+
+            &:focus,
+            &:hover {
+                background: flatten-overlay($color-shade, $color-tint, 10%);
+            }
+
+            &:active {
+                background: flatten-overlay($color-shade, $color-tint, 20%);
+            }
+
+            &[disabled] {
+                background: flatten-overlay($color-tint, $color-shade, 20);
+                border-color: transparent;
+                color: $color-shade-20;
+            }
+
+            &.x-hidden-focus {
+                background: $color-shade !important;
+            }
+        }
+    }
+
+    #{$theme-dark} {
+        color: $color-tint;
+        background: transparent;
+
+        &[disabled] {
+            color: $color-tint-60;
+            cursor: not-allowed;
+        }
+
+        &.f-heavyweight {
+            color: $color-shade;
+            background: $color-tint;
+
+            &:focus {
+                outline-color: $color-shade;
+            }
+
+            &:focus,
+            &:hover {
+                background: flatten-overlay($color-tint, $color-shade, 10%);
+            }
+
+            &:active {
+                background: flatten-overlay($color-tint, $color-shade, 20%);
+            }
+
+            &[disabled] {
+                background: flatten-overlay($color-shade, $color-tint, 30);
+                border-color: transparent;
+                color: $color-tint-20;
+            }
+
+            &.x-hidden-focus {
+                background: $color-tint !important;
+            }
+        }
+    }
+}

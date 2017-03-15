@@ -1,0 +1,196 @@
+.m-panes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-preferred-size: auto;
+    -ms-flex-positive: 1;
+    -ms-flex-negative: 1;
+
+    section {
+        border-#{$left}: 1px solid $color-foreground-20;
+        text-align: center;
+        padding: $base-9x $base-12x $base-4x;
+        flex: 1;
+        -ms-flex-preferred-size: auto;
+        flex-basis: 100%;
+        align-self: flex-start;
+        -ms-flex-negative: 1;
+
+        &:first-child {
+            border-#{$left}: 0;
+        }
+
+        &.f-align-middle {
+            align-self: center;
+        }
+
+        &.f-stacked {
+            padding-#{$left}: $base-6x;
+
+            > div {
+                padding-#{$left}: $base-6x;
+                padding-bottom: $base-9x;
+                text-align: $left;
+                max-width: 100%;
+                flex: 1 1 100%;
+                -ms-flex-positive: 1;
+                -ms-flex-negative: 1;
+                -ms-flex-preferred-size: auto;
+
+                + div:last-of-type {
+                    padding-top: $base-9x;
+                    border-top: 1px solid $color-foreground-20;
+                    text-align: $left;
+                }
+            }
+
+            &:last-child {
+                flex: 2 1 100%;
+                -ms-flex-negative: 1;
+                -ms-flex-preferred-size: auto;
+                width: 100%;
+
+                > div {
+                    display: flex;
+                    -ms-flex-negative: 1;
+                    -ms-flex-preferred-size: auto;
+
+                    // Flow properties specific to
+                    // the product placement item
+                    > .m-panes-product-placement-item {
+                        display: flex;
+                        -ms-flex-negative: 1;
+                        -ms-flex-preferred-size: auto;
+
+                        picture {
+                            + div {
+                                flex: 1;
+                                -ms-flex-negative: 1;
+                                -ms-flex-preferred-size: auto;
+                                display: block;
+                                width: 100%;
+                                padding-#{$left}: $base-9x;
+                            }
+
+                            &.c-image img {
+                                display: inline-block;
+                                max-width: none;
+                                flex: 1;
+                                -ms-flex-preferred-size: auto;
+                                // Fixes Edge bug causing overflow on VP3
+                                @supports (-ms-accelerator: true) {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp4-max) {
+        flex-direction: column;
+
+        section {
+            border-bottom: 1px solid $color-foreground-20;
+            border-#{$left}: 0;
+            align-self: auto;
+            width: 100%;
+            flex-basis: auto;
+
+            &:last-child {
+                align-self: auto;
+                border-bottom: 0;
+            }
+
+            &.f-stacked {
+                border-#{$left}: 0;
+                padding: $base-6x 0;
+
+                > div {
+                    flex: 1;
+                    -ms-flex-preferred-size: auto;
+                    padding-#{$left}: 0;
+                    border-#{$right}: 1px solid $color-foreground-20;
+
+                    + div:last-of-type {
+                        border-top: 0;
+                        border-#{$right}: 0;
+                        padding-top: 0;
+                    }
+                }
+
+                &:last-child {
+                    display: flex;
+
+                    > div {
+                        // Flow properties specific to
+                        // the product placement item
+                        > .m-panes-product-placement-item {
+                            display: block;
+                            padding: $base-5x;
+                            border-bottom: 0;
+                            border-top: 0;
+
+                            picture {
+                                + div {
+                                    text-align: center;
+                                    display: block;
+                                    padding-#{$left}: 0;
+                                }
+
+                                &.c-image img {
+                                    display: block;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        flex-direction: column;
+
+        section {
+            padding: $base-9x 0 $base-4x;
+
+            &.f-stacked {
+                padding-#{$left}: 0;
+
+                > div {
+                    padding-top: $base-4x;
+                    padding-bottom: 0;
+                    border-#{$right}: 0;
+
+                    + div:last-of-type {
+                        padding-top: $base-4x;
+                        border-top: 1px solid $color-foreground-20;
+                    }
+                }
+
+                &:first-child {
+                    border-bottom: 1px solid $color-foreground-20;
+                    border-#{$right}: 0;
+                    padding-bottom: $base-9x;
+                }
+
+                &:last-child {
+                    display: block;
+                    flex-direction: row;
+                    margin-top: 0;
+                    padding-top: 0;
+
+                    > div {
+                        > div {
+                            padding: $base-9x 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,308 @@
+.m-multi-feature {
+    // scss-lint:disable DeclarationOrder
+    $colors: (("00", $color-brand-neutral-00),
+        (10, $color-brand-neutral-10),
+        (20, $color-brand-neutral-20),
+        (30, $color-brand-neutral-30),
+        (45, $color-brand-neutral-45),
+        (55, $color-brand-neutral-55),
+        (65, $color-brand-neutral-65),
+        (75, $color-brand-neutral-75),
+        (80, $color-brand-neutral-80),
+        (90, $color-brand-neutral-90),
+        (100, $color-brand-neutral-100));
+
+    @include repeater($colors, ".f-background-neutral", "background-color");
+    @include left-right-padding($base-0);
+    @include clearfix;
+    position: relative;
+    height: 100%;
+
+    .m-area-heading {
+        float: none;
+
+        + .c-carousel {
+            margin-top: 36px;
+
+            ul.c-group {
+                // Deprecated 2.0.0
+                padding: 0;
+            }
+        }
+    }
+
+    [role="tabpanel"] {
+        display: none;
+
+        &.f-active {
+            display: block;
+        }
+
+        .c-heading {
+            @include apply-type-component(h5);
+            padding-top: 24px;
+        }
+
+        .c-paragraph {
+            @include apply-type-component(p4);
+        }
+
+        .c-badge,
+        .c-logo {
+            margin-top: 12px;
+
+            + .c-heading {
+                padding-top: 8px;
+            }
+        }
+
+        .c-logo {
+            display: block;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .c-call-to-action {
+            @include c-call-to-action-lightweight();
+            margin-top: 10px;
+        }
+
+        .c-group {
+            display: block;
+            overflow: visible;
+            margin-top: 10px;
+
+            .c-call-to-action {
+                margin-top: 0;
+                margin-#{$right}: 4px;
+            }
+        }
+    }
+
+    [role="tablist"] {
+        display: flex;
+        justify-content: center;
+
+        + ul,
+        + [role="tabpanel"] {
+            .c-heading {
+                padding-top: 0;
+            }
+        }
+
+        li {
+            margin-#{$right}: 10px;
+            float: $left;
+            display: block;
+
+            > a {
+                display: block;
+                background: $color-brand-neutral-30;
+
+                &:hover,
+                &:focus {
+                    outline: 1px dashed $color-foreground;
+                    border-color: $color-foreground;
+                }
+
+                &:hover {
+                    border-color: $color-foreground;
+
+                    &.f-active {
+                        border-color: flatten-overlay($color-accent, $color-foreground, 40);
+
+                        .c-image {
+                            border-color: flatten-overlay($color-accent, $color-foreground, 40);
+                        }
+                    }
+                }
+
+                &:active {
+                    outline: 1px solid $color-foreground;
+
+                    .c-image {
+                        border: 1px solid $color-foreground;
+                    }
+                }
+
+                .c-image {
+                    border: 1px solid $color-brand-neutral-00;
+                }
+
+                &.f-active {
+                    outline: 1px solid $color-foreground;
+                    background: $color-accent;
+
+                    &.c-logo {
+                        &:focus {
+                            outline: 1px dashed $color-foreground;
+                        }
+                    }
+
+                    .c-image {
+                        border: 1px solid $color-foreground;
+                    }
+                }
+            }
+        }
+    }
+
+    &.f-align-center {
+        text-align: center;
+
+        > section {
+            > [role="tablist"] {
+                margin-bottom: 24px;
+            }
+
+            > .c-pivot,
+            > [role="tablist"] {
+                margin-top: 18px;
+
+                > [role="tablist"] {
+                    > a {
+                        font-weight: $font-weight-normal;
+
+                        &.f-active {
+                            font-weight: $font-weight-semibold;
+                        }
+                    }
+                }
+            }
+
+            > ul {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &.f-align-left {
+        > section {
+            position: relative;
+
+            > div {
+                @include left-right-padding($base-3x);
+                #{$left}: 0;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                top: calc(50%);
+                transform: none;
+                position: relative;
+                text-align: center;
+                display: block;
+
+                &:first-child {
+                    display: block;
+                    position: relative;
+                    #{$left}: 0;
+                    padding: 0;
+                    transform: none;
+                }
+
+                [role="tablist"] {
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp2) {
+        &.f-align-left {
+            > section > div {
+                @include left-right-padding($base-6x);
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp3) {
+        [role="tablist"] {
+            + [role="tabpanel"] {
+                .c-heading {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        [role="tabpanel"] {
+            .c-heading {
+                @include apply-type-component(h3);
+                padding-top: 24px;
+            }
+
+            .c-paragraph {
+                padding-top: 12px;
+            }
+        }
+
+        &.f-align-center {
+            > section {
+                > ul,
+                > section {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &.f-align-left {
+            > section {
+                > div {
+                    @include left-right-padding($base-9x);
+                    width: 50%;
+                    #{$left}: 50%;
+                    margin: 0;
+                    top: calc(50%);
+                    transform: translateY(-50%);
+                    position: absolute;
+                    text-align: $left;
+
+                    &:first-child {
+                        position: relative;
+                        #{$left}: 0;
+                        padding: 0;
+                        transform: none;
+                    }
+
+                    > ul {
+                        &[role="tablist"] {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp4) {
+        [role="tabpanel"] {
+            .c-heading {
+                @include apply-type-component(h3);
+                padding-top: 24px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp5) {
+        &.f-align-left {
+            > section {
+                > div {
+                    @include left-right-padding($base-12x);
+                }
+            }
+        }
+
+        &.f-align-center {
+            > section {
+                > ul,
+                > section {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

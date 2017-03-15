@@ -1,0 +1,73 @@
+// ==========================================================================
+// Define Interactive States
+// ==========================================================================
+
+// There are three classifications of actionable items that have interactive states:
+// 1. Free text
+// 2. Enclosed triggers
+// 3. Complex groups
+
+// Mixin for free text interactive states
+@mixin free-text-states($color: null) {
+    $hover: 20%;
+    $active: 40%;
+
+    @if $color == null {
+        $hover: 10%;
+        $active: 20%;
+        $color: $color-accent;
+    }
+
+    &:focus {
+        outline: transparent;
+        background: $color-accent-10 content-box;
+    }
+
+    &:focus,
+    &:hover {
+        color: flatten-overlay($color, $color-foreground, $hover);
+        text-decoration: underline;
+    }
+
+    &:active {
+        background: none;
+        color: flatten-overlay($color, $color-foreground, $active);
+        transform: none;
+    }
+
+    #{$theme-light} {
+        &:focus {
+            background: $color-shade-10 content-box;
+        }
+
+        &:focus,
+        &:hover {
+            color: $color-shade-90;
+        }
+
+        &:active {
+            color: $color-shade-80;
+        }
+    }
+
+    #{$theme-dark} {
+        &:focus {
+            background: $color-tint-10 content-box;
+        }
+
+        &:focus,
+        &:hover {
+            color: flatten-overlay($color-tint, $color-foreground, $hover);
+        }
+
+        &:active {
+            color: flatten-overlay($color-tint, $color-foreground, $active);
+        }
+    }
+
+    &.x-hidden-focus {
+        background: none !important;
+        text-decoration: none !important;
+        outline-color: transparent !important;
+    }
+}

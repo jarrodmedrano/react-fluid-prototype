@@ -1,0 +1,2229 @@
+{
+    "buy-box": {
+        "config": {
+            "buy-box": true,
+            "id": "buy-box",
+            "hidden": true
+        },
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 6
+            },
+            "content": {
+                "text": "Heading - Subheading"
+            }
+        },
+        "hyperlink": {
+            "content": {
+                "text": "Hyperlink",
+                "href": "http://www.getmwf.com"
+            }
+        },
+        "price": {
+            "config": {
+                "currency-symbol": "$",
+                "currency-code": "USD"
+            },
+            "content": {
+                "price": 1000,
+                "discounted-price": null
+            }
+        },
+        "call-to-action": {
+            "content": {
+                "text": "CALL TO ACTION",
+                "href": "#"
+            }
+        }
+    },
+    "office-365": {
+        "options": {
+            "left-grid-col": 8,
+            "right-grid-col": 4,
+            "grid-stack": 3,
+            "right-col-classes": ""
+        },
+        "hero": {
+            "productPlacement": {
+                "content": "extra-large",
+                "orientation": "horizontal",
+                "size": "extra-large",
+                "image": {
+                    "content": {
+                        "background-image": {
+                            "vp6": "http://placehold.it/170x170/464646/333333",
+                            "vp5": "http://placehold.it/170x170/464646/333333",
+                            "vp4": "http://placehold.it/145x145/464646/333333",
+                            "vp3": "http://placehold.it/100x100/464646/333333",
+                            "vp2": "http://placehold.it/100x100/464646/333333",
+                            "vp1": "http://placehold.it/100x100/464646/333333",
+                            "alt": "FPO"
+                        }
+                    }
+                },
+                "heading": "Office 365 Home",
+                "product-detail": {
+                    "title": "Distributer",
+                    "text": {
+                        "line-one": "Microsoft"
+                    }
+                },
+                "rating": {
+                    "title": "Rating",
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4.0
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "title": "Price",
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 99.99
+                    }
+                },
+                "product-options": {
+                    "title": "Product Options",
+                    "label": "Choose subscription",
+                    "combo": {
+                        "config": {
+                            "type": "ul",
+                            "id": "unique-id-for-list",
+                            "hidden": true,
+                            "border": true,
+                            "persist": false
+                        },
+                        "content": {
+                            "title": "Select Menu",
+                            "href": "#",
+                            "menu-items": [{
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Menu Item 1",
+                                    "href": "#"
+                                }
+                            }, {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Menu Item 2",
+                                    "href": "#"
+                                }
+                            }, {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Menu Item 3",
+                                    "href": "#"
+                                }
+                            }, {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Menu Item 4",
+                                    "href": "#"
+                                }
+                            }]
+                        }
+                    }
+                },
+                "purchase-options": {
+                    "title": "Purchase Options",
+                    "options": [{
+                        "config": {
+                            "element-type": "button",
+                            "button-type": "submit",
+                            "disabled": false
+                        },
+                        "content": {
+                            "text": "Subscribe",
+                            "href": "null"
+                        }
+                    }]
+                },
+                "additional-product-information": {
+                    "title": "Additional product distribution",
+                    "options": {
+                        "content": [{
+                            "text": "Compatable with Windows 7 or later and Mac OX X 10.10"
+                        }, {
+                            "text": "Includes all languages"
+                        }]
+                    }
+                }
+            }
+        },
+        "large-product-image": {
+            "src": "images/office-365-pdp-background-image.png"
+        }
+    },
+    "left-feature": {
+        "config": {
+            "align": "left"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "badge": {
+                "config": {
+                    "size": "small",
+                    "type": "highlight"
+                },
+                "content": {
+                    "text": "BADGE"
+                }
+            },
+            "image": {
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "right-feature": {
+        "config": {
+            "align": "right"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "badge": {
+                "config": {
+                    "size": "small",
+                    "type": "highlight"
+                },
+                "content": {
+                    "text": "BADGE"
+                }
+            },
+            "image": {
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "structured-list": {
+        "config": {
+            "dual-columns": true,
+            "dividers": true,
+            "col-1-grid": 2,
+            "col-2-grid": 10
+        },
+        "content": {
+            "column-1": {
+                "one": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                },
+                "two": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                },
+                "three": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                },
+                "four": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                }
+            },
+            "column-2": {
+                "one": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                },
+                "two": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                },
+                "three": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                },
+                "four": {
+                    "simple-image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/80x35",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "simple-text": {
+                        "config": {
+                            "text-element": false
+                        }
+                    },
+                    "product-description": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Product description text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "system-requirements": {
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 3
+            },
+            "content": {
+                "text": "Heading"
+            }
+        },
+        "select": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-for-list",
+                "hidden": true,
+                "border": false
+            },
+            "content": {
+                "title": "Select Menu",
+                "href": "#",
+                "menu-items": [
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 1",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 2",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 3",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 4",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "minimum": {
+            "config": {
+                "type": "divider",
+                "summary": "Summary description."
+            },
+            "content": {
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Minimum"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item bravo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item charlie"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item delta"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item echo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "recommended": {
+            "config": {
+                "type": "divider",
+                "summary": "Summary description."
+            },
+            "content": {
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Recommended"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Bravo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item charlie"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Delta"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Echo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "compare-chart": {
+        "config": {
+            "column-width": 3
+        },
+        "content": {
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            }
+        },
+        "items": [
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading text that wraps"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet leo nunc."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3"
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3",
+                                    "hidden": true
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3",
+                                    "hidden": true
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading text that wraps"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet leo nunc."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3",
+                                    "hidden": true
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "ratings-and-reviews": {
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 4
+            },
+            "content": {
+                "text": "Ratings and reviews"
+            }
+        },
+        "filter": {
+            "content": {
+                "label": "Filter by:"
+            },
+            "filters": [
+                {
+                    "config": {
+                        "type": "ul",
+                        "id": "unique-id-1",
+                        "hidden": true,
+                        "border": false
+                    },
+                    "content": {
+                        "title": "Current",
+                        "href": "#",
+                        "menu-items": [
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 1",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 2",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 3",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 4",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "config": {
+                        "type": "ul",
+                        "id": "unique-id-2",
+                        "hidden": true,
+                        "border": false
+                    },
+                    "content": {
+                        "title": "All platforms",
+                        "href": "#",
+                        "menu-items": [
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 1",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 2",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 3",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 4",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "config": {
+                        "type": "ul",
+                        "id": "unique-id-3",
+                        "hidden": true,
+                        "border": false
+                    },
+                    "content": {
+                        "title": "All ratings",
+                        "href": "#",
+                        "menu-items": [
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 1",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 2",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 3",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 4",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "histogram": {
+            "config": {
+                "divisor": 50000
+            },
+            "content": {
+                "review-count-by-star": {
+                    "one": "2345234",
+                    "two": "24352",
+                    "three": "4564",
+                    "four": "783652",
+                    "five": "4564568"
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4.2
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                }
+            }
+        },
+        "rate-and-review": {
+            "config": {
+                "element-type": "button",
+                "button-type": "submit",
+                "disabled": false
+            },
+            "content": {
+                "text": "Rate and review",
+                "href": "null"
+            }
+        },
+        "top-reviews": {
+            "most-favourable": {
+                "heading": {
+                    "config": {
+                        "tag": "h4",
+                        "level": 4
+                    },
+                    "content": {
+                        "text": "Most helpful favorable review"
+                    }
+                },
+                "review": {
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "individual": true
+                            },
+                            "community-rating": 3.0,
+                            "user-rating": 2.1
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "date": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "9/9/2016"
+                        }
+                    },
+                    "name": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Jane Doe"
+                        }
+                    },
+                    "title": {
+                        "config": {
+                            "tag": "h5",
+                            "level": 6
+                        },
+                        "content": {
+                            "text": "Heading"
+                        }
+                    },
+                    "text": {
+                        "config": {
+                            "id": "content-toggle-1",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    },
+                    "helpful": {
+                        "config": {
+                            "tag": "p"
+                        },
+                        "content": {
+                            "text": "34 out of 57 people found this helpful."
+                        }
+                    },
+                    "response": {
+                        "name": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "Jerome Doe"
+                            }
+                        },
+                        "responded": {
+                            "content": {
+                                "text": "responded on"
+                            }
+                        },
+                        "comment-type": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "Developer comment"
+                            }
+                        },
+                        "date": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "9/9/2016"
+                            }
+                        },
+                        "text": {
+                            "config": {
+                                "id": "content-toggle-1-1",
+                                "tag": "p",
+                                "expanded": false,
+                                "show": 3
+                            },
+                            "content": {
+                                "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                                "more-text": "More",
+                                "less-text": "Less"
+                            }
+                        }
+                    }
+                }
+            },
+            "most-critical": {
+                "heading": {
+                    "config": {
+                        "tag": "h4",
+                        "level": 4
+                    },
+                    "content": {
+                        "text": "Most helpful critical review"
+                    }
+                },
+                "review": {
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "individual": true
+                            },
+                            "community-rating": 3.0,
+                            "user-rating": 2.1
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "date": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "9/9/2016"
+                        }
+                    },
+                    "name": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "John Smith"
+                        }
+                    },
+                    "title": {
+                        "config": {
+                            "tag": "h5",
+                            "level": 6
+                        },
+                        "content": {
+                            "text": "Heading"
+                        }
+                    },
+                    "text": {
+                        "config": {
+                            "id": "content-toggle-1",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    },
+                    "helpful": {
+                        "config": {
+                            "tag": "p"
+                        },
+                        "content": {
+                            "text": "22 out of 51 people found this helpful."
+                        }
+                    }
+                }
+            }
+        },
+        "sort-by": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-1",
+                "hidden": true,
+                "border": false
+            },
+            "content": {
+                "label": "Sort by:",
+                "title": "Most helpful",
+                "href": "#",
+                "menu-items": [
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 1",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 2",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 3",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 4",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "visible-reviews": {
+            "content": {
+                "text": "13-24 of 3,015 reviews"
+            }
+        },
+        "all-reviews": [
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "platform": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "Platform: Xbox"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "platform": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "Platform: PC"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            }
+        ],
+        "pagination": {
+            "content": {
+                "pages": 6,
+                "selected": 1
+            }
+        }
+    }
+}

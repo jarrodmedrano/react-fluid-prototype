@@ -1,0 +1,12 @@
+{
+    "name": "image-intro",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.13.0": [
+        {
+            "type": "new",
+            "ticket-id": 8320245,
+            "description": "adds image intro as a new module"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+---
+title: MWF - Physical Goods Lists
+removeContainer: true
+indexedPage: true
+---
+
+<div data-grid="container">
+    <div data-grid="col-12 pad-12x stack-2">
+        <section data-grid="col-3">
+            {{> refine-menu-template physical-goods-list.refine-menu}}
+        </section>
+        <div data-grid="col-9" role="main">
+            <section>
+                <h1 class="c-heading-2">Shop</h1>
+                <p class="c-paragraph"><small>Viewing 1-30 of 183 results</small></p>
+                <ul class="c-group">
+                    {{#each physical-goods-list.choice-summary}}
+                        {{> choice-summary-template this}}
+                    {{/each}}
+                </ul>
+                <div class="c-group f-wrap-items" id="search-results">
+                    {{#each physical-goods-list.top-rated-placements}}
+                        {{> product-placement-item-module this}}
+                    {{/each}}
+                    </div>
+                <p class="c-paragraph"><small>Viewing 1-30 of 183 results</small></p>
+            </section>
+            <hr class="c-divider">
+            <section>
+                {{> pagination-module}}
+            </section>
+        </div>
+    </div>
+</div>

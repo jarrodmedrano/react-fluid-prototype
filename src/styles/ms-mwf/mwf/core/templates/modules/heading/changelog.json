@@ -1,0 +1,24 @@
+{
+    "name": "heading",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10563477,
+            "description": "deprecates select menu option and replaces with new option using action menu"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9589611,
+            "description": "fixes pivot anchors to be disabled when heading is disabled"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "new",
+            "ticket-id": 7978044,
+            "description": "adds option for including one or more pivot or select menu"
+        }
+    ]
+}

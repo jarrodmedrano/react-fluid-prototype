@@ -1,0 +1,45 @@
+.m-system-requirements {
+    /* Needs to be 30 due to the way the grid padding
+       is setup in order to maintain 48px padding at max VP */
+    padding-#{$left}: 30px;
+    padding-#{$right}: 30px;
+    /* This is padding needs to be 10 to
+       have 48px total padding for the module */
+    padding-top: 10px;
+
+    .c-table {
+        tr:before {
+            width: 0;
+        }
+
+        td {
+            min-width: 120px;
+            padding-#{$left}: 0;
+            vertical-align: text-top;
+
+            &:first-child {
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+
+    @media screen and (max-width: $vp5-max) {
+        @include left-right-padding($base-6x);
+    }
+
+    @media screen and (max-width: $vp4-max) {
+        @include left-right-padding($base-3x);
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        @include left-right-padding(apply-base(4.5));
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        @include left-right-padding($base-3x);
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        @include left-right-padding($base-0);
+    }
+}

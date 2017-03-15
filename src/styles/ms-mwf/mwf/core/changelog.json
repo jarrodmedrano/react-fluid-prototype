@@ -1,0 +1,305 @@
+{
+    "name": "MWF",
+    "content-type": "core",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "internal": true,
+            "ticket-id": 10889482,
+            "description": "improves 'preventDefault' method in htmlExtensions.ts"
+        },
+        {
+            "type": "changed",
+            "internal": true,
+            "ticket-id": 10889482,
+            "description": "improves 'getKeyCode' method in utility.ts"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 10578944,
+            "description": "fixes references to IE9 stylesheets in layout templates"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10447023,
+            "description": "fixes expection thrown by customEvent method on IE9 and above"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10409042,
+            "description": "fixes an issue where focus states were incorrect on multi-hero and feed-hero items"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10123209,
+            "description": "adds text underline to focus states of button, call to action, and heavyweight action triggers"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10033105,
+            "description": "fixes an issue where the placeholder text was too light on input fields"
+        },
+        {
+            "type": "new",
+            "ticket-id": 10192065,
+            "description": "adds a helper class of x-offset-content to provide a way to align content correctly to the content grid"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10285623,
+            "description": "Updates customEvent method in htmlExtensions to support passing event name as string"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10251499,
+            "description": "fixes an issue transpiling keycodes.ts in partner projects"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8498383,
+            "description": "updates heading and subheading to have regular font weight when under 20 pixels"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9813204,
+            "description": "updates hover and focus states for call to actions, buttons, social, and heavyweight action triggers"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9510034,
+            "description": "adds lightweight options to call to action and button components"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 971876,
+            "description": "updates textarea and text field components flex option to fill the full width of their container"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9734362,
+            "description": "increases font weight for pivots in components, multi-feature and heading modules"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 9743448,
+            "description": "fixes a property undefined script error in ObservableComponent.unObserve() in IE10"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 9526104,
+            "description": "fixes issue with Windows blocking dev builds"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "new",
+            "ticket-id": 8724147,
+            "description": "applies variable to base Sass for UHF selector reduction"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 7982140,
+            "description": "adds accessibility linter to validate task"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8735969,
+            "description": "fixes an issue where c-paragraph-4 recieved too much top padding"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8690758,
+            "description": "adds new scss-lint feature to check for space after comment"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8721698,
+            "description": "creates UHF variables for use in Sass selector namespacing and output size reduction"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8723936,
+            "description": "applies UHF variable to base Sass for selector namespacing"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8610537,
+            "description": "assembles templated wrapper .hbs with report files for JavaScript unit tests"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8789887,
+            "description": "fixes an issue where Picture Fill was not being loaded correctly"
+        },
+        {
+            "type": "new",
+            "ticket-id": 7909787,
+            "description": "adds immersive hero item and immersive hero as new modules"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8426896,
+            "description": "adds file splitting for IE9 support when CSS selectors exceed IE9/8 max of 4095"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8661766,
+            "description": "fixes CDN CSS import having the wrong URL"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8367167,
+            "description": "changes bold and strong elements to a font weight of 700"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8452166,
+            "description": "fixes several validation errors in auto-suggest"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 7533226,
+            "description": "removes Bootstrap references from examples and CSS"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 7211821,
+            "description": "fixes the htmllinting issues and adds new html5 linter"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 7606884,
+            "description": "fixes whitespace within HTML tags"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 7636866,
+            "description": "changes text on 'see all' links to 'show all"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8242248,
+            "description": "cleans up unused build packages"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8232221,
+            "description": "fixes comment removal from readme HTML files"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8242339,
+            "description": "fixes an issue where content toggle was not rendering correctly in modules including age-gate"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 7888123,
+            "description": "adds Sass utility for better management of variables and transitions"
+        },
+        {
+            "ticket-id": 8137234,
+            "internal": true,
+            "description": "adds backstopjs support for regression testing"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8221466,
+            "description": "updates css browser prefix support to fix issues in iOS and Android browsers"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 7916343,
+            "description": "fixes issues with cssmin targeting all files on validate"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7969197,
+            "description": "fixes RTL vars where interpolation is not needed"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8038488,
+            "internal": true,
+            "description": "updates video-play-action mixin to address fragility issues with glyph placement"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8053156,
+            "description": "fixes layout issues on banner, compare-chart, content-rich-block, and refinements caused by incorrectly applied data-grid container"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7904087,
+            "description": "fixes issue with margins on module test pages"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 7775950,
+            "description": "moves schemas to individual component & module folders, add a schema validation tool"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 7190300,
+            "description": "disallows text-transform property in scss linter"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8039173,
+            "description": "adds Sass best practice readme documentation"
+        },
+        {
+            "type": "changed",
+            "internal": true,
+            "ticket-id": 8101703,
+            "description": "updates wraith test with new configs"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8120336,
+            "description": "updates vertical spacing for heading, paragraph, caption, select menu with border, and textarea and text-field components when inside a form"
+        }
+    ]
+}

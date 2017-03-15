@@ -1,0 +1,19 @@
+{
+    "name": "multi-hero-item",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10747274,
+            "description": "refactored to extend from hero-item-base (changed script dependency)"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9360331,
+            "description": "adds new module"
+        }
+    ]
+}

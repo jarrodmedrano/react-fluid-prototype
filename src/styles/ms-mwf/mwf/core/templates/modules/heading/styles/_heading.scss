@@ -1,0 +1,184 @@
+// ==========================================================================
+// Module: Heading
+// ==========================================================================
+
+.m-heading-1 {
+    .c-heading {
+        @include apply-type-component(h1);
+        padding-top: 0;
+    }
+
+    + [class*="m-"] {
+        padding-top: 10px;
+
+        @media only screen and (max-width: $vp2-max) {
+            padding-top: 13px;
+        }
+    }
+}
+
+.m-heading-2 {
+    .c-heading {
+        @include apply-type-component(h2);
+        padding-top: 0;
+    }
+
+    + [class*="m-"] {
+        padding-top: 12px;
+
+        @media only screen and (max-width: $vp2-max) {
+            padding-top: 16px;
+        }
+    }
+}
+
+.m-heading-3 {
+    .c-heading {
+        @include apply-type-component(h3);
+        padding-top: 0;
+    }
+
+    + [class*="m-"] {
+        padding-top: 18px;
+
+        @media only screen and (max-width: $vp2-max) {
+            padding-top: 10px;
+        }
+    }
+}
+
+.m-heading-4 {
+    .c-heading {
+        @include apply-type-component(h4);
+        padding-top: 0;
+    }
+
+    + [class*="m-"] {
+        padding-top: 16px;
+
+        @media only screen and (max-width: $vp2-max) {
+            padding-top: 14px;
+        }
+    }
+}
+
+.m-heading-5 {
+    .c-heading {
+        @include apply-type-component(h5);
+        padding-top: 0;
+    }
+
+    + [class*="m-"] {
+        padding-top: 15px;
+    }
+}
+
+.m-heading-6 {
+    .c-heading {
+        @include apply-type-component(h6);
+        padding-top: 0;
+    }
+
+    + [class*="m-"] {
+        padding-top: 17px;
+    }
+}
+
+[class*="m-heading"] {
+    clear: both;
+
+    &.f-pivot {
+        &:not(.f-disabled) {
+            > a {
+                &.f-active {
+                    font-weight: $font-weight-semibold;
+                    color: $color-foreground;
+                    border-bottom: 2px solid $color-accent;
+
+                    &:focus {
+                        background: $color-accent-10 content-box;
+                    }
+                }
+
+                &:hover {
+                    color: $color-foreground-80;
+                }
+            }
+        }
+
+        > a {
+            display: inline-block;
+            white-space: nowrap;
+            margin: 0 12px;
+            line-height: 34px;
+            color: $color-foreground-60;
+            font-weight: $font-weight-normal;
+            transform: translateX(set-direction-based-value(-12px, 12px));
+
+            &:focus {
+                outline: transparent;
+            }
+        }
+
+        &.f-disabled {
+            > a {
+                color: $color-foreground-20;
+                cursor: not-allowed;
+            }
+        }
+
+        + [class^="m-"] {
+            padding-top: 12px;
+        }
+    }
+
+    // deprecated
+    // will be removed in v.2.0
+    &.f-select {
+        .c-select-menu {
+            margin-#{$right}: 8px;
+        }
+
+        + [class^="m-"] {
+            padding-top: 12px;
+        }
+    }
+
+    &.f-action {
+        > .c-action-menu:first-of-type {
+            margin-#{$left}: -8px;
+
+            > button.c-action-trigger {
+                margin-top: 4px;
+            }
+        }
+
+        + [class^="m-"] {
+            padding-top: 12px;
+        }
+    }
+
+    .c-heading {
+
+        a.c-hyperlink {
+            @include apply-type(t7, false, true);
+
+            float: $right;
+            margin-#{$left}: 12px;
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    // The content placement items within the content placement module need top margin
+    // between themselves at low VP's. However, when paired with a heading, the first
+    // one should not have any margin. These are nested which make it extremely difficult
+    // to target just one instance of the content-placement-item.
+    // The simplest and cleanest way to accomplish this is using negative margin.
+    + .m-content-placement {
+        margin-top: -48px;
+    }
+
+    + .m-product-placement {
+        padding-top: 2px;
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "select",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10143312,
+            "description": "removes unnecessary height restriction on c-select class"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10380948,
+            "description": "fixes select to fallback to values when ids are missing"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9589448,
+            "description": "fixes border being added by default; border will only be added when f-border class is present alongside c-select class"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "new",
+            "ticket-id": 8974527,
+            "description": "adds f-border to generated select-menu and also adds support for f-flex"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 7050052,
+            "description": "adds disabled state and required flag"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "new",
+            "ticket-id": 7050052,
+            "description": "progressively enhance select to use select menu when js is available"
+        }
+    ]
+}

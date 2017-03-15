@@ -1,0 +1,239 @@
+// ==========================================================================
+// Component: Select menu
+// ==========================================================================
+
+.c-select-menu {
+    position: relative;
+    display: inline-block;
+
+    &.f-accent {
+        > a,
+        > button {
+            color: $color-accent;
+
+            &:after {
+                color: $color-foreground-60;
+            }
+
+            &:hover,
+            &:active {
+                color: $color-accent;
+
+                &:after {
+                    color: $color-foreground;
+                }
+            }
+        }
+    }
+
+    &.f-border {
+        [aria-expanded] {
+            margin-#{$left}: 8px;
+            box-sizing: border-box;
+            height: 100%;
+            border: 1px solid $color-foreground-60;
+
+            /* TODO: Task 8914325 - v-nilogi: should this have width set like the ul.c-menu?
+             * width: 296px;
+             * min-width: 64px;
+             * max-width: 368px;
+            */
+
+            &:hover {
+                border-color: $color-foreground-80;
+            }
+
+            &:active,
+            &:focus {
+                border-color: $color-accent;
+            }
+        }
+
+        + .c-select-menu.f-border,
+        + .c-select-menu.f-border.f-persist {
+            margin-top: 12px;
+        }
+    }
+
+    &.f-flex,
+    &.f-flex > [aria-expanded] {
+        width: 100%;
+        min-width: 88px;
+        max-width: 546px;
+    }
+
+    .c-menu {
+        position: absolute;
+        top: 100%; // make menu extend from the bottom of the parent
+    }
+
+    [aria-expanded="false"] + .c-menu[aria-hidden="true"] {
+        display: none;
+    }
+
+    > button {
+        border: 0;
+        background: transparent;
+        text-align: $left;
+    }
+
+    > a,
+    > button {
+        display: inline-block;
+        color: $color-foreground-80;
+        padding: 8px;
+        padding-#{$right}: 24px;
+        transform: translateX(set-direction-based-value(-8px, 8px));
+
+        &:after {
+            @include apply-glyph($glyph-chevron-down);
+            position: absolute;
+            font-size: 8px;
+            color: $color-foreground-80;
+            font-weight: $font-weight-bold;
+            #{$right}: 8px;
+            padding-top: 7px;
+        }
+
+        &:hover {
+            &,
+            &:after {
+                color: $color-foreground;
+            }
+        }
+
+        &:focus {
+            border-color: $color-accent;
+            outline: 1px dashed $color-foreground;
+
+            &:hover {
+                outline: none;
+            }
+        }
+    }
+
+    &[aria-disabled="true"] {
+        > a,
+        > button {
+            &,
+            &:hover,
+            &:focus,
+            &:active,
+            &:after {
+                color: $color-foreground-20;
+            }
+
+            &:hover {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .no-js &:hover > .c-menu,
+    .js & > [aria-expanded="true"] + .c-menu[aria-hidden="false"],
+    .js & > span[aria-expanded="true"] + .c-menu[aria-hidden="false"] {
+        display: block;
+        animation: fadeIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #{$theme-light} {
+        > a,
+        > button {
+            &,
+            &:after {
+                color: $color-shade-80;
+            }
+
+            &:hover {
+                &,
+                &:after {
+                    color: $color-shade;
+                }
+            }
+
+            &:focus {
+                outline-color: $color-shade;
+            }
+        }
+
+        &.f-border {
+            > a,
+            > button {
+                background: $color-tint-80;
+                border-color: $color-shade-60;
+                color: $color-shade-80;
+
+                &:after {
+                    color: $color-shade-80;
+                }
+
+                &:hover {
+                    background: $color-tint;
+                    border-color: $color-shade-80;
+                    color: $color-shade;
+
+                    &:after {
+                        color: $color-shade;
+                    }
+                }
+
+                &:focus {
+                    border-color: $color-shade;
+                }
+            }
+        }
+    }
+
+    #{$theme-dark} {
+        > a,
+        > button {
+            &,
+            &:after {
+                color: $color-tint-80;
+            }
+
+            &:hover {
+                &,
+                &:after {
+                    color: $color-tint;
+                }
+            }
+
+            &:focus {
+                outline-color: $color-tint;
+            }
+        }
+
+        &.f-border {
+            > a,
+            > button {
+                background: $color-tint-60;
+                border-color: $color-tint-60;
+                color: $color-shade-80;
+
+                &:after {
+                    color: $color-shade-80;
+                }
+
+                &:hover {
+                    color: $color-shade;
+                    background: $color-tint-80;
+                    border-color: $color-tint-80;
+
+                    &:after {
+                        color: $color-shade;
+                    }
+                }
+
+                &:focus {
+                    border-color: $color-tint;
+                }
+            }
+        }
+    }
+
+    + [class*="c-caption"],
+    [class*="c-paragraph"] {
+        padding-top: 24px;
+    }
+}

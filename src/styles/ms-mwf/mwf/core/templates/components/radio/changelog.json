@@ -1,0 +1,39 @@
+{
+    "name": "radio",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+           "type": "fixed",
+           "ticket-id": 10574856,
+           "description": "fixes an issue where captions were misaligned"
+        },
+        {
+           "type": "fixed",
+           "ticket-id": 10548903,
+           "description": "fixes an issue where items were extending outside their content area"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7472895,
+            "description": "fixes description fieldset id in test pages",
+            "internal": true
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9718909,
+            "description": "adds support to include a brief description with radio"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525271,
+            "description": "updates the template to use fieldset, legend, and aria-label to enhance the experience of screen-reader users"
+        }
+    ]
+}

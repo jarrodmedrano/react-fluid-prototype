@@ -1,0 +1,43 @@
+{
+    "name": "immersive hero item",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10747274,
+            "description": "refactored to extend from hero-item-base (new script dependency), inherits sloppy click functionallity now"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10518721,
+            "description": "fixes issue with initial image fade in for IE and Edge."
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10139978,
+            "description": "fixes issue with image size, text and button placement on scroll and when the module is lower than the top most element on the page."
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9896629,
+            "description": "fixes issue with image resize on vertical browser resize, debounce image resize function."
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9620097,
+            "description": "fixes an issue where certain styles were not being applied correctly on small viewports in Internet Explorer"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9582778,
+            "description": "adds fade-in animations to foreground content to improve loading experience and remove flash of content"
+        }
+    ]
+}

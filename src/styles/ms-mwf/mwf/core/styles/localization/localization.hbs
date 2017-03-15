@@ -1,0 +1,54 @@
+// ==========================================================================
+// Configure environment variables
+// ==========================================================================
+
+$ltie8:             {{ltie8}};              // from core/partner config.json
+$dir:               {{dir}};                // from localization.json
+$font-group:        {{font-group}};         // from localization.json
+$color-background:  {{color-background}};   // from core/partner config.json & themes.json
+$color-foreground:  {{color-foreground}};   // from core/partner config.json & themes.json
+$mwf:               {{mwf}};                // from core/partner config.json
+$uhf-namespace:     {{uhf-namespace}};      // from core/partner config.json
+
+// ==========================================================================
+// Required: Microsoft licensing and charset
+// ==========================================================================
+@import "../../core/styles/mwf_header";
+
+// ==========================================================================
+// Required: import framework base dependencies (mixins, variables, etc.)
+// ==========================================================================
+@import "../../core/styles/mwf_dependencies";
+
+// ==========================================================================
+// Required: import framework base styles
+// "mwf-base" will be converted to an external @import path if IE9 support
+// required (config IE9:true) and mwf_base.scss moved to that external @import file
+// additionally will be converted to uhf_base if config UHF:true
+// ==========================================================================
+{{mwf-base}}
+
+// ==========================================================================
+// Optional: import framework core components/modules (if config MWF:true)
+// import "../../core/styles/mwf_core";
+// ==========================================================================
+{{mwf-core}}
+
+// ==========================================================================
+// Optional: import UHF components/module dependencies (if standalone UHF partner)
+// import "../../partners/uhf/styles/uhf_dependencies";
+// ==========================================================================
+{{uhf-dependencies}}
+
+// ==========================================================================
+// Optional: import UHF core components (if not standalone UHF partner and config IE9:false)
+// import "../../partners/uhf/styles/uhf_core";
+// ==========================================================================
+{{uhf-core}}
+
+// ==========================================================================
+// Optional: import partner core styles (if applicable)
+// import "../../partners/{0}/styles/{0}-core";
+// ==========================================================================
+// scss-lint:disable FinalNewline
+{{partner-stylesheet}}

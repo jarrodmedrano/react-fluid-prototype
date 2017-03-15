@@ -1,0 +1,40 @@
+---
+title: MWF - Lists
+removeContainer: true
+indexedPage: true
+---
+
+{{!
+Tasks:
+1. Nick: The Choice summary component should be used across the top of the page.
+2. Restructure so that col-9 has h1
+}}
+
+<div data-grid="container">
+    <div data-grid="col-12 pad-12x stack-2">
+        <section data-grid="col-3">
+            {{> refine-menu-template list.refine-menu}}
+        </section>
+        <div data-grid="col-9" role="main">
+            <section>
+                <h1 class="c-heading-2">Top rated</h1>
+                <p class="c-paragraph"><small>Viewing 1-72 of 183 results</small></p>
+                <ul class="c-group">
+                    {{#each list.choice-summary}}
+                        {{> choice-summary-template this}}
+                    {{/each}}
+                </ul>
+                <div class="c-group f-wrap-items" id="search-results">
+                    {{#each list.top-rated-placements}}
+                        {{> product-placement-item-module this}}
+                    {{/each}}
+                    </div>
+                <p class="c-paragraph"><small>Viewing 1-72 of 183 results</small></p>
+            </section>
+            <hr class="c-divider">
+            <section>
+                {{> pagination-module}}
+            </section>
+        </div>
+    </div>
+</div>

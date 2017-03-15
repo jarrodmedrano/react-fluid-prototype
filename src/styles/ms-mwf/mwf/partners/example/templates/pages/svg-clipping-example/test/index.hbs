@@ -1,0 +1,124 @@
+---
+title: Example SVG clipping
+indexedPage: true
+---
+
+<div data-grid="col-12">
+    <h1 class="c-heading-2">SVG clipping</h1>
+    <h2 class="c-subheading-2">This example demonstrates how to achieve SVG clipping of an image</h2>
+    <hr class="c-divider">
+    <ul class="c-list">
+        <li>Create a relatively positioned container</li>
+        <li>Create an SVG tag with absolute positioning inside of the container</li>
+        <li>Place an image inside of the SVG</li>
+        <li>Create an SVG with a clipPath that has an id</li>
+        <li>In your CSS target your image and target the SVG clipPath ID eg. <pre>clip-path: url(#clipCircle);</pre></li>
+    </ul>
+
+    <h3 class="c-subheading-3">HTML</h3>
+    <hr class="c-divider">
+<pre>
+&lt;div id="imageWrapperCircle"&gt;
+    &lt;svg id="svg1" class="clip-svg"&gt;
+        &lt;image class='svg-image-1' width="150" height="150" xlink:href="http://placehold.it/150x150" /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+&lt;svg&gt;
+    &lt;defs&gt;
+        &lt;clipPath id="clipCircle"&gt;
+        &lt;circle cx="5" cy="5" r="140" /&gt;
+        &lt;/clipPath&gt;
+    &lt;/defs&gt;
+&lt;/svg&gt;
+</pre>
+
+    <h3 class="c-subheading-3">CSS</h3>
+    <hr class="c-divider">
+<pre>
+#imageWrapperCircle { 
+    position: relative;
+}
+
+.svg-image-1 { 
+    clip-path: url(#clipCircle);
+}
+
+.clip-svg { 
+    height: 250px; 
+    position: absolute; 
+    width: 250px;
+    left: 0;
+}
+
+#svg1 {
+    top: 0;
+}
+</pre>
+
+</div>
+
+<div data-grid="col-12">
+    <div id="imageWrapperCircle">
+        <svg id="svg1" class="clip-svg">
+            <image class='svg-image-1' width="150" height="150" xlink:href="http://placehold.it/150x150" />
+        </svg>
+    </div>
+
+    <div id="imageWrapperTriangle">
+        <svg id="svg2" class="clip-svg">
+            <image class='svg-image-2' width="300" height="300" xlink:href="http://placehold.it/300x300" />
+        </svg>
+    </div>
+
+    <svg>
+        <defs>
+            <clipPath id="clipFolder">
+            <polygon points="0 0, 100 0, 112 13, 240 13, 240 250, -250 250" />
+            </clipPath>
+        </defs>
+        <defs>
+            <clipPath id="clipCircle">
+            <circle cx="5" cy="5" r="140" />
+            </clipPath>
+        </defs>
+    </svg>
+</div>
+
+<style>
+    #imageWrapperCircle, 
+    #imageWrapperTriangle { 
+        position: relative;
+    }
+
+    .svg-image-1 { 
+        clip-path: url(#clipCircle);
+    }
+
+    .svg-image-2 { 
+        clip-path: url(#clipFolder);
+    }
+
+    .svg-image {
+        opacity: 1;
+    }
+
+    .clip-svg { 
+        height: 250px; 
+        position: absolute; 
+        width: 250px;
+        left: 0;
+    }
+    
+    #svg1 {
+        top: 0;
+    }
+    
+    #svg2 {
+        top: 250px;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        background: #eee;
+    }
+</style>

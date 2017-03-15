@@ -1,0 +1,6 @@
+// /* ==========================================================================
+// Function to generate values based on base unit
+// ============================================================================ */
+@function apply-base($value, $base-unit: $base) {
+    @return $value * $base-unit;
+}

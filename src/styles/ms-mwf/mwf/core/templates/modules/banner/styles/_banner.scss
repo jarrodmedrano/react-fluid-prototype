@@ -1,0 +1,46 @@
+// ==========================================================================
+// Module: Banner
+// ==========================================================================
+
+.m-banner {
+    display: block;
+    clear: both;
+    text-align: center;
+    float: none;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    blockquote {
+        @include apply-type-component(h3);
+        font-style: italic;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .c-heading-3 {
+        padding-top: 0;
+    }
+
+    .c-caption-1 {
+        @include apply-type(t6);
+        padding-top: 20px;
+        color: $color-foreground-60;
+    }
+
+    .c-image {
+        margin: 0 auto;
+        width: auto;
+        max-height: 70px;
+    }
+
+    .c-logo,
+    .c-image {
+        + .c-heading-3 {
+            padding-top: 10px;
+        }
+    }
+
+    a.c-call-to-action {
+        @include c-call-to-action-lightweight();
+    }
+}

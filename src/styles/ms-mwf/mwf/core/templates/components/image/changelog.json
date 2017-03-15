@@ -1,0 +1,40 @@
+{
+    "name": "image",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9925868,
+            "description": "removes the ability to have an aria-label based on new accessibility guidance"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9736737,
+            "description": "adds new options to provide left/right padding to images"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9007551,
+            "description": "changes handlebars files to check for f-pad option"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8734774,
+            "description": "adds new options to provide vertical padding to images"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "new",
+            "ticket-id": 8478668,
+            "description": "adds the ability to have an aria-label for images requiring a more verbose description to promote accessibility"
+        }
+    ]
+}

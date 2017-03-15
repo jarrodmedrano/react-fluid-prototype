@@ -1,0 +1,75 @@
+// ==========================================================================
+// Component: Auto suggest
+// ==========================================================================
+
+/* .c-auto-suggest is deprecated,
+    use .m-auto-suggest instead
+    TODO: Remove .c-auto-suggest in v.2.0 */
+.m-auto-suggest,
+.c-auto-suggest {
+    @include left-right-padding($base-0);
+    padding-top: 0;
+    display: block;
+
+    .c-menu {
+        position: absolute;
+        $left: 0;
+        width: 100%;
+        background: $color-background;
+        border-top: 1px solid;
+        border-color: $color-foreground-20;
+
+        .c-menu-item {
+            position: static;
+
+            > span,
+            > a {
+                background: $color-background;
+
+                &:hover {
+                    background: $color-foreground-10;
+                }
+            }
+        }
+
+        &[aria-hidden="true"] {
+            display: none;
+        }
+
+        &[data-js-auto-suggest-position="default"] {
+            top: 38px;
+        }
+
+        &[data-js-auto-suggest-position="above"] {
+            bottom: 100%;
+        }
+
+        &.f-auto-suggest-no-results {
+            .c-menu-item span {
+                color: $color-foreground-60;
+            }
+
+            &[data-js-auto-suggest-position="default"] {
+                top: 38px;
+            }
+
+            &[data-js-auto-suggest-position="above"] {
+                bottom: 100%;
+            }
+        }
+
+        &.f-auto-suggest-scroll {
+            overflow-y: auto;
+            max-height: none;
+        }
+    }
+}
+
+.c-label {
+    + .c-auto-suggest,
+    + .m-auto-suggest {
+        &.c-search {
+            margin-top: 0;
+        }
+    }
+}

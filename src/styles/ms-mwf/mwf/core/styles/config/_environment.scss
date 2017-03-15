@@ -1,0 +1,7 @@
+// ==========================================================================
+// Environment variables
+// ==========================================================================
+$ltie8: false !default;         // from core/partner config.json (supports IE8)
+$dir: ltr !default;             // from localization.json (direction ltr/rtl)
+$mwf: true !default;            // from core/partner config.json (indicates if MWF core components/modules are included when CSS is assembled)
+$uhf-namespace: "" !default;    // from core/partner config.json (UHF prefix, when standalone UHF's CSS is assembled)

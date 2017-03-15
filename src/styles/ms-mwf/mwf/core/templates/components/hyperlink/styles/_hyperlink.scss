@@ -1,0 +1,32 @@
+// ==========================================================================
+// Component: Hyperlink
+// ==========================================================================
+
+a.c-hyperlink {
+    text-decoration: none;
+    color: $color-accent;
+
+    &:not(.f-image) {
+        @include free-text-states;
+    }
+
+    #{$theme-light} {
+        text-decoration: underline;
+        color: $color-shade;
+    }
+
+    #{$theme-dark} {
+        text-decoration: underline;
+        color: $color-tint;
+
+        &.f-disabled,
+        &[aria-disabled="true"] {
+            color: $color-tint-60;
+
+            &:hover {
+                text-decoration: none;
+                cursor: default;
+            }
+        }
+    }
+}

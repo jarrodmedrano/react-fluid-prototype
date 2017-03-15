@@ -1,0 +1,59 @@
+{
+    "name": "select menu",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10436252,
+            "description": "fixes focus issues while running NVDA and JAWS"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9926312,
+            "description": "improved accessibility and screen reader support"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9725357,
+            "description": "adds f-accent option to enable accent-themed select menus"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8776622,
+            "description": "updates select and select-menu to be more accessible by adding tabindex of 0 to the trigger, the list, and the spans on select, adding role listbox to the menu in select, adding role option to the list items in select; updates typescript to handle accessible keyboard keycodes across select and select menu"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8776622,
+            "description": "adds new option of f-flex to allow select-menu to fill the width of its container"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8525303,
+            "description": "updates select menu to close when the last item on the list is tabbed off, removes redundant aria-haspopup"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8407191,
+            "description": "fixes issue where select-menu would not close when an item was selected"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8121762,
+            "description": "updates f-border to also support fieldset"
+        }
+    ]
+}

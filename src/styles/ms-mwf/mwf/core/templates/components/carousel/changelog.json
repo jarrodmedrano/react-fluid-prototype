@@ -1,0 +1,57 @@
+{
+    "name": "carousel",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10301857,
+            "description": "fixes an issue where an autoplaying carousel will play while a CTA inside of a slide is focused"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8865684,
+            "description": "changed having multi and single slide carousel code co-mingled and duplicated carousel code in other modules. Carousel is now deprecated an either MultiSlideCarousel or SingleSlideCarousel should be used in its place"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9234177,
+            "description": "fixes an issue where the touch swipe not working when a user swipes diagonally"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9545488,
+            "description": "fixes tracking item focus and show/hiding flippers in gallery mode"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9260013,
+            "description": "fixes an issue where the flipper arrows do not work when screen width is less than the width of the content"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9502030,
+            "description": "fixes an issue where the carousel can scroll beyond the end of the single slide content if the content width changes due to carousel resizing"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "new",
+            "ticket-id": 8094624,
+            "description": "adds pub/sub support so subscribers can receive slide change notifications"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525649,
+            "description": "updates multi-slide carousels with tab/tabpanel roles to enhance accessibility"
+        }
+    ]
+}

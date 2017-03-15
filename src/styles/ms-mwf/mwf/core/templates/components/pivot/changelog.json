@@ -1,0 +1,59 @@
+{
+    "name": "pivot",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8865684,
+            "description": "changed Pivot to implement IController"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10629345,
+            "description": "fixed Pivot to support nested Pivots"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 10187321,
+            "description": "adds aria-selected attributes to pivot tab elements to enhance accessibility"
+        }
+    ],
+    "v1.17.1": [
+        {
+            "type": "fixed",
+            "ticket-id": 10163224,
+            "description": "fixes an issue with pivot setting focus when the pivot behavior is first initialized"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8687538,
+            "description": "updates the focus state styles to be closer to Windows guidance"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "new",
+            "ticket-id": 9450192,
+            "description": "adds keyboard support for using left/right arrow keys to move between pivot tabs"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "new",
+            "ticket-id": 8218176,
+            "description": "adds pub/sub support so subscribers can receive change notifications"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8088776,
+            "description": "fixes an issue with pivot navigating to links"
+        }
+    ]
+}

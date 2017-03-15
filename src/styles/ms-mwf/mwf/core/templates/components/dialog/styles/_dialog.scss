@@ -1,0 +1,401 @@
+// ==========================================================================
+// Component: Dialog
+// ==========================================================================
+
+.c-dialog {
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    [role="dialog"] {
+        display: block;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: $color-background;
+        border: 1px solid $color-accent;
+        margin: 0 auto;
+        max-height: 760px;
+        max-width: 546px;
+        min-width: 296px;
+        width: 100%;
+        padding: 24px;
+        z-index: map-get($z-index, dialog);
+
+        &:focus {
+            outline: none;
+        }
+
+        [role="document"] {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+        }
+
+        // The below code exists to prevent a breaking change due to
+        // styles added specific to h2, which redefines all h2's to look a certain way
+        // This should be removed as of v.2.0 and the hbs/json files should be updated
+        // to include a class as a hook instead of baking the style into the html element
+        h2 {
+            @include apply-type-component(h5);
+            line-height: normal;
+            padding: 0;
+
+            &.c-heading-1 {
+                @include apply-type-component(h1);
+
+                &.f-lean {
+                    padding-top: 0;
+                }
+            }
+
+            &.c-heading-2 {
+                @include apply-type-component(h2);
+
+                &.f-lean {
+                    padding-top: 0;
+                }
+            }
+
+            &.c-heading-3 {
+                @include apply-type-component(h3);
+
+                &.f-lean {
+                    padding-top: 0;
+                }
+            }
+
+            &.c-heading-4 {
+                @include apply-type-component(h4);
+
+                &.f-lean {
+                    padding-top: 0;
+                }
+            }
+
+            &.c-heading-5 {
+                @include apply-type-component(h5);
+
+                &.f-lean {
+                    padding-top: 0;
+                }
+            }
+
+            &.c-heading-6 {
+                @include apply-type-component(h6);
+
+                &.f-lean {
+                    padding-top: 0;
+                }
+            }
+        }
+        // End removal in v.2.0
+
+        .c-divider {
+            margin: 16px 0;
+        }
+
+        .c-paragraph {
+            &:first-of-type {
+                padding-top: 8px;
+            }
+        }
+
+        .c-group {
+            display: block;
+
+            // Code below is required because of c-group override above affects all instances of
+            // c-group within c-dialog. Flex-wrap must be reset here as well to work at all
+            &.f-wrap-items {
+                display: flex;
+            }
+
+            .c-button {
+                float: $right;
+                margin-top: 24px;
+                width: 50%;
+                max-width: none;
+                margin-#{$right}: 0;
+
+                + .c-button {
+                    float: $left;
+                    width: calc(50% - 4px);
+                }
+            }
+        }
+
+        [class^="c-heading-"] {
+            + .c-price {
+                &.f-large {
+                    padding-top: 8px;
+                    padding-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    &.f-flow {
+        [role="dialog"] {
+            max-width: 640px;
+        }
+    }
+
+    &.f-flow,
+    &.f-lightbox {
+        [role="dialog"] {
+            padding: 36px;
+
+            > button.c-glyph {
+                padding: 0;
+                background: none;
+                border: 0;
+            }
+
+            > .c-glyph {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                #{$right}: 0;
+                top: 0;
+                color: $color-foreground-60;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-foreground-80;
+                }
+
+                &:focus {
+                    outline: 1px dashed $color-foreground-80;
+                }
+
+                &:active {
+                    color: $color-foreground;
+                }
+
+                &:before {
+                    margin: 10px;
+                    vertical-align: middle;
+                }
+            }
+
+            .f-dialog-scroll {
+                overflow-y: auto;
+                max-height: 600px;
+                min-width: 245px;
+            }
+
+            .c-group {
+                .c-button {
+                    margin-top: 36px;
+                }
+            }
+        }
+    }
+
+    &.f-lightbox {
+        [role="dialog"] {
+            background: $color-brand-neutral-80;
+            border-color: transparent;
+            max-width: 1066px;
+            overflow: visible;
+            padding: 0;
+
+            > .c-glyph {
+                top: -36px;
+                color: $color-tint-60;
+
+                &:hover {
+                    color: $color-tint-80;
+                }
+
+                &:focus {
+                    outline-color: $color-tint-60;
+                }
+            }
+
+            [role="document"] {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        [role="presentation"] {
+            background: $color-shade-90;
+
+            + button.c-glyph {
+                padding: 0;
+                background: none;
+                border: 0;
+                width: 36px;
+                height: 36px;
+
+                &:before {
+                    vertical-align: top;
+                }
+            }
+
+            + .c-glyph {
+                position: absolute;
+                top: 24px;
+                #{$right}: 24px;
+                color: $color-tint-60;
+                font-size: 36px;
+                z-index: map-get($z-index, dialog);
+
+                &:hover {
+                    color: $color-tint-80;
+                }
+
+                &:focus {
+                    outline: 1px dashed $color-tint-60;
+                }
+            }
+        }
+    }
+
+    [role="presentation"] {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: $color-background-90;
+        z-index: map-get($z-index, dialog);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #{$theme-light} {
+        [role="dialog"] {
+            background: $color-tint;
+            border-color: $color-shade;
+
+            .c-glyph {
+                color: $color-shade;
+
+                &:hover {
+                    color: $color-shade-80;
+                }
+
+                &:focus {
+                    outline-color: $color-shade-60;
+                }
+            }
+        }
+
+        [role="presentation"] {
+            background: $color-tint-90;
+        }
+    }
+
+    #{$theme-dark} {
+        [role="dialog"] {
+            background: $color-shade;
+            border-color: $color-tint;
+
+            .c-glyph {
+                color: $color-tint;
+
+                &:hover {
+                    color: $color-tint-80;
+                }
+
+                &:focus {
+                    outline-color: $color-tint-60;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        &.f-flow,
+        &.f-lightbox {
+            [role="dialog"] {
+                padding: 24px;
+            }
+        }
+
+        &.f-flow {
+            [role="dialog"] {
+                width: 80%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        [role="dialog"] {
+            top: 0;
+            left: 0;
+            right: 0;
+            transform: none;
+            margin: 12px;
+            max-height: 342px;
+
+            .c-group {
+                display: block;
+                padding: 0;
+
+                .c-button {
+                    float: none;
+                    margin-top: 24px;
+                    width: 100%;
+                    max-width: none;
+                    margin-#{$right}: 0;
+
+                    + .c-button {
+                        float: none;
+                        width: 100%;
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+
+        &.f-lightbox {
+            [role="dialog"] {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                max-height: none;
+                margin: 0;
+            }
+        }
+
+        &.f-flow {
+            [role="dialog"] {
+                height: auto;
+                max-height: 100%;
+                min-height: 250px;
+                width: auto;
+
+                .f-dialog-scroll {
+                    overflow-y: auto;
+                    flex-shrink: 50;
+                    flex-basis: 100%;
+                    height: 100%;
+                    max-height: none;
+                }
+
+                .c-group {
+                    &.f-wrap-items {
+                        min-height: 100%;
+                    }
+
+                    .c-button {
+                        + .c-button {
+                            margin-top: 12px;
+                            float: none;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

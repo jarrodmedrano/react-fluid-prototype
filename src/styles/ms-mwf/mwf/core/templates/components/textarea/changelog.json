@@ -1,0 +1,19 @@
+{
+    "name": "textarea",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10413421,
+            "description": "fixes overflow issue found on iPhone 5 viewports"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "new",
+            "ticket-id": 8120372,
+            "description": "adds f-flex option to textarea component"
+        }
+    ]
+}

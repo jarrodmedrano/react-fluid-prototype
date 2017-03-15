@@ -1,0 +1,187 @@
+.c-universal-footer {
+    background: flatten-overlay($color-background, $color-foreground, 5);
+    margin-top: $base-12x;
+
+    // style footer hyperlinks
+    a.c-hyperlink {
+        &:focus {
+            outline: transparent;
+            background: $color-shade-10 content-box;
+        }
+
+        &:focus,
+        &:hover {
+            color: $color-shade-90;
+            text-decoration: underline;
+        }
+
+        &:active {
+            background: none;
+            color: $color-shade-80;
+        }
+    }
+
+    nav {
+        @include clearfix();
+        margin: 0 auto;
+        max-width: calc(1600px + 10%);
+        padding: 0 5%;
+
+        div > div {
+            @include clearfix();
+            box-sizing: border-box;
+            float: $left;
+            min-height: 1px;
+            padding: 0 12px;
+            width: 16.6666666667%;
+            zoom: 1;
+
+            .c-heading-4 {
+                @include apply-type(t7, false, true);
+            }
+
+            .c-heading-4,
+            a.c-hyperlink {
+                color: $color-foreground-60;
+                word-break: break-all;
+                display: inline-block;
+            }
+
+            ul.c-list {
+                @include apply-type(t9, false, true);
+                margin-top: 0;
+            }
+
+            &:first-child {
+                padding-#{$left}: 0;
+            }
+        }
+    }
+
+    > section {
+        @include clearfix();
+        background: flatten-overlay($color-background, $color-foreground, 5);
+        margin: 0 auto;
+        max-width: calc(1600px + 10%);
+        padding: 30px 5% 16px;
+
+        // Language selector
+        > a.c-hyperlink {
+            @include apply-type(t9, false, true);
+            display: inline-block;
+            padding-#{$right}: apply-base(6);
+            color: $color-foreground-60;
+            float: $left;
+            white-space: nowrap;
+
+            &.c-glyph {
+                @include apply-type(t9, false, true);
+                display: inline-block;
+                color: $color-foreground-60;
+                float: $left;
+
+                &:before {
+                    @include apply-type(t5, false, true);
+                    margin-#{$right}: 10px;
+                    color: $color-foreground-60;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        ul.c-list {
+            @include apply-type(t9, false, true);
+            float: $right;
+            margin: 3px 0;
+
+            li {
+                color: $color-foreground-60;
+                display: inline-block;
+                padding: set-direction-based-value(0 24px 4px 0, 0 0 4px 24px);
+
+                a.c-hyperlink {
+                    color: $color-foreground-60;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        nav {
+            padding: 30px 36px 16px;
+
+            // wrapping div needed for clearing 3-up
+            div {
+                @include clearfix();
+
+                > div {
+                    width: 33.33333%;
+
+                    &:first-child {
+                        padding-#{$left}: 12px;
+                    }
+                }
+            }
+        }
+
+        > section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px 36px 16px;
+
+            > a.c-hyperlink {
+                margin-#{$right}: auto;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        > section {
+            padding: 30px 24px 16px;
+
+            > a.c-hyperlink {
+                width: 100%;
+
+                + ul.c-list {
+                    width: 100%;
+                }
+
+                &,
+                &.c-glyph {
+                    float: none;
+                }
+            }
+
+            ul.c-list {
+                width: 100%;
+                float: none;
+                text-align: $left;
+                margin-top: 12px;
+
+                li {
+                    padding: set-direction-based-value(6px 4px 0 6px, 6px 6px 0 4px);
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        nav {
+            // 100% at lowest breakpoint to deal with possible long strings
+            div > div {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        > section {
+            ul.c-list {
+                float: $left;
+
+                li {
+                    padding: set-direction-based-value(6px 10px 0 0, 6px 0 0 10px);
+                }
+            }
+        }
+    }
+}

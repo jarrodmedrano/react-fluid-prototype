@@ -1,0 +1,12 @@
+{
+    "name": "track-list",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 7892673,
+            "description": "adds track list module"
+        }
+    ]
+}

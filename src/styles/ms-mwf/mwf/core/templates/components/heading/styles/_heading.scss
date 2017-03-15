@@ -1,0 +1,262 @@
+// ==========================================================================
+// Component: Heading
+//
+// Note:  - Headings are applied through mixin apply-type...
+// - Top margin was used to avoid clipping which could happen when elements
+// are absolutely positioned which was the alternate approach to solving.
+// - Font sizes have two core sizes as shown below in media queries which
+// dictate the need for different margins
+// ==========================================================================
+
+[class^="c-heading-"] {
+    @include clearfix();
+
+    &.f-lean {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    // specificity is needed prevent this on headings that contain hyperlinks
+    span + a.c-hyperlink {
+        @include apply-type(t7, false, true);
+
+        float: $right;
+        margin-#{$left}: 12px;
+        font-weight: $font-weight-normal;
+    }
+
+    + .c-label {
+        margin-top: 8px;
+    }
+
+    form & {
+        padding-top: 24px;
+    }
+}
+
+.c-heading-1 span + a.c-hyperlink {
+    margin-top: 45px;
+}
+
+.c-heading-2 span + a.c-hyperlink {
+    margin-top: 31px;
+}
+
+.c-heading-3 span + a.c-hyperlink {
+    margin-top: 18px;
+}
+
+.c-heading-4 span + a.c-hyperlink {
+    margin-top: 8px;
+}
+
+.c-heading-5 span + a.c-hyperlink {
+    margin-top: 4px;
+}
+
+.c-heading-6 span + a.c-hyperlink {
+    margin-top: 3px;
+}
+
+@media (max-width: $vp2-max) {
+
+    .c-heading-1 span + a.c-hyperlink {
+        margin-top: 31px;
+    }
+
+    .c-heading-2 span + a.c-hyperlink {
+        margin-top: 18px;
+    }
+
+    .c-heading-3 span + a.c-hyperlink {
+        margin-top: 10px;
+    }
+
+    .c-heading-4 span + a.c-hyperlink {
+        margin-top: 4px;
+    }
+
+    .c-heading-5 span + a.c-hyperlink {
+        margin-top: 3px;
+    }
+
+    .c-heading-6 span + a.c-hyperlink {
+        margin-top: 0;
+    }
+}
+
+@mixin resetHeading() {
+    &.c-heading-1,
+    &.c-heading-2,
+    &.c-heading-3 {
+        padding-top: 38px;
+    }
+
+    &.c-heading-4 {
+        padding-top: 36px;
+    }
+
+    &.c-heading-5 {
+        padding-top: 37px;
+    }
+
+    &.c-heading-6 {
+        padding-top: 39px;
+    }
+}
+
+@mixin resetStack() {
+    @media screen and (max-width: $vp5-max) {
+        [data-grid~="stack-5"] > [data-grid] {
+            @include resetHeading();
+        }
+    }
+
+    @media screen and (max-width: $vp4-max) {
+        [data-grid~="stack-4"] > [data-grid] {
+            @include resetHeading();
+        }
+    }
+
+    @media screen and (max-width: $vp3-max) {
+        [data-grid~="stack-3"] > [data-grid] {
+            @include resetHeading();
+        }
+    }
+
+    @media screen and (max-width: $vp2-max)  {
+        [data-grid~="stack-2"] > [data-grid] {
+            @include resetHeading();
+        }
+    }
+}
+
+.f-initial-baseline-large {
+    &.c-heading-2 {
+        padding-top: 52px;
+    }
+
+    &.c-heading-3 {
+        padding-top: 65px;
+    }
+
+    &.c-heading-4 {
+        padding-top: 75px;
+    }
+
+    &.c-heading-5 {
+        padding-top: 79px;
+    }
+
+    &.c-heading-6 {
+        padding-top: 80px;
+    }
+
+    @media (max-width: $vp3-max) {
+        &.c-heading-2 {
+            padding-top: 51px;
+        }
+
+        &.c-heading-3 {
+            padding-top: 65px;
+        }
+
+        &.c-heading-4 {
+            padding-top: 75px;
+        }
+
+        &.c-heading-5 {
+            padding-top: 79px;
+        }
+
+        &.c-heading-6 {
+            padding-top: 80px;
+        }
+    }
+
+    @media (max-width: $vp2-max) {
+        &.c-heading-2 {
+            padding-top: 50px;
+        }
+
+        &.c-heading-3 {
+            padding-top: 58px;
+        }
+
+        &.c-heading-4 {
+            padding-top: 64px;
+        }
+
+        &.c-heading-5 {
+            padding-top: 65px;
+        }
+
+        &.c-heading-6 {
+            padding-top: 68px;
+        }
+    }
+
+    @media (max-width: $vp1-max) {
+        @include resetHeading();
+    }
+
+    @include resetStack();
+}
+
+.f-initial-baseline-small {
+    &.c-heading-1 {
+        padding-top: 4px;
+    }
+
+    &.c-heading-2 {
+        padding-top: 18px;
+    }
+
+    &.c-heading-3 {
+        padding-top: 31px;
+    }
+
+    &.c-heading-4 {
+        padding-top: 41px;
+    }
+
+    &.c-heading-5 {
+        padding-top: 45px;
+    }
+
+    &.c-heading-6 {
+        padding-top: 46px;
+    }
+
+    @media (max-width: $vp2-max) {
+        &.c-heading-1 {
+            padding-top: 4px;
+        }
+
+        &.c-heading-2 {
+            padding-top: 17px;
+        }
+
+        &.c-heading-3 {
+            padding-top: 25px;
+        }
+
+        &.c-heading-4 {
+            padding-top: 31px;
+        }
+
+        &.c-heading-5 {
+            padding-top: 32px;
+        }
+
+        &.c-heading-6 {
+            padding-top: 35px;
+        }
+    }
+
+    @media (max-width: $vp1-max) {
+        @include resetHeading();
+    }
+
+    @include resetStack();
+}

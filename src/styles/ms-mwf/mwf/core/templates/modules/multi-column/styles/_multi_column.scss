@@ -1,0 +1,78 @@
+.m-multi-column {
+    > div,
+    > .c-list {
+        column-gap: 24px;
+    }
+
+    > .c-list {
+        // swap padding to Hyperlink
+        // except leave 1px top/bottom pixel spacing to allow for focus outline in column height calculation
+        // this is for a Chrome bug that puts the bottom border of Hyperlink focus outline
+        // on the top of next column since focus outline does not "have layout"
+        > li {
+            padding: 1px 0;
+
+            a.c-hyperlink {
+                padding: 7px 0;
+                display: inline-block;
+            }
+        }
+    }
+
+    // mobile first
+    &,
+    &.f-columns-1,
+    &.f-columns-2,
+    &.f-columns-3,
+    &.f-columns-4,
+    &.f-columns-5 {
+        > div,
+        > .c-list {
+            columns: 1;
+        }
+    }
+
+    // modifications per breakpoints
+    @media only screen and (min-width: $vp2) {
+        &.f-columns-2,
+        &.f-columns-3,
+        &.f-columns-4,
+        &.f-columns-5 {
+            > div,
+            > .c-list {
+                columns: 2;
+            }
+        }
+    }
+
+    // applies to vp3 AND vp4
+    @media only screen and (min-width: $vp3) {
+        &.f-columns-3,
+        &.f-columns-4,
+        &.f-columns-5 {
+            > div,
+            > .c-list {
+                columns: 3;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp5) {
+        &.f-columns-4,
+        &.f-columns-5 {
+            > div,
+            > .c-list {
+                columns: 4;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp6) {
+        &.f-columns-5 {
+            > div,
+            > .c-list {
+                columns: 5;
+            }
+        }
+    }
+}

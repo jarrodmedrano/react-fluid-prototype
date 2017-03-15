@@ -1,0 +1,26 @@
+{
+    "name": "image",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 9925802,
+            "description": "adds the ability for image module to have a caption"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9925042,
+            "description": "numerous accessibility updates"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8353753,
+            "description": "adds image as a new module"
+        }
+    ]
+}

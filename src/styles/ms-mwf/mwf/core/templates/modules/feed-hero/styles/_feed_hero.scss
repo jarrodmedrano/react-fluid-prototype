@@ -1,0 +1,28 @@
+.m-feed-hero {
+    padding: 0;
+
+    .c-carousel {
+        @media only screen and (max-width: $vp1-max) {
+            .c-sequence-indicator {
+                bottom: 12px;
+            }
+        }
+
+        .m-feed-hero-item {
+            > div {
+                bottom: 48px;
+
+                @media only screen and (max-width: $vp1-max) {
+                    bottom: 28px;
+                }
+            }
+        }
+    }
+}
+
+// when feed hero follows another module give it top padding
+[class^="m-"] {
+    + .m-feed-hero {
+        padding-top: 48px;
+    }
+}

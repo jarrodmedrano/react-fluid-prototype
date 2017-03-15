@@ -1,0 +1,19 @@
+{
+    "name": "flipper",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8609500,
+            "description": "removes title attribute from flipper for accessibility standards"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8478668,
+            "description": "updates flipper to not output an aria-label if the flipper is hidden from screen readers"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "histogram",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10571334,
+            "description": "fixes an issue where histogram was extending outside its container causing issues with page margins at low viewports"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9582461,
+            "description": "fixes focus treatment for histogram"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8143191,
+            "description": "fixes inaccurate numeric data for improved bar display percentages"
+        }
+    ]
+}

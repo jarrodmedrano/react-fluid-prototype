@@ -1,0 +1,262 @@
+$page-bar-height: 60px;
+
+.m-page-bar {
+    position: relative;
+    min-width: inherit;
+    padding-top: 0;
+    background: $color-background;
+    border-bottom: 1px solid flatten-overlay($color-background, $color-foreground, 10);
+    display: flex;
+
+    &.f-hidden {
+        display: none;
+    }
+
+    &.f-sticky {
+        z-index: map-get($z-index, nav);
+        visibility: hidden;
+        position: fixed;
+        top: -$page-bar-height;
+        transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+
+        &.f-show {
+            visibility: visible;
+            top: 0;
+        }
+
+        &[itemscope] {
+            > div {
+                &:first-child {
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    > div {
+        height: $page-bar-height;
+        float: $right;
+        display: flex;
+        flex: 1;
+        flex-direction: row-reverse;
+
+        &:before {
+            content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+
+        &:first-child {
+            float: $left;
+        }
+
+        .c-call-to-action {
+            color: $color-tint;
+        }
+
+        [class^="c-heading-"] {
+            @include ellipsis();
+            padding-top: 0;
+            margin-#{$right}: 8px;
+
+            .c-hyperlink {
+                float: none;
+            }
+        }
+
+        .context-menu {
+            [class^="c-heading-"] {
+                float: $left;
+                padding-top: 5px;
+
+                + .c-list li:first-child {
+                    margin-#{$left}: 24px;
+                }
+            }
+
+            .c-list {
+                margin: 0;
+                white-space: nowrap;
+
+                li {
+                    display: inline-block;
+                    margin: 0 24px;
+
+                    &.f-active .c-hyperlink {
+                        color: $color-foreground;
+                    }
+
+                    .c-hyperlink {
+                        color: flatten-overlay($color-background, $color-foreground, 65);
+                    }
+                }
+            }
+
+            .c-select-menu {
+                display: none;
+                float: $left;
+
+                > a {
+                    margin-#{$left}: 24px;
+                }
+
+                > .c-menu {
+                    top: 90%;
+                    #{$left}: 24px;
+                }
+            }
+        }
+
+        > div {
+            width: 98%;
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+            align-self: center;
+
+            > div {
+                float: $left;
+                width: inherit;
+
+                + div {
+                    display: block;
+                    width: 100%;
+                }
+
+                > .c-hyperlink {
+                    @include ellipsis();
+                    display: block;
+                    margin: 0;
+                }
+            }
+        }
+
+        > .c-price {
+            width: auto;
+            float: $right;
+            padding: 20px 0;
+            margin-#{$right}: 24px;
+
+            > s {
+                float: none;
+                display: block;
+
+                + span {
+                    margin-#{$left}: -0.2em;
+                }
+            }
+        }
+
+        > .c-call-to-action {
+            float: $right;
+            margin: 10px 0;
+            max-width: 100%;
+
+        }
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        > div {
+            width: 40%;
+
+            &:first-child {
+                width: 60%;
+            }
+
+            .context-menu {
+                .c-list {
+                    display: none;
+                }
+
+                .c-select-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        width: 100%;
+
+        > div {
+            width: 50%;
+
+            > .c-price {
+                > s {
+                    &,
+                    + span {
+                        display: none;
+                    }
+                }
+
+                > meta {
+                    + span {
+                        width: 20%;
+
+                        + span {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                width: 50%;
+            }
+
+            .context-menu {
+                [class^="c-heading-"] {
+                    padding-top: 8px;
+                    float: none;
+                }
+
+                > .c-select-menu {
+                    > a {
+                        margin-#{$left}: 0;
+                    }
+
+                    > .c-menu {
+                        #{$left}: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        &.f-sticky {
+            &[itemscope] {
+                > div {
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:last-child {
+                        width: 100%;
+                        overflow: hidden;
+
+                        > .c-price {
+                            width: 100%;
+                            float: none;
+                            margin-#{$right}: 4px;
+
+                            > meta {
+                                + span {
+                                    width: auto;
+                                }
+                            }
+                        }
+
+                        > .c-call-to-action {
+                            + .c-price {
+                                display: flex;
+                                flex: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
