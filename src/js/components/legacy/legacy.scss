@@ -17,8 +17,8 @@
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .c-feature.f-align-left > div.c-video, .c-feature.f-align-right > div.c-video {
-    transform: translateY(-50%);
-    top: 50%;
+    //transform: translateY(-50%);
+    //top: 50%;
     width: 60%;
     max-width: 60%;
   }
@@ -60,26 +60,26 @@
     max-height: 120px;
   }
 
-  @media only screen and (min-width: 768px) and (orientation: landscape) {
-    .c-feature.f-align-left picture {
-      position: absolute;
-      right: 0;
-    }
-
-    .c-feature.f-align-right picture {
-      position: absolute;
-      left: 0;
-    }
-
-    .feature-image {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-
-  @media only screen and (min-width: 1400px) {
-    .c-structured-list .f-column .f-row [data-grid=col-10] {
-      padding-left: 0;
-    }
-  }
+  //@media only screen and (min-width: 768px) and (orientation: landscape) {
+  //  .c-feature.f-align-left picture {
+  //    position: absolute;
+  //    right: 0;
+  //  }
+  //
+  //  .c-feature.f-align-right picture {
+  //    position: absolute;
+  //    left: 0;
+  //  }
+  //
+  //  .feature-image {
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //  }
+  //}
+  //
+  //@media only screen and (min-width: 1400px) {
+  //  .c-structured-list .f-column .f-row [data-grid=col-10] {
+  //    padding-left: 0;
+  //  }
+  //}
 }
