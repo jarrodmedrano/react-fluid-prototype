@@ -1,0 +1,12 @@
+{
+    "name": "media gallery",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10135181,
+            "description": "fixes an issue where the focus and active states for the play trigger were visually broken"
+        }
+    ]
+}

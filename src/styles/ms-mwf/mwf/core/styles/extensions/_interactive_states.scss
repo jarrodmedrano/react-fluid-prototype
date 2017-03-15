@@ -1,0 +1,5 @@
+.x-hidden-focus,
+.x-hidden-focus:before,
+.x-hidden-focus + span:before {
+    outline-color: transparent !important;
+}

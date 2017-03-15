@@ -1,0 +1,26 @@
+{
+    "name": "link navigation",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 10133966,
+            "description": "adds an option to allow for left aligned text links"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9180206,
+            "description": "fixes an issue where there was not enough space between items when multiple rows existed"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "new",
+            "ticket-id": 8525491,
+            "description": "adds aria-labelledby attribute to the nav element, and an id to the heading element, to assign as the nav element's accessible name"
+        }
+    ]
+}

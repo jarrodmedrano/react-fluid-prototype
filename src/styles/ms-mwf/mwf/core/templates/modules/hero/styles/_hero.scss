@@ -1,0 +1,25 @@
+.m-hero {
+    @include left-right-padding($base-0);
+    padding-top: 0;
+
+    @media only screen and (max-width: $vp3-max) {
+        .m-hero-item,
+        .c-hero {
+            @include left-right-padding($base-9x);
+        }
+    }
+
+    @media only screen and (max-width: $vp2-max) {
+        .m-hero-item,
+        .c-hero {
+            @include left-right-padding($base-0);
+        }
+    }
+}
+
+[class^="m-"] {
+    + .m-hero {
+        padding-top: 48px;
+        clear: both;
+    }
+}

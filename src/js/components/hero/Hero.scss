@@ -1,3 +1,6 @@
+@import '../../../styles/ms-mwf/mwf/core/styles/config/environment';
+@import '../../../styles/ms-mwf/mwf/core/styles/utilities/internationalization';
+
 .c-hero.theme-dark {
   background: #000;
 }
@@ -36,5 +39,11 @@ video {
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
     }
+  }
+}
+
+.m-card-item {
+  div > .c-call-to-action {
+    padding: set-direction-based-value(10px 22px 7px 24px, 10px 24px 7px 22px);
   }
 }

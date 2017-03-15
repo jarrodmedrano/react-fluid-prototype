@@ -1,0 +1,74 @@
+// ==========================================================================
+// Component: Breadcrumb
+// ==========================================================================
+
+// ul.c-breadcrumb deprecated as of v.1.18, use ol.c-breadcrumb
+// TODO: Remove ul.c-breadcrumb references as of v.2.0
+ul.c-breadcrumb,
+ol.c-breadcrumb {
+    display: flex;
+    margin-top: 12px;
+    flex-flow: row wrap;
+
+    li {
+        @include apply-type(t8, false, true);
+        display: inline-block;
+        padding-#{$right}: 8px;
+        color: $color-accent;
+
+        &:after {
+            content: set-direction-based-value("/", "\\");
+            padding-#{$left}: 8px;
+            color: $color-foreground-60;
+        }
+
+        &:last-child:after {
+            content: '';
+            padding: 0;
+        }
+
+        &:last-child,
+        &:last-child a {
+            color: $color-foreground-60;
+        }
+
+        a {
+            @include apply-type(t8, false, true);
+            color: $color-accent;
+        }
+
+        #{$theme-light} {
+            &:after,
+            &:last-child,
+            &:last-child a {
+                color: $color-shade-60;
+            }
+
+            a {
+                color: $color-shade;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        #{$theme-dark} {
+            &:after,
+            &:last-child,
+            &:last-child a {
+                color: $color-tint-60;
+            }
+
+            a {
+                color: $color-tint;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

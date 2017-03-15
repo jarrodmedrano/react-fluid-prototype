@@ -1,0 +1,5 @@
+{
+    "name": "hero",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md"
+}

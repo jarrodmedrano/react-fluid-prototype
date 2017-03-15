@@ -45,7 +45,7 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
-defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows);
+defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic);
 data = defaultVertical;
     //data = dummySurfacePro;
     //data = dummyHp;

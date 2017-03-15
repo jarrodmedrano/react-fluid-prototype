@@ -1,0 +1,12 @@
+{
+    "name": "menu",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.8.0": [
+        {
+            "type": "new",
+            "ticket-id": 7941732,
+            "description": "adds the option to make a menu scrollable"
+        }
+    ]
+}

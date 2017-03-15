@@ -1,0 +1,14 @@
+{
+    "build": true,
+    "deployToCDN": false,
+    "layout": "templates/layouts/base.hbs",
+    "localizationData":  "partners/example/regions.json",
+    "mwf": true,
+    "uhf": true,
+    "ie8": false,
+    "ie9": false,
+    "theme": {
+        "default": true,
+        "alt": false
+    }
+}

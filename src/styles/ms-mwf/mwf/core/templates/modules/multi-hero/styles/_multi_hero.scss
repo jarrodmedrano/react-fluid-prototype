@@ -1,0 +1,89 @@
+@mixin multi-hero {
+    .c-carousel {
+        background: transparent;
+
+        .c-flipper.f-previous,
+        .c-flipper.f-next,
+        .c-sequence-indicator {
+            display: none;
+        }
+
+        ul {
+            li {
+                display: block;
+
+                .m-multi-hero-item {
+                    background: transparent;
+
+                    picture {
+                        padding-bottom: percentage(9 / 16);
+                        overflow: hidden;
+                    }
+
+                    > div {
+                        bottom: 28px;
+                    }
+                }
+            }
+
+            li:first-child {
+                float: $left;
+                width: percentage(2 / 3);
+                padding-#{$right}: 4px;
+
+                .m-multi-hero-item {
+                    .c-heading {
+                        @include apply-maxlines(1, t4, false, true);
+                    }
+                }
+
+                + li {
+                    padding-bottom: 4px;
+
+                    &,
+                    & + li {
+                        float: $right;
+                        width: percentage(1 / 3);
+
+                        .m-multi-hero-item {
+                            picture {
+                                // sass-lint:disable no-duplicate-properties
+                                padding-bottom: percentage(9 / 16);
+                                // this should really be subtracting 2px, however it appears
+                                // we get weird sub-pixel rounding errors because only subtracting 2px causes the
+                                // sub-hero's to not align with the main hero
+                                padding-bottom: calc((9 / 16 * 100%) - 3px);
+                                // sass-lint:enable no-duplicate-properties
+                            }
+
+                            .c-subheading {
+                                display: none;
+                            }
+
+                            .c-heading {
+                                @include apply-type(t5, false, true);
+                                @include apply-maxlines(2, t5, false, true);
+                            }
+
+                            div > div {
+                                margin: 0 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m-multi-hero {
+    padding: 0;
+
+    @media only screen and (min-width: $vp4) {
+        @include multi-hero;
+    }
+
+    @if $ltie8 {
+        @include multi-hero;
+    }
+}

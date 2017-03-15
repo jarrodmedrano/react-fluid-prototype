@@ -1,0 +1,4 @@
+.m-mosaic {
+    @include left-right-padding($base-0);
+    clear: $left; // since there is no data-grid styles applied to mosaic, be sure it clears properly
+}

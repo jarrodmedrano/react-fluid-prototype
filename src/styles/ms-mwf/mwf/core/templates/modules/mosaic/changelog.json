@@ -1,0 +1,5 @@
+{
+    "name": "mosaic",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md"
+}

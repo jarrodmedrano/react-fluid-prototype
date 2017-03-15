@@ -1,0 +1,40 @@
+{
+    "name": "compare chart",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9627310,
+            "description": "fixes issue where there was extra spacing after badge and above heading, not enough space after price, and the heading text wraps too early"
+        }
+    ],
+    "1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9255441,
+            "description": "removes 'max-height' from image allowing any desired image size based on design"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8662054,
+            "description": "fixes issue where headings were not being displayed on view port 1"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8301724,
+            "description": "removes heading from compare chart"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8012365,
+            "description": "changes image tag display property to inline-block to fix IE alignment issues"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+.m-track-list {
+
+    > [class^="c-heading"] {
+        margin-bottom: 24px;
+    }
+
+    > div {
+        display: table;
+        border-collapse: collapse;
+
+        .c-track-list-placement {
+            &.f-row-click {
+                &:hover {
+                    background: $color-brand-neutral-10;
+                }
+
+                &:focus {
+                    outline: 1px dashed $color-foreground-60;
+                }
+
+                &:active {
+                    background: $color-brand-neutral-30;
+                }
+            }
+        }
+    }
+
+    &.f-lean {
+        .c-track-list-placement {
+            &.f-size-small {
+                &.f-wide {
+                    > div {
+                        &:nth-child(3) {
+                            max-width: 250px;
+                        }
+
+                        > .c-button {
+                            margin: 6px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

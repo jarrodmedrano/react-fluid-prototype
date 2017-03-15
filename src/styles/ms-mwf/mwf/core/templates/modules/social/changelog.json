@@ -1,0 +1,44 @@
+{
+    "name": "social",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9640378,
+            "description": "fixes heading sizes, text placement, and spacing."
+
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9462687,
+            "description": "fixes an issue where text was misaligned in horizontal layouts"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9337782,
+            "description": "fixes an issue where high contrast mode was causing images to not be visible"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9444515,
+            "description": "fixes misspelled alt text on icons"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8301501,
+            "description": "adds better accessibility by updating typescript and HTML shape"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7478042,
+            "description": "updates support for .svg in IE10+ with .png fallback"
+        }
+    ]
+}

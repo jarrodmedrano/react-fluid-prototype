@@ -1,0 +1,86 @@
+// Age gate
+.m-age-gate {
+    position: relative;
+    background: $color-shade;
+    min-height: 400px;
+    z-index: map-get($z-index, above) + 1;
+
+    > div {
+        position: absolute;
+        padding: 0 32px;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    [class^="c-heading"] {
+        padding-top: 0;
+        padding-bottom: 12px;
+
+        + [class^="c-subheading"] {
+            padding-bottom: 12px;
+        }
+    }
+
+    .c-button {
+        min-height: 38px;
+    }
+
+    .c-select-menu {
+        > a {
+            margin-#{$right}: -8px;
+            min-width: 125px;
+
+            + ul {
+                max-width: 125px;
+            }
+        }
+
+        &:first-of-type {
+            > a {
+                min-width: 250px;
+
+                + ul {
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+
+    form,
+    fieldset {
+        .c-select-menu {
+            margin-top: 4px;
+            margin-#{$right}: 8px;
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        padding: 0;
+
+        .c-select-menu {
+            display: block;
+
+            &:first-of-type {
+                > a {
+                    min-width: 200px;
+
+                    + ul {
+                        max-width: 200px;
+                    }
+                }
+            }
+
+            > a {
+                width: 200px;
+
+                + ul {
+                    max-width: 200px;
+                }
+            }
+        }
+
+        .c-button {
+            display: block;
+        }
+    }
+}

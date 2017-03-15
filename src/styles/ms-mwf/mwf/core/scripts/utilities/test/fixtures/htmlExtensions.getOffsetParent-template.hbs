@@ -1,0 +1,57 @@
+---
+layout: ./core/templates/layouts/fixtures.hbs
+---
+<style>
+    /* Normally best practice is not to target using ID's, however here
+        we are targeting ID's to match how the spec file that uses this 
+        fixture finds the correct element for the given spec */
+
+    #hidden {
+        display: none;
+    }
+
+    #relative-parent {
+        position: relative;
+    }
+
+    #absolute-parent {
+        position: absolute;
+    }
+
+    #fixed-parent {
+        position: fixed;
+    }
+
+    #double-parent1 {
+        position: absolute;
+    }
+
+    #double-parent2 {
+        position: relative;
+    }
+</style>
+
+<div id="hidden"></div>
+<div>
+    <div id="staticChild"></div>
+</div>
+<div id="relativeParent">
+    <div>
+        <div id="relativeChild"></div>
+    </div>
+</div>
+<div id="absoluteParent">
+    <div>
+        <div id="absoluteChild"></div>
+    </div>
+</div>
+<div id="fixedParent">
+    <div>
+        <div id="fixedChild"></div>
+    </div>
+</div>
+<div id="doubleParent1">
+    <div id="doubleParent2">
+        <div id="doubleChild"></div>
+    </div>
+</div>

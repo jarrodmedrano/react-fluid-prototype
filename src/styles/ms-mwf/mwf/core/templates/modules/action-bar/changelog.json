@@ -1,0 +1,12 @@
+{
+    "name": "action bar",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 8540088,
+            "description": "adds module"
+        }
+    ]
+}

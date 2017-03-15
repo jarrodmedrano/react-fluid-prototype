@@ -1,0 +1,18 @@
+{
+    "name": "multi-column",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.10.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8117933,
+            "description": "fixes focus border overlapping across columns for hyperlink lists"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8352572,
+            "description": "refactors media queries for mobile first efficiency"
+        }
+    ]
+}

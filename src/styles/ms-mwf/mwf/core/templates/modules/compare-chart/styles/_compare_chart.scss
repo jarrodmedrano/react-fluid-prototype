@@ -1,0 +1,120 @@
+// ==========================================================================
+// Component: Compare chart
+// ==========================================================================
+
+// .c-compare-chart class deprecated on v1.3.0
+.c-compare-chart,
+.m-compare-chart {
+    // .c-product-placement deprecated on v1.6.0
+    // use .m-product-placement-item
+    // TODO: remove c- in v.2.0
+    .m-product-placement-item,
+    .c-product-placement {
+        // Add padding-bottom equal to the computed height of the .c-button
+        // below the product placements. We need to do this because we're
+        // positioning the button absolutely and we need to preserve the space
+        // it would normally take up.
+        padding-bottom: 80px;
+
+        img {
+            margin: 0;
+        }
+
+
+        &.f-size-small,
+        &.f-size-medium,
+        &.f-size-large {
+            width: inherit;
+        }
+
+        + button {
+            position: absolute;
+            bottom: 0;
+            margin-top: 20px;
+        }
+
+        > a {
+            [class^="c-heading-"] {
+                padding-top: 4px;
+            }
+        }
+    }
+
+    // TODO: Why are these rules on a general selector when .m-product-placement-item is the
+    // selector placed on the DOM element?
+    // Task 7954168:Compare chart: Refactor Sass selectors/confusing aria rules
+    section {
+        .f-row {
+            position: relative;
+            display: inline-block;
+            padding-#{$right}: 24px;
+            margin: 10px 0 0;
+            width: 100%;
+        }
+
+        .c-heading-5 {
+            visibility: hidden;
+        }
+
+        .f-column {
+            &:first-child {
+                .c-heading-5 {
+                    visibility: visible;
+                }
+            }
+        }
+
+        .f-icons {
+            margin-bottom: 24px;
+        }
+
+        img {
+            margin: 5px;
+            display: inline-block;
+        }
+
+        button {
+            @include primary-button();
+            margin-bottom: 24px;
+        }
+
+        ul {
+            margin-bottom: 24px;
+        }
+
+        .c-call-to-action {
+            margin-top: 15px;
+        }
+
+        .c-divider {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin-bottom: 24px;
+            padding: 0;
+            display: block;
+        }
+    }
+
+    @media only screen and (max-width: $vp3) {
+        [data-grid*="col-"] {
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        padding: 0 24px;
+
+        section {
+            .c-heading-5 {
+                visibility: visible;
+            }
+
+            .f-column .f-row img {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

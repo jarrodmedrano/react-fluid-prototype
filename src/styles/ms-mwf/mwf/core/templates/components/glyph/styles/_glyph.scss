@@ -1,0 +1,199 @@
+// ==========================================================================
+// Component: Glyph
+// ==========================================================================
+
+.c-glyph {
+    // display: inline-block; text-decoration: underline; and
+    // text-decoration:none; work together to prevent an underline on the
+    // :before and :after elements where the element itself gets
+    // text-decoration: underline. Setting text-decoration: underline in one
+    // rule and text-decoration: none in a different rule fixes a bug in IE
+    // where underline will still be applied if the text-decoration propery
+    // is only set to none.
+    &:before,
+    &:after {
+        font-family: $font-family-glyphs;
+        display: inline-block; // Prevent underline
+        text-decoration: underline; // Prevent underline
+    }
+
+    &:before,
+    &:after,
+    &:hover:before,
+    &:hover:after {
+        text-decoration: none; // Prevent underline
+    }
+
+    @if $ltie8 == true {
+        // This triggers a redraw to fix IE8's :before/:after content rendering.
+        // sass-lint:disable space-after-colon
+        @at-root html:hover & {
+            -ms-zoom: 1;
+        }
+        // sass-lint:enable space-after-colon
+    }
+
+    &.glyph-accept:before {
+        content: $glyph-accept;
+    }
+
+    &.glyph-add:before {
+        content: $glyph-add;
+    }
+
+    &.glyph-settings:before {
+        content: $glyph-settings;
+    }
+
+    &.glyph-people:before {
+        content: $glyph-people;
+    }
+
+    &.glyph-microphone:before {
+        content: $glyph-microphone;
+    }
+
+    &.glyph-camera:before {
+        content: $glyph-camera;
+    }
+
+    &.glyph-forward:before {
+        content: $glyph-forward;
+    }
+
+    &.glyph-remove:before {
+        content: $glyph-remove;
+    }
+
+    &.glyph-down:before {
+        content: $glyph-down;
+    }
+
+    &.glyph-cancel:before {
+        content: $glyph-cancel;
+    }
+
+    &.glyph-chat-bubbles:before {
+        content: $glyph-chat-bubbles;
+    }
+
+    &.glyph-check-mark:before {
+        content: $glyph-check-mark;
+    }
+
+    &.glyph-chevron-down:before {
+        content: $glyph-chevron-down;
+    }
+
+    &.glyph-chevron-left:before {
+        content: set-direction-based-value($glyph-chevron-left, $glyph-chevron-right);
+    }
+
+    &.glyph-chevron-right:before {
+        content: set-direction-based-value($glyph-chevron-right, $glyph-chevron-left);
+    }
+
+    &.glyph-chevron-up:before {
+        content: $glyph-chevron-up;
+    }
+
+    &.glyph-copy:before {
+        content: $glyph-copy;
+    }
+
+    &.glyph-delete:before {
+        content: $glyph-delete;
+    }
+
+    &.glyph-download:before {
+        content: $glyph-download;
+    }
+
+    &.glyph-edit:before {
+        content: $glyph-edit;
+    }
+
+    &.glyph-flag:before {
+        content: $glyph-flag;
+    }
+
+    &.glyph-full-screen:before {
+        content: $glyph-full-screen;
+    }
+
+    &.glyph-global-nav-button:before {
+        content: $glyph-global-nav-button;
+    }
+
+    &.glyph-heart-fill:before {
+        content: $glyph-heart-fill;
+    }
+
+    &.glyph-arrow-htmllegacy:before {
+        content: set-direction-based-value($glyph-arrow-htmllegacy, $glyph-arrow-htmllegacy-mirrored);
+    }
+
+    &.glyph-arrow-htmllegacy-mirrored:before {
+        content: set-direction-based-value($glyph-arrow-htmllegacy-mirrored, $glyph-arrow-htmllegacy);
+    }
+
+    &.glyph-incident-triangle:before {
+        content: $glyph-incident-triangle;
+    }
+
+    &.glyph-info:before {
+        content: $glyph-info;
+    }
+
+    &.glyph-mail:before {
+        content: $glyph-mail;
+    }
+
+    &.glyph-more:before {
+        content: $glyph-more;
+    }
+
+    &.glyph-mute:before {
+        content: $glyph-mute;
+    }
+
+    &.glyph-pause:before {
+        content: $glyph-pause;
+    }
+
+    &.glyph-phone:before {
+        content: $glyph-phone;
+    }
+
+    &.glyph-play:before {
+        content: $glyph-play;
+    }
+
+    &.glyph-search:before {
+        content: $glyph-search;
+    }
+
+    &.glyph-share:before {
+        content: $glyph-share;
+    }
+
+    &.glyph-shopping-cart:before {
+        content: $glyph-shopping-cart;
+    }
+
+    &.glyph-up:before {
+        content: $glyph-up;
+    }
+
+    &.glyph-volume:before {
+        content: $glyph-volume;
+    }
+
+    &.glyph-warning:before {
+        content: $glyph-warning;
+    }
+
+    &.glyph-world:before {
+        content: $glyph-world;
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "additional information",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8691057,
+            "description": "fixes issue where horizontal scroll bars were appearing on IE 10"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding duplicate id's"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8276883,
+            "description": "fixes an issue where additional padding was being added to the module height by the heading component"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7763386,
+            "description": "addresses layout issue where stacked items had too much space at mobile breakpoints"
+        }
+    ]
+}

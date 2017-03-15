@@ -1,0 +1,36 @@
+.c-blockquote {
+    background: $color-foreground-05;
+    border-#{$left}: 2px solid $color-foreground-40;
+    margin: 24px 0;
+    padding: 12px 24px;
+
+    &.f-lightweight {
+        background: none;
+        border-color: $color-foreground-20;
+        color: $color-foreground-60;
+        margin: 36px 0;
+        padding: 0 24px;
+    }
+
+    #{$theme-light} {
+        background: $color-shade;
+        color: $color-tint;
+        border-color: $color-tint;
+
+        &.f-lightweight {
+            background: none;
+            border-color: $color-tint-80;
+        }
+    }
+
+    #{$theme-dark} {
+        background: $color-tint;
+        color: $color-shade;
+        border-color: $color-shade;
+
+        &.f-lightweight {
+            background: none;
+            border-color: $color-shade-80;
+        }
+    }
+}

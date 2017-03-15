@@ -1,0 +1,1797 @@
+{
+    "account-creation": {
+        "config": {
+            "tag": "h3",
+            "level": 3
+        },
+        "content": {
+            "text": "Account creation form"
+        }
+    },
+    "hyperlink1": {
+        "content": {
+            "text": "Hyperlink",
+            "href": "http://www.getmwf.com"
+        }
+    },
+    "hyperlink2": {
+        "content": {
+            "text": "Hyperlink",
+            "href": "http://www.getmwf.com"
+        }
+    },
+    "hyperlink3": {
+        "content": {
+            "text": "Hyperlink",
+            "href": "http://www.getmwf.com"
+        }
+    },
+    "first-name-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "First name"
+        }
+    },
+    "last-name-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Last name"
+        }
+    },
+    "user-name-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "User name"
+        }
+    },
+    "password-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Password"
+        }
+    },
+    "confirm-password-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Reenter password"
+        }
+    },
+    "country-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Country/region"
+        }
+    },
+    "country": {
+        "config": {
+            "is-form": false,
+            "autofocus": false
+        },
+        "content": {
+            "label": "Type text or use the down arrow to select an option",
+            "input-name": "combo-field",
+            "button-name": "select",
+            "scroll-to-item": {
+                "config": {
+                    "aria-hidden": true,
+                    "aria-expanded": false,
+                    "aria-haspopup": true
+                },
+                "content": {
+                    "strings": [
+                        "United States",
+                        "Albania",
+                        "Andorra",
+                        "Angola",
+                        "Bahamas",
+                        "Bahrain",
+                        "Bangladesh",
+                        "Cambodia",
+                        "Cameroon",
+                        "Canada",
+                        "Denmark",
+                        "Ecuador",
+                        "Egypt",
+                        "Fiji",
+                        "Gabon",
+                        "Georgia",
+                        "Iceland"
+                    ]
+                }
+            }
+        }
+    },
+    "divider": {
+        "config": {
+            "pad": "top-3x"
+        }
+    },
+    "gender": {
+        "config": {
+            "name": "Select",
+            "border": true
+        },
+        "content": {
+            "label": "Select",
+            "items": [
+                "Male",
+                "Fale"
+            ]
+        }
+    },
+    "country-code": {
+        "config": {
+            "is-form": false,
+            "autofocus": false
+        },
+        "content": {
+            "label": "Type text or use the down arrow to select an option",
+            "input-name": "combo-field",
+            "button-name": "select",
+            "scroll-to-item": {
+                "config": {
+                    "aria-hidden": true,
+                    "aria-expanded": false,
+                    "aria-haspopup": true
+                },
+                "content": {
+                    "strings": [
+                        "United States (+1)",
+                        "Albania",
+                        "Andorra",
+                        "Angola",
+                        "Bahamas",
+                        "Bahrain",
+                        "Bangladesh",
+                        "Cambodia",
+                        "Cameroon",
+                        "Canada",
+                        "Denmark",
+                        "Ecuador",
+                        "Egypt",
+                        "Fiji",
+                        "Gabon",
+                        "Georgia",
+                        "Iceland"
+                    ]
+                }
+            }
+        }
+    },
+    "birthdate-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Birthdate"
+        }
+    },
+    "gender-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Gender"
+        }
+    },
+    "country-code-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Country code"
+        }
+    },
+    "phone-number-label": {
+        "config": {
+            "tag": "label"
+        },
+        "content": {
+            "text": "Phone number"
+        }
+    },
+    "birthdate": {
+        "config": {
+            "context": "date",
+            "label-id": "dt-picker-date",
+            "name": "dt-picker-date"
+        },
+        "content": {
+            "label": "Birthdate"
+        }
+    },
+    "submit-button": {
+        "config": {
+            "element-type": "button",
+            "button-type": "submit",
+            "disabled": false
+        },
+        "content": {
+            "text": "Submit button",
+            "href": "null"
+        }
+    },
+    "header": {
+        "mobile": {
+            "content": {
+                "scroll-left": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-left",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                },
+                "scroll-right": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-right",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                }
+            }
+        },
+        "global": {
+            "content": {
+                "logo": {
+                    "content": {
+                        "image": {
+                            "src": "images/microsoft-logo.png",
+                            "alt": "Microsoft Logo"
+                        },
+                        "href": "#",
+                        "logotype": "Microsoft"
+                    }
+                },
+                "skip-nav-link": {
+                    "content": {
+                        "text": "Skip to main content.",
+                        "href": "#mainContent"
+                    }
+                },
+                "hamburger": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-global-nav-button",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Menu"
+                    }
+                },
+                "search-back": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-arrow-htmllegacy",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Back"
+                    }
+                },
+                "shopping-cart": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-shopping-cart",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Shopping cart",
+                        "href": "./"
+                    }
+                },
+                "language-selector": {
+                    "config": {
+                        "id": "language-selector",
+                        "menu-id": "uhf-l-nav",
+                        "hidden": true
+                    },
+                    "content": {
+                        "title": "EN",
+                        "menu-items": [
+                            {
+                                "content": {
+                                    "text": "EN - English",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "FR - Français",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "search": {
+                    "config": {
+                        "is-form": true,
+                        "autofocus": false
+                    },
+                    "content": {
+                        "label": "Enter your search",
+                        "input-name": "search-field",
+                        "button-name": "search-button",
+                        "placeholder": "Search MicrosoftStore.com",
+                        "auto-suggest": {
+                            "config": {
+                                "scroll": false,
+                                "aria-hidden": true,
+                                "aria-expanded": false,
+                                "aria-haspopup": true,
+                                "id": "universal-header-search-auto-suggest-transparent",
+                                "position": "default"
+                            },
+                            "content": {
+                                "strings": [
+                                    "Windows",
+                                    "Window",
+                                    "Windows Store",
+                                    "Microsoft",
+                                    "Bing",
+                                    "Xbox"
+                                ],
+                                "products": [
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamics CRM",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Apps",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamics CRM album",
+                                            "imageSrc": "//placehold.it/60x80",
+                                            "category": "Albums",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic artist",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Artists",
+                                            "isArtist": true
+                                        }
+                                    },
+                                    {
+                                        "content": {
+                                            "title": "Dynamics with a long title name that is long",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Movies",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic transparent",
+                                            "imageSrc": "//store-images.microsoft.com/image/apps.6221.9007199266252643.9e83943d-d51f-4371-8567-06e1e21ced31.e47a968c-b6a8-490a-819e-70a7fc0c7933?w=100&h=100",
+                                            "category": "Apps",
+                                            "isArtist": false,
+                                            "bgColor": "#1006FE"
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic no category",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "isArtist": false
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "me-control": {
+                    "name": {
+                        "content": {
+                            "text": "Roland",
+                            "href": "#"
+                        }
+                    },
+                    "image": {
+                        "config": {
+                            "image-element": true,
+                            "round-image": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/32x32",
+                            "alt": "Placeholder with grey background and dimension watermark"
+                        }
+                    }
+                },
+                "navigation": {
+                    "store": {
+                        "config": {
+                            "id": "store-navigation",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Store",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Store Home",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-devices",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Devices",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Surface",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PCs & tablets",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Accessories",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Band",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Wearables",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-software",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Software",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Office",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Additional software",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-apps",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Apps",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone apps",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-games",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Games",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Xbox One games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox 360 games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PC games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone games",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-entertainment",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Entertainment",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All Entertainment",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Moviees & TV",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Music",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-business-and-education",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Business & Education",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Business Store",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Education Store",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Sale",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Find a store",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Gift cards",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "products": {
+                        "config": {
+                            "id": "products-navigation",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Products",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-software-and-services",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Software & services",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Windows",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Office",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Free downloads & security",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Internet Explorer",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Skype",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneNote",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneDrive",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Health",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "MSN",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Bing",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Groove",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Movies & TV",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-devices-and-xbox",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Devices & Xbox",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All Microsoft devices",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Surface",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "All Windows PCs and tablets",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PC accessories",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox & games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Band",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Lumia",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "All Windows phones",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft HoloLens",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-business",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For business",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Cloud Platform",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Azure",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Dynamics",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Office for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Skype for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Surface for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Enterprise solutions",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Small Business solutions",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Find a solutions provider",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-developers-and-it-pros",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For developers & IT pros",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Develop Windows apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Azure",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "MSDN",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "TechNet",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Visual Studio",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-students-and-educators",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For Students & educators",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Office for students",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneNote in classroom",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Shop PCs and tablets perfect for students",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft in Education",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "category": {
+            "config": {
+                "theme": "light"
+            },
+            "content": {
+                "logo": {
+                    "content": {
+                        "label": "Microsoft Store",
+                        "logotype": "Store",
+                        "href": "#"
+                    }
+                },
+                "CTA": {
+                    "content": {
+                        "text": "CALL TO ACTION",
+                        "href": "#"
+                    }
+                },
+                "navigation": {
+                    "devices": {
+                        "config": {
+                            "id": "devices",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Devices",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "surface",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Surface",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Get started",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Design",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Develop",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Publish",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Accessories",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Microsoft Band",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Wearables",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "software": {
+                        "config": {
+                            "id": "software",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Software",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "windows-phone",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Windows Phone",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Whats a Windows Universal app",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Get set up",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Sign up",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Your first app",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "New for Windows 10",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Additional software",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "apps": {
+                        "config": {
+                            "id": "apps",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Apps",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "surface",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Surface",
+                                        "href": "#",
+                                        "menu-items": [
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "get-started",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Get started",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Whats a Windows Universal app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Get set up",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Sign up",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Your first app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "New for Windows 10",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "design",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Design",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Basics",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Guidelines",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Downloads",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "develop",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Develop",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "How-to-guides",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "API reference",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Services",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Windows 8.x guides",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Windows Phone Silverlight 8.1 guides",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "publish",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Publish",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Submit your app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Promote and engage",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "View analytics",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Store Policies",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Accessories",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Microsoft Band",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Wearables",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "games": {
+                        "config": {
+                            "id": "games",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Games",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Xbox One games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox 360 games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "PC games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone games",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "entertainment": {
+                        "config": {
+                            "id": "entertainment",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Entertainment",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "All entertainment",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Movies & TV",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Music",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "business-and-education": {
+                        "config": {
+                            "id": "business-and-education",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Find a store",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Business Store",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Education Store",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "footer": {
+        "config": {
+            "nav": true
+        },
+        "section-1": {
+            "config": {
+                "id": "section-1",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 1",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-2": {
+            "config": {
+                "id": "section-2",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 2",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-3": {
+            "config": {
+                "id": "section-3",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 3",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-4": {
+            "config": {
+                "id": "section-4",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 4",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-5": {
+            "config": {
+                "id": "section-5",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 5",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-6": {
+            "config": {
+                "id": "section-6",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 6",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "footer": {
+            "config": {
+                "locale": "English (United States)",
+                "copyright": "© 2016 Microsoft"
+            },
+            "content": {
+                "footer-items": [
+                    {
+                        "content": {
+                            "text": "Contact us",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Privacy & cookies",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Terms of use",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Trademarks",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "[Page or site legal]",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

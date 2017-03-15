@@ -1,0 +1,54 @@
+---
+title: MWF - Categories
+removeContainer: true
+indexedPage: true
+---
+
+{{!
+Tasks
+-----
+2. Nick: Need a carousel to change the horizontal scrollbar in each section
+
+Questions
+-----
+Q: What's the styling for items.
+    a. How many items do we show?
+    b. Do we scroll, auto, or hide overflow?
+    c. If auto, how do we choose to wrap and on how many items
+A: Group component should include options for wrapping, overflow, row count and column count
+---
+Q: What do we do about content. Both imagery and copy?
+A: Lorim ipsum is acceptable.  But, show variations in content.
+---
+
+---
+
+}}
+
+{{> carousel-template category.hero-carousel }}
+
+<div data-grid="container pad-6x">
+    <div data-grid="col-12">
+        {{> link-navigation-template context="links-with-title" header-tag="h2" title="Top windows apps" }}
+        <section>
+            {{> heading-template category.link-heading-best-rated }}
+            {{> carousel-template category.best-rated-carousel }}
+        </section>
+        <section>
+            {{> heading-template category.link-heading-new-and-rising-windows-apps }}
+            {{> carousel-template category.new-and-rising-windows-apps-carousel }}
+        </section>
+        <section>
+            {{> heading-template category.link-heading-top-paid-windows-apps }}
+            {{> carousel-template category.top-paid-windows-apps-carousel }}
+        </section>
+        <section>
+            {{> heading-template category.link-heading-top-free-windows-apps }}
+            {{> carousel-template category.top-free-windows-apps-carousel }}
+        </section>
+        <section>
+            {{> heading-template category.link-heading-featured-collections }}
+            {{> mosaic-module category.pattern-seven }}
+        </section>
+    </div>
+</div>

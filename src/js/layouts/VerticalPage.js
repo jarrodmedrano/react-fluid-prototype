@@ -1,7 +1,8 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
-import '../../styles/mwf-west-european-default.min.css!';
-import '../../styles/mwf-ie9-west-european-default.min.css!';
+// import '../../styles/ms-mwf/mwf/core/styles/_mwf_dependencies.scss!';
+// import '../../styles/mwf-west-european-default.min.css!';
+// import '../../styles/mwf-ie9-west-european-default.min.css!';
 import '../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 import propsAreValid, {impressionEvent, navigateEvent} from '../lib/util';

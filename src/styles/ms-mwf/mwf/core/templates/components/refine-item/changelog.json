@@ -1,0 +1,19 @@
+{
+    "name": "refine item",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10803405,
+            "description": "fixes issue where single select did not receive the close glyph"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 6896064,
+            "description": "updates a11y aria-controls attribute to target search results"
+        }
+    ]
+}

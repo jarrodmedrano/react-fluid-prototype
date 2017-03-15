@@ -1,0 +1,11 @@
+{
+    "layout": "templates/layouts/config.hbs",
+    "mwf": true,
+    "uhf": true,
+    "ie8": true,
+    "ie9": true,
+    "theme": {
+        "default": true,
+        "alt": true
+    }
+}

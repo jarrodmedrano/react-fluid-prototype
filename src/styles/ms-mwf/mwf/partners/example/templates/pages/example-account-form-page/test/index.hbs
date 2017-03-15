@@ -1,0 +1,75 @@
+---
+title: Example account form
+removeContainer: true
+---
+{{> universal-header-template example-account-form-page.header }}
+<main id="mainContent" data-grid="container">
+    <form action="index-submit" method="get" accept-charset="utf-8" >
+        <div data-grid="col-8 pad-2x">
+            <div data-grid="col-12">
+                {{> heading-template example-account-form-page.account-creation }}
+                <p class="c-paragraph-3">You can use any email address as the user name for your new Microsoft account, including addresses from Outlook.com, Yahoo! or Gmail. If you already sign in to a Windows PC, tablet, or phone, Xbox Live, Outlook.com, or OneDrive, use that account to <a href="#" class="c-hyperlink">sign in</a>.</p>
+            </div>
+        </div>
+        <div data-grid="col-8 pad-2x">
+            <div data-grid="col-6">
+                {{> label-template example-account-form-page.first-name-label }}
+                <input class="c-text-field f-flex" type="text" name="default">
+            </div>
+            <div data-grid="col-6">
+                {{> label-template example-account-form-page.last-name-label }}
+                <input class="c-text-field f-flex" type="text" name="default">
+            </div>
+
+            <div data-grid="col-12">
+                {{> label-template example-account-form-page.user-name-label }}
+                <input class="c-text-field f-flex" type="text" name="default">
+            </div>
+
+            <div data-grid="col-6">
+                {{> label-template example-account-form-page.password-label }}
+                <input class="c-text-field f-flex" type="text" name="default">
+            </div>
+            <div data-grid="col-6">
+                {{> label-template example-account-form-page.confirm-password-label }}
+                <input class="c-text-field f-flex" type="text" name="default">
+            </div>
+        </div>
+        <div data-grid="col-8 pad-2x">
+            <div data-grid="col-12">
+                {{> label-template example-account-form-page.country-label }}
+                {{> combo-template example-account-form-page.country }}
+
+                {{> date-time-picker-date-template example-account-form-page.birthdate }}
+
+                {{> label-template example-account-form-page.gender-label }}
+                <form name="select" target="_self">
+                    <div class="c-select f-border f-flex">
+                        <select aria-label="Select ...">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </form>
+
+                {{> label-template example-account-form-page.country-code-label }}
+                {{> combo-template example-account-form-page.country-code }}
+
+                {{> label-template example-account-form-page.phone-number-label }}
+                <input class="c-text-field" type="text" name="default">
+
+                <div class="c-checkbox">
+                    <label class="c-label">
+                        <input aria-label="Send me promotional offesr from Microsoft" type="checkbox" id="promotionOptIn" name="promotionOptIn" value="value2" checked="checked">
+                        <span>Send me promotional offers from Microsoft. You can unsubscribe any time.</span>
+                    </label>
+                </div>
+                <p class="c-paragraph-3">Clicking create account means that you agree to the <a href="#" class="c-hyperlink">Microsoft Services Agreement</a> and <a href="#" class="c-hyperlink">privacy and cookies statement</a>.</p>
+                {{> divider-template example-account-form-page.divider }}
+                {{> button-template example-account-form-page.submit-button }}
+            </div>
+        </div>
+    </form>
+</main>
+
+{{> universal-footer-template example-account-form-page.footer }}

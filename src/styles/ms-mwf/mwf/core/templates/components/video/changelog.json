@@ -1,0 +1,93 @@
+{
+    "name": "video",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8998213,
+            "description": "fixes hiding the trigger paragraph on narrow video components"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10140686,
+            "description": "fixes the video fullscreen button on IE/Edge"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9461874,
+            "description": "fixes validation error resulting from the legend element not being a direct child of the fieldset element"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes multiple WCAG 2.0 AA accessibility issues"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8981742,
+            "description": "fixes tracking and volume sliders in RTL"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8122027,
+            "description": "adds ability for video component to display an error message"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8407867,
+            "description": "fixes video menu to support RTL locales"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8793309,
+            "description": "changes video background to be transparent"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "new",
+            "ticket-id": 8525063,
+            "description": "adds focus states to trigger buttons"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8353791,
+            "description": "adds image overlay to video which when clicked, plays inline video"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7927320,
+            "description": "fixes an issue with video play glyph toggle on autoplay"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7477956,
+            "description": "fixes an issue with video player's volume slider at vp1"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8188654,
+            "description": "restructure timecode markup for easier targeting of time"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8188688,
+            "description": "adds data-attributes for localization and js targeting"
+        }
+    ]
+}

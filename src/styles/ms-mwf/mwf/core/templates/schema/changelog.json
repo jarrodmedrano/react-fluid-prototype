@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Changelog",
+    "description": "A MWF Changelog's schema definition.",
+    "type": "object",
+    "id": "/changelog",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "content-type": {
+            "type": "string",
+            "enum": [
+                "module",
+                "component"
+            ]
+        },
+        "_documentation": {
+            "type": "string"
+        }
+    },
+    "patternProperties": {
+        "^v": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "new",
+                            "changed",
+	                        "fixed",
+	                        "reported"
+                        ]
+                    },
+                    "ticket-id": {
+                        "type": "integer"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "type",
+                    "ticket-id",
+                    "description"
+                ]
+            }
+        }
+    },
+    "required": [
+        "name",
+        "content-type",
+        "_documentation"
+    ]
+}

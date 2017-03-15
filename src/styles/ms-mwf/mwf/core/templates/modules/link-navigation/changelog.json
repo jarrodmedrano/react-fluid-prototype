@@ -1,0 +1,5 @@
+{
+    "name": "link navigation",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md"
+}

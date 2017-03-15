@@ -1,0 +1,73 @@
+.m-product-placement {
+    padding-top: 12px;
+
+    .c-hyperlink[aria-hidden="true"] {
+        visibility: hidden;
+    }
+
+    &.f-artist {
+        a > div {
+            height: inherit;
+        }
+    }
+
+    .c-carousel {
+        .c-flipper {
+            /* Use .f-previous and .f-next
+            * .f-left and f-right deprecated v1.3.0 */
+            &.f-left,
+            &.f-previous {
+                #{$left}: -24px;
+            }
+
+            &.f-right,
+            &.f-next {
+                #{$right}: -24px;
+            }
+        }
+
+        .c-group {
+            vertical-align: top;
+        }
+    }
+
+    &.f-song {
+        .c-track-list-placement {
+            .c-explicit {
+                > span {
+                    display: inline;
+
+                    + span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        .c-carousel {
+            .c-flipper {
+                visibility: hidden;
+
+                /* Use .f-previous and .f-next
+                * .f-left and f-right deprecated v1.3.0 */
+                &.f-left,
+                &.f-previous {
+                    #{$left}: 0;
+                }
+
+                &.f-right,
+                &.f-next {
+                    #{$right}: 0;
+                }
+            }
+
+            &:hover {
+                .c-flipper {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2257 @@
+{
+    "buy-box": {
+        "config": {
+            "buy-box": true,
+            "id": "buy-box",
+            "hidden": true
+        },
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 6
+            },
+            "content": {
+                "text": "Heading - Subheading"
+            }
+        },
+        "hyperlink": {
+            "content": {
+                "text": "Hyperlink",
+                "href": "http://www.getmwf.com"
+            }
+        },
+        "price": {
+            "config": {
+                "currency-symbol": "$",
+                "currency-code": "USD"
+            },
+            "content": {
+                "price": 1000,
+                "discounted-price": null
+            }
+        },
+        "call-to-action": {
+            "content": {
+                "text": "CALL TO ACTION",
+                "href": "#"
+            }
+        }
+    },
+    "deatil-overview-heading": {
+        "config": {
+            "tag": "h4",
+            "level": 4,
+            "navigation": true,
+            "menu": "select"
+        },
+        "content": {
+            "text": "Heading 4 with select menu",
+            "items": [{
+                "config": {
+                    "type": "ul",
+                    "id": "unique-id-for-list",
+                    "hidden": true,
+                    "border": false,
+                    "persist": false
+                },
+                "content": {
+                    "title": "Select Menu Default",
+                    "href": "#",
+                    "menu-items": [{
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 1",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 2",
+                            "href": "#"
+                        }
+                    }]
+                }
+            }]
+        }
+    },
+    "deatil-overview": {
+        "config": {
+            "four-up-with-link": true,
+            "lightbox-id-1": "fuwl-screenshot-1",
+            "lightbox-id-2": "fuwl-screenshot-2",
+            "lightbox-id-3": "fuwl-screenshot-3",
+            "lightbox-id-4": "fuwl-screenshot-4",
+            "theme": "dark"
+        },
+        "content": {
+            "image-1": {
+                "content": {
+                    "background-image": {
+                        "vp6": "http://placehold.it/358x201/464646/333333",
+                        "vp5": "http://placehold.it/358x201/464646/333333",
+                        "vp4": "http://placehold.it/358x201/464646/333333",
+                        "vp3": "http://placehold.it/358x201/464646/333333",
+                        "vp2": "http://placehold.it/358x201/464646/333333",
+                        "vp1": "http://placehold.it/358x201/464646/333333",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "image-2": {
+                "content": {
+                    "background-image": {
+                        "vp6": "http://placehold.it/358x201/464646/333333",
+                        "vp5": "http://placehold.it/358x201/464646/333333",
+                        "vp4": "http://placehold.it/358x201/464646/333333",
+                        "vp3": "http://placehold.it/358x201/464646/333333",
+                        "vp2": "http://placehold.it/358x201/464646/333333",
+                        "vp1": "http://placehold.it/358x201/464646/333333",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "image-3": {
+                "content": {
+                    "background-image": {
+                        "vp6": "http://placehold.it/358x201/464646/333333",
+                        "vp5": "http://placehold.it/358x201/464646/333333",
+                        "vp4": "http://placehold.it/358x201/464646/333333",
+                        "vp3": "http://placehold.it/358x201/464646/333333",
+                        "vp2": "http://placehold.it/358x201/464646/333333",
+                        "vp1": "http://placehold.it/358x201/464646/333333",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "image-4": {
+                "content": {
+                    "background-image": {
+                        "vp6": "http://placehold.it/358x201/464646/333333",
+                        "vp5": "http://placehold.it/358x201/464646/333333",
+                        "vp4": "http://placehold.it/358x201/464646/333333",
+                        "vp3": "http://placehold.it/358x201/464646/333333",
+                        "vp2": "http://placehold.it/358x201/464646/333333",
+                        "vp1": "http://placehold.it/358x201/464646/333333",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "see-all-link": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "SEE ALL"
+                }
+            },
+            "product-description": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "Product description text goes here. Max 1000 characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt vehicula enim at rutrum. Donec vehicula auctor nulla, eget dapibus tellus semper eu."
+                }
+            },
+            "content-toggle": {
+                "config": {
+                    "id": "content-toggle-target",
+                    "tag": "p",
+                    "show": 3
+                },
+                "content": {
+                    "text": "Quisque egestas lobortis pretium. Donec et metus mi. Phasellus interdum augue sed est dapibus blandit. Aliquam arcu lorem, pharetra at dignissim quis, auctor ac quam. Donec eget cursus elit. Integer at varius erat, sit amet consequat nisi. Sed vulputate semper ante, at egestas. Suscipere vindico comis vel ventosus roto. Foras oppeto wisi dolor euismod oppeto ex dolore incassum. Rusticus iriure esca et utinam eros. Feugait nostrud nibh modo. Ex magna turpis capio meus blandit vel pagus importunus autem decet refero. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "supported-platforms": {
+                "config": {
+                    "tag": "h4",
+                    "level": 5
+                },
+                "content": {
+                    "text": "Playable on"
+                }
+            },
+            "supported-platforms-image": {
+                "config": {
+                    "image-element": true
+                },
+                "content": {
+                    "src": "http://placehold.it/30x30",
+                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                }
+            },
+            "supported-platforms-label": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "Platform"
+                }
+            },
+            "capabilities": {
+                "config": {
+                    "tag": "h4",
+                    "level": 5
+                },
+                "content": {
+                    "text": "Capabilities"
+                }
+            },
+            "capabilities-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "Multiplayer local 1-4",
+                        "Multiplayer online 5-8",
+                        "Co-op local",
+                        "Co-op online",
+                        "Cross platform multiplayer"
+                    ]
+                }
+            }
+        }
+    },
+    "video": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "large",
+            "context": "video"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Heading",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "Show all",
+                            "label": "Show all"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "Show all",
+                "href": "#"
+            },
+            "items": [
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "video",
+                        "size": "large",
+                        "default-image": false,
+                        "video": true
+                    },
+                    "content": {
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "action-trigger": {
+                            "config": {
+                                "context": "glyph-only",
+                                "glyph": "glyph-play",
+                                "element-type": "anchor",
+                                "disabled": false
+                            },
+                            "content": {
+                                "text": "Play",
+                                "href": "#"
+                            }
+                        },
+                        "media-image": {
+                            "content": {
+                                "background-image": {
+                                    "vp6": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp5": "http://placehold.it/358x201/b2b2b2/ffffff",
+                                    "vp4": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp3": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp2": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "vp1": "http://placehold.it/272x153/b2b2b2/ffffff",
+                                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                }
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h2",
+                                "level": 5,
+                                "itemprop": "Video title"
+                            },
+                            "content": {
+                                "text": "Title"
+                            }
+                        },
+                        "meta-text": {
+                            "config": {
+                                "tag": "span",
+                                "itemprop": "Video metadata"
+                            },
+                            "content": {
+                                "text": "Metadata"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "list": {
+        "config": {
+            "tag": "ul"
+        },
+        "content": {
+            "items": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu."
+            ]
+        }
+    },
+    "system-requirements": {
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 3
+            },
+            "content": {
+                "text": "Heading"
+            }
+        },
+        "select": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-for-list",
+                "hidden": true,
+                "border": false
+            },
+            "content": {
+                "title": "Select Menu",
+                "href": "#",
+                "menu-items": [{
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Menu Item 1",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Menu Item 2",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Menu Item 3",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "selected": true,
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Menu Item 4",
+                        "href": "#"
+                    }
+                }]
+            }
+        },
+        "minimum": {
+            "config": {
+                "type": "divider",
+                "summary": "Summary description."
+            },
+            "content": {
+                "rows": [{
+                    "cells": [{
+                        "content": {
+                            "text": "Minimum"
+                        }
+                    }, {
+                        "content": {
+                            "text": ""
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item Bravo"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi."
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item charlie"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description sentence."
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item Delta"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item Echo"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description sentence."
+                        }
+                    }]
+                }]
+            }
+        },
+        "recommended": {
+            "config": {
+                "type": "divider",
+                "summary": "Summary description."
+            },
+            "content": {
+                "rows": [{
+                    "cells": [{
+                        "content": {
+                            "text": "Recommended"
+                        }
+                    }, {
+                        "content": {
+                            "text": ""
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item Bravo"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi."
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item charlie"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description sentence."
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item Delta"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    }]
+                }, {
+                    "cells": [{
+                        "content": {
+                            "text": "Item Echo"
+                        }
+                    }, {
+                        "content": {
+                            "text": "Description sentence."
+                        }
+                    }]
+                }]
+            }
+        }
+    },
+    "additional-information": {
+        "config": {
+            "column-width": 6
+        },
+        "content": {
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Additional information"
+                }
+            },
+            "publisher-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Publisher</strong>",
+                        "Electronic Arts",
+                        "Copyright &copy; 2016"
+                    ]
+                }
+            },
+            "release-date-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Release date</strong>",
+                        "11/4/15"
+                    ]
+                }
+            },
+            "approximate-size-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Approximate size</strong>",
+                        "00.00 GB"
+                    ]
+                }
+            },
+            "age-rating": {
+                "content": {
+                    "heading": "Teen",
+                    "age-rating-text": "Suitable for 13+",
+                    "image": {
+                        "config": {
+                            "image-element": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/56x56",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    },
+                    "description": {
+                        "config": {
+                            "id": "learn-more",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Content is generally suitable for ages 13 and up. May contain violence, suggestive themes, crude humor, minimal blood, simulated gambling and/or infrequent use of strong language.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    }
+                }
+            },
+            "content-toggle": {
+                "config": {
+                    "id": "content-toggle-target",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "<strong>Permissions</strong><br/>Uses your location<br/>Uses your webcam<br/>Uses your microphone<br/>",
+                    "more-text": "Show more",
+                    "less-text": "Show less"
+                }
+            },
+            "multiplayer-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Multiplayer</strong>",
+                        "Online and local"
+                    ]
+                }
+            },
+            "coop-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Coop</strong>",
+                        "Online and local"
+                    ]
+                }
+            },
+            "in-app-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>In-app purchases</strong>",
+                        "$0.99-$9.99"
+                    ]
+                }
+            },
+            "installation-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Installation</strong>",
+                        "This game can be installed on up to 10 Windows 10 devices"
+                    ]
+                }
+            },
+            "languages-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Languages supported</strong>",
+                        "English (United States)"
+                    ]
+                }
+            },
+            "terms-text": "<strong>Additional terms</strong>",
+            "terms-hyperlink": {
+                "content": {
+                    "text": "Store terms of use",
+                    "href": "http://www.getmwf.com"
+                }
+            },
+            "terms-list": {
+                "config": {
+                    "tag": "ul",
+                    "bare": true,
+                    "lean": true
+                },
+                "content": {
+                    "items": [
+                        "<strong>Additional terms</strong>", {
+                            "template-name": "hyperlink-template",
+                            "data": {
+                                "content": {
+                                    "text": "Store terms of use",
+                                    "href": "http://www.getmwf.com"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "report-hyperlink": {
+                "content": {
+                    "text": "Report this app to Microsoft",
+                    "href": "http://www.getmwf.com"
+                }
+            }
+        }
+    },
+    "product-placement": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "medium",
+            "context": "app"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Heading",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "See all",
+                            "label": "See all Heading"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "See all",
+                "href": "#"
+            },
+            "items": [{
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "Pin more"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.8
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 2.99,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }, {
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "Sway"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.7
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 0,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }, {
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "Player for Soundcloud"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.8
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 0,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }, {
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "Allthecooks Recipes"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.7
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 0,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }, {
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "Photo Editor"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.7
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 1000,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }, {
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "NFL on Windows"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.6
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 0,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }, {
+                "config": {
+                    "orientation": "vertical",
+                    "context": "app",
+                    "size": "medium",
+                    "default-image": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": {
+                        "config": {
+                            "tag": "h3",
+                            "itemprop": "product name"
+                        },
+                        "content": {
+                            "text": "Audiobooks from Audible"
+                        }
+                    },
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "aggregate": true
+                            },
+                            "community-rating": 4.2
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "price": {
+                        "config": {
+                            "currency-symbol": "$",
+                            "currency-code": "USD"
+                        },
+                        "content": {
+                            "itemprop": "Product name",
+                            "price": 1000,
+                            "discounted-price": null
+                        }
+                    },
+                    "href": "#"
+                }
+            }]
+        }
+    },
+    "ratings-and-reviews": {
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 4
+            },
+            "content": {
+                "text": "Ratings and reviews"
+            }
+        },
+        "filter": {
+            "content": {
+                "label": "Filter by:"
+            },
+            "filters": [{
+                "config": {
+                    "type": "ul",
+                    "id": "unique-id-1",
+                    "hidden": true,
+                    "border": false
+                },
+                "content": {
+                    "title": "Current",
+                    "href": "#",
+                    "menu-items": [{
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 1",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 2",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 3",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 4",
+                            "href": "#"
+                        }
+                    }]
+                }
+            }, {
+                "config": {
+                    "type": "ul",
+                    "id": "unique-id-2",
+                    "hidden": true,
+                    "border": false
+                },
+                "content": {
+                    "title": "All platforms",
+                    "href": "#",
+                    "menu-items": [{
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 1",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 2",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 3",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 4",
+                            "href": "#"
+                        }
+                    }]
+                }
+            }, {
+                "config": {
+                    "type": "ul",
+                    "id": "unique-id-3",
+                    "hidden": true,
+                    "border": false
+                },
+                "content": {
+                    "title": "All ratings",
+                    "href": "#",
+                    "menu-items": [{
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 1",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 2",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 3",
+                            "href": "#"
+                        }
+                    }, {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 4",
+                            "href": "#"
+                        }
+                    }]
+                }
+            }]
+        },
+        "histogram": {
+            "config": {
+                "divisor": 50000
+            },
+            "content": {
+                "review-count-by-star": {
+                    "one": "2345234",
+                    "two": "24352",
+                    "three": "4564",
+                    "four": "783652",
+                    "five": "4564568"
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4.2
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                }
+            }
+        },
+        "rate-and-review": {
+            "config": {
+                "element-type": "button",
+                "button-type": "submit",
+                "disabled": false
+            },
+            "content": {
+                "text": "Rate and review",
+                "href": "null"
+            }
+        },
+        "top-reviews": {
+            "most-favourable": {
+                "heading": {
+                    "config": {
+                        "tag": "h4",
+                        "level": 4
+                    },
+                    "content": {
+                        "text": "Most helpful favorable review"
+                    }
+                },
+                "review": {
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "individual": true
+                            },
+                            "community-rating": 3.0,
+                            "user-rating": 2.1
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "date": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "9/9/2016"
+                        }
+                    },
+                    "name": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Jane Doe"
+                        }
+                    },
+                    "title": {
+                        "config": {
+                            "tag": "h5",
+                            "level": 6
+                        },
+                        "content": {
+                            "text": "Heading"
+                        }
+                    },
+                    "text": {
+                        "config": {
+                            "id": "content-toggle-1",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    },
+                    "helpful": {
+                        "config": {
+                            "tag": "p"
+                        },
+                        "content": {
+                            "text": "34 out of 57 people found this helpful."
+                        }
+                    },
+                    "response": {
+                        "name": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "Jerome Doe"
+                            }
+                        },
+                        "responded": {
+                            "content": {
+                                "text": "responded on"
+                            }
+                        },
+                        "comment-type": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "Developer comment"
+                            }
+                        },
+                        "date": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "9/9/2016"
+                            }
+                        },
+                        "text": {
+                            "config": {
+                                "id": "content-toggle-1-1",
+                                "tag": "p",
+                                "expanded": false,
+                                "show": 3
+                            },
+                            "content": {
+                                "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                                "more-text": "More",
+                                "less-text": "Less"
+                            }
+                        }
+                    }
+                }
+            },
+            "most-critical": {
+                "heading": {
+                    "config": {
+                        "tag": "h4",
+                        "level": 4
+                    },
+                    "content": {
+                        "text": "Most helpful critical review"
+                    }
+                },
+                "review": {
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "individual": true
+                            },
+                            "community-rating": 3.0,
+                            "user-rating": 2.1
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "date": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "9/9/2016"
+                        }
+                    },
+                    "name": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "John Smith"
+                        }
+                    },
+                    "title": {
+                        "config": {
+                            "tag": "h5",
+                            "level": 6
+                        },
+                        "content": {
+                            "text": "Heading"
+                        }
+                    },
+                    "text": {
+                        "config": {
+                            "id": "content-toggle-1",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    },
+                    "helpful": {
+                        "config": {
+                            "tag": "p"
+                        },
+                        "content": {
+                            "text": "22 out of 51 people found this helpful."
+                        }
+                    }
+                }
+            }
+        },
+        "sort-by": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-1",
+                "hidden": true,
+                "border": false
+            },
+            "content": {
+                "label": "Sort by:",
+                "title": "Most helpful",
+                "href": "#",
+                "menu-items": [{
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Sub Nav Link 1",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Sub Nav Link 2",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Sub Nav Link 3",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "selected": true,
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "Sub Nav Link 4",
+                        "href": "#"
+                    }
+                }]
+            }
+        },
+        "visible-reviews": {
+            "content": {
+                "text": "13-24 of 3,015 reviews"
+            }
+        },
+        "all-reviews": [{
+            "rating": {
+                "config": {
+                    "type": {
+                        "individual": true
+                    },
+                    "community-rating": 3.0,
+                    "user-rating": 2.1
+                },
+                "content": {
+                    "community-label": "Rating:"
+                }
+            },
+            "date": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "9/9/2016"
+                }
+            },
+            "name": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "John Smith"
+                }
+            },
+            "platform": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "Platform: Xbox"
+                }
+            },
+            "title": {
+                "config": {
+                    "tag": "h5",
+                    "level": 6
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "text": {
+                "config": {
+                    "id": "content-toggle-1",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "helpful": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "22 out of 51 people found this helpful."
+                }
+            }
+        }, {
+            "rating": {
+                "config": {
+                    "type": {
+                        "individual": true
+                    },
+                    "community-rating": 3.0,
+                    "user-rating": 2.1
+                },
+                "content": {
+                    "community-label": "Rating:"
+                }
+            },
+            "date": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "9/9/2016"
+                }
+            },
+            "name": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "John Smith"
+                }
+            },
+            "platform": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "Platform: PC"
+                }
+            },
+            "title": {
+                "config": {
+                    "tag": "h5",
+                    "level": 6
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "text": {
+                "config": {
+                    "id": "content-toggle-1",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "helpful": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "22 out of 51 people found this helpful."
+                }
+            }
+        }, {
+            "rating": {
+                "config": {
+                    "type": {
+                        "individual": true
+                    },
+                    "community-rating": 3.0,
+                    "user-rating": 2.1
+                },
+                "content": {
+                    "community-label": "Rating:"
+                }
+            },
+            "date": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "9/9/2016"
+                }
+            },
+            "name": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "John Smith"
+                }
+            },
+            "title": {
+                "config": {
+                    "tag": "h5",
+                    "level": 6
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "text": {
+                "config": {
+                    "id": "content-toggle-1",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "helpful": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "22 out of 51 people found this helpful."
+                }
+            }
+        }, {
+            "rating": {
+                "config": {
+                    "type": {
+                        "individual": true
+                    },
+                    "community-rating": 3.0,
+                    "user-rating": 2.1
+                },
+                "content": {
+                    "community-label": "Rating:"
+                }
+            },
+            "date": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "9/9/2016"
+                }
+            },
+            "name": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "John Smith"
+                }
+            },
+            "title": {
+                "config": {
+                    "tag": "h5",
+                    "level": 6
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "text": {
+                "config": {
+                    "id": "content-toggle-1",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "helpful": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "22 out of 51 people found this helpful."
+                }
+            }
+        }, {
+            "rating": {
+                "config": {
+                    "type": {
+                        "individual": true
+                    },
+                    "community-rating": 3.0,
+                    "user-rating": 2.1
+                },
+                "content": {
+                    "community-label": "Rating:"
+                }
+            },
+            "date": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "9/9/2016"
+                }
+            },
+            "name": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "John Smith"
+                }
+            },
+            "title": {
+                "config": {
+                    "tag": "h5",
+                    "level": 6
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "text": {
+                "config": {
+                    "id": "content-toggle-1",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "helpful": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "22 out of 51 people found this helpful."
+                }
+            }
+        }, {
+            "rating": {
+                "config": {
+                    "type": {
+                        "individual": true
+                    },
+                    "community-rating": 3.0,
+                    "user-rating": 2.1
+                },
+                "content": {
+                    "community-label": "Rating:"
+                }
+            },
+            "date": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "9/9/2016"
+                }
+            },
+            "name": {
+                "config": {
+                    "level": 3
+                },
+                "content": {
+                    "text": "John Smith"
+                }
+            },
+            "title": {
+                "config": {
+                    "tag": "h5",
+                    "level": 6
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            },
+            "text": {
+                "config": {
+                    "id": "content-toggle-1",
+                    "tag": "p",
+                    "expanded": false,
+                    "show": 3
+                },
+                "content": {
+                    "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                    "more-text": "More",
+                    "less-text": "Less"
+                }
+            },
+            "helpful": {
+                "config": {
+                    "tag": "p"
+                },
+                "content": {
+                    "text": "22 out of 51 people found this helpful."
+                }
+            }
+        }],
+        "pagination": {
+            "content": {
+                "pages": 6,
+                "selected": 1
+            }
+        }
+    }
+}

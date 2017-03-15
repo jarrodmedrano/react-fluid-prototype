@@ -1,0 +1,5 @@
+{
+    "name": "password",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md"
+}

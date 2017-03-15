@@ -1,0 +1,65 @@
+{
+    "name": "product placement item",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10154532,
+            "description": "adds the f-clean option to remove the outline on image hover"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9859052,
+            "description": "fixes regression found in focus outline, resolving it solid accent outline as prescribed by the focus standards"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8353352,
+            "description": "removes max-line enforcement. This will be handled by content curators"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8383808,
+            "description": "fixes issue with heading padding on video placement when no badge is included"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8378696,
+            "description": "fixes issue where product placement item was inheriting styles when inside a carousel limiting max lines to one"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8117122,
+            "description": "fixes issue with video placement and layout rendering in IE 11 and below"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 7845197,
+            "description": "updates images sizes and type sizes to meet new design spec and requirements"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8064483,
+            "description": "fixes an issue with context-artist where css was targeting the wrong item and breaking the UI"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8065024,
+            "description": "fixes movie type code example/report to show rating stars"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8144238,
+            "description": "fixes broken data reference and adds code example"
+        }
+    ]
+}

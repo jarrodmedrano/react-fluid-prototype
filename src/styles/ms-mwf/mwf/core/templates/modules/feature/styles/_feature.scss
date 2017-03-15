@@ -1,0 +1,32 @@
+.m-feature {
+    @include left-right-padding($base-0);
+    padding-top: 48px;
+
+    @media only screen and (min-width: $vp3) {
+        + .m-feature {
+            padding-top: 0;
+
+            > .c-feature.f-align-center {
+                padding-top: 48px;
+            }
+        }
+    }
+
+    &[data-grid~="container"] {
+        @include left-right-padding($base-3x);
+        max-width: 100%;
+        clear: both;
+
+        @media only screen and (min-width: $vp2) {
+            @include left-right-padding($base-6x);
+        }
+
+        @media only screen and (min-width: $vp3) {
+            @include left-right-padding($base-9x);
+        }
+
+        @media only screen and (min-width: $vp5) {
+            @include left-right-padding($base-12x);
+        }
+    }
+}

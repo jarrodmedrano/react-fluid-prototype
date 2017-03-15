@@ -1,0 +1,38 @@
+{
+    "name": "rating",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "new",
+            "ticket-id": 10889482,
+            "description": "adds TypeScript bindings file for behaviors"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10521709,
+            "description": "fixes cursor for non-interactive ratings"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9926204,
+            "description": "updated shape for accessibility to allow focus states to have the same visual design as hover"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9450573,
+            "description": "changes button type to submit for interactive rating components to pass validation - all forms require a submit button"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7621108,
+            "description": "moves inline rating strings to .json data"
+        }
+    ]
+}

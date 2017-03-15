@@ -1,0 +1,213 @@
+---
+removeContainer: false
+title: MWF - Product details
+indexedPage: true
+---
+
+{{!
+
+Missing Requirements
+1. Missing components for selecting popular configurations. (select buttons) - Aaron
+2. Need a vertical social - Jason
+3. Need to finish c-group to support row/col capability.  For example, use flexbox to show 2x2 rows. Nick
+6. Need to convert product-detail-hero to a module
+8. Need dot navigation for slider
+9. Need a carousel
+10. Need to add option for c-feature to remove call to action
+11.
+
+NOTE:
+
+}}
+
+<section data-grid="col-12" class="context-pdp-hero">
+    <div data-grid="col-6">
+
+    </div>
+    <div data-grid="col-6" itemscope itemtype="http://schema.org/Product">
+        <h1 class="c-heading-1">{{product-detail.hero.heading}}</h1>
+        {{> rating-template product-detail.hero.rating }}
+        {{> price-template product-detail.hero.price }}
+
+        <div data-grid="col-12 pad-3x">
+            <h2 class="c-subheading-6" data-grid="col-12">POPULAR CONFIGURATIONS</h2>
+            {{#each product-detail.hero.configurations}}
+                <div data-grid="col-6">
+                    {{> button-template this }}
+                </div>
+            {{/each}}
+
+        </div>
+        <div data-grid="col-12 pad-3x">
+            {{#each product-detail.hero.calls-to-action}}
+                <div data-grid="col-6">
+                    {{> call-to-action-template this }}
+                </div>
+            {{/each}}
+
+            <p class="c-paragraph-3" data-grid="col-12"><small class="c-caption-2">Free shipping. Free returns.</small></p>
+        </div>
+    </div>
+</section>
+
+<section data-grid="col-12 pad-12x">
+    <div data-grid="col-3">
+        <span class="c-glyph glyph-edit"></span>
+        <p class="c-paragraph">Surface Pro 4's <strong>12.3-inch PixelSense display</strong> has extremely high contrast and low glare.</p>
+    </div>
+    <div data-grid="col-3">
+        <span class="c-glyph glyph-edit"></span>
+        <p class="c-paragraph">The <strong>6th Gen Intel Core m3, i5, and i7 processors</strong> are not only more powerful, they're quieter, run cooler, and are more efficient than before.</p>
+    </div>
+    <div data-grid="col-3">
+        <span class="c-glyph glyph-edit"></span>
+        <p class="c-paragraph">Writing with <strong>Surface Pen</strong> (included) feels as fluid and precise as a ballpoint pen on paper.</p>
+    </div>
+    <div data-grid="col-3">
+        <span class="c-glyph glyph-edit"></span>
+        <p class="c-paragraph">Surface Pro 4 runs <strong>Windows 10 Pro</strong>, the best combination of the Windows you already know plus lots of great new features you'll love.</p>
+    </div>
+    <div data-grid="col-12" class="x-type-center">
+        <a href="./" class="c-call-to-action c-glyph">SHOW ALL TECH SPECS</a>
+    </div>
+</section>
+
+<div data-grid="col-12">
+    {{> feature-template product-detail.surface-tablet-feature}}
+</div>
+
+<section data-grid="col-12">
+    <div data-grid="col-6" class="c-placement-container theme-light">
+        {{> mosaic-placement-template product-detail.accessory-placement }}
+    </div>
+    <div data-grid="col-3" class="c-placement-container theme-light">
+        {{> mosaic-placement-template product-detail.histogram-placement }}
+    </div>
+    <div data-grid="col-3" class="c-placement-container theme-light">
+        {{> mosaic-placement-template product-detail.editorial-placement }}
+    </div>
+</section>
+
+<div data-grid="col-12" class="theme-light">
+    {{> feature-template product-detail.surface-vertasility-feature}}
+</div>
+
+<div data-grid="col-12">
+    {{> feature-template product-detail.surface-performance-feature}}
+    {{> feature-template product-detail.surface-windows-feature}}
+    {{> feature-template product-detail.surface-advanced-feature}}
+</div>
+
+<section data-grid="col-12 pad-12x">
+    <div class="c-table f-divided">
+        <table summary="{{ product-detail.surface-table-feature.content.summary }}">
+            <thead>
+                <tr>
+                    <th scope="col">{{ product-detail.surface-table-feature.content.col-1-heading }}</th>
+                    <th scope="col">{{ product-detail.surface-table-feature.content.col-2-heading }}</th>
+                    <th scope="col">{{ product-detail.surface-table-feature.content.col-3-heading }}</th>
+                    <th scope="col">{{ product-detail.surface-table-feature.content.col-4-heading }}</th>
+            </thead>
+            <tbody>
+                {{#each product-detail.surface-table-feature.content.rows}}
+                <tr>
+                    <td>
+                        <p class="c-paragraph"><b>{{ title }}</b></p>
+                        <p class="c-paragraph">{{ subtitle }}</p>
+                        {{> call-to-action-template call-to-action }}
+                    </td>
+                    <td>
+                        <p class="c-paragraph">{{ description }}</p>
+                    </td>
+                    <td>
+                        <ul class="c-list">
+                            {{#each list-1 }}
+                            <li>{{ li }}</li>
+                            {{/each}}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="c-list">
+                            {{#each list-2 }}
+                            <li>{{ li }}</li>
+                            {{/each}}
+                        </ul>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="theme-light" data-grid="col-12">
+    <h1 class="c-heading-6">Add histogram and reviews here</h1>
+</section>
+
+{{! removing offset and making FAQ full wide per Jason Falk}}
+<section data-grid="col-12">
+        <h1 class="c-heading-2">FAQ</h1>
+        <h2 class="c-heading-4">What opperating system does Surface Pro 4 run?</h2>
+        <p class="c-paragraph-3">Surface Pro 4 runs full Windows 10 Pro. This means you can run your favorite programps, apps, and browsers.</p>
+        <h2 class="c-heading-4">Can I run multiple programs at the same time?</h2>
+        <p class="c-paragraph-3">The Surface Pro 4 lets you multitask like a pro. Run Windows apps and as many desktop programs as you need simultaneously - they will even snap into place on your screen so you can use them all at once.</p>
+        <h2 class="c-heading-4">Does the Surface Pen that works with the Surface Pro 4 work with other Surface devices?</h2>
+        <p class="c-paragraph-3">Yes. With Palm Block technology and 1024 levels of pressure sensitivity, Surface Pen gives you a surprisingly natural way to mark-up documents and take notes in your own handwriting.</p>
+</section>
+
+<section data-grid="col-12 pad-6x">
+    <div data-grid="col-12">
+        <h1 class="c-heading-3">You may also be interested in</h1>
+    </div>
+
+    {{#each product-detail.you-may-also-be-interested-in}}
+        <div data-grid="col-3" itemscope itemtype="http://schema.org/Product">
+            <img src="{{this.image.src}}" alt="{{this.image.alt}}">
+            <div class="x-type-center">
+                <h2 class="c-heading-5" itemprop="name">{{this.heading}}</h2>
+                {{> rating-template this.rating }}
+                {{> price-template this.price }}
+            </div>
+        </div>
+    {{/each}}
+</section>
+
+<section data-grid="col-12 pad-6x">
+    <div data-grid="col-12">
+        <h1 class="c-heading-3">The Microsoft difference</h1>
+    </div>
+
+    {{#each product-detail.the-microsoft-difference}}
+        <div data-grid="col-3">
+            <img src="{{this.image.src}}" alt="{{this.image.alt}}">
+            <h2 class="c-heading-5">{{this.heading}}</h2>
+            {{#if this.list}}
+                <ul class="c-list">
+                    {{#each this.list}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+            {{#if this.paragraph}}
+                <p class="c-paragraph">{{this.paragraph}}</p>
+            {{/if}}
+            {{#if this.call-to-action}}
+                {{> call-to-action-template this.call-to-action }}
+            {{/if}}
+        </div>
+    {{/each}}
+</section>
+
+<div class="m-v-md" data-grid="col-12">
+    <hr class="c-divider">
+</div>
+
+<section data-grid="col-12">
+    {{!-- TODO: Add offset --}}
+    <div data-grid="col-3"></div>
+    <div data-grid="col-6">
+        {{#each product-detail.fine-print}}
+            <p class="c-caption-1">{{this}}</p>
+        {{/each}}
+    </div>
+</section>

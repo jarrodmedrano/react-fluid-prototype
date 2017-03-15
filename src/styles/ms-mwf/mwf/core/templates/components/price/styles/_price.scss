@@ -1,0 +1,31 @@
+// ==========================================================================
+// Component: Price
+// ==========================================================================
+
+.c-price {
+    @include clearfix();
+
+    .c-label {
+        @include apply-type(t7);
+        padding: 0 4px;
+        display: inline;
+        margin: 0;
+        float: $left;
+    }
+
+    span,
+    meta + span,
+    s {
+        float: $left;
+    }
+
+    &.f-large {
+        .c-label,
+        span,
+        meta + span,
+        s {
+            @include apply-type(t5);
+            line-height: 24px;
+        }
+    }
+}

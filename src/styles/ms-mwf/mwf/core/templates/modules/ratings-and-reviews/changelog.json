@@ -1,0 +1,17 @@
+{
+    "name": "ratings and reviews",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8440128,
+            "description": "fixes an issue where words would overflow beyond the page margin instead of breaking onto a new line"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8142673,
+            "description": "changes ratings, reviews & histogram to a max-width of 800px"
+        }
+    ]
+}

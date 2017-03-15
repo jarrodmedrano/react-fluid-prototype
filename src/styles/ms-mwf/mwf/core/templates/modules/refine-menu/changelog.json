@@ -1,0 +1,5 @@
+{
+    "name": "refine menu",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md"
+}

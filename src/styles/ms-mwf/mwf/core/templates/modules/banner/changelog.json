@@ -1,0 +1,26 @@
+{
+    "name": "banner",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10225257,
+            "description": "removes extra margin on blockquote element"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "new",
+            "ticket-id": 8353810,
+            "description": "adds quotes to heading and image"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "new",
+            "ticket-id": 8101562,
+            "description": "adds paragraph option and updates schema"
+        }
+    ]
+}

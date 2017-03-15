@@ -1,0 +1,29 @@
+{
+    "name": "glyph",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10751289,
+            "description": "fixes the missing `search` glyph"
+
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10075503,
+            "internal": true,
+            "description": "fixes font syntax issue with IE8 display"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8481108,
+            "internal": true,
+            "description": "optimizes glyph selectors to reduce class duplication"
+        }
+    ]
+}

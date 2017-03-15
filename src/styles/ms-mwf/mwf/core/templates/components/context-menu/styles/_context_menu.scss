@@ -1,0 +1,76 @@
+.c-context-menu {
+    background: flatten-overlay($color-background, $color-foreground, 5);
+    width: 296px;
+    min-width: 64px;
+    max-width: 368px;
+    border: 1px solid $color-foreground-10;
+    z-index: map-get($z-index, nav);
+
+    > li {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        background: flatten-overlay($color-background, $color-foreground, 5);
+        background-clip: padding-box;
+
+        span {
+            display: inline-block;
+            width: 100%;
+            padding: 11px 12px 13px;
+            outline: 0;
+            cursor: pointer;
+            white-space: normal;
+
+            &.c-glyph {
+                min-width: 120px;
+                padding-right: 10px;
+
+                &:before {
+                    width: 16px;
+                    height: 16px;
+                    margin-#{$right}: 10px;
+                    vertical-align: middle;
+                }
+            }
+
+            #{$theme-light} {
+                background: $color-shade-05;
+                color: $color-shade-80;
+            }
+
+            #{$theme-dark} {
+                background: flatten-overlay($color-shade, $color-tint, 15);
+                color: $color-tint-80;
+            }
+        }
+
+        &.f-context-text-only {
+            span {
+                padding-#{$left}: 38px; // reserve space for glyph
+            }
+        }
+
+        &.f-divider {
+            span {
+                border-top: 1px solid $color-foreground-20;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background: flatten-overlay($color-background, $color-foreground, 15);
+        }
+
+        &:focus:not(.x-hidden-focus) {
+            outline: 2px solid $color-accent;
+            z-index: map-get($z-index, nav) + 1; //ensure the focus state is fully visible when focused
+        }
+
+        &[aria-disabled="true"] {
+            span {
+                color: $color-foreground-20;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

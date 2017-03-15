@@ -1,0 +1,20 @@
+{
+    "name": "text action",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10751289,
+            "description": "fixes the missing `search` option"
+
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9725342,
+            "description": "adds the text action component which involves a text field and a glyph corresponding with the intended action"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "table",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9926259,
+            "description": "updates table to improve accessibility, including adding headers attributes and creating an aria-live region to announce sorting changes"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9450034,
+            "description": "fixes table column tabbing to follow perceived order instead of source order"
+        },
+        {
+            "type": "new",
+            "ticket-id": 9636081,
+            "description": "adds support to use checkbox component within table data"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7969241,
+            "description": "updates columns and adds col-break to seperate column groups"
+        }
+    ]
+}

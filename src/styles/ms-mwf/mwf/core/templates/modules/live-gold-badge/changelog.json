@@ -1,0 +1,5 @@
+{
+    "name": "live gold badge",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md"
+}

@@ -1,0 +1,60 @@
+// The video-play-action mixin is needed to ensure the consistent use of this UX/UI
+
+// Accepts three arguments;
+// $trigger-size: number/null; sets the width and height of the action trigger
+// $video-width: number/null; sets the known width space of the video component space
+// $video-height: number/null; sets the known height space of the video component space
+
+// Width and Height of the video component are needed to be known as this mixin uses Absolute positioning and depending
+// on where the nearest Static or Relative positioning is set will depend on where the action trigger is placed.
+
+// Example:
+// .selector {
+// @include video-play-action(48px);
+// }
+
+// .selector {
+// @include video-play-action(48px, 272px, 153px);
+// }
+
+@mixin video-play-action($trigger-size: null, $video-width: null) {
+
+    // sass-lint:disable brace-style
+    @if $trigger-size == null {
+        @warn "$trigger-size cannot be null, please add value to argument."
+    }
+    // sass-lint:enable brace-style
+
+    position: absolute;
+    background: $color-shade-60;
+    border: transparent;
+    border-radius: 50%;
+    margin: 0;
+    height: $trigger-size;
+    width: $trigger-size;
+    margin-top: 0;
+
+    @if $video-width == null {
+        top: calc(50% - #{($trigger-size / 2)});
+        #{$left}: calc(50% - #{($trigger-size / 2)});
+    } @else {
+        $video-height: aspect-height($video-width, (16, 9));
+
+        top: calc(#{($video-height / 2)} - #{($trigger-size / 2)});
+        #{$left}: calc(#{$video-width / 2} - #{$trigger-size / 2});
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:before {
+        position: absolute;
+        top: calc(50% - #{$trigger-size / 4});
+        left: calc(50% - #{$trigger-size / 4}); // absolute positioning, n/a RTL var
+        color: $color-tint;
+        font-size: ($trigger-size / 2);
+        content: $glyph-play;
+        margin: 0;
+    }
+}

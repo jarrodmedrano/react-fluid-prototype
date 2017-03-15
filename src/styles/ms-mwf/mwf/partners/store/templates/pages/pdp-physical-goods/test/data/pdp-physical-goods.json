@@ -1,0 +1,3089 @@
+{
+    "buy-box": {
+        "config": {
+            "buy-box": true,
+            "id": "buy-box",
+            "hidden": true
+        },
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 6
+            },
+            "content": {
+                "text": "Heading - Subheading"
+            }
+        },
+        "hyperlink": {
+            "content": {
+                "text": "Hyperlink",
+                "href": "http://www.getmwf.com"
+            }
+        },
+        "price": {
+            "config": {
+                "currency-symbol": "$",
+                "currency-code": "USD"
+            },
+            "content": {
+                "price": 1000,
+                "discounted-price": null
+            }
+        },
+        "call-to-action": {
+            "content": {
+                "text": "CALL TO ACTION",
+                "href": "#"
+            }
+        }
+    },
+    "hero": {
+        "badge": {
+            "config": {
+                "size": "large",
+                "type": "highlight"
+            },
+            "content": {
+                "text": "BADGE"
+            }
+        },
+        "heading": "Microsoft Surface Pro 4 - 128 GB / Intel Core m3",
+        "rating": {
+            "config": {
+                "type": {
+                    "aggregate": true
+                },
+                "community-rating": 4,
+                "rating-count": 456
+            },
+            "content": {
+                "community-label": "Rating:"
+            }
+        },
+        "rating-meta": "10,709",
+        "price": {
+            "config": {
+                "currency-symbol": "$",
+                "currency-code": "USD"
+            },
+            "content": {
+                "price": 899.99,
+                "discounted-price": 779.99
+            }
+        },
+        "colors-label": "Available colors",
+        "aria": "Select a color",
+        "swatch1": {
+            "config": {
+                "name": "swatches",
+                "aria-pressed": true,
+                "swatch": true,
+                "disabled": false
+            },
+            "content": {
+                "text": "",
+                "color": "4fb1ff"
+            }
+        },
+        "swatch2": {
+            "config": {
+                "name": "swatches",
+                "aria-pressed": false,
+                "swatch": true,
+                "disabled": false
+            },
+            "content": {
+                "text": "",
+                "color": "BAD80A"
+            }
+        },
+        "swatch3": {
+            "config": {
+                "name": "swatches",
+                "aria-pressed": false,
+                "swatch": true,
+                "disabled": false
+            },
+            "content": {
+                "text": "",
+                "color": "CCCCCC"
+            }
+        },
+        "swatch4": {
+            "config": {
+                "name": "swatches",
+                "aria-pressed": false,
+                "swatch": true,
+                "disabled": false
+            },
+            "content": {
+                "text": "",
+                "color": "000000"
+            }
+        },
+        "swatch5": {
+            "config": {
+                "name": "swatches",
+                "aria-pressed": false,
+                "swatch": true,
+                "disabled": false
+            },
+            "content": {
+                "text": "",
+                "color": "FFFFFF"
+            }
+        },
+        "configuration-label": "Popular configurations",
+        "aria": "Select a configuration",
+        "configurations": [{
+            "config": {
+                "element-type": "button"
+            },
+            "content": {
+                "text": "128GB / Intel Core m3 - 4GB RAM"
+            }
+        }, {
+            "config": {
+                "element-type": "button",
+                "aria-pressed": true
+            },
+            "content": {
+                "text": "128GB / Intel Core i5 - 4GB RAM"
+            }
+        }, {
+            "config": {
+                "element-type": "button"
+            },
+            "content": {
+                "text": "256GB / Intel Core i5 - 8GB RAM"
+            }
+        }, {
+            "config": {
+                "element-type": "button"
+            },
+            "content": {
+                "text": "256GB / Intel Core i7 - 16GB RAM"
+            }
+        }, {
+            "config": {
+                "element-type": "button"
+            },
+            "content": {
+                "text": "512GB / Intel Core i7 - 16GB RAM"
+            }
+        }, {
+            "config": {
+                "element-type": "button"
+            },
+            "content": {
+                "text": "512GB / Intel Core i7 - 1TB RAM"
+            }
+        }],
+        "quantity-label": "Quantity",
+        "quantity": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-for-list",
+                "hidden": true,
+                "border": true
+            },
+            "content": {
+                "title": "1",
+                "href": "#",
+                "menu-items": [{
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "1",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "2",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "3",
+                        "href": "#"
+                    }
+                }, {
+                    "config": {
+                        "selected": true,
+                        "type": "li"
+                    },
+                    "content": {
+                        "text": "4",
+                        "href": "#"
+                    }
+                }]
+            }
+        },
+        "add-to-cart": {
+            "config": {
+                "element-type": "button",
+                "button-type": "submit"
+            },
+            "content": {
+                "text": "Add to cart",
+                "href": "#"
+            }
+        },
+        "caption": "Free shipping. Free returns.",
+        "description": {
+            "content": {
+                "heading": "Description",
+                "text": "This is the short description of the product. It can either be a brief paragraph or a short list of bullet points. For physical goods there is currently a limit on the copy, but for digital there is not, and will likely truncate with a ‘more’ link that will expand inline."
+            }
+        },
+        "offering": {
+            "content": {
+                "heading": "This is an offering of some sort",
+                "text": "There can only be one offer in this spot and it will to this product's PDP."
+            }
+        },
+        "offering-hyperlink": {
+            "content": {
+                "text": "Shop now",
+                "href": "#"
+            }
+        }
+    },
+    "hero-carousel": {
+        "config": {
+            "content-type": "image",
+            "multi-slide": true
+        },
+        "content": {
+            "label": "New Products",
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "sequence-indicator": {
+                "content": {
+                    "items": [{
+                        "config": {
+                            "checked": true
+                        },
+                        "content": {
+                            "label": "View slide one",
+                            "title": "Slide one",
+                            "id": "hero-slide-one"
+                        }
+                    }, {
+                        "content": {
+                            "label": "View slide two",
+                            "title": "Slide two",
+                            "id": "hero-slide-two"
+                        }
+                    }, {
+                        "content": {
+                            "label": "View slide three",
+                            "title": "Slide three",
+                            "id": "hero-slide-three"
+                        }
+                    }, {
+                        "content": {
+                            "label": "View slide four",
+                            "title": "Slide four",
+                            "id": "hero-slide-four"
+                        }
+                    }, {
+                        "content": {
+                            "label": "View slide five",
+                            "title": "Slide five",
+                            "id": "hero-slide-five"
+                        }
+                    }, {
+                        "content": {
+                            "label": "View slide six",
+                            "title": "Slide six",
+                            "id": "hero-slide-six"
+                        }
+                    }]
+                }
+            },
+            "items": [{
+                "id": "hero-slide-one",
+                "config": {
+                    "size": "medium",
+                    "x-align": "left",
+                    "y-align": "center",
+                    "context": "none"
+                },
+                "content": {
+                    "background-image": {
+                        "vp6": "images/pdp-buybox-1-752x600-vp6.jpg",
+                        "vp5": "images/pdp-buybox-1-752x600-vp5.jpg",
+                        "vp4": "images/pdp-buybox-1-582x600-vp4.jpg",
+                        "vp3": "images/pdp-buybox-1-494x500-vp3.jpg",
+                        "vp2": "images/pdp-buybox-1-539x300-vp2.jpg",
+                        "vp1": "images/pdp-buybox-1-336x300-vp1.jpg",
+                        "alt": "Side view of a Microsoft Surface"
+                    }
+                }
+            }, {
+                "id": "hero-slide-two",
+                "config": {
+                    "size": "medium",
+                    "x-align": "left",
+                    "y-align": "center",
+                    "context": "none"
+                },
+                "content": {
+                    "background-image": {
+                        "vp6": "images/pdp-buybox-2-752x600-vp6.jpg",
+                        "vp5": "images/pdp-buybox-2-752x600-vp5.jpg",
+                        "vp4": "images/pdp-buybox-2-582x600-vp4.jpg",
+                        "vp3": "images/pdp-buybox-2-494x500-vp3.jpg",
+                        "vp2": "images/pdp-buybox-2-539x300-vp2.jpg",
+                        "vp1": "images/pdp-buybox-2-336x300-vp1.jpg",
+                        "alt": "Back view of a Microsoft Surface"
+                    }
+                }
+            }, {
+                "id": "hero-slide-three",
+                "config": {
+                    "size": "medium",
+                    "x-align": "left",
+                    "y-align": "center",
+                    "context": "none"
+                },
+                "content": {
+                    "background-image": {
+                        "vp6": "images/pdp-buybox-3-752x600-vp6.jpg",
+                        "vp5": "images/pdp-buybox-3-752x600-vp5.jpg",
+                        "vp4": "images/pdp-buybox-3-582x600-vp4.jpg",
+                        "vp3": "images/pdp-buybox-3-494x500-vp3.jpg",
+                        "vp2": "images/pdp-buybox-3-539x300-vp2.jpg",
+                        "vp1": "images/pdp-buybox-3-336x300-vp1.jpg",
+                        "alt": "Top view of a Microsoft Surface"
+                    }
+                }
+            }, {
+                "id": "hero-slide-four",
+                "config": {
+                    "size": "medium",
+                    "x-align": "left",
+                    "y-align": "center",
+                    "context": "none"
+                },
+                "content": {
+                    "background-image": {
+                        "vp6": "images/pdp-buybox-4-752x600-vp6.jpg",
+                        "vp5": "images/pdp-buybox-4-752x600-vp5.jpg",
+                        "vp4": "images/pdp-buybox-4-582x600-vp4.jpg",
+                        "vp3": "images/pdp-buybox-4-494x500-vp3.jpg",
+                        "vp2": "images/pdp-buybox-4-539x300-vp2.jpg",
+                        "vp1": "images/pdp-buybox-4-336x300-vp1.jpg",
+                        "alt": "Front view of a Microsoft Surface"
+                    }
+                }
+            }, {
+                "id": "hero-slide-five",
+                "config": {
+                    "size": "medium",
+                    "x-align": "left",
+                    "y-align": "center",
+                    "context": "none"
+                },
+                "content": {
+                    "background-image": {
+                        "vp6": "images/pdp-buybox-5-752x600-vp6.jpg",
+                        "vp5": "images/pdp-buybox-5-752x600-vp5.jpg",
+                        "vp4": "images/pdp-buybox-5-582x600-vp4.jpg",
+                        "vp3": "images/pdp-buybox-5-494x500-vp3.jpg",
+                        "vp2": "images/pdp-buybox-5-539x300-vp2.jpg",
+                        "vp1": "images/pdp-buybox-5-336x300-vp1.jpg",
+                        "alt": "Underside view of a Microsoft Surface"
+                    }
+                }
+            }, {
+                "id": "hero-slide-six",
+                "config": {
+                    "size": "medium",
+                    "x-align": "left",
+                    "y-align": "center",
+                    "context": "none"
+                },
+                "content": {
+                    "background-image": {
+                        "vp5": "images/pdp-buybox-6-752x600-vp6.jpg",
+                        "vp5": "images/pdp-buybox-6-752x600-vp5.jpg",
+                        "vp4": "images/pdp-buybox-6-582x600-vp4.jpg",
+                        "vp3": "images/pdp-buybox-6-494x500-vp3.jpg",
+                        "vp2": "images/pdp-buybox-6-539x300-vp2.jpg",
+                        "vp1": "images/pdp-buybox-6-336x300-vp1.jpg",
+                        "alt": "Side view of a closed Microsoft Surface"
+                    }
+                }
+            }]
+        },
+        "special-offer": {
+            "src": "images/special-offer.jpg",
+            "alt": "A picture of 3 Microsoft surfaces"
+        }
+    },
+    "esrb": {
+        "content": {
+            "heading": "Teen",
+            "age-rating-text": "Suitable for 13+",
+            "list-items": [
+                "Blood and gore",
+                "Adult themes",
+                "Adult language"
+            ],
+            "image": {
+                "config": {
+                    "image-element": true
+                },
+                "content": {
+                    "src": "http://placehold.it/56x56",
+                    "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                }
+            }
+        }
+    },
+    "left-feature": {
+        "config": {
+            "align": "left"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+            "badge": {
+                "config": {
+                    "size": "small",
+                    "type": "highlight"
+                },
+                "content": {
+                    "text": "BADGE"
+                }
+            },
+            "image": {
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "center-feature": {
+        "config": {
+            "align": "center"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+            "image": {
+                "vp5": "http://placehold.it/1600x400",
+                "vp4": "http://placehold.it/1399x400",
+                "vp3": "http://placehold.it/1083x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "right-feature": {
+        "config": {
+            "align": "right"
+        },
+        "content": {
+            "heading": "Heading",
+            "body": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+            "badge": {
+                "config": {
+                    "size": "small",
+                    "type": "highlight"
+                },
+                "content": {
+                    "text": "BADGE"
+                }
+            },
+            "image": {
+                "vp5": "http://placehold.it/800x400",
+                "vp4": "http://placehold.it/700x400",
+                "vp3": "http://placehold.it/542x300",
+                "vp2": "http://placehold.it/767x300",
+                "vp1": "http://placehold.it/539x200",
+                "alt": "Placeholder with grey background and dimension watermark without any imagery"
+            },
+            "call-to-action": {
+                "content": {
+                    "text": "CALL TO ACTION",
+                    "href": "#"
+                }
+            }
+        }
+    },
+    "system-requirements": {
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 3
+            },
+            "content": {
+                "text": "Heading"
+            }
+        },
+        "select": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-for-list",
+                "hidden": true,
+                "border": false
+            },
+            "content": {
+                "title": "Select Menu",
+                "href": "#",
+                "menu-items": [
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 1",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 2",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 3",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Menu Item 4",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "minimum": {
+            "config": {
+                "type": "divider",
+                "summary": "Summary description."
+            },
+            "content": {
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Minimum"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Bravo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item charlie"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Delta"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Echo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "recommended": {
+            "config": {
+                "type": "divider",
+                "summary": "Summary description."
+            },
+            "content": {
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Recommended"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Bravo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item charlie"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Delta"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "content": {
+                                    "text": "Item Echo"
+                                }
+                            },
+                            {
+                                "content": {
+                                    "text": "Description sentence."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "compare-chart": {
+        "config": {
+            "column-width": 3
+        },
+        "content": {
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Heading"
+                }
+            }
+        },
+        "items": [
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading text that wraps"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet leo nunc."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3"
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3",
+                                    "hidden": true
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3",
+                                    "hidden": true
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "product-placement": {
+                    "config": {
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name.",
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "RECOMMENDED"
+                            }
+                        },
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "level": 4,
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading text that wraps"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 99.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "./"
+                    }
+                },
+                "button": {
+                    "config": {
+                        "element-type": "button"
+                    },
+                    "content": {
+                        "text": "Add to cart",
+                        "href": "#"
+                    }
+                },
+                "product-placement-paragraph": {
+                    "config": {
+                        "paragraph": true,
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet leo nunc."
+                    }
+                },
+                "sections": [
+                    {
+                        "config": {
+                            "paragraph": false,
+                            "level": 3
+                        },
+                        "content": {
+                            "row-title": {
+                                "config": {
+                                    "level": 5,
+                                    "tag": "h3",
+                                    "hidden": true
+                                },
+                                "content": {
+                                    "text": "Optional row title"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "config": {
+                            "icons": true
+                        },
+                        "content": {
+                            "description": {
+                                "config": {
+                                    "tag": "p",
+                                    "level": 1
+                                },
+                                "content": {
+                                    "text": "Paragraph text."
+                                }
+                            },
+                            "icons": [
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                },
+                                {
+                                    "image": {
+                                        "config": {
+                                            "image-element": true
+                                        },
+                                        "content": {
+                                            "src": "http://placehold.it/40x40",
+                                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "list": {
+                            "config": {
+                                "tag": "ul"
+                            },
+                            "content": {
+                                "label": "Label",
+                                "items": [
+                                    "List Item 1",
+                                    "List Item 2",
+                                    "List Item 3",
+                                    "List Item 4"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "content-elements": [{
+            "type": "heading",
+            "config": {
+                "tag": "h2",
+                "level": 4
+            },
+            "content": {
+                "text": "FAQ"
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 2
+            },
+            "content": {
+                "text": "FAQ title line, this is a question"
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 3
+            },
+            "content": {
+                "text": "Lorem ipsum dolor sit amet, usu eu iracundia disputando, saepe causae usu at, et quo mollis noluisse persequeris. Choro partiendo gloriatur vim te. At ius legendos principes, usu legere maluisset dignissim te, qui at soleat voluptatum. Mea natum augue id. Pro phaedrum quaestio no, per moderatius reformidans ad."
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 2
+            },
+            "content": {
+                "text": "FAQ title line, this is a question"
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 3
+            },
+            "content": {
+                "text": "Lorem ipsum dolor sit amet, usu eu iracundia disputando, saepe causae usu at, et quo mollis noluisse persequeris. Choro partiendo gloriatur vim te. At ius legendos principes, usu legere maluisset dignissim te, qui at soleat voluptatum. Mea natum augue id. Pro phaedrum quaestio no, per moderatius reformidans ad."
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 2
+            },
+            "content": {
+                "text": "FAQ title line, this is a question"
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 3
+            },
+            "content": {
+                "text": "Lorem ipsum dolor sit amet, usu eu iracundia disputando, saepe causae usu at, et quo mollis noluisse persequeris. Choro partiendo gloriatur vim te. At ius legendos principes, usu legere maluisset dignissim te, qui at soleat voluptatum. Mea natum augue id. Pro phaedrum quaestio no, per moderatius reformidans ad."
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 2
+            },
+            "content": {
+                "text": "FAQ title line, this is a question"
+            }
+        }, {
+            "type": "paragraph",
+            "config": {
+                "tag": "p",
+                "level": 3
+            },
+            "content": {
+                "text": "Lorem ipsum dolor sit amet, usu eu iracundia disputando, saepe causae usu at, et quo mollis noluisse persequeris. Choro partiendo gloriatur vim te. At ius legendos principes, usu legere maluisset dignissim te, qui at soleat voluptatum. Mea natum augue id. Pro phaedrum quaestio no, per moderatius reformidans ad."
+            }
+        }]
+    },
+    "product-placement": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "large",
+            "context": "device"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Heading",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "See all",
+                            "label": "See all Heading"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "See all",
+                "href": "#"
+            },
+            "items": [
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "badge": {
+                            "config": {
+                                "size": "small",
+                                "type": "highlight"
+                            },
+                            "content": {
+                                "text": "BADGE"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "USD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet.",
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    },
+    "content-placement": {
+        "config": {
+            "type": "four-up"
+        },
+        "content": {
+            "one": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Heading"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "CALL TO ACTION",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/348x195",
+                        "vp3": "http://placehold.it/235x132",
+                        "vp4": "http://placehold.it/279x157",
+                        "vp5": "http://placehold.it/358x201",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "two": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Heading"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "CALL TO ACTION",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/348x195",
+                        "vp3": "http://placehold.it/235x132",
+                        "vp4": "http://placehold.it/279x157",
+                        "vp5": "http://placehold.it/358x201",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "three": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Heading"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "CALL TO ACTION",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/348x195",
+                        "vp3": "http://placehold.it/235x132",
+                        "vp4": "http://placehold.it/279x157",
+                        "vp5": "http://placehold.it/358x201",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "four": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Heading"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "CALL TO ACTION",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/491x276",
+                        "vp2": "http://placehold.it/348x195",
+                        "vp3": "http://placehold.it/235x132",
+                        "vp4": "http://placehold.it/279x157",
+                        "vp5": "http://placehold.it/358x201",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            }
+        }
+    },
+    "ratings-and-reviews": {
+        "heading": {
+            "config": {
+                "tag": "h3",
+                "level": 4
+            },
+            "content": {
+                "text": "Ratings and reviews"
+            }
+        },
+        "filter": {
+            "content": {
+                "label": "Filter by:"
+            },
+            "filters": [
+                {
+                    "config": {
+                        "type": "ul",
+                        "id": "unique-id-1",
+                        "hidden": true,
+                        "border": false
+                    },
+                    "content": {
+                        "title": "Current",
+                        "href": "#",
+                        "menu-items": [
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 1",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 2",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 3",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 4",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "config": {
+                        "type": "ul",
+                        "id": "unique-id-2",
+                        "hidden": true,
+                        "border": false
+                    },
+                    "content": {
+                        "title": "All platforms",
+                        "href": "#",
+                        "menu-items": [
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 1",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 2",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 3",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 4",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "config": {
+                        "type": "ul",
+                        "id": "unique-id-3",
+                        "hidden": true,
+                        "border": false
+                    },
+                    "content": {
+                        "title": "All ratings",
+                        "href": "#",
+                        "menu-items": [
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 1",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 2",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 3",
+                                    "href": "#"
+                                }
+                            },
+                            {
+                                "config": {
+                                    "selected": true,
+                                    "type": "li"
+                                },
+                                "content": {
+                                    "text": "Sub Nav Link 4",
+                                    "href": "#"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "histogram": {
+            "config": {
+                "divisor": 50000
+            },
+            "content": {
+                "review-count-by-star": {
+                    "one": "2345234",
+                    "two": "24352",
+                    "three": "4564",
+                    "four": "783652",
+                    "five": "4564568"
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4.2
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                }
+            }
+        },
+        "rate-and-review": {
+            "config": {
+                "element-type": "button",
+                "button-type": "submit",
+                "disabled": false
+            },
+            "content": {
+                "text": "Rate and review",
+                "href": "null"
+            }
+        },
+        "top-reviews": {
+            "most-favourable": {
+                "heading": {
+                    "config": {
+                        "tag": "h4",
+                        "level": 4
+                    },
+                    "content": {
+                        "text": "Most helpful favorable review"
+                    }
+                },
+                "review": {
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "individual": true
+                            },
+                            "community-rating": 3.0,
+                            "user-rating": 2.1
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "date": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "9/9/2016"
+                        }
+                    },
+                    "name": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "Jane Doe"
+                        }
+                    },
+                    "title": {
+                        "config": {
+                            "tag": "h5",
+                            "level": 6
+                        },
+                        "content": {
+                            "text": "Heading"
+                        }
+                    },
+                    "text": {
+                        "config": {
+                            "id": "content-toggle-1",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    },
+                    "helpful": {
+                        "config": {
+                            "tag": "p"
+                        },
+                        "content": {
+                            "text": "34 out of 57 people found this helpful."
+                        }
+                    },
+                    "response": {
+                        "name": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "Jerome Doe"
+                            }
+                        },
+                        "responded": {
+                            "content": {
+                                "text": "responded on"
+                            }
+                        },
+                        "comment-type": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "Developer comment"
+                            }
+                        },
+                        "date": {
+                            "config": {
+                                "level": 3
+                            },
+                            "content": {
+                                "text": "9/9/2016"
+                            }
+                        },
+                        "text": {
+                            "config": {
+                                "id": "content-toggle-1-1",
+                                "tag": "p",
+                                "expanded": false,
+                                "show": 3
+                            },
+                            "content": {
+                                "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                                "more-text": "More",
+                                "less-text": "Less"
+                            }
+                        }
+                    }
+                }
+            },
+            "most-critical": {
+                "heading": {
+                    "config": {
+                        "tag": "h4",
+                        "level": 4
+                    },
+                    "content": {
+                        "text": "Most helpful critical review"
+                    }
+                },
+                "review": {
+                    "rating": {
+                        "config": {
+                            "type": {
+                                "individual": true
+                            },
+                            "community-rating": 3.0,
+                            "user-rating": 2.1
+                        },
+                        "content": {
+                            "community-label": "Rating:"
+                        }
+                    },
+                    "date": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "9/9/2016"
+                        }
+                    },
+                    "name": {
+                        "config": {
+                            "level": 3
+                        },
+                        "content": {
+                            "text": "John Smith"
+                        }
+                    },
+                    "title": {
+                        "config": {
+                            "tag": "h5",
+                            "level": 6
+                        },
+                        "content": {
+                            "text": "Heading"
+                        }
+                    },
+                    "text": {
+                        "config": {
+                            "id": "content-toggle-1",
+                            "tag": "p",
+                            "expanded": false,
+                            "show": 3
+                        },
+                        "content": {
+                            "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                            "more-text": "More",
+                            "less-text": "Less"
+                        }
+                    },
+                    "helpful": {
+                        "config": {
+                            "tag": "p"
+                        },
+                        "content": {
+                            "text": "22 out of 51 people found this helpful."
+                        }
+                    }
+                }
+            }
+        },
+        "sort-by": {
+            "config": {
+                "type": "ul",
+                "id": "unique-id-1",
+                "hidden": true,
+                "border": false
+            },
+            "content": {
+                "label": "Sort by:",
+                "title": "Most helpful",
+                "href": "#",
+                "menu-items": [
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 1",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 2",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 3",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": true,
+                            "type": "li"
+                        },
+                        "content": {
+                            "text": "Sub Nav Link 4",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "visible-reviews": {
+            "content": {
+                "text": "13-24 of 3,015 reviews"
+            }
+        },
+        "all-reviews": [
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "platform": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "Platform: Xbox"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "platform": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "Platform: PC"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            },
+            {
+                "rating": {
+                    "config": {
+                        "type": {
+                            "individual": true
+                        },
+                        "community-rating": 3.0,
+                        "user-rating": 2.1
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "date": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "9/9/2016"
+                    }
+                },
+                "name": {
+                    "config": {
+                        "level": 3
+                    },
+                    "content": {
+                        "text": "John Smith"
+                    }
+                },
+                "title": {
+                    "config": {
+                        "tag": "h5",
+                        "level": 6
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "text": {
+                    "config": {
+                        "id": "content-toggle-1",
+                        "tag": "p",
+                        "expanded": false,
+                        "show": 3
+                    },
+                    "content": {
+                        "text": "Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mattis tellus. Fusce ut nunc varius, porta sem cursus, pretium augue. In hac habitasse platea dictumst. Proin gravida nisl neque. Etiam vitae dignissim sapien, ac pulvinar ante. Vivamus libero odio, rhoncus tristique velit a, efficitur consequat lacus. Praesent lorem dui, feugiat non ligula in, maximus venenatis tellus. Praesent tempor pharetra nisi, sed fringilla est hendrerit at.",
+                        "more-text": "More",
+                        "less-text": "Less"
+                    }
+                },
+                "helpful": {
+                    "config": {
+                        "tag": "p"
+                    },
+                    "content": {
+                        "text": "22 out of 51 people found this helpful."
+                    }
+                }
+            }
+        ],
+        "pagination": {
+            "content": {
+                "pages": 6,
+                "selected": 1
+            }
+        }
+    },
+    "subdata": {
+        "content-elements": [{
+            "type": "caption",
+            "config": {
+                "tag": "p",
+                "level": 1
+            },
+            "content": {
+                "text": "[1] Lorem ipsum dolor sit amet, an choro facilisis qualisque eum, cu alii nonumy dissentias mea, tollit docendi delicata an usu. Ad per hendrerit torquatos rationibus. Ex ludus mediocrem assentior sed, id mei perpetua definiebas, te nam diam tantas imperdiet. Agam choro latine ut mei. Eu duo animal vivendo scriptorem."
+            }
+        }, {
+            "type": "caption",
+            "config": {
+                "tag": "p",
+                "level": 1
+            },
+            "content": {
+                "text": "[2] Usu no dolorum omittam intellegebat. Per suscipit temporibus at, ex vidit fastidii theophrastus pri. Mei cu oratio voluptua dissentias, esse semper possim sea eu. Et dolores legendos mei, latine atomorum suavitate has ne. Vim persecuti consectetuer an."
+            }
+        }, {
+            "type": "caption",
+            "config": {
+                "tag": "p",
+                "level": 1
+            },
+            "content": {
+                "text": "[3] Qui ad dicunt tincidunt. Quaeque laoreet corrumpit nam in. Ad vix praesent instructior. Vis populo minimum assentior in, eam an aeque debitis. Vel sale iusto vidisse an, in sumo harum per. Vis mucius oporteat constituto id, ei vel suscipit periculis comprehensam."
+            }
+        }, {
+            "type": "caption",
+            "config": {
+                "tag": "p",
+                "level": 1
+            },
+            "content": {
+                "text": "[4] No cum sententiae vituperata, cu cum blandit instructior intellegebat, sit at movet tation appellantur. Ius oratio civibus te, nemore persequeris appellantur ex duo, voluptua sadipscing mel at. Qui eu iuvaret verterem, ne nam dolorum ponderum salutatus, per et unum nihil tractatos. Has possit eirmod scripta ne. Eu ius causae doctus, te duo expetenda conclusionemque, mucius cotidieque in eum."
+            }
+        }, {
+            "type": "caption",
+            "config": {
+                "tag": "p",
+                "level": 1
+            },
+            "content": {
+                "text": "[5] Ut quo esse tamquam efficiendi, eos cu veniam graece hendrerit, usu postea prompta at. Populo eirmod omnesque sea et, sed exerci urbanitas argumentum ut, omnis liber democritum his ex. Vim detracto mediocrem reformidans ex, ei mei veniam cetero legimus. Accusam nominati cu sed, ne eum putant everti. Sea eu adhuc putent quidam, ex debet atomorum sed. Agam ferri delicatissimi ad pri."
+            }
+        }]
+    }
+}

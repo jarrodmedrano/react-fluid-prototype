@@ -1,0 +1,458 @@
+{
+	"hero": {
+		"heading": "Microsoft Surface Pro 4",
+        "rating": {
+            "config": {
+                "type": {
+                    "aggregate": true
+                },
+                "community-rating": 4
+            },
+            "content": {
+                "community-label": "Rating:"
+            }
+        },
+		"price": {
+			"config": {
+				"currency-symbol": "$",
+				"currency-code": "USD"
+			},
+			"content": {
+				"price": 899.00,
+				"discounted-price": null
+			}
+		},
+		"configurations": [{
+			"config": {
+				"element-type": "button"
+			},
+			"content": {
+				"text": "128GB / Intel Core m3 - 4GB Ram",
+				"href": null
+			}
+		}, {
+			"config": {
+				"element-type": "button"
+			},
+			"content": {
+				"text": "128GB / Intel Core i5 - 4GB Ram",
+				"href": null
+			}
+		}, {
+			"config": {
+				"element-type": "button"
+			},
+			"content": {
+				"text": "256GB / Intel Core i5 - 8GB Ram",
+				"href": null
+			}
+		}, {
+			"config": {
+				"element-type": "button"
+			},
+			"content": {
+				"text": "256GB / Intel Core i5 - 16GB Ram",
+				"href": null
+			}
+		}],
+		"calls-to-action": [{
+			"content": {
+				"text": "Add to cart",
+				"href": "./"
+			}
+		}, {
+			"content": {
+				"text": "Configure your own",
+				"href": "./"
+			}
+		}]
+	},
+	"surface-tablet-feature": {
+		"config": {
+			"align": "left"
+		},
+		"content": {
+			"heading": "The tablet that can replace your laptop",
+			"body": "Performance and versatility for professionals, creatives, and more.",
+			"image": {
+				"vp4": "http://placehold.it/1000x400",
+				"vp2": "http://placehold.it/600x300",
+				"vp1": "http://placehold.it/400x200",
+				"alt": "placeholder"
+			}
+		}
+	},
+	"accessory-placement": {
+		"config": {
+			"context": "accessory"
+		},
+		"content": {
+			"heading": "Save up to $119",
+			"subheading": "Complete your experience with the Surface Pro 4 Bundle",
+			"background-image": {
+
+			},
+			"call-to-action": {
+				"content": {
+					"text": "Shop now",
+					"href": "./"
+				}
+			}
+		}
+	},
+	"histogram-placement": {
+		"config": {
+			"context": "accessory"
+		},
+		"content": {
+			"heading": " ",
+			"subheading": " ",
+			"background-image": {
+
+			},
+			"call-to-action": {
+				"content": {
+					"text": "Read all reviews",
+					"href": "./"
+				}
+			}
+		}
+	},
+	"editorial-placement": {
+		"config": {
+			"context": "accessory"
+		},
+		"content": {
+			"heading": "Business Insider",
+			"subheading": "\"The iPad Pro is great, but the Microsoft Surface Pro 4 is better...\"",
+			"background-image": {
+
+			},
+			"call-to-action": {
+				"content": {
+					"text": "Read all reviews",
+					"href": "./"
+				}
+			}
+		}
+	},
+	"surface-vertasility-feature": {
+		"config": {
+			"align": "center"
+		},
+		"content": {
+			"heading": "The Versatility of a laptop and tablet",
+			"body": "{{lorem.paragraphs}}",
+			"image": {
+				"vp4": "http://placehold.it/1000x400",
+				"vp2": "http://placehold.it/600x300",
+				"vp1": "http://placehold.it/400x200",
+				"alt": "placeholder"
+			},
+			"call-to-action": {
+				"content": {
+					"text": "Call to action",
+					"href": "./"
+				}
+			}
+		}
+	},
+	"surface-performance-feature": {
+		"config": {
+			"align": "left"
+		},
+		"content": {
+			"heading": "Exceptional performance",
+			"body": "{{lorem.paragraphs}}",
+			"image": {
+				"vp4": "http://placehold.it/1000x400",
+				"vp2": "http://placehold.it/600x300",
+				"vp1": "http://placehold.it/400x200",
+				"alt": "placeholder"
+			}
+		}
+	},
+	"surface-windows-feature": {
+		"config": {
+			"align": "right"
+		},
+		"content": {
+			"heading": "Runs Windows and Office perfectly",
+			"body": "{{lorem.paragraphs}}",
+			"image": {
+				"vp4": "http://placehold.it/1000x400",
+				"vp2": "http://placehold.it/600x300",
+				"vp1": "http://placehold.it/400x200",
+				"alt": "placeholder"
+			}
+		}
+	},
+	"surface-advanced-feature": {
+		"config": {
+			"align": "left"
+		},
+		"content": {
+			"heading": "Microsoft advanced technology",
+			"body": "{{lorem.paragraphs}}",
+			"image": {
+				"vp4": "http://placehold.it/1000x400",
+				"vp2": "http://placehold.it/600x300",
+				"vp1": "http://placehold.it/400x200",
+				"alt": "placeholder"
+			}
+		}
+	},
+	"you-may-also-be-interested-in": [{
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Surface Pro 4",
+        "rating": {
+            "config": {
+                "type": {
+                    "aggregate": true
+                },
+                "community-rating": 4
+            },
+            "content": {
+                "community-label": "Rating:"
+            }
+        },
+		"price": {
+			"config": {
+				"currency-symbol": "$",
+				"currency-code": "USD"
+			},
+			"content": {
+				"price": 899.00,
+				"discounted-price": null
+			}
+		}
+	}, {
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Surface Book",
+        "rating": {
+            "config": {
+                "type": {
+                    "aggregate": true
+                },
+                "community-rating": 4
+            },
+            "content": {
+                "community-label": "Rating:"
+            }
+        },
+		"price": {
+			"config": {
+				"currency-symbol": "$",
+				"currency-code": "USD"
+			},
+			"content": {
+				"price": 1499.00,
+				"discounted-price": null
+			}
+		}
+	}, {
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "HP Pavillion All-in-One",
+        "rating": {
+            "config": {
+                "type": {
+                    "aggregate": true
+                },
+                "community-rating": 4
+            },
+            "content": {
+                "community-label": "Rating:"
+            }
+        },
+		"price": {
+			"config": {
+				"currency-symbol": "$",
+				"currency-code": "USD"
+			},
+			"content": {
+				"price": 1499.00,
+				"discounted-price": null
+			}
+		}
+	}, {
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Samsung ATIV All-in-One",
+        "rating": {
+            "config": {
+                "type": {
+                    "aggregate": true
+                },
+                "community-rating": 4
+            },
+            "content": {
+                "community-label": "Rating:"
+            }
+        },
+		"price": {
+			"config": {
+				"currency-symbol": "$",
+				"currency-code": "USD"
+			},
+			"content": {
+				"price": 899.00,
+				"discounted-price": null
+			}
+		}
+	}],
+	"the-microsoft-difference": [{
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Signature Edition",
+		"list": [
+			"{{lorem.sentence}}",
+			"{{lorem.sentence}}",
+			"{{lorem.sentence}}"
+		],
+		"call-to-action": {
+			"content": {
+				"text": "More about signature edition",
+				"href": "./"
+			}
+		}
+	}, {
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Powered by Windows",
+		"paragraph": "{{lorem.paragraph}}"
+	}, {
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Support from Answer Desk",
+		"paragraph": "{{lorem.paragraph}}"
+	}, {
+		"image": {
+			"src": "http://placehold.it/421x200",
+			"alt": "Placeholder"
+		},
+		"heading": "Education Store",
+		"paragraph": "{{lorem.paragraph}}",
+		"call-to-action": {
+			"content": {
+				"text": "Shop now",
+				"href": "./"
+			}
+		}
+	}],
+	"fine-print": [
+		"[1] {{lorem.paragraph}}",
+		"[2] {{lorem.paragraph}}",
+		"[3] {{lorem.paragraph}}",
+		"[4] {{lorem.paragraph}}",
+		"[5] {{lorem.paragraph}}"
+	],
+	"surface-table-feature": {
+		"config": {
+			"align": "left"
+		},
+		"content": {
+			"summary": "Lorem ipsum",
+			"col-1-heading": null,
+			"col-2-heading": "Lorem ipsum",
+			"col-3-heading": "dolor sit amet",
+			"col-4-heading": "consectetur adipisicing",
+			"rows": [{
+				"title": "Surface Book",
+				"subtitle": "Starting at $1499",
+				"call-to-action": {
+					"content": {
+						"text": "Shop now",
+						"href": "./"
+					}
+				},
+				"description": "The most powerful Surface laptop to handle any task.",
+				"list-1": [{
+					"li": "Run desktop software just like a laptop 1"
+				}, {
+					"li": "Run desktop software just like a laptop 2"
+				}, {
+					"li": "Run desktop software just like a laptop 3"
+				}, {
+					"li": "Run desktop software just like a laptop 4"
+				}],
+				"list-2": [{
+					"li": "Run desktop software just like a laptop 1"
+				}, {
+					"li": "Run desktop software just like a laptop 2"
+				}, {
+					"li": "Run desktop software just like a laptop 3"
+				}]
+			},{
+				"title": "Surface Pro 4",
+				"subtitle": "Starting at $899",
+				"call-to-action": {
+					"content": {
+						"text": "Shop now",
+						"href": "./"
+					}
+				},
+				"description": "The perfect balance of size and power for working on the go.",
+				"list-1": [{
+					"li": "Run desktop software just like a laptop 1"
+				}, {
+					"li": "Run desktop software just like a laptop 2"
+				}, {
+					"li": "Run desktop software just like a laptop 3"
+				}, {
+					"li": "Run desktop software just like a laptop 4"
+				}],
+				"list-2": [{
+					"li": "Run desktop software just like a laptop 1"
+				}, {
+					"li": "Run desktop software just like a laptop 2"
+				}, {
+					"li": "Run desktop software just like a laptop 3"
+				}]
+			},
+            {
+                "title": "Surface 3",
+                "subtitle": "Starting at $499",
+                "call-to-action": {
+                    "content": {
+                        "text": "Shop now",
+                        "href": "./"
+                    }
+                },
+                "description": "The smallest and most compact member of the Surface family.",
+                "list-1": [{
+                    "li": "Run desktop software just like a laptop 1"
+                }, {
+                    "li": "Run desktop software just like a laptop 2"
+                }, {
+                    "li": "Run desktop software just like a laptop 3"
+                }, {
+                    "li": "Run desktop software just like a laptop 4"
+                }],
+                "list-2": [{
+                    "li": "Run desktop software just like a laptop 1"
+                }, {
+                    "li": "Run desktop software just like a laptop 2"
+                }, {
+                    "li": "Run desktop software just like a laptop 3"
+                }]
+            }]
+		}
+	}
+}

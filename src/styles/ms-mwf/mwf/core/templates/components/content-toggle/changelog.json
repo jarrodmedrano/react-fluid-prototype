@@ -1,0 +1,38 @@
+{
+    "name": "content toggle",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9394493,
+            "internal": true,
+            "description": "fixes the example to have an ol tag and a ul tag"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525672,
+            "description": "updates to hide more/less buttons on screen readersfor improved accessibility"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7978271,
+            "description": "adds the ability to use any HTML element for content toggle"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 7978296,
+            "description": "adds content toggle line number configuration, toggle state, and auto-hide behavior for minimal content"
+        },
+        {
+            "type": "changed",
+            "internal": true,
+            "ticket-id": 8142724,
+            "description": "removes hard coded list and adds ability to call list template"
+        }
+    ]
+}

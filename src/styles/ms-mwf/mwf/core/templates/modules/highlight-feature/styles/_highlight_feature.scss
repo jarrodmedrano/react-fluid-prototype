@@ -1,0 +1,171 @@
+// ==========================================================================
+// Module: Highlight feature
+// ==========================================================================
+@mixin highlight-feature-layout-change() {
+    > div {
+        @include left-right-padding($base-6x);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 36px;
+        width: 316px;
+        height: 300px;
+        // sass-lint:disable no-duplicate-properties
+        top: 24px;
+        top: calc(50%);
+        // sass-lint:enable no-duplicate-properties
+        transform: translateY(-50%);
+        background: $color-background;
+        color: $color-foreground;
+        box-shadow: 0 6px 6px $color-shade-10;
+
+        .c-heading {
+            padding-top: 0;
+        }
+
+        &.c-video {
+            box-shadow: none;
+        }
+    }
+
+    &.f-align-left {
+        > div {
+            // Not localized: the card itself should not swap sides
+            // only the content inside should swap ltr
+            left: 0;
+        }
+    }
+
+    &.f-align-right {
+        > div {
+            // Not localized: the card itself should not swap sides
+            // only the content inside should swap ltr
+            right: 0;
+        }
+    }
+}
+
+.m-highlight-feature {
+    @include clearfix;
+    padding: 0;
+    margin-top: $base-12x;
+    position: relative;
+
+    // targeting specifically the picture element here
+    picture.c-image {
+        width: 100%;
+        max-width: 100%;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    > div {
+        @include left-right-padding($base-3x);
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+
+        .c-call-to-action {
+            @include c-call-to-action-lightweight();
+            margin: 12px auto 0;
+        }
+
+        .c-heading {
+            @include apply-type-component(h6);
+            font-weight: $font-weight-bold;
+        }
+
+        .c-paragraph {
+            @include apply-type-component(p3);
+            padding-top: 12px;
+        }
+
+        .c-logo {
+            display: block;
+            padding-top: 24px;
+
+            img {
+                margin: 0 auto;
+            }
+
+            + .c-heading {
+                padding-top: 12px;
+            }
+        }
+
+        &.c-video { // because .c-video picks up the div styles above this specificity provides the correct video css
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            transform: none;
+
+            video {
+                width: 100%;
+                min-width: 100%;
+                height: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    &.f-lean {
+        margin-top: 0;
+    }
+
+    @media only screen and (min-width: $vp3) {
+        @include highlight-feature-layout-change;
+    }
+
+    @media only screen and (min-width: $vp4) {
+        > div {
+            margin: 0 48px;
+            width: 316px;
+            height: 336px;
+
+            .c-heading {
+                @include apply-type-component(h5);
+                padding-top: 0;
+                font-weight: $font-weight-bold;
+            }
+
+            .c-logo {
+                + .c-heading {
+                    padding-top: 12px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp5) {
+        > div {
+            width: 364px;
+            height: 408px;
+        }
+    }
+
+    @if $ltie8 {
+        @include highlight-feature-layout-change;
+        padding: 0;
+        margin-top: 48px;
+        position: relative;
+    }
+
+    // at VP1 and VP2 highlight feature should have top margin
+    + .m-highlight-feature {
+        &.f-lean {
+            margin-top: $base-12x;
+
+            @media only screen and (min-width: $vp3) {
+                margin-top: 0;
+            }
+        }
+    }
+}

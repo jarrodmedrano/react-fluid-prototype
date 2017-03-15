@@ -1,0 +1,12 @@
+{
+    "name": "email sign-up",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8430053,
+            "description": "adds the email sign up module, which consists of a drawer, a text field, a submit button, a hyperlink, and a checkbox"
+        }
+    ]
+}

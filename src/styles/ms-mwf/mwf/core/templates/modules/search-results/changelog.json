@@ -1,0 +1,19 @@
+{
+    "name": "search results",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding duplicate links"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8365831,
+            "description": "fixes primary heading alignment"
+        }
+    ]
+}

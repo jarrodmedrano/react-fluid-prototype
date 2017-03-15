@@ -1,0 +1,63 @@
+{
+    "name": "universal footer",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8938783,
+            "description": "fixes spacing between bottom links and the language selector"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8042518,
+            "description": "fixes an issue where the footer text had the potential to overlap in languages with long words"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8353838,
+            "description": "fixes an issue where the footer was not aligned with the new module padding spec"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8182321,
+            "description": "fixes an issue where relative positioning caused the footer to be misaligned"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8029619,
+            "description": "removes hardcoded string in copyright to json"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 7979571,
+            "description": "fixes an issue with line wrapping in universal footer on iPad"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8027314,
+            "description": "adds background color"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8027368,
+            "description": "fixes column shifting at vp3 to be 3x3"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8027377,
+            "description": "fixes an issue with text wrapping in copyright and region area at smaller breakpoints"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8141625,
+            "description": "fixes an issue with the overall positioning and adds a top margin"
+        }
+    ]
+}

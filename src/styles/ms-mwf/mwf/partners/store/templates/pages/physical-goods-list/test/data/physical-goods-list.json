@@ -1,0 +1,1550 @@
+{
+    "refine-menu": {
+        "config": {
+            "expanded": true,
+            "id": "list-page-refine-menu",
+            "controls": "search-results"
+        },
+        "content": {
+            "itemprop": "Product name",
+            "heading": "Refine results",
+            "expand-button-text": "Refine Results",
+            "expand-button-label": "Expand refine menu",
+            "collapse-button-label": "Collapse refine menu",
+            "submit-button-text": "Apply refine options",
+            "sections": [{
+                "config": {
+                    "content-type": "refine-items",
+                    "expanded": "true",
+                    "id": "refine-by-charts",
+                    "radiogroup": true
+                },
+                "content": {
+                    "itemprop": "Product name",
+                    "heading": "Price",
+                    "refine-items": [{
+                        "config": {
+                            "selected": false,
+                            "radio": true
+                        },
+                        "content": {
+                            "text": "Less than 50"
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": false,
+                            "radio": true
+                        },
+                        "content": {
+                            "text": "50 to 100"
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": false,
+                            "radio": true
+                        },
+                        "content": {
+                            "text": "100 to 150",
+                            "radio": true
+                        }
+                    },
+                    {
+                        "config": {
+                            "selected": false,
+                            "radio": true
+                        },
+                        "content": {
+                            "text": "150 to 200"
+                        }
+                    }]
+                }
+            }]
+        }
+    },
+    "choice-summary": [{
+        "content": {
+            "itemprop": "Product name",
+            "text": "Top rated"
+        }
+    }, {
+        "content": {
+            "itemprop": "Product name",
+            "text": "PC"
+        }
+    }],
+    "top-rated-placements": [
+        {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }, {
+            "config": {
+                "context": "device",
+                "size": "large",
+                "default-image": true
+            },
+            "content": {
+                "heading": {
+                    "config": {
+                        "tag": "h3",
+                        "itemprop": "product name"
+                    },
+                    "content": {
+                        "text": "Heading"
+                    }
+                },
+                "badge": {
+                    "config": {
+                        "size": "small",
+                        "type": "highlight"
+                    },
+                    "content": {
+                        "text": "BADGE"
+                    }
+                },
+                "rating": {
+                    "config": {
+                        "type": {
+                            "aggregate": true
+                        },
+                        "community-rating": 4
+                    },
+                    "content": {
+                        "community-label": "Rating:"
+                    }
+                },
+                "price": {
+                    "config": {
+                        "currency-symbol": "$",
+                        "currency-code": "USD"
+                    },
+                    "content": {
+                        "price": 1235.99,
+                        "discounted-price": null
+                    }
+                },
+                "paragraph": "Lorem ipsum dolor sit amet.",
+                "href": "#"
+            }
+        }
+    ]
+}

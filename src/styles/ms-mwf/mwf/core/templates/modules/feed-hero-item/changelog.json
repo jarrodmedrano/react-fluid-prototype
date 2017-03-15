@@ -1,0 +1,19 @@
+{
+    "name": "feed hero item",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10747274,
+            "description": "refactored to extend from hero-item-base (new script dependency), inherits sloppy click functionallity now"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 10073492,
+            "description": "adds new module consisting of an image, heading, and subheading, that can be of dark and light theme"
+        }
+    ]
+}

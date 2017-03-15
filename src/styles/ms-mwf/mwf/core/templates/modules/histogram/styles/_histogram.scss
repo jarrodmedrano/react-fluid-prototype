@@ -1,0 +1,115 @@
+// ==========================================================================
+// Component: Histogram
+// ==========================================================================
+
+/* .c-histogram is deprecated as of v.1.7.0,
+   use .m-histogram instead.
+   TODO: Remove .c-histogram as of v.2.0 */
+
+.m-histogram,
+.c-histogram {
+    @include clearfix;
+
+    > div:first-child {
+        display: table-cell;
+        vertical-align: top;
+
+        > div {
+            > span {
+                margin-#{$left}: 4px;
+                margin-top: -2px;
+            }
+        }
+
+        > span {
+            font-size: 135px;
+            line-height: 1; // Vertically position large rating number
+            letter-spacing: -5px;
+            font-weight: $font-weight-light;
+        }
+    }
+
+    // Histogram Rating Bars
+    > ul {
+        display: table-cell;
+        padding-#{$left}: 24px;
+        padding-top: 23px;
+        vertical-align: top;
+        width: 100%;
+
+        li {
+            margin-bottom: 10px;
+
+            @media only screen and (max-width: $vp2-max) {
+                // limiting width to ensure we have enough space for instances of high ratings
+                max-width: 90%;
+            }
+        }
+
+        a {
+            @include apply-type(t8);
+            display: block;
+            line-height: 1;
+            padding: 2px 3px; // needed for focus treatment
+
+            &:focus {
+                outline: 1px dashed $color-foreground-80;
+            }
+
+            > div {
+                display: inline-block;
+                margin-#{$left}: 5px;
+                width: calc(100% - 83px);
+
+                @if $ltie8 {
+                    width: 90%;
+                }
+
+                > div {
+                    height: 12px;
+                    position: relative;
+                    background-color: $color-accent;
+                    // Prevent background color from being removed
+                    -ms-high-contrast-adjust: none;
+
+                    span {
+                        position: absolute;
+                        #{$right}: 0;
+                        transform: translateX(set-direction-based-value(100%, -100%));
+                        padding-#{$left}: 4px;
+
+                        @if $ltie8 {
+                            #{$left}: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-glyph {
+            display: inline-block;
+            margin-#{$left}: 4px;
+
+            &:after {
+                transform: translateY(1px);
+                content: $glyph-favorite-star-fill;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        > div,
+        > ul {
+            display: block;
+        }
+
+        // Histogram Rating Bars
+        > ul {
+            padding-#{$left}: 0;
+
+            a > div {
+                width: calc(100% - 45px);
+            }
+        }
+    }
+}

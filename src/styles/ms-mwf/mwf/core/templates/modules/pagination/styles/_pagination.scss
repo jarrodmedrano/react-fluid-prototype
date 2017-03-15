@@ -1,0 +1,107 @@
+// ==========================================================================
+// Component: Pagination
+// ==========================================================================
+
+/* .c-pagination is deprecated as of v.1.7.0,
+   use .m-pagination
+   TODO: Remove .c-pagination in v.2.0 */
+.m-pagination,
+.c-pagination {
+    display: inline-block;
+    user-select: none;
+    padding: 0;
+    margin-top: 24px;
+
+    li {
+        display: inline-block;
+        margin-#{$right}: 12px;
+
+        // This must use a child selector to allow for the extra span used in bootstrap.
+        // TO-DO: re-factor this selector, bootstrap support is no longer a constraint.
+        > a,
+        > span {
+            display: inline-block;
+            padding: 5px 11px;
+            outline: 1px solid transparent;
+            white-space: nowrap;
+
+            &:focus {
+                background-color: $color-foreground-10;
+                outline: 1px dashed $color-foreground;
+            }
+        }
+
+        > a {
+
+            &:hover {
+                background-color: $color-foreground-10;
+                outline-color: $color-foreground-10;
+            }
+
+            &:active {
+                background-color: $color-foreground-30;
+                outline: 1px solid $color-foreground-30;
+            }
+        }
+
+        &.f-active {
+            > a,
+            > span {
+                outline-color: $color-accent;
+            }
+        }
+
+        &.f-hide {
+            display: none;
+        }
+
+        &:first-child {
+            .c-glyph {
+                &:before {
+                    content: set-direction-based-value($glyph-chevron-left, $glyph-chevron-right);
+                    vertical-align: -2px;
+                    margin-#{$right}: 8px;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-#{$right}: 0;
+
+            .c-glyph {
+                &:after {
+                    content: set-direction-based-value($glyph-chevron-right, $glyph-chevron-left);
+                    vertical-align: -2px;
+                    margin-#{$left}: 8px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: $vp1-max) {
+            margin-#{$right}: 0;
+
+            &:first-child,
+            &:last-child {
+
+                a {
+                    position: relative;
+                    display: inline;
+                }
+
+                span {
+                    height: 0;
+                    overflow: hidden;
+                    position: absolute;
+                }
+
+                .c-glyph {
+                    &:before,
+                    &:after {
+                        top: 8px;
+
+                    }
+                }
+            }
+        }
+    }
+}

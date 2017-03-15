@@ -1,0 +1,12 @@
+{
+    "name": "structured list",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9926245,
+            "description": "updates the shape to allow for ordered and unordered lists for better accessibility "
+        }
+    ]
+}

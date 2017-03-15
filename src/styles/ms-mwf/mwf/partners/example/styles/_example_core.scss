@@ -1,0 +1,126 @@
+@import './partners/example/templates/components/example-partner-component/styles/example_partner_component';
+@import './partners/example/templates/modules/example-partner-module/styles/example_partner_module';
+@import './partners/example/templates/pages/example-partner-page/styles/example_partner_page';
+
+.c-universal-header {
+    .c-select {
+        select {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.context-doc-page {
+    h1.c-heading-2 {
+        padding-top: 24px;
+        font-weight: $font-weight-semilight;
+    }
+
+    .c-search {
+        margin-top: 34px;
+    }
+
+    > .m- {
+        padding-top: 0;
+    }
+
+    .m-supplemental-nav {
+        padding: 0;
+    }
+
+    blockquote {
+        margin: 20px 0 0;
+        border-#{$left}: 2px solid $color-shade-20;
+
+        [class^="c-paragraph"] {
+            padding: 0 12px;
+        }
+    }
+
+    .c-select {
+        margin-top: 0;
+
+        select {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .m-media {
+        .c-heading-6 {
+            @include apply-type(t7, false, true);
+            font-weight: $font-weight-semibold;
+        }
+
+        > .c-image {
+            margin-top: 1px;
+        }
+
+        .c-meta-text {
+            > span {
+                @media only screen and (max-width: $vp2-max) {
+                    display: block;
+                    padding-#{$left}: 48px;
+                }
+
+                @media only screen and (max-width: $vp1-max) {
+                    padding-#{$left}: 40px;
+                }
+
+                img.c-image {
+                    float: none;
+                    margin-#{$left}: 6px;
+                    margin-#{$right}: 0;
+                    margin-bottom: 2px;
+                }
+
+                > span {
+                    @media only screen and (max-width: $vp2-max) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-drawer {
+        &.f-responsive {
+            > button {
+                + div {
+                    border-top: 0;
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+            }
+
+            > div {
+                > .c-list {
+                    margin-top: 26px;
+
+                    li {
+                        margin: 12px 0;
+
+                        .c-action-trigger {
+                            background: $color-accent;
+                            color: $color-tint;
+                            display: inline;
+                        }
+                    }
+                }
+
+                .c-heading-5 {
+                    + .c-list {
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

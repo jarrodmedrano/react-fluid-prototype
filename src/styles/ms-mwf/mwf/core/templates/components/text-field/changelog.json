@@ -1,0 +1,40 @@
+{
+    "name": "text field",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10413754,
+            "description": "fixes overflow issue found on iPhone 5 viewports"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9955849,
+            "description": "adds label component to pass validation and enhance accessibility"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9718749,
+            "description": "updates default width to match combo component"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525366,
+            "description": "updates disabled and read only versions with aria label and aria hidden"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8703495,
+            "description": "changes style to include input type email"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+// ==========================================================================
+// Component: List
+// ==========================================================================
+
+.c-list {
+    @include apply-type(t7, true, true);
+
+    padding-#{$left}: 19px;
+    padding-#{$right}: 0;
+    margin: 8px 0;
+    list-style-position: outside;
+
+    li {
+        padding: 8px 0;
+    }
+
+    // no current migration equivalent
+    &.f-lean li {
+        padding: 0;
+    }
+
+    &.f-bare {
+        padding-#{$left}: 0;
+        list-style-type: none;
+    }
+}
+
+ul.c-list {
+    list-style-type: disc;
+}
+
+ol.c-list {
+    list-style-type: decimal;
+}

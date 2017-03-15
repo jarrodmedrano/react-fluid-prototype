@@ -1,0 +1,12 @@
+{
+    "name": "file",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9926999,
+            "description": "adding label for validation and better accessibility"
+        }
+    ]
+}

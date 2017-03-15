@@ -1,0 +1,203 @@
+@import "partners/store/templates/modules/bi-product-placement/styles/bi_product_placement";
+@import "partners/store/templates/modules/feature-channel/styles/feature_channel";
+@import 'partners/store/templates/modules/product-detail-hero/styles/product_detail_hero';
+@import 'partners/store/templates/modules/product-detail-hero-digital/styles/live_gold_badge';
+@import 'partners/store/templates/modules/age-gate/styles/age_gate';
+@import 'partners/store/templates/modules/product-detail-overview/styles/product_detail_overview';
+@import 'partners/store/templates/modules/mixed-product-placement/styles/mixed-product-placement';
+@import 'partners/store/templates/pages/interstitial/styles/interstitial-checkout';
+@import 'partners/store/templates/pages/review-entry-form/styles/review_entry_form';
+
+// Digital goods buy box - to be removed by MWF team
+.m-digital-goods-buy-box {
+    position: relative;
+
+    > div[data-grid="col-12"] {
+        padding: 64px 5% 0;
+
+        > picture {
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1080px;
+                width: 1920px;
+                z-index: map-get($z-index, buried);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: map-get($z-index, below);
+                height: 1080px;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(to bottom, $color-background-40 0%, $color-background 60%);
+            }
+        }
+
+        > div[data-grid="col-12 stack-4"] {
+            > div[data-grid="col-8"] {
+                > picture {
+                    img {
+                        display: inline-block;
+                        float: $left;
+                        margin-#{$right}: 48px;
+                    }
+                }
+
+                > div {
+                    overflow: auto;
+
+                    .c-heading-2 {
+                        padding-top: 24px;
+                    }
+
+                    .c-caption-1 {
+                        padding-top: 8px;
+                    }
+
+                    .c-rating {
+                        padding-top: 8px;
+                        display: inline-block;
+
+                        + .c-meta-text {
+                            color: $color-foreground;
+                            display: inline-block;
+                        }
+                    }
+
+                    .c-price {
+                        @include apply-type(t4);
+                        padding-top: 24px;
+                    }
+
+                    .c-button {
+                        margin-top: 24px;
+
+                        + .c-paragraph-1 {
+                            @include apply-type(t8);
+                            padding-top: 8px;
+                        }
+                    }
+                }
+            }
+
+            > div[data-grid="col-4"] {
+                .c-group {
+                    padding-top: 8px;
+
+                    .c-image.f-round {
+                        margin-#{$right}: 8px;
+                    }
+                }
+
+                .c-age-rating {
+                    padding-top: 24px;
+                }
+            }
+        }
+    }
+}
+
+// PDP Hero
+.context-pdp-hero {
+    &.c-subheading-6 {
+        margin-top: 24px;
+    }
+
+    div.c-price {
+        @include apply-type(t4);
+        font-weight: $font-weight-bold;
+        margin-top: 12px;
+    }
+}
+
+div .c-glyph.glyph-edit:before {
+    margin: set-direction-based-value(20px 0 20px 0 , 20px 0 20px 0);
+}
+
+div .c-button,
+.c-call-to-action {
+    max-width: 100%;
+}
+
+.c-dialog [role=dialog] {
+    max-height: 100vh;
+}
+
+.context-ucx {
+    h1 {
+        @include apply-type-component(h1);
+    }
+
+    h2 {
+        @include apply-type-component(h2);
+    }
+
+    h3 {
+        // because editors cannot change all contents h3 tag in ucx tools,
+        // in the context of context-ucx, store wants h3 to have h4 appearance.
+        @include apply-type-component(h4);
+    }
+
+    h4 {
+        @include apply-type-component(h4);
+    }
+
+    h5 {
+        @include apply-type-component(h5);
+    }
+
+    h6 {
+        @include apply-type-component(h6);
+    }
+
+    small {
+        @include apply-type-component(c2);
+    }
+}
+
+/* sticky bundle review module */
+.m-bundle-review {
+    ol.bundle-crumb {
+        list-style-type: decimal;
+        padding: 10px 15px 13px;
+
+        li {
+            float: $left;
+            padding-#{$right}: 25px;
+        }
+    }
+
+    .bundle-review-summary .price-container {
+        float: $right;
+        padding-top: 30px;
+        width: auto;
+
+        span {
+            display: inline-block;
+            padding: 8px 32px;
+        }
+    }
+}
+
+// Use hooks already in existence from Store for list page
+// to change padding for the first heading in VP2 and below
+@media only screen and (max-width: $vp2-max) {
+    // sass-lint:disable class-name-format
+    .s_store.r_recodrillin,
+    .s_store.r_searchdrillin {
+        h1[class^="c-heading-"] {
+            padding-top: 12px;
+        }
+    }
+    // sass-lint:enable class-name-format
+}

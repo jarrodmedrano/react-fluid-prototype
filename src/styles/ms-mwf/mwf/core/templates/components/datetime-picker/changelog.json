@@ -1,0 +1,43 @@
+{
+    "name": "datetime picker",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10401728,
+            "description": "fixes horizontal alignment of picker items"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10144038,
+            "description": "makes focus states more visible"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9926817,
+            "description": "replace use of aria-checked attribute with aria-selected to improve accessibility"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9435982,
+            "description": "fixes issue with focus state rectangles mistakenly appearing on click"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9583097,
+            "description": "adds pub/sub for onDateTimeChanged"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525126,
+            "description": "Updates shape and script to better support keyboard focus and screen readers"
+        }
+    ]
+}

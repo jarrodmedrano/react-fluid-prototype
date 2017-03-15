@@ -1,0 +1,5 @@
+{
+    "name": "hyperlink",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md"
+}

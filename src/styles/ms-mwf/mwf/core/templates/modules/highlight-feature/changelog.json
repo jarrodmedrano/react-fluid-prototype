@@ -1,0 +1,26 @@
+{
+    "name": "highlight feature",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "new",
+            "ticket-id": 10556920,
+            "description": "adds option of f-lean"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "new",
+            "ticket-id": 9453015,
+            "description": "adds option to use ambient video as a background"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8527288,
+            "description": "adds highlight feature as new module"
+        }
+    ]
+}

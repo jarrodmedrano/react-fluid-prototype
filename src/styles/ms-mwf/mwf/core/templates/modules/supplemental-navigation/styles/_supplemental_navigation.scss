@@ -1,0 +1,100 @@
+// ==========================================================================
+// Module: Supplemental nav
+// ==========================================================================
+
+/* Using extends as we need to support .c-supplemental-nav
+   inside and outside of the module until v.2.0 as it has
+   been deprecated. This can be changed back at that time.
+   Use .m-supplemental-nav instead */
+%supplemental-nav-styles {
+    margin-top: 32px;
+
+    a,
+    span,
+    button {
+        display: block;
+        margin-bottom: 30px;
+        color: $color-foreground-60;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    button {
+        background: none;
+        border: 0;
+        padding: 0;
+        margin-bottom: 16px;
+
+        &:after {
+            @include apply-glyph($glyph-chevron-down);
+            font-size: 8px;
+            color: $color-foreground-60;
+            font-weight: $font-weight-bold;
+            margin-#{$left}: 8px;
+            padding-top: 7px;
+        }
+    }
+
+    a,
+    button {
+        &.active {
+            color: $color-foreground;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-foreground-80;
+        }
+
+        &.f-active {
+            color: $color-foreground;
+        }
+
+        &.f-disabled {
+            color: $color-foreground-20;
+            cursor: not-allowed;
+        }
+
+        &:focus {
+            outline: 1px dashed;
+        }
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    > nav {
+        > a + nav {
+            height: 0;
+            overflow: hidden;
+        }
+
+        > a:first-child,
+        > span:first-child {
+            margin-#{$left}: 0;
+            margin-bottom: 16px;
+        }
+
+        a {
+            margin-#{$left}: 20px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/* .c-supplemental-nav is deprecated as of v.1.7.0
+   this exists here until we drop support */
+.c-supplemental-nav {
+    @extend %supplemental-nav-styles;
+}
+
+.m-supplemental-nav {
+    padding-top: 0;
+
+    > nav {
+        @extend %supplemental-nav-styles;
+    }
+}

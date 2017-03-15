@@ -1,0 +1,19 @@
+{
+    "name": "label",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "new",
+            "ticket-id": 10205158,
+            "description": "adds label elements to example that include inputs to ensure proper accessibility"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9776101,
+            "description": "adds example of label working within a form with the proper HTML shape"
+        }
+    ]
+}

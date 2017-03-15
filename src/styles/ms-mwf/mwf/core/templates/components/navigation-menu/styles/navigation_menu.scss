@@ -1,0 +1,74 @@
+// ==========================================================================
+// Component: Navigation menu
+// ==========================================================================
+.c-navigation-menu {
+    ul,
+    ol {
+        position: relative;
+        z-index: map-get($z-index, nav);
+        width: 296px;
+        min-width: 64px;
+        max-width: 368px;
+        padding: 0;
+        margin: 0;
+        background: $color-background;
+        border: 1px solid $color-foreground-10;
+        border-top: 0;
+        background-clip: padding-box;
+
+        &[aria-hidden="true"] {
+            display: none;
+        }
+
+        &[aria-hidden="false"] {
+            display: block;
+        }
+    }
+
+    a,
+    button {
+        display: block;
+        background: $color-foreground-05;
+        padding: 11px 12px 13px;
+        outline: 0;
+        cursor: pointer;
+        white-space: normal;
+        width: 100%;
+        text-align: #{$left};
+        border: 0;
+
+        &:hover,
+        &:focus {
+            background: $color-foreground-10;
+        }
+
+        &:focus {
+            outline: 1px dashed $color-foreground;
+        }
+
+        &:active {
+            background: $color-foreground-30;
+        }
+    }
+
+    .f-sub-menu {
+        button {
+            + ul,
+            + ol {
+                position: absolute;
+                left: 100%;
+                top: 0;
+                z-index: map-get($z-index, nav);
+                width: 296px;
+                min-width: 64px;
+                max-width: 368px;
+                padding: 0;
+                margin: 0;
+                background: $color-background;
+                border: 1px solid $color-foreground-10;
+                border-top: 0;
+                background-clip: padding-box;
+            }
+        }
+    }
+}

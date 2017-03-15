@@ -1,0 +1,66 @@
+{
+    "name": "MWF",
+    "content-type": "partners",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.1": [
+        {
+            "type": "fixed",
+            "ticket-id": 10169666,
+            "description": "fixes (restores) missing checkbox examples"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "changed",
+            "internal": true,
+            "ticket-id": 10013652,
+            "description": "changes signature imagery at certain viewports to avoid collisions"
+        },
+        {
+            "type": "changed",
+            "internal": true,
+            "ticket-id": 9120258,
+            "description": "updates signature pages to current MWF standards"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 9213518,
+            "description": "fixes UHF selectors missing from partner page CSS files"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 9230943,
+            "description": "fixes responsive extension selectors missing from standalone UHF styles"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 9212200,
+            "description": "fixes broken UHF partner test page"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8110904,
+            "description": "fixes whitespace within HTML tags"
+        },
+        {
+            "type": "new",
+            "internal": true,
+            "ticket-id": 8093820,
+            "description": "adds standalone UHF bundle and partner configuration settings to optionally include MWF and/or UHF components"
+        },
+        {
+            "type": "fixed",
+            "internal": true,
+            "ticket-id": 8232221,
+            "description": "fixes comment removal from readme HTML files"
+        }
+    ]
+}

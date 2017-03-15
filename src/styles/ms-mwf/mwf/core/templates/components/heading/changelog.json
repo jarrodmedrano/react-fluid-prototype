@@ -1,0 +1,19 @@
+{
+    "name": "heading",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9745235,
+            "description": "adds the classes f-initial-baseline-large and f-initial-baseline-small to allow disparate heading components to align via baseline when in columns next to each other"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8734866,
+            "description": "adds new lean option to remove top padding from heading"
+        }
+    ]
+}

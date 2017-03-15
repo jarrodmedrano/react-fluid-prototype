@@ -1,0 +1,24 @@
+{
+    "name": "rich heading",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding long alternate description"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9179936,
+            "description": "fixes issue of the image being squeezed at mobile breakpoints"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8300657,
+            "description": "adds data-grid to fix module sibling presentation"
+        }
+    ]
+}

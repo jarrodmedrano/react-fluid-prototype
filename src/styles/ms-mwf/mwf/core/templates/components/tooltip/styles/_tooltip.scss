@@ -1,0 +1,35 @@
+// ==========================================================================
+// Component: Tooltip
+// ==========================================================================
+
+span.c-tooltip {
+    @include apply-type(t8);
+    position: fixed;
+    background: $color-background;
+    border: 1px solid $color-foreground-30;
+    min-width: 104px;
+    max-width: 340px;
+    padding: 12px 8px;
+    line-height: 16px;
+    z-index: map-get($z-index, flyout);
+
+    &.hook-focus {
+        margin-top: 8px;
+    }
+
+    &.hook-hover {
+        margin-top: 20px;
+    }
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    &[aria-hidden="false"] {
+        display: block;
+    }
+
+    &.f-hidden-from-screen-readers {
+        display: block;
+    }
+}

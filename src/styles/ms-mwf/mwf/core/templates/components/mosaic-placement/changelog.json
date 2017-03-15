@@ -1,0 +1,19 @@
+{
+    "name": "mosaic placement",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.14.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9234701,
+            "description": "fixes an issue where padding was causing call to actions to truncate too quickly"
+       }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8499959,
+            "description": "removes maxlines restrictions from heading and subheading"
+       }
+    ]
+}

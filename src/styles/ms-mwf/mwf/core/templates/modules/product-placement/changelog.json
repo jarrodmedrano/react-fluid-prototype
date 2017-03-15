@@ -1,0 +1,19 @@
+{
+    "name": "product placement",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 8647479,
+            "description": "adds functionality to automatically insert a contextual placeholder image (SVG) when a default product placement image fails to load"
+        }
+    ],
+     "v1.14.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9299909,
+            "description": "fixes an issue where the picturefill dependency was removed causing a regression in browsers without picture element support"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+// Store > Pages > Routing
+.c-placement-container {
+    height: 472px;
+    display: inline-block;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding-bottom: 1px; // fix clipping of placement outline
+}
+
+.c-group {
+    &.c-product-placement {
+        margin: 0 auto;
+    }
+}
+
+.c-divider {
+    margin: 48px 0;
+}

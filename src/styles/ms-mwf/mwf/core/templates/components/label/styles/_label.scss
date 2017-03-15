@@ -1,0 +1,38 @@
+// ==========================================================================
+// Component: Label
+// ==========================================================================
+
+.c-label {
+    @include apply-type(t8);
+
+    display: block;
+
+    margin-top: 21px;
+    padding-bottom: 7px;
+
+    line-height: 20px;
+
+    // Spacing overrides for sibling controls.
+    // TODO: v-nichor - this needs to be moved to a form component / context.
+    + input.c-text-field[type="text"],
+    + input.c-text-field[type="email"],
+    + input.c-password[type="password"] {
+        margin: 0;
+    }
+
+    + .c-file input[type="text"],
+    + .c-file button {
+        margin-top: 0;
+    }
+
+    + .c-combo,
+    + .c-select,
+    + .c-select-menu {
+        margin-top: 0;
+    }
+}
+
+legend.c-label {
+    margin-top: 0;
+    padding-top: 21px;
+}

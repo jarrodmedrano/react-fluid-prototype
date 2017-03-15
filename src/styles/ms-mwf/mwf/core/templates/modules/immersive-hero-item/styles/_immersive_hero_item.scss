@@ -1,0 +1,202 @@
+// ==========================================================================
+// Module: Immersive hero item
+// ==========================================================================
+.m-immersive-hero-item {
+    position: relative;
+    min-height: 600px;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 0;
+
+    // Set the hover cursor to default for the entire immersive-hero-item when it is non sloppy clickable
+    // or else it will appear as I-beam over the text.
+    &:hover {
+        cursor: default;
+    }
+
+    // Set the hover cursor to pointer for the entire immersive-hero-item when it is sloppy clickable.
+    &[data-js-href] {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    > picture.c-image {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+
+        img {
+            width: 100%;
+            overflow-y: hidden;
+        }
+    }
+
+    > div {
+        position: absolute;
+        display: block;
+        text-align: center;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        > div {
+            @include left-right-padding($base-3x);
+            @include fade-in(600ms);
+            max-width: 100%;
+            margin: 0 auto;
+
+            .c-heading {
+                @include apply-type-component(h3);
+            }
+
+            .c-subheading {
+                @include apply-type-component(sh3);
+                padding-top: 8px;
+            }
+
+            .c-call-to-action {
+                margin: 24px 0;
+            }
+        }
+
+        > picture.c-image {
+            margin: 0 auto;
+
+            img {
+                @include fade-in(1.5s);
+                max-width: none;
+                display: block;
+                margin: 0 auto;
+                width: auto;
+            }
+        }
+
+        @media only screen and (min-width: $vp2) {
+            > div {
+                @include left-right-padding($base-6x);
+                max-width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: $vp3) {
+            > div {
+                max-width: 60%;
+            }
+
+            > picture.c-image {
+                + div {
+                    .c-heading {
+                        padding-top: 24px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp4) {
+            > picture.c-image {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp5) {
+            > div {
+                max-width: 50%;
+
+                .c-heading {
+                    @include apply-type-component(h2);
+                }
+
+                .c-subheading {
+                    @include apply-type-component(sh2);
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp6) {
+            > div {
+                .c-heading {
+                    @include apply-type-component(h1);
+                }
+
+                .c-subheading {
+                    @include apply-type-component(sh1);
+                    padding-top: 8px;
+                }
+            }
+        }
+    }
+
+    &.f-align-top,
+    &.f-align-bottom {
+        > div {
+            top: 72px;
+
+            @media only screen and (min-width: $vp3) {
+                top: 120px;
+            }
+
+            @media only screen and (min-width: $vp4) {
+                top: 148px;
+            }
+        }
+    }
+
+    &.f-align-top {
+        > div {
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            right: 0;
+            transform: translateX(-50%);
+
+            > div {
+                position: absolute;
+                top: 72px;
+                left: 50%;
+                right: 0;
+                transform: translateX(-50%);
+                width: 100%;
+
+                @media only screen and (min-width: $vp3) {
+                    top: 120px;
+                }
+
+                @media only screen and (min-width: $vp4) {
+                    top: 148px;
+                }
+            }
+
+            > picture.c-image {
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    &.f-align-bottom {
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            > picture.c-image {
+                margin: 0;
+            }
+        }
+    }
+
+    .no-js & {
+        > div {
+            picture.c-image {
+                display: none;
+            }
+        }
+    }
+}

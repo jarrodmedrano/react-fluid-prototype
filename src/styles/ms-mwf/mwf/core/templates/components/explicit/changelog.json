@@ -1,0 +1,12 @@
+{
+    "name": "explicit",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7899955,
+            "description": "toggle from long version of word to shorter version on vp1"
+        }
+    ]
+}

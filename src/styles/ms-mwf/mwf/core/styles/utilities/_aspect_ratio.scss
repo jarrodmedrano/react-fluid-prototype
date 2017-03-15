@@ -1,0 +1,36 @@
+// Function to calculate the correct aspect ratio height based off of known width.
+// Function takes 2 arguments, $width (standard) and $ratio(variable).
+
+// Example:
+// block {
+// width: aspect-height(320, (16, 9));
+// }
+
+@function aspect-height($width, $ratio) {
+    $width-ratio: $width / nth($ratio, 1);
+    $height-ratio: $width-ratio * nth($ratio, 2);
+
+    @return $height-ratio;
+}
+
+// Cite: https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+// Used to set aspect ratio for elements when aspect ratio is important
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .item-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

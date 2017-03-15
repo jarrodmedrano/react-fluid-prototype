@@ -1,0 +1,31 @@
+{
+    "name": "breadcrumb",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7818517,
+            "description": "adds responsive behavior"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10127611,
+            "description": "changes direction of delimiter from \\ to / while maintaining RTL mirroring functionality"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10127611,
+            "description": "changes ul to ol for better semantic meaning"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "new",
+            "ticket-id": 8525693,
+            "description": "adds new parent nav element to unordered list for improved accessibility"
+        }
+    ]
+}

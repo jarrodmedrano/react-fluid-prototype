@@ -1,0 +1,38 @@
+{
+    "name": "alert",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10676530,
+            "description": "fixes an issue where margins on call to actions and glyphs were causing incorrect alignments"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10679326,
+            "description": "fixes contrast between text and background"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9179940,
+            "description": "fixes the vertical alignment of the glyphs"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8216399,
+            "description": "removes max width from fixed alert from updated design"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8170038,
+            "description": "fixes an issue where f-fixed was missing from documentation on MODX"
+        }
+    ]
+}

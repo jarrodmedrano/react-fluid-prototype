@@ -1,0 +1,31 @@
+.m-panes-product-placement-item {
+    padding: 0;
+
+    .c-heading {
+        @include apply-type-component(h3);
+    }
+
+    .c-paragraph {
+        @include apply-type-component(p3);
+    }
+
+    .c-call-to-action {
+        @include c-call-to-action-lightweight();
+        margin-top: $base-3x;
+    }
+
+    .c-price {
+        display: inline-block;
+        margin-#{$right}: $base-3x;
+        margin-top: $base-3x;
+    }
+
+    .c-rating {
+        display: inline-block;
+        clear: both;
+    }
+
+    picture.c-image img {
+        margin: 0 auto;
+    }
+}

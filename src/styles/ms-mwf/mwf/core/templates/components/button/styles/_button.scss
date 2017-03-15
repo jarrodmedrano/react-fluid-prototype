@@ -1,0 +1,111 @@
+// ==========================================================================
+// Component: Button
+// ==========================================================================
+button.c-button,
+a.c-button[role="button"] {
+    @include apply-type(t7);
+    max-width: 374px;
+    min-width: 120px;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 12px 10px;
+    background-color: $color-foreground-20;
+    color: $color-foreground;
+    border: solid 1px transparent;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: bottom;
+    outline: 1px dashed transparent;
+    transition: scale 0.2s ease-in-out;
+
+    &:focus:not(.x-hidden-focus) {
+        outline: 2px solid $color-foreground;
+        text-decoration: underline;
+    }
+
+    &:focus:not(.x-hidden-focus),
+    &:hover {
+        background: $color-foreground-30;
+    }
+
+    &:active {
+        background: $color-foreground-40;
+        transform: scale(0.98);
+    }
+
+    &[disabled] {
+        color: $color-foreground-20;
+        background-color: $color-foreground-20;
+        cursor: not-allowed;
+    }
+
+    > .c-price {
+        padding: 0;
+        text-align: center;
+    }
+
+    #{$theme-light} {
+        background-color: transparent;
+        color: $color-shade;
+        border-color: $color-shade;
+
+        &:focus:not(.x-hidden-focus) {
+            outline: 1px solid $color-shade;
+        }
+
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            background: flatten-overlay($color-tint, $color-shade, 20); // theme light plus 10%
+        }
+
+        &:active {
+            background: flatten-overlay($color-tint, $color-shade, 30); // theme light plus 20%
+        }
+
+        &[disabled] {
+            color: $color-shade-20;
+            background-color: $color-shade-20;
+            border-color: $color-shade-20;
+        }
+    }
+
+    #{$theme-dark} {
+        background-color: transparent;
+        color: $color-tint;
+        border-color: $color-tint;
+
+        &:focus {
+            outline: 1px solid $color-tint;
+        }
+
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            background: flatten-overlay($color-tint, $color-shade, 90%);
+        }
+
+        &:active {
+            background: flatten-overlay($color-tint, $color-shade, 100%);
+        }
+
+        &[disabled] {
+            color: $color-tint-20;
+            background-color: $color-tint-20;
+            border-color: $color-tint-20;
+        }
+    }
+
+    &.f-lightweight {
+        @include light-button;
+    }
+
+    &.f-flex {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+button.c-button[type="submit"] {
+    @include primary-button();
+}

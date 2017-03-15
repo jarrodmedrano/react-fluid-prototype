@@ -1,0 +1,28 @@
+// ==========================================================================
+// Define shapes
+// ==========================================================================
+
+// ==========================================================================
+// Create circles (hollow or solid)
+// ==========================================================================
+
+@mixin circle(
+    $style: hollow,
+    $color: $themeColor,
+    $size: 15px,
+    $width: 1px
+) {
+    @if $style == solid {
+        background: $color;
+        border-radius: 50%;
+    } @else if $style == hollow {
+        // sass-lint:disable trailing-semicolon
+        border: solid $color $width {
+            radius: 50%
+        }
+        // sass-lint:enable trailing-semicolon
+    }
+
+    height: $size;
+    width: $size;
+}

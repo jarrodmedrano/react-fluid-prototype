@@ -1,0 +1,3951 @@
+{
+    "content-placement-hyperlink": {
+        "hyperlink-group": {
+            "config": {
+                "background": "accent",
+                "theme": "dark",
+                "context": "three-up",
+                "vertical-center": false
+            },
+            "content": {
+                "label": {
+                    "title": "Shop categories"
+                },
+                "links": [
+                    {
+                        "content": {
+                            "text": "Office",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Windows",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Microsoft Surface",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "PCs & tablets",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Xbox",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Microsoft HoloLens",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "three-up": {
+            "config": {
+                "size": "medium",
+                "type": "three-up"
+            },
+            "content": {
+                "one": {
+                    "config": {
+                        "context": "article"
+                    },
+                    "content": {
+                        "heading": {
+                            "level": 3,
+                            "text": "Office"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "SHOP NOW",
+                                "href": "#"
+                            }
+                        },
+                        "paragraph": "Find out which Office is right for you, options starting from SG$6.99/month.",
+                        "featured-image": {
+                            "vp1": "http://placehold.it/540x280",
+                            "vp2": "http://placehold.it/540x280",
+                            "vp3": "http://placehold.it/253x120",
+                            "vp4": "http://placehold.it/376x200",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                "two": {
+                    "config": {
+                        "context": "article"
+                    },
+                    "content": {
+                        "heading": {
+                            "level": 3,
+                            "text": "Surface Book"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "SHOP NOW",
+                                "href": "#"
+                            }
+                        },
+                        "paragraph": "Save up to SG$100 on select Surface Books",
+                        "featured-image": {
+                            "vp1": "http://placehold.it/540x280",
+                            "vp2": "http://placehold.it/540x280",
+                            "vp3": "http://placehold.it/253x120",
+                            "vp4": "http://placehold.it/376x200",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                "three": {
+                    "config": {
+                        "context": "article"
+                    },
+                    "content": {
+                        "heading": {
+                            "level": 3,
+                            "text": "Surface accessories"
+                        },
+                        "call-to-action": {
+                            "content": {
+                                "text": "SHOP NOW",
+                                "href": "#"
+                            }
+                        },
+                        "paragraph": "Get up to SG$50 in savings when you bundle two or more surface accessories",
+                        "featured-image": {
+                            "vp1": "http://placehold.it/540x280",
+                            "vp2": "http://placehold.it/540x280",
+                            "vp3": "http://placehold.it/253x120",
+                            "vp4": "http://placehold.it/376x200",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "primary-hero": {
+        "config": {
+            "content-type": "hero",
+            "multi-slide": true
+        },
+        "content": {
+            "label": "Label",
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "sequence-indicator": {
+                "content": {
+                    "items": [
+                        {
+                            "config": {
+                                "checked": true
+                            },
+                            "content": {
+                                "label": "View Surface Book",
+                                "title": "Surface Book",
+                                "id": "surface-book"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View Slide 2",
+                                "title": "slide-two",
+                                "id": "slide-two"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View slide 3",
+                                "title": "slide-three",
+                                "id": "slide-three"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View slide 4",
+                                "title": "slide-four",
+                                "id": "slide-four"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View slide 5",
+                                "title": "slide-five",
+                                "id": "slide-five"
+                            }
+                        },
+                        {
+                            "content": {
+                                "label": "View slide 6",
+                                "title": "slide-six",
+                                "id": "slide-six"
+                            }
+                        }
+                    ]
+                }
+            },
+            "items": [
+                {
+                    "id": "surface-book",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "center",
+                        "context": "device",
+                        "theme": "light"
+                    },
+                    "content": {
+                        "heading": "Surface Book",
+                        "subheading": "Ultra-thin, meticulously crafted, with incredible screen resolution. This is the ultimate laptop.",
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "SHOP NOW",
+                                    "href": "#"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "slide-five",
+                    "config": {
+                        "x-align": "center",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "x-align-center",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "#"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "slide-two",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "x-align-left",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "#"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "slide-three",
+                    "config": {
+                        "x-align": "right",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "x-align-right",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "#"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "slide-four",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "top",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "y-align-top",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "#"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                {
+                    "id": "slide-six",
+                    "config": {
+                        "x-align": "left",
+                        "y-align": "bottom",
+                        "context": "accessory",
+                        "theme": "dark"
+                    },
+                    "content": {
+                        "heading": "y-align-bottom",
+                        "subheading": "Subheading",
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 100,
+                                "discounted-price": null
+                            }
+                        },
+                        "calls-to-action": [
+                            {
+                                "content": {
+                                    "text": "CALL TO ACTION",
+                                    "href": "#"
+                                }
+                            }
+                        ],
+                        "background-image": {
+                            "vp6": "http://placehold.it/1600x600",
+                            "vp5": "http://placehold.it/1600x600",
+                            "vp4": "http://placehold.it/1259x472",
+                            "vp3": "http://placehold.it/1083x609",
+                            "vp2": "http://placehold.it/767x431",
+                            "vp1": "http://placehold.it/539x303",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "product-placement-large": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "large",
+            "context": "device"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Featured products",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "Show all",
+                            "label": "Show all Heading"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "Show all",
+                "href": "#"
+            },
+            "items": [
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Surface Pro 4"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 5
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Xbox Elite Wireless Controller"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 5
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 149.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Microsoft Xbox Wireless Adapter for Windows"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Surface Book"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "context": "device",
+                        "size": "large",
+                        "default-image": true
+                    },
+                    "content": {
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Heading"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "price": 500,
+                                "discounted-price": null
+                            }
+                        },
+                        "paragraph": "Lorem ipsum dolor sit amet, ad quot vidit praesent per, eu per libris bonorum conclusionemque. Eum epicurei periculis gubergreen id.",
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    },
+    "product-placement-medium": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "medium",
+            "context": "app"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Best-rated apps",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "See all",
+                            "label": "See all Heading"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "See all",
+                "href": "#"
+            },
+            "items": [
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Pin more"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 2.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Player for Soundcloud"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Allthecooks Recipes"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Photo Editor"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 1000,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "NFL on Windows"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.6
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Audiobooks from Audible"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.2
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 1000,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    },
+    "product-placement-medium-top-games": {
+        "config": {
+            "content-type": "placements-single-row",
+            "multi-slide": false,
+            "size": "medium",
+            "context": "app"
+        },
+        "content": {
+            "previous-flipper": {
+                "config": {
+                    "direction": "previous",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View previous"
+                }
+            },
+            "next-flipper": {
+                "config": {
+                    "direction": "next",
+                    "hide-flippers": true
+                },
+                "content": {
+                    "label": "View next"
+                }
+            },
+            "heading": {
+                "config": {
+                    "tag": "h2",
+                    "level": 4
+                },
+                "content": {
+                    "text": "Top Free Games",
+                    "hyperlink": {
+                        "config": {
+                            "href": "#"
+                        },
+                        "content": {
+                            "text": "Show all",
+                            "label": "Show all"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "alt": "See all",
+                "href": "#"
+            },
+            "items": [
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Pin more"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 2.99,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Player for Soundcloud"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.8
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Allthecooks Recipes"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Photo Editor"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 1000,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "NFL on Windows"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.6
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Audiobooks from Audible"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.2
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 1000,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                },
+                {
+                    "config": {
+                        "orientation": "vertical",
+                        "context": "app",
+                        "size": "medium",
+                        "default-image": true
+                    },
+                    "content": {
+                        "itemprop": "Product name",
+                        "heading": {
+                            "config": {
+                                "tag": "h3",
+                                "itemprop": "product name"
+                            },
+                            "content": {
+                                "text": "Sway"
+                            }
+                        },
+                        "rating": {
+                            "config": {
+                                "type": {
+                                    "aggregate": true
+                                },
+                                "community-rating": 4.7
+                            },
+                            "content": {
+                                "community-label": "Rating:"
+                            }
+                        },
+                        "price": {
+                            "config": {
+                                "currency-symbol": "$",
+                                "currency-code": "SGD"
+                            },
+                            "content": {
+                                "itemprop": "Product name",
+                                "price": 0,
+                                "discounted-price": null
+                            }
+                        },
+                        "href": "#"
+                    }
+                }
+            ]
+        }
+    },
+    "heading-4": {
+        "config": {
+            "tag": "h4",
+            "level": 4
+        },
+        "content": {
+            "text": "The Microsoft Store difference"
+        }
+    },
+    "four-up": {
+        "config": {
+            "type": "four-up"
+        },
+        "content": {
+            "one": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Free shipping, every day"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "LEARN MORE",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/540x280",
+                        "vp2": "http://placehold.it/372x170",
+                        "vp3": "http://placehold.it/253x120",
+                        "vp4": "http://placehold.it/358x200",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "two": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Satisfaction guaranteed"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "LEARN MORE",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/540x280",
+                        "vp2": "http://placehold.it/372x170",
+                        "vp3": "http://placehold.it/253x120",
+                        "vp4": "http://placehold.it/358x200",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "three": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Instant software downloads"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "LEARN MORE",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/540x280",
+                        "vp2": "http://placehold.it/372x170",
+                        "vp3": "http://placehold.it/253x120",
+                        "vp4": "http://placehold.it/358x200",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            },
+            "four": {
+                "config": {
+                    "size": "medium",
+                    "context": "article"
+                },
+                "content": {
+                    "heading": {
+                        "level": 3,
+                        "text": "Talk with an expert"
+                    },
+                    "call-to-action": {
+                        "content": {
+                            "text": "CONTACT US NOW",
+                            "href": "#"
+                        }
+                    },
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor lectus, at pharetra lacus lobortis vel.",
+                    "featured-image": {
+                        "vp1": "http://placehold.it/540x280",
+                        "vp2": "http://placehold.it/372x170",
+                        "vp3": "http://placehold.it/253x120",
+                        "vp4": "http://placehold.it/358x200",
+                        "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                    }
+                }
+            }
+        }
+    },
+    "universal-header": {
+        "mobile": {
+            "content": {
+                "scroll-left": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-left",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                },
+                "scroll-right": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-right",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                }
+            }
+        },
+        "global": {
+            "content": {
+                "logo": {
+                    "content": {
+                        "image": {
+                            "src": "images/microsoft-logo.png",
+                            "alt": "Microsoft Logo"
+                        },
+                        "href": "#",
+                        "logotype": "Microsoft"
+                    }
+                },
+                "skip-nav-link": {
+                    "content": {
+                        "text": "Skip to main content.",
+                        "href": "#main-content"
+                    }
+                },
+                "hamburger": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-global-nav-button",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Menu"
+                    }
+                },
+                "search-back": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-arrow-htmllegacy",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Back"
+                    }
+                },
+                "shopping-cart": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-shopping-cart",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "Shopping cart",
+                        "href": "#"
+                    }
+                },
+                "search": {
+                    "config": {
+                        "is-form": true,
+                        "autofocus": false
+                    },
+                    "content": {
+                        "label": "Enter your search",
+                        "input-name": "search-field",
+                        "button-name": "search-button",
+                        "placeholder": "Search MicrosoftStore.com",
+                        "auto-suggest": {
+                            "config": {
+                                "scroll": false,
+                                "aria-hidden": true,
+                                "aria-expanded": false,
+                                "aria-haspopup": true,
+                                "id": "universal-header-search-auto-suggest-transparent",
+                                "position": "default"
+                            },
+                            "content": {
+                                "strings": [
+                                    "Windows",
+                                    "Window",
+                                    "Windows Store",
+                                    "Microsoft",
+                                    "Bing",
+                                    "Xbox"
+                                ],
+                                "products": [
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamics CRM",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Apps",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamics CRM album",
+                                            "imageSrc": "//placehold.it/60x80",
+                                            "category": "Albums",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic artist",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Artists",
+                                            "isArtist": true
+                                        }
+                                    },
+                                    {
+                                        "content": {
+                                            "title": "Dynamics with a long title name that is long",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "category": "Movies",
+                                            "isArtist": false
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic transparent",
+                                            "imageSrc": "//store-images.microsoft.com/image/apps.6221.9007199266252643.9e83943d-d51f-4371-8567-06e1e21ced31.e47a968c-b6a8-490a-819e-70a7fc0c7933?w=100&h=100",
+                                            "category": "Apps",
+                                            "isArtist": false,
+                                            "bgColor": "#1006FE"
+                                        }
+                                    },
+                                    {
+                                        "config": {
+                                            "type": "product"
+                                        },
+                                        "content": {
+                                            "title": "Dynamic no category",
+                                            "imageSrc": "//placehold.it/60x60",
+                                            "isArtist": false
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "me-control": {
+                    "name": {
+                        "content": {
+                            "text": "Roland",
+                            "href": "#"
+                        }
+                    },
+                    "image": {
+                        "config": {
+                            "image-element": true,
+                            "round-image": true
+                        },
+                        "content": {
+                            "src": "http://placehold.it/32x32",
+                            "alt": "Placeholder with grey background and dimension watermark without any imagery"
+                        }
+                    }
+                },
+                "navigation": {
+                    "store": {
+                        "config": {
+                            "id": "store-navigation",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Store",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Store Home",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-devices",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Devices",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Surface",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PCs & tablets",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Accessories",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Band",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Wearables",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-software",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Software",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Office",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Additional software",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-apps",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Apps",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone apps",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-games",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Games",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Xbox One games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox 360 games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PC games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows phone games",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-entertainment",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Entertainment",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All Entertainment",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Moviees & TV",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Music",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "store-business-and-education",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Business & Education",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Business Store",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Education Store",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Sale",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Find a store",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Gift cards",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "products": {
+                        "config": {
+                            "id": "products-navigation",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Products",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-software-and-services",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Software & services",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Windows",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Office",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Free downloads & security",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Internet Explorer",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Skype",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneNote",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneDrive",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Health",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "MSN",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Bing",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Groove",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Movies & TV",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-devices-and-xbox",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Devices & Xbox",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "All Microsoft devices",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Surface",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "All Windows PCs and tablets",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "PC accessories",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Xbox & games",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Band",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Lumia",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "All Windows phones",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft HoloLens",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-business",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For business",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Cloud Platform",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Azure",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Dynamics",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Windows for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Office for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Skype for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Surface for business",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Enterprise solutions",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Small Business solutions",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Find a solutions provider",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-developers-and-it-pros",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For developers & IT pros",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Develop Windows apps",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft Azure",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "MSDN",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "TechNet",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Visual Studio",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "products-for-students-and-educators",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "For Students & educators",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Office for students",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "OneNote in classroom",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Shop PCs and tablets perfect for students",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Microsoft in Education",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "category": {
+            "config": {
+                "theme": "light"
+            },
+            "content": {
+                "logo": {
+                    "content": {
+                        "label": "Microsoft Store",
+                        "logotype": "Store",
+                        "href": "#"
+                    }
+                },
+                "CTA": {
+                    "content": {
+                        "text": "CALL TO ACTION",
+                        "href": "#"
+                    }
+                },
+                "navigation": {
+                    "devices": {
+                        "config": {
+                            "id": "devices",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Devices",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "surface",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Surface",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Get started",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Design",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Develop",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Publish",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Accessories",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Microsoft Band",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Wearables",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "software": {
+                        "config": {
+                            "id": "software",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Software",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "windows-phone",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Windows Phone",
+                                        "menu-items": [
+                                            {
+                                                "content": {
+                                                    "text": "Whats a Windows Universal app",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Get set up",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Sign up",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "Your first app",
+                                                    "href": "#"
+                                                }
+                                            },
+                                            {
+                                                "content": {
+                                                    "text": "New for Windows 10",
+                                                    "href": "#"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Additional software",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "apps": {
+                        "config": {
+                            "id": "apps",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Apps",
+                            "menu-items": [
+                                {
+                                    "config": {
+                                        "type": "sub-menu",
+                                        "id": "surface",
+                                        "hidden": true
+                                    },
+                                    "content": {
+                                        "text": "Surface",
+                                        "href": "#",
+                                        "menu-items": [
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "get-started",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Get started",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Whats a Windows Universal app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Get set up",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Sign up",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Your first app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "New for Windows 10",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "design",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Design",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Basics",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Guidelines",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Downloads",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "develop",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Develop",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "How-to-guides",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "API reference",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Services",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Windows 8.x guides",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Windows Phone Silverlight 8.1 guides",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "config": {
+                                                    "type": "sub-menu",
+                                                    "id": "publish",
+                                                    "hidden": false
+                                                },
+                                                "content": {
+                                                    "text": "Publish",
+                                                    "href": "#",
+                                                    "menu-items": [
+                                                        {
+                                                            "content": {
+                                                                "text": "Submit your app",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Promote and engage",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "View analytics",
+                                                                "href": "#"
+                                                            }
+                                                        },
+                                                        {
+                                                            "content": {
+                                                                "text": "Store Policies",
+                                                                "href": "#"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Accessories",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Microsoft Band",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Wearables",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "games": {
+                        "config": {
+                            "id": "games",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Games",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Xbox One games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Xbox 360 games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "PC games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows games",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Windows phone games",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "entertainment": {
+                        "config": {
+                            "id": "entertainment",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Entertainment",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "All entertainment",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Movies & TV",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Music",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "business-and-education": {
+                        "config": {
+                            "id": "business-and-education",
+                            "hidden": true
+                        },
+                        "content": {
+                            "title": "Find a store",
+                            "menu-items": [
+                                {
+                                    "content": {
+                                        "text": "Business Store",
+                                        "href": "#"
+                                    }
+                                },
+                                {
+                                    "content": {
+                                        "text": "Education Store",
+                                        "href": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "scroll-left": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-left",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                },
+                "scroll-right": {
+                    "config": {
+                        "context": "glyph-only",
+                        "glyph": "glyph-chevron-right",
+                        "element-type": "button",
+                        "disabled": false
+                    },
+                    "content": {
+                        "text": "See more menu options"
+                    }
+                }
+            }
+        }
+    },
+    "universal-footer": {
+        "config": {
+            "nav": true
+        },
+        "section-1": {
+            "config": {
+                "id": "section-1",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 1",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-2": {
+            "config": {
+                "id": "section-2",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 2",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-3": {
+            "config": {
+                "id": "section-3",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 3",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-4": {
+            "config": {
+                "id": "section-4",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 4",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-5": {
+            "config": {
+                "id": "section-5",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 5",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "section-6": {
+            "config": {
+                "id": "section-6",
+                "expanded": "false"
+            },
+            "content": {
+                "title": "Section 6",
+                "nav-items": [
+                    {
+                        "content": {
+                            "text": "Link name one",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name two (min)",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name three",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name four",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name five",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Link name six (max)",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        },
+        "footer": {
+            "config": {
+                "locale": "United States"
+            },
+            "content": {
+                "footer-items": [
+                    {
+                        "content": {
+                            "text": "Contact us",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Privacy & cookies",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Terms of use",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "Trademarks",
+                            "href": "#"
+                        }
+                    },
+                    {
+                        "content": {
+                            "text": "[Page or site legal]",
+                            "href": "#"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

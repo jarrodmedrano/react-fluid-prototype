@@ -1,0 +1,33 @@
+{
+    "name": "tooltip",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 10143181,
+            "description": "alters the tooltip template to allow the code examples to show the triggering element"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding missing title attribute"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525071,
+            "description": "updates accessibility by removing the tab index and changing how the focus state is implemented"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8301476,
+            "description": "removes unneeded aria tags for accessibility"
+        }
+    ]
+}

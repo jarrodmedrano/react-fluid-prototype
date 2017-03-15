@@ -1,0 +1,24 @@
+{
+    "name": "sequence indicator",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8865684,
+            "description": "changed SequenceIndicator to implement IController"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9564643,
+            "description": "fixes issue found in high contrast mode where the background color was being overridden improperly"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9435739,
+            "description": "fixes issue with focus rectangle incorrectly appearing on mouse click"
+        }
+    ]
+}

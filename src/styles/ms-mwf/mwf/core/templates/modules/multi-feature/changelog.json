@@ -1,0 +1,62 @@
+{
+    "name": "multi-feature",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10676313,
+            "description": "fixes issue with missing left/right padding for text on smaller viewports"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9791675,
+            "description": "fixes an issue where focus would accidentally be set and potentially scroll the browser when the multi-feature first initializes"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9589525,
+            "description": "fixes an issue where image pivots did not have a focus state"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9679430,
+            "description": "fixes an issue where the active content did not update on swipe"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9260013,
+            "description": "fixes an issue where the flipper arrows do not work when screen width is less than the width of the content"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9470310,
+            "description": "fixes the controls not working via mouse click in Firefox"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9090604,
+            "description": "removes border around multi-feature images"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9090732,
+            "description": "fixes spacing issues on paragraphs and headings"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8527201,
+            "description": "adds a new multi-feature module for displaying features with additional content"
+        }
+    ]
+}

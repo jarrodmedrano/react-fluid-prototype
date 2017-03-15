@@ -1,0 +1,62 @@
+---
+indexedPage: true
+---
+<button class="c-button" type="button" data-js-dialog-show="foo-bar">Student Experience Example</button>
+<div class="c-dialog f-flow" id="foo-bar" aria-hidden="true">
+    <div role="presentation" tabindex="-1"></div>
+    <div role="dialog" aria-label="Student experience example form" tabindex="-1">
+        <div class="c-glyph glyph-cancel" data-js-dialog-hide="" aria-label="Close dialog" tabindex="0"></div>
+        <form role="document">
+            <div class="f-dialog-scroll">
+                <div data-grid="col-12 pad-6x">
+                    <div data-grid="col-12">
+                        <h1 class="c-heading-2">Education Store</h1>
+                        <p class="c-subheading-3">Special savings for students, parents, and faculty.</p>
+                    </div>
+                    <div data-grid="col-6">
+                        <label class="c-label" for="first-name">First Name</label>
+                        <input class="c-text-field f-flex" type="text" name="first-name">
+                    </div>
+                    <div data-grid="col-6">
+                        <label class="c-label" for="last-name">Last Name</label>
+                        <input class="c-text-field f-flex" type="text" name="last-name" required>
+                    </div>
+                    <div data-grid="col-6">
+                        <label class="c-label" for="first-name">Email</label>
+                        <input class="c-text-field f-flex" type="text" name="first-name" required>
+                    </div>
+                    <div data-grid="col-6">
+                        <label class="c-label" for="select-menu">You are a</label>
+                        <div class="c-select-menu f-border f-persist f-flex" name="select-menu">
+                            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Select one below</a>
+                            <ul id="unique-id-for-list" role="menu" class="c-menu" aria-label="unique-id-for-list" aria-hidden="true">
+                                <li class="c-menu-item" role="menuitem">
+                                    <a aria-checked="false" role="menuitemradio" href="#">Student</a>
+                                </li>
+                                <li class="c-menu-item" role="menuitem">
+                                    <a aria-checked="false" role="menuitemradio" href="#">Parent</a>
+                                </li>
+                                <li class="c-menu-item" role="menuitem">
+                                    <a aria-checked="false" role="menuitemradio" href="#">Faculty</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-grid="col-12">
+                        <div class="c-checkbox">
+                            <label class="c-label">
+                                <input type="checkbox" id="c-checkbox-id-example" name="example-1" value="value-1">
+                                <span>I am a student, parent of a student, or faculty, eligible for education pricing. <a href="http://www.getmwf.com" class="c-hyperlink">Learn more</a></span>
+                            </label>
+                        </div>
+                        <p class="c-caption-2">Valid until 12/31/2016, or while supplies last. Education discount not combinable with other promotional pricing. Available in Microsoft online store in US (including Puerto Rico). Only available to K-12, higher education students, parents purchasing on behalf of students, faculty, staff, school board, and PTA/PTO executives. Institutions are not eligible for this offer. Some purchases are only available for higher education students, and may require additional eligibility verification and confirmation at checkout to complete your order. Offer only valid on select products. Limited quanities may be available. Not valid on prior orders or purchses; cannot be transferred or otherwise redeemed for cash or coupon code. May not be combinable with other offers. Taxes may apply. Void where prohibited or restricted by law. False representations of eligibility voids this offer, and Microsoft reserves the right to collect the full price of product(s) ordered. Limit of 1 item per order for most products. Bulk orders not valid and may be canceled.</p>
+                        <p class="c-caption-2"><a href="http://www.getmwf.com" class="c-hyperlink">See full terms</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-group">
+                <button class="c-button" type="submit" data-js-dialog-hide aria-label="Start shopping">Start shopping</button>
+            </div>
+        </form>
+    </div>
+</div>

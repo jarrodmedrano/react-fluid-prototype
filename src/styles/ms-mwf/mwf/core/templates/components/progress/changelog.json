@@ -1,0 +1,12 @@
+{
+    "name": "progress",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+        "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 6989902,
+            "description": "changes display of progess in IE8 and IE9 to none"
+        }
+    ]
+}

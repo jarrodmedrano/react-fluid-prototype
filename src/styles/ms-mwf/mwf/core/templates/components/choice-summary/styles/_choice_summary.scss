@@ -1,0 +1,86 @@
+// ==========================================================================
+// Component: Choice summary
+// ==========================================================================
+
+.c-choice-summary {
+    @include apply-type(t8);
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    max-width: 100%;
+    background-color: $color-foreground-10;
+    padding-#{$right}: 36px;
+    min-width: 72px;
+    margin-top: 12px;
+    margin-#{$right}: 12px;
+
+    > .c-menu {
+        position: absolute;
+        min-width: 100%;
+        width: inherit;
+
+        &[aria-hidden="true"] {
+            height: 0;
+            width: 0;
+            border: 0;
+            overflow: hidden;
+        }
+
+        .c-menu-item .c-radio input[type="radio"] + span {
+            white-space: nowrap;
+        }
+    }
+
+    span {
+        display: inline-block;
+        padding: set-direction-based-value(9px 4px 10px 12px, 9px 12px 10px 4px);
+        min-width: 100%;
+    }
+
+    button.c-action-trigger.c-glyph,
+    a.c-action-trigger.c-glyph {
+        position: absolute;
+        top: 0;
+        #{$right}: 0;
+        width: 36px;
+        height: 100%;
+        margin: 0;
+        padding: 5px 0 9px;
+
+        &[aria-label] {
+            margin-#{$right}: 0;
+        }
+
+        &:before {
+            width: auto;
+            height: auto;
+            color: $color-foreground-60;
+        }
+
+        &:focus {
+            background: none;
+            outline: 1px dashed $color-foreground;
+        }
+
+        &:hover {
+            text-decoration: none; // IE has a bug that infers decoration on before elements
+            background-color: $color-foreground-10;
+
+            &.x-hidden-focus {
+                background-color: $color-foreground-10 !important;
+            }
+        }
+
+        &:active {
+            background-color: $color-foreground-20;
+
+            &.x-hidden-focus {
+                background-color: $color-foreground-20 !important;
+            }
+
+            &:before {
+                color: $color-foreground-80;
+            }
+        }
+    }
+}

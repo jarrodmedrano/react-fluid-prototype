@@ -1,0 +1,41 @@
+{
+    "name": "content placement item",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8353357,
+            "description": "removes max-line enforcement. This will be handled by content curators"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8536398,
+            "description": "fixes an issue causing heading text descenders to be clipped"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8382111,
+            "description": "decreases the heading size to match the updated design requirements"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7888803,
+            "description": "updates the placement shape to make both the image and text clickable"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8220561,
+            "description": "adds badge option to template as detailed in the design spec"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7963159,
+            "description": "fixes issue with active/a11y state of CTA button where outlined button was cut off from view"
+        }
+    ]
+}

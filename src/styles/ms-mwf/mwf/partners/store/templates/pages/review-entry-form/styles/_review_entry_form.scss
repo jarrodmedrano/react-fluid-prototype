@@ -1,0 +1,10 @@
+.c-dialog {
+    .m-media {
+        @media only screen and (min-width: $vp1-max) {
+            [class*='c-heading'],
+            [class*='c-paragraph'] {
+                width: calc(100% - 108px);
+            }
+        }
+    }
+}

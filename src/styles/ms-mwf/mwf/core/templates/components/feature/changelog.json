@@ -1,0 +1,24 @@
+{
+    "name": "feature",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.13.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9025440,
+            "description": "fixes a padding issue on the heading in small viewports when a badge or logo is not included"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7910035,
+            "description": "adds support for background-colors to be applied to the component"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 7845404,
+            "description": "adds support for logo placement option to be applied to the component"
+        }
+    ]
+}

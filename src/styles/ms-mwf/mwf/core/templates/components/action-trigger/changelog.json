@@ -1,0 +1,45 @@
+{
+    "name": "action trigger",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9925737,
+            "description": "accessibility updates adds tooltip to glyph-only examples"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "new",
+            "ticket-id": 9745220,
+            "description": "adds heavyweight style as a new option"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 9710798,
+            "description": "adds phone glyph as a new option"
+        },
+        {
+            "type": "new",
+            "ticket-id": 9711101,
+            "description": "adds chat bubbles glyph as a new option"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "new",
+            "ticket-id": 8807250,
+            "description": "adds new option to align action trigger with content that is above or below"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8524924,
+            "description": "changed how role of button is applied to improve accesssibility"
+        }
+    ]
+}

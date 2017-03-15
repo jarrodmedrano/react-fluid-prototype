@@ -1,0 +1,79 @@
+// Store Interstitial
+.store-context- {
+    padding-top: 36px;
+
+    .store-context-interstitial-checkout-purchase {
+        max-width: 100%;
+
+        .c-image {
+            display: block;
+        }
+
+        .store-context-interstitial-checkout-details {
+            display: block;
+            max-width: 100%;
+
+            .c-heading {
+                @include apply-type(t5);
+                line-height: 28px;
+                padding: 0;
+            }
+
+            .c-meta-text {
+                @include apply-type(t7);
+                padding: 0;
+            }
+        }
+    }
+
+    .store-context-interstitial-checkout-cta {
+        padding-top: 16px;
+    }
+
+    .c-divider {
+        margin-top: 36px;
+        margin-bottom: 16px;
+    }
+
+    .store-context-interstitial-checkout-add {
+        > div {
+            .c-heading {
+                @include apply-type(t4);
+                padding: 0;
+            }
+        }
+
+        .store-m-interstitial-checkout-placements {
+            min-height: 475px;
+            padding-top: 36px;
+
+            .c-action-trigger {
+                &:before {
+                    margin-#{$left}: 0;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp2) {
+        .store-context-interstitial-checkout-purchase {
+
+            .c-image {
+                display: inline-block;
+            }
+
+            .store-context-interstitial-checkout-details {
+                display: inline-block;
+                max-width: 65%;
+                padding-#{$left}: 24px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $vp3) {
+        .store-context-interstitial-checkout-cta {
+            text-align: $right;
+        }
+    }
+}

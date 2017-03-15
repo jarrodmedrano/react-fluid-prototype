@@ -1,0 +1,38 @@
+{
+    "name": "flyout",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10893053,
+            "description": "fixes issue with flyout focus incorrectly being reset when the browser viewport size changes"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9269864,
+            "description": "fixes behavior so flyout gets focus when it's shown and focus reverts back to the opening button when it's hidden"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9137054,
+            "description": "fixes behavior so flyout hides when the escape key is pressed"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9784463,
+            "description": "fixes flyout loading issue because of slow binding of JavaScript"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8614790,
+            "description": "overhauls flyout placement algorithm to better handle flyouts nested inside positioned elements"
+        }
+    ]
+}

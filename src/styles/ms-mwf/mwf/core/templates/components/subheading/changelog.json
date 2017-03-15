@@ -1,0 +1,12 @@
+{
+    "name": "subheading",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.14.0": [
+        {
+            "type": "changed",
+            "ticket-id": 7904859,
+            "description": "updates padding for subheadings to match design requirements"
+        }
+    ]
+}

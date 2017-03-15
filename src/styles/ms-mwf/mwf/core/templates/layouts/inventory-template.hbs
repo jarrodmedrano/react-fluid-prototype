@@ -1,0 +1,13 @@
+---
+useDevToolbar: false
+title: "Partner index listing"
+---
+<h1 class="c-heading-1">This is the <strong>{{uppercase partner}}</strong> index page</h1>
+
+<ul class="c-list">
+    {{#eachProperty inventory}}
+    <li>
+        <a href="{{value.url}}" class="c-hyperlink" target="_blank">{{value.name}}</a>
+    </li>
+    {{/eachProperty}}
+</ul>

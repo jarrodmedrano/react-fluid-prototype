@@ -1,0 +1,12 @@
+{
+    "name": "page bar",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.16.0": [
+        {
+            "type": "new",
+            "ticket-id": 7909932,
+            "description": "adds responsive behavior to buy box, in-page, and link navigation"
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+.m-rich-content-block {
+
+    > [class*="c-heading"] {
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &[data-grid~="pad-6x"] {
+        @include left-right-padding($base-0);
+
+        &[data-grid~="stack-2"] {
+            > div {
+                [class*="c-heading"] {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+
+                + div {
+                    [class*="c-heading"] {
+                        &:first-child {
+                            padding-top: 48px;
+                        }
+
+                        @media only screen and (min-width: $vp3) {
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &[data-grid~="stack-3"] {
+            > div {
+                [class*="c-heading"] {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+
+                + div {
+                    [class*="c-heading"] {
+                        &:first-child {
+                            padding-top: 48px;
+                        }
+
+                        @media only screen and (min-width: $vp4) {
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: $vp2) {
+            @include left-right-padding($base-3x);
+        }
+
+        @media only screen and (min-width: $vp3) {
+            @include left-right-padding($base-6x);
+            padding-top: 48px;
+        }
+
+        @media only screen and (min-width: $vp5) {
+            @include left-right-padding($base-9x);
+        }
+    }
+
+    &[data-grid~="pad-12x"] {
+        // Needs to be 30 due to the way the grid padding
+        // is setup in order to maintain 48px padding at max VP
+        padding-#{$left}: 30px;
+        padding-#{$right}: 30px;
+
+        &[data-grid~="stack-2"] {
+            > div {
+                [class*="c-heading"] {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+
+                + div {
+                    [class*="c-heading"] {
+                        &:first-child {
+                            padding-top: 48px;
+                        }
+
+                        @media only screen and (min-width: $vp3) {
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &[data-grid~="stack-3"] {
+            > div {
+                [class*="c-heading"] {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+
+                + div {
+                    [class*="c-heading"] {
+                        &:first-child {
+                            padding-top: 48px;
+                        }
+
+                        @media only screen and (min-width: $vp4) {
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: $vp5-max) {
+            @include left-right-padding($base-6x);
+        }
+
+        @media screen and (max-width: $vp4-max) {
+            @include left-right-padding($base-3x);
+        }
+
+        @media only screen and (max-width: $vp3-max) {
+            @include left-right-padding(apply-base(4.5));
+        }
+
+        @media only screen and (max-width: $vp2-max) {
+            @include left-right-padding($base-3x);
+        }
+
+        @media only screen and (max-width: $vp1-max) {
+            @include left-right-padding($base-0);
+        }
+    }
+}

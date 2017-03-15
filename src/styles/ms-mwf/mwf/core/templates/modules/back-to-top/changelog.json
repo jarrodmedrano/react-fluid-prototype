@@ -1,0 +1,20 @@
+{
+    "name": "back to top",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9259910,
+            "internal": true,
+            "description": "fixes the example with enough content on the page to trigger on high resolution screens"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525572,
+            "description": "updates example and guidance to have the id assigned to the first element inside the main content of the page"
+        }
+    ]
+}

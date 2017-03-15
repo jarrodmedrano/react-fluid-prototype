@@ -1,0 +1,19 @@
+{
+    "name": "select button",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9450854,
+            "description": "fixes hover state of select buttons"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525297,
+            "description": "updates select button to use aria-labelledby and aria-live properties for better accessibility when activating buttons"
+        }
+    ]
+}

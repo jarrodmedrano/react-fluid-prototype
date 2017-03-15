@@ -1,0 +1,52 @@
+{
+    "name": "auto suggest",
+    "content-type": "module",
+    "_documentation": "./gruntfile/README.md",
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10444495,
+            "description": "fixes issue with suggestion positioning getting reset by parent components"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9305853,
+            "description": "fixes WCAG 2.0 AA accessibility issues regarding missing alt tags"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8102040,
+            "description": "fixes products with white on transparent PNGs not showing in products section"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9092435,
+            "description": "updates all buttons below content-placement-items to be vertically aligned"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8525566,
+            "description": "updates to use aria-owns, aria-activedescendant, aria-live, the role combobox and adds tabbing behavior to collapse dropdown"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8208174,
+            "description": "fixes an issue where position was spelled wrong"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8232728,
+            "description": "adds the product type for showing products in results"
+        }
+    ]
+}

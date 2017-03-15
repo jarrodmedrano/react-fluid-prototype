@@ -1,0 +1,94 @@
+@mixin c-call-to-action-lightweight {
+    background: transparent;
+    color: $color-accent;
+    border-color: transparent;
+    border-width: 2px;
+    padding: set-direction-based-value(10px 16px 7px 0, 10px 0 7px 16px);
+    margin-#{$left}: 0;
+    transition: none;
+
+    &:focus:not(.x-hidden-focus),
+    &:hover,
+    &:active {
+        background: transparent;
+        outline: transparent;
+        border-color: transparent;
+    }
+
+    &:focus:not(.x-hidden-focus) {
+        background: $color-accent-10 content-box;
+    }
+
+    &:focus:not(.x-hidden-focus),
+    &:hover {
+        color: flatten-overlay($color-accent, $color-foreground, 10%);
+    }
+
+    &:active {
+        background: none;
+        color: flatten-overlay($color-accent, $color-foreground, 20%);
+        text-decoration: none;
+        transform: none;
+    }
+
+
+    &:focus:not(.x-hidden-focus),
+    &:hover {
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    &[aria-disabled="true"] {
+        cursor: not-allowed;
+        color: flatten-overlay($color-background, $color-accent, 20);
+    }
+
+    #{$theme-light} {
+        color: $color-shade;
+        background: transparent;
+        border-color: transparent;
+
+        &:focus:not(.x-hidden-focus) {
+            background: $color-shade-10 content-box;
+        }
+
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            color: $color-shade-90;
+        }
+
+        &:active {
+            color: $color-shade-80;
+        }
+
+        &[aria-disabled="true"] {
+            background: transparent;
+            color: flatten-overlay($color-tint, $color-shade, 40);
+        }
+    }
+
+    #{$theme-dark} {
+        color: $color-tint;
+        background: transparent;
+        border-color: transparent;
+
+        &:focus:not(.x-hidden-focus) {
+            background: $color-tint-10 content-box;
+        }
+
+        &:focus:not(.x-hidden-focus),
+        &:hover {
+            color: flatten-overlay($color-tint, $color-foreground, 10%);
+        }
+
+        &:active {
+            color: flatten-overlay($color-tint, $color-foreground, 20%);
+        }
+
+        &[aria-disabled="true"] {
+            background: transparent;
+            color: flatten-overlay($color-shade, $color-tint, 40);
+        }
+    }
+}

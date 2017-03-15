@@ -1,0 +1,24 @@
+---
+title: MWF - Lists without refine filter
+removeContainer: true
+indexedPage: true
+---
+
+<div data-grid="container" role="main">
+    <div data-grid="col-12 stack-2" class="x-offset-content">
+        <section>
+            <h1 class="c-heading-2">Top rated</h1>
+            <p class="c-paragraph"><small>Viewing 1-72 of 183 results</small></p>
+            <div class="c-group f-wrap-items" id="search-results">
+                {{#each list-no-filter.top-rated-placements}}
+                    {{> product-placement-item-module this}}
+                {{/each}}
+                </div>
+            <p class="c-paragraph"><small>Viewing 1-72 of 183 results</small></p>
+        </section>
+        <hr class="c-divider f-pad-top-3x">
+        <section>
+            {{> pagination-module list-no-filter.pagination}}
+        </section>
+    </div>
+</div>

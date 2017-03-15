@@ -1,0 +1,228 @@
+.m-action-bar {
+    white-space: nowrap;
+    position: relative;
+
+    .c-action-trigger {
+        margin-top: 0;
+    }
+
+    .f-divider {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            #{$right}: 0;
+            height: $base-6x;
+            border-#{$right}: 1px solid $color-foreground-20;
+        }
+    }
+
+    > li {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+
+        &[data-overflow='true'] {
+            display: none;
+        }
+
+        > .c-action-trigger {
+            margin: 0 $base-3x;
+        }
+    }
+
+    .f-overflow {
+        position: absolute;
+        padding-#{$right}: $base-3x;
+        #{$right}: 0;
+        background: $color-background;
+        height: $base-9x;
+
+        .c-action-trigger {
+            width: 100%;
+            color: $color-foreground;
+            text-align: $left;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+
+            &:hover {
+                background: $color-foreground-10;
+            }
+
+            &:active {
+                background: $color-foreground-30 !important;
+            }
+
+            &:focus {
+                outline: 1px dashed $color-foreground;
+                background: none;
+            }
+        }
+
+        > button {
+            position: relative;
+            border: 0;
+            background: none;
+            color: $color-accent;
+            padding: 8px 11px;
+            height: 100%;
+
+            &:before {
+                @include apply-glyph($glyph-more);
+                vertical-align: middle;
+                display: inline-block;
+                height: 100%;
+            }
+
+            &:focus {
+                outline: 1px dashed $color-foreground;
+            }
+        }
+
+        > ul {
+            position: absolute;
+            #{$right}: $base-3x - 1px;
+            background: flatten-overlay($color-background, $color-foreground, 5);
+            min-width: 200px;
+            z-index: map-get($z-index, nav);
+
+            &[aria-hidden='true'] {
+                display: none;
+            }
+
+            > li {
+                > ul {
+                    > li {
+                        &[data-overflow='false'] {
+                            display: none;
+                        }
+
+                        &.f-divider,
+                        &:last-child {
+                            border-bottom: 1px solid $color-foreground-10;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (min-width: $vp2) {
+                #{$right}: $base-6x - 1px;
+            }
+
+            @media only screen and (min-width: $vp3) {
+                #{$right}: $base-9x - 1px;
+            }
+
+            @media only screen and (min-width: $vp5) {
+                #{$right}: $base-12x - 1px;
+            }
+
+            @if $ltie8 {
+                #{$right}: $base-9x - 1px;
+            }
+        }
+
+        @media only screen and (min-width: $vp2) {
+            padding-#{$right}: $base-6x;
+        }
+
+        @media only screen and (min-width: $vp3) {
+            padding-#{$right}: $base-9x;
+        }
+
+        @media only screen and (min-width: $vp5) {
+            padding-#{$right}: $base-12x;
+        }
+
+        @if $ltie8 {
+            padding-#{$right}: $base-9x;
+        }
+    }
+
+    #{$theme-light} {
+        .f-divider {
+            &:after {
+                border-#{$right}: 1px solid $color-shade-20;
+            }
+        }
+
+        .f-overflow {
+            background: flatten-overlay($color-tint, $color-shade, 10);
+
+            .c-action-trigger {
+                color: $color-shade;
+
+                &:hover {
+                    background: $color-shade-10;
+                }
+
+                &:active {
+                    background: $color-shade-30 !important;
+                }
+
+                &:focus {
+                    outline-color: $color-shade;
+                }
+            }
+
+            > button {
+                &:before {
+                    color: $color-shade;
+                }
+
+                &:focus {
+                    outline: 1px dashed $color-shade;
+                }
+            }
+
+            > ul {
+                background: flatten-overlay($color-tint, $color-shade, 5);
+            }
+        }
+    }
+
+    #{$theme-dark} {
+        .f-divider {
+            &:after {
+                border-#{$right}: 1px solid $color-tint-20;
+            }
+        }
+
+        .f-overflow {
+            background: flatten-overlay($color-tint, $color-shade, 80);
+
+            .c-action-trigger {
+                color: $color-shade;
+
+                &:hover {
+                    background: $color-shade-10;
+                }
+
+                &:active {
+                    background: $color-shade-30 !important;
+                }
+
+                &:focus {
+                    outline-color: $color-shade;
+                }
+            }
+
+            > button {
+                &:before {
+                    color: $color-tint;
+                }
+
+                &:focus {
+                    outline: 1px dashed $color-tint;
+                }
+            }
+
+            > ul {
+                background: flatten-overlay($color-tint, $color-shade, 5);
+            }
+        }
+    }
+}

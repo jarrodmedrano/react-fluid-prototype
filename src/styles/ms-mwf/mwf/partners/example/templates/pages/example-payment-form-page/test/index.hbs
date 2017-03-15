@@ -1,0 +1,92 @@
+---
+title: Example payment form
+removeContainer: true
+---
+{{> universal-header-template example-payment-form-page.header }}
+<main id="mainContent" data-grid="container">
+    <form data-grid="col-12" action="index-submit" method="get" accept-charset="utf-8">
+            <div data-grid="col-12 pad-6x">
+                <div data-grid="col-12 pad-6x">
+                    <div data-grid="col-12">
+                        {{> heading-template example-payment-form-page.payment-form }}
+
+                        {{> paragraph-template example-payment-form-page.email-receipt-to }}
+
+                        {{> label-template example-payment-form-page.email-label }}
+                        <input class="c-text-field f-flex" type="email" name="default" required>
+
+                        {{> label-template example-payment-form-page.verify-email-label }}
+                        <input class="c-text-field f-flex" type="email" name="default" required>
+                        {{> paragraph-template example-payment-form-page.shipping-address-heading }}
+                    </div>
+                </div>
+            </div>
+            <div data-grid="col-12 pad-6x">
+                <div data-grid="col-6">
+                    <div data-grid="col-12 pad-6x">
+                        <div data-grid="col-12">
+                            {{> label-template example-payment-form-page.first-name-label }}
+                            <input class="c-text-field f-flex" type="text" name="firstName" required>
+
+                            {{> label-template example-payment-form-page.last-name-label }}
+                            <input class="c-text-field f-flex" type="text" name="lastName" required>
+
+                            {{> label-template example-payment-form-page.address-1 }}
+                            <input class="c-text-field f-flex" type="text" name="address1" required>
+
+                            {{> label-template example-payment-form-page.address-2 }}
+                            <input class="c-text-field f-flex" type="text" name="address2">
+
+                            {{> label-template example-payment-form-page.city-label }}
+                            <input class="c-text-field f-flex" type="text" name="default" required>
+                        </div>
+                    </div>
+
+                    <div data-grid="col-12 pad-6x">
+                        <div data-grid="col-4">
+                            {{> label-template example-payment-form-page.state-label }}
+                            {{> combo-template example-payment-form-page.state }}
+                        </div>
+
+                        <div data-grid="col-8">
+                        {{> label-template example-payment-form-page.zip-label }}
+                            <input class="c-text-field f-flex" type="text" name="default">
+                        </div>
+                        <div data-grid="col-12">
+                            {{> label-template example-payment-form-page.phone-label }}
+                            <input class="c-text-field f-flex" type="text" name="default">
+                        </div>
+                    </div>
+                </div>
+                <div data-grid="col-6 pad-6x">
+                    <div data-grid="col-12">
+                        {{> radio-template example-payment-form-page.shipping }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-grid="col-12 pad-6x">
+            <div data-grid="col-12 pad-6x">
+                <div data-grid="col-12">
+                    {{> divider-template example-payment-form-page.divider }}
+                </div>
+
+                <div data-grid="col-3">
+                    <img class="c-image f-pad-top-3x x-visible-inline" src="http://placehold.it/168x53/2F2F2F/171717" alt="Placeholder image" aria-label="Placeholder with grey background and dimension watermark">
+                </div>
+
+                <div data-grid="col-6">
+                    <img class="c-image f-pad-top-3x x-visible-inline" src="http://placehold.it/40x24/2F2F2F/171717" alt="Placeholder image" aria-label="Placeholder with grey background and dimension watermark">
+                    <img class="c-image f-pad-top-3x x-visible-inline" src="http://placehold.it/40x24/2F2F2F/171717" alt="Placeholder image" aria-label="Placeholder with grey background and dimension watermark">
+                    <img class="c-image f-pad-top-3x x-visible-inline" src="http://placehold.it/40x24/2F2F2F/171717" alt="Placeholder image" aria-label="Placeholder with grey background and dimension watermark">
+                    <img class="c-image f-pad-top-3x x-visible-inline" src="http://placehold.it/40x24/2F2F2F/171717" alt="Placeholder image" aria-label="Placeholder with grey background and dimension watermark">
+                </div>
+
+                <div data-grid="col-3">
+                    {{> button-template example-payment-form-page.submit-button }}
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+{{> universal-footer-template example-payment-form-page.footer }}

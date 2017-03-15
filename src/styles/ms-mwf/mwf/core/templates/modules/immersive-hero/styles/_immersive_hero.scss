@@ -1,0 +1,10 @@
+.m-immersive-hero {
+    @include left-right-padding($base-0);
+    padding-top: 0;
+
+    .c-carousel {
+        .c-sequence-indicator {
+            bottom: 12px;
+        }
+    }
+}

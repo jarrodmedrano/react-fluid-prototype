@@ -1,0 +1,489 @@
+{
+    "name": "universal header",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10728045,
+            "description": "fixes mobile f-current highlighting"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9358805,
+            "description": "fixes click focus states for UHF service"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10798065,
+            "description": "fixes hover color on links in mobile"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10210942,
+            "description": "changes c-menu-item component dependency to reduce fragility and override complexity"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10209720,
+            "description": "changes c-menu component dependency to reduce fragility and override complexity"
+        },
+        {
+            "type": "new",
+            "ticket-id": 10733694,
+            "description": "adds call to action with image in category menu"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10728045,
+            "description": "fixes issue with links not stacking in mobile"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9574345,
+            "description": "fixes issue with focus treatments in uhf menus in desktop"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9580298,
+            "description": "fixes issue with focus treatments in uhf menus in mobile"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10209720,
+            "description": "changes select-menu component dependency to reduce fragility and override complexity, and streamlines selectors to improve performance"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10286951,
+            "description": "update UHF multicolumn shape and update CSS"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 10724682,
+            "description": "update UHF multicolumn adding media queries"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10210559,
+            "description": "fixes issue with mobile menu hover state"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10232875,
+            "description": "fixes issue with category menu focus color"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10076358,
+            "description": "fixes IE8 issue with search box too narrow/dark"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9647138,
+            "internal": true,
+            "description": "removes old namespace prefix for standalone file"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9510374,
+            "description": "fixes issue with broken menus in no-js scenario"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9782544,
+            "description": "changes hyperlink component dependency to reduce fragility and override complexity, and streamlines selectors to improve performance"
+        },
+        {
+            "type": "new",
+            "ticket-id": 10166219,
+            "description": "adds site wide promo banner"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8995120,
+            "description": "fixes issue with border not showing on auto-suggest"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9385952,
+            "description": "fixes issue with inconsistent styling of language toggle and streamlines menu selector output"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 868442,
+            "internal": true,
+            "description": "optimizes selectors to reduce duplicated properties"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9751765,
+            "description": "fixes issue with focus rectangle disappearing from global menus when using the keyboard to expand the menu"
+        }
+    ],
+    "v1.16.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9403155,
+            "description": "fixes issue with long category menu items covering submenu chevron"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9578578,
+            "description": "fixes issue with submenu alignment (1px)"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9208316,
+            "description": "fixes issue with submenu positioning when menu appears to the left"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9564142,
+            "description": "fixes issue with blurry microsoft logo"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9406621,
+            "description": "fixes issue with no border on search box at VP3"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9226593,
+            "description": "fixes issue with CTA text color on transparent header"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9386826,
+            "internal": true,
+            "description": "applies context class to UHF bundle/namespace to resolve alert styling and other issues"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9402889,
+            "description": "fixes issue with chevrons wrapping on global menus"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 9672680,
+            "description": "made edge promo banner show on windows 10 and non-edge browsers"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9312594,
+            "description": "fixes issue with left right padding at vp3 and lower"
+        }
+    ],
+    "v1.15.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9443655,
+            "description": "fixes issue with extra margin at vp5 and higher"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9109809,
+            "description": "fixes issue with global menu positioning in mobile viewports"
+        },
+        {
+            "type": "new",
+            "ticket-id": 9360764,
+            "description": "adds Edge promotional banner"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9305046,
+            "internal": true,
+            "description": "fixes issue with JavaScript not working in partner test pages"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9413370,
+            "description": "fixes issues with focus states being clipped"
+        }
+    ],
+    "v1.13.0": [
+        {
+            "type": "new",
+            "ticket-id": 8708015,
+            "description": "adds language selector to global navigation"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8027599,
+            "description": "adds subtle outline around menus when they are open"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8976671,
+            "description": "updates Microsoft logo to align with global link baseline"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8664026,
+            "description": "adds support for multi-column menus at the category-2 level"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8821295,
+            "description": "changes top spacing to 12px on vp6 or greater, 8px on vp5, and 0px for less than vp4"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8649532,
+            "internal": true,
+            "description": "fixes z-index get map issue and updates comments in z-index config scss"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8579053,
+            "description": "fixes mobile menu items being hidden as menus were pushed below viewport"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8822290,
+            "description": "changes breakpoint for shorter category nav to the start of viewport 4"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8822359,
+            "description": "changes category label size to be 24px semilight in all viewports"
+        }
+    ],
+    "v1.12.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8790984,
+            "description": "changes lower level menu color and background differences between light and dark themes"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8528329,
+            "description": "changes VFI contrast ratio to meet accessibility standards for all anchors and buttons"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8722898,
+            "description": "fixes spacing between menu items to be exactly 48px"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8549597,
+            "description": "adds the f-current class to delineate the active menu item"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8722937,
+            "description": "changes the text size for the category label to remain consistent from vp4-vp6"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8737329,
+            "description": "updates Microsoft logos with new image assets"
+        }
+    ],
+    "v1.11.0": [
+        {
+            "type": "changed",
+            "ticket-id": 8691756,
+            "description": "updates color in transparent header to allow for usage on pages with white backgrounds"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8571566,
+            "description": "removes max width from auto-suggest flyout to allow longer content in smaller viewports"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8684925,
+            "description": "fixes issue where auto-suggest displayed behind category navigation"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8549704,
+            "description": "fixes issue for select-menus where the underline would extend under the down caret and would also persist while the menu was open"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8653029,
+            "description": "removes underline behavior in mobile from global and category main anchors and updates transparent theme colors"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8552997,
+            "internal": true,
+            "description": "updates hero image sizes to match updated design for use with transparent header"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8549704,
+            "description": "updates hover and focus states of global navigation, transparent category navigation, and unbranded category navigation"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8478734,
+            "description": "updates transparency in mobile viewport to match new design"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8631246,
+            "description": "updates mobile viewport nav items to have consistent color behavior"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8579059,
+            "description": "removes skip to main from header shape to resolve dependency issues"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8454694,
+            "description": "updates category label so that the font-size reacts to viewport size"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8478694,
+            "description": "updates spacing above header in higher viewports"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8454155,
+            "description": "updates default, hover, focus, and active color of shopping cart to match the design"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8478806,
+            "description": "fixes vertical and horizontal alignment of select menu chevrons"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8375982,
+            "description": "fixes issue where the category nav label would not align with the Microsoft logo at VP6"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8453951,
+            "description": "updates search component styling in light and dark themes"
+        }
+    ],
+    "v1.10.0": [
+        {
+            "type": "new",
+            "ticket-id": 8519553,
+            "description": "adds light and dark theme support"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8454987,
+            "description": "fixes several small validation errors"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8286601,
+            "description": "adds a 'skip to main content' link in the global menu, only accessible via tabbing, for accessibility standards"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8377031,
+            "description": "adds support for fixed top alert"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8222055,
+            "description": "optimizes CSS selectors for IE9 issue and performance improvements"
+        }
+    ],
+    "v1.9.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8183769,
+            "description": "fixes an issue with C1 links being hidden at mobile"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8155896,
+            "description": "fixes an issue with the mobile menu changing the position of the header and background on scroll - the 'x-fixed' class should be placed on the body element while the mobile menu is open, and removed when closed"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7988642,
+            "description": "closes same scrolling issue as #8155896"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8053763,
+            "description": "slims down category menu at vp3 to have a height of 50px"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7841849,
+            "description": "fixes an issue with transparent header showing with a black background in IE8"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8366500,
+            "description": "fixes an issue with mobile header being fixed to top"
+        }
+    ],
+    "v1.8.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 8013834,
+            "description": "fixes an issue with the shopping cart not being vertically aligned in smaller VPs"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7898673,
+            "description": "fixes an issue with aria-label not being needed in the paddles for category level"
+        },
+        {
+            "type": "new",
+            "ticket-id": 8053053,
+            "description": "updates theme colors"
+        },
+        {
+            "type": "changed",
+            "ticket-id": 8084156,
+            "description": "changes cart from button to anchor"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8026550,
+            "description": "removes underline on hover for global and category parent links"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8026576,
+            "description": "removes menu bottom underline for default menu with category branding (migration header)"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8026603,
+            "description": "changes link color to be lighter on default"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8027408,
+            "description": "fixes search box mobile display overflow error"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 8112347,
+            "description": "fixes issue with search not showing when nav element is not present"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 7914430,
+            "description": "fixes issue with the after tag getting underlined on hover in Edge and IE browsers"
+        },
+        {
+            "type": "fixed",
+            "internal": "true",
+            "ticket-id": 8170002,
+            "description": "updates imagery used in hero in the universal header examples to the correct ratio"
+        }
+    ]
+}

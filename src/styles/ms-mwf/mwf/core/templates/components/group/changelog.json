@@ -1,0 +1,12 @@
+{
+    "name": "group",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 10146473,
+            "description": "fixes IE9 issue where product placements inside group did not wrap"
+        }
+    ]
+}

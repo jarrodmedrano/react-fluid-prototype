@@ -1,0 +1,48 @@
+{
+    "name": "action toggle",
+    "content-type": "component",
+    "_documentation": "./gruntfile/README.md",
+    "v1.19.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9590215,
+            "description": "adjusting glyph alignment"
+        }
+    ],
+    "v1.18.0": [
+        {
+            "type": "changed",
+            "ticket-id": 9925737,
+            "description": "accessibility updates including adding tooltip to glyph-only examples"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10031910,
+            "description": "fixes an issue where the default color did not match the spec"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 10165459,
+            "description": "fixes alignment issue in carousel"
+        },
+        {
+            "type": "fixed",
+            "ticket-id": 9590215,
+            "description": "fixes glyph alignment in edge/IE"
+        }
+    ],
+    "v1.17.0": [
+        {
+            "type": "fixed",
+            "ticket-id": 9769423,
+            "description": "fixes foreground on hover to have accessible contrast"
+        }
+    ],
+    "v1.14.0": [
+        {
+            "type": "new",
+            "ticket-id": 8443790,
+            "description": "adds new action-toggle component"
+        }
+    ]
+}

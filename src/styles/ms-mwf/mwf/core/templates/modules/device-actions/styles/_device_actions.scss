@@ -1,0 +1,124 @@
+.m-device-actions {
+    @include left-right-padding($base-0);
+    margin-top: 24px;
+    padding-top: 0;
+
+    [data-grid="col-6"]:first-child {
+        padding-#{$right}: 12px;
+        padding-#{$left}: 0;
+
+        .f-row:first-child {
+            display: none;
+        }
+    }
+
+    [data-grid="col-6"] {
+        padding-#{$right}: 0;
+        padding-#{$left}: 12px;
+
+        .f-row:first-child {
+            color: $color-shade;
+        }
+    }
+
+    .f-row {
+        overflow: hidden;
+        color: $color-shade-60;
+        margin-top: 24px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .c-meta-text {
+            margin-top: 0;
+        }
+    }
+
+    .f-description {
+        overflow: hidden;
+
+        [class^="c-paragraph"] {
+            padding: 0;
+        }
+
+        .f-battery {
+            [class^="c-paragraph"],
+            .c-image {
+                display: inline-block;
+                margin-#{$right}: 12px;
+            }
+        }
+    }
+
+    .f-button {
+        float: left;
+        padding-right: 24px;
+        min-width: 150px;
+        margin-bottom: 12px;
+    }
+
+    .c-button {
+        margin-top: 0;
+    }
+
+    .c-meta-text {
+        display: block;
+        margin-top: 24px;
+    }
+
+    @media only screen and (max-width: $vp3-max) {
+        @include left-right-padding($base-3x);
+
+        [data-grid="col-6"]:first-child {
+            padding-top: 0;
+
+            .f-row:first-child {
+                display: block;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        [data-grid="col-6"] {
+            padding-#{$left}: 0;
+            margin-bottom: 0;
+
+            .f-row:first-child {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $vp1-max) {
+        .f-button {
+            float: none;
+            padding-#{$right}: 0;
+        }
+
+        .c-button {
+            width: 100%;
+        }
+
+        .f-row:first-child {
+            margin-bottom: 0;
+
+            .f-button {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// Example image in place of map
+.f-map {
+    clear: both;
+    width: 100%;
+    height: 440px;
+    background: $color-brand-neutral-55;
+
+    @media only screen and (max-width: $vp1) {
+        height: 260px;
+    }
+}
+// scss-lint:enable IdSelector`
