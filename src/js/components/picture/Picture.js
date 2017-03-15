@@ -11,7 +11,7 @@ class Picture extends React.Component {
                 <picture className="c-image">
                     {pictures.map(function (object, id) {
                         return (
-                            <source srcSet={object.src} media={`(min-width:${object.minWidth}px)`} key={id}/>
+                            <source srcSet={object.src} media={`(min-width:${object.minWidth}px)`} key={id} />
                         )
                     })}
                     <img srcSet={pictures[0].src} src={pictures[0].src} alt={altText ? altText : null} aria-label={ ariaLabel ? ariaLabel : null} draggable="false" />

@@ -26,10 +26,10 @@ $video-offset-portrait: 0;
   z-index: 2;
 
   @media only screen and (min-width: 768px) and (orientation: landscape) {
-    height: 100vh;
+    min-height: 100vh;
 
     > div {
-      height: 100vh;
+      min-height: 100vh;
     }
   }
 
