@@ -206,10 +206,10 @@
                 }
               },
               {
+                "hoverEffectColor": "#000",
                 "headingBlock": {
                   "button": {
-                    "link": "http://www.microsoft.com",
-                    "overlay": "#000"
+                    "link": "http://www.microsoft.com"
                   }
                 },
                 "pictureBlock": {
@@ -242,10 +242,10 @@
                 }
               },
               {
+                "hoverEffectColor": "#000",
                 "headingBlock": {
                   "button": {
-                    "link": "http://www.microsoft.com",
-                    "overlay": "#000"
+                    "link": "http://www.microsoft.com"
                   }
                 },
                 "pictureBlock": {
@@ -278,10 +278,10 @@
                 }
               },
               {
+                "hoverEffectColor": "#000",
                 "headingBlock": {
                   "button": {
-                    "link": "http://www.microsoft.com",
-                    "overlay": "#000"
+                    "link": "http://www.microsoft.com"
                   }
                 },
                 "pictureBlock": {
@@ -314,10 +314,10 @@
                 }
               },
               {
+                "hoverEffectColor": "#000",
                 "headingBlock": {
                   "button": {
-                    "link": "http://www.microsoft.com",
-                    "overlay": "#000"
+                    "link": "http://www.microsoft.com"
                   }
                 },
                 "pictureBlock": {

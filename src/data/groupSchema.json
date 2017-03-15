@@ -1,70 +1,32 @@
 {
-  "title": "RDX Datasource",
-  "id": "http://windowsretaildemo.com/rdx-20/datasource.json#",
-  "description": "JSON schema used for Windows Retail Demos",
-  "type": "object",
-  "additionalProperties": false,
-  "required": [
-    "groups"
-  ],
-  "properties": {
-    "layout": {
-      "enum": [
-        "VerticalPage"
-      ]
-    },
-    "deviceInformation": {
-      "description": "To be defined",
-      "type": "object"
-    },
-    "ratings": {
-      "description": "To be defined",
-      "type": "object"
-    },
-    "groups": {
-      "description": "At least one group must be declared.  More than one are permitted.",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/definitions/group"
-      }
-    },
-    "ordinalOverride": {
-      "description": "Internal",
-      "type": "object"
-    }
-  },
-  "definitions": {
-    "group": {
-      "type": "object",
-      "required": [
-        "groupIdentifier",
-        "sections"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "groupIdentifier": {
-          "type": "string"
-        },
-        "ordinal": {
-          "type": [ "integer", "string" ]
-        },
-        "condition": {
-          "description": "Conditions are based on values available at runtime.  Conditions can be as simple as PenSupport==true or complex with nested parenthesis, logic operators and inequality",
-          "type": "string"
-        },
-        "brand": {
-          "$ref": "#/definitions/brand"
-        },
-        "sections": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "#/definitions/section"
-          }
+    "type": "object",
+    "required": [
+      "groupIdentifier",
+      "sections"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "groupIdentifier": {
+        "type": "string"
+      },
+      "ordinal": {
+        "type": "integer"
+      },
+      "condition": {
+        "type": "string"
+      },
+      "brand": {
+        "$ref": "#/definitions/brand"
+      },
+      "sections": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/definitions/section"
         }
       }
     },
+  "definitions": {
     "brand": {
       "type": "object",
       "required": [
@@ -77,23 +39,18 @@
       "additionalProperties": false,
       "properties": {
         "logo": {
-          "description": "Image to be used in other branding scenarios like persistent a OEM or specs banner.",
           "type": "string"
         },
         "logoTab": {
-          "description": "Image to be used in the primary navigation when it is not selected.",
           "type": "string"
         },
         "selectedLogoTab": {
-          "description": "Image to be used in the primary navigation when it is selected.",
           "type": "string"
         },
         "anchorTitle": {
-          "description": "Localized text to be used in the primary navigation. This is optional if the image logoTab is sufficient for this purpose.",
           "type": "string"
         },
         "color": {
-          "description": "The primary color for this group.  This color will be the default for highlights, selections, buttons, heading text etc...",
           "type": "string"
         }
       }
@@ -109,42 +66,33 @@
       ],
       "properties": {
         "readingDirection": {
-          "description": "Reading direction for this page. Valid values are only 'ltr' and rtl'.  Default is 'ltr' if not specified.",
           "enum": [
             "ltr",
             "rtl"
           ]
         },
         "ordinal": {
-          "description": "Ordering position of this section within its group.  'string' is supported but 'integer' is preferred",
-          "type": [ "integer", "string" ]
+          "type": "integer"
         },
         "groupIdentifier": {
-          "description": "Not localized unique identifier of the group for this section.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque.  Avoid whitespace and punctuation. If not specified it will inherit the group identifier of the object it is contained in.",
           "type": "string"
         },
         "sectionIdentifier": {
-          "description": "Not localized unique identifier for this section.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque.  Avoid whitespace and punctuation.",
           "type": "string"
         },
         "anchorTitle": {
-          "description": "Localized text to be used in the secondary navigation UI.",
           "type": "string"
         },
         "anchorIcon": {
-          "description": "Local URI of an image to be used in the secondary navigation UI.",
           "type": "string"
         },
         "anchorGlyph": {
-          "description": "One of a fixed set of glyphs available for use in the secondary navigation UI.",
           "type": "string"
         },
         "anchorLink": {
-          "description": "Indicates if this section will have a link in the secondary navigation UI.  This is optional.",
           "type": "boolean"
         },
         "condition": {
-          "description": "Conditions are based on values available at runtime.  Conditions can be as simple as PenSupport==true or complex with nested parenthesis, logic operators and inequality",
           "type": "string"
         },
         "layout": {
@@ -186,14 +134,12 @@
           "$ref": "#/definitions/media"
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light'",
           "enum": [
             "theme-dark",
             "theme-light"
           ]
         },
         "alignX": {
-          "description": "Together with alignY orients the headingBlock on the screen.  Valid values are 'left', 'right', 'center'",
           "enum": [
             "left",
             "right",
@@ -201,7 +147,6 @@
           ]
         },
         "alignY": {
-          "description": "Together with alignX orients the headingBlock on the screen.  Valid values are 'top', 'bottom', 'center'",
           "enum": [
             "top",
             "bottom",
@@ -225,14 +170,12 @@
           ]
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light'",
           "enum": [
             "theme-dark",
             "theme-light"
           ]
         },
         "alignX": {
-          "description": "Together with alignY orients the headingBlock on the screen.  Valid values are 'left', 'right', 'center'",
           "enum": [
             "left",
             "right",
@@ -240,7 +183,6 @@
           ]
         },
         "alignY": {
-          "description": "Together with alignX orients the headingBlock on the screen.  Valid values are 'top', 'bottom', 'center'",
           "enum": [
             "top",
             "bottom",
@@ -271,14 +213,12 @@
           ]
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light'",
           "enum": [
             "theme-dark",
             "theme-light"
           ]
         },
         "alignY": {
-          "description": "Orients the headingBlock above or below the hero image.  Valid values are 'top', 'bottom'. ",
           "enum": [
             "top",
             "bottom"
@@ -307,7 +247,6 @@
           ]
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light",
           "enum": [
             "theme-dark",
             "theme-light"
@@ -315,7 +254,6 @@
         },
         "mosaicLayout": {
           "enum": [
-            "mosaic-1",
             "mosaic-3",
             "mosaic-4",
             "mosaic-5",
@@ -337,11 +275,9 @@
       ],
       "properties": {
         "src": {
-          "description": "Local uri to the image.",
           "type": "string"
         },
         "minWidth": {
-          "description": "When more than on image is available, the minimum width where this image is to be used.",
           "type": "string"
         }
       }
@@ -354,11 +290,9 @@
       ],
       "properties": {
         "altText": {
-          "description": "Localized text to be displayed in lieu of the image when necessary.",
           "type": "string"
         },
         "ariaLabel": {
-          "description": "Localized text to be vocalized or used by accessibility tools.",
           "type": "string"
         },
         "pictures": {
@@ -374,15 +308,12 @@
       ],
       "properties": {
         "altText": {
-          "description": "Localized text to be displayed in lieu of the video when necessary.",
           "type": "string"
         },
         "ariaLabel": {
-          "description": "Localized text to be vocalized or used by accessibility tools.",
           "type": "string"
         },
         "src": {
-          "description": "Local uri to the video.",
           "type": "string"
         }
       }
@@ -395,30 +326,27 @@
       ],
       "properties": {
         "layout": {
-          "description": "Style for this button, either a block button style or web link style.  Valid values are 'button' and 'link'.  Default is 'button' if not specified.",
           "enum": [
             "button",
             "link"
           ]
         },
         "link": {
-          "description": "URI to the target of the click.  This may be external or internal",
           "type": "string"
         },
         "text": {
-          "description": "Localized text to appear on the button face.",
           "type": "string"
         },
         "textColor": {
-          "description": "Color override for the text of the button face.",
           "type": "string"
         },
         "backgroundColor": {
-          "type": "string",
-          "description": "Color override for the button face."
+          "type": "string"
         },
         "ariaLabel": {
-          "description": "Localized text to be vocalized or used by accessibility tools.",
+          "type": "string"
+        },
+        "overlay": {
           "type": "string"
         }
       }
@@ -433,10 +361,6 @@
             "theme-light"
           ]
         },
-        "hoverEffectColor": {
-          "description": "Color override for the transparency effect on hover of a tile.",
-          "type": "string"
-        },
         "pictureBlock": {
           "$ref": "#/definitions/pictureBlock"
         },
@@ -450,15 +374,12 @@
       "additionalProperties": false,
       "properties": {
         "heading": {
-          "type": "string",
-          "description": "Large font used for the main section description. Limit to 2 lines This text will generally be in the default color for the group it is in."
+          "type": "string"
         },
         "subheading": {
-          "description": "Smaller font than heading for the main section description. Limit to 2 lines. This text will generally be in theme color.",
           "type": "string"
         },
         "paragraph": {
-          "description": "Smaller font than sub heading for the main section description. Limit to 4 lines. This text will generally be in theme color.",
           "type": "string"
         },
         "button": {
@@ -475,7 +396,6 @@
     },
     "pictures": {
       "type": "array",
-      "description":"List of images to be used. If more than one is available minWidth will be used to select an appropriate version for the space available.",
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/picture"
@@ -483,7 +403,6 @@
     },
     "media": {
       "type": "object",
-      "description": "For a template that may have video or a static image one or the other may be specified by videoBlock, or pictureBlock",
       "pictureBlock": {
         "$ref": "#/definitions/videoBlock"
       },

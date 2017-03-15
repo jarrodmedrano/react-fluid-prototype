@@ -9,7 +9,7 @@ import dataPropTypes, {tilePropTypes} from '../../../data/dataProps';
 class MosaicTile extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let { headingBlock, pictureBlock } = this.props.data;
+            let { headingBlock, pictureBlock, hoverEffectColor } = this.props.data;
             let { textColor, backgroundColor, } = headingBlock;
 
             let tileStyle = {
@@ -18,11 +18,10 @@ class MosaicTile extends React.Component {
             };
 
             if(propsAreValid(headingBlock.button, this)) {
-                let { overlay } = headingBlock.button;
                 return (
                     <ButtonLink to={headingBlock.button.link} layout="mosaic" className="mosaic-link">
                         <section className="c-mosaic-placement c-placement" style={tileStyle}>
-                            {overlay ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: overlay}}></div> : null }
+                            {hoverEffectColor ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: hoverEffectColor}}></div> : null }
                             {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
                             {headingBlock && (this.props.size != 'small') && headingBlock.heading ? <Heading data={headingBlock} /> : null}
                         </section>
