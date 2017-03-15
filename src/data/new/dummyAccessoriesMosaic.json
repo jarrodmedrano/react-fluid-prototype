@@ -1,4 +1,5 @@
 {
+  "$schema": "../singleGroupSchema.json?reload",
   "ordinal": 500,
   "groupIdentifier": "oem",
   "brand": {

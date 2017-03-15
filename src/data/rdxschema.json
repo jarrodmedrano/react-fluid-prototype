@@ -1,5 +1,6 @@
 {
   "title": "RDX Datasource",
+  "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://windowsretaildemo.com/rdx-20/datasource.json#",
   "description": "JSON schema used for Windows Retail Demos",
   "type": "object",
@@ -8,6 +9,7 @@
     "groups"
   ],
   "properties": {
+    "$schema": { "type": "string"},
     "layout": {
       "enum": [
         "VerticalPage"
@@ -43,6 +45,7 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "$schema": { "type": "string" },
         "groupIdentifier": {
           "type": "string"
         },
@@ -475,7 +478,7 @@
     },
     "pictures": {
       "type": "array",
-      "description":"List of images to be used. If more than one is available minWidth will be used to select an appropriate version for the space available.",
+      "description": "List of images to be used. If more than one is available minWidth will be used to select an appropriate version for the space available.",
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/picture"

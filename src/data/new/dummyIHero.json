@@ -1,4 +1,5 @@
 {
+  "$schema": "../singleGroupSchema.json?reload",
   "groupIdentifier": "immersiveHero",
   "brand": {
     "logo": "",

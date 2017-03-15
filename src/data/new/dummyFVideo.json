@@ -1,4 +1,5 @@
 {
+  "$schema": "../singleGroupSchema.json?reload",
   "groupIdentifier": "oem",
   "brand": {
     "logo": "img/vertical/ms-logo.png",

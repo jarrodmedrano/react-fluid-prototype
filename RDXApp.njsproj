@@ -43,6 +43,7 @@
     <Content Include="src\data\new\dummyFVideo.json" />
     <Content Include="src\data\rdx.json" />
     <Content Include="src\data\rdxschema.json" />
+    <Content Include="src\data\singleGroupSchema.json" />
     <Content Include="src\index.html" />
     <Compile Include="src\config.js" />
     <Compile Include="src\env.conditions.js" />

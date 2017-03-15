@@ -1,4 +1,5 @@
 {
+  "$schema": "../rdxschema.json",
   "layout": "VerticalPage",
   "deviceInformation": {
     "ManufacturerName": "Microsoft",

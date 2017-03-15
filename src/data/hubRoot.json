@@ -1,4 +1,5 @@
 {
+  "$schema": "rdxschema.json?reload",
   "layout": "VerticalPage",
   "deviceInformation": {
     "ManufacturerName": "Microsoft",
@@ -21,7 +22,8 @@
         "logo": "img/vertical/ms-logo.png",
         "anchorTitle": "-- OEM Title --",
         "color": "#ffffff",
-        "logoTab": "img/vertical/surfacebook-logo.png"
+        "logoTab": "img/vertical/surfacebook-logo.png",
+        "selectedLogoTab": "img/vertical/surfacebook-logo.png"
       },
       "sections": [
         {
@@ -38,8 +40,8 @@
               "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
               "button": {
                 "layout": "button",
-                "path": "#hero",
-                "buttonText": "Hero Examples",
+                "link": "#hero",
+                "text": "Hero Examples",
                 "textColor": "white",
                 "backgroundColor": "#0078D7"
               }
@@ -53,10 +55,8 @@
                 }
               ]
             },
-            "alignment": {
-              "alignX": "right",
-              "alignY": "center"
-            }
+            "alignX": "right",
+            "alignY": "center"
           }
         },
         {
@@ -73,8 +73,8 @@
               "subheading": "-- Subheading --",
               "button": {
                 "layout": "button",
-                "path": "http://www.microsoft.com",
-                "buttonText": "Call to action",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
                 "ariaLabel": "ariaLabel",
                 "textColor": "white",
                 "backgroundColor": "#0078D7"
@@ -226,8 +226,8 @@
                   "subheading": "-- mosaic subtitle 1 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
@@ -259,9 +259,7 @@
                       "minWidth": "0"
                     }
                   ]
-                },
-                "backgroundColor": "#0078D7",
-                "textColor": "#FFF"
+                }
               },
               {
                 "headingBlock": {
@@ -269,38 +267,40 @@
                   "subheading": "-- mosaic subtitle 2 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
                 },
-                "pictureBlock": [
-                  {
-                    "src": "http://placehold.it/425x425/2F2F2F/222222",
-                    "minWidth": "1779"
-                  },
-                  {
-                    "src": "http://placehold.it/400x400/2F2F2F/222222",
-                    "minWidth": "1400"
-                  },
-                  {
-                    "src": "http://placehold.it/350x400/2F2F2F/222222",
-                    "minWidth": "1084"
-                  },
-                  {
-                    "src": "http://placehold.it/542x400/2F2F2F/222222",
-                    "minWidth": "768"
-                  },
-                  {
-                    "src": "http://placehold.it/384x400/2F2F2F/222222",
-                    "minWidth": "540"
-                  },
-                  {
-                    "src": "http://placehold.it/540x300/2F2F2F/222222",
-                    "minWidth": "0"
-                  }
-                ]
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "http://placehold.it/425x425/2F2F2F/222222",
+                      "minWidth": "1779"
+                    },
+                    {
+                      "src": "http://placehold.it/400x400/2F2F2F/222222",
+                      "minWidth": "1400"
+                    },
+                    {
+                      "src": "http://placehold.it/350x400/2F2F2F/222222",
+                      "minWidth": "1084"
+                    },
+                    {
+                      "src": "http://placehold.it/542x400/2F2F2F/222222",
+                      "minWidth": "768"
+                    },
+                    {
+                      "src": "http://placehold.it/384x400/2F2F2F/222222",
+                      "minWidth": "540"
+                    },
+                    {
+                      "src": "http://placehold.it/540x300/2F2F2F/222222",
+                      "minWidth": "0"
+                    }
+                  ]
+                }
               },
               {
                 "headingBlock": {
@@ -308,8 +308,8 @@
                   "subheading": "-- mosaic subtitle 3 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
@@ -349,8 +349,8 @@
                   "subheading": "-- mosaic subtitle 4 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
@@ -390,8 +390,8 @@
                   "subheading": "-- mosaic subtitle 5 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
@@ -431,8 +431,8 @@
                   "subheading": "-- mosaic subtitle 6 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
@@ -472,8 +472,8 @@
                   "subheading": "-- mosaic subtitle 7 --",
                   "button": {
                     "layout": "link",
-                    "path": "http://www.microsoft.com",
-                    "buttonText": "Call to action",
+                    "link": "http://www.microsoft.com",
+                    "text": "Call to action",
                     "textColor": "white",
                     "backgroundColor": "blue"
                   }
