@@ -22,7 +22,7 @@ class FooterLink extends React.Component {
             }
 
             return (
-                <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{icon ? <img src={icon} /> : null}{children}</Link>
+                <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{icon ? <img src={icon} draggable="false" /> : null}{children}</Link>
             );
         } return null
     }

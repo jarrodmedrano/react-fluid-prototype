@@ -58,7 +58,7 @@ class LegacyKSP extends React.Component {
                     <div className={templateClass}>
                         {media ? <picture className="feature-image">
                                 <source srcSet={media.src}/>
-                                <img srcSet={media.src} src={media.src}/>
+                                <img srcSet={media.src} src={media.src} draggable="false"/>
                             </picture> : null }
                         <div>
                             <div>
@@ -71,7 +71,7 @@ class LegacyKSP extends React.Component {
                                         <li className="f-row">
                                             {icon1 ?
                                                 <div data-grid="col-2 stack-2">
-                                                    <img className="c-image" src={icon1}/>
+                                                    <img className="c-image" src={icon1} draggable="false"/>
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
@@ -86,7 +86,7 @@ class LegacyKSP extends React.Component {
                                         <li className="f-row" >
                                             {icon2 ?
                                                 <div data-grid="col-2 stack-2">
-                                                    <img className="c-image" src={icon2}/>
+                                                    <img className="c-image" src={icon2} draggable="false"/>
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">

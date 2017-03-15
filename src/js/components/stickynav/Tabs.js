@@ -39,7 +39,6 @@ class Tabs extends React.Component {
     }
 
     _handleClick(group, index) {
-        console.log(this);
         let sectionId = _.find(this.props.data.groups[index].sections, 'sectionIdentifier');
         navigateEvent(group, sectionId.sectionIdentifier, 'tab click');
     }
@@ -58,13 +57,13 @@ class Tabs extends React.Component {
                             <IndexLink to={rootRoute.path}
                                onClick={() => this._handleClick(indexTitle, 0)}
                                activeClassName="active"
-                               activeStyle={{background: this.state.logoColors[0]}}
+                               activeStyle={{background: this.state.logoColors[0]}} draggable="false"
                             >
-                                {this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} /> : <p>{indexTitle}</p>}
+                                {this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} draggable="false" /> : <p>{indexTitle}</p>}
 
                                 {this.state.selectedLogos[0] ?
-                                    <img src={this.state.selectedLogos[0]} alt={indexTitle} className="selected" /> :
-                                    this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} className="selected"/> :
+                                    <img src={this.state.selectedLogos[0]} alt={indexTitle} className="selected" draggable="false"/> :
+                                    this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} className="selected" draggable="false" /> :
                                     <p className="selected">{indexTitle}</p>
                                 }
                             </IndexLink>
@@ -74,17 +73,17 @@ class Tabs extends React.Component {
                                     <Link
                                         activeClassName="active"
                                         activeStyle={{background: this.state.logoColors[index + 1]}}
-                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '', index + 1)}>
+                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '', index + 1)} draggable="false">
 
                                         {this.state.logos[index + 1] ?
-                                            <img src={this.state.logos[index + 1]} alt={item.title}/> :
+                                            <img src={this.state.logos[index + 1]} alt={item.title} draggable="false"/> :
                                             <p>{item.title}</p>
                                         }
 
                                         {this.state.selectedLogos[index + 1] ?
-                                            <img src={this.state.selectedLogos[index + 1]} alt={item.title} className="selected" /> :
+                                            <img src={this.state.selectedLogos[index + 1]} alt={item.title} className="selected" draggable="false" /> :
                                                 this.state.logos[index + 1] ?
-                                            <img src={this.state.logos[index + 1]} alt={item.title} className="selected" /> :
+                                            <img src={this.state.logos[index + 1]} alt={item.title} className="selected" draggable="false" /> :
                                                 <p className="selected">{item.title}</p>
                                         }
                                     </Link>

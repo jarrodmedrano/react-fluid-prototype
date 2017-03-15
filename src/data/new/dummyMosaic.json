@@ -16,7 +16,7 @@
       "anchorTitle": "mosaic-1",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-dark",
+        "theme": "theme-light",
         "mosaicLayout": "mosaic-1",
         "tiles": [
           {
@@ -28,34 +28,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -70,34 +70,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -114,7 +114,7 @@
       "anchorTitle": "mosaic-2",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-dark",
+        "theme": "theme-light",
         "mosaicLayout": "mosaic-2",
         "tiles": [
           {
@@ -126,34 +126,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -168,34 +168,33 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
-
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -210,34 +209,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -252,34 +251,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -296,7 +295,7 @@
       "anchorTitle": "mosaic-3",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-dark",
+        "theme": "theme-light",
         "mosaicLayout": "mosaic-3",
         "tiles": [
           {
@@ -308,34 +307,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -350,34 +349,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -392,34 +391,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -434,34 +433,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -476,34 +475,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -518,34 +517,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -560,34 +559,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -604,7 +603,7 @@
       "anchorTitle": "mosaic-4",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-dark",
+        "theme": "theme-light",
         "mosaicLayout": "mosaic-4",
         "tiles": [
           {
@@ -616,34 +615,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -658,34 +657,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -700,34 +699,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -742,34 +741,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -784,34 +783,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]
@@ -826,1420 +825,34 @@
                 "link": "http://www.microsoft.com",
                 "text": "Call to action",
                 "textColor": "white",
-                "backgroundColor": "blue"
+                "backgroundColor": "#000"
               }
             },
 
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
+                  "src": "http://placeimg.com/818/950/arch",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                  "src": "http://placeimg.com/1259/472/arch",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                  "src": "http://placeimg.com/1083/609/arch",
                   "minWidth": "768"
                 },
                 {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
+                  "src": "http://placeimg.com/767/431/arch",
                   "minWidth": "540"
                 },
                 {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "ordinal": 500,
-      "groupIdentifier": "partner",
-      "sectionIdentifier": "mosaic-5",
-      "anchorLink": true,
-      "anchorTitle": "mosaic-5",
-      "layout": {
-        "type": "mosaic",
-        "theme": "theme-dark",
-        "mosaicLayout": "mosaic-5",
-        "tiles": [
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 2 --",
-              "subheading": "-- mosaic subtitle 2 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 4 --",
-              "subheading": "-- mosaic subtitle 4 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 5 --",
-              "subheading": "-- mosaic subtitle 5 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 6 --",
-              "subheading": "-- mosaic subtitle 6 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 7 --",
-              "subheading": "-- mosaic subtitle 7 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 8 --",
-              "subheading": "-- mosaic subtitle 8 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "ordinal": 600,
-      "groupIdentifier": "partner",
-      "sectionIdentifier": "mosaic-6",
-      "anchorLink": true,
-      "anchorTitle": "mosaic-6",
-      "layout": {
-        "type": "mosaic",
-        "theme": "theme-dark",
-        "mosaicLayout": "mosaic-6",
-        "tiles": [
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 2 --",
-              "subheading": "-- mosaic subtitle 2 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 4 --",
-              "subheading": "-- mosaic subtitle 4 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 5 --",
-              "subheading": "-- mosaic subtitle 5 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 6 --",
-              "subheading": "-- mosaic subtitle 6 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 7 --",
-              "subheading": "-- mosaic subtitle 7 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 8 --",
-              "subheading": "-- mosaic subtitle 8 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 9 --",
-              "subheading": "-- mosaic subtitle 9 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "ordinal": 700,
-      "groupIdentifier": "partner",
-      "sectionIdentifier": "mosaic-7",
-      "anchorLink": true,
-      "anchorTitle": "mosaic-7",
-      "layout": {
-        "type": "mosaic",
-        "theme": "theme-dark",
-        "mosaicLayout": "mosaic-7",
-        "tiles": [
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 2 --",
-              "subheading": "-- mosaic subtitle 2 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 4 --",
-              "subheading": "-- mosaic subtitle 4 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "ordinal": 800,
-      "groupIdentifier": "partner",
-      "sectionIdentifier": "mosaic-8",
-      "anchorLink": true,
-      "anchorTitle": "mosaic-8",
-      "layout": {
-        "type": "mosaic",
-        "theme": "theme-dark",
-        "mosaicLayout": "mosaic-8",
-        "tiles": [
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 2 --",
-              "subheading": "-- mosaic subtitle 2 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "ordinal": 900,
-      "groupIdentifier": "partner",
-      "sectionIdentifier": "mosaic-9",
-      "anchorLink": true,
-      "anchorTitle": "mosaic-9",
-      "layout": {
-        "type": "mosaic",
-        "theme": "theme-dark",
-        "mosaicLayout": "mosaic-9",
-        "tiles": [
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 2 --",
-              "subheading": "-- mosaic subtitle 2 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/818x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "ordinal": 1000,
-      "groupIdentifier": "partner",
-      "sectionIdentifier": "mosaic-10",
-      "anchorLink": true,
-      "anchorTitle": "mosaic-10",
-      "layout": {
-        "type": "mosaic",
-        "theme": "theme-dark",
-        "mosaicLayout": "mosaic-10",
-        "tiles": [
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 2 --",
-              "subheading": "-- mosaic subtitle 2 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 3 --",
-              "subheading": "-- mosaic subtitle 3 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
-                  "minWidth": "0"
-                }
-              ]
-            }
-          },
-          {
-            "headingBlock": {
-              "heading": "-- mosaic title 4 --",
-              "subheading": "-- mosaic subtitle 4 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
-            },
-
-            "pictureBlock": {
-              "pictures": [
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1779"
-                },
-                {
-                  "src": "http://placehold.it/490x950/2F2F2F/171717",
-                  "minWidth": "1400"
-                },
-                {
-                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
-                  "minWidth": "1084"
-                },
-                {
-                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
-                  "minWidth": "768"
-                },
-                {
-                  "src": "http://placehold.it/767x431/2F2F2F/171717",
-                  "minWidth": "540"
-                },
-                {
-                  "src": "http://placehold.it/539x303/2F2F2F/171717",
+                  "src": "http://placeimg.com/539/303/arch",
                   "minWidth": "0"
                 }
               ]

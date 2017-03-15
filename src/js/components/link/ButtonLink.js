@@ -43,18 +43,18 @@ class ButtonLink extends React.Component {
             if (_isInternal) {
                 if(layout === 'mosaic') {
                     return (
-                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
+                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} draggable="false" />
                     )
                 } else {
                     return (
-                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} />
+                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />
                     );
                 }
             } else {
                 if(layout === 'mosaic') {
-                    return (<a href={to} {...rest} onClick={externalNavigate}>{children}</a>);
+                    return (<a href={to} {...rest} onClick={externalNavigate} draggable="false">{children}</a>);
                 } else {
-                    return (<a href={to} {...rest} onClick={externalNavigate} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} />);
+                    return (<a href={to} {...rest} onClick={externalNavigate} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />);
                 }
             }
         } return null

@@ -46,7 +46,7 @@ if(!window.RDX) {
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
 defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows);
-data = dummyBestBuyStPatricks;
+data = defaultVertical;
     //data = dummySurfacePro;
     //data = dummyHp;
     //data = dummyHebrew;

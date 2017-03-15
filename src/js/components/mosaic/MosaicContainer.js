@@ -93,36 +93,36 @@ class MosaicContainer extends React.Component {
                         </div>
                     </div>
                 )
+            } else if (tiles.length === 6 && mosaicLayout === "mosaic-4" || tiles.length === 6) {
+                return (
+                    <div className="c-mosaic fullscreen-mosaic">
+                        <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
+                            <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <MosaicTile data={tiles[0]}/>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[1]}/>
+                                </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[2]}/>
+                                </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[3]}/>
+                                </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[4]}/>
+                                </div>
+                            </div>
+                            <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <MosaicTile data={tiles[5]}/>
+                            </div>
+                        </div>
+                    </div>
+                )
             }
-            // } else if (tiles.length === 6 && layout === "mosaic-4" || tiles.length === 6) {
-            //     return (
-            //         <div className="c-mosaic fullscreen-mosaic">
-            //             <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
-            //                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-            //                     <MosaicTile data={tiles[0]}  />
-            //                 </div>
-            //                 <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-            //                     <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-            //                         <MosaicTile data={tiles[1]} />
-            //                     </div>
-            //                     <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-            //                         <MosaicTile data={tiles[2]}  />
-            //                     </div>
-            //                 </div>
-            //                 <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-            //                     <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-            //                         <MosaicTile data={tiles[3]} />
-            //                     </div>
-            //                     <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-            //                         <MosaicTile data={tiles[4]} />
-            //                     </div>
-            //                 </div>
-            //                 <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-            //                     <MosaicTile data={tiles[5]} />
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     )
              else if (tiles.length === 8 && mosaicLayout === "mosaic-5" || tiles.length === 8) {
                 return (
                     <div className="c-mosaic fullscreen-mosaic">

@@ -14,6 +14,10 @@
 .c-mosaic-placement > div > div {
   position: relative;
   height: auto;
+
+  div {
+    margin: 12px 0;
+  }
 }
 
 a.mosaic-link:after {
@@ -67,8 +71,6 @@ a.mosaic-link:after {
 @media (orientation: portrait) {
   .c-mosaic [data-f-mosaic~=f-height-medium], .c-mosaic [data-f-mosaic~=f-height-large] {
     height: 100%;
-
-
   }
 }
 
