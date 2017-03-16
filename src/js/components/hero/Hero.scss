@@ -24,26 +24,125 @@
 
 video {
   max-width: 100%;
-}
-
-.sub-route + .main-container .c-hero.f-fullscreen {
-  height: calc(100vh - 100px);
-
-  img {
-    height: calc(100vh - 100px);
-    min-width: auto;
-  }
-
-  .f-y-center {
-    .context-game {
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    }
-  }
+  height: auto;
 }
 
 .m-card-item {
   div > .c-call-to-action {
     padding: set-direction-based-value(10px 22px 7px 24px, 10px 24px 7px 22px);
   }
+}
+
+
+.m-hero-item {
+  height: 100%;
+}
+
+.c-hero > picture img, .m-hero-item > picture img {
+  //transform: translateY(calc(50% - 72px));
+  //top: calc(50% - 72px);
+  top: calc(50% + 36px);
+}
+
+//.c-hero.f-y-center >div > div, .m-hero-item.f-y-center > div > div {
+//  top: calc(50% - 72px);
+//}
+
+//.c-hero.f-y-center>div>div, .m-hero-item.f-y-center>div>div {
+//  transform: translateY(calc(50% - 72px));
+//}
+
+.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+  top: calc(60px + 72px);
+}
+
+.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
+  bottom: calc(60px + 72px);
+}
+.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+  top: calc(60px + 72px);
+}
+
+.m-immersive-hero-item {
+  height: 100%;
+  width: 100%;
+}
+
+.m-immersive-hero-item > div > div {
+  z-index: 1;
+}
+
+.m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  transform: none;
+  left: 0;
+}
+
+.m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
+  position: relative;
+  transform: none;
+  left: 0;
+  top: 0;
+  flex: 1;
+  box-sizing: content-box;
+}
+
+.m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
+  position: relative;
+  height: auto;
+  //max-width: 50%;
+  left: 0;
+  transform: none;
+}
+
+.m-immersive-hero-item.f-align-bottom > div {
+  top: 0;
+  padding-bottom: 172px;
+}
+
+.m-immersive-hero-item.f-align-top > div {
+  padding-top: 172px;
+}
+
+.m-immersive-hero-item.f-align-bottom > div > div {
+  order: 2;
+  flex: 0 auto;
+}
+
+.m-immersive-hero-item.f-align-bottom > div > picture.c-image {
+  order: 1;
+  flex: 1;
+}
+//
+//@media only screen and (min-width: 768px) {
+//  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
+//    top: 0;
+//  }
+//}
+//@media only screen and (min-width: 1084px) {
+//  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
+//    //top: 0;
+//    //bottom: 189px;
+//  }
+//}
+//
+//@media only screen and (min-width: 540px) {
+//  .m-image-intro.f-align-bottom > div {
+//    bottom: 189px;
+//  }
+//
+//  .m-image-intro.f-transparent.f-align-top > div {
+//    top: 189px;
+//  }
+//}
+//.m-immersive-hero-item.f-align-bottom > div {
+//  bottom: 189px;
+//}
+
+.m-immersive-hero-item>div>div .c-heading {
+  font-size: 34px;
 }

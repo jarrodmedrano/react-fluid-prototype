@@ -54,7 +54,7 @@ class Video extends React.Component {
                 //TODO: fix aria labels
                 <video className={className ? className : 'f-video-player'} preload="metadata" loop
                        aria-labelledby="" aria-describedby=""
-                       ref="vidRef" muted={this.state.mute}>
+                       ref="vidRef" muted={this.state.mute} >
                     <source src={src ? src : null} type="video/mp4"/>
                 </video>
             )

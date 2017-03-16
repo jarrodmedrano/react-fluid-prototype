@@ -63,18 +63,63 @@
     {
       "ordinal": 200,
       "groupIdentifier": "oem",
+      "sectionIdentifier": "Keyboard2",
+      "anchorLink": true,
+      "anchorTitle": "Keyboard2",
+      "anchorGlyph": "glyph-keyboard",
+      "theme": "theme-light",
+      "layout": {
+        "type": "immersiveHero",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "Five-point touchpad"
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "img/vertical/keyboard-hero.jpg",
+              "minWidth": "1779"
+            },
+            {
+              "src": "img/vertical/keyboard-hero.jpg",
+              "minWidth": "1400"
+            },
+            {
+              "src": "img/vertical/keyboard-hero.jpg",
+              "minWidth": "1084"
+            },
+            {
+              "src": "img/vertical/keyboard-hero.jpg",
+              "minWidth": "768"
+            },
+            {
+              "src": "img/vertical/keyboard-hero.jpg",
+              "minWidth": "540"
+            },
+            {
+              "src": "img/vertical/keyboard-hero.jpg",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 200,
+      "groupIdentifier": "oem",
       "sectionIdentifier": "Keyboard",
       "anchorLink": true,
       "anchorTitle": "Keyboard",
       "anchorGlyph": "glyph-keyboard",
       "theme": "theme-light",
       "layout": {
-        "type": "fullscreen",
+        "type": "immersiveHero",
         "alignY": "bottom",
         "headingBlock": {
           "heading": "Five-point touchpad"
         },
-        "media": {
           "pictureBlock": {
             "altText": "AltText",
             "ariaLabel": "AriaLabel",
@@ -106,7 +151,6 @@
             ]
           }
         }
-      }
     },
     {
       "ordinal": 300,

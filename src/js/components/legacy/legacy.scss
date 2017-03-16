@@ -9,6 +9,10 @@
   z-index: 0;
 }
 
+.m-feature {
+  padding-top: 0;
+}
+
 .c-feature {
   > div a.c-call-to-action {
     padding: set-direction-based-value(10px 22px 7px 24px, 10px 24px 7px 22px);
@@ -16,6 +20,25 @@
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
+
+  .c-feature.f-align-left > div.c-video video, .c-feature.f-align-right > div.c-video video {
+    height: auto;
+  }
+
+  .c-feature {
+    height: 100vh;
+
+    .c-video, .feature-image {
+      height: 100vh;
+      display: flex;
+
+      video {
+        height: auto;
+        flex: 0 auto;
+      }
+    }
+  }
+
   .c-feature.f-align-left > div.c-video, .c-feature.f-align-right > div.c-video {
     //transform: translateY(-50%);
     //top: 50%;
@@ -60,26 +83,27 @@
     max-height: 120px;
   }
 
-  //@media only screen and (min-width: 768px) and (orientation: landscape) {
-  //  .c-feature.f-align-left picture {
-  //    position: absolute;
-  //    right: 0;
-  //  }
-  //
-  //  .c-feature.f-align-right picture {
-  //    position: absolute;
-  //    left: 0;
-  //  }
-  //
-  //  .feature-image {
-  //    top: 50%;
-  //    transform: translateY(-50%);
-  //  }
-  //}
-  //
-  //@media only screen and (min-width: 1400px) {
-  //  .c-structured-list .f-column .f-row [data-grid=col-10] {
-  //    padding-left: 0;
-  //  }
-  //}
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    .c-feature.f-align-left picture, .c-feature.f-align-left video {
+      position: absolute;
+      right: 0;
+      height: auto;
+    }
+
+    .c-feature.f-align-right picture, .c-feature.f-align-right video {
+      position: absolute;
+      left: 0;
+    }
+
+    .feature-image, video {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .c-structured-list .f-column .f-row [data-grid=col-10] {
+      padding-left: 0;
+    }
+  }
 }
