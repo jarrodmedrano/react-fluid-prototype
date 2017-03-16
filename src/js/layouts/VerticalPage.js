@@ -8,11 +8,11 @@ import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 import propsAreValid, {impressionEvent, navigateEvent} from '../lib/util';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
-import Tabs from '../components/stickynav/Tabs';
+import Tabs from '../components/tabs/Tabs';
 import Footer from '../components/stickynav/StickyFooter';
-import StickyButton from '../components/stickynav/StickyButton';
 import Price from '../components/price/Price';
 import DownArrow from '../components/downarrow/DownArrow';
+import Button from '../components/button/Button';
 import _ from 'lodash';
 import keydown from 'react-keydown';
 import Element from '../components/scrollElement/Element';
@@ -268,8 +268,8 @@ class VerticalPage extends React.Component {
                 }
             });
 
-            let compareModels = _.find(oemGroup, function (result) {
-                if (typeof result.layout === 'object' && result.layout.type === 'compare') {
+            let compareModels = _.find(oemGroup.sections, function (result) {
+                if (result.sectionIdentifier === 'Compare') {
                     return result
                 }
             });
@@ -294,12 +294,12 @@ class VerticalPage extends React.Component {
                                 <Price data={oemGroup.brand.price}/> 
                             : null }
                             
-                            { retailerGroup ? 
-                                <StickyButton data={retailerGroup} /> 
+                            {retailerGroup && retailerGroup.brand && retailerGroup.brand.button ?
+                                <Button data={retailerGroup.brand.button} />
                             : null }
                         </StickyBanner> 
                     : null }
-                    
+
                     <main id="main">
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
