@@ -9,7 +9,7 @@
     "groups"
   ],
   "properties": {
-    "$schema": { "type": "string"},
+    "$schema": { "type": "string" },
     "layout": {
       "enum": [
         "VerticalPage"
@@ -471,6 +471,7 @@
     },
     "tiles": {
       "type": "array",
+      "additionalProperties": false,
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/tile"
@@ -478,6 +479,7 @@
     },
     "pictures": {
       "type": "array",
+      "additionalProperties": false,
       "description": "List of images to be used. If more than one is available minWidth will be used to select an appropriate version for the space available.",
       "minItems": 1,
       "items": {
@@ -486,12 +488,15 @@
     },
     "media": {
       "type": "object",
-      "description": "For a template that may have video or a static image one or the other may be specified by videoBlock, or pictureBlock",
-      "pictureBlock": {
-        "$ref": "#/definitions/videoBlock"
-      },
-      "videoBlock": {
-        "$ref": "#/definitions/pictureBlock"
+      "additionalProperties": false,
+      "description": "For a template that may have video or a static image. One or the other may be specified by videoBlock, or pictureBlock",
+      "properties": {
+        "pictureBlock": {
+          "$ref": "#/definitions/pictureBlock"
+        },
+        "videoBlock": {
+          "$ref": "#/definitions/videoBlock"
+        }
       }
     }
   }

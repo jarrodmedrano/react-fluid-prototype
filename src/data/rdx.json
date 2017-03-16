@@ -1,4 +1,5 @@
 {
+  "$schema": "rdxschema.json",
   "layout": "VerticalPage",
   "deviceInformation": {
     "ManufacturerName": "commodo exercitation laboris consequat",
@@ -33,10 +34,12 @@
             "pictureBlock": {
               "altText": "cupidatat amet",
               "ariaLabel": "sit in",
-              "picture": {
-                "src": "irure",
-                "minWidth": -18938877
-              }
+              "pictures": [
+                {
+                  "src": "irure",
+                  "minWidth": "18938877"
+                }
+              ]
             },
             "headingBlock": {
               "heading": "incididunt veniam aliqua in sed",
@@ -44,6 +47,7 @@
               "paragraph": "enim occaecat proident",
               "button": {
                 "layout": "button",
+                "link": "http://www.microsoft.com",
                 "text": "labore ex qui sint",
                 "textColor": "laborum mini",
                 "backgroundColor": "incididunt",
@@ -61,11 +65,15 @@
           "layout": {
             "type": "fullscreen",
             "media": {
-              "altText": "aliquip dolore eiusmod",
-              "ariaLabel": "mollit in nostrud reprehenderit",
-              "picture": {
-                "src": "tempor Excepteur ex dolore",
-                "minWidth": -48695899
+              "pictureBlock": {
+                "altText": "aliquip dolore eiusmod",
+                "ariaLabel": "mollit in nostrud reprehenderit",
+                "pictures": [
+                  {
+                    "src": "tempor Excepteur ex dolore",
+                    "minWidth": "48695899"
+                  }
+                ]
               }
             }
           },
@@ -81,10 +89,12 @@
             "pictureBlock": {
               "altText": "nulla",
               "ariaLabel": "reprehenderit exercitation adipisicing magna",
-              "picture": {
-                "src": "mollit in anim adipisicing",
-                "minWidth": -43397256
-              }
+              "pictures": [
+                {
+                  "src": "mollit in anim adipisicing",
+                  "minWidth": "43397256"
+                }
+              ]
             },
             "headingBlock": {
               "heading": "incididunt veniam aliqua in sed",
@@ -92,6 +102,7 @@
               "paragraph": "enim occaecat proident",
               "button": {
                 "layout": "button",
+                "link": "http://www.microsoft.com",
                 "text": "labore ex qui sint",
                 "textColor": "laborum mini",
                 "backgroundColor": "incididunt",
@@ -117,10 +128,12 @@
             "pictureBlock": {
               "altText": "veniam Ut Excepteur laboris",
               "ariaLabel": "et Duis nisi",
-              "picture": {
-                "src": "in pariatur reprehenderit",
-                "minWidth": -44449870
-              }
+              "pictures": [
+                {
+                  "src": "in pariatur reprehenderit",
+                  "minWidth": "44449870"
+                }
+              ]
             },
             "headingBlock": {
               "heading": "incididunt veniam aliqua in sed",
@@ -128,6 +141,7 @@
               "paragraph": "enim occaecat proident",
               "button": {
                 "layout": "button",
+                "link": "http://www.microsoft.com",
                 "text": "labore ex qui sint",
                 "textColor": "laborum mini",
                 "backgroundColor": "incididunt",
@@ -154,10 +168,12 @@
                 "pictureBlock": {
                   "altText": "pariatur",
                   "ariaLabel": "elit irure aute dolor sint",
-                  "picture": {
-                    "src": "enim in do eu",
-                    "minWidth": -74753239
-                  }
+                  "pictures": [
+                    {
+                      "src": "enim in do eu",
+                      "minWidth": "74753239"
+                    }
+                  ]
                 },
                 "headingBlock": {
                   "heading": "consectetur id ad",
@@ -168,9 +184,11 @@
                 "pictureBlock": {
                   "altText": "anim in culpa",
                   "ariaLabel": "Lorem sint nostrud",
-                  "picture": {
-                    "src": "exercitation dolore"
-                  }
+                  "pictures": [
+                    {
+                      "src": "exercitation dolore"
+                    }
+                  ]
                 }
               }
             ]
@@ -190,39 +208,47 @@
                 "pictureBlock": {
                   "altText": "dolore",
                   "ariaLabel": "laboris minim dolor",
-                  "picture": {
-                    "src": "sint laborum sit eu",
-                    "minWidth": 7346332
-                  }
+                  "pictures": [
+                    {
+                      "src": "sint laborum sit eu",
+                      "minWidth": "7346332"
+                    }
+                  ]
                 }
               },
               {
                 "pictureBlock": {
                   "altText": "ea incididunt",
                   "ariaLabel": "Duis dolore ut dolor",
-                  "picture": {
-                    "src": "Lorem"
-                  }
+                  "pictures": [
+                    {
+                      "src": "Lorem"
+                    }
+                  ]
                 }
               },
               {
                 "pictureBlock": {
                   "altText": "pariatu",
                   "ariaLabel": "minim",
-                  "picture": {
-                    "src": "elit adipisicing",
-                    "minWidth": 22866553
-                  }
+                  "pictures": [
+                    {
+                      "src": "elit adipisicing",
+                      "minWidth": "22866553"
+                    }
+                  ]
                 }
               },
               {
                 "pictureBlock": {
                   "altText": "id qui sed",
                   "ariaLabel": "sit",
-                  "picture": {
-                    "src": "cupidatat aliquip in",
-                    "minWidth": -88581229
-                  }
+                  "pictures": [
+                    {
+                      "src": "cupidatat aliquip in",
+                      "minWidth": "88581229"
+                    }
+                  ]
                 }
               }
             ]
@@ -242,10 +268,12 @@
                 "pictureBlock": {
                   "altText": "in Ut fugiat conse",
                   "ariaLabel": "ea occaecat in dolor elit",
-                  "picture": {
-                    "src": "irure labore",
-                    "minWidth": -3771808
-                  }
+                  "pictures": [
+                    {
+                      "src": "irure labore",
+                      "minWidth": "3771808"
+                    }
+                  ]
                 },
                 "headingBlock": {
                   "heading": "ullamco minim",
@@ -253,6 +281,7 @@
                   "paragraph": "elit proident ullamco amet",
                   "button": {
                     "layout": "button",
+                    "link": "http://www.microsoft.com",
                     "text": "aliqua adipisicing culpa eiusmo",
                     "ariaLabel": "quis consequat aute",
                     "textColor": "pariatur in",
@@ -264,20 +293,24 @@
                 "pictureBlock": {
                   "altText": "molli",
                   "ariaLabel": "in ",
-                  "picture": {
-                    "src": "eius",
-                    "minWidth": -67050483
-                  }
+                  "pictures": [
+                    {
+                      "src": "eius",
+                      "minWidth": "67050483"
+                    }
+                  ]
                 }
               },
               {
                 "pictureBlock": {
                   "altText": "veniam dol",
                   "ariaLabel": "ullamco",
-                  "picture": {
-                    "src": "eu nostrud dolore",
-                    "minWidth": -38786615
-                  }
+                  "pictures": [
+                    {
+                      "src": "eu nostrud dolore",
+                      "minWidth": "38786615"
+                    }
+                  ]
                 },
                 "headingBlock": {
                   "paragraph": "officia",
@@ -288,10 +321,12 @@
                 "pictureBlock": {
                   "altText": "esse anim proident consequat",
                   "ariaLabel": "sit esse nisi",
-                  "picture": {
-                    "src": "es",
-                    "minWidth": -46291008
-                  }
+                  "pictures": [
+                    {
+                      "src": "es",
+                      "minWidth": "46291008"
+                    }
+                  ]
                 }
               }
             ]

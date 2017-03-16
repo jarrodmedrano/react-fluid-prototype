@@ -131,8 +131,8 @@
           "sectionIdentifier": "CompareTable",
           "anchorLink": true,
           "anchorTitle": "-- compare title --",
-          "heading": "-- Compare Heading --",
-          "compare": {
+          "layout": {
+            "type": "compare",
             "models": [
               {
                 "heading": "-- Hero Heading --",
