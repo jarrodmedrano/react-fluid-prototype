@@ -18,12 +18,11 @@ class Hero extends React.Component {
                 alignY ? `f-align-${alignY}` : 'f-align-top',
                 theme ? theme : 'theme-light',
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item');
-            if (type === 'immersiveHero') {
+            if (type === 'immersiveHero' && alignY) {
                 return (
                     <div className={heroClass}>
                         <div>
-                            <Heading data={headingBlock}/>
-                            <Picture data={pictureBlock}/>
+                            <Heading data={headingBlock} picture={pictureBlock} alignY={alignY} />
                         </div>
                     </div>
                 )

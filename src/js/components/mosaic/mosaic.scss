@@ -84,6 +84,19 @@ a.mosaic-link:after {
   //  height: 100%;
   //}
 }
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .c-mosaic [data-f-mosaic~="f-height-medium"] {
+    height: 50vh;
+  }
+
+  .c-mosaic [data-f-mosaic~="f-height-large"] {
+    height: 100vh;
+  }
+
+  .c-mosaic [data-f-mosaic~="f-height-small"] {
+    height: 25vh;
+  }
+}
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .fullscreen-mosaic {

@@ -29,10 +29,11 @@ class Vertical extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
             let active = this.state.active ? 'active' : 'inactive';
-            let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier, active);
+
             let {layout, sectionIdentifier, readingDirection} = this.props.data;
             let myLayout = typeof layout === 'object' ? layout.type : layout;
             let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate'];
+            let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier, myLayout, active);
             if(myLayout && _.includes(acceptedLayouts, myLayout)) {
                 return (
                     <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier}

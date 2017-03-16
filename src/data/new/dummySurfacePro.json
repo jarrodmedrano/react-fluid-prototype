@@ -78,7 +78,7 @@
           "anchorLink": true,
           "anchorTitle": "Keyboard",
           "layout": {
-            "type": "hero",
+            "type": "immersiveHero",
             "alignY": "bottom",
             "theme": "theme-light",
             "headingBlock": {
