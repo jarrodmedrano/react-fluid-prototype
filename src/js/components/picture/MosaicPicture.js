@@ -12,7 +12,8 @@ class MosaicPicture extends React.Component {
                 overflow: 'hidden',
                 width: '100%',
                 height: '100%',
-                backgroundPosition: 'center center'
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat'
             };
 
             return (
