@@ -34,6 +34,10 @@ class ButtonLink extends React.Component {
         });
     }
 
+    _handleClick(target) {
+        externalNavigate(target);
+    }
+
     render() {
         if(propsAreValid(this.props, this)) {
             const {to, children, iconFont, layout, icon, ...rest} = this.props;
@@ -52,9 +56,9 @@ class ButtonLink extends React.Component {
                 }
             } else {
                 if(layout === 'mosaic') {
-                    return (<a href={to} {...rest} onClick={externalNavigate} draggable="false">{children}</a>);
+                    return (<a href={to} {...rest} onClick={this._handleClick(to)} draggable="false">{children}</a>);
                 } else {
-                    return (<a href={to} {...rest} onClick={externalNavigate} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />);
+                    return (<a href={to} {...rest} onClick={() => {this._handleClick(to)}} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />);
                 }
             }
         } return null

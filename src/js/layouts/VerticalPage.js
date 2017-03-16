@@ -230,14 +230,14 @@ class VerticalPage extends React.Component {
     _updateDimensions() {
         this.setState({winHeight: window.innerHeight + 200, winWidth: window.innerWidth})
     };
-
+    //TODO get section id data in a cleaner way
     _onEnterViewport(scene) {
         this.setState({currentSection: scene.props.itemRef},
-        impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, scene.props.name));
+        impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[scene.props.itemRef].sectionIdentifier));
     }
 
     _onLeaveViewport(scene) {
-        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, scene.props.name)
+        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[scene.props.itemRef].sectionIdentifier)
     }
 
     _checkSceneVisible() {
