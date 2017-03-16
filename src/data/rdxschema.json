@@ -300,7 +300,6 @@
       "additionalProperties": false,
       "required": [
         "type",
-        "mosaicLayout",
         "tiles"
       ],
       "properties": {
@@ -317,15 +316,7 @@
           ]
         },
         "mosaicLayout": {
-          "enum": [
-            "mosaic-1",
-            "mosaic-3",
-            "mosaic-4",
-            "mosaic-5",
-            "mosaic-6",
-            "mosaic-7",
-            "mosaic-8"
-          ]
+          "type": "string"
         },
         "tiles": {
           "$ref": "#/definitions/tiles"
@@ -472,7 +463,8 @@
     "tiles": {
       "type": "array",
       "additionalProperties": false,
-      "minItems": 1,
+      "minItems": 2,
+      "maxItems": 8,
       "items": {
         "$ref": "#/definitions/tile"
       }
