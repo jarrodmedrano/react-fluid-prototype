@@ -1,10 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
-export function externalNavigate(e) {
+export function externalNavigate(target) {
     if(window.RDX) {
-        e.preventDefault();
-        window.RDX.externalNavigate(e.target);
+        window.RDX.externalNavigate(target);
     }
+    // console.log(target);
 }
 
 export function navigateEvent(group, section, source) {
