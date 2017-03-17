@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
+import propsAreValid,  from '../../lib/util';
 import './down-arrow.scss!';
 import {linkPropTypes} from '../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy} from '../../lib/scroll';
-import {Link as RouterLink} from 'react-router';
+import {Link} from '../../lib/scroll';
 
 class DownArrow extends React.Component {
 
