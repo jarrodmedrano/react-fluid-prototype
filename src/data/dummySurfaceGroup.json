@@ -18,92 +18,54 @@
     {
       "ordinal": 100,
       "groupIdentifier": "hero",
-      "sectionIdentifier": "Section2",
+      "sectionIdentifier": "Section1",
       "anchorLink": true,
       "anchorTitle": "Explore Surface Book",
       "theme": "theme-light",
       "layout": {
-        "type": "fullscreen",
-        "alignX": "center",
+        "type": "card",
+        "headingBlock": {
+          "badge": "SALE",
+          "heading": "Vestibulum ante ipsum primis",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis ex at dui pretium cursus. Integer elit dui, blandit eget est in, molestie ultrices eros. Nullam lobortis enim purus, sit amet tincidunt quam porta sed.",
+          "button": {
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "textColor": "#0078D7"
+          }
+        },
+        "alignX": "left",
         "alignY": "center",
-        "media": {
           "pictureBlock": {
             "altText": "Surface Book Pro",
             "ariaLabel": "Surface Book Pro",
             "pictures": [
               {
-                "src": "img/vertical/surface-hero.jpg",
+                "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                 "minWidth": "1779"
               },
               {
-                "src": "img/vertical/surface-hero.jpg",
+                "src": "http://placehold.it/1778x1000/2F2F2F/171717",
                 "minWidth": "1400"
               },
               {
-                "src": "img/vertical/surface-hero.jpg",
+                "src": "http://placehold.it/1259x472/2F2F2F/171717",
                 "minWidth": "1084"
               },
               {
-                "src": "img/vertical/surface-hero.jpg",
+                "src": "http://placehold.it/1083x609/2F2F2F/171717",
                 "minWidth": "768"
               },
               {
-                "src": "img/vertical/surface-hero.jpg",
+                "src": "http://placehold.it/767x431/2F2F2F/171717",
                 "minWidth": "540"
               },
               {
-                "src": "img/vertical/surface-hero.jpg",
+                "src": "http://placehold.it/539x303/2F2F2F/171717",
                 "minWidth": "0"
               }
             ]
           }
-        }
-      }
-    },
-    {
-      "ordinal": 200,
-      "groupIdentifier": "oem",
-      "sectionIdentifier": "Keyboard2",
-      "anchorLink": true,
-      "anchorTitle": "Keyboard2",
-      "anchorGlyph": "glyph-keyboard",
-      "theme": "theme-light",
-      "layout": {
-        "type": "immersiveHero",
-        "alignY": "top",
-        "headingBlock": {
-          "heading": "Five-point touchpad"
-        },
-        "pictureBlock": {
-          "altText": "AltText",
-          "ariaLabel": "AriaLabel",
-          "pictures": [
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minWidth": "1779"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minWidth": "1400"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minWidth": "1084"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minWidth": "768"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minWidth": "540"
-            },
-            {
-              "src": "img/vertical/keyboard-hero.jpg",
-              "minWidth": "0"
-            }
-          ]
-        }
       }
     },
     {
@@ -116,41 +78,41 @@
       "theme": "theme-light",
       "layout": {
         "type": "immersiveHero",
-        "alignY": "bottom",
+        "alignY": "top",
         "headingBlock": {
-          "heading": "Five-point touchpad"
+          "heading": "Lorem ipsum dolor sit amet"
         },
-          "pictureBlock": {
-            "altText": "AltText",
-            "ariaLabel": "AriaLabel",
-            "pictures": [
-              {
-                "src": "img/vertical/keyboard-hero.jpg",
-                "minWidth": "1779"
-              },
-              {
-                "src": "img/vertical/keyboard-hero.jpg",
-                "minWidth": "1400"
-              },
-              {
-                "src": "img/vertical/keyboard-hero.jpg",
-                "minWidth": "1084"
-              },
-              {
-                "src": "img/vertical/keyboard-hero.jpg",
-                "minWidth": "768"
-              },
-              {
-                "src": "img/vertical/keyboard-hero.jpg",
-                "minWidth": "540"
-              },
-              {
-                "src": "img/vertical/keyboard-hero.jpg",
-                "minWidth": "0"
-              }
-            ]
-          }
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
+      }
     },
     {
       "ordinal": 300,
@@ -175,12 +137,12 @@
       "anchorLink": true,
       "anchorGlyph": "glyph-screen",
       "anchorTitle": "Apps",
-      "alignX": "right",
       "layout": {
+        "alignX": "right",
         "type": "card",
         "headingBlock": {
           "heading": "Apps Heading",
-          "paragraph": "The perfect complements to your Surface",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           "button": {
             "link": "http://www.microsoft.com",
             "text": "Call to action",
@@ -190,27 +152,27 @@
         "pictureBlock": {
           "pictures": [
             {
-              "src": "img/vertical/surface-hero.jpg",
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
               "minWidth": "1779"
             },
             {
-              "src": "img/vertical/surface-hero.jpg",
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
               "minWidth": "1400"
             },
             {
-              "src": "img/vertical/surface-hero.jpg",
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
               "minWidth": "1084"
             },
             {
-              "src": "img/vertical/surface-hero.jpg",
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
               "minWidth": "768"
             },
             {
-              "src": "img/vertical/surface-hero.jpg",
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
               "minWidth": "540"
             },
             {
-              "src": "img/vertical/surface-hero.jpg",
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
               "minWidth": "0"
             }
           ]
@@ -232,8 +194,8 @@
         "tiles": [
           {
             "headingBlock": {
-              "heading": "Accessories",
-              "subheading": "The perfect complements to your Surface",
+              "heading": "Lorem ipsum",
+              "subheading": "Nunc facilisis ex at dui pretium cursus.",
               "backgroundColor": "#0078D7",
               "textColor": "#FFF",
               "button": {
@@ -253,27 +215,27 @@
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
+                  "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
+                  "src": "http://placehold.it/1778x1000/2F2F2F/171717",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
+                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
+                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
                   "minWidth": "768"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
+                  "src": "http://placehold.it/767x431/2F2F2F/171717",
                   "minWidth": "540"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-8.jpg",
+                  "src": "http://placehold.it/539x303/2F2F2F/171717",
                   "minWidth": "0"
                 }
               ]
@@ -289,27 +251,27 @@
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
+                  "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
+                  "src": "http://placehold.it/1778x1000/2F2F2F/171717",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
+                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
+                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
                   "minWidth": "768"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
+                  "src": "http://placehold.it/767x431/2F2F2F/171717",
                   "minWidth": "540"
                 },
                 {
-                  "src": "img/vertical/mosaic-surface-5.jpg",
+                  "src": "http://placehold.it/539x303/2F2F2F/171717",
                   "minWidth": "0"
                 }
               ]
@@ -325,27 +287,27 @@
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "img/vertical/mosaic-ports.jpg",
+                  "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "img/vertical/mosaic-ports.jpg",
+                  "src": "http://placehold.it/1778x1000/2F2F2F/171717",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "img/vertical/mosaic-ports.jpg",
+                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "img/vertical/mosaic-ports.jpg",
+                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
                   "minWidth": "768"
                 },
                 {
-                  "src": "img/vertical/mosaic-ports.jpg",
+                  "src": "http://placehold.it/767x431/2F2F2F/171717",
                   "minWidth": "540"
                 },
                 {
-                  "src": "img/vertical/mosaic-ports.jpg",
+                  "src": "http://placehold.it/539x303/2F2F2F/171717",
                   "minWidth": "0"
                 }
               ]
@@ -361,27 +323,27 @@
             "pictureBlock": {
               "pictures": [
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
+                  "src": "http://placehold.it/2400x1350/2F2F2F/171717",
                   "minWidth": "1779"
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
+                  "src": "http://placehold.it/1778x1000/2F2F2F/171717",
                   "minWidth": "1400"
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
+                  "src": "http://placehold.it/1259x472/2F2F2F/171717",
                   "minWidth": "1084"
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
+                  "src": "http://placehold.it/1083x609/2F2F2F/171717",
                   "minWidth": "768"
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
+                  "src": "http://placehold.it/767x431/2F2F2F/171717",
                   "minWidth": "540"
                 },
                 {
-                  "src": "img/vertical/mosaic-headphones.jpg",
+                  "src": "http://placehold.it/539x303/2F2F2F/171717",
                   "minWidth": "0"
                 }
               ]

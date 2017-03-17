@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import propsAreValid, {externalNavigate} from '../../lib/util';
 import './down-arrow.scss!';
 import {linkPropTypes} from '../../../data/dataProps';
 import {Link, Element, Events, scroll, scrollSpy} from '../../lib/scroll';

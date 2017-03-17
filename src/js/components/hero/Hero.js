@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Heading from '../heading/Heading';
 import './Hero.scss!';
+import './immersiveHero.scss!';
 import Picture from '../picture/Picture';
 import Video from '../video/Video';
 import propsAreValid from '../../lib/util';

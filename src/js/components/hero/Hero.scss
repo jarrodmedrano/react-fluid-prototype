@@ -43,7 +43,9 @@ video {
   //top: calc(50% - 72px);
   top: calc(50% + 36px);
 }
-
+.m-highlight-feature .c-badge {
+  margin-bottom: 12px;
+}
 //.c-hero.f-y-center >div > div, .m-hero-item.f-y-center > div > div {
 //  top: calc(50% - 72px);
 //}
@@ -74,6 +76,16 @@ video {
 
 .m-immersive-hero-item > div > div {
   z-index: 1;
+}
+
+
+
+.scene-vertical.immersiveHero {
+  height: 100vh;
+
+  > div {
+    height: 100vh;
+  }
 }
 //
 //.m-immersive-hero-item.f-align-top > div {
