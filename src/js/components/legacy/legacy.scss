@@ -11,6 +11,7 @@
 
 .m-feature {
   padding-top: 0;
+  height: 100vh;
 }
 
 .c-feature {
@@ -30,12 +31,6 @@
 
     .c-video, .feature-image {
       height: 100vh;
-      display: flex;
-
-      video {
-        height: auto;
-        flex: 0 auto;
-      }
     }
   }
 
@@ -99,6 +94,10 @@
     .feature-image, video {
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    .c-feature.f-align-left > div.c-video video, .c-feature.f-align-right > div.c-video video {
+      height: auto;
     }
   }
 
