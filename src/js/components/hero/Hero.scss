@@ -65,28 +65,21 @@ video {
   top: calc(60px + 72px);
 }
 
-.m-immersive-hero-item {
-  height: 100%;
-  width: 100%;
 
-  img.c-image, picture.c-image img {
-    height: auto;
-  }
-}
-
-.m-immersive-hero-item > div > div {
-  z-index: 1;
-}
+//
+//.m-immersive-hero-item > div > div {
+//  z-index: 1;
+//}
 
 
-
-.scene-vertical.immersiveHero {
-  height: 100vh;
-
-  > div {
-    height: 100vh;
-  }
-}
+//
+//.scene-vertical.immersiveHero {
+//  height: 100vh;
+//
+//  > div {
+//    height: 100vh;
+//  }
+//}
 //
 //.m-immersive-hero-item.f-align-top > div {
 //  display: flex;
@@ -190,7 +183,7 @@ video {
 //.m-immersive-hero-item.f-align-bottom > div {
 //  bottom: 189px;
 //}
-
-.m-immersive-hero-item>div>div .c-heading {
-  font-size: 34px;
-}
+//
+//.m-immersive-hero-item>div>div .c-heading {
+//  font-size: 34px;
+//}

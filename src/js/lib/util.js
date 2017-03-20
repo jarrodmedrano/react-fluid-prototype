@@ -3,8 +3,10 @@ import _ from 'lodash';
 export function externalNavigate(target) {
     if(window.RDX) {
         window.RDX.externalNavigate(target);
+    } else {
+        window.location = target;
     }
-    console.log(target);
+    // console.log(target);
 }
 
 export function navigateEvent(group, section, source) {

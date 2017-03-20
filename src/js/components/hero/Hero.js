@@ -13,18 +13,18 @@ class Hero extends React.Component {
         if (propsAreValid(this.props.data, this)) {
             let {alignX, alignY, theme, type, media, pictureBlock, headingBlock} = this.props.data;
             let heroClass = classNames(
-                alignX ? `f-x-${alignX}` : 'f-x-center',
-                alignX ? `f-align-${alignX}` : 'f-align-center',
-                alignY ? `f-y-${alignY}` : 'f-y-center',
-                alignY ? `f-align-${alignY}` : 'f-align-top',
+                alignX ? `f-x-${alignX}` : null,
+                alignX ? `f-align-${alignX}` : null,
+                alignY ? `f-y-${alignY}` : null,
+                alignY ? `f-align-${alignY}` : null,
                 theme ? theme : 'theme-light',
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item');
             if (type === 'immersiveHero' && alignY) {
                 return (
                     <div className={heroClass}>
-                        <div>
-                            <Heading data={headingBlock} picture={pictureBlock} alignY={alignY} />
-                        </div>
+                        {pictureBlock && alignY === 'top' ? <Picture data={pictureBlock} /> : null}
+                            <Heading data={headingBlock} />
+                        {pictureBlock && alignY === 'bottom' ? <Picture data={pictureBlock} /> : null}
                     </div>
                 )
             }

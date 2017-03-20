@@ -78,9 +78,10 @@
       "theme": "theme-light",
       "layout": {
         "type": "immersiveHero",
-        "alignY": "top",
+        "theme": "theme-dark",
+        "alignY": "bottom",
         "headingBlock": {
-          "heading": "Lorem ipsum dolor sit amet"
+          "heading": "-- Hero Heading --"
         },
         "pictureBlock": {
           "altText": "AltText",
@@ -92,7 +93,7 @@
             },
             {
               "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-              "minWidth": "1400"
+              "minWidth": "1400px"
             },
             {
               "src": "http://placehold.it/1259x472/2F2F2F/171717",
