@@ -268,11 +268,15 @@ class VerticalPage extends React.Component {
                 }
             });
 
-            let compareModels = _.find(oemGroup.sections, function (result) {
-                if (result.sectionIdentifier === 'Compare') {
-                    return result
-                }
-            });
+            let compareModels;
+
+            if(oemGroup) {
+                compareModels = _.find(oemGroup.sections, function (result) {
+                    if (result.sectionIdentifier === 'Compare') {
+                        return result
+                    }
+                });
+            }
 
             let retailerGroup = _.find(groups, function (result) {
                 if (result.groupIdentifier === 'retailer') {

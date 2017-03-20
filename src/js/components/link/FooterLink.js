@@ -4,6 +4,7 @@ import './button-link.scss!';
 import propsAreValid from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
 import {Link, Element, Events, scroll, scrollSpy} from '../../lib/scroll';
+import ButtonLink from './ButtonLink';
 import {Link as RouterLink} from 'react-router';
 
 class FooterLink extends React.Component {
@@ -22,7 +23,7 @@ class FooterLink extends React.Component {
             }
 
             return (
-                <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{icon ? <img src={icon} draggable="false" /> : null}{children}</Link>
+                <ButtonLink className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{children}</ButtonLink>
             );
         } return null
     }

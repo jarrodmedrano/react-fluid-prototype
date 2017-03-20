@@ -56,9 +56,9 @@ class ButtonLink extends React.Component {
                 }
             } else {
                 if(layout === 'mosaic') {
-                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to)}} draggable="false">{children}</a>);
+                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to)}} draggable="false">{this.props.icon ? <img src={this.props.icon} draggable="false" /> : null}{children}</a>);
                 } else {
-                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to)}} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />);
+                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to)}} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children)}} draggable="false" />);
                 }
             }
         } return null
