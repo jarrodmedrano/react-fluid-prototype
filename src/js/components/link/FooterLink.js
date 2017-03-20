@@ -1,18 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 import './button-link.scss!';
-import propsAreValid from '../../lib/util';
+import propsAreValid, {navigateEvent} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy} from '../../lib/scroll';
 import ButtonLink from './ButtonLink';
-import {Link as RouterLink} from 'react-router';
 
 class FooterLink extends React.Component {
-
     render() {
-
         if(propsAreValid(this.props, this)) {
-            const {to, children, iconFont, icon, ...rest} = this.props;
+            const {to, children, iconFont, icon, groupIdentifier, ...rest} = this.props;
             let templateClass = classNames('c-action-trigger');
 
             //If there's no icon glyph, or if there are both icon and icon glyph, use the icon image. Else just use the icon glyph
@@ -23,7 +19,7 @@ class FooterLink extends React.Component {
             }
 
             return (
-                <ButtonLink className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true}>{children}</ButtonLink>
+                <ButtonLink className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} icon={icon}  onClick={() => {navigateEvent(groupIdentifier, to, 'Footer Link ' + children)}}>{children}</ButtonLink>
             );
         } return null
     }

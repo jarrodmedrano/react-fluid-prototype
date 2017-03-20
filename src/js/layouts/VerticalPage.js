@@ -9,7 +9,7 @@ import propsAreValid, {impressionEvent, navigateEvent} from '../lib/util';
 import Vertical from '../components/vertical/Vertical';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/tabs/Tabs';
-import Footer from '../components/stickynav/StickyFooter';
+import StickyFooter from '../components/stickynav/StickyFooter';
 import Price from '../components/price/Price';
 import DownArrow from '../components/downarrow/DownArrow';
 import Button from '../components/button/Button';
@@ -72,7 +72,6 @@ class VerticalPage extends React.Component {
         this.state.events.forEach((type) => {
             window.addEventListener(type, this._checkSceneVisible.bind(this), false)
         });
-
         window.addEventListener('resize', this._updateDimensions.bind(this));
     }
 
@@ -319,7 +318,7 @@ class VerticalPage extends React.Component {
                     {/*
                         if there aren't any legacy layouts, render the new footer style, else render the down arrow
                     */}
-                    {this.state.currentPage.sections && !legacyLayouts ? <Footer data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
+                    {this.state.currentPage.sections && !legacyLayouts ? <StickyFooter data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
                 </div>
             )
         }
