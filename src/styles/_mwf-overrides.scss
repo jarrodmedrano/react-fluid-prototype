@@ -1,7 +1,132 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
 
+@import 'ms-mwf/mwf/core/styles/config/environment';
+@import 'ms-mwf/mwf/core/styles/utilities/internationalization';
 
 
 .c-heading {
   font-weight: 400;
+}
+
+.c-mosaic {
+  width: 100vw;
+}
+
+.m-mosaic {
+  min-height: 0;
+  height: auto;
+  padding: 0;
+}
+
+.c-mosaic-placement {
+  padding-bottom: 0;
+}
+
+.c-mosaic-placement > div > div {
+  position: relative;
+  height: auto;
+
+  div {
+    margin: 12px 0;
+  }
+}
+
+.c-mosaic-placement {
+  a.c-call-to-action {
+    padding: set-direction-based-value(10px 22px 7px 24px, 10px 24px 7px 22px);
+  }
+}
+
+
+a.mosaic-link:after {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .c-mosaic [data-f-mosaic~="f-vp3-quarter"] {
+    width: 25%;
+  }
+}
+
+.c-mosaic-placement > div.c-image-overlay {
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-mosaic-placement:hover {
+  cursor: pointer;
+  .c-image-overlay {
+    opacity: 0 !important;
+  }
+}
+
+.c-placement .c-image-overlay {
+  z-index: 1;
+}
+
+.theme-light .c-placement .c-image-overlay,
+.theme-dark .theme-light .c-placement .c-image-overlay {
+  background-color: #ffffff;
+  opacity: .2;
+}
+
+.c-placement .c-image-overlay {
+  opacity: .2;
+}
+
+.theme-dark .c-placement .c-image-overlay,
+.theme-light .theme-dark .c-placement .c-image-overlay {
+  background-color: #000000;
+  opacity: .2;
+}
+
+@media (orientation: portrait) {
+  //.c-mosaic [data-f-mosaic~=f-height-medium], .c-mosaic [data-f-mosaic~=f-height-large] {
+  //  height: 100%;
+  //}
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .c-mosaic [data-f-mosaic~="f-height-medium"] {
+    height: 50vh;
+  }
+
+  .c-mosaic [data-f-mosaic~="f-height-large"] {
+    height: 100vh;
+  }
+
+  .c-mosaic [data-f-mosaic~="f-height-small"] {
+    height: 25vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .fullscreen-mosaic {
+    flex-direction: row;
+    height: 100%;
+
+    img.c-image, picture.c-image img {
+      display: none;
+    }
+    //
+    //[data-f-mosaic~='f-height-large'] {
+    //  height: 100%;
+    //}
+    //[data-f-mosaic~='f-height-large'] > [data-f-mosaic~='f-height-medium'] {
+    //  height: 50%;
+    //}
+    //
+    //[data-f-mosaic~='f-height-medium'] > [data-f-mosaic~='f-height-medium'] {
+    //  height: 100%;
+    //}
+    //
+    //[data-f-mosaic~='f-height-medium'] > [data-f-mosaic~='f-height-small'] {
+    //  height: 50%;
+    //}
+  }
 }
