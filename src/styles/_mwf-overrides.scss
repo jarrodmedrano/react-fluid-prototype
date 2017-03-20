@@ -86,6 +86,26 @@ a.mosaic-link:after {
   opacity: .2;
 }
 
+.m-immersive-hero-item {
+  width: 100%;
+
+  &.f-align-bottom {
+
+    > div {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &.f-align-top {
+
+    > picture {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
 @media (orientation: portrait) {
   //.c-mosaic [data-f-mosaic~=f-height-medium], .c-mosaic [data-f-mosaic~=f-height-large] {
   //  height: 100%;
