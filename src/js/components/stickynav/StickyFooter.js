@@ -4,9 +4,10 @@ import dataPropTypes, {footerPropTypes} from '../../../data/dataProps';
 import FooterLink from '../link/FooterLink';
 
 
-class Footer extends React.Component {
+class StickyFooter extends React.Component {
     render() {
         if (propsAreValid(this.props.data.sections, this)) {
+            let groupIdentifier = this.props.data.groupIdentifier;
             let sections = this.props.data.sections;
 
             return (
@@ -18,11 +19,11 @@ class Footer extends React.Component {
                             let anchorTarget = result.sectionIdentifier;
                             let anchorGlyph = result.anchorGlyph;
                             let anchorIcon = result.anchorIcon;
-
+;
                             //If there are are less than or equal to 7 footer links render the links
                             if (id <= 7) {
                                 return (
-                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorGlyph ? anchorGlyph : null}>{result.anchorTitle}</FooterLink>
+                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorGlyph ? anchorGlyph : null} groupIdentifier={groupIdentifier ? groupIdentifier : null} >{result.anchorTitle}</FooterLink>
                                 )
                             }
                         }
@@ -36,6 +37,6 @@ class Footer extends React.Component {
     }
 }
 
-Footer.propTypes = footerPropTypes;
+StickyFooter.propTypes = footerPropTypes;
 
-export default Footer
+export default StickyFooter

@@ -3,8 +3,7 @@ import classNames from 'classnames';
 import './button-link.scss!';
 import propsAreValid, {externalNavigate} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy, _handleSetActive} from '../../lib/scroll';
-import {Link as RouterLink} from 'react-router';
+import {Link} from '../../lib/scroll';
 import sanitizeHtml from 'sanitize-html';
 
 class ButtonLink extends React.Component {
@@ -40,7 +39,7 @@ class ButtonLink extends React.Component {
 
     render() {
         if(propsAreValid(this.props, this)) {
-            const {to, children, iconFont, layout, icon, ...rest} = this.props;
+            const {to, children, layout, ...rest} = this.props;
             const _isInternal = this._isInternal(to);
             let templateClass = classNames('c-action-trigger');
 
