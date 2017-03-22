@@ -23,7 +23,8 @@ $btn-primary-color: #fff;
   width: 100%;
   background: $linkband-bg;
   position: fixed;
-  z-index: 9999;
+  top: 45px;
+  z-index: 3;
 
   .logo {
     margin-right: $linkband-spacing;
@@ -105,54 +106,55 @@ $btn-primary-color: #fff;
     outline: 0 !important;
     border: 0 !important;
   }
-}
 
 
-.sticky-footer {
-  bottom: 0;
-  display: flex;
-  text-align: center;
-  padding: 0;
-  position: fixed;
+  &.sticky-footer {
+    bottom: 0;
+    top: auto;
+    display: flex;
+    text-align: center;
+    padding: 0;
 
-  a[role='button'] {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    cursor: hand;
+    a[role='button'] {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      cursor: hand;
 
-    flex: 1 auto;
-    padding: 20px;
-    margin: 0;
+      flex: 1 auto;
+      padding: 20px;
+      margin: 0;
 
-    &.c-glyph {
-      padding-left: 10px;
+      &.c-glyph {
+        padding-left: 10px;
+      }
+
+      &.c-glyph.mdl-glyph:before {
+        margin-left: 0;
+        padding-right: 10px;
+        vertical-align: middle;
+      }
     }
 
-    &.c-glyph.mdl-glyph:before {
-      margin-left: 0;
-      padding-right: 10px;
-      vertical-align: middle;
-    }
-  }
-
-  a.c-action-trigger {
-    color: $default-text;
-
-    img {
-      max-width: 16px;
-      max-height: 16px;
-      margin-right: 10px;
-    }
-
-    &.active {
-      background: $btn-primary-bg;
-      color: $btn-primary-color;
-      text-decoration: none;
+    a.c-action-trigger {
+      color: $default-text;
 
       img {
-        filter: brightness(0) invert(1);
+        max-width: 16px;
+        max-height: 16px;
+        margin-right: 10px;
+      }
+
+      &.active {
+        background: $btn-primary-bg;
+        color: $btn-primary-color;
+        text-decoration: none;
+
+        img {
+          filter: brightness(0) invert(1);
+        }
       }
     }
   }
 }
+

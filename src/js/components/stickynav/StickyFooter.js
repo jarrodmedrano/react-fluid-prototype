@@ -23,7 +23,7 @@ class StickyFooter extends React.Component {
                             //If there are are less than or equal to 7 footer links render the links
                             if (id <= 7) {
                                 return (
-                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorGlyph ? anchorGlyph : null} groupIdentifier={groupIdentifier ? groupIdentifier : null} >{result.anchorTitle}</FooterLink>
+                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorGlyph ? anchorGlyph : null} groupIdentifier={groupIdentifier ? groupIdentifier : null} containerId="main">{result.anchorTitle}</FooterLink>
                                 )
                             }
                         }

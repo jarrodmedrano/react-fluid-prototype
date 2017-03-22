@@ -2,15 +2,16 @@
   background: #333333;
   height: 45px;
   z-index: 9999;
-  position: fixed;
+  //position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-
-  + .sticky-banner {
-    top: 45px;
-  }
+  position: absolute;
+  //
+  //+ .sticky-banner {
+  //  top: 45px;
+  //}
 
   ul {
     display: flex;
@@ -29,7 +30,7 @@
   }
 
   li img, li svg {
-    max-height: 25px;
+    max-height: 20px;
     max-width: 100%;
     //filter: brightness(0) invert(1);
   }

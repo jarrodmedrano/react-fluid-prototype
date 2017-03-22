@@ -23,7 +23,7 @@
             hr = new HotReloader.default('http://localhost:9080')  // chokidar-socket-emitter port
         })
     } else {
-        path = 'build.js'
+        path = 'RDXCoreHub.js'
     }
     Promise.resolve(readyForMainLoad).then(() => {
         System.import(path).then(function () {

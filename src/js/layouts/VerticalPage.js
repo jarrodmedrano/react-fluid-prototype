@@ -58,7 +58,9 @@ class VerticalPage extends React.Component {
             currentSectionClass: currentSectionClass,
             currentTitle: title,
             events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
-            winHeight: myWinHeight
+            winHeight: 0,
+            winWidth: 0,
+            winTop: 0
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
@@ -73,6 +75,13 @@ class VerticalPage extends React.Component {
             window.addEventListener(type, this._checkSceneVisible.bind(this), false)
         });
         window.addEventListener('resize', this._updateDimensions.bind(this));
+        let main = this.refs.main,
+            rect = findDOMNode(main).getBoundingClientRect(),
+            mainHeight = rect.top + rect.height,
+            mainTop = rect.top;
+
+        this.setState({winHeight: mainHeight,
+        winTop: mainTop});
     }
 
     componentWillUnmount() {
@@ -140,10 +149,15 @@ class VerticalPage extends React.Component {
         sectionKeys.map(function (result, id) {
             if (id < this.state.currentSections.length && e.which === result) {
                 let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${id}`]);
-                window.scrollTo(0, ref.offsetTop);
+                // window.scrollTo(0, ref.position().top);
+                this._scrollInto(ref);
                 // return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
             }
         }, this);
+    }
+
+    _scrollInto(ref) {
+        this.refs.main.scrollTop = ref.offsetTop;
     }
 
     _getCurrentPage() {
@@ -189,7 +203,8 @@ class VerticalPage extends React.Component {
     _goNextSection(source) {
         let callBack = (currentSection) => {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
-            window.scrollTo(0, ref.offsetTop);
+            // window.scrollTo(0, ref.offsetTop);
+            this._scrollInto(ref);
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
         };
 
@@ -204,7 +219,8 @@ class VerticalPage extends React.Component {
         let callBack = (currentSection) => {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
-            window.scrollTo(0, ref.offsetTop)
+            // window.scrollTo(0, ref.offsetTop)
+            this._scrollInto(ref)
         };
 
         this.setState({currentSection: this.state.currentSection -= 1},
@@ -218,7 +234,8 @@ class VerticalPage extends React.Component {
         let callBack = (currentSection) => {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
-            window.scrollTo(0, ref.offsetTop)
+            this._scrollInto(ref);
+            // window.scrollTo(0, ref.offsetTop)
         };
 
         this.setState({currentSection: 0}, callBack(0));
@@ -240,8 +257,8 @@ class VerticalPage extends React.Component {
     }
 
     _checkSceneVisible() {
-        //map through all refs and check if element is visible in the viewport
-        let refs = _.map(this.refs);
+        //map through all refs and check if element is visible in the viewport, skip 'main' ref
+        let refs = _.map(this.refs).slice(0, -1);
         refs.map(function(result) {
             result.rect = findDOMNode(result).getBoundingClientRect();
             this._visibleY(result) ? this._onEnterViewport(result) : this._onLeaveViewport(result);
@@ -291,19 +308,19 @@ class VerticalPage extends React.Component {
             return (
                 <div>
                     {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
-                    {oemGroup && compareModels ?
-                        <StickyBanner data={oemGroup}>
-                            {oemGroup.brand.price ?
-                                <Price data={oemGroup.brand.price}/> 
-                            : null }
-                            
-                            {retailerGroup && retailerGroup.brand && retailerGroup.brand.button ?
-                                <Button data={retailerGroup.brand.button} />
-                            : null }
-                        </StickyBanner> 
-                    : null }
 
-                    <main id="main">
+                    <main id="main" ref="main">
+                        {oemGroup && compareModels ?
+                            <StickyBanner data={oemGroup}>
+                                {oemGroup.brand.price ?
+                                    <Price data={oemGroup.brand.price}/>
+                                    : null }
+
+                                {retailerGroup && retailerGroup.brand && retailerGroup.brand.button ?
+                                    <Button data={retailerGroup.brand.button} />
+                                    : null }
+                            </StickyBanner>
+                            : null }
                         {this.state.currentPage.sections ?
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
@@ -314,11 +331,12 @@ class VerticalPage extends React.Component {
                             }, this)
                             : null
                         }
+                        {/*
+                         if there aren't any legacy layouts, render the new footer style, else render the down arrow
+                         */}
+                        {this.state.currentPage.sections && !legacyLayouts ? <StickyFooter data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
                     </main>
-                    {/*
-                        if there aren't any legacy layouts, render the new footer style, else render the down arrow
-                    */}
-                    {this.state.currentPage.sections && !legacyLayouts ? <StickyFooter data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
+
                 </div>
             )
         }
