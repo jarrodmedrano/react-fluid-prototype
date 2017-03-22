@@ -12,8 +12,8 @@
     "test": "node run-tests",
     "clean": "rimraf build",
     "postbuild": "postbuild -i src/index.html -o build/index.html -r production",
-    "assets": "cpx src/img/**/*.{mp4,png,jpg,svg} build/img && cpx src/fonts/**/*.{ttf,woff,svg} build/fonts",
-    "fonts": "cpx src/fonts/**/*.{ttf,woff,svg} build/fonts",
+    "assets": "cpx src/img/**/*.{mp4,png,jpg,svg} build/img && cpx src/styles/fonts/**/*.{ttf,woff,svg} build/fonts",
+    "fonts": "cpx src/styles/fonts/**/*.{ttf,woff,svg} build/fonts",
     "build-dev": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject && npm run assets && cpx src/index.html build && npm run postbuild",
     "build-prod": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject --minify && npm run fonts && npm run postbuild"
   },

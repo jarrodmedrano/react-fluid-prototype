@@ -1,6 +1,5 @@
 import React from 'react';
 import MosaicPicture from '../picture/MosaicPicture';
-import classNames from 'classnames';
 import Heading from '../heading/Heading';
 import ButtonLink from '../link/ButtonLink'
 import propsAreValid from '../../lib/util';

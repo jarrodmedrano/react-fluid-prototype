@@ -6,6 +6,7 @@ import React from 'react';
 */}
 
 let string = React.PropTypes.string,
+    number = React.PropTypes.number,
     requiredString = React.PropTypes.string.isRequired,
     requiredNum = React.PropTypes.number.isRequired,
     requiredObj = React.PropTypes.object.isRequired,
@@ -70,12 +71,25 @@ export let devicePropTypes = {
   label: string,
 };
 
+export let containerPropTypes = {
+    mosaicLayout: string,
+    theme: string,
+    tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
+        heading: Object.assign(headingPropTypes.heading),
+        size: string,
+        pictures: Object.assign(picturePropTypes.pictures),
+        button: Object.assign(buttonPropTypes.button)
+    }))
+};
+
+
 export let tilePropTypes = {
   tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
       heading: Object.assign(headingPropTypes.heading),
       size: string,
       pictures: Object.assign(picturePropTypes.pictures),
-      button: Object.assign(buttonPropTypes.button)
+      button: Object.assign(buttonPropTypes.button),
+      viewMask: string
   }))
 };
 
@@ -92,6 +106,8 @@ export let heroPropTypes = {
     alignY: string,
     theme: string,
     layout: string,
+    viewMask: string,
+    badge: string,
     pictures: Object.assign(picturePropTypes.pictures),
     button: Object.assign(buttonPropTypes.button)
 };

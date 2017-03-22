@@ -11,14 +11,16 @@ import dataPropTypes, {heroPropTypes} from '../../../data/dataProps';
 class Hero extends React.Component {
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {alignX, alignY, theme, type, media, pictureBlock, headingBlock} = this.props.data;
+            let {alignX, alignY, theme, type, media, pictureBlock, headingBlock, viewMask} = this.props.data;
             let heroClass = classNames(
                 alignX ? `f-x-${alignX}` : null,
                 alignX ? `f-align-${alignX}` : null,
                 alignY ? `f-y-${alignY}` : null,
                 alignY ? `f-align-${alignY}` : null,
                 theme ? theme : 'theme-light',
-                type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item');
+                type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item',
+                viewMask ? `f-mask-${viewMask}` : null);
+
             if (type === 'immersiveHero' && alignY) {
                 return (
                     <div className={heroClass}>

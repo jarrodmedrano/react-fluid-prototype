@@ -19,6 +19,9 @@ import Element from '../components/scrollElement/Element';
 //import Scroll  from 'react-scroll';
 // let scroller = Scroll.scroller;
 let myWinHeight = window.innerHeight + 200;
+import Scroll from 'react-scroll';
+const scroll     = Scroll.animateScroll;
+const scrollSpy  = Scroll.scrollSpy;
 
 class VerticalPage extends React.Component {
     constructor(props) {
@@ -82,6 +85,7 @@ class VerticalPage extends React.Component {
 
         this.setState({winHeight: mainHeight,
         winTop: mainTop});
+        scrollSpy.update();
     }
 
     componentWillUnmount() {

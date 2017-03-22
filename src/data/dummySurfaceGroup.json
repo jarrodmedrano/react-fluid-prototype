@@ -21,9 +21,10 @@
       "sectionIdentifier": "Section1",
       "anchorLink": true,
       "anchorTitle": "Explore Surface Book",
-      "theme": "theme-light",
       "layout": {
-        "type": "card",
+        "type": "hero",
+        "theme": "theme-dark",
+        "viewMask": "20",
         "headingBlock": {
           "badge": "SALE",
           "heading": "Vestibulum ante ipsum primis",
@@ -192,6 +193,7 @@
         "type": "mosaic",
         "theme": "theme-dark",
         "mosaicLayout": "mosaic-3",
+        "viewMask": "20",
         "tiles": [
           {
             "headingBlock": {
