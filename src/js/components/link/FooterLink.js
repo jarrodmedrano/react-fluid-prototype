@@ -19,7 +19,7 @@ class FooterLink extends React.Component {
             }
 
             return (
-                <ButtonLink className={templateClass} activeClass="active" to={to} {...rest} offset={0} spy={true} smooth={true} duration={500} isDynamic={true} icon={icon}  onClick={() => {navigateEvent(groupIdentifier, to, 'Footer Link ' + children)}} >{children}</ButtonLink>
+                <ButtonLink className={templateClass} activeClass="active" to={to} {...rest}  spy={true} smooth={true} duration={500} isDynamic={true} icon={icon}  onClick={() => {navigateEvent(groupIdentifier, to, 'Footer Link ' + children)}} >{children}</ButtonLink>
             );
         } return null
     }

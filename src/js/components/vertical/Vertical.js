@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames';
+import { findDOMNode } from 'react-dom'
 import './vertical.scss!'
 import Hero from '../hero/Hero';
 import Mosaic from '../mosaic/Mosaic';
@@ -16,14 +17,63 @@ class Vertical extends React.Component {
     constructor(props){
         super(props);
 
+        //initialize state
         this.state = {
             active: false,
-        }
+            winHeight: 0,
+            winTop: 0,
+            scrollTop: 0,
+        };
+
+        //debounce Check Scene Visible all the time
+        //this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
+    }
+
+    componentDidMount() {
+        //when component mounts check if it is in the viewport
+        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
+        this._checkSceneVisible();
     }
 
     componentWillReceiveProps(nextProps) {
-        //if vertical is scrolled to, set active to true
-        nextProps.activeId === this.props.myId ? this.setState({active: true}) : this.setState({active: false});
+        //get new dimensions from the parent component VerticalPage
+        this._updateDimensions(nextProps);
+    }
+
+    _onEnterViewport() {
+        //Our vertical has entered the viewport
+        this.setState({active: true})
+    }
+
+    _onLeaveViewport() {
+        //Our vertical has left the viewport.
+        this.setState({active: false})
+    }
+
+    _updateDimensions(nextProps) {
+        //get the new window height, top of the window, and scroll position from VerticalPage and update this state
+        this.setState({
+            winHeight: nextProps.winHeight,
+            winTop: nextProps.winTop,
+            scrollTop: nextProps.scrollTop
+        }, this._checkSceneVisible());
+    };
+
+    _checkSceneVisible() {
+        //get rectangle of the vertical and test if it's in the viewport or not
+        this._visibleY(this);
+    }
+
+    _visibleY(el) {
+        if(el) {
+            //Check the rectangle of the dom node and fire a function if it's visible
+            let rect = findDOMNode(el).getBoundingClientRect();
+            if(rect.top >=0 && rect.bottom <= (this.props.winHeight + this.props.winTop) && (rect.height + rect.top) < (this.props.winHeight + this.props.winTop)) {
+                this._onEnterViewport(el);
+            } else {
+                this._onLeaveViewport(el);
+            }
+        }
     }
 
     render() {
@@ -71,7 +121,7 @@ class Vertical extends React.Component {
                         {myLayout == 'centeredBackdropTemplate' ?
                             <LegacyCenteredBackdrop data={this.props.data}
                                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                                    active={this.state.active} myId={this.props.myId} /> : null
+                                                    active={this.state.active} myId={this.props.myId}/> : null
                         }
                     </section>
                 )

@@ -18,7 +18,6 @@ import keydown from 'react-keydown';
 import Element from '../components/scrollElement/Element';
 //import Scroll  from 'react-scroll';
 // let scroller = Scroll.scroller;
-let myWinHeight = window.innerHeight + 200;
 import Scroll from 'react-scroll';
 const scroll     = Scroll.animateScroll;
 const scrollSpy  = Scroll.scrollSpy;
@@ -57,40 +56,35 @@ class VerticalPage extends React.Component {
             currentPaths: currentPaths,
             currentId: currentId,
             currentPath: currentPaths[currentId],
+            activeSections: [],
             currentSection: 0,
             currentSectionClass: currentSectionClass,
             currentTitle: title,
             events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
             winHeight: 0,
             winWidth: 0,
-            winTop: 0
+            winTop: 0,
+            scrollTop: 0,
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
-        this._updateDimensions = _.debounce(this._updateDimensions, 1000);
-        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
+        // this._updateDimensions = _.debounce(this._updateDimensions, 1000);
+        this._updateScrollPosition = _.debounce(this._updateScrollPosition, 200);
     }
 
     componentDidMount() {
-        this._checkSceneVisible();
+        this._updateDimensions();
 
         this.state.events.forEach((type) => {
-            window.addEventListener(type, this._checkSceneVisible.bind(this), false)
+            this.mainRef.addEventListener(type, this._updateScrollPosition.bind(this), false)
         });
-        window.addEventListener('resize', this._updateDimensions.bind(this));
-        let main = this.refs.main,
-            rect = findDOMNode(main).getBoundingClientRect(),
-            mainHeight = rect.top + rect.height,
-            mainTop = rect.top;
-
-        this.setState({winHeight: mainHeight,
-        winTop: mainTop});
+        window.addEventListener('resize', _.debounce(this._updateDimensions.bind(this)));
         scrollSpy.update();
     }
 
     componentWillUnmount() {
         this.state.events.forEach((type) => {
-            window.removeEventListener(type, this._checkSceneVisible.bind(this), false)
+            this.mainRef.removeEventListener(type, this._updateScrollPosition.bind(this), false)
         });
         window.removeEventListener('resize', this._updateDimensions.bind(this));
     }
@@ -153,15 +147,13 @@ class VerticalPage extends React.Component {
         sectionKeys.map(function (result, id) {
             if (id < this.state.currentSections.length && e.which === result) {
                 let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${id}`]);
-                // window.scrollTo(0, ref.position().top);
                 this._scrollInto(ref);
-                // return scroller.scrollTo(`${this.state.currentTitle}-section-${id}`);
             }
         }, this);
     }
 
     _scrollInto(ref) {
-        this.refs.main.scrollTop = ref.offsetTop;
+        this.mainRef.scrollTop = ref.offsetTop;
     }
 
     _getCurrentPage() {
@@ -207,15 +199,12 @@ class VerticalPage extends React.Component {
     _goNextSection(source) {
         let callBack = (currentSection) => {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
-            // window.scrollTo(0, ref.offsetTop);
             this._scrollInto(ref);
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
         };
 
         this.setState({currentSection: this.state.currentSection += 1},
             callBack(this.state.currentSection)
-        // window.scrollTo(0, findDOMNode(this.refs[0]))
-            // scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
         );
     }
 
@@ -223,14 +212,11 @@ class VerticalPage extends React.Component {
         let callBack = (currentSection) => {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
-            // window.scrollTo(0, ref.offsetTop)
             this._scrollInto(ref)
         };
 
         this.setState({currentSection: this.state.currentSection -= 1},
             callBack(this.state.currentSection)
-            //window.scrollTo(0, findDOMNode(this.refs[0]))
-            // scroller.scrollTo(`${this.state.currentTitle}-section-${this.state.currentSection}`)
         );
     }
 
@@ -239,43 +225,50 @@ class VerticalPage extends React.Component {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
             this._scrollInto(ref);
-            // window.scrollTo(0, ref.offsetTop)
         };
 
         this.setState({currentSection: 0}, callBack(0));
-
-        //scroller.scrollTo(`${this.state.currentTitle}-section-0`);
     }
 
     _updateDimensions() {
-        this.setState({winHeight: window.innerHeight + 200, winWidth: window.innerWidth})
+        //Get rectangle of the main window.
+        let rect = this.mainRef.getBoundingClientRect(),
+            mainHeight = rect.top + rect.height,
+            mainTop = rect.top;
+
+        this.setState({winHeight: mainHeight + 200,
+            winTop: mainTop});
     };
+
+
     //TODO get section id data in a cleaner way
-    _onEnterViewport(scene) {
-        this.setState({currentSection: scene.props.itemRef},
-        impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[scene.props.itemRef].sectionIdentifier));
+    _onEnterViewport(vertical) {
+
+        // let filterItems = (vertical) => {
+        //     //if we can't find the index of the vertical in the array of active sections, add the vertical to the array
+        //     if (this.state.activeSections.indexOf(vertical.props.itemRef) === -1) {
+        //         this.setState((prevState) => ({
+        //             //use spread operator to retain previous state, only adding what we need and not mutating it
+        //             activeSections: [...prevState.activeSections, vertical.props.itemRef]
+        //         }));
+        //     }
+        // };
+
+        // filterItems(vertical);
+
+        this.setState({currentSection: vertical.props.itemRef},
+        impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier));
+    }  //TODO: we are setting the state to the current section but currently only one section can be active at a time.
+
+    _onLeaveViewport(vertical) {
+
+        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier)
     }
 
-    _onLeaveViewport(scene) {
-        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[scene.props.itemRef].sectionIdentifier)
-    }
-
-    _checkSceneVisible() {
-        //map through all refs and check if element is visible in the viewport, skip 'main' ref
-        let refs = _.map(this.refs).slice(0, -1);
-        refs.map(function(result) {
-            result.rect = findDOMNode(result).getBoundingClientRect();
-            this._visibleY(result) ? this._onEnterViewport(result) : this._onLeaveViewport(result);
-        }, this);
-    }
-
-    _visibleY(el) {
-        let rect = el.rect;
-        return (
-            rect.top >= 0 &&
-            rect.bottom <= this.state.winHeight &&
-            (rect.height + rect.top) < this.state.winHeight
-        );
+    _updateScrollPosition() {
+        this.setState({
+            scrollTop: this.mainRef.scrollTop
+        });
     }
 
     render() {
@@ -313,7 +306,7 @@ class VerticalPage extends React.Component {
                 <div>
                     {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
 
-                    <main id="main" ref="main">
+                    <main id="main" ref={(main) => { this.mainRef = main; }}>
                         {oemGroup && compareModels ?
                             <StickyBanner data={oemGroup}>
                                 {oemGroup.brand.price ?
@@ -329,7 +322,7 @@ class VerticalPage extends React.Component {
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
                                     <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.props.route.title}-section-${id}`} itemRef={id}>
-                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeId={this.state.currentSection} myId={id} />
+                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeSections={this.state.activeSections} myId={id} winHeight={this.state.winHeight} winTop={this.state.winTop} />
                                     </Element>
                                 )
                             }, this)
