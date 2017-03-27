@@ -17,9 +17,10 @@
       "anchorTitle": "2 Tile Default",
       "layout": {
         "type": "mosaic",
-        "theme": "theme-dark",
         "tiles": [
           {
+            "viewMask": "80",
+            "theme": "theme-light",
             "headingBlock": {
               "heading": "-- mosaic title 1 --",
               "subheading": "-- mosaic subtitle 1 --",

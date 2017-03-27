@@ -15,14 +15,15 @@ class MosaicContainer extends React.Component {
                 theme ? theme : 'theme-light',
                 viewMask ? `f-mask-${viewMask}` : null);
 
+
             switch (tiles.length) {
                 case 2: {
                     return ( // Default 2 tile layout "mosaic-1"
                         <div className="c-mosaic  fullscreen-mosaic">
-                            <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                                 <MosaicTile data={tiles[0]}/>
                             </div>
-                            <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                                 <MosaicTile data={tiles[1]}/>
                             </div>
                         </div>
