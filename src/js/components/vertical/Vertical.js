@@ -24,9 +24,6 @@ class Vertical extends React.Component {
             winTop: 0,
             scrollTop: 0,
         };
-
-        //debounce Check Scene Visible all the time
-        //this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
     }
 
     componentDidMount() {
@@ -37,7 +34,13 @@ class Vertical extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         //get new dimensions from the parent component VerticalPage
-        this._updateDimensions(nextProps);
+        if(this.state.winHeight !== nextProps.winHeight) {
+            this._updateDimensions(nextProps);
+        }
+
+        if(this.state.scrollTop !== nextProps.scrollTop || nextProps.scrollTop === 0) {
+            this._checkSceneVisible();
+        }
     }
 
     _onEnterViewport() {
@@ -67,8 +70,9 @@ class Vertical extends React.Component {
     _visibleY(el) {
         if(el) {
             //Check the rectangle of the dom node and fire a function if it's visible
+            let height = (this.state.winHeight + this.state.winTop);
             let rect = findDOMNode(el).getBoundingClientRect();
-            if(rect.top >=0 && rect.bottom <= (this.props.winHeight + this.props.winTop) && (rect.height + rect.top) < (this.props.winHeight + this.props.winTop)) {
+            if(rect.top >=0 && rect.bottom <= height && (rect.height + rect.top) < height) {
                 this._onEnterViewport(el);
             } else {
                 this._onLeaveViewport(el);

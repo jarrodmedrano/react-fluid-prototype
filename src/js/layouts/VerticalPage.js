@@ -232,12 +232,14 @@ class VerticalPage extends React.Component {
 
     _updateDimensions() {
         //Get rectangle of the main window.
-        let rect = this.mainRef.getBoundingClientRect(),
-            mainHeight = rect.top + rect.height,
-            mainTop = rect.top;
+        if(this.mainRef) {
+            let rect = this.mainRef.getBoundingClientRect(),
+                mainHeight = rect.top + rect.height,
+                mainTop = rect.top;
 
-        this.setState({winHeight: mainHeight + 200,
-            winTop: mainTop});
+            this.setState({winHeight: mainHeight + 200,
+                winTop: mainTop});
+        }
     };
 
 
@@ -261,7 +263,6 @@ class VerticalPage extends React.Component {
     }  //TODO: we are setting the state to the current section but currently only one section can be active at a time.
 
     _onLeaveViewport(vertical) {
-
         impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier)
     }
 
@@ -322,7 +323,7 @@ class VerticalPage extends React.Component {
                             this.state.currentPage.sections.map(function (result, id) {
                                 return (
                                     <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.props.route.title}-section-${id}`} itemRef={id}>
-                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeSections={this.state.activeSections} myId={id} winHeight={this.state.winHeight} winTop={this.state.winTop} />
+                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeSections={this.state.activeSections} myId={id} winHeight={this.state.winHeight} winTop={this.state.winTop} scrollTop={this.state.scrollTop} />
                                     </Element>
                                 )
                             }, this)
