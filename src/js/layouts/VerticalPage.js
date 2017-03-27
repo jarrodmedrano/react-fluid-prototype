@@ -334,7 +334,6 @@ class VerticalPage extends React.Component {
                          */}
                         {this.state.currentPage.sections && !legacyLayouts ? <StickyFooter data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
                     </main>
-
                 </div>
             )
         }

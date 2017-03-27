@@ -10,13 +10,14 @@ class DownArrow extends React.Component {
 
     render() {
         if(propsAreValid(this.props.data, this)) {
-            const {to, children, ...rest} = this.props;
-
-            return (
-                <div className="down-arrow">
-                    <Link className="c-flipper f-next f-large" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
-                </div>
-            );
+            const {to, ...rest} = this.props;
+            if(this.props.data.sections.length >= 2) {
+                return (
+                    <div className="down-arrow">
+                        <Link className="c-flipper f-next f-large" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />
+                    </div>
+                );
+            }
         } return null
     }
 }
