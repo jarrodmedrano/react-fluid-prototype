@@ -54,7 +54,8 @@ class LegacyKSP extends React.Component {
             };
 
             return (
-                <div className="m-feature legacy-feature" data-grid="col-12" style={templateStyle ? templateStyle : null}>
+                <div className="m-feature legacy-feature" data-grid="col-12"
+                     style={templateStyle ? templateStyle : null}>
                     <div className={templateClass}>
                         {media ? <picture className="feature-image">
                                 <source srcSet={media.src}/>
@@ -62,11 +63,12 @@ class LegacyKSP extends React.Component {
                             </picture> : null }
                         <div>
                             <div>
-                                {logo ? <img className="logo c-image" alt={header} src={logo} /> : null }
+                                {logo ? <img className="logo c-image" alt={header} src={logo}/> : null }
                                 {header ? <h1 className="c-heading c-logo" style={headerStyle}
                                               dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
 
-                                <div data-grid="col-12" className="c-structured-list" style={rtl ? {textAlign: 'right'} : null}>
+                                <div data-grid="col-12" className="c-structured-list"
+                                     style={rtl ? {textAlign: 'right'} : null}>
                                     <ul className="f-column">
                                         <li className="f-row">
                                             {icon1 ?
@@ -83,7 +85,7 @@ class LegacyKSP extends React.Component {
                                                        dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itembody1 ? itembody1 : null)}}/> : null }
                                             </div>
                                         </li>
-                                        <li className="f-row" >
+                                        <li className="f-row">
                                             {icon2 ?
                                                 <div data-grid="col-2 stack-2">
                                                     <img className="c-image" src={icon2} draggable="false"/>
@@ -94,13 +96,13 @@ class LegacyKSP extends React.Component {
                                                             dangerouslySetInnerHTML={{__html: this.cleanHtml(text2 ? text2 : itemheading2 ? itemheading2 : null)}}/> : null }
                                                 </p>
                                                 {caption2 || itembody2 ? <p className="c-paragraph-4"
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2 ? caption2 : itembody2 ? itembody2 : null)}}/> : null }
+                                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2 ? caption2 : itembody2 ? itembody2 : null)}}/> : null }
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            {button ? <Button data={this.props.data.button} style={btnStyle} /> : null }
+                            {button ? <Button data={this.props.data.button} style={btnStyle}/> : null }
                             {legalText ? <p className="c-paragraph-4"
                                             dangerouslySetInnerHTML={{__html: this.cleanHtml(legalText)}}/> : null }
                         </div>

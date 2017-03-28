@@ -56,6 +56,10 @@
 
   .c-feature.f-align-left > div, .c-feature.f-align-right > div {
     width: 40%;
+
+    &.legacy-specs {
+      width: 100%;
+    }
   }
 
   .c-feature.f-align-left picture, .c-feature.f-align-right picture {
@@ -104,6 +108,51 @@
   @media only screen and (min-width: 1400px) {
     .c-structured-list .f-column .f-row [data-grid=col-10] {
       padding-left: 0;
+    }
+  }
+}
+
+.layout-specifications {
+  ul {
+
+    li {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 2fr;
+      background-color: rgba(0, 0, 0, .1);
+      margin-bottom: 20px;
+      padding: 0 20px;
+
+      .label {
+        -ms-grid-column: 1;
+        display: block;
+        -ms-grid-column-align: start;
+        -ms-grid-row-align: center;
+      }
+
+      .spec {
+        -ms-grid-column: 2;
+        display: block;
+        margin: 10px 0;
+        -ms-grid-column-align: end;
+        -ms-grid-row-align: center;
+        text-align: right;
+      }
+
+      @media all and (max-width: 1080px), all and (max-height: 700px) {
+        & {
+          padding: 10px 20px;
+          margin: 10px 0;
+        }
+
+        .label {
+          margin: 0 !important;
+        }
+
+        .spec {
+          font-weight: 100;
+          margin: 0;
+        }
+      }
     }
   }
 }

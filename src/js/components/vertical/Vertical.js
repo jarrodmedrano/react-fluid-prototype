@@ -8,6 +8,7 @@ import CompareTable from '../compare/CompareTable';
 import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyksp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
+import LegacySpecs from '../legacy/legacySpecs';
 import propsAreValid, {logError} from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 import _ from 'lodash';
@@ -86,7 +87,7 @@ class Vertical extends React.Component {
 
             let {layout, sectionIdentifier, readingDirection} = this.props.data;
             let myLayout = typeof layout === 'object' ? layout.type : layout;
-            let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate'];
+            let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate', 'threeColSpecs'];
             let verticalClass = classNames('scene-vertical', this.props.data.groupIdentifier, this.props.data.sectionIdentifier, myLayout, active);
             if(myLayout && _.includes(acceptedLayouts, myLayout)) {
                 return (
@@ -126,6 +127,11 @@ class Vertical extends React.Component {
                             <LegacyCenteredBackdrop data={this.props.data}
                                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
                                                     active={this.state.active} myId={this.props.myId}/> : null
+                        }
+                        {myLayout == 'threeColSpecs' ?
+                            <LegacySpecs data={this.props.data}
+                                         brandColor={this.props.brandColor ? this.props.brandColor : null}
+                                         active={this.state.active} myId={this.props.myId}/> : null
                         }
                     </section>
                 )

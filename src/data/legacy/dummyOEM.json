@@ -88,6 +88,30 @@
       "groupIdentifier": "oem",
       "sectionIdentifier": "OEM section 4",
       "ordinal": "400"
+    },
+    {
+      "layout": "threeColSpecs",
+      "logo": "img/oem_assets/P2-logo.png",
+      "textSide": "",
+      "1-1-lead": "Windows",
+      "1-1-text": "RetailInfo.WindowsEdition",
+      "1-2-lead": "Display",
+      "1-2-text": "RetailInfo.rawScreenResolution",
+      "2-1-lead": "Screen Size",
+      "2-1-text": "RetailInfo.ScreenSize",
+      "2-2-lead": "Processor",
+      "2-2-text": "RetailInfo.ProcessorDescription",
+      "3-1-lead": "Memory",
+      "3-1-text": "RetailInfo.Memory",
+      "3-2-lead": "Storage",
+      "3-2-text": "RetailInfo.StorageDescription",
+      "groupIdentifier": "Holiday",
+      "sectionIdentifier": "Page4",
+      "ordinal": 400,
+      "media": {
+        "blockType": "img",
+        "src": "img/oem_assets/P3-content.png"
+      }
     }
   ]
 }

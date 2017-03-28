@@ -21,7 +21,6 @@ class LegacyFeature extends React.Component {
         });
     }
 
-
     render() {
         {/* 
          This component renders both feature and featureCTA
