@@ -162,6 +162,18 @@ export let verticalPagePropTypes = {
     }))
 };
 
+export let MainPropTypes = {
+    route: React.PropTypes.object,
+    groups: React.PropTypes.arrayOf(React.PropTypes.shape({
+        groupIdentifier: requiredString,
+        brand: React.PropTypes.shape({
+            logoTab: string,
+            color: string,
+        }).isRequired,
+        sections: Object.assign(sectionPropTypes.sections)
+    }))
+};
+
 export default function dataPropTypes(component) {
     return {
         data: React.PropTypes.shape(Object.assign(component)).isRequired

@@ -1,30 +1,24 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
-// import '../../styles/ms-mwf/mwf/core/styles/_mwf_dependencies.scss!';
-// import '../../styles/mwf-west-european-default.min.css!';
-// import '../../styles/mwf-ie9-west-european-default.min.css!';
 import '../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
-import propsAreValid, {impressionEvent, navigateEvent} from '../lib/util';
-import Vertical from '../components/vertical/Vertical';
+import propsAreValid, {navigateEvent} from '../lib/util';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/tabs/Tabs';
 import StickyFooter from '../components/stickynav/StickyFooter';
 import Price from '../components/price/Price';
 import DownArrow from '../components/downarrow/DownArrow';
 import Button from '../components/button/Button';
+import Main from '../components/main/Main';
 import _ from 'lodash';
 import keydown from 'react-keydown';
-import Element from '../components/scrollElement/Element';
-//import Scroll  from 'react-scroll';
-// let scroller = Scroll.scroller;
-import Scroll from 'react-scroll';
-const scroll     = Scroll.animateScroll;
-const scrollSpy  = Scroll.scrollSpy;
 
 class VerticalPage extends React.Component {
     constructor(props) {
         super(props);
+
+        let {groups} = props.data;
+
 
         let title = this.props.route.title;
 
@@ -60,33 +54,42 @@ class VerticalPage extends React.Component {
             currentSection: 0,
             currentSectionClass: currentSectionClass,
             currentTitle: title,
-            events: ['scroll', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll', 'resize', 'touchmove', 'touchend'],
-            winHeight: 0,
-            winWidth: 0,
-            winTop: 0,
-            scrollTop: 0,
+            groups: groups,
+            oemGroup: {},
+            retailerGroup: {},
+            compareModels: {},
+            legacyLayouts: false
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
-        // this._updateDimensions = _.debounce(this._updateDimensions, 1000);
-        this._updateScrollPosition = _.debounce(this._updateScrollPosition, 200);
     }
 
     componentDidMount() {
-        this._updateDimensions();
 
-        this.state.events.forEach((type) => {
-            this.mainRef.addEventListener(type, this._updateScrollPosition.bind(this), false)
+        _.find(this.state.groups, (result) => {
+            if (result.groupIdentifier === 'oem') {
+                this.setState({oemGroup: result})
+            }
         });
-        window.addEventListener('resize', _.debounce(this._updateDimensions.bind(this)));
-        scrollSpy.update();
-    }
 
-    componentWillUnmount() {
-        this.state.events.forEach((type) => {
-            this.mainRef.removeEventListener(type, this._updateScrollPosition.bind(this), false)
+        _.find(this.state.oemGroup.sections, (result) =>  {
+            if (result.sectionIdentifier === 'Compare') {
+                this.setState({compareModels: result})
+            }
         });
-        window.removeEventListener('resize', this._updateDimensions.bind(this));
+
+        _.find(this.state.groups, (result) =>  {
+            if (result.groupIdentifier === 'retailer') {
+                this.setState({retailerGroup: result})
+            }
+        });
+
+        //Find out if there are legacy layouts in this page (or not)
+        _.find(this.state.currentSections, (result) => {
+            if(_.includes(result.layout, 'feature', 'featureCta', 'ksp', 'centeredBackdropTemplate', 'threeColSpecs')) {
+                this.setState({legacyLayouts: true})
+            }
+        });
     }
 
     @keydown('cmd+right', 'ctrl+right')
@@ -119,43 +122,6 @@ class VerticalPage extends React.Component {
         }
     }
 
-    @keydown('cmd+down', 'ctrl+down')
-    _handleNextSection(e) {
-        e.preventDefault();
-        if (this.state.currentSection + 1 < this.state.currentSections.length) {
-            this._goNextSection('ctrl+down');
-        } else {
-            return false
-        }
-    }
-
-    @keydown('cmd+up', 'ctrl+up')
-    _handlePrevSection(e) {
-        e.preventDefault();
-        if (this.state.currentSection - 1 >= 0) {
-            this._goPrevSection('ctrl+up');
-        } else {
-            return false
-        }
-    }
-
-    @keydown('alt+0', 'alt+1', 'alt+2', 'alt+3', 'alt+4', 'alt+5', 'alt+6', 'alt+7', 'alt+8', 'alt+9')
-    _teleportSection(e) {
-        e.preventDefault();
-        let sectionKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
-
-        sectionKeys.map(function (result, id) {
-            if (id < this.state.currentSections.length && e.which === result) {
-                let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${id}`]);
-                this._scrollInto(ref);
-            }
-        }, this);
-    }
-
-    _scrollInto(ref) {
-        this.mainRef.scrollTop = ref.offsetTop;
-    }
-
     _getCurrentPage() {
         let {groups} = this.props.data;
         let title = this.props.route.title;
@@ -185,155 +151,24 @@ class VerticalPage extends React.Component {
         ) : null
     }
 
-    _handleDownArrow(e) {
-        e.preventDefault();
-        //if current section plus one is less than the total sections, go down
-        if (this.state.currentSection + 1 < this.state.currentSections.length) {
-            this._goNextSection('down arrow');
-            //if on the last section, go to the top.
-        } else {
-            this._goTop('down arrow');
-        }
-    }
-
-    _goNextSection(source) {
-        let callBack = (currentSection) => {
-            let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
-            this._scrollInto(ref);
-            navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
-        };
-
-        this.setState({currentSection: this.state.currentSection += 1},
-            callBack(this.state.currentSection)
-        );
-    }
-
-    _goPrevSection(source) {
-        let callBack = (currentSection) => {
-            let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
-            navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
-            this._scrollInto(ref)
-        };
-
-        this.setState({currentSection: this.state.currentSection -= 1},
-            callBack(this.state.currentSection)
-        );
-    }
-
-    _goTop(source) {
-        let callBack = (currentSection) => {
-            let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
-            navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
-            this._scrollInto(ref);
-        };
-
-        this.setState({currentSection: 0}, callBack(0));
-    }
-
-    _updateDimensions() {
-        //Get rectangle of the main window.
-        if(this.mainRef) {
-            let rect = this.mainRef.getBoundingClientRect(),
-                mainHeight = rect.top + rect.height,
-                mainTop = rect.top;
-
-            this.setState({winHeight: mainHeight + 200,
-                winTop: mainTop});
-        }
-    };
-
-
-    //TODO get section id data in a cleaner way
-    _onEnterViewport(vertical) {
-
-        // let filterItems = (vertical) => {
-        //     //if we can't find the index of the vertical in the array of active sections, add the vertical to the array
-        //     if (this.state.activeSections.indexOf(vertical.props.itemRef) === -1) {
-        //         this.setState((prevState) => ({
-        //             //use spread operator to retain previous state, only adding what we need and not mutating it
-        //             activeSections: [...prevState.activeSections, vertical.props.itemRef]
-        //         }));
-        //     }
-        // };
-
-        // filterItems(vertical);
-
-        this.setState({currentSection: vertical.props.itemRef},
-        impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier));
-    }  //TODO: we are setting the state to the current section but currently only one section can be active at a time.
-
-    _onLeaveViewport(vertical) {
-        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier)
-    }
-
-    _updateScrollPosition() {
-        this.setState({
-            scrollTop: this.mainRef.scrollTop
-        });
-    }
-
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {groups} = this.props.data;
-
-            let oemGroup = _.find(groups, function (result) {
-                if (result.groupIdentifier === 'oem') {
-                    return result
-                }
-            });
-
-            let compareModels;
-
-            if(oemGroup) {
-                compareModels = _.find(oemGroup.sections, function (result) {
-                    if (result.sectionIdentifier === 'Compare') {
-                        return result
-                    }
-                });
-            }
-
-            let retailerGroup = _.find(groups, function (result) {
-                if (result.groupIdentifier === 'retailer') {
-                    return result
-                }
-            });
-
-            //Find out if there are legacy layouts in this page (or not)
-            let legacyLayouts = !!_.find(this.state.currentSections, function(result) {
-                return _.includes(result.layout, 'feature', 'featureCta', 'ksp', 'centeredBackdropTemplate', 'threeColSpecs')
-            });
-
             return (
                 <div>
-                    {groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
-
-                    <main id="main" ref={(main) => { this.mainRef = main; }}>
-                        {oemGroup && compareModels ?
-                            <StickyBanner data={oemGroup}>
-                                {oemGroup.brand.price ?
-                                    <Price data={oemGroup.brand.price}/>
-                                    : null }
-
-                                {retailerGroup && retailerGroup.brand && retailerGroup.brand.button ?
-                                    <Button data={retailerGroup.brand.button} />
-                                    : null }
-                            </StickyBanner>
+                    {this.state.groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
+                    {this.state.oemGroup.length && this.state.compareModels.length ?
+                    <StickyBanner data={this.state.oemGroup}>
+                        {this.state.oemGroup.brand.price ?
+                            <Price data={this.state.oemGroup.brand.price}/>
                             : null }
-                        {this.state.currentPage.sections ?
-                            this.state.currentPage.sections.map(function (result, id) {
-                                return (
-                                    <Element name={this.state.currentSectionClass + id} key={id} ref={`${this.props.route.title}-section-${id}`} itemRef={id}>
-                                        <Vertical data={result} brandColor={this.state.currentBrandColor} activeSections={this.state.activeSections} myId={id} winHeight={this.state.winHeight} winTop={this.state.winTop} scrollTop={this.state.scrollTop} />
-                                    </Element>
-                                )
-                            }, this)
-                            : null
-                        }
-                        {/*
-                         if there aren't any legacy layouts, render the new footer style, else render the down arrow
-                         */}
-                        {this.state.currentPage.sections && !legacyLayouts ? <StickyFooter data={this.state.currentPage} /> : <DownArrow data={this.state.currentPage} onClick={(event)=> this._handleDownArrow(event)} />}
-                    </main>
+
+                        {this.state.retailerGroup && this.state.retailerGroup.brand && this.state.retailerGroup.brand.button ?
+                            <Button data={this.state.retailerGroup.brand.button} />
+                            : null }
+                    </StickyBanner>
+                    : null }
+
+                    <Main data={this.props.data} {...this.props} legacyLayouts={this.state.legacyLayouts} />
                 </div>
             )
         }
