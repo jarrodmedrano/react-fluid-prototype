@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './button-link.scss!';
 import propsAreValid, {navigateEvent} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import ButtonLink from './ButtonLink';
+import {Link} from '../../lib/scroll';
 
 class FooterLink extends React.Component {
     render() {
@@ -19,7 +19,7 @@ class FooterLink extends React.Component {
             }
 
             return (
-                <ButtonLink className={templateClass} activeClass="active" to={to} {...rest}  spy={true} smooth={true} duration={500} isDynamic={true} icon={icon}  onClick={() => {navigateEvent(groupIdentifier, to, 'Footer Link ' + children)}} >{children}</ButtonLink>
+                <Link className={templateClass} activeClass="active" to={to} {...rest}  spy={true} smooth={true} duration={500} isDynamic={true} icon={icon}  onClick={() => {navigateEvent(groupIdentifier, to, 'Footer Link ' + children)}} >{children}</Link>
             );
         } return null
     }

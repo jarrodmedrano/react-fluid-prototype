@@ -69,6 +69,7 @@ class Tabs extends React.Component {
                             </IndexLink>
                         </li>
                         {rootRouteChildren != null ? rootRouteChildren.map((item, index) =>
+
                                 <li className="c-hyperlink" key={index}>
                                     <Link
                                         activeClassName="active"

@@ -19,7 +19,6 @@ class VerticalPage extends React.Component {
 
         let {groups} = props.data;
 
-
         let title = this.props.route.title;
 
         //Find the title of the group and if it's the same title as the route, that's the current page

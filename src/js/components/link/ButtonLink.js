@@ -1,10 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
+import {Link} from 'react-router';
 import './button-link.scss!';
 import propsAreValid, {externalNavigate} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import {Link} from '../../lib/scroll';
 import sanitizeHtml from 'sanitize-html';
+import Scroll from 'react-scroll';
+const scroll = Scroll.animateScroll;
+const scrollSpy = Scroll.scrollSpy;
 
 class ButtonLink extends React.Component {
 
@@ -33,8 +36,12 @@ class ButtonLink extends React.Component {
         });
     }
 
-    _handleClick(target) {
-        externalNavigate(target);
+    _handleClick(internal, target) {
+        if(internal == true) {
+            scroll.scrollTo(0, {delay: 0, duration: 0});
+        } else {
+            externalNavigate(target);
+        }
     }
 
     render() {
@@ -46,11 +53,11 @@ class ButtonLink extends React.Component {
             if (_isInternal) {
                 if(layout === 'mosaic') {
                     return (
-                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} draggable="false" />
+                        <Link className={templateClass} to={to} {...rest} draggable="false" />
                     )
                 } else {
                     return (
-                        <Link className={templateClass} activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />
+                        <Link className={templateClass} to={to} {...rest} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false"  />
                     );
                 }
             } else {

@@ -17,17 +17,18 @@
       "anchorTitle": "2 Tile Default",
       "layout": {
         "type": "mosaic",
+        "theme": "theme-dark",
         "tiles": [
           {
             "viewMask": "80",
-            "theme": "theme-light",
+            "theme": "theme-dark",
             "headingBlock": {
               "heading": "-- mosaic title 1 --",
               "subheading": "-- mosaic subtitle 1 --",
               "button": {
                 "layout": "link",
                 "link": "http://www.microsoft.com",
-                "text": "Call to action",
+                "text": "Call to action 2",
                 "textColor": "white",
                 "backgroundColor": "blue"
               }

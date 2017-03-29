@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+
 export function externalNavigate(target) {
     if(window.RDX) {
         window.RDX.externalNavigate(target);
@@ -22,9 +23,9 @@ export function impressionEvent(visible, group, section) {
     if(window.RDX) {
         window.RDX.impressionEvent(visible, group, section);
     }
-    else {
-        console.log('visible', visible, 'group', group, 'section', section)
-    }
+    // else {
+    //     console.log('visible', visible, 'group', group, 'section', section)
+    // }
 }
 
 export function _cssSplit(str){

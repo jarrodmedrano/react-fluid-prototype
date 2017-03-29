@@ -48,9 +48,9 @@ class App extends React.Component {
         super(props);
     }
 
-    componentWillUpdate() {
-        scroll.scrollTo(0, {delay: 0, duration: 0});
-    }
+    // componentWillUpdate() {
+    //     // scroll.scrollTo(0, {delay: 0, duration: 0});
+    // }
 
     @keydown( 'cmd+h', 'ctrl+alt+h' )
     homeGroup(e) {
