@@ -5,7 +5,8 @@
 //-----------------------------------------------------------------------------
 
 $linkband-spacing: 10px;
-$linkband-bg: rgba(204, 204, 204, 0.8);
+$linkband-bg: rgba(241, 241, 242, 0.9);
+$linkband-dropshadow: 0px 1px 2px 0px rgba(119,118,118, 0.4);
 $default-bg: #E6E7E8;
 $default-text: #000;
 $accent-color: #0078D7;
@@ -25,11 +26,20 @@ $btn-primary-color: #fff;
   position: fixed;
   top: 45px;
   z-index: 3;
+  box-shadow: $linkband-dropshadow;
+
+  &.sticky-header {
+    padding: 6px 20px;
+
+    a.c-call-to-action {
+      display: block;
+    }
+  }
 
   .logo {
     margin-right: $linkband-spacing;
     max-height: 40px;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .c-call-to-action {
@@ -37,7 +47,7 @@ $btn-primary-color: #fff;
     color: #fff;
   }
 
-  .c-heading-4 {
+  .c-heading-5 {
     padding-top: 0;
     padding-bottom: 0;
     display: inline-block;
@@ -122,7 +132,7 @@ $btn-primary-color: #fff;
       cursor: hand;
 
       flex: 1 auto;
-      padding: 20px;
+      padding: 15px;
       margin: 0;
 
       &.c-glyph {

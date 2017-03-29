@@ -14,7 +14,7 @@ class StickyBanner extends React.Component {
         return (
             <div className="sticky-banner sticky-header">
                 {logo ? <img src={logo} alt={groupIdentifier} className="logo" draggable="false"/> : null }
-                {anchorTitle ? <h4 className="c-heading-4">{anchorTitle}</h4> : null }
+                {anchorTitle ? <h4 className="c-heading-5">{anchorTitle}</h4> : null }
                 {this.props.data.ratings ? <Starrating data={this.props.data.ratings} /> : null }
 
                 <div className="cta">
