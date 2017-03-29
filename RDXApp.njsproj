@@ -41,6 +41,8 @@
     <Content Include="src\data\legacy\dummyVideos.json" />
     <Content Include="src\data\new\dummyAccessoriesMosaic.json" />
     <Content Include="src\data\new\dummyFVideo.json" />
+    <Content Include="src\data\partner\bby\bby_stpats_section2.json" />
+    <Content Include="src\data\partner\bby\datasource.json" />
     <Content Include="src\data\rdx.json" />
     <Content Include="src\data\rdxschema.json" />
     <Content Include="src\data\singleGroupSchema.json" />
@@ -4960,6 +4962,7 @@
     <Content Include="src\img\windows_assets\Windows_Desktop_Logo.png" />
     <Content Include="src\img\windows_assets\Page2.gif" />
     <Compile Include="src\js\components\downarrow\DownArrow.js" />
+    <Compile Include="src\js\components\legacy\legacySpecs.js" />
     <Compile Include="src\js\components\picture\MosaicPicture.js" />
     <Compile Include="src\js\components\price\Price.js" />
     <Compile Include="src\js\components\scrollElement\Element.js" />
@@ -10481,6 +10484,8 @@
     <Folder Include="src\data" />
     <Folder Include="src\data\legacy" />
     <Folder Include="src\data\new" />
+    <Folder Include="src\data\partner\" />
+    <Folder Include="src\data\partner\bby\" />
     <Folder Include="src\fonts" />
     <Folder Include="src\img" />
     <Folder Include="src\img\oem_assets" />

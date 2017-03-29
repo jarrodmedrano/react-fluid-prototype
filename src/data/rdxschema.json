@@ -189,27 +189,13 @@
           "$ref": "#/definitions/media"
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light'",
-          "enum": [
-            "theme-dark",
-            "theme-light"
-          ]
+          "$ref": "#/definitions/theme"
         },
         "alignX": {
-          "description": "Together with alignY orients the headingBlock on the screen.  Valid values are 'left', 'right', 'center'",
-          "enum": [
-            "left",
-            "right",
-            "center"
-          ]
+          "$ref": "#/definitions/alignX"
         },
         "alignY": {
-          "description": "Together with alignX orients the headingBlock on the screen.  Valid values are 'top', 'bottom', 'center'",
-          "enum": [
-            "top",
-            "bottom",
-            "center"
-          ]
+          "$ref": "#/definitions/alignY"
         }
       }
     },
@@ -228,27 +214,16 @@
           ]
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light'",
-          "enum": [
-            "theme-dark",
-            "theme-light"
-          ]
+          "$ref": "#/definitions/theme"
+        },
+        "viewMask": {
+          "$ref": "#/definitions/viewMask"
         },
         "alignX": {
-          "description": "Together with alignY orients the headingBlock on the screen.  Valid values are 'left', 'right', 'center'",
-          "enum": [
-            "left",
-            "right",
-            "center"
-          ]
+          "$ref": "#/definitions/alignX"
         },
         "alignY": {
-          "description": "Together with alignX orients the headingBlock on the screen.  Valid values are 'top', 'bottom', 'center'",
-          "enum": [
-            "top",
-            "bottom",
-            "center"
-          ]
+          "$ref": "#/definitions/alignY"
         },
         "pictureBlock": {
           "$ref": "#/definitions/pictureBlock"
@@ -274,18 +249,10 @@
           ]
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light'",
-          "enum": [
-            "theme-dark",
-            "theme-light"
-          ]
+          "$ref": "#/definitions/theme"
         },
         "alignY": {
-          "description": "Orients the headingBlock above or below the hero image.  Valid values are 'top', 'bottom'. ",
-          "enum": [
-            "top",
-            "bottom"
-          ]
+          "$ref": "#/definitions/alignY-NoCenter"
         },
         "pictureBlock": {
           "$ref": "#/definitions/pictureBlock"
@@ -309,13 +276,10 @@
           ]
         },
         "theme": {
-          "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light",
-          "enum": [
-            "theme-dark",
-            "theme-light"
-          ]
+          "$ref": "#/definitions/theme"
         },
         "mosaicLayout": {
+          "description": "This currently ignored.  The default mosaic layout will be chosen based on the number of tiles.",
           "type": "string"
         },
         "tiles": {
@@ -421,11 +385,8 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "theme": {
-          "enum": [
-            "theme-dark",
-            "theme-light"
-          ]
+        "viewMask": {
+          "$ref": "#/definitions/viewMask"
         },
         "hoverEffectColor": {
           "description": "Color override for the transparency effect on hover of a tile.",
@@ -438,6 +399,44 @@
           "$ref": "#/definitions/headingBlock"
         }
       }
+    },
+    "alignX": {
+      "description": "Together with alignY orients the headingBlock on the screen.  Valid values are 'left', 'right', 'center",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "alignY": {
+      "description": "Together with alignX orients the headingBlock on the screen.  Valid values are 'top', 'bottom', 'center",
+      "enum": [
+        "top",
+        "bottom",
+        "center"
+      ]
+    },
+    "alignY-NoCenter": {
+      "description": "Orients the headingBlock above or below the hero image.  Valid values are 'top', 'bottom'. ",
+      "enum": [
+        "top",
+        "bottom"
+      ]
+    },
+    "theme": {
+      "description": "The general color theme of the section.  Valid values are only 'theme-dark' and 'theme-light",
+      "enum": [
+        "theme-dark",
+        "theme-light"
+      ]
+    },
+    "viewMask": {
+      "enum": [
+        "20",
+        "40",
+        "60",
+        "80"
+      ]
     },
     "headingBlock": {
       "type": "object",
