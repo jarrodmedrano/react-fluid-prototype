@@ -54,30 +54,31 @@ class VerticalPage extends React.Component {
             currentSectionClass: currentSectionClass,
             currentTitle: title,
             groups: groups,
-            oemGroup: {},
-            retailerGroup: {},
-            compareModels: {},
             legacyLayouts: false
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
     }
 
-    componentDidMount() {
+    componentWillMount() {
 
-        _.find(this.state.groups, (result) => {
+        let findCompareModels = (oemGroup) => {
+            _.find(oemGroup.sections, (result) =>  {
+                if (result.sectionIdentifier === 'Compare') {
+                    this.setState({compareModels: result})
+                }
+            })
+        };
+
+        _.find(this.props.data.groups, (result) => {
             if (result.groupIdentifier === 'oem') {
-                this.setState({oemGroup: result})
+                this.setState({oemGroup: result},
+                    findCompareModels(result)
+                )
             }
         });
 
-        _.find(this.state.oemGroup.sections, (result) =>  {
-            if (result.sectionIdentifier === 'Compare') {
-                this.setState({compareModels: result})
-            }
-        });
-
-        _.find(this.state.groups, (result) =>  {
+        _.find(this.props.data.groups, (result) =>  {
             if (result.groupIdentifier === 'retailer') {
                 this.setState({retailerGroup: result})
             }
@@ -155,19 +156,17 @@ class VerticalPage extends React.Component {
             return (
                 <div>
                     {this.state.groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
-                    {this.state.oemGroup.length && this.state.compareModels.length ?
-                    <StickyBanner data={this.state.oemGroup}>
-                        {this.state.oemGroup.brand.price ?
-                            <Price data={this.state.oemGroup.brand.price}/>
-                            : null }
-
-                        {this.state.retailerGroup && this.state.retailerGroup.brand && this.state.retailerGroup.brand.button ?
-                            <Button data={this.state.retailerGroup.brand.button} />
-                            : null }
-                    </StickyBanner>
-                    : null }
-
                     <Main data={this.props.data} {...this.props} legacyLayouts={this.state.legacyLayouts} />
+
+                    {this.state.oemGroup && this.state.compareModels ?
+                        <StickyBanner data={this.state.oemGroup}>
+                            <Price data={this.state.oemGroup}/>
+
+                            {this.state.retailerGroup && this.state.retailerGroup.brand && this.state.retailerGroup.brand.button ?
+                                <Button data={this.state.retailerGroup.brand.button} />
+                                : null }
+                        </StickyBanner>
+                        : null }
                 </div>
             )
         }

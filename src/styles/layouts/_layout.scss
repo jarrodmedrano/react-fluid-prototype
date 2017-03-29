@@ -23,14 +23,14 @@ html {
     }
   }
 }
+
 body {
   background: $default-bg;
   -ms-user-select: none;
   user-select: none;
   height: 100%;
   overflow: hidden;
-  //margin-top: 44px;
-
+  margin-top: 45px;
   //padding-bottom: 60px;
 
   //main section {
@@ -40,12 +40,10 @@ body {
   main {
     overflow: auto;
     //overflow: initial;
-    height: 100%;
-    min-height: 100%;
+    height: calc(100% - 45px);
     position: absolute;
-    width: 100vw;
+    width: 100%;
     left: 0;
-    top: 45px;
   }
 }
 
