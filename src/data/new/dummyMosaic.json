@@ -24,14 +24,7 @@
             "theme": "theme-dark",
             "headingBlock": {
               "heading": "-- mosaic title 1 --",
-              "subheading": "-- mosaic subtitle 1 --",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action 2",
-                "textColor": "white",
-                "backgroundColor": "blue"
-              }
+              "subheading": "-- mosaic subtitle 1 --"
             },
             "pictureBlock": {
               "pictures": [

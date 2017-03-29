@@ -53,7 +53,8 @@ a.mosaic-link:after {
 }
 
 .c-mosaic-placement:hover {
-  cursor: pointer;
+  cursor: auto;
+
   .c-image-overlay {
     opacity: 0 !important;
   }
