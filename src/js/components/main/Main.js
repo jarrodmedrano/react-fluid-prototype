@@ -184,18 +184,6 @@ class Main extends React.Component {
         }
     };
 
-
-    //TODO get section id data in a cleaner way
-    _onEnterViewport(vertical) {
-
-        this.setState({currentSection: vertical.props.itemRef},
-            impressionEvent(true, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier));
-    }  //TODO: we are setting the state to the current section but currently only one section can be active at a time.
-
-    _onLeaveViewport(vertical) {
-        impressionEvent(false, this.props.data.groups[this.state.currentId].groupIdentifier, this.props.data.groups[this.state.currentId].sections[vertical.props.itemRef].sectionIdentifier)
-    }
-
     _updateScrollPosition() {
         this.setState({
             scrollTop: this.mainRef.scrollTop

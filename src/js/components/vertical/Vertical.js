@@ -9,7 +9,7 @@ import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyksp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 import LegacySpecs from '../legacy/legacySpecs';
-import propsAreValid, {logError} from '../../lib/util';
+import propsAreValid, {logError, impressionEvent} from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 import _ from 'lodash';
 
@@ -25,21 +25,30 @@ class Vertical extends React.Component {
             winTop: 0,
             scrollTop: 0,
         };
+
+        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
     }
 
     componentDidMount() {
         //when component mounts check if it is in the viewport
-        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
         this._checkSceneVisible();
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillUpdate(nextProps, nextState) {
+        if(nextState.active === true && this.state.active === false) {
+            this._logImpression(true)
+        }
+
+        if(nextState.active === false && this.state.active === true) {
+            this._logImpression(false)
+        }
+
         //get new dimensions from the parent component VerticalPage
-        if(this.state.winHeight !== nextProps.winHeight) {
+        if(nextState.winHeight !== nextProps.winHeight) {
             this._updateDimensions(nextProps);
         }
 
-        if(this.state.scrollTop !== nextProps.scrollTop || nextProps.scrollTop === 0) {
+        if(nextState.scrollTop !== nextProps.scrollTop || nextProps.scrollTop === 0) {
             this._checkSceneVisible();
         }
     }
@@ -79,6 +88,10 @@ class Vertical extends React.Component {
                 this._onLeaveViewport(el);
             }
         }
+    }
+
+    _logImpression(visible) {
+        impressionEvent(visible, this.props.data.groupIdentifier, this.props.data.sectionIdentifier);
     }
 
     render() {
