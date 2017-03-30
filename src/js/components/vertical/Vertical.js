@@ -42,13 +42,16 @@ class Vertical extends React.Component {
         if(nextState.active === false && this.state.active === true) {
             this._logImpression(false)
         }
+    }
+
+    componentWillReceiveProps(nextProps, nextState) {
 
         //get new dimensions from the parent component VerticalPage
-        if(nextState.winHeight !== nextProps.winHeight) {
+        if(this.state.winHeight !== nextProps.winHeight) {
             this._updateDimensions(nextProps);
         }
 
-        if(nextState.scrollTop !== nextProps.scrollTop || nextProps.scrollTop === 0) {
+        if(this.state.scrollTop !== nextProps.scrollTop || nextProps.scrollTop === 0) {
             this._checkSceneVisible();
         }
     }
