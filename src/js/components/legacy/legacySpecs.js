@@ -41,7 +41,7 @@ class LegacySpecs extends React.Component {
 
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {logo, textSide} = this.props.data;
+            let {logo, textSide, legalText} = this.props.data;
 
             return (
                 <div className="template-contentCard m-feature legacy-feature layout-specifications" data-grid="col-12">
@@ -75,7 +75,7 @@ class LegacySpecs extends React.Component {
                                     }, this)}
                                 </ul>
                             </div>
-                            <div className="text-legal">{textSide}</div>
+                            <div className="text-legal">{legalText}</div>
                         </div>
                     </div>
                 </div>
