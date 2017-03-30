@@ -214,7 +214,7 @@ class Main extends React.Component {
                     {/*
                      display sticky footer if there are no legacy layouts
                      */}
-                    {this.state.currentPage.sections && this.props.legacyLayouts != true ?
+                    {this.state.currentPage.sections && this.props.legacyLayouts !== true ?
                         <StickyFooter data={this.state.currentPage}/>
                         :
                         <DownArrow data={this.state.currentPage} onClick={(event) => this._handleDownArrow(event)}/>
