@@ -47,12 +47,11 @@ class Video extends React.Component {
 
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {src} = this.props.data,
-                className = this.props;
+            let {src} = this.props.data;
 
             return (
                 //TODO: fix aria labels
-                <video className={className ? className : 'f-video-player'} preload="metadata" loop
+                <video className="f-video-player" preload="metadata" loop
                        aria-labelledby="" aria-describedby=""
                        ref="vidRef" muted={this.state.mute} >
                     <source src={src ? src : null} type="video/mp4"/>
