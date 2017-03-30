@@ -1,5 +1,4 @@
 import React from 'react';
-import './legacy.scss!';
 import sanitizeHtml from 'sanitize-html';
 import propsAreValid from '../../lib/util';
 import _ from 'lodash';

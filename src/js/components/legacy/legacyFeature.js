@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import './legacy.scss!';
 import Button from '../button/Button';
 import Video from '../video/Video';
 import sanitizeHtml from 'sanitize-html';

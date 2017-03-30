@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import Button from '../button/Button';
-import './legacy.scss!';
 import sanitizeHtml from 'sanitize-html';
 import propsAreValid, {_cssSplit} from '../../lib/util';
 import _ from 'lodash';
