@@ -193,7 +193,7 @@ class Main extends React.Component {
     render() {
         if (propsAreValid(this.props.data, this)) {
             return (
-                <iframe id="main" ref={(main) => {
+                <main id="main" ref={(main) => {
                     this.mainRef = main;
                 }}>
                     {this.state.currentPage.sections ?
@@ -219,7 +219,7 @@ class Main extends React.Component {
                         :
                         <DownArrow data={this.state.currentPage} onClick={(event) => this._handleDownArrow(event)}/>
                     }
-                </iframe>
+                </main>
             )
         }
     }
