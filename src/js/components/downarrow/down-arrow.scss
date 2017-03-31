@@ -10,6 +10,10 @@
   position: fixed;
   z-index: 9999;
 
+  a {
+    background: rgba(241, 241, 242, 0.9);
+  }
+
   .f-next.f-large {
     height: 36px;
     width: 96px;
