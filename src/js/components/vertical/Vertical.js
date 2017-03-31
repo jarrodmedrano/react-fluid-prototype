@@ -83,9 +83,12 @@ class Vertical extends React.Component {
     _visibleY(el) {
         if(el) {
             //Check the rectangle of the dom node and fire a function if it's visible
-            let height = (this.state.winHeight + this.state.winTop);
-            let rect = findDOMNode(el).getBoundingClientRect();
-            if(rect.top >= 0 && ((rect.height + rect.top) / 2) < height && rect.bottom <= height) {
+            let rect = findDOMNode(el).getBoundingClientRect(),
+                rectHeight = rect.bottom,
+                rectHeightBuffer = rectHeight / 2,
+                rectTopBuffer = rect.top + rectHeightBuffer;
+
+            if(rectTopBuffer + rectHeightBuffer >= this.state.winTop && rectHeightBuffer <= this.state.winHeight) {
                 this._onEnterViewport(el);
             } else {
                 this._onLeaveViewport(el);
