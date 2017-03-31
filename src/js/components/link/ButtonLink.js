@@ -36,12 +36,8 @@ class ButtonLink extends React.Component {
         });
     }
 
-    _handleClick(internal, target) {
-        if(internal == true) {
-            scroll.scrollTo(0, {delay: 0, duration: 0});
-        } else {
-            externalNavigate(target);
-        }
+    _handleClick(target) {
+        externalNavigate(target);
     }
 
     render() {

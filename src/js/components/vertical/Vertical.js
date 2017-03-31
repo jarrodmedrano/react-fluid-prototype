@@ -23,7 +23,7 @@ class Vertical extends React.Component {
             active: false,
             winHeight: 0,
             winTop: 0,
-            scrollTop: 0,
+            scrollTop: 0
         };
 
         this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
@@ -85,7 +85,7 @@ class Vertical extends React.Component {
             //Check the rectangle of the dom node and fire a function if it's visible
             let height = (this.state.winHeight + this.state.winTop);
             let rect = findDOMNode(el).getBoundingClientRect();
-            if(rect.top >=0 && rect.bottom <= height && (rect.height + rect.top) < height) {
+            if(rect.top >= 0 && ((rect.height + rect.top) / 2) < height && rect.bottom <= height) {
                 this._onEnterViewport(el);
             } else {
                 this._onLeaveViewport(el);
