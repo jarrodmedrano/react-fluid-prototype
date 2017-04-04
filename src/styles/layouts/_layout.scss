@@ -38,7 +38,7 @@ body {
   //}
 
   main {
-    overflow: auto;
+    overflow-y: scroll;
     //overflow: initial;
     height: calc(100% - 45px);
     position: absolute;
