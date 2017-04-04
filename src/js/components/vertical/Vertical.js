@@ -26,7 +26,7 @@ class Vertical extends React.Component {
             scrollTop: 0
         };
 
-        this._checkSceneVisible = _.debounce(this._checkSceneVisible, 200);
+        this._checkSceneVisible = _.throttle(this._checkSceneVisible, 200, {leading: true});
     }
 
     componentDidMount() {

@@ -59,7 +59,7 @@ class Main extends React.Component {
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
         // this._updateDimensions = _.debounce(this._updateDimensions, 1000);
-        this._updateScrollPosition = _.debounce(this._updateScrollPosition, 200, {trailing: true});
+        this._updateScrollPosition = _.throttle(this._updateScrollPosition, 200, {leading: true});
     }
 
     componentDidMount() {
