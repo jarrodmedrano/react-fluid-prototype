@@ -38,7 +38,7 @@ body {
   //}
 
   main {
-    overflow-y: scroll;
+    -ms-overflow-style: scrollbar;
     //overflow: initial;
     height: calc(100% - 45px);
     position: absolute;
