@@ -17,6 +17,7 @@ import dummyHp from './legacy/dummyHP.json!';
 import dummyHebrew from './legacy/dummyHebrew.json!';
 import dummyVideos from './legacy/dummyVideos.json!';
 import dummyBestBuyStPatricks from './partner/bby/datasource.json!';
+import dummyButtons from './new/dummyButtons.json!';
 //final RDX schema from Chuck
 import rdx from './rdx.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);

@@ -5,9 +5,7 @@ import './button-link.scss!';
 import propsAreValid, {externalNavigate} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
 import sanitizeHtml from 'sanitize-html';
-import Scroll from 'react-scroll';
-const scroll = Scroll.animateScroll;
-const scrollSpy = Scroll.scrollSpy;
+import appHistory from '../../app';
 
 class ButtonLink extends React.Component {
 
@@ -36,8 +34,22 @@ class ButtonLink extends React.Component {
         });
     }
 
-    _handleClick(target) {
-        externalNavigate(target);
+    _handleClick(target, internal) {
+        if(internal) {
+            if(target.indexOf("#")=== -1) {
+                appHistory.push(target);
+            } else {
+                appHistory.push(target);
+
+                setTimeout(() => {
+                    const id = target.split('#')[1];
+                    const element = document.getElementById(id);
+                    if (element) element.scrollIntoView();
+                }, 0);
+            }
+        } else {
+            externalNavigate(target);
+        }
     }
 
     render() {
@@ -49,18 +61,18 @@ class ButtonLink extends React.Component {
             if (_isInternal) {
                 if(layout === 'mosaic') {
                     return (
-                        <Link className={templateClass} to={to} {...rest} draggable="false" />
+                        <Link className={templateClass} to={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to, true)}} draggable="false">{children}</Link>
                     )
                 } else {
                     return (
-                        <Link className={templateClass} to={to} {...rest} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false"  />
+                        <Link className={templateClass} to={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to, true)}} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false"  />
                     );
                 }
             } else {
                 if(layout === 'mosaic') {
-                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to)}} draggable="false">{children}</a>);
+                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to, false)}} draggable="false">{children}</a>);
                 } else {
-                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to)}} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />);
+                    return (<a href={to} {...rest} onClick={(e) => {e.preventDefault(); this._handleClick(to, false)}} dangerouslySetInnerHTML={{ __html: this.cleanHtml(children) }} draggable="false" />);
                 }
             }
         } return null

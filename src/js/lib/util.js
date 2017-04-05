@@ -7,7 +7,6 @@ export function externalNavigate(target) {
     } else {
         window.location = target;
     }
-    // console.log(target);
 }
 
 export function navigateEvent(group, section, source) {

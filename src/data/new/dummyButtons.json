@@ -1,0 +1,206 @@
+{
+  "$schema": "../singleGroupSchema.json?reload",
+  "ordinal": 500,
+  "groupIdentifier": "oem",
+  "brand": {
+    "logo": "",
+    "anchorTitle": "-- Mosaic --",
+    "color": "#003b64",
+    "logoTab": "",
+    "selectedLogoTab": ""
+  },
+  "sections": [
+    {
+      "groupIdentifier": "oem",
+      "ordinal": "500",
+      "sectionIdentifier": "Mosaic",
+      "anchorLink": true,
+      "anchorTitle": "Accessories",
+      "layout": {
+        "type": "mosaic",
+        "mosaicLayout": "mosaic-3",
+        "theme": "theme-dark",
+        "tiles": [
+          {
+            "headingBlock": {
+              "heading": "External Link",
+              "subheading": "Should link to http://www.microsoft.com",
+              "backgroundColor": "#0078D7",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Click Me",
+                "textColor": "white"
+              }
+            }
+          },
+          {
+            "headingBlock": {
+              "heading": "Internal Link",
+              "subheading": "Should link to Section2",
+              "button": {
+                "layout": "link",
+                "link": "Section2",
+                "text": "Click Me",
+                "textColor": "white"
+              }
+            }
+          },
+          {
+            "hoverEffectColor": "#000",
+            "headingBlock": {
+              "heading": "Internal Link",
+              "subheading": "Should link to Section3",
+              "button": {
+                "layout": "link",
+                "link": "Section3",
+                "text": "Click Me",
+                "textColor": "white"
+              }
+            }
+          },
+          {
+            "hoverEffectColor": "#000",
+            "headingBlock": {
+              "heading": "Internal Link",
+              "subheading": "Should link to /office",
+              "backgroundColor": "#000",
+              "button": {
+                "layout": "link",
+                "link": "/office",
+                "text": "Click Me",
+                "textColor": "white"
+              }
+            }
+          },
+          {
+            "hoverEffectColor": "#000",
+            "headingBlock": {
+              "heading": "Internal Link",
+              "subheading": "Should link to /windows/Cortana",
+              "backgroundColor": "#000",
+              "button": {
+                "layout": "link",
+                "link": "/windows#Cortana",
+                "text": "Click Me",
+                "textColor": "white"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ordinal": 200,
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "Section2",
+      "anchorLink": true,
+      "anchorTitle": "Section2",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "right",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 300,
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "Section3",
+      "anchorLink": true,
+      "anchorTitle": "Section3",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "right",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -41,10 +41,11 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: scrollbar;
     //overflow: initial;
-    height: calc(100% - 45px);
+    height: 100%;
     position: absolute;
     width: 100%;
     left: 0;
+    top: 0;
   }
 }
 

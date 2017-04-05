@@ -64,6 +64,7 @@ class App extends React.Component {
         window.reset();
     }
 
+
     render() {
         return (
             <ReactCSSTransitionGroup component="div" transitionName="page-transition"
@@ -83,9 +84,27 @@ class RenderForcer extends React.Component {
         this.forceUpdate();
     }
 
+
+    _hashLinkScroll() {
+        const { hash } = window.location;
+
+        console.log(window.location);
+
+        if (hash !== '') {
+            // Push onto callback queue so it runs after the DOM is updated,
+            // this is required when navigating from a different page so that
+            // the element is rendered on the page before trying to getElementById.
+            setTimeout(() => {
+                const id = hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) element.scrollIntoView();
+            }, 0);
+        }
+    }
+
     render() {
         return (
-            <Router history={appHistory}>
+            <Router history={appHistory} onChange={this._hashLinkScroll}>
                 <Route path="/" component={App}>
                     <IndexRoute title={Index.groupIdentifier}
                                 component={(props, state, params) => <MasterLayout {...props} />}/>
@@ -107,3 +126,5 @@ ReactDOM.render(
 App.propTypes = {
     children: React.PropTypes.node
 };
+
+export default appHistory;

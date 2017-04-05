@@ -68,7 +68,7 @@ class Main extends React.Component {
         this.state.events.forEach((type) => {
             this.mainRef.addEventListener(type, this._updateScrollPosition.bind(this), false)
         });
-        window.addEventListener('resize', _.debounce(this._updateDimensions.bind(this)));
+        window.addEventListener('resize', _.debounce(this._updateDimensions.bind(this), 1000, {trailing: true}));
         scrollSpy.update();
     }
 
