@@ -9,7 +9,7 @@ import LegacyFeature from '../legacy/legacyFeature';
 import LegacyKSP from '../legacy/legacyksp';
 import LegacyCenteredBackdrop from '../legacy/legacycenteredbackdrop';
 import LegacySpecs from '../legacy/legacySpecs';
-import propsAreValid, {logError, impressionEvent} from '../../lib/util';
+import propsAreValid, {logError, impressionEvent, requestFrameThrottle} from '../../lib/util';
 import dataPropTypes, {verticalPropTypes} from '../../../data/dataProps';
 import _ from 'lodash';
 
@@ -26,7 +26,7 @@ class Vertical extends React.Component {
             scrollTop: 0
         };
 
-        this._checkSceneVisible = _.throttle(this._checkSceneVisible, 200, {leading: true});
+        this._checkSceneVisible = requestFrameThrottle(this._checkSceneVisible.bind(this));
     }
 
     componentDidMount() {

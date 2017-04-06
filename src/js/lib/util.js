@@ -38,7 +38,7 @@ export function _cssSplit(str){
     }
 }
 
-export let logError = (...args) => {
+export const logError = (...args) => {
     if(window.RDX) {
         window.RDX.logError(...args);
     } else {
@@ -55,6 +55,26 @@ export default function propsAreValid(props, componentName = 'ANONYMOUS') {
         return true
     }
 }
+
+export const requestFrameThrottle = callback => {
+    let requestId;
+
+    const later = args => () => {
+        requestId = null;
+        callback(...args)
+    };
+
+    const throttled = (...args) => {
+        if (requestId == null) {
+            requestId = requestAnimationFrame(later(args))
+        }
+    };
+
+    throttled.cancel = () =>
+        cancelAnimationFrame(requestId);
+
+    return throttled
+};
 
 function createChainableTypeChecker(validate) {
     function checkType(isRequired, props, propName, componentName, location) {

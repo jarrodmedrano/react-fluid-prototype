@@ -1,7 +1,7 @@
 import React from 'react'
 import {findDOMNode} from 'react-dom'
 import dataPropTypes, {MainPropTypes} from '../../../data/dataProps';
-import propsAreValid, {impressionEvent, navigateEvent} from '../../lib/util';
+import propsAreValid, {navigateEvent} from '../../lib/util';
 import Vertical from '../vertical/Vertical';
 import StickyFooter from '../stickynav/StickyFooter';
 import DownArrow from '../downarrow/DownArrow';
@@ -58,15 +58,13 @@ class Main extends React.Component {
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
-        // this._updateDimensions = _.debounce(this._updateDimensions, 1000);
-        this._updateScrollPosition = _.throttle(this._updateScrollPosition, 200, {leading: true});
     }
 
     componentDidMount() {
         this._updateDimensions();
 
         this.state.events.forEach((type) => {
-            this.mainRef.addEventListener(type, this._updateScrollPosition.bind(this), false)
+            this.mainRef.addEventListener(type,  _.throttle(this._updateScrollPosition.bind(this), 1000, {leading: true}));
         });
         window.addEventListener('resize', _.debounce(this._updateDimensions.bind(this), 1000, {trailing: true}));
         scrollSpy.update();
@@ -172,6 +170,7 @@ class Main extends React.Component {
 
     _updateDimensions() {
         //Get rectangle of the main window.
+
         if (this.mainRef) {
             let rect = this.mainRef.getBoundingClientRect(),
                 mainHeight = rect.top + rect.height,
