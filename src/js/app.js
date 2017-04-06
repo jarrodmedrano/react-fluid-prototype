@@ -6,7 +6,7 @@ import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import Scroll  from 'react-scroll';
 const scroll = Scroll.animateScroll;
-import MasterLayout from './layouts/MasterLayout';
+import MasterLayout from './components/structure/MasterLayout';
 import data from '../data/assembleData';
 //TODO: replace this library with regular event listeners.
 import keydown from 'react-keydown';
