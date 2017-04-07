@@ -1,13 +1,10 @@
 import React from 'react'
-import { findDOMNode } from 'react-dom'
 import '../../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../../data/dataProps';
 import propsAreValid, {navigateEvent} from '../../lib/util';
 import StickyBanner from './header/stickynav/StickyBanner';
 import Tabs from './header/tabs/Tabs';
-import StickyFooter from './header/stickynav/StickyFooter';
 import Price from '../generic/price/Price';
-import DownArrow from './header/downarrow/DownArrow';
 import Button from '../generic/button/Button';
 import Main from './main/Main';
 import _ from 'lodash';

@@ -4,7 +4,7 @@ import dataPropTypes, {MainPropTypes} from '../../../../data/dataProps';
 import propsAreValid, {navigateEvent} from '../../../lib/util';
 import Vertical from './section/Vertical';
 import StickyFooter from '../header/stickynav/StickyFooter';
-import DownArrow from '../header/downarrow/DownArrow';
+import DownArrow from '../footer/downarrow/DownArrow';
 import _ from 'lodash';
 import keydown from 'react-keydown';
 import Element from '../../generic/scrollElement/Element';
