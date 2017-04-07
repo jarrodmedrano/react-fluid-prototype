@@ -24,7 +24,7 @@ class ButtonLink extends React.Component {
 
     cleanHtml(dirty) {
         return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span'],
+            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br', 'sup'],
             allowedAttributes: {
                 'a': ['href', 'style'],
                 'span': ['style'],
