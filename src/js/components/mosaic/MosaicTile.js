@@ -23,7 +23,7 @@ class MosaicTile extends React.Component {
 
             if(headingBlock.button) {
                 return (
-                    <ButtonLink to={headingBlock.button.link} layout="mosaic" className="mosaic-link" draggable="false">
+                    <ButtonLink to={headingBlock.button.link} layout="mosaic">
                         <section className={tileClass} style={tileStyle}>
                             {hoverEffectColor ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: hoverEffectColor}} /> : null }
                             {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}

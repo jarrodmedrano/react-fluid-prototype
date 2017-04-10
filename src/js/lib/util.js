@@ -1,11 +1,26 @@
 import React from 'react';
 import _ from 'lodash';
+import appHistory from '../app';
 
 export function externalNavigate(target) {
     if(window.RDX) {
         window.RDX.externalNavigate(target);
     } else {
         window.location = target;
+    }
+}
+
+export function internalNavigate(target) {
+    if (target.indexOf("#") === -1) {
+        appHistory.push(target);
+    } else {
+        appHistory.push(target);
+
+        setTimeout(() => {
+            const id = target.split('#')[1];
+            const element = document.getElementById(id);
+            if (element) element.scrollIntoView();
+        }, 0);
     }
 }
 

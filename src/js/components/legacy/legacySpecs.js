@@ -57,12 +57,15 @@ class LegacySpecs extends React.Component {
 
     _getResult(result, id) {
         let myClass;
+        //add a different class for odd numbered ones
         if(id % 2) {
             myClass = classNames('text-title spec');
         } else {
             myClass = classNames('text-base label');
         }
-        return <span key={id} className={myClass} dangerouslySetInnerHTML={{__html: this._cleanHtml(result)}} />
+        if(result) {
+            return <span key={id} className={myClass} dangerouslySetInnerHTML={{__html: this._cleanHtml(result)}} />
+        }
     }
 
     render() {
@@ -82,15 +85,13 @@ class LegacySpecs extends React.Component {
                                 <ul>
                                     {this.state.dataMap.map(function (result, id) {
                                         return (
-                                            result ?
                                             <li key={id}>
                                                 {result.map(function (result, id) {
                                                     return (
-                                                        //add a different class for odd numbered ones
                                                         this._getResult(result, id)
                                                     )
                                                 }, this)}
-                                            </li> : null
+                                            </li>
                                         )
                                     }, this)}
                                 </ul>

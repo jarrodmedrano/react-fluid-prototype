@@ -107,7 +107,7 @@
           "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
           "button": {
             "layout": "button",
-            "link": "#/windows",
+            "link": "/windows",
             "text": "Call to action",
             "ariaLabel": "ariaLabel",
             "textColor": "white",

@@ -14,7 +14,7 @@ class Button extends React.Component {
             };
             return (
                 <div>
-                    <ButtonLink to={toPage || link} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={this.props.style || btnStyle} children={text || buttonText} draggable="false" />
+                    <ButtonLink to={toPage || link} className="c-call-to-action c-glyph" aria-label={ariaLabel} style={this.props.style || btnStyle} children={text || buttonText} />
                 </div>
             )
         } return null
