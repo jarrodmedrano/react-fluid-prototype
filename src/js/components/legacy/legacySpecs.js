@@ -1,6 +1,7 @@
 import React from 'react';
 import sanitizeHtml from 'sanitize-html';
 import propsAreValid from '../../lib/util';
+import classNames from 'classnames';
 import _ from 'lodash';
 
 class LegacySpecs extends React.Component {
@@ -54,6 +55,16 @@ class LegacySpecs extends React.Component {
         });
     }
 
+    _getResult(result, id) {
+        let myClass;
+        if(id % 2) {
+            myClass = classNames('text-title spec');
+        } else {
+            myClass = classNames('text-base label');
+        }
+        return <span key={id} className={myClass} dangerouslySetInnerHTML={{__html: this._cleanHtml(result)}} />
+    }
+
     render() {
         if (propsAreValid(this.props.data, this)) {
             let {logo, legalText} = this.props.data;
@@ -76,13 +87,7 @@ class LegacySpecs extends React.Component {
                                                 {result.map(function (result, id) {
                                                     return (
                                                         //add a different class for odd numbered ones
-                                                        !id % 2 && result ?
-                                                            <span key={id}
-                                                                  className="text-base label" dangerouslySetInnerHTML={{__html: this._cleanHtml(result)}} />
-                                                            : result ?
-                                                            <span key={id}
-                                                                  className="text-title spec" dangerouslySetInnerHTML={{__html: this._cleanHtml(result)}} />
-                                                            : null
+                                                        this._getResult(result, id)
                                                     )
                                                 }, this)}
                                             </li> : null
