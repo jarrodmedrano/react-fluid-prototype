@@ -150,7 +150,7 @@ class Vertical extends React.Component {
                         {myLayout == 'threeColSpecs' ?
                             <LegacySpecs data={this.props.data}
                                          brandColor={this.props.brandColor ? this.props.brandColor : null}
-                                         active={this.state.active} myId={this.props.myId}/> : null
+                                         active={this.state.active} myId={this.props.myId} deviceInfo={this.props.deviceInfo} /> : null
                         }
                     </section>
                 )

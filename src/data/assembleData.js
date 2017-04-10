@@ -31,7 +31,13 @@ if(!window.RDX) {
             "price": "$1499",
             "salePrice": "$1399",
             "saleExpires": "11/1/16",
-            "label": "Starting at:"
+            "label": "Starting at:",
+            "WindowsEdition": "Windows 10",
+            "rawScreenResolution": "raw Screen Resolution",
+            "ScreenSize": "Screen Size",
+            "ProcessorDescription": "Processor Description",
+            "Memory": "Memory",
+            "StorageDescription": "Storage Description"
         },
         "ratings": {
             "rating": "3",
@@ -46,7 +52,7 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
-defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
+defaultVertical.groups.push(dummyOEM, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
 data = defaultVertical;
     //data = dummySurfacePro;
     //data = dummyHp;

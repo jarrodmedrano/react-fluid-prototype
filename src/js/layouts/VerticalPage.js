@@ -1,13 +1,10 @@
 import React from 'react'
-import { findDOMNode } from 'react-dom'
 import '../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../data/dataProps';
 import propsAreValid, {navigateEvent} from '../lib/util';
 import StickyBanner from '../components/stickynav/StickyBanner';
 import Tabs from '../components/tabs/Tabs';
-import StickyFooter from '../components/stickynav/StickyFooter';
 import Price from '../components/price/Price';
-import DownArrow from '../components/downarrow/DownArrow';
 import Button from '../components/button/Button';
 import Main from '../components/main/Main';
 import _ from 'lodash';
@@ -65,7 +62,7 @@ class VerticalPage extends React.Component {
         let findCompareModels = (oemGroup) => {
             _.find(oemGroup.sections, (result) =>  {
                 if (result.sectionIdentifier === 'Compare') {
-                    this.setState({compareModels: result})
+                    return this.setState({compareModels: result})
                 }
             })
         };
@@ -74,20 +71,20 @@ class VerticalPage extends React.Component {
             if (result.groupIdentifier === 'oem') {
                 this.setState({oemGroup: result},
                     findCompareModels(result)
-                )
+                );
             }
         });
 
         _.find(this.props.data.groups, (result) =>  {
             if (result.groupIdentifier === 'retailer') {
-                this.setState({retailerGroup: result})
+                return this.setState({retailerGroup: result})
             }
         });
 
         //Find out if there are legacy layouts in this page (or not)
         _.find(this.state.currentSections, (result) => {
             if(_.includes(result.layout, 'feature', 'featureCta', 'ksp', 'centeredBackdropTemplate', 'threeColSpecs')) {
-                this.setState({legacyLayouts: true})
+                return this.setState({legacyLayouts: true})
             }
         });
     }

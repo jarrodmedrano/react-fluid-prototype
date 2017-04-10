@@ -46,7 +46,6 @@ class Main extends React.Component {
             currentPaths: currentPaths,
             currentId: currentId,
             currentPath: currentPaths[currentId],
-            activeSections: [],
             currentSection: 0,
             currentSectionClass: currentSectionClass,
             currentTitle: title,
@@ -200,10 +199,9 @@ class Main extends React.Component {
                             return (
                                 <Element name={this.state.currentSectionClass + id} key={id}
                                          ref={`${this.props.route.title}-section-${id}`} itemRef={id}>
-                                    <Vertical data={result} brandColor={this.state.currentBrandColor}
-                                              activeSections={this.state.activeSections} myId={id}
+                                    <Vertical data={result} brandColor={this.state.currentBrandColor} myId={id}
                                               winHeight={this.state.winHeight} winTop={this.state.winTop}
-                                              scrollTop={this.state.scrollTop}/>
+                                              scrollTop={this.state.scrollTop} deviceInfo={this.props.data.deviceInformation} />
                                 </Element>
                             )
                         }, this)

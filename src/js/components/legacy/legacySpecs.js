@@ -7,13 +7,28 @@ class LegacySpecs extends React.Component {
     constructor(props) {
         super(props);
 
+        //TODO: this is a roundabout way of getting this
+        let retailInfo = _.reduce(props.data, (result, specsValue, specsKey) => {
+            if(_.startsWith(specsValue, 'RetailInfo.')) {
+                let specsString =  specsValue.substring(11, specsValue.length);
+                _.each(props.deviceInfo, (deviceValue, deviceKey) => {
+                    if (deviceKey === specsString) {
+                        result[specsKey] = deviceValue;
+                    }
+                })
+            } else {
+                result[specsKey] = specsValue
+            }
+            return result;
+        }, {});
+
         let dataMap = _.values([
-                [props.data["1-1-lead"], props.data["1-1-text"]],
-                [props.data["1-2-lead"], props.data["1-2-text"]],
-                [props.data["2-1-lead"], props.data["2-1-text"]],
-                [props.data["2-2-lead"], props.data["2-2-text"]],
-                [props.data["3-1-lead"], props.data["3-1-text"]],
-                [props.data["3-2-lead"], props.data["3-2-text"]]
+                [props.data["1-1-lead"], retailInfo["1-1-text"]],
+                [props.data["1-2-lead"], retailInfo["1-2-text"]],
+                [props.data["2-1-lead"], retailInfo["2-1-text"]],
+                [props.data["2-2-lead"], retailInfo["2-2-text"]],
+                [props.data["3-1-lead"], retailInfo["3-1-text"]],
+                [props.data["3-2-lead"], retailInfo["3-2-text"]]
             ]
         );
 
@@ -41,7 +56,7 @@ class LegacySpecs extends React.Component {
 
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {logo, textSide, legalText} = this.props.data;
+            let {logo, legalText} = this.props.data;
 
             return (
                 <div className="template-contentCard m-feature legacy-feature layout-specifications" data-grid="col-12">
