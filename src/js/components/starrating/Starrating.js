@@ -2,6 +2,7 @@
 import React from 'react';
 import ButtonLink from '../link/ButtonLink';
 import propsAreValid from '../../lib/util';
+import Text from '../text/Text';
 
 class Starrating extends React.Component {
 
@@ -11,7 +12,7 @@ class Starrating extends React.Component {
 
         return (
             <div className="c-rating f-community-rated f-user-rated f-aggregate">
-                <p className="x-screen-reader">Rating:
+                <p className="x-screen-reader"><Text data={ratingText} />
                     <span itemProp="ratingValue">{rating}</span>/
                     <span itemProp="bestRating">{bestRating}</span>
                 </p>

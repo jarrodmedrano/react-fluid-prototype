@@ -2,23 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import Button from '../button/Button';
 import Video from '../video/Video';
-import sanitizeHtml from 'sanitize-html';
+import Text from '../text/Text';
 import propsAreValid, {_cssSplit} from '../../lib/util';
 import _ from 'lodash';
 
 class LegacyFeature extends React.Component {
-
-    _cleanHtml(dirty) {
-        return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br', 'sup'],
-            allowedAttributes: {
-                'a': ['href', 'style'],
-                'span': ['style'],
-                'b': ['style'],
-                'p': ['style']
-            }
-        });
-    }
 
     render() {
         {/* 
@@ -72,18 +60,13 @@ class LegacyFeature extends React.Component {
                         <div style={rtl ? {textAlign: 'right'} : null}>
                             <div>
                                 {logo ? <img className="logo c-image" alt={header} src={logo}/> : null}
-                                {header ? <h1 className="c-heading c-logo" style={headerStyle}
-                                              dangerouslySetInnerHTML={{__html: this._cleanHtml(header)}}/> : null }
-                                {text1 ? <p className="c-paragraph"
-                                            dangerouslySetInnerHTML={{__html: this._cleanHtml(text1)}}/> : null }
-                                {text2 ? <p className="c-paragraph"
-                                            dangerouslySetInnerHTML={{__html: this._cleanHtml(text2)}}/> : null }
-                                {text3 ? <p className="c-paragraph"
-                                            dangerouslySetInnerHTML={{__html: this._cleanHtml(text3)}}/> : null }
+                                {header ? <h1 className="c-heading c-logo" style={headerStyle}><Text data={header} /></h1> : null }
+                                {text1 ? <p className="c-paragraph"><Text data={text1} /></p> : null }
+                                {text2 ? <p className="c-paragraph"><Text data={text2} /></p> : null }
+                                {text3 ? <p className="c-paragraph"><Text data={text3} /></p> : null }
                             </div>
                             {button ? <Button data={button} style={btnStyle}/> : null }
-                            {legalText ? <p className="c-paragraph-4"
-                                            dangerouslySetInnerHTML={{__html: this._cleanHtml(legalText)}}/> : null }
+                            {legalText ? <p className="c-paragraph-4"><Text data={legalText} /></p> : null }
                         </div>
                     </div>
                 </div>

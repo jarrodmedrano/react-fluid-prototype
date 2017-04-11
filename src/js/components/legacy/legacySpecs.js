@@ -1,8 +1,8 @@
 import React from 'react';
-import sanitizeHtml from 'sanitize-html';
-import propsAreValid from '../../lib/util';
+import propsAreValid, {cleanHtml} from '../../lib/util';
 import classNames from 'classnames';
 import _ from 'lodash';
+import Text from '../text/Text';
 
 class LegacySpecs extends React.Component {
     constructor(props) {
@@ -43,18 +43,6 @@ class LegacySpecs extends React.Component {
         }
     }
 
-    _cleanHtml(dirty) {
-        return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br', 'sup'],
-            allowedAttributes: {
-                'a': ['href', 'style'],
-                'span': ['style'],
-                'b': ['style'],
-                'p': ['style']
-            }
-        });
-    }
-
     _getResult(result, id) {
         let myClass;
         //add a different class for odd numbered ones
@@ -64,7 +52,7 @@ class LegacySpecs extends React.Component {
             myClass = classNames('text-base label');
         }
         if(result) {
-            return <span key={id} className={myClass} dangerouslySetInnerHTML={{__html: this._cleanHtml(result)}} />
+            return <span key={id} className={myClass} dangerouslySetInnerHTML={{__html: cleanHtml(result)}} />
         }
     }
 
@@ -96,7 +84,7 @@ class LegacySpecs extends React.Component {
                                     }, this)}
                                 </ul>
                             </div>
-                            <div className="text-legal">{legalText}</div>
+                            {legalText ? <div className="text-legal"><Text data={legalText} /></div> : null}
                         </div>
                     </div>
                 </div>

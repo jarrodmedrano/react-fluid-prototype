@@ -1,23 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import Button from '../button/Button';
-import sanitizeHtml from 'sanitize-html';
+import Text from '../text/Text';
 import propsAreValid, {_cssSplit} from '../../lib/util';
 import _ from 'lodash';
 
 class LegacyKSP extends React.Component {
-    //TODO: stub this out into ../../lib/util
-    cleanHtml(dirty) {
-        return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br', 'sup'],
-            allowedAttributes: {
-                'a': ['href', 'style'],
-                'span': ['style'],
-                'b': ['style'],
-                'p': ['style']
-            }
-        });
-    }
 
     render() {
         if (propsAreValid(this.props.data, this)) {
@@ -63,8 +51,7 @@ class LegacyKSP extends React.Component {
                         <div>
                             <div>
                                 {logo ? <img className="logo c-image" alt={header} src={logo}/> : null }
-                                {header ? <h1 className="c-heading c-logo" style={headerStyle}
-                                              dangerouslySetInnerHTML={{__html: this.cleanHtml(header)}}/> : null }
+                                {header ? <h1 className="c-heading c-logo" style={headerStyle}><Text data={header} /></h1> : null }
 
                                 <div data-grid="col-12" className="c-structured-list"
                                      style={rtl ? {textAlign: 'right'} : null}>
@@ -76,12 +63,10 @@ class LegacyKSP extends React.Component {
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
-                                                    {text1 || itemheading1 ? <strong
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text1 ? text1 : itemheading1 ? itemheading1 : null)}}/> : null }
+                                                    {text1 || itemheading1 ? <strong><Text data={text1 ? text1 : itemheading1 ? itemheading1 : null} /></strong> : null }
                                                 </p>
                                                 {caption1 || itembody1 ?
-                                                    <p className="c-paragraph-4"
-                                                       dangerouslySetInnerHTML={{__html: this.cleanHtml(caption1 ? caption1 : itembody1 ? itembody1 : null)}}/> : null }
+                                                    <p className="c-paragraph-4"><Text data={caption1 ? caption1 : itembody1 ? itembody1 : null} /></p> : null }
                                             </div>
                                         </li>
                                         <li className="f-row">
@@ -91,19 +76,16 @@ class LegacyKSP extends React.Component {
                                                 </div> : null }
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
-                                                    {text2 || itemheading2 ? <strong
-                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(text2 ? text2 : itemheading2 ? itemheading2 : null)}}/> : null }
+                                                    {text2 || itemheading2 ? <strong><Text data={text2 ? text2 : itemheading2 ? itemheading2 : null} /></strong> : null }
                                                 </p>
-                                                {caption2 || itembody2 ? <p className="c-paragraph-4"
-                                                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(caption2 ? caption2 : itembody2 ? itembody2 : null)}}/> : null }
+                                                {caption2 || itembody2 ? <p className="c-paragraph-4"><Text data={caption2 ? caption2 : itembody2 ? itembody2 : null} /></p> : null }
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             {button ? <Button data={this.props.data.button} style={btnStyle}/> : null }
-                            {legalText ? <p className="c-paragraph-4"
-                                            dangerouslySetInnerHTML={{__html: this.cleanHtml(legalText)}}/> : null }
+                            {legalText ? <p className="c-paragraph-4"><Text data={legalText} /></p> : null }
                         </div>
                     </div>
                 </div>

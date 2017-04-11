@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import appHistory from '../app';
+import sanitizeHtml from 'sanitize-html';
 
 export function externalNavigate(target) {
     if(window.RDX) {
@@ -89,6 +90,18 @@ export const requestFrameThrottle = callback => {
         cancelAnimationFrame(requestId);
 
     return throttled
+};
+
+export const cleanHtml = (dirty) => {
+    return sanitizeHtml(dirty, {
+        allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br', 'sup'],
+        allowedAttributes: {
+            'a': ['href', 'style'],
+            'span': ['style'],
+            'b': ['style'],
+            'p': ['style']
+        }
+    });
 };
 
 function createChainableTypeChecker(validate) {

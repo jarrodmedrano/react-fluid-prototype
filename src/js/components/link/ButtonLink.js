@@ -1,8 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
-import {Link} from 'react-router';
 import './button-link.scss!';
-import propsAreValid, {externalNavigate, internalNavigate} from '../../lib/util';
+import propsAreValid, {externalNavigate, internalNavigate, cleanHtml} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
 import sanitizeHtml from 'sanitize-html';
 
@@ -37,18 +35,6 @@ class ButtonLink extends React.Component {
         if (to.indexOf("://") === -1 && to.indexOf("ms-") === -1) return true;
     }
 
-    cleanHtml(dirty) {
-        return sanitizeHtml(dirty, {
-            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'span', 'br', 'sup'],
-            allowedAttributes: {
-                'a': ['href', 'style'],
-                'span': ['style'],
-                'b': ['style'],
-                'p': ['style']
-            }
-        });
-    }
-
     _handleClick(target, internal) {
         if (internal) {
             internalNavigate(target);
@@ -75,7 +61,7 @@ class ButtonLink extends React.Component {
                 to: to,
                 href: to,
                 ...rest,
-                dangerouslySetInnerHTML: {__html: this.cleanHtml(children)}
+                dangerouslySetInnerHTML: {__html: cleanHtml(children)}
             }
         );
 

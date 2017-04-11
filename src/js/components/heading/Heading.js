@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../button/Button';
-import Picture from '../picture/Picture';
+import Text from '../text/Text';
 import propsAreValid from '../../lib/util';
 import dataPropTypes, {headingPropTypes} from '../../../data/dataProps';
 
@@ -15,10 +15,10 @@ class Heading extends React.Component {
             <div>
                 {/*{picture && alignY === 'bottom' ? <Picture data={picture} /> : null }*/}
                 <div className="content-animate">
-                    {badge ? <strong className="c-badge f-large f-highlight">{badge}</strong> : null }
-                    {heading ? <h1 className="c-heading">{heading}</h1> : null }
-                    {subheading ? <p className="c-subheading">{subheading}</p> : null }
-                    {paragraph ? <p className="c-paragraph">{paragraph}</p> : null }
+                    {badge ? <strong className="c-badge f-large f-highlight"><Text data={badge} /></strong> : null }
+                    {heading ? <h1 className="c-heading"><Text data={heading} /></h1> : null }
+                    {subheading ? <p className="c-subheading"><Text data={subheading} /></p> : null }
+                    {paragraph ? <p className="c-paragraph"><Text data={paragraph} /></p> : null }
                     {button ? <Button data={button} /> : null }
                 </div>
                 {/*{picture && alignY === 'top' ? <Picture data={picture} /> : null }*/}
