@@ -2,7 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import Button from '../button/Button';
 import Text from '../text/Text';
-import propsAreValid, {_cssSplit} from '../../lib/util';
+import propsAreValid from '../../lib/util';
+import {transform} from '../../../jspm_packages/github/staxmanade/CssToReact@gh-pages/transform.js'
 
 class LegacyCenteredBackdrop extends React.Component {
 
@@ -45,7 +46,7 @@ class LegacyCenteredBackdrop extends React.Component {
             };
 
             //take template style and style and merge them (if style exists)
-            let mergedStyle = style && templateStyle ? Object.assign(templateStyle, _cssSplit(style)) : null;
+            let mergedStyle = style && templateStyle ? Object.assign(templateStyle, transform(style)) : null;
 
             return (
                 <div className={templateClass} style={mergedStyle || templateStyle}>
@@ -63,8 +64,8 @@ class LegacyCenteredBackdrop extends React.Component {
                     </div>
                     {media ?
                         <picture className="c-image">
-                            <source srcSet={media.src}/>
-                            <img srcSet={media.src} src={media.src}/>
+                            <source srcSet={media.src} />
+                            <img srcSet={media.src} src={media.src} />
                         </picture> : null
                     }
                 </div>
