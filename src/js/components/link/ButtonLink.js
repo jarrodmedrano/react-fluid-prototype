@@ -2,8 +2,6 @@ import React from 'react';
 import './button-link.scss!';
 import propsAreValid, {externalNavigate, internalNavigate, cleanHtml} from '../../lib/util';
 import {linkPropTypes} from '../../../data/dataProps';
-import sanitizeHtml from 'sanitize-html';
-
 
 class ButtonLink extends React.Component {
 
@@ -37,7 +35,7 @@ class ButtonLink extends React.Component {
 
     _handleClick(target, internal) {
         if (internal) {
-            internalNavigate(target);
+            internalNavigate(target, this.context.router);
         } else {
             externalNavigate(target);
         }
@@ -97,5 +95,9 @@ ButtonLink.defaultProps = {
 };
 
 ButtonLink.propTypes = linkPropTypes;
+
+ButtonLink.contextTypes = {
+    router: React.PropTypes.object,
+};
 
 export default ButtonLink;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Link functions Should have internal state false when linking externally 1`] = `
+<a
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  draggable="false"
+  href="http://www.google.com"
+  onClick={[Function]}
+  to="http://www.google.com"
+/>
+`;
+
+exports[`Button Link functions Should have internal state true when linking internally 1`] = `
+<a
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  draggable="false"
+  href="/windows/#Cortana"
+  onClick={[Function]}
+  to="/windows/#Cortana"
+/>
+`;
+
+exports[`Button Link functions should click 1`] = `
+<a
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  draggable="false"
+  href=""
+  onClick={[Function]}
+  to=""
+/>
+`;
+
+exports[`Button Link functions should render without exploding 1`] = `
+<a
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  draggable="false"
+  href=""
+  onClick={[Function]}
+  to=""
+/>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vertical should fire impression event when active and fire again when it changes to non active 1`] = `
+<section
+  className="scene-vertical oem hero1 threeColSpecs inactive"
+  dir={null}
+  id="hero1"
+  name="hero1"
+>
+  <LegacySpecs
+    active={false}
+    brandColor={null}
+    data={
+      Object {
+        "groupIdentifier": "oem",
+        "layout": "threeColSpecs",
+        "ordinal": "100",
+        "sectionIdentifier": "hero1",
+      }
+    }
+  />
+</section>
+`;
+
+exports[`Vertical should render without exploding 1`] = `
+<section
+  className="scene-vertical oem hero1 threeColSpecs inactive"
+  dir={null}
+  id="hero1"
+  name="hero1"
+>
+  <LegacySpecs
+    active={false}
+    brandColor={null}
+    data={
+      Object {
+        "groupIdentifier": "oem",
+        "layout": "threeColSpecs",
+        "ordinal": "100",
+        "sectionIdentifier": "hero1",
+      }
+    }
+  />
+</section>
+`;

@@ -1,6 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
-import appHistory from '../app';
 import sanitizeHtml from 'sanitize-html';
 
 export function externalNavigate(target) {
@@ -11,11 +9,11 @@ export function externalNavigate(target) {
     }
 }
 
-export function internalNavigate(target) {
+export function internalNavigate(target, router) {
     if (target.indexOf("#") === -1) {
-        appHistory.push(target);
+        router.push(target);
     } else {
-        appHistory.push(target);
+        router.push(target);
 
         setTimeout(() => {
             const id = target.split('#')[1];
@@ -35,23 +33,15 @@ export function navigateEvent(group, section, source) {
 }
 
 export function impressionEvent(visible, group, section) {
+    if(visible === undefined || group === undefined || section === undefined) {
+        return false;
+    }
     if(window.RDX) {
         window.RDX.impressionEvent(visible, group, section);
     }
     // else {
     //     console.log('visible', visible, 'group', group, 'section', section)
     // }
-}
-
-export function _cssSplit(str){
-    if(str) {
-        let O = {},
-            S = str.match(/([^ :/',;]+)/g) || [];
-        while(S.length) {
-            O[S.shift()]= S.shift() || '';
-        }
-        return _.mapKeys(O, function (v, k) {return _.camelCase(k)});
-    }
 }
 
 export const logError = (...args) => {
@@ -82,6 +72,7 @@ export const requestFrameThrottle = callback => {
 
     const throttled = (...args) => {
         if (requestId == null) {
+            if(typeof requestAnimationFrame === 'undefined') return;
             requestId = requestAnimationFrame(later(args))
         }
     };
@@ -103,26 +94,3 @@ export const cleanHtml = (dirty) => {
         }
     });
 };
-
-function createChainableTypeChecker(validate) {
-    function checkType(isRequired, props, propName, componentName, location) {
-        componentName = componentName || ANONYMOUS;
-        if (props[propName] == null) {
-            var locationName = ReactPropTypeLocationNames[location];
-            if (isRequired) {
-                return new Error(
-                    ("Required " + locationName + " `" + propName + "` was not specified in ") +
-                    ("`" + componentName + "`.")
-                );
-            }
-            return null;
-        } else {
-            return validate(props, propName, componentName, location);
-        }
-    }
-
-    let chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
-
-    return chainedCheckType;
-}

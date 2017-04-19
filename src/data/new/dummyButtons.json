@@ -81,7 +81,7 @@
               "backgroundColor": "#000",
               "button": {
                 "layout": "link",
-                "link": "windows#Cortana",
+                "link": "/windows#Cortana",
                 "text": "Click Me",
                 "textColor": "white"
               }

@@ -1,5 +1,6 @@
 import React from 'react'
 import propsAreValid from '../lib/util';
+import PropTypes from 'prop-types';
 //Components
 import VerticalPage from './VerticalPage';
 
@@ -14,7 +15,7 @@ class MasterLayout extends React.Component {
 }
 
 MasterLayout.propTypes = {
-    data: React.PropTypes.object.isRequired
+    data: PropTypes.object.isRequired
 };
 
 export default MasterLayout

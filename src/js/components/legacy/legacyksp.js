@@ -4,6 +4,7 @@ import Button from '../button/Button';
 import Text from '../text/Text';
 import propsAreValid, {_cssSplit} from '../../lib/util';
 import _ from 'lodash';
+import {transform} from '../../../jspm_packages/github/staxmanade/CssToReact@gh-pages/transform.js'
 
 class LegacyKSP extends React.Component {
 
@@ -21,13 +22,12 @@ class LegacyKSP extends React.Component {
                 style, textSide, header, logo, text1, text2, itembody1, itembody2, itemheading1, itemheading2, caption1, caption2, icon1, icon2, media, button, legalText
             } = this.props.data;
 
-            let splitStyle = _cssSplit(style);
 
-            let rtl = _.includes(splitStyle, 'rtl');
+            let rtl = _.includes(style, 'rtl');
 
             let templateClass = classNames(`f-align-${rtl === true ? `right` : textSide}`, `c-feature`);
 
-            let templateStyle = splitStyle;
+            let templateStyle = transform(style);
 
             let btnStyle = {
                 background: cardButtonBackground,

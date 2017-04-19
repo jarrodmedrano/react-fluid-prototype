@@ -44,7 +44,7 @@ class Vertical extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps, nextState) {
+    componentWillReceiveProps(nextProps) {
 
         //get new dimensions from the parent component VerticalPage
         if(this.state.winHeight !== nextProps.winHeight) {

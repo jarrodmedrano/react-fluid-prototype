@@ -1,20 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 {/*
     Proptypes are evaluated at run time and will throw WARNINGS if missing
     ONLY RUNS IN DEVELOPMENT, NOT IN PRODUCTION
 */}
 
-let string = React.PropTypes.string,
-    number = React.PropTypes.number,
-    requiredString = React.PropTypes.string.isRequired,
-    requiredNum = React.PropTypes.number.isRequired,
-    requiredObj = React.PropTypes.object.isRequired,
-    requiredBool = React.PropTypes.bool.isRequired;
+let string = PropTypes.string,
+    number = PropTypes.number,
+    requiredString = PropTypes.string.isRequired,
+    requiredNum = PropTypes.number.isRequired,
+    requiredObj = PropTypes.object.isRequired,
+    requiredBool = PropTypes.bool.isRequired;
 
 export let picturePropTypes = {
-    pictures: React.PropTypes.arrayOf(
-        React.PropTypes.shape({
+    pictures: PropTypes.arrayOf(
+        PropTypes.shape({
             src: string.isRequired,
             minwidth: string,
         })
@@ -31,7 +32,7 @@ export let headingPropTypes = {
 };
 
 export let buttonPropTypes = {
-    button: React.PropTypes.shape({
+    button: PropTypes.shape({
         layout: string,
         link: string,
         text: string,
@@ -54,7 +55,7 @@ export let buttonInterface = {
 };
 
 export let ratingsPropTypes = {
-    ratings: React.PropTypes.shape({
+    ratings: PropTypes.shape({
         rating: requiredString,
         bestRating: requiredString,
         ratingText: requiredString,
@@ -74,7 +75,7 @@ export let devicePropTypes = {
 export let containerPropTypes = {
     mosaicLayout: string,
     theme: string,
-    tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
+    tiles: PropTypes.arrayOf(PropTypes.shape({
         heading: Object.assign(headingPropTypes.heading),
         size: string,
         pictures: Object.assign(picturePropTypes.pictures),
@@ -84,7 +85,7 @@ export let containerPropTypes = {
 
 
 export let tilePropTypes = {
-  tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
+  tiles: PropTypes.arrayOf(PropTypes.shape({
       heading: Object.assign(headingPropTypes.heading),
       size: string,
       pictures: Object.assign(picturePropTypes.pictures),
@@ -94,7 +95,7 @@ export let tilePropTypes = {
 };
 
 export let mosaicPropTypes = {
-  mosaic: React.PropTypes.shape({
+  mosaic: PropTypes.shape({
       theme: string,
       layout: string,
       tiles: Object.assign(tilePropTypes.tiles)
@@ -112,37 +113,37 @@ export let heroPropTypes = {
     button: Object.assign(buttonPropTypes.button)
 };
 
-export let listPropTypes = React.PropTypes.array.isRequired;
+export let listPropTypes = PropTypes.array.isRequired;
 
-export let listItemPropTypes = React.PropTypes.string.isRequired;
+export let listItemPropTypes = PropTypes.string.isRequired;
 
 export let linkPropTypes = {
-    to: React.PropTypes.string.isRequired,
-    children: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.object
+    to: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
     ]).isRequired
 };
 
 export let verticalPropTypes = {
-    layout: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.object
+    layout: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
     ]).isRequired,
-    ordinal: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.number
+    ordinal: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
     ]).isRequired,
     groupIdentifier: requiredString,
     sectionIdentifier: requiredString
 };
 
 export let sectionPropTypes = {
-    sections: React.PropTypes.arrayOf(React.PropTypes.shape({
+    sections: PropTypes.arrayOf(PropTypes.shape({
         groupIdentifier: requiredString,
         sectionIdentifier: requiredString,
         layout: Object.assign(verticalPropTypes.layout),
-        anchorLink: React.PropTypes.bool,
+        anchorLink: PropTypes.bool,
     }))
 };
 
@@ -151,10 +152,10 @@ export let footerPropTypes = {
 };
 
 export let verticalPagePropTypes = {
-    route: React.PropTypes.object,
-    groups: React.PropTypes.arrayOf(React.PropTypes.shape({
+    route: PropTypes.object,
+    groups: PropTypes.arrayOf(PropTypes.shape({
         groupIdentifier: requiredString,
-        brand: React.PropTypes.shape({
+        brand: PropTypes.shape({
             logoTab: string,
             color: string,
         }).isRequired,
@@ -163,10 +164,10 @@ export let verticalPagePropTypes = {
 };
 
 export let MainPropTypes = {
-    route: React.PropTypes.object,
-    groups: React.PropTypes.arrayOf(React.PropTypes.shape({
+    route: PropTypes.object,
+    groups: PropTypes.arrayOf(PropTypes.shape({
         groupIdentifier: requiredString,
-        brand: React.PropTypes.shape({
+        brand: PropTypes.shape({
             logoTab: string,
             color: string,
         }).isRequired,
@@ -176,30 +177,30 @@ export let MainPropTypes = {
 
 export default function dataPropTypes(component) {
     return {
-        data: React.PropTypes.shape(Object.assign(component)).isRequired
+        data: PropTypes.shape(Object.assign(component)).isRequired
     }
 }
 //
 // MasterLayout.propTypes = {
-//     routes : React.PropTypes.array.isRequired,
-//     route : React.PropTypes.object.isRequired,
-//     params : React.PropTypes.object.isRequired,
-//     data : React.PropTypes.shape({
+//     routes : PropTypes.array.isRequired,
+//     route : PropTypes.object.isRequired,
+//     params : PropTypes.object.isRequired,
+//     data : PropTypes.shape({
 //         layout: string,
-//         deviceInformation: React.PropTypes.object,
-//         ratings: React.PropTypes.shape({
+//         deviceInformation: PropTypes.object,
+//         ratings: PropTypes.shape({
 //             rating: requiredString,
 //             bestRating: requiredString,
 //             ratingText: requiredString,
 //             reviewLink: requiredString,
 //         }),
-//         groups: React.PropTypes.arrayOf(React.PropTypes.shape({
+//         groups: PropTypes.arrayOf(PropTypes.shape({
 //             groupIdentifier: requiredString,
-//             brand: React.PropTypes.shape({
+//             brand: PropTypes.shape({
 //                 logoTab: requiredString,
 //                 color: requiredString,
 //             }).isRequired,
-//             sections: React.PropTypes.arrayOf(React.PropTypes.shape({
+//             sections: PropTypes.arrayOf(PropTypes.shape({
 //                 groupIdentifier: requiredString,
 //                 sectionIdentifier: requiredString,
 //                 layout: requiredObj,
@@ -210,11 +211,11 @@ export default function dataPropTypes(component) {
 //                 paragraph: string,
 //                 altText: string,
 //                 ariaLabel: string,
-//                 pictures: React.PropTypes.arrayOf(React.PropTypes.shape({
+//                 pictures: PropTypes.arrayOf(PropTypes.shape({
 //                     src: string,
 //                     minwidth: string,
 //                 })),
-//                 button: React.PropTypes.shape({
+//                 button: PropTypes.shape({
 //                     layout: string,
 //                     link: string,
 //                     title: string,
@@ -226,18 +227,18 @@ export default function dataPropTypes(component) {
 //                 alignY: string,
 //                 theme: string,
 //                 video: string,
-//                 mosaic: React.PropTypes.shape({
+//                 mosaic: PropTypes.shape({
 //                     theme: string,
 //                     layout: string,
-//                     tiles: React.PropTypes.arrayOf(React.PropTypes.shape({
+//                     tiles: PropTypes.arrayOf(PropTypes.shape({
 //                         heading: string,
 //                         subheading: string,
 //                         size: string,
-//                         pictures: React.PropTypes.arrayOf(React.PropTypes.shape({
+//                         pictures: PropTypes.arrayOf(PropTypes.shape({
 //                             src: string,
 //                             minwidth: string,
 //                         })),
-//                         button: React.PropTypes.shape({
+//                         button: PropTypes.shape({
 //                             layout: string,
 //                             link: string,
 //                             title: string,
