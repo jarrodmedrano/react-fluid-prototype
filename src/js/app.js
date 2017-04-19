@@ -88,7 +88,7 @@ class RenderForcer extends React.Component {
 
     render() {
         return (
-            <Router history={appHistory} onUpdate={this._hashLinkScroll}>
+            <Router history={appHistory}>
                 <Route path="/" component={App}>
                     <IndexRoute title={Index.groupIdentifier}
                                 component={(props, state, params) => <MasterLayout {...props} />}/>
