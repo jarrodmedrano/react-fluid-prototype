@@ -110,5 +110,3 @@ ReactDOM.render(
 App.propTypes = {
     children: PropTypes.node
 };
-
-export default appHistory;
