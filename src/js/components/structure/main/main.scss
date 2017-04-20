@@ -1,0 +1,23 @@
+////! Copyright (C) Microsoft Corporation. All rights reserved.
+//
+////-----------------------------------------------------------------------------
+//// Custom Layout Definitions
+////-----------------------------------------------------------------------------
+
+body {
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 45px;
+
+  main {
+    overflow-y: scroll;
+    -ms-overflow-style: scrollbar;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 45px;
+    bottom: 0;
+  }
+}

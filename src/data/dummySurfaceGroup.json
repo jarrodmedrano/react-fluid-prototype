@@ -82,7 +82,8 @@
         "theme": "theme-dark",
         "alignY": "bottom",
         "headingBlock": {
-          "heading": "-- Hero Heading --"
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --"
         },
         "pictureBlock": {
           "altText": "AltText",
@@ -367,11 +368,13 @@
         "compare": {
           "models": [
             {
-              "heading": "-- Hero Heading --",
+              "headingBlock": {
+                "paragraph": "The light and casual browsing laptop which is also student friendly"
+              },
               "specs": [
-                "processor: Intel Core i7",
-                "storage: 1 TB",
-                "memory: 16 GB + dGPU"
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
               ],
               "features": [
                 "Light online browsing",
@@ -380,10 +383,15 @@
               ]
             },
             {
+              "selected": true,
+              "selectedHeader": "This device",
+              "headingBlock": {
+                "paragraph": "The ideal laptop for general browsing and emails"
+              },
               "specs": [
-                "processor: Intel Core i7",
-                "storage: 1 TB",
-                "memory: 16 GB + dGPU"
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
               ],
               "features": [
                 "Light online browsing",
@@ -392,10 +400,13 @@
               ]
             },
             {
+              "headingBlock": {
+                "paragraph": "The perfect laptop for editing photos and gaming"
+              },
               "specs": [
-                "processor: Intel Core i7",
-                "storage: 1 TB",
-                "memory: 16 GB + dGPU"
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
               ],
               "features": [
                 "Light online browsing",
@@ -404,10 +415,13 @@
               ]
             },
             {
+              "headingBlock": {
+                "paragraph": "The laptop for larger photos, larger apps and bigger gaming"
+              },
               "specs": [
-                "processor: Intel Core i7",
-                "storage: 1 TB",
-                "memory: 16 GB + dGPU"
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
               ],
               "features": [
                 "Light online browsing",
@@ -416,10 +430,13 @@
               ]
             },
             {
+              "headingBlock": {
+                "paragraph": "The ultimate in performance and versatility for professionals, creators, and more"
+              },
               "specs": [
-                "processor: Intel Core i7",
-                "storage: 1 TB",
-                "memory: 16 GB + dGPU"
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
               ],
               "features": [
                 "Light online browsing",
@@ -428,10 +445,103 @@
               ]
             },
             {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
               "specs": [
-                "processor: Intel Core i7",
-                "storage: 1 TB",
-                "memory: 16 GB + dGPU"
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
               ],
               "features": [
                 "Light online browsing",

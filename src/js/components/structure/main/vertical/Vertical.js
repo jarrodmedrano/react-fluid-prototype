@@ -103,7 +103,6 @@ class Vertical extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
             let active = this.state.active ? 'active' : 'inactive';
-
             let {layout, sectionIdentifier, readingDirection} = this.props.data;
             let myLayout = typeof layout === 'object' ? layout.type : layout;
             let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate', 'threeColSpecs'];
@@ -112,42 +111,42 @@ class Vertical extends React.Component {
                 return (
                     <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier}
                              dir={readingDirection ? readingDirection : null}>
-                        {myLayout == 'hero' || myLayout == 'immersiveHero' || myLayout == 'fullscreen' || myLayout == 'card' ?
+                        {myLayout == 'hero' || myLayout === 'immersiveHero' || myLayout === 'fullscreen' || myLayout === 'card' ?
                             <Hero data={this.props.data.layout}
                                   brandColor={this.props.brandColor ? this.props.brandColor : null}
                                   active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {myLayout == 'mosaic' ?
+                        {myLayout === 'mosaic' ?
                             <Mosaic data={this.props.data.layout}
                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
                                     active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {myLayout == 'compare' ?
+                        {myLayout === 'compare' ?
                             <CompareTable data={this.props.data.layout}
                                           brandColor={this.props.brandColor ? this.props.brandColor : null}
                                           active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {myLayout == 'feature' ?
+                        {myLayout === 'feature' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={this.props.brandColor ? this.props.brandColor : null}
                                            active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {myLayout == 'featureCta' ?
+                        {myLayout === 'featureCta' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={this.props.brandColor ? this.props.brandColor : null}
                                            active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {myLayout == 'ksp' || myLayout == 'ksp_rs' || myLayout == 'ksp_reversed' ?
+                        {myLayout === 'ksp' || myLayout == 'ksp_rs' || myLayout == 'ksp_reversed' ?
                             <LegacyKSP data={this.props.data}
                                        brandColor={this.props.brandColor ? this.props.brandColor : null}
                                        active={this.state.active} myId={this.props.myId} /> : null
                         }
-                        {myLayout == 'centeredBackdropTemplate' ?
+                        {myLayout === 'centeredBackdropTemplate' ?
                             <LegacyCenteredBackdrop data={this.props.data}
                                                     brandColor={this.props.brandColor ? this.props.brandColor : null}
                                                     active={this.state.active} myId={this.props.myId}/> : null
                         }
-                        {myLayout == 'threeColSpecs' ?
+                        {myLayout === 'threeColSpecs' ?
                             <LegacySpecs data={this.props.data}
                                          brandColor={this.props.brandColor ? this.props.brandColor : null}
                                          active={this.state.active} myId={this.props.myId} deviceInfo={this.props.deviceInfo} /> : null

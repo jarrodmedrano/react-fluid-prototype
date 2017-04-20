@@ -1,4 +1,5 @@
 import React from 'react'
+import './main.scss!';
 import {findDOMNode} from 'react-dom'
 import dataPropTypes, {MainPropTypes} from '../../../../data/dataProps';
 import propsAreValid, {navigateEvent} from '../../../lib/util';

@@ -2,38 +2,16 @@
 
  .page-transition-enter main > div  {
    opacity: 0;
-   //transform: translate3d(-250px,0,0);
-   //overflow: hidden;
-
-   //picture {
-   //  animation: hero-background-next cubic-bezier(0.16, 1, 0.29, 0.99) 0.667s both;
-   //}
-   //
-   //.content-animate {
-   //  animation: hero-content-previous cubic-bezier(0.16, 1, 0.29, 0.99) 0.667s both;
-   //}
  }
 
  .page-transition-enter.page-transition-enter-active main > div {
-   //overflow: hidden;
    opacity: 1;
-   //transform: translate3d(0,0,0);
    transition-property: opacity;
    transition-duration: 300ms;
    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
  }
 
  .page-transition-leave main > div {
-   //picture {
-   //  animation: hero-background-previous cubic-bezier(0.16, 1, 0.29, 0.99) 0.667s both;
-   //}
-   //
-   //.content-animate {
-   //  animation: hero-content-next cubic-bezier(0.16, 1, 0.29, 0.99) 0.667s both;
-   //}
-   //opacity: 1;
-   //overflow: hidden;
-   //transform: translate3d(0,0,0);
    transition-property: opacity;
    transition-duration: 300ms;
    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
@@ -41,6 +19,4 @@
 
  .page-transition-leave.page-transition-leave-active main > div {
    opacity: 0;
-   //transform: translate3d(250px,0,0);
-   //overflow: hidden;
  }

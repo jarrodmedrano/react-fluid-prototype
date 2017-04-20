@@ -12,7 +12,6 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
     "babel": "npm:babel-core@5.8.38",
     "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@6.24.1",
