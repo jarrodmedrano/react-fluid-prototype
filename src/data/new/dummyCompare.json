@@ -1,0 +1,262 @@
+{
+  "$schema": "../singleGroupSchema.json?reload",
+  "groupIdentifier": "fullscreen",
+  "brand": {
+    "logo": "",
+    "logoTab": "",
+    "selectedLogoTab": "",
+    "color": "#3076BC",
+    "anchorTitle": "-- Full Screen --"
+  },
+  "sections": [
+    {
+      "ordinal": 100,
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "SurfacePen",
+      "anchorLink": true,
+      "anchorTitle": "-- video title --",
+      "layout": {
+        "type": "compare",
+        "headingBlock": {
+          "heading": "-- Compare Heading --"
+        },
+        "compare": {
+          "models": [
+            {
+              "headingBlock": {
+                "paragraph": "The light and casual browsing laptop which is also student friendly"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "selected": true,
+              "selectedHeader": "This device",
+              "headingBlock": {
+                "paragraph": "The ideal laptop for general browsing and emails"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The perfect laptop for editing photos and gaming"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The laptop for larger photos, larger apps and bigger gaming"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The ultimate in performance and versatility for professionals, creators, and more"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            },
+            {
+              "headingBlock": {
+                "paragraph": "The most powerful laptop - the work and play PC"
+              },
+              "specs": [
+                "Intel Core i7",
+                "1 TB",
+                "16 GB + dGPU"
+              ],
+              "features": [
+                "Light online browsing",
+                "Send emails",
+                "Check mail"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 200,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section2",
+      "anchorLink": true,
+      "anchorTitle": "-- Center Center Dark --",
+      "layout": {
+        "type": "fullscreen",
+        "theme": "theme-dark",
+        "alignX": "center",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed"
+        },
+        "media": {
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+                "minWidth": "1400"
+              },
+              {
+                "src": "http://placehold.it/1399x787/2F2F2F/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/2F2F2F/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/2F2F2F/171717",
+                "minWidth": "(min-width:0)"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

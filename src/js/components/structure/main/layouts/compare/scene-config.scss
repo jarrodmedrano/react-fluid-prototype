@@ -4,12 +4,17 @@
 // Compare Chart
 //-----------------------------------------------------------------------------
 
-/*TODO decouple this class from the scss */
-.scene-vertical.comparetable {
+.scene-vertical.compare {
   background: #F3F3F3;
   height: auto;
   justify-content: flex-start;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
 }
+
 .config-table {
   flex-direction: column;
   padding: 0 20px 150px;
@@ -19,6 +24,10 @@
   display: flex;
   overflow: auto;
   width: 100vw;
+
+  hr {
+    opacity: 0.4;
+  }
 
   .auto-width {
     overflow-x: auto;
@@ -34,43 +43,24 @@
   .config-title {
     width: 100%;
     margin-bottom: 50px;
-
-    .c-heading-3 {
-      padding-left: 12px;
-
-    }
-
-    .title-border {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      padding-bottom: 15px;
-    }
-
-    .c-paragraph-1 {
-      padding-left: 12px;
-      padding-top: 60px;
-    }
   }
-
 
   .configs {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    .selected {
-      border: 2px solid rgba(0, 0, 0, 0.4);
-      color: #000;
-    }
-
     .config-card {
-      flex: 0 1 20%;
-      min-width: 20%;
+      flex: 0 1 15%;
+      min-width: 15vw;
       align-self: stretch;
       display: flex;
       flex-direction: column;
-      border: 2px solid rgba(0, 0, 0, 0.2);
-      position: relative;
       margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       ul {
         font-size: 15px;
@@ -82,25 +72,20 @@
         }
       }
 
-      &:last-child {
-        margin-right: 0;
+      .details {
+        border: 2px solid rgba(0, 0, 0, 0.2);
       }
 
-      .device-spec {
-        display: none;
-      }
-
-      &.selected .device-spec {
-        display: block;
-        width: 100%;
+      .selected-header {
+        width: calc(100% - 4px);
         min-height: 44px;
         line-height: 44px;
         background-color: #2077BB;
+        color: #fff;
         padding: 2px;
-        margin-top: -50px;
         box-sizing: content-box;
-        margin-left: -2px;
-        position: absolute;
+        position: relative;
+        opacity: 0;
 
         .c-paragraph-4 {
           color: #fff;
@@ -114,12 +99,21 @@
           vertical-align: top;
         }
       }
+
+      &.selected {
+        .selected-header {
+          opacity: 1;
+        }
+
+        .details {
+          border: 2px solid rgba(0, 0, 0, 0.4);
+        }
+      }
     }
 
-    .config-top {
-      //min-height: 108px;
+    .config-specs {
       width: auto;
-      background-color: rgba(203, 203, 203, 0.4);
+      background-color: #e2e2e2;
       padding-left: 10px;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -134,25 +128,7 @@
         margin: 0;
       }
 
-      .glyph-cpu {
-        font-weight: 400;
-      }
-
-      .glyph-cpu::before {
-        color: #2077BB;
-        font-size: 24px;
-        padding-right: 10px;
-        vertical-align: top;
-      }
-
-      .glyph-drive::before {
-        color: #2077BB;
-        font-size: 24px;
-        padding-right: 10px;
-        vertical-align: top;
-      }
-
-      .glyph-ram::before {
+      .mdl-glyph:before {
         color: #2077BB;
         font-size: 24px;
         padding-right: 10px;
@@ -169,17 +145,13 @@
         flex: 1;
       }
 
-      .price {
-        text-align: left;
-      }
-
       .content {
-        padding: 0 10px;
+        padding: .5em 10px;
         text-align: left;
 
         .c-paragraph-4 {
-          padding-top: 5px;
           flex: 1;
+          font-weight: 700;
         }
 
         .c-heading-3 {
@@ -190,12 +162,6 @@
           font-weight: 400;
         }
       }
-    }
-
-    .config-subheader {
-      padding: 0 0 20px;
-      border-bottom: 1px solid rgba(0, 0, 0, .2);
-      display: block;
     }
   }
 }

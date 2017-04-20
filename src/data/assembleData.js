@@ -3,6 +3,7 @@ import dummyHero from './new/dummyHero.json!';
 import dummyMosaic from './new/dummyMosaic.json!';
 import dummyAccMosaic from './new/dummyAccessoriesMosaic.json!';
 import dummyIHero from './new/dummyIHero.json!';
+import dummyCompare from './new/dummyCompare.json!';
 import dummyFullScreen from './new/dummyFullScreen.json!';
 import dummySurfacePro from './new/dummySurfacePro.json!';
 import dummyFVideo from './new/dummyFVideo.json!';
@@ -52,7 +53,7 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
-defaultVertical.groups.push(dummyButtons, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
+defaultVertical.groups.push(dummyCompare, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
 data = defaultVertical;
     //data = dummySurfacePro;
     //data = dummyHp;
