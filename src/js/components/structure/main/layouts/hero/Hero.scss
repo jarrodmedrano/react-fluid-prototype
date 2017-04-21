@@ -65,6 +65,20 @@ video {
   top: calc(60px + 72px);
 }
 
+.fact-tag {
+  ul {
+    list-style-type: none;
+    margin-top: 1em;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+  }
+}
+
 //
 //.m-immersive-hero-item > div > div {
 //  z-index: 1;

@@ -5,6 +5,10 @@ import './Hero.scss!';
 import './immersiveHero.scss!';
 import Picture from '../../../../generic/picture/Picture';
 import Video from '../../../../generic/video/Video';
+import Price from '../../../../generic/price/Price';
+import Text from '../../../../generic/text/Text';
+import Button from '../../../../generic/button/Button';
+import GenericList from '../../../../generic/list/GenericList';
 import propsAreValid from '../../../../../lib/util';
 import dataPropTypes, {heroPropTypes} from '../../../../../../data/dataProps';
 
@@ -50,6 +54,34 @@ class Hero extends React.Component {
                         )
                     }
                 }
+            }
+            else if (type === 'facts') {
+                let heroClassCard = classNames(heroClass, 'm-highlight-feature fact-tag');
+                let {heading, subheading, paragraph, button, badge} = this.props.data.headingBlock;
+                let {ScreenSize, ProcessorDescription, Memory, StorageDescription} = this.props.deviceInfo;
+
+                let specs = [ScreenSize, ProcessorDescription, Memory, StorageDescription];
+
+                return (
+                    <div data-grid="col-12" className={heroClassCard}>
+                        <Picture data={pictureBlock}/>
+                        <div>
+                            <div>
+                                {/*{picture && alignY === 'bottom' ? <Picture data={picture} /> : null }*/}
+                                <div className="content-animate">
+                                    {badge ? <strong className="c-badge f-large f-highlight"><Text data={badge} /></strong> : null }
+                                    {heading ? <h1 className="c-heading"><Text data={heading} /></h1> : null }
+                                    {subheading ? <p className="c-subheading"><Text data={subheading} /></p> : null }
+                                    {paragraph ? <p className="c-paragraph"><Text data={paragraph} /></p> : null }
+                                    <GenericList data={specs} />
+                                    <Price data={this.props.deviceInfo} />
+                                    {button ? <Button data={button} /> : null }
+                                </div>
+                                {/*{picture && alignY === 'top' ? <Picture data={picture} /> : null }*/}
+                            </div>
+                        </div>
+                    </div>
+                )
             }
             else if (type === 'card') {
                 let heroClassCard = classNames(heroClass, 'm-highlight-feature');

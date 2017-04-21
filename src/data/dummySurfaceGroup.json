@@ -18,6 +18,60 @@
     {
       "ordinal": 100,
       "groupIdentifier": "hero",
+      "sectionIdentifier": "Section0",
+      "anchorLink": true,
+      "anchorTitle": "Fact Tag",
+      "layout": {
+        "type": "facts",
+        "theme": "theme-dark",
+        "viewMask": "20",
+        "headingBlock": {
+          "badge": "SALE",
+          "heading": "Vestibulum ante ipsum primis",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis ex at dui pretium cursus. Integer elit dui, blandit eget est in, molestie ultrices eros. Nullam lobortis enim purus, sit amet tincidunt quam porta sed.",
+          "button": {
+            "link": "/windows#Cortana",
+            "text": "Call to action",
+            "textColor": "#0078D7"
+          }
+        },
+        "alignX": "left",
+        "alignY": "center",
+        "pictureBlock": {
+          "altText": "Surface Book Pro",
+          "ariaLabel": "Surface Book Pro",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+              "minWidth": "1400"
+            },
+            {
+              "src": "http://placehold.it/1259x472/2F2F2F/171717",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 100,
+      "groupIdentifier": "hero",
       "sectionIdentifier": "Section1",
       "anchorLink": true,
       "anchorTitle": "Explore Surface Book",
