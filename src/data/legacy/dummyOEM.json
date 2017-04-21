@@ -27,7 +27,8 @@
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "OEM section 1",
-      "ordinal": "100"
+      "ordinal": "100",
+      "style": "font-family: 'Segoe UI';"
     },
     {
       "layout": "ksp",
@@ -52,7 +53,8 @@
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "OEM section 2",
-      "ordinal": "200"
+      "ordinal": "200",
+      "style": "font-family: 'Segoe UI';"
     },
     {
       "layout": "feature",
@@ -67,7 +69,8 @@
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "OEM section 3",
-      "ordinal": "300"
+      "ordinal": "300",
+      "style": "font-family: 'Segoe UI';"
     },
     {
       "layout": "featureCta",

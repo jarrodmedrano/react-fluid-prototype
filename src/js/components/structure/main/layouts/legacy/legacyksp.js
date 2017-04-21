@@ -4,7 +4,7 @@ import Button from '../../../../generic/button/Button';
 import Text from '../../../../generic/text/Text';
 import propsAreValid from '../../../../../lib/util';
 import _ from 'lodash';
-import {transform} from '../../../../../../jspm_packages/github/staxmanade/CssToReact@gh-pages/transform.js'
+import {transform} from 'staxmanade/CssToReact.git/transform';
 
 class LegacyKSP extends React.Component {
 
@@ -27,7 +27,7 @@ class LegacyKSP extends React.Component {
 
             let templateClass = classNames(`f-align-${rtl === true ? `right` : textSide}`, `c-feature`);
 
-            let templateStyle = transform(style);
+            let templateStyle = style ? transform(style) : null;
 
             let btnStyle = {
                 background: cardButtonBackground,

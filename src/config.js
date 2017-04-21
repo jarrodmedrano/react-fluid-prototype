@@ -12,6 +12,7 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "babel": "npm:babel-core@5.8.38",
     "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@6.24.1",
@@ -36,6 +37,7 @@ System.config({
     "sanitize-html": "npm:sanitize-html@1.14.1",
     "sass": "npm:sass@0.5.0",
     "scss": "github:mobilexag/plugin-sass@0.4.6",
+    "staxmanade": "github:staxmanade/CssToReact@gh-pages",
     "staxmanade/CssToReact.git": "github:staxmanade/CssToReact@gh-pages",
     "systemjs-plugin-babel": "npm:systemjs-plugin-babel@0.0.21",
     "github:capaj/systemjs-hot-reloader@0.6.0": {

@@ -5,7 +5,7 @@ import Video from '../../../../generic/video/Video';
 import Text from '../../../../generic/text/Text';
 import propsAreValid from '../../../../../lib/util';
 import _ from 'lodash';
-import {transform} from '../../../../../../jspm_packages/github/staxmanade/CssToReact@gh-pages/transform.js'
+import {transform} from 'staxmanade/CssToReact.git/transform';
 
 class LegacyFeature extends React.Component {
 

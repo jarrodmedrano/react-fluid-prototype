@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Button from '../../../../generic/button/Button';
 import Text from '../../../../generic/text/Text';
 import propsAreValid from '../../../../../lib/util';
-import {transform} from '../../../../../../jspm_packages/github/staxmanade/CssToReact@gh-pages/transform.js'
+import {transform} from 'staxmanade/CssToReact.git/transform';
 
 class LegacyCenteredBackdrop extends React.Component {
 
@@ -45,8 +45,10 @@ class LegacyCenteredBackdrop extends React.Component {
                 backgroundSize: '100% auto'
             };
 
+            let transformedStyle = style ? transform(style) : null;
+
             //take template style and style and merge them (if style exists)
-            let mergedStyle = style && templateStyle ? Object.assign(templateStyle, transform(style)) : null;
+            let mergedStyle = transformedStyle && templateStyle ? Object.assign(templateStyle, transformedStyle) : null;
 
             return (
                 <div className={templateClass} style={mergedStyle || templateStyle}>
