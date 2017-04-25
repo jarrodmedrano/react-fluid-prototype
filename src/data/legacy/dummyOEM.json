@@ -23,7 +23,7 @@
       "button": {
         "blockType": "buttonExternal",
         "text": "Open OneNote",
-        "toPage": "Acer"
+        "toPage": "/windows"
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "OEM section 1",

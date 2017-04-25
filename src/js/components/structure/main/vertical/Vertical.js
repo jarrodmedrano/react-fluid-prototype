@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames';
 import { findDOMNode } from 'react-dom'
-import './vertical.scss!'
 import Hero from '../layouts/hero/Hero';
 import Mosaic from '../layouts/mosaic/Mosaic';
 import CompareTable from '../layouts/compare/CompareTable';

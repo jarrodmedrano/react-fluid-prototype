@@ -7,7 +7,7 @@ import MosaicPicture from '../../src/js/components/generic/picture/MosaicPicture
 import Text from '../../src/js/components/generic/text/Text';
 import Video from '../../src/js/components/generic/video/Video';
 import DownArrow from '../../src/js/components/structure/header/downarrow/DownArrow';
-import Starrating from '../../src/js/components/structure/header/starrating/Starrating';
+import Starrating from '../../src/js/components/generic/starrating/Starrating';
 import StickyBanner from '../../src/js/components/structure/header/stickynav/StickyBanner';
 import StickyFooter from '../../src/js/components/structure/header/stickynav/StickyFooter';
 import FooterLink from '../../src/js/components/generic/link/FooterLink';
@@ -19,18 +19,23 @@ import LegacyKSP from '../../src/js/components/structure/main/layouts/legacy/leg
 import LegacyCenteredBackdrop from '../../src/js/components/structure/main/layouts/legacy/legacycenteredbackdrop';
 import LegacySpecs from '../../src/js/components/structure/main/layouts/legacy/legacySpecs';
 import Mosaic from '../../src/js/components/structure/main/layouts/mosaic/Mosaic';
+import VerticalPage from '../../src/js/components/structure/VerticalPage';
+import classNames from 'classnames';
 
 import '../../src/styles/fonts.scss';
 import '../../src/styles/main.scss';
 
 class Wrapper extends React.Component {
+
     render() {
+        let templateClass = classNames(`${this.props.wrapperClass ? this.props.wrapperClass : null}`, `scene-vertical active`);
+
         return (
             <div id="app">
                 <div>
                     <main id="main">
                         <div>
-                            <section className="scene-vertical active">
+                            <section className={templateClass}>
                                 {this.props.children}
                             </section>
                         </div>
@@ -41,19 +46,27 @@ class Wrapper extends React.Component {
     }
 }
 
+class Grid extends React.Component {
+    render() {
+        return (
+            <div data-grid="col-12" class="context-control-appearance">
+                {this.props.children}
+            </div>
+        )
+    }
+}
+
 import * as data from '../data';
 storiesOf('Heading', module)
     .add('Default', () => (
-        <Wrapper>
-                    <Heading data={data.headingBlock}/>
-        </Wrapper>
+        <Grid>
+            <Heading data={data.headingBlock}/>
+        </Grid>
     ));
 
 storiesOf('Button Link', module)
     .add('Default', () => (
-        <Wrapper>
-            <ButtonLink to="#" className="c-call-to-action c-glyph" aria-label="A button" children="Hello World"/>
-        </Wrapper>
+        <ButtonLink to="#" className="c-call-to-action c-glyph" aria-label="A button" children="Hello World"/>
     ));
 
 storiesOf('Picture', module)
@@ -70,30 +83,24 @@ storiesOf('Picture', module)
 
 storiesOf('HTML Text', module)
     .add('Default', () => (
-        <Wrapper>
+        <Grid>
             <Text data="Hello<br>Hi"/>
-        </Wrapper>
+        </Grid>
     ));
 
 storiesOf('Video', module)
     .add('Default', () => (
-        <Wrapper>
-            <Video active={true} data={data.videoBlock} className="video-fullscreen fixed"/>
-        </Wrapper>
+        <Video active={true} data={data.videoBlock} className="video-fullscreen fixed"/>
     ));
 
 storiesOf('Down Arrow', module)
     .add('Default', () => (
-        <Wrapper>
-            <DownArrow data={3} onClick={action('clicked')}/>
-        </Wrapper>
+        <DownArrow data={3} onClick={action('clicked')}/>
     ));
 
 storiesOf('Star Rating', module)
     .add('Default', () => (
-        <Wrapper>
-            <Starrating data={data.ratings}/>
-        </Wrapper>
+        <Starrating data={data.ratings}/>
     ));
 
 storiesOf('Sticky Banner', module)
@@ -175,7 +182,7 @@ storiesOf('Hero', module)
         </Wrapper>
     ))
     .add('Fullscreen', () => (
-        <Wrapper>
+        <Wrapper wrapperClass="fullscreen">
             <Hero data={data.dataFullscreenHero}/>
         </Wrapper>
     ))
@@ -258,5 +265,5 @@ storiesOf('Mosaic', module)
 //     .add('Default', () => (
 //         <main id="main">
 //             <Tabs data={myData} />
-//         </Wrapper>
+//         </Grid>
 //     ));

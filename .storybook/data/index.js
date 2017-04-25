@@ -58,12 +58,197 @@ export const ratings = {
 
 import logo from '../../src/img/vertical/ms-logo.png';
 
-export const stickyBanner = {
-    "logo": logo,
-    "anchorTitle": "Surface Book",
-    "color": "#ffffff",
-    "logoTab": "img/vertical/surfacebook-logo.png",
-    "selectedLogoTab": "../../src/img/vertical/surfacebook-logo.png"
+export const Compare = {
+    "type": "compare",
+    "headingBlock": {
+        "heading": "-- Compare Heading --"
+    },
+    "compare": {
+        "models": [
+            {
+                "headingBlock": {
+                    "paragraph": "The light and casual browsing laptop which is also student friendly"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "selected": true,
+                "selectedHeader": "This device",
+                "headingBlock": {
+                    "paragraph": "The ideal laptop for general browsing and emails"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The perfect laptop for editing photos and gaming"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The laptop for larger photos, larger apps and bigger gaming"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The ultimate in performance and versatility for professionals, creators, and more"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            },
+            {
+                "headingBlock": {
+                    "paragraph": "The most powerful laptop - the work and play PC"
+                },
+                "specs": [
+                    "Intel Core i7",
+                    "1 TB",
+                    "16 GB + dGPU"
+                ],
+                "features": [
+                    "Light online browsing",
+                    "Send emails",
+                    "Check mail"
+                ]
+            }
+        ]
+    }
 };
 
 export const oemGroup = {
@@ -496,284 +681,13 @@ export const oemGroup = {
     ]
 }
 
-export const officeGroup = {
-    "groupIdentifier": "office",
-    "brand": {
-        "groupIdentifier": "office",
-        "logo": "img/retailer_assets/Office_logo.png",
-        "selectedLogoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
-        "logoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
-        "color": "#dc3c00"
-    },
-    "sections": [
-        {
-            "layout": "feature",
-            "textSide": "left",
-            "header": "<span><b><span style='color:#58585a'>The Power to</span> overachieve.</b></span>",
-            "media": {
-                "blockType": "video",
-                "src": "img/office_assets/Office_Holiday_Architect_30sec_EN-US.mp4"
-            },
-            "groupIdentifier": "office",
-            "sectionIdentifier": "Page1",
-            "ordinal": "100"
-        },
-        {
-            "layout": "feature",
-            "textSide": "left",
-            "header": "Create <span><b><span style='color:#58585a'>amazing documents with ease using built in research and smart proofing tools.</span></b></span>",
-            "media": {
-                "blockType": "video",
-                "src": "img/office_assets/Office_Holiday_Feature_Final_720p_en_us.mp4"
-            },
-            "groupIdentifier": "office",
-            "sectionIdentifier": "Page2",
-            "ordinal": "200"
-        },
-        {
-            "layout": "feature",
-            "textSide": "left",
-            "header": "Move <span><b><span style='color:#58585a'>with OneDrive.  Share documents, photos and work across all your devices.</span></b></span>",
-            "media": {
-                "blockType": "video",
-                "src": "img/office_assets/Media1.mp4"
-            },
-            "groupIdentifier": "office",
-            "sectionIdentifier": "Page3",
-            "ordinal": "300"
-        },
-        {
-            "layout": "feature",
-            "textSide": "left",
-            "header": "<span><b><span style='color:#58585a'>Discover the Office</span> that is right for you.</b></span>",
-            "media": {
-                "blockType": "img",
-                "src": "img/office_assets/Office_Chart_V3.gif"
-            },
-            "groupIdentifier": "office",
-            "sectionIdentifier": "Page4",
-            "ordinal": "400"
-        }
-    ]
-}
-
-export const myData = {
-    groups: [
-        {
-            "groupIdentifier": "office",
-            "brand": {
-                "groupIdentifier": "office",
-                "logo": "img/retailer_assets/Office_logo.png",
-                "selectedLogoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
-                "logoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
-                "color": "#dc3c00"
-            }
-        },
-        {
-            "groupIdentifier": "office",
-            "brand": {
-                "groupIdentifier": "office",
-                "logo": "img/retailer_assets/Office_logo.png",
-                "selectedLogoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
-                "logoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
-                "color": "#dc3c00"
-            }
-        }
-    ]
-}
-
-export const Compare = {
-    "type": "compare",
-    "headingBlock": {
-        "heading": "-- Compare Heading --"
-    },
-    "compare": {
-        "models": [
-            {
-                "headingBlock": {
-                    "paragraph": "The light and casual browsing laptop which is also student friendly"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "selected": true,
-                "selectedHeader": "This device",
-                "headingBlock": {
-                    "paragraph": "The ideal laptop for general browsing and emails"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The perfect laptop for editing photos and gaming"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The laptop for larger photos, larger apps and bigger gaming"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The ultimate in performance and versatility for professionals, creators, and more"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            },
-            {
-                "headingBlock": {
-                    "paragraph": "The most powerful laptop - the work and play PC"
-                },
-                "specs": [
-                    "Intel Core i7",
-                    "1 TB",
-                    "16 GB + dGPU"
-                ],
-                "features": [
-                    "Light online browsing",
-                    "Send emails",
-                    "Check mail"
-                ]
-            }
-        ]
-    }
-}
+export const stickyBanner = {
+    "logo": logo,
+    "anchorTitle": "Surface Book",
+    "color": "#ffffff",
+    "logoTab": "img/vertical/surfacebook-logo.png",
+    "selectedLogoTab": "../../src/img/vertical/surfacebook-logo.png"
+};
 
 import dummyHero from '../../src/data/new/dummyHero.json';
 

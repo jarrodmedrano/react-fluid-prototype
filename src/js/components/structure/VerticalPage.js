@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../../styles/main.scss!';
 import dataPropTypes, {verticalPagePropTypes} from '../../../data/dataProps';
 import propsAreValid, {navigateEvent} from '../../lib/util';
 import StickyBanner from './header/stickynav/StickyBanner';

@@ -7,18 +7,19 @@ The original Surface Book prototype is located in a branch called modular-merge-
 npm install
 npm start
 ```
-
-###Testing
-This project uses Enzyme and Jest for JS unit testing.
-```
-npm run test
-```
+Go to localhost://9080 to see the Hub App in dev mode.
 
 ###Component Library
 Run React Storybook to test individual Components. This is intended to provide a rough overview of what components are in use,
 components should still be tested in the full app after any updates are made.
 ```
 npm run storybook
+```
+
+###Testing
+This project uses Enzyme and Jest for JS unit testing.
+```
+npm run test
 ```
 
 ##Building
@@ -33,4 +34,30 @@ Build Production version (minified without images)
 npm run build-prod
 ```
 
-Go to localhost://9080 to see the page.
+##Document Structure
+The RDX Hub App is laid out as follows:
+```
+src/
+├── js/
+│   └── app.js
+│   └── components/
+│       └── structure/
+│               └── header/
+│                   └── Down Arrow
+│                   └── Sticky Nav
+│                   └── Tabs
+│           ├── MasterLayout.js
+│           └── VerticalPage.js
+│               └── main/
+│                   ├── Main.js
+│                   └── vertical/
+│                       └── Vertical.js
+│                   └── layouts
+│                       ├── Compare Chart
+│                       ├── Hero
+│                       ├── Legacy
+│                       └── Mosaic
+```
+![alt text](diagram-rdx.jpg "RDX Document Structure")
+
+

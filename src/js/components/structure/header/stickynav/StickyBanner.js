@@ -1,5 +1,5 @@
 import React from 'react';
-import Starrating from '../starrating/Starrating';
+import Starrating from '../../../generic/starrating/Starrating';
 import propsAreValid from '../../../../lib/util';
 
 class StickyBanner extends React.Component {
@@ -8,7 +8,7 @@ class StickyBanner extends React.Component {
         let {anchorTitle, logo, groupIdentifier} = this.props.brand;
 
         return (
-            <div className="sticky-banner sticky-header">
+            <nav className="sticky-banner sticky-header">
                 {logo ? <img src={logo} alt={groupIdentifier} className="logo" draggable="false"/> : null }
                 {anchorTitle ? <h4 className="c-heading-5">{anchorTitle}</h4> : null }
                 {this.props.ratings ? <Starrating data={this.props.ratings} /> : null }
@@ -29,7 +29,7 @@ class StickyBanner extends React.Component {
                 */
                 }
                 
-            </div>
+            </nav>
         )
       } return null
     }

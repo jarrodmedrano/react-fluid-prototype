@@ -10,7 +10,7 @@ class StickyFooter extends React.Component {
             let sections = this.props.data.sections;
 
             return (
-                <div className="sticky-banner sticky-footer">
+                <footer className="sticky-banner sticky-footer">
                     {sections.map(function (result, id) {
                         //If There is an anchor link and there are more than or equal to 3 sections
 
@@ -29,7 +29,7 @@ class StickyFooter extends React.Component {
                         return null
                     }, this)
                     }
-                </div>
+                </footer>
             )
         }
         return null
