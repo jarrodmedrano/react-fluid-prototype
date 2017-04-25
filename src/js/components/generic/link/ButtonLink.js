@@ -29,7 +29,7 @@ class ButtonLink extends React.Component {
 
     _isInternal(to) {
         // If it's a relative url such as '/path', 'path' and does not contain a protocol we can assume it is internal.
-        if (to.indexOf("://") === -1 && to.indexOf("ms-") === -1) return true;
+        if (to.indexOf("://") === -1 && to.indexOf("ms-") === -1 && to.indexOf("{") === -1) return true;
     }
 
     _handleClick(target, internal) {

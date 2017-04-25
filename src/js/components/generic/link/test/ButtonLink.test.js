@@ -26,6 +26,12 @@ describe('Button Link functions', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    it('Should have internal state false when link has a token', () => {
+        const wrapper = shallow(<ButtonLink to="media:{pictureslibrary}//Glaciers.docx" />);
+        expect(wrapper.state('internal')).toEqual(false);
+        expect(wrapper).toMatchSnapshot();
+    });
+
     it('Should have internal state true when linking internally', () => {
         const wrapper = shallow(<ButtonLink to="/windows/#Cortana" />);
         expect(wrapper.state('internal')).toEqual(true);

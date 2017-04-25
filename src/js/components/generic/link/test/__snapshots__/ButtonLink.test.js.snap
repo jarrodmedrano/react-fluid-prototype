@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button Link functions Should have internal state false when link has a token 1`] = `
+<a
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "",
+    }
+  }
+  draggable="false"
+  href="media:{pictureslibrary}//Glaciers.docx"
+  onClick={[Function]}
+  to="media:{pictureslibrary}//Glaciers.docx"
+/>
+`;
+
 exports[`Button Link functions Should have internal state false when linking externally 1`] = `
 <a
   dangerouslySetInnerHTML={
