@@ -2,9 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import Button from '../../../../generic/button/Button';
 import Text from '../../../../generic/text/Text';
-import propsAreValid from '../../../../../lib/util';
+import propsAreValid, {transform} from '../../../../../lib/util';
 import _ from 'lodash';
-import {transform} from 'staxmanade/CssToReact.git/transform';
 
 class LegacyKSP extends React.Component {
 

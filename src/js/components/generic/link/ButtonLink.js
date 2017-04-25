@@ -1,5 +1,4 @@
 import React from 'react';
-import './button-link.scss!';
 import propsAreValid, {externalNavigate, internalNavigate, cleanHtml} from '../../../lib/util';
 import {linkPropTypes} from '../../../../data/dataProps';
 

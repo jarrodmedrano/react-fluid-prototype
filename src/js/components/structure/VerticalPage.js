@@ -156,8 +156,8 @@ class VerticalPage extends React.Component {
                     <Main data={this.props.data} {...this.props} legacyLayouts={this.state.legacyLayouts} />
 
                     {this.state.oemGroup && this.state.compareModels ?
-                        <StickyBanner data={this.state.oemGroup}>
-                            <Price data={this.props.data.deviceInformation}/>
+                        <StickyBanner brand={this.state.oemGroup.brand ? this.state.oemGroup.brand : null} ratings={this.state.oemGroup.ratings ? this.state.oemGroup.ratings : null}>
+                            <Price data={this.props.data.deviceInformation} />
 
                             {this.state.retailerGroup && this.state.retailerGroup.brand && this.state.retailerGroup.brand.button ?
                                 <Button data={this.state.retailerGroup.brand.button} />

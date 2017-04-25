@@ -215,7 +215,7 @@ class Main extends React.Component {
                     {this.state.currentPage.sections && this.props.legacyLayouts !== true ?
                         <StickyFooter data={this.state.currentPage}/>
                         :
-                        <DownArrow data={this.state.currentPage} onClick={(event) => this._handleDownArrow(event)}/>
+                        <DownArrow data={this.state.currentPage.sections.length} onClick={(event) => this._handleDownArrow(event)}/>
                     }
                 </main>
             )

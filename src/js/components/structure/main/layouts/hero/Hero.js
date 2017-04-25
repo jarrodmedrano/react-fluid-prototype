@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import Heading from '../../../../generic/heading/Heading';
-import './Hero.scss!';
-import './immersiveHero.scss!';
 import Picture from '../../../../generic/picture/Picture';
 import Video from '../../../../generic/video/Video';
 import Price from '../../../../generic/price/Price';

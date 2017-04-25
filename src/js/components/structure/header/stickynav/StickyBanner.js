@@ -1,19 +1,17 @@
 import React from 'react';
 import Starrating from '../starrating/Starrating';
-import './sticky-banner.scss!';
 import propsAreValid from '../../../../lib/util';
-import dataPropTypes, {devicePropTypes} from '../../../../../data/dataProps';
 
 class StickyBanner extends React.Component {
     render() {
-        if(propsAreValid(this.props.data, this)) {
+        if(propsAreValid(this.props.brand, this)) {
+        let {anchorTitle, logo, groupIdentifier} = this.props.brand;
 
-        let {anchorTitle, logo, groupIdentifier} = this.props.data.brand;
         return (
             <div className="sticky-banner sticky-header">
                 {logo ? <img src={logo} alt={groupIdentifier} className="logo" draggable="false"/> : null }
                 {anchorTitle ? <h4 className="c-heading-5">{anchorTitle}</h4> : null }
-                {this.props.data.ratings ? <Starrating data={this.props.data.ratings} /> : null }
+                {this.props.ratings ? <Starrating data={this.props.ratings} /> : null }
 
                 <div className="cta">
                     {this.props.children}
@@ -36,7 +34,5 @@ class StickyBanner extends React.Component {
       } return null
     }
 }
-
-StickyBanner.propTypes = dataPropTypes(devicePropTypes);
 
 export default StickyBanner

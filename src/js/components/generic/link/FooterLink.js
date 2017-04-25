@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import './button-link.scss!';
 import propsAreValid, {navigateEvent} from '../../../lib/util';
 import {linkPropTypes} from '../../../../data/dataProps';
 import {Link} from '../../../lib/scroll';

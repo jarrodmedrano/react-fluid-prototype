@@ -2,10 +2,23 @@
 This is the React prototype of RDX.
 The original Surface Book prototype is located in a branch called modular-merge-sb.
 ## Usage
-
+###Installation and running the demo app.
 ```
 npm install
 npm start
+```
+
+###Testing
+This project uses Enzyme and Jest for JS unit testing.
+```
+npm run test
+```
+
+###Component Library
+Run React Storybook to test individual Components. This is intended to provide a rough overview of what components are in use,
+components should still be tested in the full app after any updates are made.
+```
+npm run storybook
 ```
 
 ##Building

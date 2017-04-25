@@ -1,7 +1,7 @@
 {
-  "name": "react-app",
+  "name": "RDX",
   "version": "0.0.1",
-  "description": "react.js app",
+  "description": "react.js RDX app",
   "main": "server.js",
   "engines": {
     "node": ">=4.0.0"
@@ -15,7 +15,8 @@
     "assets": "cpx src/img/**/*.{mp4,png,jpg,svg} build/img && cpx src/styles/fonts/**/*.{ttf,woff,svg} build/fonts",
     "fonts": "cpx src/styles/fonts/**/*.{ttf,woff,svg} build/fonts",
     "build-dev": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject && npm run assets && cpx src/index.html build && npm run postbuild",
-    "build-prod": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject --minify && npm run fonts && npm run postbuild"
+    "build-prod": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject --minify && npm run fonts && npm run postbuild",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "author": "v-jamedr@microsoft.com",
   "jspm": {
@@ -27,7 +28,7 @@
       "capaj/systemjs-hot-reloader": "github:alexisvincent/systemjs-hot-reloader@^0.6.0",
       "classnames": "npm:classnames@^2.2.5",
       "clean-css": "npm:clean-css@^3.4.10",
-      "css": "github:systemjs/plugin-css@^0.1.19",
+      "css": "npm:css@^2.2.1",
       "history": "npm:history@3.0",
       "json": "github:systemjs/plugin-json@^0.2.0",
       "lodash": "npm:lodash@^4.16.4",
@@ -72,6 +73,7 @@
     "http-server": "^0.9.0"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
     "babel": "^6.5.2",
     "babel-jest": "^19.0.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -84,24 +86,33 @@
     "babel-register": "^6.24.1",
     "chokidar-socket-emitter": "^0.5.4",
     "cpx": "^1.5.0",
+    "css": "^2.2.1",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.0",
     "expect": "^1.20.2",
     "glob": "^7.0.4",
+    "html-loader": "^0.4.5",
     "identity-obj-proxy": "^3.0.0",
     "ignore-styles": "^5.0.1",
     "jest": "^19.0.2",
     "jsdom": "^9.8.3",
+    "json-loader": "^0.5.4",
     "jspm": "^0.16.39",
+    "node-sass": "^4.5.2",
     "postbuild": "^2.0.0",
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
     "react-scroll": "^1.4.4",
     "react-test-renderer": "^15.5.4",
     "rimraf": "^2.5.4",
+    "sanitize-html": "^1.14.1",
+    "sass-loader": "^6.0.3",
     "standard": "^7.1.2",
-    "systemjs": "^0.19.31"
+    "systemjs": "^0.19.31",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.4.1"
   },
   "standard": {
     "ignore": [

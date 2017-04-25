@@ -1,17 +1,13 @@
 import React from 'react';
-import classNames from 'classnames';
-import propsAreValid, {externalNavigate} from '../../../../lib/util';
-import './down-arrow.scss!';
+import propsAreValid from '../../../../lib/util';
 import {linkPropTypes} from '../../../../../data/dataProps';
-import {Link, Element, Events, scroll, scrollSpy} from '../../../../lib/scroll';
-import {Link as RouterLink} from 'react-router';
+import {Link} from '../../../../lib/scroll';
 
 class DownArrow extends React.Component {
-
     render() {
         if(propsAreValid(this.props.data, this)) {
             const {to, ...rest} = this.props;
-            if(this.props.data.sections.length >= 2) {
+            if(this.props.data >= 2) {
                 return (
                     <div className="down-arrow">
                         <Link className="c-flipper f-next f-large" activeClass="active" to={to} {...rest} spy={true} smooth={true} duration={500} isDynamic={true} />

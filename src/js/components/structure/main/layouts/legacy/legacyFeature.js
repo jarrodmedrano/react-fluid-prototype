@@ -3,9 +3,8 @@ import classNames from 'classnames';
 import Button from '../../../../generic/button/Button';
 import Video from '../../../../generic/video/Video';
 import Text from '../../../../generic/text/Text';
-import propsAreValid from '../../../../../lib/util';
+import propsAreValid, {transform} from '../../../../../lib/util';
 import _ from 'lodash';
-import {transform} from 'staxmanade/CssToReact.git/transform';
 
 class LegacyFeature extends React.Component {
 

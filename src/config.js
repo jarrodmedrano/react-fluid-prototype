@@ -21,7 +21,7 @@ System.config({
     "classnames": "npm:classnames@2.2.5",
     "clean-css": "npm:clean-css@3.4.20",
     "core-js": "npm:core-js@1.2.7",
-    "css": "github:systemjs/plugin-css@0.1.32",
+    "css": "npm:css@2.2.1",
     "history": "npm:history@2.0.1",
     "json": "github:systemjs/plugin-json@0.2.2",
     "lodash": "npm:lodash@4.17.4",

@@ -1,7 +1,6 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
 import React from 'react'
 import CompareRow from './CompareRow';
-import './scene-config.scss!';
 import propsAreValid from '../../../../../lib/util';
 
 class CompareTable extends React.Component {

@@ -2,8 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Button from '../../../../generic/button/Button';
 import Text from '../../../../generic/text/Text';
-import propsAreValid from '../../../../../lib/util';
-import {transform} from 'staxmanade/CssToReact.git/transform';
+import propsAreValid, {transform} from '../../../../../lib/util';
 
 class LegacyCenteredBackdrop extends React.Component {
 

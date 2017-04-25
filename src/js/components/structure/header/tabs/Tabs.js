@@ -1,5 +1,4 @@
 import React from 'react';
-import './tabs.scss!'
 import dataPropTypes, {verticalPagePropTypes} from '../../../../../data/dataProps';
 import { Link, IndexLink } from 'react-router';
 import propsAreValid, {navigateEvent} from '../../../../lib/util';

@@ -1,5 +1,4 @@
 import React from 'react'
-import './mosaic.scss!'
 import MosaicContainer from './MosaicContainer';
 import propsAreValid from '../../../../../lib/util';
 import dataPropTypes, {mosaicPropTypes} from '../../../../../../data/dataProps';
