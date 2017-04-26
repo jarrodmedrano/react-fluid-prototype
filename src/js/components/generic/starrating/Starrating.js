@@ -1,8 +1,8 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
 import React from 'react';
-import ButtonLink from '../../../generic/link/ButtonLink';
-import propsAreValid from '../../../../lib/util';
-import Text from '../../../generic/text/Text';
+import ButtonLink from '../link/ButtonLink';
+import propsAreValid from '../../../lib/util';
+import Text from '../text/Text';
 
 class Starrating extends React.Component {
 
