@@ -25,26 +25,24 @@ import classNames from 'classnames';
 import '../../src/styles/fonts.scss';
 import '../../src/styles/main.scss';
 
-class Wrapper extends React.Component {
+const Wrapper = (props) => {
+    let templateClass = classNames(`${props.wrapperClass ? props.wrapperClass : null}`, `scene-vertical active`);
 
-    render() {
-        let templateClass = classNames(`${this.props.wrapperClass ? this.props.wrapperClass : null}`, `scene-vertical active`);
-
-        return (
-            <div id="app">
-                <div>
-                    <main id="main">
-                        <div>
-                            <section className={templateClass}>
-                                {this.props.children}
-                            </section>
-                        </div>
-                    </main>
-                </div>
+    return (
+        <div id="app">
+            <div>
+                <main id="main">
+                    <div>
+                        <section className={templateClass} name={props.name} id={props.id}>
+                            {props.children}
+                        </section>
+                    </div>
+                </main>
             </div>
-        )
-    }
+        </div>
+    )
 }
+
 
 class Grid extends React.Component {
     render() {
@@ -112,7 +110,7 @@ storiesOf('Sticky Banner', module)
 
 storiesOf('Sticky Footer', module)
     .add('Default', () => (
-        <Wrapper>
+        <Wrapper name="Section2" id="Section2">
             <StickyFooter data={data.oemGroup}/>
         </Wrapper>
     ));
