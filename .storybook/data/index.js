@@ -677,6 +677,366 @@ export const oemGroup = {
                     ]
                 }
             }
+        },
+        {
+            "ordinal": 700,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "Extra Link",
+            "anchorLink": true,
+            "anchorTitle": "Extra Link",
+            "layout": {
+                "type": "compare",
+                "headingBlock": {
+                    "heading": "-- Compare Heading --"
+                },
+                "compare": {
+                    "models": [
+                        {
+                            "heading": "-- Hero Heading --",
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "ordinal": 600,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "Extra Link 2",
+            "anchorLink": true,
+            "anchorTitle": "Extra Link 2",
+            "layout": {
+                "type": "compare",
+                "headingBlock": {
+                    "heading": "-- Compare Heading --"
+                },
+                "compare": {
+                    "models": [
+                        {
+                            "heading": "-- Hero Heading --",
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "ordinal": 800,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "Extra Link 3",
+            "anchorLink": true,
+            "anchorTitle": "Extra Link 3",
+            "layout": {
+                "type": "compare",
+                "headingBlock": {
+                    "heading": "-- Compare Heading --"
+                },
+                "compare": {
+                    "models": [
+                        {
+                            "heading": "-- Hero Heading --",
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "ordinal": 800,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "Extra Link 3",
+            "anchorLink": true,
+            "anchorTitle": "Extra Link 4",
+            "layout": {
+                "type": "compare",
+                "headingBlock": {
+                    "heading": "-- Compare Heading --"
+                },
+                "compare": {
+                    "models": [
+                        {
+                            "heading": "-- Hero Heading --",
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        },
+                        {
+                            "specs": [
+                                "processor: Intel Core i7",
+                                "storage: 1 TB",
+                                "memory: 16 GB + dGPU"
+                            ],
+                            "features": [
+                                "Light online browsing",
+                                "Send emails",
+                                "Check mail"
+                            ]
+                        }
+                    ]
+                }
+            }
         }
     ]
 }

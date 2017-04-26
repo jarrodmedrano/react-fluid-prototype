@@ -6,12 +6,11 @@
 
 $linkband-spacing: 10px;
 $linkband-bg: rgba(241, 241, 242, 0.9);
-$linkband-dropshadow: 0px 1px 3px 0px rgba(119,118,118, 0.4);
+$linkband-dropshadow: 0px 1px 3px 0px rgba(119, 118, 118, 0.4);
 $default-bg: #E6E7E8;
 $default-text: #000;
 $accent-color: #0078D7;
 $default-text-alt: #fff;
-
 $btn-primary-bg: $accent-color;
 $btn-primary-color: #fff;
 
@@ -24,6 +23,7 @@ $btn-primary-color: #fff;
   width: 100%;
   background: $linkband-bg;
   position: fixed;
+  position: -ms-device-fixed;
   top: 45px;
   z-index: 3;
   box-shadow: $linkband-dropshadow;
@@ -117,7 +117,6 @@ $btn-primary-color: #fff;
     border: 0 !important;
   }
 
-
   &.sticky-footer {
     bottom: 0;
     top: auto;
@@ -125,7 +124,7 @@ $btn-primary-color: #fff;
     text-align: center;
     padding: 0;
 
-    a[role='button'] {
+    a[role='button'], button {
       background: transparent;
       border: 0;
       cursor: pointer;
@@ -146,7 +145,7 @@ $btn-primary-color: #fff;
       }
     }
 
-    a.c-action-trigger {
+    a.c-action-trigger, button {
       color: $default-text;
 
       img {
@@ -163,6 +162,51 @@ $btn-primary-color: #fff;
         img {
           filter: brightness(0) invert(1);
         }
+      }
+
+      &.ellipsis {
+        span {
+          &::before {
+            font-family: MWF-MDL2;
+            content: "\E712";
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .overflow-buttons-container {
+      @keyframes WinJS-flyoutAboveASB-showPopup {
+        from {
+          transform: translateY(50px);
+          z-index: -1;
+        }
+        to {
+          transform: none;
+          z-index: 0;
+        }
+      }
+
+      display: none;
+      position: fixed;
+      position: -ms-device-fixed;
+      bottom: 50px;
+      right: 15px;
+      max-height: 50vh;
+      max-width: 480px;
+      animation-name: WinJS-flyoutAboveASB-showPopup;
+      animation-duration: 350ms;
+      animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+      background: $linkband-bg;
+
+      a {
+        display: block;
+      }
+
+      &.active {
+        display: block;
       }
     }
   }

@@ -412,7 +412,9 @@
     },
     {
       "ordinal": 600,
+      "anchorLink": true,
       "groupIdentifier": "oem",
+      "anchorTitle": "Compare",
       "sectionIdentifier": "Compare",
       "layout": {
         "type": "compare",
@@ -604,6 +606,36 @@
               ]
             }
           ]
+        }
+      }
+    },
+    {
+      "ordinal": 100,
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "SurfacePen2",
+      "anchorLink": true,
+      "anchorTitle": "-- video title 2 --",
+      "layout": {
+        "type": "fullscreen",
+        "media": {
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 100,
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "SurfacePen3",
+      "anchorLink": true,
+      "anchorTitle": "-- video title 3 --",
+      "layout": {
+        "type": "fullscreen",
+        "media": {
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
         }
       }
     }

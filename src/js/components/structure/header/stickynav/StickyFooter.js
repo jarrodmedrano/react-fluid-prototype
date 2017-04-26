@@ -2,32 +2,71 @@ import React from 'react';
 import propsAreValid from '../../../../lib/util';
 import {footerPropTypes} from '../../../../../data/dataProps';
 import FooterLink from '../../../generic/link/FooterLink';
+import OverflowButton from './overflowButton/OverflowButton';
+
+const ThisFooterLink = (props) => {
+        return (
+            <FooterLink to={props.result.sectionIdentifier} role="button" key={props.id}
+                        icon={props.result.anchorIcon ? props.result.anchorIcon : null}
+                        iconFont={props.result.anchorGlyph ? props.result.anchorGlyph : null}
+                        groupIdentifier={props.result.groupIdentifier ? props.result.groupIdentifier : null}
+                        containerId="main">{props.result.anchorTitle}</FooterLink>
+        )
+};
 
 class StickyFooter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            anchorLinks: [],
+            overflowLinks: []
+        };
+
+        let sections = props.data.sections;
+        let anchorLinks = [];
+        let overflowLinks = [];
+
+        sections.map(function (result, id) {
+            if (id <= 6) {
+                anchorLinks.push(result);
+            } else {
+                if(result.anchorLink) {
+                    overflowLinks.push(result);
+                }
+            }
+        }, this);
+
+        this.state = {
+            anchorLinks: anchorLinks,
+            overflowLinks: overflowLinks
+        }
+    }
+
     render() {
         if (propsAreValid(this.props.data.sections, this)) {
-            let groupIdentifier = this.props.data.groupIdentifier;
-            let sections = this.props.data.sections;
-
             return (
                 <footer className="sticky-banner sticky-footer">
-                    {sections.map(function (result, id) {
+                    {this.state.anchorLinks.map(function (result, id) {
                         //If There is an anchor link and there are more than or equal to 3 sections
-
-                        if (result.anchorLink && sections.length >= 3) {
-                            let anchorTarget = result.sectionIdentifier;
-                            let anchorGlyph = result.anchorGlyph;
-                            let anchorIcon = result.anchorIcon;
-;
+                        if (result.anchorLink && this.props.data.sections.length >= 3) {
                             //If there are are less than or equal to 7 footer links render the links
-                            if (id <= 7) {
+                            if (id <= 6) {
                                 return (
-                                    <FooterLink to={anchorTarget} role="button" key={id} icon={anchorIcon ? anchorIcon : null} iconFont={anchorGlyph ? anchorGlyph : null} groupIdentifier={groupIdentifier ? groupIdentifier : null} containerId="main">{result.anchorTitle}</FooterLink>
+                                    <ThisFooterLink result={result} key={id} />
                                 )
                             }
                         }
-                        return null
                     }, this)
+                    }
+                    {this.state.overflowLinks.length ?
+                        <OverflowButton>
+                            {this.state.overflowLinks.map(function (result, id) {
+                                return (
+                                    <ThisFooterLink result={result} key={id}/>
+                                )
+                            }, this)}
+                        </OverflowButton>
+                        : null
                     }
                 </footer>
             )

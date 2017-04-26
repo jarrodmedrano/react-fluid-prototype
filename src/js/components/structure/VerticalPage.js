@@ -58,6 +58,7 @@ class VerticalPage extends React.Component {
 
     componentWillMount() {
 
+        //If there is an OEM group, find out if there's a compare section
         let findCompareModels = (oemGroup) => {
             _.find(oemGroup.sections, (result) =>  {
                 if (result.sectionIdentifier === 'Compare') {
@@ -66,6 +67,7 @@ class VerticalPage extends React.Component {
             })
         };
 
+        //Find out if there's an OEM group
         _.find(this.props.data.groups, (result) => {
             if (result.groupIdentifier === 'oem') {
                 this.setState({oemGroup: result},
@@ -74,6 +76,7 @@ class VerticalPage extends React.Component {
             }
         });
 
+        //Find out if there is a retailer group
         _.find(this.props.data.groups, (result) =>  {
             if (result.groupIdentifier === 'retailer') {
                 return this.setState({retailerGroup: result})
@@ -88,6 +91,7 @@ class VerticalPage extends React.Component {
         });
     }
 
+    //Keyboard Navigate to next group (Navigation Tabs)
     @keydown('cmd+right', 'ctrl+right')
     _handleNextGroup(e) {
         e.preventDefault();
@@ -103,6 +107,7 @@ class VerticalPage extends React.Component {
         }
     }
 
+    //Keyboard navigate to previous group (Navigation Tabs)
     @keydown('cmd+left', 'ctrl+left')
     _handlePrevGroup(e) {
         e.preventDefault();
@@ -118,6 +123,7 @@ class VerticalPage extends React.Component {
         }
     }
 
+    //Find out what page we are on
     _getCurrentPage() {
         let {groups} = this.props.data;
         let title = this.props.route.title;
@@ -127,6 +133,7 @@ class VerticalPage extends React.Component {
         });
     }
 
+    //Navigate to the next group (Tab)
     _goNextGroup(dir, path, source) {
         let callBack = (currentId) => {
             this.props.history.push(path);

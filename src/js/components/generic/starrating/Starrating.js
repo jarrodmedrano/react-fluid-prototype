@@ -5,7 +5,6 @@ import propsAreValid from '../../../lib/util';
 import Text from '../text/Text';
 
 class Starrating extends React.Component {
-
     render() {
       if(propsAreValid(this.props.data, this)) {
         let {rating, bestRating, reviewLink, ratingText} = this.props.data;

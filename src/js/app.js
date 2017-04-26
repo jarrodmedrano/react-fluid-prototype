@@ -4,8 +4,6 @@ import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
-import Scroll  from 'react-scroll';
-const scroll = Scroll.animateScroll;
 import MasterLayout from './components/structure/MasterLayout';
 import data from '../data/assembleData';
 //TODO: replace this library with regular event listeners.
@@ -48,24 +46,21 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            hash: null
-        }
     }
 
+    //Navigate to home page
     @keydown( 'cmd+h', 'ctrl+alt+h' )
     homeGroup(e) {
         e.preventDefault();
         window.home();
     }
 
+    //Reset this page
     @keydown( 'cmd+option+h', 'ctrl+alt+r' )
     resetGroup(e) {
         e.preventDefault();
         window.reset();
     }
-
 
     render() {
         return (
