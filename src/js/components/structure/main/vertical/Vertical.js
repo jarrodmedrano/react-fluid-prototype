@@ -12,6 +12,28 @@ import propsAreValid, {logError, impressionEvent, requestFrameThrottle} from '..
 import dataPropTypes, {verticalPropTypes} from '../../../../../data/dataProps';
 import _ from 'lodash';
 
+const WayPoint = (props) => {
+
+        let debugBrdrColor = props.active === true ? 'blue' : 'red';
+
+        const style = {
+            position: 'absolute',
+            width: '100%',
+            borderColor: props.debug === true ? debugBrdrColor : 'transparent',
+            borderWidth: '1px',
+            height: '1px',
+            borderStyle: 'solid',
+            top: '50%',
+            maxHeight: '1px',
+            zIndex: '999',
+            display: 'block'
+        };
+
+        return (
+            <span style={style} ref={props.wayPointRef} />
+        )
+};
+
 class Vertical extends React.Component {
     
     constructor(props){
@@ -22,11 +44,10 @@ class Vertical extends React.Component {
             active: false,
             winHeight: 0,
             winTop: 0,
-            scrollTop: 0
+            scrollTop: 0,
         };
 
         this._checkSceneVisible = requestFrameThrottle(this._checkSceneVisible.bind(this));
-
     }
 
     componentDidMount() {
@@ -77,10 +98,10 @@ class Vertical extends React.Component {
 
     _checkSceneVisible() {
         //get rectangle of the vertical and test if it's in the viewport or not
-        this._visibleY(this);
+        this._visibleY(this.wayPointRef, this);
     }
 
-    _visibleY(el) {
+    _visibleY(el, vertical) {
         if(el) {
             //Check the rectangle of the dom node and fire a function if it's visible
             let rect = findDOMNode(el).getBoundingClientRect(),
@@ -88,10 +109,10 @@ class Vertical extends React.Component {
                 rectHeightBuffer = rectHeight / 2,
                 rectTopBuffer = rect.top + rectHeightBuffer;
 
-            if(rectTopBuffer + rectHeightBuffer >= this.state.winTop && rectHeightBuffer <= this.state.winHeight) {
-                this._onEnterViewport(el);
+            if(rectHeight >= this.state.winTop && rectHeight <= this.state.winHeight) {
+                this._onEnterViewport(vertical);
             } else {
-                this._onLeaveViewport(el);
+                this._onLeaveViewport(vertical);
             }
         }
     }
@@ -112,6 +133,7 @@ class Vertical extends React.Component {
                 return (
                     <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier}
                              dir={readingDirection ? readingDirection : null}>
+                        <WayPoint wayPointRef={el => this.wayPointRef = el} active={this.state.active} debug={this.props.debug} />
                         {myLayout === 'hero' || myLayout === 'immersiveHero' || myLayout === 'fullscreen' || myLayout === 'card' || myLayout === 'facts' ?
                             <Hero data={layout}
                                   brandColor={brandColor ? brandColor : null}

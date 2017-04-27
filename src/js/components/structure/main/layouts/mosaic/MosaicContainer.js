@@ -15,7 +15,6 @@ class MosaicContainer extends React.Component {
                 theme ? theme : 'theme-light',
                 'c-mosaic fullscreen-mosaic');
 
-
             switch (tiles.length) {
                 case 2: {
                     return ( // Default 2 tile layout "mosaic-1"

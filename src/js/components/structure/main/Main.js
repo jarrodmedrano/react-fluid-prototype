@@ -54,6 +54,7 @@ class Main extends React.Component {
             winWidth: 0,
             winTop: 0,
             scrollTop: 0,
+            debug: false
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
@@ -107,6 +108,15 @@ class Main extends React.Component {
                 this._scrollInto(ref);
             }
         }, this);
+    }
+
+    //Debug Mode
+    @keydown( 'cmd+d', 'ctrl+alt+d' )
+    debugVertical(e) {
+        if(!window.RDX) {
+            e.preventDefault();
+            this.setState({debug: !this.state.debug})
+        }
     }
 
     _scrollInto(ref) {
@@ -201,7 +211,7 @@ class Main extends React.Component {
                                          ref={`${this.props.route.title}-section-${id}`} itemRef={id}>
                                     <Vertical data={result} brandColor={this.state.currentBrandColor} myId={id}
                                               winHeight={this.state.winHeight} winTop={this.state.winTop}
-                                              scrollTop={this.state.scrollTop} deviceInfo={this.props.data.deviceInformation} />
+                                              scrollTop={this.state.scrollTop} deviceInfo={this.props.data.deviceInformation} debug={this.state.debug} />
                                 </Element>
                             )
                         }, this)
