@@ -454,6 +454,10 @@
           "description": "Smaller font than sub heading for the main section description. Limit to 4 lines. This text will generally be in theme color.",
           "type": "string"
         },
+        "legalText": {
+          "description": "Smaller font than sub heading for use in legal disclaimers. This text will generally be in theme color.",
+          "type": "string"
+        },
         "button": {
           "$ref": "#/definitions/button"
         }

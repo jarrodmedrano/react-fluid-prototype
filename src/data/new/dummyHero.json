@@ -23,7 +23,8 @@
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
-          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
           "button": {
             "layout": "button",
             "link": "#/windows",

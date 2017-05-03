@@ -7,7 +7,7 @@ import dataPropTypes, {headingPropTypes} from '../../../../data/dataProps';
 class Heading extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let { heading, subheading, paragraph, button, badge } = this.props.data,
+            let { heading, subheading, paragraph, legalText, button, badge } = this.props.data,
                 picture = this.props.picture,
                 alignY = this.props.alignY;
 
@@ -20,6 +20,7 @@ class Heading extends React.Component {
                     {subheading ? <p className="c-subheading"><Text data={subheading} /></p> : null }
                     {paragraph ? <p className="c-paragraph"><Text data={paragraph} /></p> : null }
                     {button ? <Button data={button} /> : null }
+                    {legalText ? <p className="c-paragraph-4"><Text data={legalText} /></p> : null }
                 </div>
                 {/*{picture && alignY === 'top' ? <Picture data={picture} /> : null }*/}
             </div>
