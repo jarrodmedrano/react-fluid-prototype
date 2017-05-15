@@ -39,6 +39,13 @@ class LegacyKSP extends React.Component {
                 color: this.props.brandColor
             };
 
+            let iconStyle = {
+                width: '100%',
+                maxWidth: '50px',
+                minWidth: '25px',
+                display: 'block'
+            }
+
             return (
                 <div className="m-feature legacy-feature" data-grid="col-12"
                      style={templateStyle ? templateStyle : null}>
@@ -57,7 +64,7 @@ class LegacyKSP extends React.Component {
                                     <ul className="f-column">
                                         <li className="f-row">
                                                 <div data-grid="col-2 stack-2">
-                                                    {icon1 ? <img className="c-image" src={icon1} draggable="false"/> : null }
+                                                    {icon1 ? <img style={iconStyle} src={icon1} draggable="false"/> : null }
                                                 </div>
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
@@ -69,7 +76,7 @@ class LegacyKSP extends React.Component {
                                         </li>
                                         <li className="f-row">
                                                 <div data-grid="col-2 stack-2">
-                                                    {icon2 ? <img className="c-image" src={icon2} draggable="false"/> : null }
+                                                    {icon2 ? <img style={iconStyle} src={icon2} draggable="false"/> : null }
                                                 </div>
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
