@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import MosaicPicture from '../../../../generic/picture/MosaicPicture';
+import Picture from '../../../../generic/picture/Picture';
 import Heading from '../../../../generic/heading/Heading';
 import ButtonLink from '../../../../generic/link/ButtonLink'
 import propsAreValid from '../../../../../lib/util';
@@ -12,7 +13,7 @@ class MosaicTile extends React.Component {
             let { headingBlock, pictureBlock, hoverEffectColor, viewMask} = this.props.data;
             let { textColor, backgroundColor, } = headingBlock;
 
-            let tileClass = classNames('c-mosaic-placement c-placement',
+            let tileClass = classNames('c-mosaic-placement c-placement f-height-large f-width-small',
                 this.props.theme ? this.props.theme : 'theme-light',
                 viewMask ? `f-mask-${viewMask}` : null);
 

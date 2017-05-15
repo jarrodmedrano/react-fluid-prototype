@@ -1,0 +1,318 @@
+﻿{
+  "groups": [
+    {
+      "groupIdentifier": "inking",
+      "ordinal": "50",
+      "brand": {
+        "logo": "img/inking_assets/ms-logo.png",
+        "anchorTitle": "Windows Inking",
+        "color": "#0078D7",
+        "logoTab": "img/inking_assets/windowsink_icon_946.png"
+      },
+      "sections": [
+         {
+          "ordinal": "100",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "Inking Home",
+          "anchorLink": true,
+          "anchorTitle": "Inking Home",
+          "layout": {
+            "type": "mosaic",
+            "theme": "theme-dark",
+            "mosaicLayout": "mosaic-7",
+            "tiles": [
+              {
+                "headingBlock": {
+                  "heading": "",
+                  "backgroundColor": "#0078D7",
+                  "button": {
+                    "link": "http://www.microsoft.com",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_WindowsInk_850x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "heading": "",
+                  "backgroundColor": "#0078D7",
+                  "button": {
+                    "link": "/inking#Ink to Editor",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_InkEditor_425x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "heading": "",
+                  "backgroundColor": "#0078D7",
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_InkReplay_425x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "heading": "",
+                  "backgroundColor": "#0078D7",
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_InkMath_425x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "heading": "",
+                  "backgroundColor": "#0078D7",
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_Ruler_425x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "heading": "",
+                  "backgroundColor": "#0078D7",
+                  "button": {
+                    "link": "/inking#StickyNotes",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_StickyNotes_425x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "heading": "Draw on Photo",
+                  "backgroundColor": "#0078D7",
+                  "viewMask": "60",
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/inking_assets/Tiles_Photo_425x425.png"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ordinal": "200",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "Ink to Editor",
+          "anchorLink": true,
+          "anchorTitle": "Ink to Editor",
+          "layout": {
+            "type": "immersiveHero",
+            "alignY": "top",
+            "viewMask": "40",
+            "theme": "theme-light",
+            "headingBlock": {
+              "heading": "The power of pen with Office.",
+              "paragraph": "With Ink Editor, you can use ink to edit documents directly. Strike through words to delete them, circle text to select it, and highlight text, all in an instant.",
+               "button": {
+                    "layout": "button",
+                    "link": "",
+                    "text": "Try it now",
+                    "textColor": "white",
+                    "backgroundColor": "#0078D7"
+                  }
+                },
+            "pictureBlock": {
+              "ariaLabel": "Ink to Editor",
+              "pictures": [
+                {
+                  "src": "img/inking_assets/Consumer_BTS_2017_Ink_Editor_Word-GIF.GIF"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "300",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "Ink Replay",
+          "anchorLink": true,
+          "anchorTitle": "Ink Replay",
+          "layout": {
+            "type": "hero",
+            "alignX": "center",
+            "alignY": "top",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "Ink Replay",
+              "paragraph": "Rewind and replay the sequence of mark-ups made by others with Ink Replay to better understand their thought process.",
+              "button": {
+                    "link": "ms-retaildemo://Learn_about_Ink Replay_in_PowerPoint.pptx",
+                    "overlay": "#000"
+                  }
+                },
+            "pictureBlock": {
+              "ariaLabel": "Ink Replay",
+              "pictures": [
+                {
+                  "src": "img/inking_assets/Display_Studio.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "400",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "Ink to Math Assistant",
+          "anchorLink": true,
+          "anchorTitle": "Ink to Math Assistant",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "center",
+            "alignY": "top",
+            "headingBlock": {
+              "heading": "Homework simplified",
+              "paragraph": "Handwrite an equation in OneNote, and the Ink Math Assistant not only converts it to text, but also teaches you the steps to solve it.",
+              "button": {
+                    "link": "ms-retaildemo://Solve_and_graph_handwritten_equations_in_OneNote.one",
+                    "overlay": "#000"
+                  }
+                },
+            "pictureBlock": {
+              "ariaLabel": "Ink to Math Assistant",
+              "pictures": [
+                {
+                  "src": "oem_assets/Dial_Hero.PNG"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "500",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "Ruler",
+          "anchorLink": true,
+          "anchorTitle": "Ruler",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "center",
+            "alignY": "top",
+            "viewMask": "80",
+            "headingBlock": {
+              "heading": "Perfectly straight",
+              "paragraph": "Use the built-in digital ruler to draw straight lines and line up objects, just like on paper!"
+            },
+            "pictureBlock": {
+              "ariaLabel": "Ruler",
+              "pictures": [
+                {
+                  "src": "oem_assets/Studio_Hero_Performance_4500x3000.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "500",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "StickyNotes",
+          "anchorLink": true,
+          "anchorTitle": "Sticky Notes",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "center",
+            "alignY": "top",
+            "viewMask": "80",
+            "headingBlock": {
+              "heading": "Lorem Ipsum",
+              "paragraph": "Lorem Ipsum"
+            },
+            "pictureBlock": {
+              "ariaLabel": "Sticky Notes",
+              "pictures": [
+                {
+                  "src": "img/inking_assets/Studio_Hero_Performance_4500x3000.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "600",
+          "groupIdentifier": "inking",
+          "sectionIdentifier": "Draw on Photo",
+          "anchorLink": true,
+          "anchorTitle": "Draw on Photo",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "left",
+            "alignY": "bottom",
+            "viewMask": "80",
+            "headingBlock": {
+              "heading": "Personalize photos with Windows Ink",
+              "paragraph": "Draw on pictures and videos to make them your own. Then, easily share them with the people who matter most to you."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Draw on Photo",
+              "pictures": [
+                {
+                  "src": "oem_assets/Studio_Hero_Design_4500x3000.png"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

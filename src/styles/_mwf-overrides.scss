@@ -131,6 +131,12 @@ a.mosaic-link:after {
   }
 }
 
+.fullscreen-mosaic {
+  img.c-image, picture.c-image img {
+    display: none;
+  }
+}
+
 @import 'ms-mwf/mwf/core/styles/config/environment';
 @import 'ms-mwf/mwf/core/styles/utilities/internationalization';
 

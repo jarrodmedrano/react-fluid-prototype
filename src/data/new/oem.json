@@ -1,0 +1,289 @@
+﻿{
+  "groups": [
+    {
+      "groupIdentifier": "oem",
+      "brand": {
+        "logo": "img/oem_assets/ms-logo.png",
+        "anchorTitle": "Surface Book",
+        "color": "#0078D7",
+        "logoTab": "img/oem_assets/MSSurfaceBook_Logo_stacked.png",
+        "selectedLogoTab": "img/oem_assets/MSSurfaceBook_Logo_stacked.png"
+      },
+      "sections": [
+        {
+          "ordinal": "100",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Surface Book",
+          "anchorLink": true,
+          "anchorTitle": "Surface Book",
+          "layout": {
+            "type": "hero",
+            "alignX": "left",
+            "alignY": "top",
+            "viewMask": "40",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "Surface Book",
+              "subheading": "The ultimate laptop.",
+              "paragraph": "Surface Book is built for extreme performance, giving you lightning fast access to programs, videos, and music. Plus, it delivers rich images and gaming power with an optional discrete graphics card that can handle intense professional tasks. Scroll down to learn more.",
+              "button": {
+                    "layout": "button",
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/pdp/productID.5074012200?icid=en_US_homepage_Spotlight3_SurfBook_5.2.17",
+                    "text": "Learn more",
+                    "textColor": "white",
+                    "backgroundColor": "#0078D7"
+                  }
+            },
+            "pictureBlock": {
+              "ariaLabel": "Surface Book",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Surface_Book_Hero.jpg"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "200",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Performance",
+          "anchorLink": true,
+          "anchorTitle": "Performance",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "right",
+            "alignY": "top",
+            "viewMask": "60",
+            "headingBlock": {
+              "heading": "Meet the new Surface Book with Performance Base.",
+              "paragraph": "Our most powerful Surface Book, with an Intel® Core™ i7 processor and NVIDIA® GeForce® GTX 965M 2GB GPU, gives you the increased speed and graphics performance you need for engineering, design, and everything in between.",
+              "button": {
+                    "layout": "button",
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/pdp/productID.5074012200?icid=en_US_homepage_Spotlight3_SurfBook_5.2.17",
+                    "text": "Learn more",
+                    "textColor": "white",
+                    "backgroundColor": "#0078D7"
+                  }
+            },
+            "pictureBlock": {
+              "ariaLabel": "Performance",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Surface_Book_Performance.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+                    "ordinal": "300",
+                    "groupIdentifier": "oem",
+                    "sectionIdentifier": "Apps",
+                    "anchorLink": true,
+                    "anchorTitle": "Apps",
+                    "layout": {
+                        "type": "mosaic",
+                        "theme": "theme-dark",
+                        "tiles": [
+                            {
+                "headingBlock": {
+		  "heading": "Sketchable",
+                  "button": {
+                    "layout": "button",
+                    "link": "sketchable-launch://",
+                    "text" : "Try it now",
+                    "textColor": "white",
+                    "backgroundColor": "#0078D7"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/Sketchable_Temp_Tile.PNG"
+                    }
+                  ]
+                }
+              },
+                            {
+                                "headingBlock": {
+                                                "heading": "Watch a 4K Video from Red Bull",
+                                                "subheading": "Play now",
+                                    "button": {
+                                        "layout": "button",
+                                        "link": "media://rdx/url={videoslibrary}\\Microsoft_definitive_4096x2304_R1.mp4",
+                                        "text" : "Try it now",
+                                        "textColor": "white",
+                                        "backgroundColor": "#0078D7"
+                                    }
+                                },
+                                "pictureBlock": {
+                                    "pictures": [
+                                        {
+                                            "src": "img/oem_assets/RedBull_ScreenGrab.PNG"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+        {
+          "ordinal": "400",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Design",
+          "anchorLink": true,
+          "anchorTitle": "Design",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "center",
+            "alignY": "bottom",
+            "viewMask": "80",
+            "headingBlock": {
+              "heading": "Meticulously crafted & built to last.",
+              "paragraph": "Surface Book is built for power while remaining thin and light enough to take with you anywhere, without losing an ounce of performance."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Design",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/MSSurface_BookwithP_Base_Hero_0005.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "500",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Display",
+          "anchorLink": true,
+          "anchorTitle": "Display",
+          "layout": {
+            "type": "hero",
+            "alignY": "top",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": ""
+            },
+            "pictureBlock": {
+              "ariaLabel": "Display",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Display_Book_Display.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "600",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Software",
+          "anchorLink": true,
+          "anchorTitle": "Software",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "left",
+            "alignY": "center",
+            "viewMask": "60",
+            "headingBlock": {
+              "heading": "Engineered for professional-grade software.",
+              "paragraph": "Surface Book speeds through intensive professional software, like SolidWorks 3D CAD, AutoCAD Revit, and Adobe Premiere Pro®.* With the power to run these programs anywhere, you’re no longer chained to your desk.",
+              "legalText": "*Programs sold separately."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Design",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/MSSurface_EDU_Seattle_0379.jpg"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "700",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Accessories",
+          "anchorLink": true,
+          "anchorTitle": "Accessories",
+          "layout": {
+            "type": "mosaic",
+            "theme": "theme-dark",
+            "tiles": [
+              {
+                "headingBlock": {
+                  "heading": "Complete your experience",
+                  "subheading": "Surface Book can be your one device for everything.  And to complete that experience, we've designed accessories to work perfectly with your Surface.",
+                  "button": {
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/cat/Surface-accessories/categoryID.69403700?icid=en_US_homepage_whatsnew_2_SurfaceBookAccessories_170507"
+                  }
+              }
+            },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Microsoft-Arc-Mouse-Black/productID.5105041600"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/Mavis_MKCenter_TQ_Gray_850x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/pdp/productID.5074014100?icid=Surface_Accessories_ModB_Surface_Keyboard_103116"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/Cupido_0001_850x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Microsoft-Surface-Dock/productID.325725200"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/mosaic-ports.jpg"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "https://www.microsoftstore.com/store/msusa/en_US/pdp/Surface-Pen/productID.325724000?icid=Surface_Accessories_ModF_Surface_Pen_103116"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/front-bl_hero_425x425.png"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
