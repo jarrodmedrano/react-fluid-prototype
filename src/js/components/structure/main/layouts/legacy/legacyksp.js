@@ -56,10 +56,9 @@ class LegacyKSP extends React.Component {
                                      style={rtl ? {textAlign: 'right'} : null}>
                                     <ul className="f-column">
                                         <li className="f-row">
-                                            {icon1 ?
                                                 <div data-grid="col-2 stack-2">
-                                                    <img className="c-image" src={icon1} draggable="false"/>
-                                                </div> : null }
+                                                    {icon1 ? <img className="c-image" src={icon1} draggable="false"/> : null }
+                                                </div>
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
                                                     {text1 || itemheading1 ? <strong><Text data={text1 ? text1 : itemheading1 ? itemheading1 : null} /></strong> : null }
@@ -69,10 +68,9 @@ class LegacyKSP extends React.Component {
                                             </div>
                                         </li>
                                         <li className="f-row">
-                                            {icon2 ?
                                                 <div data-grid="col-2 stack-2">
-                                                    <img className="c-image" src={icon2} draggable="false"/>
-                                                </div> : null }
+                                                    {icon2 ? <img className="c-image" src={icon2} draggable="false"/> : null }
+                                                </div>
                                             <div data-grid="col-10">
                                                 <p className="c-paragraph-2">
                                                     {text2 || itemheading2 ? <strong><Text data={text2 ? text2 : itemheading2 ? itemheading2 : null} /></strong> : null }
