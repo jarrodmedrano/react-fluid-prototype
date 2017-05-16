@@ -120,7 +120,9 @@ class Main extends React.Component {
     }
 
     _scrollInto(ref) {
-        this.mainRef.scrollTop = ref.offsetTop;
+        if(this.mainRef) {
+            this.mainRef.scrollTop = ref.offsetTop;
+        }
     }
 
     _getCurrentPage() {
@@ -193,9 +195,11 @@ class Main extends React.Component {
     };
 
     _updateScrollPosition() {
-        this.setState({
-            scrollTop: this.mainRef.scrollTop
-        });
+        if(this.mainRef) {
+            this.setState({
+                scrollTop: this.mainRef.scrollTop
+            });
+        }
     }
 
     render() {

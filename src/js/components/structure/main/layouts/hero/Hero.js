@@ -26,9 +26,16 @@ class Hero extends React.Component {
             if (type === 'immersiveHero' && alignY) {
                 return (
                     <div className={heroClass}>
-                        {pictureBlock && alignY === 'top' ? <Picture data={pictureBlock} /> : null}
-                            <Heading data={headingBlock} />
-                        {pictureBlock && alignY === 'bottom' ? <Picture data={pictureBlock} /> : null}
+                        {pictureBlock && alignY === 'top' ?
+                            <Heading data={headingBlock} picture={pictureBlock} alignY="top">
+                                <Picture data={pictureBlock} />
+                            </Heading>
+                        : null }
+                        {pictureBlock && alignY === 'bottom' ?
+                            <Heading data={headingBlock} picture={pictureBlock} alignY="bottom">
+                                <Picture data={pictureBlock} />
+                            </Heading>
+                        : null}
                     </div>
                 )
             }

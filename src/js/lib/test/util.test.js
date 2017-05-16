@@ -1,6 +1,5 @@
 import {impressionEvent, externalNavigate, internalNavigate, logError, navigateEvent} from '../util';
 import expect, { createSpy, spyOn, isSpy } from 'expect'
-import { browserHistory } from 'react-router';
 
 describe('Utility functions', () => {
     it('should run external navigate if window.RDX exists', () => {

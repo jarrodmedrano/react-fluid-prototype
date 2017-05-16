@@ -13,7 +13,7 @@ class Heading extends React.Component {
 
             return (
             <div>
-                {/*{picture && alignY === 'bottom' ? <Picture data={picture} /> : null }*/}
+                {alignY === 'bottom' ? this.props.children : null}
                 <div className="content-animate">
                     {badge ? <strong className="c-badge f-large f-highlight"><Text data={badge} /></strong> : null }
                     {heading ? <h1 className="c-heading"><Text data={heading} /></h1> : null }
@@ -22,7 +22,7 @@ class Heading extends React.Component {
                     {button ? <Button data={button} /> : null }
                     {legalText ? <p className="c-paragraph-4"><Text data={legalText} /></p> : null }
                 </div>
-                {/*{picture && alignY === 'top' ? <Picture data={picture} /> : null }*/}
+                {alignY === 'top' ? this.props.children : null}
             </div>
             )
         } return null
