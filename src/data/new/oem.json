@@ -220,7 +220,7 @@
                   "heading": "Complete your experience",
                   "subheading": "Surface Book can be your one device for everything.  And to complete that experience, we've designed accessories to work perfectly with your Surface.",
                   "button": {
-                    "link": "https://www.microsoftstore.com/store/msusa/en_US/cat/Surface-accessories/categoryID.69403700?icid=en_US_homepage_whatsnew_2_SurfaceBookAccessories_170507"
+                    "link": "Microsoft-edge:about:demo"
                   }
               }
             },
@@ -282,6 +282,88 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "groupIdentifier": "windows",
+      "brand": {
+        "groupIdentifier": "windows",
+        "logo": "img/windows_assets/Windows_Desktop_Logo.png",
+        "logoTab": "img/windows_assets/Windows_Desktop_Logo.png",
+        "selectedLogoTab": "img/windows_assets/Windows_Desktop_Logo.png",
+        "color": "#00bcf2"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Easily manage everything on your desktop",
+          "text1": "Fast, familiar, and more secure with great multi-tasking features, like the ability to create new desktops when you need more space.",
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/RDX_Manage_laptop_v2.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "ManageDesktop",
+          "ordinal": "100"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Access hours of fun",
+          "text1": "Discover popular, new, free, and paid games, all certified by Microsoft and available in the Windows Store.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Browse games",
+            "link": "ms-windows-store://navigatetopage/?Id=Games",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/RDX_Casual_Gaming_v7.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "CasualGaming",
+          "ordinal": "200"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Meet Cortana, your personal assistant",
+          "text1": "You can ask Cortana anything, get her help with planning itineraries and reminders, and she'll even make timely suggestions based on what she knows about you.",
+          "legalText": "Cortana available in select global markets; experience may vary by region and device.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Talk to Cortana",
+            "link": "ms-cortana://"
+          },
+          "media": {
+            "blockType": "gif",
+            "src": "img/windows_assets/Page2.gif"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Cortana",
+          "ordinal": "300"
+        },
+        {
+          "layout": "featureCta",
+          "textSide": "left",
+          "header": "Introducing Microsoft Edge. Go beyond browsing. ",
+          "text1": "Write on webpages, find things faster, and read distraction-free with Microsoft’s newest browser.",
+          "button": {
+            "blockType": "buttonExternal",
+            "text": "Try it now",
+            "link": "Microsoft-edge:about:demo",
+            "actionType": "url"
+          },
+          "media": {
+            "blockType": "video",
+            "src": "img/windows_assets/EDGE_2IN1_v3.mp4"
+          },
+          "groupIdentifier": "windows",
+          "sectionIdentifier": "Edge",
+          "ordinal": "400"
         }
       ]
     }

@@ -7,6 +7,10 @@ exports[`Vertical should fire impression event when active and fire again when i
   id="hero1"
   name="hero1"
 >
+  <WayPoint
+    active={false}
+    wayPointRef={[Function]}
+  />
   <LegacySpecs
     active={false}
     brandColor={null}
@@ -29,6 +33,10 @@ exports[`Vertical should render without exploding 1`] = `
   id="hero1"
   name="hero1"
 >
+  <WayPoint
+    active={false}
+    wayPointRef={[Function]}
+  />
   <LegacySpecs
     active={false}
     brandColor={null}

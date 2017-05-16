@@ -1,5 +1,6 @@
 import {impressionEvent, externalNavigate, internalNavigate, logError, navigateEvent} from '../util';
 import expect, { createSpy, spyOn, isSpy } from 'expect'
+import { browserHistory } from 'react-router';
 
 describe('Utility functions', () => {
     it('should run external navigate if window.RDX exists', () => {
@@ -13,6 +14,18 @@ describe('Utility functions', () => {
 
         expect(spy).toHaveBeenCalled()
     });
+
+    // it('should run internal navigate if link starts with slash', () => {
+    //     window = {
+    //         internalNavigate: () => {return true}
+    //     };
+    //
+    //     let spy = expect.spyOn(window, 'internalNavigate');
+    //
+    //     internalNavigate('/windows', browserHistory);
+    //
+    //     expect(spy).toHaveBeenCalled()
+    // });
 
     it('should run navigate Event if window.RDX exists', () => {
         window.RDX = {

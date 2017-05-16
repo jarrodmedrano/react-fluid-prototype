@@ -11,16 +11,18 @@ export function externalNavigate(target) {
 }
 
 export function internalNavigate(target, router) {
-    if (target.indexOf("#") === -1) {
-        router.push(target);
-    } else {
-        router.push(target);
+    if(target && router) {
+        if (target.indexOf("#") === -1) {
+            router.push(target);
+        } else {
+            router.push(target);
 
-        setTimeout(() => {
-            const id = target.split('#')[1];
-            const element = document.getElementById(id);
-            if (element) element.scrollIntoView();
-        }, 0);
+            setTimeout(() => {
+                const id = target.split('#')[1];
+                const element = document.getElementById(id);
+                if (element) element.scrollIntoView();
+            }, 0);
+        }
     }
 }
 
