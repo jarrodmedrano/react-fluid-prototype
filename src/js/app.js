@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
+import {Router, Route, IndexRoute, Redirect, useRouterHistory} from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
@@ -92,6 +92,7 @@ class RenderForcer extends React.Component {
                                       component={(props, state, params) => <MasterLayout  {...props} />} />;
                     }, this)}
                 </Route>
+                <Redirect from={Index.groupIdentifier} to="/" />
             </Router>
         )
     }

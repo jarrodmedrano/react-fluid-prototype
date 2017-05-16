@@ -26,9 +26,27 @@ describe('Button Link functions', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    it('Should have internal state false when it has blockType buttonExternal', () => {
+        const wrapper = shallow(<ButtonLink to="/oem" blockType="buttonExternal" />);
+        expect(wrapper.state('internal')).toEqual(false);
+        expect(wrapper).toMatchSnapshot();
+    });
+
     it('Should have internal state false when link has a token', () => {
         const wrapper = shallow(<ButtonLink to="media:{pictureslibrary}//Glaciers.docx" />);
         expect(wrapper.state('internal')).toEqual(false);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('Should have internal state true when linking internally /oem', () => {
+        const wrapper = shallow(<ButtonLink to="/oem" />);
+        expect(wrapper.state('internal')).toEqual(true);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('Should have internal state true when linking internally /oem/', () => {
+        const wrapper = shallow(<ButtonLink to="/oem/" />);
+        expect(wrapper.state('internal')).toEqual(true);
         expect(wrapper).toMatchSnapshot();
     });
 

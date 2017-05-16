@@ -14,7 +14,7 @@ class ButtonLink extends React.Component {
     }
 
     componentWillMount() {
-        if (this._isInternal(this.props.to)) {
+        if (this._isInternal(this.props.to) && this.props.blockType !== "buttonExternal") {
             this.setState({
                 internal: true
             })

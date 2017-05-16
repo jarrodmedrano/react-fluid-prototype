@@ -55,12 +55,12 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
-// defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
-data = inking;
+defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
+//data = inking;
     //data = dummySurfacePro;
     //data = dummyHp;
    //data = dummyHebrew;
-    //data = defaultVertical;
+    data = defaultVertical;
 
 }
 export default data;
