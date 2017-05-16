@@ -313,6 +313,66 @@
           }
         }
       ]
+    },
+    {
+      "groupIdentifier": "office",
+      "brand": {
+        "groupIdentifier": "office",
+        "logo": "img/retailer_assets/Office_logo.png",
+        "selectedLogoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
+        "logoTab": "img/oem_assets/logos/Office_Desktop_Logo.png",
+        "color": "#dc3c00"
+      },
+      "sections": [
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>The Power to</span> overachieve.</b></span>",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/Office_Holiday_Architect_30sec_EN-US.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page1",
+          "ordinal": "100"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Create <span><b><span style='color:#58585a'>amazing documents with ease using built in research and smart proofing tools.</span></b></span>",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/Office_Holiday_Feature_Final_720p_en_us.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page2",
+          "ordinal": "200"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "Move <span><b><span style='color:#58585a'>with OneDrive.  Share documents, photos and work across all your devices.</span></b></span>",
+          "media": {
+            "blockType": "video",
+            "src": "img/office_assets/Media1.mp4"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page3",
+          "ordinal": "300"
+        },
+        {
+          "layout": "feature",
+          "textSide": "left",
+          "header": "<span><b><span style='color:#58585a'>Discover the Office</span> that is right for you.</b></span>",
+          "media": {
+            "blockType": "img",
+            "src": "img/office_assets/Office_Chart_V3.gif"
+          },
+          "groupIdentifier": "office",
+          "sectionIdentifier": "Page4",
+          "ordinal": "400"
+        }
+      ]
     }
   ]
 }

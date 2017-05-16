@@ -81,124 +81,137 @@ video {
   }
 }
 
-//
-//.m-immersive-hero-item > div > div {
-//  z-index: 1;
-//}
+
+.m-immersive-hero-item > div > div {
+  z-index: 1;
+}
 
 
-//
-//.scene-vertical.immersiveHero {
-//  height: 100vh;
-//
-//  > div {
-//    height: 100vh;
-//  }
-//}
-//
-//.m-immersive-hero-item.f-align-top > div {
-//  display: flex;
-//  width: 100vw;
-//  left: 0;
-//  transform: none;
-//}
-//
-//.m-immersive-hero-item.f-align-top > div > div, .m-immersive-hero-item.f-align-bottom > div > div {
-//  display: flex;
-//  flex-direction: column;
-//  flex: 1;
-//  height: 100vh;
-//  top: 0;
-//  width: 100vw;
-//  transform: none;
-//  left: 0;
-//  max-width: 100%;
-//  padding: 0 0;
-//}
-//
-//img.c-image, picture.c-image {
-//  flex: 1
-//}
-//
-//
-//img.c-image, picture.c-image img {
-//  height: 100%;
-//  width: auto;
-//}
+
+.scene-vertical.immersiveHero {
+  height: 100vh;
+
+  > div {
+    height: 100vh;
+  }
+}
+
+.m-immersive-hero-item.f-align-top > div {
+  display: flex;
+  width: 100vw;
+  left: 0;
+  transform: none;
+  max-width: 100%;
+
+  //> div {
+  //  top: 0;
+  //}
+}
+
+.m-immersive-hero-item.f-align-top > div > div, .m-immersive-hero-item.f-align-bottom > div > div {
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  transform: none;
+  left: 0;
+  max-width: 100%;
+  padding: 0 0;
+}
+
+img.c-image, picture.c-image {
+  flex: 1
+}
 
 
-//
-//.m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
-//  position: relative;
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: center;
-//  height: 100vh;
-//  transform: none;
-//  left: 0;
-//}
-//
-//.m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
-//  position: relative;
-//  transform: none;
-//  left: 0;
-//  top: 0;
-//  flex: 1;
-//  box-sizing: content-box;
-//}
-//
-//.m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
-//  position: relative;
-//  height: auto;
-//  //max-width: 50%;
-//  left: 0;
-//  transform: none;
-//}
-//
-//.m-immersive-hero-item.f-align-bottom > div {
-//  top: 0;
-//  padding-bottom: 172px;
-//}
-//
-//.m-immersive-hero-item.f-align-top > div {
-//  padding-top: 172px;
-//}
-//
-//.m-immersive-hero-item.f-align-bottom > div > div {
-//  order: 2;
-//  flex: 0 auto;
-//}
-//
-//.m-immersive-hero-item.f-align-bottom > div > picture.c-image {
-//  order: 1;
-//  flex: 1;
-//}
-//
-//@media only screen and (min-width: 768px) {
-//  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
-//    top: 0;
-//  }
-//}
-//@media only screen and (min-width: 1084px) {
-//  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
-//    //top: 0;
-//    //bottom: 189px;
-//  }
-//}
-//
-//@media only screen and (min-width: 540px) {
-//  .m-image-intro.f-align-bottom > div {
-//    bottom: 189px;
-//  }
-//
-//  .m-image-intro.f-transparent.f-align-top > div {
-//    top: 189px;
-//  }
-//}
-//.m-immersive-hero-item.f-align-bottom > div {
-//  bottom: 189px;
-//}
+img.c-image, picture.c-image img {
+  height: 100%;
+  width: auto;
+}
+
+
+
+.m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  transform: none;
+  left: 0;
+}
+
+.m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
+  position: relative;
+  transform: none;
+  left: 0;
+  top: 0;
+  flex: 1;
+  box-sizing: content-box;
+}
+
+.m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
+  position: relative;
+  height: auto;
+  //max-width: 50%;
+  left: 0;
+  transform: none;
+}
+
+.m-immersive-hero-item.f-align-bottom > div {
+  top: 0;
+  padding-bottom: 172px;
+}
+
+.m-immersive-hero-item.f-align-top > div {
+  padding-top: 172px;
+}
+
+.m-immersive-hero-item.f-align-bottom > div > div {
+  order: 2;
+  flex: 0 auto;
+}
+
+.m-immersive-hero-item.f-align-bottom > div > picture.c-image {
+  order: 1;
+  flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
+    top: 0;
+  }
+}
+@media only screen and (min-width: 1084px) {
+  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
+    //top: 0;
+    //bottom: 189px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .m-image-intro.f-align-bottom > div {
+    bottom: 189px;
+  }
+
+  .m-image-intro.f-transparent.f-align-top > div {
+    top: 189px;
+  }
+}
+.m-immersive-hero-item.f-align-bottom > div {
+  bottom: 189px;
+}
 //
 //.m-immersive-hero-item>div>div .c-heading {
 //  font-size: 34px;
 //}
+
+.m-immersive-hero-item.f-align-top > div > picture.c-image img, .m-immersive-hero-item.f-align-bottom > div > picture.c-image img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.m-immersive-hero-item > div > div p {
+  max-width: 100%;
+}
