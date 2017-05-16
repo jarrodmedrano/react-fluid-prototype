@@ -109,7 +109,21 @@ storiesOf('Sticky Banner', module)
     ));
 
 storiesOf('Sticky Footer', module)
-    .add('Default', () => (
+    .add('2 Links (Should not appear)', () => (
+        <Wrapper name="Section2" id="Section2">
+            <StickyFooter data={data.oemGroupSmallest}/>
+        </Wrapper>
+    ));
+
+storiesOf('Sticky Footer', module)
+    .add('3 Links', () => (
+        <Wrapper name="Section2" id="Section2">
+            <StickyFooter data={data.oemGroupSmall}/>
+        </Wrapper>
+    ));
+
+storiesOf('Sticky Footer', module)
+    .add('Lots of Links (With breadcrumbs)', () => (
         <Wrapper name="Section2" id="Section2">
             <StickyFooter data={data.oemGroup}/>
         </Wrapper>

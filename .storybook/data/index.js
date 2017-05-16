@@ -251,6 +251,228 @@ export const Compare = {
     }
 };
 
+export const oemGroupSmallest = {
+    "groupIdentifier": "oem",
+    "brand": {
+        "logo": logo,
+        "anchorTitle": "Surface Book",
+        "color": "#ffffff",
+        "logoTab": "img/vertical/surfacebook-logo.png",
+        "selectedLogoTab": "img/vertical/surfacebook-logo.png"
+    },
+    "sections": [
+        {
+            "ordinal": 100,
+            "groupIdentifier": "hero",
+            "sectionIdentifier": "Section2",
+            "anchorLink": true,
+            "anchorTitle": "Explore Surface Book",
+            "layout": {
+                "type": "fullscreen",
+                "alignX": "center",
+                "alignY": "center",
+                "theme": "theme-light",
+                "media": {
+                    "pictureBlock": {
+                        "altText": "Surface Book Pro",
+                        "ariaLabel": "Surface Book Pro",
+                        "pictures": [
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "1779"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "1400"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "1084"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "768px"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "540"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "0"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "ordinal": 200,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "Keyboard",
+            "anchorLink": true,
+            "anchorTitle": "Keyboard",
+            "layout": {
+                "type": "immersiveHero",
+                "alignY": "bottom",
+                "theme": "theme-light",
+                "headingBlock": {
+                    "heading": "Five-point touchpad"
+                },
+                "pictureBlock": {
+                    "altText": "AltText",
+                    "ariaLabel": "AriaLabel",
+                    "pictures": [
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "1779"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "1400"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "1084"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "768"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "540"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "0"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+
+export const oemGroupSmall = {
+    "groupIdentifier": "oem",
+    "brand": {
+        "logo": logo,
+        "anchorTitle": "Surface Book",
+        "color": "#ffffff",
+        "logoTab": "img/vertical/surfacebook-logo.png",
+        "selectedLogoTab": "img/vertical/surfacebook-logo.png"
+    },
+    "sections": [
+        {
+            "ordinal": 100,
+            "groupIdentifier": "hero",
+            "sectionIdentifier": "Section2",
+            "anchorLink": true,
+            "anchorTitle": "Explore Surface Book",
+            "layout": {
+                "type": "fullscreen",
+                "alignX": "center",
+                "alignY": "center",
+                "theme": "theme-light",
+                "media": {
+                    "pictureBlock": {
+                        "altText": "Surface Book Pro",
+                        "ariaLabel": "Surface Book Pro",
+                        "pictures": [
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "1779"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "1400"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "1084"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "768px"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "540"
+                            },
+                            {
+                                "src": "img/vertical/surface-hero.jpg",
+                                "minWidth": "0"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "ordinal": 200,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "Keyboard",
+            "anchorLink": true,
+            "anchorTitle": "Keyboard",
+            "layout": {
+                "type": "immersiveHero",
+                "alignY": "bottom",
+                "theme": "theme-light",
+                "headingBlock": {
+                    "heading": "Five-point touchpad"
+                },
+                "pictureBlock": {
+                    "altText": "AltText",
+                    "ariaLabel": "AriaLabel",
+                    "pictures": [
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "1779"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "1400"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "1084"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "768"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "540"
+                        },
+                        {
+                            "src": "img/vertical/keyboard-hero.jpg",
+                            "minWidth": "0"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "ordinal": 300,
+            "groupIdentifier": "oem",
+            "sectionIdentifier": "SurfacePen",
+            "anchorLink": true,
+            "anchorTitle": "Surface Pen",
+            "layout": {
+                "type": "fullscreen",
+                "media": {
+                    "videoBlock": {
+                        "src": "img/vertical/Hero-pen.mp4"
+                    }
+                }
+            }
+        }
+    ]
+}
+
 export const oemGroup = {
     "groupIdentifier": "oem",
     "brand": {
