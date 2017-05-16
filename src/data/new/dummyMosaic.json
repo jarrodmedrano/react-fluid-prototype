@@ -2002,6 +2002,191 @@
           }
         ]
       }
+    },
+    {
+      "groupIdentifier": "oem",
+      "ordinal": "500",
+      "sectionIdentifier": "Mosaic",
+      "anchorLink": true,
+      "anchorTitle": "Accessories",
+      "layout": {
+        "type": "mosaic",
+        "mosaicLayout": "mosaic-2",
+        "theme": "theme-dark",
+        "tiles": [
+          {
+            "hoverEffectColor": "#000",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "Accessories",
+              "subheading": "The perfect complements to your Surface",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "black",
+                "backgroundColor": "white"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/vertical/bg-examples/mountains.jpg",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "img/vertical/bg-examples/mountains.jpg",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "img/vertical/bg-examples/mountains.jpg",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "img/vertical/bg-examples/mountains.jpg",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "img/vertical/bg-examples/mountains.jpg",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "img/vertical/bg-examples/mountains.jpg",
+                  "minWidth": "0"
+                }
+              ]
+            }
+          },
+          {
+            "hoverEffectColor": "#000",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "Accessories",
+              "subheading": "The perfect complements to your Surface",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "black",
+                "backgroundColor": "white"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/vertical/bg-examples/forest.jpg",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "img/vertical/bg-examples/forest.jpg",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "img/vertical/bg-examples/forest.jpg",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "img/vertical/bg-examples/forest.jpg",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "img/vertical/bg-examples/forest.jpg",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "img/vertical/bg-examples/forest.jpg",
+                  "minWidth": "0"
+                }
+              ]
+            }
+          },
+          {
+            "hoverEffectColor": "#000",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "Accessories",
+              "subheading": "The perfect complements to your Surface",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "black",
+                "backgroundColor": "white"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/vertical/bg-examples/lake.jpg",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "img/vertical/bg-examples/lake.jpg",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "img/vertical/bg-examples/lake.jpg",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "img/vertical/bg-examples/lake.jpg",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "img/vertical/bg-examples/lake.jpg",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "img/vertical/bg-examples/lake.jpg",
+                  "minWidth": "0"
+                }
+              ]
+            }
+          },
+          {
+            "hoverEffectColor": "#000",
+            "headingBlock": {
+              "heading": "Accessories",
+              "subheading": "The perfect complements to your Surface",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "black",
+                "backgroundColor": "white"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/vertical/bg-examples/space.jpg",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "img/vertical/bg-examples/space.jpg",
+                  "minWidth": "1400"
+                },
+                {
+                  "src": "img/vertical/bg-examples/space.jpg",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "img/vertical/bg-examples/space.jpg",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "img/vertical/bg-examples/space.jpg",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "img/vertical/bg-examples/space.jpg",
+                  "minWidth": "0"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   ]
 }

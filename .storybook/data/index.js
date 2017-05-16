@@ -354,7 +354,6 @@ export const oemGroupSmallest = {
     ]
 }
 
-
 export const oemGroupSmall = {
     "groupIdentifier": "oem",
     "brand": {
@@ -1487,3 +1486,5 @@ export const EightTileDefault = dummyMosaic.sections[6].layout;
 export const TooManyTiles = dummyMosaic.sections[7].layout;
 
 export const TooFewTiles = dummyMosaic.sections[8].layout;
+
+export const BGTiles = dummyMosaic.sections[9].layout;

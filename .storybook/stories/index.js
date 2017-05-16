@@ -273,6 +273,11 @@ storiesOf('Mosaic', module)
             <Mosaic data={data.TooManyTiles}/>
         </Wrapper>
     ))
+    .add('BG Tiles', () => (
+        <Wrapper>
+            <Mosaic data={data.BGTiles}/>
+        </Wrapper>
+    ))
 // storiesOf('Tabs', module)
 //     .add('Default', () => (
 //         <main id="main">

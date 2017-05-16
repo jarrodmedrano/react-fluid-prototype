@@ -16,7 +16,7 @@
     "fonts": "cpx src/styles/fonts/**/*.{ttf,woff,svg} build/fonts",
     "build-dev": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject && npm run assets && cpx src/index.html build && npm run postbuild",
     "build-prod": "jspm bundle-sfx js/app build/RDXCoreHub.js --inject --minify && npm run fonts && npm run postbuild",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./src"
   },
   "author": "v-jamedr@microsoft.com",
   "jspm": {

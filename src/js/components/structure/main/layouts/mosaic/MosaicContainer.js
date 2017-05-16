@@ -51,7 +51,7 @@ class MosaicContainer extends React.Component {
                     return (
                         <div className={tileClass}>
                             <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                                <MosaicTile data={tiles[0]}/>
+                                <MosaicTile data={tiles[0]} theme={theme} />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                                 <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
