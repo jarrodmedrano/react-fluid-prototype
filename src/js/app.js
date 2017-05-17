@@ -81,9 +81,13 @@ class RenderForcer extends React.Component {
         this.forceUpdate();
     }
 
+    _handleUpdate(location) {
+        console.log(location);
+    }
+
     render() {
         return (
-            <Router history={appHistory}>
+            <Router history={appHistory} onUpdate={() => this._handleUpdate(location)} >
                 <Route path="/" component={App}>
                     <IndexRoute title={Index.groupIdentifier}
                                 component={(props, state, params) => <MasterLayout {...props} />}/>
@@ -93,6 +97,7 @@ class RenderForcer extends React.Component {
                     }, this)}
                 </Route>
                 <Redirect from={Index.groupIdentifier} to="/" />
+                <Redirect from="*" to="#" />
             </Router>
         )
     }
