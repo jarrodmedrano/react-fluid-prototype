@@ -5,8 +5,8 @@ import cssParser from 'css';
 export function externalNavigate(target) {
     if(window.RDX && target.length > 0 && target !== null) {
         window.RDX.externalNavigate(target);
-    } else if(target.length > 0 && target !== null) {
-        window.location = target;
+    } else if(!window.RDX && target.length > 0 && target !== null) {
+        window.open(target);
     } return null
 }
 
