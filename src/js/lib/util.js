@@ -3,15 +3,15 @@ import sanitizeHtml from 'sanitize-html';
 import cssParser from 'css';
 
 export function externalNavigate(target) {
-    if(window.RDX) {
+    if(window.RDX && target.length > 0 && target !== null) {
         window.RDX.externalNavigate(target);
-    } else {
+    } else if(target.length > 0 && target !== null) {
         window.location = target;
-    }
+    } return null
 }
 
 export function internalNavigate(target, router) {
-    if(target && router) {
+    if(target.length > 0 && target !== null && router) {
         if (target.indexOf("#") === -1) {
             router.push(target);
         } else {
@@ -23,7 +23,7 @@ export function internalNavigate(target, router) {
                 if (element) element.scrollIntoView();
             }, 0);
         }
-    }
+    } return null;
 }
 
 export function navigateEvent(group, section, source) {

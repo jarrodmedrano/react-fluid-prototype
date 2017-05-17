@@ -1,0 +1,94 @@
+﻿{
+    "identifier":  "windows",
+    "logo":  "windows_assets/GSA_nav_946x220_0004_Windows-LO.png",
+    "themeColor":  "#00BCF2",
+    "pages":  [
+                  {
+                      "pageName":  "Windows Inking",
+                      "layout":  "featureCta",
+                      "textSide":  "left",
+                      "header":  "Windows Ink. Quickly set ideas in motion.",
+                      "text1":  "There’s no faster way to take a note, draw on a screenshot, or sketch an idea. \r\nGet right into inking just by clicking your pen – even if your PC is locked*.",
+                      "legalText":  "* user must enable in settings.",
+                      "button":  {
+                                     "blockType":  "buttonExternal",
+                                     "text":  "Try it now",
+                                     "link":  "ms-penworkspace://remember",
+                                     "actionType":  "url"
+                                 },
+                      "media":  {
+                                    "blockType":  "video",
+                                    "src":  "windows_assets/Inking_RDX.mp4"
+                                },
+                      "condition":  "PenEnabled=true"
+                  },
+                  {
+                      "pageName":  "Windows Hello",
+                      "layout":  "featureCTA",
+                      "logo":  "",
+                      "textSide":  "left",
+                      "header":  "Start with a smile",
+                      "text1":  "Windows Hello gives you a secure way to log in with a look or a touch for fast access.",
+                      "legalText":  "",
+                      "button":  {
+                                     "blockType":  "buttonExternal",
+                                     "text":  "Try it now",
+                                     "link":  "ms-retaildemo-launchbioenrollment:about"
+                                 },
+                      "media":  {
+                                    "blockType":  "video",
+                                    "src":  "windows_assets/windows_hello.mp4"
+                                },
+                      "condition":  "HasWinBioUnits=true"
+                  },
+                  {
+                      "pageName":  "Works right",
+                      "layout":  "feature",
+                      "logo":  "",
+                      "textSide":  "left",
+                      "header":  "More protection. Prompt updates.",
+                      "text1":  "Windows 10 has more built-in security protections, and new features are now delivered through updates to help you to stay current.",
+                      "legalText":  "",
+                      "media":  {
+                                    "blockType":  "img",
+                                    "src":  "windows_assets/Devices_cropped_0005_Just-Works-Cortana.png"
+                                }
+                  },
+                  {
+                      "pageName":  "All-new browser",
+                      "layout":  "featureCta",
+                      "logo":  "",
+                      "textSide":  "left",
+                      "header":  "Mark up and share webpages.",
+                      "text1":  "Get a better web experience with the all-new browser: distraction-free articles and the ability to write on webpages for sharing with friends.",
+                      "legalText":  "",
+                      "button":  {
+                                     "blockType":  "buttonExternal",
+                                     "text":  "Try Microsoft Edge",
+                                     "link":  "microsoft-edge:about:demo"
+                                 },
+                      "media":  {
+                                    "blockType":  "img",
+                                    "src":  "windows_assets/Devices_cropped_0002_Spartan.png"
+                                }
+                  },
+                  {
+                      "pageName":  "Windows Store",
+                      "layout":  "featureCta",
+                      "logo":  "",
+                      "textSide":  "left",
+                      "header":  "Do more with the new Windows Store.",
+                      "text1":  "Introducing the new Windows Store, a unified shopping experience for your apps, games, music and video content, across every Windows 10 device.*",
+                      "legalText":  "*Some apps and content sold separately. Feature and app availability may vary by market [and device].",
+                      "button":  {
+                                     "blockType":  "buttonExternal",
+                                     "text":  "Go to app",
+                                     "link":  "ms-windows-store://home"
+                                 },
+                      "media":  {
+                                    "blockType":  "img",
+                                    "src":  "windows_assets/Devices_cropped_0004_Store.png"
+                                }
+                  }
+              ]
+}

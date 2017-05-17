@@ -20,7 +20,10 @@ import dummyVideos from './legacy/dummyVideos.json!';
 import dummyBestBuyStPatricks from './partner/bby/datasource.json!';
 import dummyButtons from './new/dummyButtons.json!';
 import inking from './new/inking.json!';
-import oem from './new/oem.json!';
+import oem from './surface/oem.json!';
+import office from './surface/office.json!';
+import retailer from './surface/retailer.json!';
+import windows from './surface/windows.json!';
 //final RDX schema from Chuck
 import rdx from './rdx.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
@@ -55,12 +58,13 @@ if(!window.RDX) {
 //sample surface data
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
-defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
+//defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
+defaultVertical.groups.push(oem.groups[0], inking.groups[0], dummyWindows);
+
 //data = inking;
     //data = dummySurfacePro;
     //data = dummyHp;
    //data = dummyHebrew;
     data = defaultVertical;
-
 }
 export default data;

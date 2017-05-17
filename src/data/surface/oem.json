@@ -1,0 +1,225 @@
+﻿{
+  "groups": [
+    {
+      "groupIdentifier": "oem",
+      "brand": {
+        "logo": "img/oem_assets/ms-logo.png",
+        "anchorTitle": "Surface Studio",
+        "color": "#0078D7",
+        "logoTab": "img/oem_assets/StudioLogoStacked.png"
+      },
+      "sections": [
+        {
+          "ordinal": "100",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Surface Studio",
+          "anchorLink": true,
+          "anchorTitle": "Surface Studio",
+          "layout": {
+            "type": "hero",
+            "alignX": "center",
+            "alignY": "top",
+            "viewMask": "40",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "Turn your desk into a Studio.",
+              "paragraph": "Transform the way you create with Surface Studio. Your experience begins by engaging the Zero Gravity Hinge and weightlessly moving the 28” PixelSense™ Display down into Studio Mode with one hand — for a perfect drafting table angle."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Surface Studio",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Studio_Hero_Page1_4500x3000.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "200",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Display",
+          "anchorLink": true,
+          "anchorTitle": "Display",
+          "layout": {
+            "type": "hero",
+            "alignX": "center",
+            "alignY": "top",
+            "theme": "theme-dark",
+            "headingBlock": {
+              "heading": "",
+              "paragraph": ""
+            },
+            "pictureBlock": {
+              "ariaLabel": "Display",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Display_Studio.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "300",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Dial",
+          "anchorLink": true,
+          "anchorTitle": "Dial",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "center",
+            "alignY": "top",
+            "headingBlock": {
+              "heading": "A new tool for the creative process",
+              "subheading": "Interact with Surface Studio in a whole new way using Surface Dial."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Dial",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Dial_Hero.PNG"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "400",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Performance",
+          "anchorLink": true,
+          "anchorTitle": "Performance",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "center",
+            "alignY": "top",
+            "viewMask": "80",
+            "headingBlock": {
+              "heading": "Professional-grade power and performance",
+              "paragraph": "Productivity isn’t some abstract idea. It's the result of iteration, ideation, and hard work. With Intel® Core™ processors accelerated by a discrete NVIDIA® GeForce® dGPU, Surface Studio is up for anything."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Performance",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Studio_Hero_Performance_4500x3000.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "500",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Design",
+          "anchorLink": true,
+          "anchorTitle": "Design",
+          "layout": {
+            "type": "hero",
+            "theme": "theme-dark",
+            "alignX": "left",
+            "alignY": "bottom",
+            "viewMask": "80",
+            "headingBlock": {
+              "heading": "Meticulously crafted.",
+              "paragraph": "Surface Studio is a device designed around you and your thoughtfully designed workspace. The minimal and modern design sits perfectly on your well thought out desk, with clean lines and small footprint."
+            },
+            "pictureBlock": {
+              "ariaLabel": "Design",
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Studio_Hero_Design_4500x3000.png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ordinal": "600",
+          "groupIdentifier": "oem",
+          "sectionIdentifier": "Accessories",
+          "anchorLink": true,
+          "anchorTitle": "Accessories",
+          "layout": {
+            "type": "mosaic",
+            "theme": "theme-dark",
+            "mosaicLayout": "mosaic-3",
+            "tiles": [
+              {
+                "headingBlock": {
+                  "heading": "Complete your experience",
+                  "paragraph": "Surface Studio can be your one device for everything.  And to complete that experience, we've designed accessories to work perfectly with your Surface.",
+                  "backgroundColor": "#0078D7",
+                  "textColor": "#FFF"
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/Campo_0001 copy_850x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/Cosmos_0001_850x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/Mavis_MKCenter_TQ_Gray_425x425.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "headingBlock": {
+                  "button": {
+                    "link": "",
+                    "overlay": "#000"
+                  }
+                },
+                "pictureBlock": {
+                  "pictures": [
+                    {
+                      "src": "img/oem_assets/kit_hero_425x425.png"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+﻿{
+  "identifier": "office",
+  "logo": "office_assets/Office_Desktop_Logo.png",
+  "themeColor": "#dc3c00",
+  "pages": [
+    {
+      "pageName": "Power to overachieve",
+      "layout": "featureCta",
+      "textSide": "left",
+      "header": "The Power to overachieve",
+      "text1": "Made for doing, made to collaborate, and made to move just like you.",
+      "button": {
+        "blockType": "buttonExternal",
+        "text": "Try Excel",
+        "link": "ms-retaildemo://msgboxtest_shortcut.lnk",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "video",
+        "src": "office_assets/en_default.mp4"
+      }
+    },
+    {
+      "pageName": "Move with OneDrive",
+      "layout": "featureCta",
+      "textSide": "left",
+      "header": "Move with OneDrive",
+      "text1": "Share documents, photos and work across all your devices.",
+      "button": {
+        "blockType": "buttonExternal",
+        "text": "Try Word",
+        "link": "ms-retaildemo://ink_editor.docx",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "video",
+        "src": "office_assets/Media1.mp4"
+      }
+    },
+    {
+      "pageName": "Create amazing documents",
+      "layout": "featureCta",
+      "textSide": "left",
+      "header": "Create amazing documents",
+      "text1": "Discover easy, built in research and smart proofing tools.",
+      "button": {
+        "blockType": "buttonExternal",
+        "text": "Try Powerpoint",
+        "link": "ms-retaildemo://Nutrition.pptx",
+        "actionType": "url"
+      },
+      "media": {
+        "blockType": "video",
+        "src": "office_assets/Office_Holiday_Feature_Final_720p_en_us.mp4"
+      }
+    },
+    {
+      "pageName": "Discover the Office that is right for you",
+      "layout": "feature",
+      "textSide": "left",
+      "header": "Discover the Office that is right for you.",
+      "media": {
+        "blockType": "video",
+        "src": "office_assets/EN-US_Office_Holiday_Architect_Sku_Animation_1080p.mp4"
+      }
+    }
+  ]
+}

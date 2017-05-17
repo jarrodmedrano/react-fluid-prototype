@@ -67,7 +67,7 @@
       "button": {
         "blockType": "buttonExternal",
         "text": "Try it now",
-        "link": "http://www.microsoft.com/en-us/windows/microsoft-edge",
+        "link": "Microsoft-edge:about:demo",
         "actionType": "url"
       },
       "media": {

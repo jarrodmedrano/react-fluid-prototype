@@ -1,0 +1,20 @@
+{
+  "identifier": "retailer",
+  "logo": "retailer_assets/contoso-logo_large.png",
+  "themeColor": "#505050",
+  "pages": [
+    {
+      "pageName": "Page 1",
+      "layout": "feature",
+      "logo": "retailer_assets/Contoso_Grey.png",
+      "textSide": "left",
+      "header": "Free Gift Card",
+      "text1": "Buy any qualifying Fabrikam Mobile Device and receive one Contoso Gift Card valued at up to $100.00.",
+      "legalText": "See store associate for details",
+      "media": {
+        "blockType": "img",
+        "src": "retailer_assets/Contoso_GiftCard.png"
+      }
+    }
+  ]
+}

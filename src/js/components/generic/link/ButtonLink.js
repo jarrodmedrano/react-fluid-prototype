@@ -58,6 +58,7 @@ class ButtonLink extends React.Component {
                 to: to,
                 href: to,
                 ...rest,
+                target: '_blank',
                 dangerouslySetInnerHTML: {__html: cleanHtml(children)}
             }
         );
