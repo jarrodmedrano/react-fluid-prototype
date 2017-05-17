@@ -30,7 +30,7 @@
           "heading": "Vestibulum ante ipsum primis",
           "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis ex at dui pretium cursus. Integer elit dui, blandit eget est in, molestie ultrices eros. Nullam lobortis enim purus, sit amet tincidunt quam porta sed.",
           "button": {
-            "link": "/windows#Cortana",
+            "link": "/burgers/",
             "text": "Call to action",
             "textColor": "#0078D7"
           }
