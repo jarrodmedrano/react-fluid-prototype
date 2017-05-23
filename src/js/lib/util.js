@@ -1,6 +1,8 @@
 import React from 'react';
 import sanitizeHtml from 'sanitize-html';
 import cssParser from 'css';
+import Scroll  from 'react-scroll';
+const scroller = Scroll.scroller;
 
 export function externalNavigate(target) {
     if(window.RDX && target.length > 0 && target !== null) {
@@ -10,23 +12,15 @@ export function externalNavigate(target) {
     } return null
 }
 
+
 export function internalNavigate(target, router) {
     if(target.length > 0 && target !== null && router) {
-        if (target.indexOf("#") === -1) {
-            router.push(target);
-        } else {
-            router.push(target);
-
-            setTimeout(() => {
-                const id = target.split('#')[1];
-                const element = document.getElementById(id);
-                if (element) element.scrollIntoView();
-            }, 0);
-        }
+        router.push(target);
     } return null;
 }
 
 export function navigateEvent(group, section, source) {
+
     if(window.RDX) {
         window.RDX.navigateEvent(group, section, source);
     }

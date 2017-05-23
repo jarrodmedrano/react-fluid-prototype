@@ -1,32 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route, IndexRoute, Redirect, useRouterHistory} from 'react-router'
+import {Router, Route, Redirect, IndexRedirect, useRouterHistory} from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './components/structure/MasterLayout';
-import data from '../data/assembleData';
 //TODO: replace this library with regular event listeners.
 import keydown from 'react-keydown';
 import PropTypes from 'prop-types';
-
+import Scroll  from 'react-scroll';
+const scroller = Scroll.scroller;
 //import fonts
 import '../styles/fonts.scss!';
 import '../styles/main.scss!';
+
+import {myData, Index, Routes} from './datasource';
 //For React Dev Tools in browser
 if (typeof window !== 'undefined') {
     window.React = React;
 }
-
-//Check if Window.RDX exists, if not, load data from dummyData
-window.RDX ? window.datasource = JSON.parse(window.RDX.datasource) : window.datasource = data;
-const myData = window.datasource;
-const Index = myData.groups[0];
-const Routes = myData.groups.filter(function (result, index) {
-    if (index > 0) {
-        return result;
-    }
-});
 
 //Navigate to Home
 window.home = () => {
@@ -82,22 +74,27 @@ class RenderForcer extends React.Component {
     }
 
     _handleUpdate(location) {
-        console.log(location);
+        appHistory.listen((location) => {
+            scroller.scrollTo(location.hash.substr(1), {
+                duration: 0,
+                delay: 0,
+                smooth: true,
+                containerId: 'main',
+            })
+        })
     }
 
     render() {
         return (
-            <Router history={appHistory} onUpdate={() => this._handleUpdate(location)} >
+            <Router history={appHistory} onUpdate={() => { this._handleUpdate(location); }}>
                 <Route path="/" component={App}>
-                    <IndexRoute title={Index.groupIdentifier}
-                                component={(props, state, params) => <MasterLayout {...props} />}/>
                     {Routes.map(function (result, id) {
                         return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}
-                                      component={(props, state, params) => <MasterLayout  {...props} />} />;
+                                      component={(props, state, params) => <MasterLayout {...props} />} />;
                     }, this)}
+                    <IndexRedirect to={Index.groupIdentifier} />
                 </Route>
-                <Redirect from={Index.groupIdentifier} to="/" />
-                <Redirect from="*" to="#" />
+               <Redirect from="*" to="#" />
             </Router>
         )
     }
@@ -111,5 +108,3 @@ ReactDOM.render(
 App.propTypes = {
     children: PropTypes.node
 };
-
-export default appHistory;

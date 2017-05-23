@@ -1,6 +1,7 @@
 import React from 'react';
 import propsAreValid, {externalNavigate, internalNavigate, cleanHtml} from '../../../lib/util';
 import {linkPropTypes} from '../../../../data/dataProps';
+import { Link } from 'react-router';
 
 class ButtonLink extends React.Component {
 
@@ -52,19 +53,18 @@ class ButtonLink extends React.Component {
         };
 
         const linkElement = React.createElement(
-            'a',
+            Link,
             {
                 ...linkProps,
                 to: to,
                 href: to,
                 ...rest,
-                target: '_blank',
                 dangerouslySetInnerHTML: {__html: cleanHtml(children)}
             }
         );
 
         const mosaicLinkElement = React.createElement(
-            'a',
+            Link,
             {
                 ...linkProps,
                 to: to,

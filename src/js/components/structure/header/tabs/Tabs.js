@@ -1,6 +1,6 @@
 import React from 'react';
 import dataPropTypes, {verticalPagePropTypes} from '../../../../../data/dataProps';
-import { Link, IndexLink } from 'react-router';
+import { Link } from 'react-router';
 import propsAreValid, {navigateEvent} from '../../../../lib/util';
 import _ from 'lodash';
 
@@ -52,42 +52,26 @@ class Tabs extends React.Component {
             return (
                 <div className="tabs">
                     <ul>
-                        <li className="c-hyperlink">
-                            <IndexLink to={rootRoute.path}
-                               onClick={() => this._handleClick(indexTitle, 0)}
-                               activeClassName="active"
-                               activeStyle={{background: this.state.logoColors[0]}} draggable="false"
-                            >
-                                {this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} draggable="false" /> : <p>{indexTitle}</p>}
-
-                                {this.state.selectedLogos[0] ?
-                                    <img src={this.state.selectedLogos[0]} alt={indexTitle} className="selected" draggable="false"/> :
-                                    this.state.logos[0] ? <img src={this.state.logos[0]} alt={indexTitle} className="selected" draggable="false" /> :
-                                    <p className="selected">{indexTitle}</p>
-                                }
-                            </IndexLink>
-                        </li>
                         {rootRouteChildren !== null ? rootRouteChildren.map((item, index) =>
 
                                 <li className="c-hyperlink" key={index}>
                                     <Link
                                         activeClassName="active"
-                                        activeStyle={{background: this.state.logoColors[index + 1]}}
-                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '', index + 1)} draggable="false">
+                                        activeStyle={{background: this.state.logoColors[index]}}
+                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '', index)} draggable="false">
 
-                                        {this.state.logos[index + 1] ?
-                                            <img src={this.state.logos[index + 1]} alt={item.title} draggable="false"/> :
+                                        {this.state.logos[index] ?
+                                            <img src={this.state.logos[index]} alt={item.title} draggable="false"/> :
                                             <p>{item.title}</p>
                                         }
 
-                                        {this.state.selectedLogos[index + 1] ?
-                                            <img src={this.state.selectedLogos[index + 1]} alt={item.title} className="selected" draggable="false" /> :
-                                                this.state.logos[index + 1] ?
-                                            <img src={this.state.logos[index + 1]} alt={item.title} className="selected" draggable="false" /> :
+                                        {this.state.selectedLogos[index] ?
+                                            <img src={this.state.selectedLogos[index]} alt={item.title} className="selected" draggable="false" /> :
+                                                this.state.logos[index] ?
+                                            <img src={this.state.logos[index]} alt={item.title} className="selected" draggable="false" /> :
                                                 <p className="selected">{item.title}</p>
                                         }
                                     </Link>
-                                    {(index + 1) < depth}
                                 </li>
                             ) : null}
                     </ul>

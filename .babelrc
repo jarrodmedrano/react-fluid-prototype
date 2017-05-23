@@ -1,6 +1,9 @@
 {
   "presets": ["es2015", "react"],
-  "plugins": ["transform-object-rest-spread", "transform-decorators-legacy", "transform-async-to-generator"],
+  "plugins": ["transform-object-rest-spread", "transform-decorators-legacy", "transform-async-to-generator", ["transform-runtime", {
+    "polyfill": false,
+    "regenerator": true
+  }]],
   "ignore": [
     "*.scss", "*.scss!", "*.json", "*.json!"
   ]
