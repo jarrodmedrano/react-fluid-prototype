@@ -2,30 +2,36 @@ import React from 'react';
 import dataPropTypes, {verticalPagePropTypes} from '../../../../../data/dataProps';
 import { Link } from 'react-router';
 import propsAreValid, {navigateEvent} from '../../../../lib/util';
-import _ from 'lodash';
 
 class Tabs extends React.Component {
     constructor(props) {
         super(props);
+
+        const rootRoute = Object.assign({}, props.routes[0]);
+        const rootRouteChildren = rootRoute.childRoutes;
+
+
         this.state = {
-            selected: false
+            selected: false,
+            rootRoute: rootRoute,
+            rootRouteChildren: rootRouteChildren,
         };
 
-        let logos = this.props.data.groups.reduce(function(newVal, previousVal, key) {
+        const logos = this.props.data.groups.reduce(function(newVal, previousVal, key) {
             if(previousVal.brand.logoTab !== null) {
                 newVal[key] = previousVal.brand.logoTab;
             }
             return newVal;
         }, {});
 
-        let selectedLogos = this.props.data.groups.reduce(function(newVal, previousVal, key) {
+        const selectedLogos = this.props.data.groups.reduce(function(newVal, previousVal, key) {
             if(previousVal.brand.selectedLogoTab !== null) {
                 newVal[key] = previousVal.brand.selectedLogoTab;
             }
             return newVal;
         }, {});
 
-        let logoColors = this.props.data.groups.reduce(function(newVal, previousVal, key) {
+        const logoColors = this.props.data.groups.reduce(function(newVal, previousVal, key) {
             if(previousVal.brand.color !== null) {
                 newVal[key] = previousVal.brand.color;
             } else {
@@ -38,27 +44,21 @@ class Tabs extends React.Component {
     }
 
     _handleClick(group, index) {
-        let sectionId = _.find(this.props.data.groups[index].sections, 'sectionIdentifier');
-        navigateEvent(group, sectionId.sectionIdentifier, 'tab click');
+        let sectionId = this.props.data.groups[index].sections[0].sectionIdentifier;
+        navigateEvent(group, sectionId, 'tab click');
     }
 
     render() {
         if (propsAreValid(this.props.routes, this)) {
-            const depth = this.props.routes.length;
-            const rootRoute = this.props.routes[0];
-            const rootRouteChildren = rootRoute.childRoutes;
-            const indexTitle = rootRoute.indexRoute.title;
-
             return (
                 <div className="tabs">
                     <ul>
-                        {rootRouteChildren !== null ? rootRouteChildren.map((item, index) =>
-
+                        {this.state.rootRouteChildren !== null ? this.state.rootRouteChildren.map((item, index) =>
                                 <li className="c-hyperlink" key={index}>
                                     <Link
                                         activeClassName="active"
                                         activeStyle={{background: this.state.logoColors[index]}}
-                                        to={item.path || ''} onClick={() => this._handleClick(item.title || '', index)} draggable="false">
+                                        to={'/' + item.path || ''} onClick={() => this._handleClick(item.title || '', index)} draggable="false">
 
                                         {this.state.logos[index] ?
                                             <img src={this.state.logos[index]} alt={item.title} draggable="false"/> :

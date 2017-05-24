@@ -228,6 +228,11 @@ storiesOf('Legacy', module)
         </Wrapper>
     ))
 storiesOf('Mosaic', module)
+    .add('BG Tiles', () => (
+        <Wrapper>
+            <Mosaic data={data.BGTiles}/>
+        </Wrapper>
+    ))
     .add('Mosaic 2 Tiles', () => (
         <Wrapper>
             <Mosaic data={data.TwoTileDefault}/>
@@ -273,11 +278,12 @@ storiesOf('Mosaic', module)
             <Mosaic data={data.TooManyTiles}/>
         </Wrapper>
     ))
-    .add('BG Tiles', () => (
+    .add('Positioning', () => (
         <Wrapper>
-            <Mosaic data={data.BGTiles}/>
+            <Mosaic data={data.PositionTiles}/>
         </Wrapper>
-    ))
+    ));
+
 // storiesOf('Tabs', module)
 //     .add('Default', () => (
 //         <main id="main">

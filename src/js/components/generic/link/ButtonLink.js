@@ -1,7 +1,6 @@
 import React from 'react';
 import propsAreValid, {externalNavigate, internalNavigate, cleanHtml} from '../../../lib/util';
 import {linkPropTypes} from '../../../../data/dataProps';
-import { Link } from 'react-router';
 
 class ButtonLink extends React.Component {
 
@@ -29,12 +28,12 @@ class ButtonLink extends React.Component {
     }
 
     _isInternal(to) {
-        // If it's a relative url such as '/path', 'path' and does not contain a protocol we can assume it is internal.
         if (to.startsWith('/')) return true;
     }
 
     _handleClick(target, internal) {
         if (internal) {
+            //from '../../../lib/util';
             internalNavigate(target, this.context.router);
         } else {
             externalNavigate(target);
@@ -53,7 +52,7 @@ class ButtonLink extends React.Component {
         };
 
         const linkElement = React.createElement(
-            Link,
+            'a',
             {
                 ...linkProps,
                 to: to,
@@ -64,7 +63,7 @@ class ButtonLink extends React.Component {
         );
 
         const mosaicLinkElement = React.createElement(
-            Link,
+            'a',
             {
                 ...linkProps,
                 to: to,

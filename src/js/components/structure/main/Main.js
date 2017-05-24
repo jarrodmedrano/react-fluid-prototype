@@ -11,6 +11,7 @@ import Element from '../../generic/scrollElement/Element';
 import Scroll from 'react-scroll';
 const scroll = Scroll.animateScroll;
 const scrollSpy = Scroll.scrollSpy;
+const scroller = Scroll.scroller;
 
 class Main extends React.Component {
     constructor(props) {
@@ -149,6 +150,12 @@ class Main extends React.Component {
         let callBack = (currentSection) => {
             let ref = findDOMNode(this.refs[`${this.props.route.title}-section-${currentSection}`]);
             this._scrollInto(ref);
+            // scroller.scrollTo(currentSection, {
+            //     duration: 0,
+            //     delay: 0,
+            //     smooth: true,
+            //     containerId: 'main',
+            // })
             navigateEvent(this.state.currentPage.groupIdentifier, this.state.currentSections[currentSection].sectionIdentifier, source);
         };
 

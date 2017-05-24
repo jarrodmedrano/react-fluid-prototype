@@ -24,9 +24,9 @@ export function navigateEvent(group, section, source) {
     if(window.RDX) {
         window.RDX.navigateEvent(group, section, source);
     }
-    // else {
-    //     console.log('group', group, 'section', section, 'source', source);
-    // }
+    else {
+        console.log('group', group, 'section', section, 'source', source);
+    }
 }
 
 export function impressionEvent(visible, group, section) {
@@ -86,8 +86,7 @@ export const cleanHtml = (dirty) => {
         allowedAttributes: {
             'a': ['href', 'style'],
             'span': ['style'],
-            'b': ['style'],
-            'p': ['style']
+            'b': ['style']
         }
     });
 };

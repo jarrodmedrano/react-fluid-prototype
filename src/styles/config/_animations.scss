@@ -1,22 +1,22 @@
 //! Copyright (C) Microsoft Corporation. All rights reserved.
-
- .page-transition-enter main > div  {
-   opacity: 0;
- }
-
- .page-transition-enter.page-transition-enter-active main > div {
-   opacity: 1;
-   transition-property: opacity;
-   transition-duration: 300ms;
-   transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
- }
-
- .page-transition-leave main > div {
-   transition-property: opacity;
-   transition-duration: 300ms;
-   transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
- }
-
- .page-transition-leave.page-transition-leave-active main > div {
-   opacity: 0;
- }
+//
+// .page-transition-enter main > div  {
+//   opacity: 0;
+// }
+//
+// .page-transition-enter.page-transition-enter-active main > div {
+//   opacity: 1;
+//   transition-property: opacity;
+//   transition-duration: 300ms;
+//   transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+// }
+//
+// .page-transition-leave main > div {
+//   transition-property: opacity;
+//   transition-duration: 300ms;
+//   transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+// }
+//
+// .page-transition-leave.page-transition-leave-active main > div {
+//   opacity: 0;
+// }

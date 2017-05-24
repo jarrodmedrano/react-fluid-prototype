@@ -9,6 +9,8 @@ import MasterLayout from './components/structure/MasterLayout';
 import keydown from 'react-keydown';
 import PropTypes from 'prop-types';
 import Scroll  from 'react-scroll';
+import Tabs from './components/structure/header/tabs/Tabs';
+
 const scroller = Scroll.scroller;
 //import fonts
 import '../styles/fonts.scss!';
@@ -38,6 +40,10 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            data: myData
+        }
     }
 
     //Navigate to home page
@@ -56,37 +62,39 @@ class App extends React.Component {
 
     render() {
         return (
-            <ReactCSSTransitionGroup component="div" transitionName="page-transition"
-                transitionEnterTimeout={300} transitionLeaveTimeout={300}>
-                    {React.cloneElement(this.props.children, {
-                        key: this.props.location.pathname,
-                        data: myData
-                    })}
-            </ReactCSSTransitionGroup>
+            <div>
+           {this.state.data.groups.length > 1 ? <Tabs data={this.state.data} {...this.props} /> : null }
+            {React.cloneElement(this.props.children, {
+                key: this.props.location.pathname,
+                data: this.state.data
+            })}
+            </div>
         );
     }
 }
 
 class RenderForcer extends React.Component {
 
-    componentWillMount() {
-        this.forceUpdate();
-    }
+    // componentWillMount() {
+    //     //this.forceUpdate();
+    // }
 
-    _handleUpdate(location) {
+    componentDidMount() {
         appHistory.listen((location) => {
-            scroller.scrollTo(location.hash.substr(1), {
-                duration: 0,
-                delay: 0,
-                smooth: true,
-                containerId: 'main',
-            })
+            if(location.hash) {
+                scroller.scrollTo(location.hash.substr(1), {
+                    duration: 0,
+                    delay: 0,
+                    smooth: true,
+                    containerId: 'main',
+                })
+            }
         })
     }
 
     render() {
         return (
-            <Router history={appHistory} onUpdate={() => { this._handleUpdate(location); }}>
+            <Router history={appHistory}>
                 <Route path="/" component={App}>
                     {Routes.map(function (result, id) {
                         return <Route key={id} path={result.groupIdentifier} title={result.groupIdentifier}

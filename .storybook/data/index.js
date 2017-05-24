@@ -1488,3 +1488,5 @@ export const TooManyTiles = dummyMosaic.sections[7].layout;
 export const TooFewTiles = dummyMosaic.sections[8].layout;
 
 export const BGTiles = dummyMosaic.sections[9].layout;
+
+export const PositionTiles = dummyMosaic.sections[10].layout;
