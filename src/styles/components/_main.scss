@@ -3,6 +3,7 @@
 ////-----------------------------------------------------------------------------
 //// Custom Layout Definitions
 ////-----------------------------------------------------------------------------
+$tab-height: 45px;
 
 body {
   -ms-user-select: none;
@@ -16,7 +17,9 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 45px;
+    top: 0;
+    height: calc(100vh - #{$tab-height});
     bottom: 0;
+    margin-top: $tab-height;
   }
 }
