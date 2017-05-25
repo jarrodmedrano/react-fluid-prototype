@@ -2,11 +2,12 @@
   background: #333333;
   height: 45px;
   z-index: 9999;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-self: flex-start;
 
   ul {
     display: flex;

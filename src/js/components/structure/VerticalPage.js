@@ -158,7 +158,6 @@ class VerticalPage extends React.Component {
         if (propsAreValid(this.props.data, this)) {
             return (
                 <div>
-                    {this.state.groups.length > 1 ? <Tabs data={this.props.data} {...this.props} /> : null }
                     <Main data={this.props.data} {...this.props} legacyLayouts={this.state.legacyLayouts} />
 
                     {this.state.oemGroup && this.state.compareModels ?
