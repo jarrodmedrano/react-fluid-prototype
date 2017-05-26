@@ -30,7 +30,9 @@ $tab-height: 45px;
 
   picture img {
     left: calc(50%);
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    top: auto;
+    position: relative;
   }
 
   &.x-type-left {
