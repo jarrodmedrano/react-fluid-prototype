@@ -185,6 +185,9 @@
         "headingBlock": {
           "$ref": "#/definitions/headingBlock"
         },
+        "legalText": {
+          "type":  "string"
+        },
         "media": {
           "$ref": "#/definitions/media"
         },
@@ -230,6 +233,9 @@
         },
         "headingBlock": {
           "$ref": "#/definitions/headingBlock"
+        },
+        "legalText": {
+          "type": "string"
         }
       }
     },
@@ -259,6 +265,9 @@
         },
         "headingBlock": {
           "$ref": "#/definitions/headingBlock"
+        },
+        "legalText": {
+          "type": "string"
         }
       }
     },
@@ -385,6 +394,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "alignY": {
+          "$ref": "#/definitions/alignY"
+        },
         "viewMask": {
           "$ref": "#/definitions/viewMask"
         },
@@ -438,10 +450,21 @@
         "80"
       ]
     },
+    "picturePlacement": {
+      "enum": [
+        "first",
+        "second",
+        "third"
+      ]
+    },
     "headingBlock": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "alignX": {
+          "$ref": "#/definitions/alignX",
+          "description": "Align the text left, right or centered"
+        },
         "heading": {
           "type": "string",
           "description": "Large font used for the main section description. Limit to 2 lines This text will generally be in the default color for the group it is in."
@@ -460,6 +483,12 @@
         },
         "button": {
           "$ref": "#/definitions/button"
+        },
+        "pictureBlock": {
+          "$ref": "#/definitions/pictureBlock"
+        },
+        "picturePlacement": {
+          "$ref" : "#/definitions/picturePlacement"
         }
       }
     },
