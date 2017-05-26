@@ -2576,6 +2576,7 @@
           {
             "pattern": "A",
             "theme": "theme-dark",
+            "alignX": "left",
             "headingBlock": {
               "heading": "-- Pattern A Picture Top --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -2636,6 +2637,7 @@
           {
             "pattern": "B",
             "theme": "theme-dark",
+            "alignX": "left",
             "headingBlock": {
               "heading": "-- Pattern B Picture Top/Button Bottom --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -2697,6 +2699,7 @@
           {
             "pattern": "C",
             "theme": "theme-dark",
+            "alignX": "left",
             "headingBlock": {
               "heading": "-- Pattern C Picture Top --",
               "button": {
@@ -2756,6 +2759,7 @@
           {
             "pattern": "D",
             "theme": "theme-dark",
+            "alignX": "left",
             "headingBlock": {
               "heading": "-- Pattern D Picture Top/Button Bottom --",
               "button": {
@@ -2816,6 +2820,7 @@
           {
             "pattern": "E",
             "theme": "theme-dark",
+            "alignX": "left",
             "headingBlock": {
               "heading": "-- Pattern E Picture Bottom --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -2877,6 +2882,7 @@
           {
             "pattern": "F",
             "theme": "theme-dark",
+            "alignX": "left",
             "headingBlock": {
               "heading": "-- Pattern F Button Bottom --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -2953,6 +2959,7 @@
           {
             "pattern": "A",
             "theme": "theme-dark",
+            "alignX": "right",
             "headingBlock": {
               "heading": "-- Pattern A Picture Top --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -3013,6 +3020,7 @@
           {
             "pattern": "B",
             "theme": "theme-dark",
+            "alignX": "right",
             "headingBlock": {
               "heading": "-- Pattern B Picture Top/Button Bottom --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -3074,6 +3082,7 @@
           {
             "pattern": "C",
             "theme": "theme-dark",
+            "alignX": "right",
             "headingBlock": {
               "heading": "-- Pattern C Picture Top --",
               "button": {
@@ -3133,6 +3142,7 @@
           {
             "pattern": "D",
             "theme": "theme-dark",
+            "alignX": "right",
             "headingBlock": {
               "heading": "-- Pattern D Picture Top/Button Bottom --",
               "button": {
@@ -3193,6 +3203,7 @@
           {
             "pattern": "E",
             "theme": "theme-dark",
+            "alignX": "right",
             "headingBlock": {
               "heading": "-- Pattern E Picture Bottom --",
               "subheading": "-- mosaic subtitle 1 --",
@@ -3254,6 +3265,7 @@
           {
             "pattern": "F",
             "theme": "theme-dark",
+            "alignX": "right",
             "headingBlock": {
               "heading": "-- Pattern F Button Bottom --",
               "subheading": "-- mosaic subtitle 1 --",

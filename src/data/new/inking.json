@@ -152,6 +152,15 @@
             "alignY": "top",
             "viewMask": "80",
             "theme": "theme-light",
+            "pictureBlock": {
+              "ariaLabel": "Ink to Editor",
+              "picturePlacement": "second",
+              "pictures": [
+                {
+                  "src": "img/inking_assets/Consumer_BTS_2017_Ink_Editor_Word-GIF.GIF"
+                }
+              ]
+            },
             "headingBlock": {
               "heading": "The power of pen with Office.",
               "paragraph": "With Ink Editor, you can use ink to edit documents directly. Strike through words to delete them, circle text to select it, and highlight text, all in an instant.",
@@ -161,15 +170,16 @@
                 "text": "Try it now",
                 "textColor": "white",
                 "backgroundColor": "#0078D7"
+              },
+              "pictureBlock": {
+                "ariaLabel": "Ink to Editor",
+                "picturePlacement": "second",
+                "pictures": [
+                  {
+                    "src": "img/inking_assets/Consumer_BTS_2017_Ink_Editor_Word-GIF.GIF"
+                  }
+                ]
               }
-            },
-            "pictureBlock": {
-              "ariaLabel": "Ink to Editor",
-              "pictures": [
-                {
-                  "src": "img/inking_assets/Consumer_BTS_2017_Ink_Editor_Word-GIF.GIF"
-                }
-              ]
             }
           }
         },

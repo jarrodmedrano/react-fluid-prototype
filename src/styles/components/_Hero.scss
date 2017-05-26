@@ -83,6 +83,12 @@ video {
   }
 }
 
+.m-immersive-hero-item {
+  &.theme-light {
+    background: #fff;
+  }
+}
+
 
 .m-immersive-hero-item > div > div {
   z-index: 1;

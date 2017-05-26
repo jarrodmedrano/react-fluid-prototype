@@ -289,19 +289,28 @@ storiesOf('Mosaic', module)
         </Wrapper>
     ))
     .add('Center Aligned', () => (
-        <Wrapper>
-            <Mosaic data={data.PositionTiles}/>
-        </Wrapper>
+        <div>
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.PositionTiles}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ))
     .add('Left Aligned', () => (
-        <Wrapper>
-            <Mosaic data={data.PositionTilesLeft}/>
-        </Wrapper>
+        <div>
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.PositionTilesLeft}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ))
     .add('Right Aligned', () => (
-        <Wrapper>
+        <div>
+        <Wrapper name="Section2" id="Section2">
             <Mosaic data={data.PositionTilesRight}/>
         </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ));
 
 // storiesOf('Tabs', module)
