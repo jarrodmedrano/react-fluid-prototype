@@ -6,7 +6,6 @@ class Picture extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
             let {pictures, altText, ariaLabel} = this.props.data;
-
             return (
                 <picture className="c-image">
                     {pictures.map(function (object, id) {

@@ -27,9 +27,7 @@ class Hero extends React.Component {
                 return (
                     <div className={heroClass}>
                         {pictureBlock ?
-                            <Heading data={headingBlock} picture={pictureBlock} alignY={alignY}>
-                                <Picture data={pictureBlock} />
-                            </Heading>
+                            <Heading data={headingBlock} iHero="true" />
                         : null }
                     </div>
                 )

@@ -75,10 +75,6 @@ class App extends React.Component {
 
 class RenderForcer extends React.Component {
 
-    // componentWillMount() {
-    //     //this.forceUpdate();
-    // }
-
     componentDidMount() {
         appHistory.listen((location) => {
             if(location.hash) {

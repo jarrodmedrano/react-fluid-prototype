@@ -3,6 +3,8 @@
 @import '../ms-mwf/mwf/core/styles/config/environment';
 @import '../ms-mwf/mwf/core/styles/utilities/internationalization';
 
+$tab-height: 45px;
+
 .c-mosaic {
   width: 100vw;
 }
@@ -15,11 +17,44 @@
 
 .c-mosaic-placement {
   padding-bottom: 0;
+
+  .content-animate picture {
+    position: relative;
+
+  }
 }
 
 .c-mosaic-placement > div > div {
   position: relative;
   height: auto;
+
+  picture img {
+    left: calc(50%);
+    transform: translateX(-50%)
+  }
+
+  &.x-type-left {
+    picture img {
+      left:  12.5%;
+      transform: none;
+    }
+  }
+
+  &.x-type-right {
+    picture img {
+      transform: translateX(50%);
+    }
+  }
+
+  &.x-type-left, &.x-type-right {
+    div {
+      padding: 0 12.5%;
+    }
+
+    picture img {
+      top: 0;
+    }
+  }
 
   div {
     margin: 12px 0;
@@ -84,25 +119,36 @@ a.mosaic-link:after {
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .c-mosaic [data-f-mosaic~="f-height-medium"] {
-    height: 50vh;
+    height: calc(50vh - #{$tab-height / 2});
   }
 
   .c-mosaic [data-f-mosaic~="f-height-large"] {
-    height: 100vh;
+    height: calc(100vh - #{$tab-height});
   }
 
   .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: 25vh;
+    height: calc(25vh - #{$tab-height / 4});
   }
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .fullscreen-mosaic {
     flex-direction: row;
-    height: 100%;
-
-    img.c-image, picture.c-image img {
-      display: none;
-    }
+    height: calc(100vh - 45px);
   }
 }
+
+.c-mosaic-placement > picture img {
+  display: none;
+}
+
+.c-mosaic-placement .content-animate picture img {
+  position: relative;
+  display: block;
+  margin: 12px 0;
+}
+
+.c-mosaic-placement .c-group {
+  bottom: 24px;
+}
+

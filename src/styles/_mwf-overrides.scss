@@ -3,6 +3,8 @@
 @import 'ms-mwf/mwf/core/styles/config/environment';
 @import 'ms-mwf/mwf/core/styles/utilities/internationalization';
 
+$tab-height: 45px;
+
 .c-heading {
   font-weight: 400;
 }
@@ -106,36 +108,6 @@ a.mosaic-link:after {
 }
 
 
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  .c-mosaic [data-f-mosaic~="f-height-medium"] {
-    height: 50vh;
-  }
-
-  .c-mosaic [data-f-mosaic~="f-height-large"] {
-    height: 100vh;
-  }
-
-  .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: 25vh;
-  }
-}
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  .fullscreen-mosaic {
-    flex-direction: row;
-    height: 100%;
-
-    img.c-image, picture.c-image img {
-      display: none;
-    }
-  }
-}
-
-.fullscreen-mosaic {
-  img.c-image, picture.c-image img {
-    display: none;
-  }
-}
 
 @import 'ms-mwf/mwf/core/styles/config/environment';
 @import 'ms-mwf/mwf/core/styles/utilities/internationalization';
@@ -150,7 +122,7 @@ a.mosaic-link:after {
 
 .m-feature {
   padding-top: 0;
-  height: 100vh;
+  height: calc(100vh - #{$tab-height});
 }
 
 .c-feature {
@@ -166,10 +138,10 @@ a.mosaic-link:after {
   }
 
   .c-feature {
-    height: 100vh;
+    height: calc(100vh - #{$tab-height});
 
     .c-video, .feature-image {
-      height: 100vh;
+      height: calc(100vh - #{$tab-height});
     }
   }
 

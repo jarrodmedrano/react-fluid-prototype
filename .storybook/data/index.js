@@ -1,9 +1,39 @@
 import _ from 'lodash';
 
 export const headingBlock = {
-    "heading": "-- Hero Heading --",
+    "heading": "-- Heading Example --",
     "subheading": "-- Subheading --",
     "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+    "button": {
+        "layout": "button",
+        "link": "#/windows",
+        "text": "Call to action",
+        "ariaLabel": "ariaLabel",
+        "textColor": "white",
+        "backgroundColor": "#0078D7"
+    }
+};
+
+export const headingBlockCenter = {
+    "heading": "-- Heading Example --",
+    "subheading": "-- Subheading --",
+    "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+    "alignX": "center",
+    "button": {
+        "layout": "button",
+        "link": "#/windows",
+        "text": "Call to action",
+        "ariaLabel": "ariaLabel",
+        "textColor": "white",
+        "backgroundColor": "#0078D7"
+    }
+};
+
+export const headingBlockRight = {
+    "heading": "-- Heading Example --",
+    "subheading": "-- Subheading --",
+    "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+    "alignX": "right",
     "button": {
         "layout": "button",
         "link": "#/windows",
@@ -1490,3 +1520,7 @@ export const TooFewTiles = dummyMosaic.sections[8].layout;
 export const BGTiles = dummyMosaic.sections[9].layout;
 
 export const PositionTiles = dummyMosaic.sections[10].layout;
+
+export const PositionTilesLeft = dummyMosaic.sections[11].layout;
+
+export const PositionTilesRight = dummyMosaic.sections[12].layout;

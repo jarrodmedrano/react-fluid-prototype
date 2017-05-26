@@ -60,6 +60,16 @@ storiesOf('Heading', module)
         <Grid>
             <Heading data={data.headingBlock}/>
         </Grid>
+    ))
+    .add('Center', () => (
+        <Grid>
+            <Heading data={data.headingBlockCenter}/>
+        </Grid>
+    ))
+    .add('Right', () => (
+        <Grid>
+            <Heading data={data.headingBlockRight}/>
+        </Grid>
     ));
 
 storiesOf('Button Link', module)
@@ -278,9 +288,19 @@ storiesOf('Mosaic', module)
             <Mosaic data={data.TooManyTiles}/>
         </Wrapper>
     ))
-    .add('Positioning', () => (
+    .add('Center Aligned', () => (
         <Wrapper>
             <Mosaic data={data.PositionTiles}/>
+        </Wrapper>
+    ))
+    .add('Left Aligned', () => (
+        <Wrapper>
+            <Mosaic data={data.PositionTilesLeft}/>
+        </Wrapper>
+    ))
+    .add('Right Aligned', () => (
+        <Wrapper>
+            <Mosaic data={data.PositionTilesRight}/>
         </Wrapper>
     ));
 

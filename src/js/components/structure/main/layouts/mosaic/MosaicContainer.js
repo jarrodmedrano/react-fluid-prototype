@@ -12,7 +12,7 @@ class MosaicContainer extends React.Component {
             let {tiles, mosaicLayout, theme, viewMask} = this.props.data;
 
             let tileClass = classNames(
-                theme ? theme : 'theme-light',
+                theme ? theme : 'theme-dark',
                 'c-mosaic fullscreen-mosaic');
 
             switch (tiles.length) {

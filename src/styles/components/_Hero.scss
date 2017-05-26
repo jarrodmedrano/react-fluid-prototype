@@ -3,15 +3,17 @@
 @import '../ms-mwf/mwf/core/styles/config/environment';
 @import '../ms-mwf/mwf/core/styles/utilities/internationalization';
 
+$tab-height: 45px;
+
 .c-hero.theme-dark {
   background: #000;
 }
 
 .c-hero.f-fullscreen {
-  height: calc(100vh - 64px);
+  height: calc(100vh - #{$tab-height});
 
   img {
-    height: calc(100vh - 64px);
+    height: calc(100vh - #{$tab-height});
     min-width: inherit;
   }
 
@@ -89,10 +91,10 @@ video {
 
 
 .scene-vertical.immersiveHero {
-  height: 100vh;
+  height: calc(100vh - 45px);
 
   > div {
-    height: 100vh;
+    height: calc(100vh - 45px);
   }
 }
 
@@ -139,7 +141,7 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 45px);
   transform: none;
   left: 0;
 }
@@ -163,20 +165,18 @@ video {
 
 .m-immersive-hero-item.f-align-bottom > div {
   top: 0;
-  padding-bottom: 172px;
+  padding-bottom: 45px;
 }
 
 .m-immersive-hero-item.f-align-top > div {
-  padding-top: 172px;
+  padding-top: 45px;
 }
 
 .m-immersive-hero-item.f-align-bottom > div > div {
-  order: 2;
   flex: 0 auto;
 }
 
 .m-immersive-hero-item.f-align-bottom > div > picture.c-image {
-  order: 1;
   flex: 1;
 }
 
