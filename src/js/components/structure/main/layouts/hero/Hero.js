@@ -15,13 +15,13 @@ class Hero extends React.Component {
         if (propsAreValid(this.props.data, this)) {
             let {alignX, alignY, theme, type, media, pictureBlock, headingBlock, viewMask} = this.props.data;
             let heroClass = classNames(
-                alignX ? `f-x-${alignX}` : null,
-                alignX ? `f-align-${alignX}` : null,
-                alignY ? `f-y-${alignY}` : null,
-                alignY ? `f-align-${alignY}` : null,
+                alignX ? `f-x-${alignX}` : '',
+                alignX ? `f-align-${alignX}` : '',
+                alignY ? `f-y-${alignY}` : '',
+                alignY ? `f-align-${alignY}` : '',
                 theme ? theme : 'theme-light',
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item',
-                viewMask ? `f-mask-${viewMask}` : null);
+                viewMask ? `f-mask-${viewMask}` : '');
 
             if (type === 'immersiveHero') {
                 return (

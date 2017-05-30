@@ -1524,3 +1524,7 @@ export const PositionTiles = dummyMosaic.sections[10].layout;
 export const PositionTilesLeft = dummyMosaic.sections[11].layout;
 
 export const PositionTilesRight = dummyMosaic.sections[12].layout;
+
+export const PositionTilesTop = dummyMosaic.sections[13].layout;
+
+export const PositionTilesBottom = dummyMosaic.sections[14].layout;

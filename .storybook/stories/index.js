@@ -311,6 +311,22 @@ storiesOf('Mosaic', module)
         </Wrapper>
             <StickyFooter data={data.oemGroup}/>
         </div>
+    ))
+    .add('Top Aligned', () => (
+        <div>
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.PositionTilesTop}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Bottom Aligned', () => (
+        <div>
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.PositionTilesBottom}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ));
 
 // storiesOf('Tabs', module)

@@ -154,7 +154,6 @@
             "theme": "theme-light",
             "pictureBlock": {
               "ariaLabel": "Ink to Editor",
-              "picturePlacement": "second",
               "pictures": [
                 {
                   "src": "img/inking_assets/Consumer_BTS_2017_Ink_Editor_Word-GIF.GIF"
@@ -171,9 +170,9 @@
                 "textColor": "white",
                 "backgroundColor": "#0078D7"
               },
+              "picturePlacement": "second",
               "pictureBlock": {
                 "ariaLabel": "Ink to Editor",
-                "picturePlacement": "second",
                 "pictures": [
                   {
                     "src": "img/inking_assets/Consumer_BTS_2017_Ink_Editor_Word-GIF.GIF"

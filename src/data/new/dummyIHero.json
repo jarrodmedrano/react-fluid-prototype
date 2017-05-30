@@ -22,6 +22,7 @@
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
+          "picturePlacement": "second",
           "button": {
             "layout": "button",
             "link": "http://www.microsoft.com",
@@ -106,6 +107,7 @@
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
+          "picturePlacement": "second",
           "button": {
             "layout": "button",
             "link": "http://www.microsoft.com",
@@ -117,7 +119,6 @@
           "pictureBlock": {
             "altText": "AltText",
             "ariaLabel": "AriaLabel",
-            "picturePlacement": "second",
             "pictures": [
               {
                 "src": "http://placehold.it/2400x1350/2F2F2F/171717",

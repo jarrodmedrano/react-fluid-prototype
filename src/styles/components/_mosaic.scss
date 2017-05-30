@@ -20,7 +20,29 @@ $tab-height: 45px;
 
   .content-animate picture {
     position: relative;
+  }
 
+  &.f-y-top {
+    > div > div {
+      position: absolute;
+      top: 0;
+
+      &.c-group {
+        top: auto;
+      }
+    }
+  }
+
+  &.f-y-bottom {
+    > div > div {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+
+      &.c-group {
+        top: auto;
+      }
+    }
   }
 }
 
@@ -64,7 +86,6 @@ $tab-height: 45px;
     picture img {
       top: 0;
     }
-
   }
 
   div {
@@ -149,6 +170,11 @@ a.mosaic-link:after {
   }
 }
 
+@media only screen and (orientation: portrait) {
+  .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
+    height: auto !important;
+  }
+}
 .c-mosaic-placement > picture img {
   display: none;
 }
