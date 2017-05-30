@@ -9,8 +9,7 @@ import dataPropTypes, {tilePropTypes} from '../../../../../../data/dataProps';
 class MosaicTile extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let { headingBlock, pictureBlock, hoverEffectColor, viewMask, theme, alignX, alignY} = this.props.data;
-            let { textColor, backgroundColor } = headingBlock;
+            let { headingBlock, pictureBlock, hoverEffectColor, viewMask, theme, alignX, alignY, textColor, backgroundColor} = this.props.data;
 
             let tileClass = classNames('c-mosaic-placement c-placement f-height-large f-width-small',
                 theme ? theme : 'theme-dark',

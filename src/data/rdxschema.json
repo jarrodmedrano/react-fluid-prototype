@@ -411,6 +411,14 @@
         },
         "headingBlock": {
           "$ref": "#/definitions/headingBlock"
+        },
+        "backgroundColor": {
+          "description": "Color override for the background of hte tile.",
+          "type": "string"
+        },
+        "textColor": {
+          "description": "Color override for the text of the tile.",
+          "type": "string"
         }
       }
     },
