@@ -55,6 +55,8 @@ $tab-height: 45px;
     transform: translateX(-50%);
     top: auto;
     position: relative;
+    max-height: 25vh;
+    max-width: 50%;
   }
 
   &.x-type-left {
@@ -182,7 +184,7 @@ a.mosaic-link:after {
 //  .c-mosaic [data-f-mosaic~="f-height-medium"] {
 //    height: auto !important;
 //  }
-//}
+//}process
 
 .c-mosaic-placement > picture img {
   display: none;
