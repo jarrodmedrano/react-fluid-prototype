@@ -38,6 +38,10 @@ $tab-height: 45px;
     }
   }
 
+  @media only screen and (max-height: 480px) and (orientation: landscape) {
+    height: auto;
+  }
+
   @media (orientation: portrait) {
     min-height: 0;
     height: auto;

@@ -151,30 +151,39 @@ a.mosaic-link:after {
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .c-mosaic [data-f-mosaic~="f-height-medium"] {
-    height: calc(50vh - #{$tab-height / 2});
+    max-height: calc(50vh - #{$tab-height / 2});
   }
 
   .c-mosaic [data-f-mosaic~="f-height-large"] {
-    height: calc(100vh - #{$tab-height});
+    max-height: calc(100vh - #{$tab-height});
   }
 
   .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: calc(25vh - #{$tab-height / 4});
+    max-height: calc(25vh - #{$tab-height / 4});
   }
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .fullscreen-mosaic {
     flex-direction: row;
-    height: calc(100vh - 45px);
+    max-height: calc(100vh - 45px);
   }
 }
 
-@media only screen and (orientation: portrait) {
-  .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: auto !important;
+@media only screen and (max-height: 480px) and (orientation: landscape) {
+  .fullscreen-mosaic {
+    height: auto;
   }
 }
+
+
+
+//@media only screen and (min-width: 768px) {
+//  .c-mosaic [data-f-mosaic~="f-height-medium"] {
+//    height: auto !important;
+//  }
+//}
+
 .c-mosaic-placement > picture img {
   display: none;
 }
@@ -211,3 +220,29 @@ a.mosaic-link:after {
   }
 }
 
+
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1084px) {
+  //.fullscreen-mosaic {
+  //  height: auto !important;
+  //}
+
+  .fullscreen-mosaic {
+    height: auto !important;
+  }
+
+  .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
+    height: 25vh !important;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .fullscreen-mosaic > .c-mosaic [data-f-mosaic~="f-height-large"] {
+    height: auto !important;
+  }
+}

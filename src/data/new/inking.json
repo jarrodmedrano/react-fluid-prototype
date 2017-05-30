@@ -13,128 +13,142 @@
         {
           "ordinal": "100",
           "groupIdentifier": "inking",
-          "sectionIdentifier": "Inking Home",
-          "anchorLink": true,
+          "sectionIdentifier": "InkingHome",
+          "anchorLink": false,
           "anchorTitle": "Inking Home",
           "layout": {
             "type": "mosaic",
-            "theme": "theme-dark",
-            "viewMask": "80",
+            "theme": "theme-light",
             "mosaicLayout": "mosaic",
             "tiles": [
               {
+                "backgroundColor": "#E2E2E2",
+                "textColor": "#505050",
                 "headingBlock": {
-                  "heading": "Windows Ink",
+                  "alignX": "left",
+                  "picturePlacement": "first",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
+                  "heading": "<span style='color:#505050'>Windows Ink</span>",
                   "subheading": "Capture ideas as easily and quickly as they occur - that's the power of Windows Ink.",
-                  "viewMask": "60",
                   "button": {
-                    "link": "http://www.microsoft.com"
+                    "link": "ink-music:6",
+                    "text": "Learn more"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_850x425_windowsink.png"
-                    }
-                  ]
                 }
               },
               {
+                "backgroundColor": "#FFFFFF",
                 "headingBlock": {
-                  "heading": "Ink Editor",
-                  "backgroundColor": "#0078D7",
+                  "heading": "<span style='color:#0078D7'>Ink Editor</span>",
+                  "picturePlacement": "second",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
                   "button": {
-                    "link": "/inking#InktoEditor"
+                    "link": "ink-music:0",
+                    "text": "Try now"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_425x425_editor.png"
-                    }
-                  ]
                 }
               },
               {
+                "backgroundColor": "#A6A6A6",
                 "headingBlock": {
-                  "heading": "Ink Replay",
-                  "backgroundColor": "#0078D7",
+                  "heading": "<span style='color:#FFFFFF'>Ink Replay</span>",
+                  "picturePlacement": "second",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
                   "button": {
-                    "link": ""
+                    "link": "ink-music:2",
+                    "text": "Try now"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_425x425_replay.png"
-                    }
-                  ]
                 }
               },
               {
+                "backgroundColor": "#FFFFFF",
                 "headingBlock": {
-                  "heading": "Ink to Math",
-                  "backgroundColor": "#0078D7",
+                  "heading": "<span style='color:#0078D7'>Ink to Math</span>",
+                  "picturePlacement": "second",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
                   "button": {
-                    "link": ""
+                    "link": "ink-music:1",
+                    "text": "Try now"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_425x425_math.png"
-                    }
-                  ]
                 }
               },
               {
+                "backgroundColor": "#A6A6A6",
                 "headingBlock": {
-                  "heading": "Ruler",
-                  "backgroundColor": "#0078D7",
+                  "heading": "<span style='color:#FFFFFF'>Ruler</span>",
+                  "picturePlacement": "second",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
                   "button": {
-                    "link": "",
-                    "overlay": "#000"
+                    "link": "ink-music:5",
+                    "text": "Try now"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_425x425_Ruler.png"
-                    }
-                  ]
                 }
               },
               {
+                "backgroundColor": "#E2E2E2",
                 "headingBlock": {
-                  "heading": "Sticky Notes",
-                  "backgroundColor": "#0078D7",
+                  "heading": "<span style='color:#505050'>Sticky Notes</span>",
+                  "picturePlacement": "second",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
                   "button": {
-                    "link": "/inking#StickyNotes"
+                    "link": "ink-music:3",
+                    "text": "Try now"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_425x425_notes.png"
-                    }
-                  ]
                 }
               },
               {
+                "backgroundColor": "#FFFFFF",
+                "viewMask": "60",
                 "headingBlock": {
-                  "heading": "Draw on Photo",
-                  "backgroundColor": "#0078D7",
-                  "viewMask": "60",
+                  "heading": "<span style='color:#0078D7'>Draw on Photo</span>",
+                  "picturePlacement": "second",
+                  "pictureBlock": {
+                    "pictures": [
+                      {
+                        "src": "http://placehold.it/200x200/2F2F2F/171717"
+                      }
+                    ]
+                  },
                   "button": {
-                    "link": ""
+                    "link": "ink-music:4",
+                    "text": "Try now"
                   }
-                },
-                "pictureBlock": {
-                  "pictures": [
-                    {
-                      "src": "img/inking_assets/Tiles_425x425_draw.png"
-                    }
-                  ]
                 }
               }
             ]
