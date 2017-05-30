@@ -53,7 +53,7 @@
           "type": [ "integer", "string" ]
         },
         "condition": {
-          "description": "Conditions are based on values available at runtime.  Conditions can be as simple as PenSupport==true or complex with nested parenthesis, logic operators and inequality",
+          "description": "Conditions are based on values available at runtime.  Conditions can be as simple as PenSupport==true or complex with nested parenthesis, logic operators and inequality.",
           "type": "string"
         },
         "brand": {
@@ -186,7 +186,8 @@
           "$ref": "#/definitions/headingBlock"
         },
         "legalText": {
-          "type":  "string"
+          "description": "Legal disclaimer text.  This text will appear locale direction aligned at the bottom of the section.",
+          "type": "string"
         },
         "media": {
           "$ref": "#/definitions/media"
@@ -314,6 +315,7 @@
       }
     },
     "pictureBlock": {
+      "description": "List of images to be displayed one of which will be chosen to fit the available space.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -412,8 +414,16 @@
         }
       }
     },
+    "textAlignX": {
+      "description": "Justify elements within the block .  Valid values are 'left', 'right', 'center",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
     "alignX": {
-      "description": "Together with alignY orients the headingBlock on the screen.  Valid values are 'left', 'right', 'center",
+      "description": "Together with alignY orients the headingBlock within the section.  Valid values are 'left', 'right', 'center",
       "enum": [
         "left",
         "right",
@@ -421,7 +431,7 @@
       ]
     },
     "alignY": {
-      "description": "Together with alignX orients the headingBlock on the screen.  Valid values are 'top', 'bottom', 'center",
+      "description": "Together with alignX orients the headingBlock within the section or tile.  Valid values are 'top', 'bottom', 'center",
       "enum": [
         "top",
         "bottom",
@@ -451,6 +461,7 @@
       ]
     },
     "picturePlacement": {
+      "description": "Placement of a pictureBlock within the headingBlock.  Valid values are only 'first', 'second', third'.",
       "enum": [
         "first",
         "second",
@@ -462,8 +473,7 @@
       "additionalProperties": false,
       "properties": {
         "alignX": {
-          "$ref": "#/definitions/alignX",
-          "description": "Align the text left, right or centered"
+          "$ref": "#/definitions/textAlignX"
         },
         "heading": {
           "type": "string",
@@ -488,7 +498,7 @@
           "$ref": "#/definitions/pictureBlock"
         },
         "picturePlacement": {
-          "$ref" : "#/definitions/picturePlacement"
+          "$ref": "#/definitions/picturePlacement"
         }
       }
     },
