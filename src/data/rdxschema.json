@@ -106,8 +106,6 @@
       "additionalProperties": false,
       "required": [
         "sectionIdentifier",
-        "anchorTitle",
-        "anchorLink",
         "layout"
       ],
       "properties": {
@@ -173,8 +171,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "type",
-        "media"
+        "type"
       ],
       "properties": {
         "type": {
@@ -189,8 +186,11 @@
           "description": "Legal disclaimer text.  This text will appear locale direction aligned at the bottom of the section.",
           "type": "string"
         },
-        "media": {
-          "$ref": "#/definitions/media"
+        "pictureBlock": {
+          "$ref": "#/definitions/pictureBlock"
+        },
+        "videoBlock": {
+          "$ref": "#/definitions/videoBlock"
         },
         "theme": {
           "$ref": "#/definitions/theme"
@@ -208,8 +208,7 @@
       "additionalProperties": false,
       "required": [
         "type",
-        "headingBlock",
-        "pictureBlock"
+        "headingBlock"
       ],
       "properties": {
         "type": {
@@ -231,6 +230,9 @@
         },
         "pictureBlock": {
           "$ref": "#/definitions/pictureBlock"
+        },
+        "videoBlock": {
+          "$ref": "#/definitions/videoBlock"
         },
         "headingBlock": {
           "$ref": "#/definitions/headingBlock"
@@ -505,6 +507,9 @@
         "pictureBlock": {
           "$ref": "#/definitions/pictureBlock"
         },
+        "videoBlock": {
+          "$ref": "#/definitions/videoBlock"
+        },
         "picturePlacement": {
           "$ref": "#/definitions/picturePlacement"
         }
@@ -526,19 +531,6 @@
       "minItems": 1,
       "items": {
         "$ref": "#/definitions/picture"
-      }
-    },
-    "media": {
-      "type": "object",
-      "additionalProperties": false,
-      "description": "For a template that may have video or a static image. One or the other may be specified by videoBlock, or pictureBlock",
-      "properties": {
-        "pictureBlock": {
-          "$ref": "#/definitions/pictureBlock"
-        },
-        "videoBlock": {
-          "$ref": "#/definitions/videoBlock"
-        }
       }
     }
   }
