@@ -128,22 +128,23 @@ video {
 
 .m-immersive-hero-item.f-align-top > div > div, .m-immersive-hero-item.f-align-bottom > div > div {
   flex-direction: column;
-  flex: 1;
-  height: 100vh;
+  //flex: 1;
+  //height: 100vh;
   top: 0;
   width: 100vw;
   transform: none;
   left: 0;
   max-width: 100%;
   padding: 0 0;
+  overflow: hidden;
 
-  img.c-image, picture.c-image {
-    flex: 1
-  }
-
+  //img.c-image, picture.c-image {
+  //  flex: 0 auto;
+  //}
 
   img.c-image, picture.c-image img {
-    height: 100%;
+    //height: 100%;
+    display: inline;
     //width: auto;
   }
 }
@@ -156,7 +157,6 @@ video {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: calc(100vh - 45px);
   transform: none;
   left: 0;
@@ -167,8 +167,34 @@ video {
   transform: none;
   left: 0;
   top: 0;
-  flex: 1;
+  //flex: 1;
   box-sizing: content-box;
+}
+
+.m-immersive-hero-item.f-align-top>div>div {
+  &.content-animate {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+//
+//.m-immersive-hero-item.f-align-top>div>div.hero-media {
+//  height: 50vh;
+//}
+
+.m-immersive-hero-item > div > div {
+  &.content-animate {
+    flex: 0 auto;
+  }
+  &.hero-media {
+    flex: 1;
+  }
+}
+
+.m-immersive-hero-item.f-align-bottom>div>div {
+  &.content-animate {
+    order: 2;
+  }
 }
 
 .m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
@@ -181,16 +207,11 @@ video {
 
 .m-immersive-hero-item.f-align-bottom > div {
   top: 0;
-  padding-bottom: 45px;
 }
-
-.m-immersive-hero-item.f-align-top > div {
-  padding-top: 45px;
-}
-
-.m-immersive-hero-item.f-align-bottom > div > div {
-  flex: 0 auto;
-}
+//
+//.m-immersive-hero-item.f-align-bottom > div > div {
+//  flex: 0 auto;
+//}
 
 .m-immersive-hero-item.f-align-bottom > div > picture.c-image {
   flex: 1;
@@ -220,6 +241,7 @@ video {
 .m-immersive-hero-item.f-align-bottom > div {
   bottom: 189px;
 }
+
 //
 //.m-immersive-hero-item>div>div .c-heading {
 //  font-size: 34px;
