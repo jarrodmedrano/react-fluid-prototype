@@ -26,9 +26,7 @@ class Hero extends React.Component {
             if (type === 'immersiveHero') {
                 return (
                     <div className={heroClass}>
-                        {pictureBlock ?
-                            <Heading data={headingBlock} iHero="true" />
-                        : null }
+                        <Heading data={headingBlock} iHero="true" />
                     </div>
                 )
             }

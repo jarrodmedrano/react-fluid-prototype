@@ -44,7 +44,7 @@ video {
 .c-hero > picture img, .m-hero-item > picture img {
   //transform: translateY(calc(50% - 72px));
   //top: calc(50% - 72px);
-  top: calc(50% + 36px);
+  //top: calc(50% - 45px);
 }
 .m-highlight-feature .c-badge {
   margin-bottom: 12px;
@@ -57,16 +57,26 @@ video {
 //  transform: translateY(calc(50% - 72px));
 //}
 
-.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
-  top: calc(60px + 72px);
+//.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+//  top: calc(60px + 72px);
+//}
+//
+//.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
+//  bottom: calc(60px + 72px);
+//}
+//
+//.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
+//  top: calc(60px + 72px);
+//}
+
+.m-hero-item.f-y-bottom > div > div, .c-hero.f-y-bottom > div > div {
+  bottom: 117px;
 }
 
-.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
-  bottom: calc(60px + 72px);
-}
-
-.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
-  top: calc(60px + 72px);
+@media only screen and (min-width: 768px) {
+  .m-hero-item > picture, .c-hero > picture {
+    margin-top: -$tab-height;
+  }
 }
 
 .fact-tag {
