@@ -13,7 +13,7 @@ import dataPropTypes, {heroPropTypes} from '../../../../../../data/dataProps';
 class Hero extends React.Component {
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {alignX, alignY, theme, type, media, pictureBlock, headingBlock, viewMask} = this.props.data;
+            let {alignX, alignY, theme, type, media, pictureBlock, videoBlock, headingBlock, viewMask} = this.props.data;
             let heroClass = classNames(
                 alignX ? `f-x-${alignX}` : '',
                 alignX ? `f-align-${alignX}` : '',
@@ -26,17 +26,31 @@ class Hero extends React.Component {
             if (type === 'immersiveHero') {
                 return (
                     <div className={heroClass}>
-                        {pictureBlock ?
-                            <Heading data={headingBlock} iHero="true" />
-                        : null }
+                        <Picture data={pictureBlock}/>
+                        <Heading data={headingBlock} iHero="true" />
                     </div>
                 )
             }
             else if (type === 'fullscreen') {
                 let heroClassFScreen = classNames(heroClass, 'm-image-intro f-transparent');
-                if (media) {
-                    let {videoBlock, pictureBlock} = media;
-                    if(videoBlock) {
+                if (videoBlock) {
+                    return (
+                        <div>
+                            <Video active={this.props.active} data={videoBlock} className="video-fullscreen fixed" />
+                        </div>
+                    )
+                }
+                else if (pictureBlock) {
+                    return (
+                        <div className={heroClassFScreen}>
+                            <Picture data={pictureBlock} />
+                            {headingBlock ? <Heading data={headingBlock} /> : null}
+                        </div>
+                    )
+                }
+                else if (media) { // Depreciated, use videoBlock or pictureBlock
+                    let { videoBlock, pictureBlock } = media;
+                    if (videoBlock) {
                         return (
                             <div>
                                 <Video active={this.props.active} data={videoBlock} className="video-fullscreen fixed" />
