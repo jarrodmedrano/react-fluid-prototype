@@ -153,15 +153,15 @@ a.mosaic-link:after {
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .c-mosaic [data-f-mosaic~="f-height-medium"] {
-    max-height: calc(50vh - #{$tab-height / 2});
+    height: calc(50vh - #{$tab-height / 2});
   }
 
   .c-mosaic [data-f-mosaic~="f-height-large"] {
-    max-height: calc(100vh - #{$tab-height});
+    height: calc(100vh - #{$tab-height});
   }
 
   .c-mosaic [data-f-mosaic~="f-height-small"] {
-    max-height: calc(25vh - #{$tab-height / 4});
+    height: calc(25vh - #{$tab-height / 4});
   }
 }
 
