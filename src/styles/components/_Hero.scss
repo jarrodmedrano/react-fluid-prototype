@@ -145,6 +145,7 @@ video {
   img.c-image, picture.c-image img {
     //height: 100%;
     display: inline;
+    max-height: 100%;
     //width: auto;
   }
 }
