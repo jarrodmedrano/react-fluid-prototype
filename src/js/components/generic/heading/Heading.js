@@ -16,7 +16,7 @@ class Heading extends React.Component {
             return (
             <div>
                 {/* alignY this is for placement of foreground images, it comes from parent component not from data */}
-                {pictureBlock && picturePlacement !== 'second' && picturePlacement !== 'third' && iHero ? <Picture data={pictureBlock} /> : null}
+                {pictureBlock && picturePlacement !== 'second' && picturePlacement !== 'third' && iHero ? <div className="hero-media"><Picture data={pictureBlock} /></div> : null}
                 <div className={`content-animate ${justifyClass}`}>
                     {pictureBlock && picturePlacement !== 'second' && picturePlacement !== 'third' && !iHero ? <Picture data={pictureBlock} /> : null}
                     {badge ? <strong className="c-badge f-large f-highlight"><Text data={badge} /></strong> : null }
@@ -28,7 +28,7 @@ class Heading extends React.Component {
                     {button && !button.alignY ? <Button data={button} /> : null }
                     {legalText ? <p className="c-paragraph-4"><Text data={legalText} /></p> : null }
                 </div>
-                {pictureBlock && picturePlacement === 'second' && iHero ? <Picture data={pictureBlock} /> : null}
+                {pictureBlock && picturePlacement === 'second' && iHero ? <div className="hero-media"><Picture data={pictureBlock} /></div> : null}
                 {button && button.alignY ? <Button data={button} /> : null }
             </div>
             )

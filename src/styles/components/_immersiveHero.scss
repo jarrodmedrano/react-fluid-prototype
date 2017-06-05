@@ -3,17 +3,9 @@
 .m-immersive-hero-item {
   width: 100%;
 
-  &.f-align-bottom {
-
-    > div {
-      top: auto;
-      bottom: 135px;
-    }
-  }
-
   &.f-align-top {
     > picture {
-      top: auto;
+      top: 0;
       bottom: 0;
     }
   }
