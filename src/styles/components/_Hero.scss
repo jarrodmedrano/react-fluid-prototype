@@ -182,6 +182,7 @@ video {
   top: 0;
   //flex: 1;
   box-sizing: content-box;
+  flex: 1;
 }
 
 .m-immersive-hero-item.f-align-top>div>div {
@@ -194,28 +195,19 @@ video {
 //.m-immersive-hero-item.f-align-top>div>div.hero-media {
 //  height: 50vh;
 //}
-
-.m-immersive-hero-item > div > div {
-  &.content-animate {
-    flex: 0 auto;
-  }
-  &.hero-media {
-    flex: 1;
-  }
-}
+//
+//.m-immersive-hero-item > div > div {
+//  &.content-animate {
+//    flex: 0 auto;
+//  }
+//  &.hero-media {
+//    flex: 1;
+//  }
+//}
 
 .m-immersive-hero-item.f-align-bottom>div>div {
   &.content-animate {
     order: 2;
-  }
-}
-
-.m-immersive-hero-item.f-align-top>div>div {
-  &.content-animate {
-    flex: 0 auto;
-  }
-  &.hero-media {
-    flex: 1;
   }
 }
 
