@@ -97,6 +97,11 @@ video {
   &.theme-light {
     background: #fff;
   }
+
+  > picture {
+    position: absolute;
+    top: 0;
+  }
 }
 
 
