@@ -161,6 +161,10 @@ video {
   height: calc(100vh - 45px);
   transform: none;
   left: 0;
+
+  @media (orientation: portrait) {
+      height: auto;
+  }
 }
 
 .m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
