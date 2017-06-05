@@ -112,6 +112,14 @@ video {
   > div {
     height: calc(100vh - 45px);
   }
+
+  @media (orientation: portrait) {
+    height: auto;
+
+    > div {
+      height: auto;
+    }
+  }
 }
 
 .m-immersive-hero-item.f-align-top > div {
@@ -199,6 +207,15 @@ video {
 .m-immersive-hero-item.f-align-bottom>div>div {
   &.content-animate {
     order: 2;
+  }
+}
+
+.m-immersive-hero-item.f-align-top>div>div {
+  &.content-animate {
+    flex: 0 auto;
+  }
+  &.hero-media {
+    flex: 1;
   }
 }
 
