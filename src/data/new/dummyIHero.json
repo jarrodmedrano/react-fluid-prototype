@@ -36,7 +36,7 @@
             "ariaLabel": "AriaLabel",
             "pictures": [
               {
-                "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+                "src": "http://placehold.it/2048x1152/2F2F2F/171717",
                 "minWidth": "1779"
               },
               {
@@ -44,7 +44,7 @@
                 "minWidth": "1400px"
               },
               {
-                "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                "src": "http://placehold.it/1399x787/2F2F2F/171717",
                 "minWidth": "1084"
               },
               {
@@ -61,6 +61,32 @@
               }
             ]
           }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/2F2F2F/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/2F2F2F/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
         }
       }
     },
@@ -91,7 +117,7 @@
             "ariaLabel": "AriaLabel",
             "pictures": [
               {
-                "src": "http://placehold.it/2400x1350/2F2F2F/171717",
+                "src": "http://placehold.it/2048x1152/2F2F2F/171717",
                 "minWidth": "1779"
               },
               {
@@ -99,7 +125,7 @@
                 "minWidth": "1400px"
               },
               {
-                "src": "http://placehold.it/1259x472/2F2F2F/171717",
+                "src": "http://placehold.it/1399x787/2F2F2F/171717",
                 "minWidth": "1084"
               },
               {
@@ -122,19 +148,15 @@
           "ariaLabel": "AriaLabel",
           "pictures": [
             {
-              "src": "http://placehold.it/2400x1350/2F2F2F/171717",
-              "minWidth": "1779"
+              "src": "http://placehold.it/2842x1718/2F2F2F/171717",
+              "minWidth": "1200"
             },
             {
-              "src": "http://placehold.it/1778x1000/2F2F2F/171717",
-              "minWidth": "1400px"
+              "src": "http://placehold.it/1200x725/2F2F2F/171717",
+              "minWidth": "992"
             },
             {
-              "src": "http://placehold.it/1259x472/2F2F2F/171717",
-              "minWidth": "1084"
-            },
-            {
-              "src": "http://placehold.it/1083x609/2F2F2F/171717",
+              "src": "http://placehold.it/991x743/2F2F2F/171717",
               "minWidth": "768"
             },
             {
@@ -147,7 +169,6 @@
             }
           ]
         }
-      }
     }
   ]
 }
