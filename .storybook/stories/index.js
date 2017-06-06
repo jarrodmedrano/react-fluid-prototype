@@ -203,6 +203,16 @@ storiesOf('Hero', module)
             <Hero data={data.IHeroBottom}/>
         </Wrapper>
     ))
+    .add('Immersive Hero Video Top', () => (
+        <Wrapper>
+            <Hero data={data.IHeroTopVideo}/>
+        </Wrapper>
+    ))
+    .add('Immersive Hero Video Bottom', () => (
+        <Wrapper>
+            <Hero data={data.IHeroBottomVideo}/>
+        </Wrapper>
+    ))
     .add('Fullscreen', () => (
         <Wrapper wrapperClass="fullscreen">
             <Hero data={data.dataFullscreenHero}/>
@@ -210,9 +220,7 @@ storiesOf('Hero', module)
     ))
     .add('Card', () => (
         <Wrapper>
-            <section>
-                <Hero data={data.dataCardHero}/>
-            </section>
+          <Hero data={data.dataCardHero}/>
         </Wrapper>
     ));
 

@@ -1317,6 +1317,8 @@ import dummyIHero from '../../src/data/new/dummyIHero.json';
 
 export const IHeroTop = dummyIHero.sections[0].layout;
 export const IHeroBottom = dummyIHero.sections[1].layout;
+export const IHeroTopVideo = dummyIHero.sections[2].layout;
+export const IHeroBottomVideo = dummyIHero.sections[3].layout;
 
 export const dataFullscreenHero = {
     "type": "fullscreen",

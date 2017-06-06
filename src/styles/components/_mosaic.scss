@@ -151,6 +151,11 @@ a.mosaic-link:after {
   opacity: .2;
 }
 
+
+.c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
+  height: auto;
+}
+
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .c-mosaic [data-f-mosaic~="f-height-medium"] {
     height: calc(50vh - #{$tab-height / 2});
@@ -178,13 +183,6 @@ a.mosaic-link:after {
   }
 }
 
-
-
-//@media only screen and (min-width: 768px) {
-//  .c-mosaic [data-f-mosaic~="f-height-medium"] {
-//    height: auto !important;
-//  }
-//}process
 
 .c-mosaic-placement > picture img {
   display: none;
@@ -224,9 +222,6 @@ a.mosaic-link:after {
 
 
 @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1084px) {
-  //.fullscreen-mosaic {
-  //  height: auto !important;
-  //}
 
   .fullscreen-mosaic {
     height: auto !important;
