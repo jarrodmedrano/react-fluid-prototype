@@ -26,7 +26,6 @@ class Hero extends React.Component {
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item',
                 viewMask ? `f-mask-${viewMask}` : '');
 
-
             if (type === 'card') {
                 const heroClassCard = classNames(heroClass, 'm-highlight-feature');
                 return (
@@ -52,10 +51,9 @@ class Hero extends React.Component {
 
 const renderHeading = (props, iHero) => {
     const {headingBlock} = props.data;
-
     if(headingBlock) {
         return (
-            <Heading data={headingBlock} iHero={iHero} />
+            <Heading data={headingBlock} iHero={iHero} active={props.active} />
         )
     }
 };

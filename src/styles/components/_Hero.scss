@@ -36,38 +36,13 @@ video {
   }
 }
 
-
 .m-hero-item {
   height: 100%;
 }
 
-.c-hero > picture img, .m-hero-item > picture img {
-  //transform: translateY(calc(50% - 72px));
-  //top: calc(50% - 72px);
-  //top: calc(50% - 45px);
-}
 .m-highlight-feature .c-badge {
   margin-bottom: 12px;
 }
-//.c-hero.f-y-center >div > div, .m-hero-item.f-y-center > div > div {
-//  top: calc(50% - 72px);
-//}
-
-//.c-hero.f-y-center>div>div, .m-hero-item.f-y-center>div>div {
-//  transform: translateY(calc(50% - 72px));
-//}
-
-//.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
-//  top: calc(60px + 72px);
-//}
-//
-//.c-hero.f-y-bottom>div>div, .m-hero-item.f-y-bottom>div>div {
-//  bottom: calc(60px + 72px);
-//}
-//
-//.c-hero.f-y-top>div>div, .m-hero-item.f-y-top>div>div {
-//  top: calc(60px + 72px);
-//}
 
 .m-hero-item.f-y-bottom > div > div, .c-hero.f-y-bottom > div > div {
   bottom: 117px;
@@ -133,16 +108,10 @@ video {
   left: 0;
   transform: none;
   max-width: 100%;
-
-  //> div {
-  //  top: 0;
-  //}
 }
 
 .m-immersive-hero-item.f-align-top > div > div, .m-immersive-hero-item.f-align-bottom > div > div {
   flex-direction: column;
-  //flex: 1;
-  //height: 100vh;
   top: 0;
   width: 100vw;
   transform: none;
@@ -151,15 +120,13 @@ video {
   padding: 0 0;
   overflow: hidden;
 
-  //img.c-image, picture.c-image {
-  //  flex: 0 auto;
-  //}
-
   img.c-image, picture.c-image img {
-    //height: 100%;
     display: inline;
     max-height: 100%;
-    //width: auto;
+  }
+
+  video {
+    max-height: 100%;
   }
 }
 
@@ -185,7 +152,6 @@ video {
   transform: none;
   left: 0;
   top: 0;
-  //flex: 1;
   box-sizing: content-box;
   flex: 1;
 }
@@ -196,19 +162,6 @@ video {
     justify-content: flex-end;
   }
 }
-//
-//.m-immersive-hero-item.f-align-top>div>div.hero-media {
-//  height: 50vh;
-//}
-//
-//.m-immersive-hero-item > div > div {
-//  &.content-animate {
-//    flex: 0 auto;
-//  }
-//  &.hero-media {
-//    flex: 1;
-//  }
-//}
 
 .m-immersive-hero-item.f-align-bottom>div>div {
   &.content-animate {
@@ -219,7 +172,6 @@ video {
 .m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
   position: relative;
   height: auto;
-  //max-width: 50%;
   left: 0;
   transform: none;
 }
@@ -227,10 +179,6 @@ video {
 .m-immersive-hero-item.f-align-bottom > div {
   top: 0;
 }
-//
-//.m-immersive-hero-item.f-align-bottom > div > div {
-//  flex: 0 auto;
-//}
 
 .m-immersive-hero-item.f-align-bottom > div > picture.c-image {
   flex: 1;
@@ -241,12 +189,7 @@ video {
     top: 0;
   }
 }
-@media only screen and (min-width: 1084px) {
-  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
-    //top: 0;
-    //bottom: 189px;
-  }
-}
+
 
 @media only screen and (min-width: 540px) {
   .m-image-intro.f-align-bottom > div {
@@ -260,11 +203,6 @@ video {
 .m-immersive-hero-item.f-align-bottom > div {
   bottom: 189px;
 }
-
-//
-//.m-immersive-hero-item>div>div .c-heading {
-//  font-size: 34px;
-//}
 
 .m-immersive-hero-item.f-align-top > div > picture.c-image img, .m-immersive-hero-item.f-align-bottom > div > picture.c-image img {
   max-width: 100%;
