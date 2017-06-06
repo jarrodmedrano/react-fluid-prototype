@@ -24,9 +24,9 @@ export function navigateEvent(group, section, source) {
     if(window.RDX) {
         window.RDX.navigateEvent(group, section, source);
     }
-    else {
-        console.log('group', group, 'section', section, 'source', source);
-    }
+    // else {
+    //     console.log('group', group, 'section', section, 'source', source);
+    // }
 }
 
 export function impressionEvent(visible, group, section) {

@@ -13,8 +13,9 @@ import dataPropTypes, {heroPropTypes} from '../../../../../../data/dataProps';
 class Hero extends React.Component {
     render() {
         if (propsAreValid(this.props.data, this)) {
-            let {alignX, alignY, theme, type, media, pictureBlock, videoBlock, headingBlock, viewMask} = this.props.data;
-            let heroClass = classNames(
+            const {alignX, alignY, theme, type, viewMask} = this.props.data;
+
+            const heroClass = classNames(
                 alignX ? `f-x-${alignX}` : '',
                 alignX ? `f-align-${alignX}` : '',
                 alignY ? `f-y-${alignY}` : '',
@@ -26,90 +27,26 @@ class Hero extends React.Component {
             if (type === 'immersiveHero') {
                 return (
                     <div className={heroClass}>
-                        <Picture data={pictureBlock}/>
-                        <Heading data={headingBlock} iHero="true" />
-                    </div>
-                )
-            }
-            else if (type === 'fullscreen') {
-                let heroClassFScreen = classNames(heroClass, 'm-image-intro f-transparent');
-                if (videoBlock) {
-                    return (
-                        <div>
-                            <Video active={this.props.active} data={videoBlock} className="video-fullscreen fixed" />
-                        </div>
-                    )
-                }
-                else if (pictureBlock) {
-                    return (
-                        <div className={heroClassFScreen}>
-                            <Picture data={pictureBlock} />
-                            {headingBlock ? <Heading data={headingBlock} /> : null}
-                        </div>
-                    )
-                }
-                else if (media) { // Depreciated, use videoBlock or pictureBlock
-                    let { videoBlock, pictureBlock } = media;
-                    if (videoBlock) {
-                        return (
-                            <div>
-                                <Video active={this.props.active} data={videoBlock} className="video-fullscreen fixed" />
-                            </div>
-                        )
-                    }
-                    else if(pictureBlock){
-                        return (
-                            <div className={heroClassFScreen}>
-                                <Picture data={pictureBlock}/>
-                                {headingBlock ? <Heading data={headingBlock}/> : null }
-                            </div>
-                        )
-                    }
-                }
-            }
-            else if (type === 'facts') {
-                let heroClassCard = classNames(heroClass, 'm-highlight-feature fact-tag');
-                let {heading, subheading, paragraph, button, badge} = this.props.data.headingBlock;
-                let {ScreenSize, ProcessorDescription, Memory, StorageDescription} = this.props.deviceInfo;
-
-                let specs = [ScreenSize, ProcessorDescription, Memory, StorageDescription];
-
-                return (
-                    <div data-grid="col-12" className={heroClassCard}>
-                        <Picture data={pictureBlock}/>
-                        <div>
-                            <div>
-                                {/*{picture && alignY === 'bottom' ? <Picture data={picture} /> : null }*/}
-                                <div className="content-animate">
-                                    {badge ? <strong className="c-badge f-large f-highlight"><Text data={badge} /></strong> : null }
-                                    {heading ? <h1 className="c-heading"><Text data={heading} /></h1> : null }
-                                    {subheading ? <p className="c-subheading"><Text data={subheading} /></p> : null }
-                                    {paragraph ? <p className="c-paragraph"><Text data={paragraph} /></p> : null }
-                                    <GenericList data={specs} />
-                                    <Price data={this.props.deviceInfo} />
-                                    {button ? <Button data={button} /> : null }
-                                </div>
-                                {/*{picture && alignY === 'top' ? <Picture data={picture} /> : null }*/}
-                            </div>
-                        </div>
+                        {renderMedia(this.props)}
+                        {renderHeading(this.props, true)}
                     </div>
                 )
             }
             else if (type === 'card') {
-                let heroClassCard = classNames(heroClass, 'm-highlight-feature');
+                const heroClassCard = classNames(heroClass, 'm-highlight-feature');
                 return (
                     <div data-grid="col-12" className={heroClassCard}>
-                        <Picture data={pictureBlock}/>
+                        {renderMedia(this.props)}
                         <div>
-                            <Heading data={headingBlock}/>
+                            {renderHeading(this.props)}
                         </div>
                     </div>
                 )
             } else {
                 return (
                     <div className={heroClass}>
-                        <Picture data={pictureBlock}/>
-                        <Heading data={headingBlock}/>
+                        {renderMedia(this.props)}
+                        {renderHeading(this.props)}
                     </div>
                 )
             }
@@ -117,6 +54,31 @@ class Hero extends React.Component {
         return null
     }
 }
+
+const renderHeading = (props, iHero) => {
+    const {headingBlock} = props.data;
+
+    if(headingBlock) {
+        return (
+            <Heading data={headingBlock} iHero={iHero} />
+        )
+    }
+};
+
+const renderMedia = (props) => {
+    const {media} = props.data;
+    const {videoBlock, pictureBlock} = media || props.data;
+
+    if (videoBlock) {
+        return (
+            <Video active={props.active} data={videoBlock}/>
+        )
+    } else if (pictureBlock) {
+        return (
+            <Picture data={pictureBlock}/>
+        )
+    }
+};
 
 Hero.propTypes = dataPropTypes(heroPropTypes);
 
