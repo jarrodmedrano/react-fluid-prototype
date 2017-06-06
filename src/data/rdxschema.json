@@ -152,9 +152,6 @@
           "type": "object",
           "oneOf": [
             {
-              "$ref": "#/definitions/fullscreen"
-            },
-            {
               "$ref": "#/definitions/hero"
             },
             {
