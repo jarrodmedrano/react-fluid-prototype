@@ -51,7 +51,6 @@ class Hero extends React.Component {
 
 const renderHeading = (props, iHero) => {
     const {headingBlock} = props.data;
-
     if(headingBlock) {
         return (
             <Heading data={headingBlock} iHero={iHero} active={props.active} />

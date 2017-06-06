@@ -40,7 +40,6 @@ class Heading extends React.Component {
 const renderMedia = (props) => {
     const {media} = props.data;
     const {videoBlock, pictureBlock} = media || props.data;
-    console.log(props);
 
     if (videoBlock) {
         return (
