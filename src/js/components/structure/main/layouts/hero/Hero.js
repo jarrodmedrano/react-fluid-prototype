@@ -3,10 +3,6 @@ import classNames from 'classnames';
 import Heading from '../../../../generic/heading/Heading';
 import Picture from '../../../../generic/picture/Picture';
 import Video from '../../../../generic/video/Video';
-import Price from '../../../../generic/price/Price';
-import Text from '../../../../generic/text/Text';
-import Button from '../../../../generic/button/Button';
-import GenericList from '../../../../generic/list/GenericList';
 import propsAreValid from '../../../../../lib/util';
 import dataPropTypes, {heroPropTypes} from '../../../../../../data/dataProps';
 
@@ -14,6 +10,12 @@ class Hero extends React.Component {
     render() {
         if (propsAreValid(this.props.data, this)) {
             const {alignX, alignY, theme, type, viewMask} = this.props.data;
+
+            let iHero = false;
+
+            if(type === 'immersiveHero') {
+                iHero = true;
+            }
 
             const heroClass = classNames(
                 alignX ? `f-x-${alignX}` : '',
@@ -24,15 +26,8 @@ class Hero extends React.Component {
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item',
                 viewMask ? `f-mask-${viewMask}` : '');
 
-            if (type === 'immersiveHero') {
-                return (
-                    <div className={heroClass}>
-                        {renderMedia(this.props)}
-                        {renderHeading(this.props, true)}
-                    </div>
-                )
-            }
-            else if (type === 'card') {
+
+            if (type === 'card') {
                 const heroClassCard = classNames(heroClass, 'm-highlight-feature');
                 return (
                     <div data-grid="col-12" className={heroClassCard}>
@@ -46,7 +41,7 @@ class Hero extends React.Component {
                 return (
                     <div className={heroClass}>
                         {renderMedia(this.props)}
-                        {renderHeading(this.props)}
+                        {renderHeading(this.props, iHero)}
                     </div>
                 )
             }
