@@ -13,7 +13,6 @@ class Heading extends React.Component {
             let {heading, subheading, paragraph, legalText, button, badge, alignX, alignY} = this.props.data;
             let {iHero} = this.props || false;
             let justifyClass = classNames(alignX ? `x-type-${alignX}` : '', alignY ? `x-type-${alignY}` : '');
-
             let picturePlacement = this.props.data.picturePlacement || 'first';
 
             return (
@@ -23,50 +22,61 @@ class Heading extends React.Component {
                 <div className={`content-animate ${justifyClass}`}>
                     {picturePlacement === 'first' && !iHero ? renderMedia(this.props) : null}
                     {badge ? renderBadgeText(badge) : null }
-                    {heading ? renderMainHeading(heading) : null }
+                    {renderMainHeading(heading)}
                     {picturePlacement === 'second' && !iHero ? renderMedia(this.props) : null}
-                    {subheading ? renderSubHeading(subheading) : null }
-                    {paragraph ? renderPText(paragraph) : null }
+                    {renderSubHeading(subheading)}
+                    {renderPText(paragraph)}
                     {picturePlacement === 'third' && !iHero ? renderMedia(this.props) : null}
-                    {button && !button.alignY ? <Button data={button} /> : null }
+                    {button && button.alignY !== 'bottom' ? <Button data={button} /> : null }
                     {legalText ? renderLegalText(legalText) : null }
                 </div>
                 {picturePlacement === 'second' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
-                {button && button.alignY ? <Button data={button} /> : null }
+                {button && button.alignY === 'bottom' ? <Button data={button} /> : null }
             </div>
             )
         } return null
     }
 }
 
+
 const renderLegalText = (props) => {
-    return (
-        <p className="c-paragraph-4"><Text data={props} /></p>
-    )
+    if(props) {
+        return (
+            <p className="c-paragraph-4"><Text data={props}/></p>
+        )
+    }
 };
 
 const renderPText = (props) => {
-    return (
-        <p className="c-paragraph"><Text data={props} /></p>
-    )
+    if(props) {
+        return (
+            <p className="c-paragraph"><Text data={props}/></p>
+        )
+    }
 };
 
 const renderBadgeText = (props) => {
-    return (
-        <strong className="c-badge f-large f-highlight"><Text data={props} /></strong>
-    )
+    if(props) {
+        return (
+            <strong className="c-badge f-large f-highlight"><Text data={props}/></strong>
+        )
+    }
 };
 
 const renderMainHeading = (props) => {
-    return (
-        <h1 className="c-heading"><Text data={props} /></h1>
-    )
+    if(props) {
+        return (
+            <h1 className="c-heading"><Text data={props}/></h1>
+        )
+    }
 };
 
 const renderSubHeading = (props) => {
-    return (
-        <p className="c-subheading"><Text data={props} /></p>
-    )
+    if(props) {
+        return (
+            <p className="c-subheading"><Text data={props}/></p>
+        )
+    }
 };
 
 const renderMedia = (props) => {

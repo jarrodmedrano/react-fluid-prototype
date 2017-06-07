@@ -38,6 +38,12 @@ video {
 
 .m-hero-item {
   height: 100%;
+
+  > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .m-highlight-feature .c-badge {

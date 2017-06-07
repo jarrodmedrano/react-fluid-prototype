@@ -477,6 +477,62 @@
           ]
         }
       }
+    },
+    {
+      "ordinal": 1000,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "VideoBG",
+      "anchorLink": true,
+      "anchorTitle": "-- Video BG --",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "right",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/2F2F2F/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/2F2F2F/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
+        },
+        "videoBlock": {
+          "src": "img/vertical/Hero-pen.mp4"
+        }
+      }
     }
   ]
 }

@@ -222,6 +222,11 @@ storiesOf('Hero', module)
         <Wrapper>
           <Hero data={data.dataCardHero}/>
         </Wrapper>
+    ))
+    .add('Video BG', () => (
+        <Wrapper>
+          <Hero data={data.VideoBG}/>
+        </Wrapper>
     ));
 
 storiesOf('Legacy', module)
