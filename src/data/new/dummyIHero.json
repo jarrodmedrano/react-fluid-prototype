@@ -20,9 +20,35 @@
         "theme": "theme-dark",
         "alignY": "top",
         "headingBlock": {
-          "videoBlock": {
-            "ariaLabel": "Office 365",
-            "src": "img/vertical/Hero-pen.mp4"
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/",
+                "minWidth": "0"
+              }
+            ]
           },
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -67,7 +93,7 @@
     {
       "ordinal": 200,
       "groupIdentifier": "immersiveHero",
-      "sectionIdentifier": "Immersive Hero",
+      "sectionIdentifier": "Immersive Hero Bottom",
       "anchorLink": true,
       "anchorTitle": "-- Center Bottom Dark --",
       "layout": {
@@ -91,27 +117,27 @@
             "ariaLabel": "AriaLabel",
             "pictures": [
               {
-                "src": "http://placehold.it/2048x1152/2F2F2F/171717",
+                "src": "http://placehold.it/2048x1152/",
                 "minWidth": "1779"
               },
               {
-                "src": "http://placehold.it/1778x1000/2F2F2F/171717",
+                "src": "http://placehold.it/1778x1000/",
                 "minWidth": "1400px"
               },
               {
-                "src": "http://placehold.it/1399x787/2F2F2F/171717",
+                "src": "http://placehold.it/1399x787/",
                 "minWidth": "1084"
               },
               {
-                "src": "http://placehold.it/1083x609/2F2F2F/171717",
+                "src": "http://placehold.it/1083x609/",
                 "minWidth": "768"
               },
               {
-                "src": "http://placehold.it/767x431/2F2F2F/171717",
+                "src": "http://placehold.it/767x431/",
                 "minWidth": "540"
               },
               {
-                "src": "http://placehold.it/539x303/2F2F2F/171717",
+                "src": "http://placehold.it/539x303/",
                 "minWidth": "0"
               }
             ]
@@ -151,6 +177,7 @@
       "sectionIdentifier": "Immersive Hero Video",
       "anchorLink": true,
       "anchorTitle": "-- Center Top Dark Video --",
+      "alignY": "top",
       "layout": {
         "type": "immersiveHero",
         "theme": "theme-dark",
@@ -158,7 +185,6 @@
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
-          "picturePlacement": "second",
           "button": {
             "layout": "button",
             "link": "http://www.microsoft.com",
