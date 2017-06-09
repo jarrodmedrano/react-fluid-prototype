@@ -47,10 +47,14 @@
       "properties": {
         "$schema": { "type": "string" },
         "groupIdentifier": {
-          "type": "string"
+          "description": "Not localized unique identifier of the group.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque. White space and punctuation are not permitted.",
+          "type": "string",
+          "format": "regex",
+          "pattern": "^\\w*$"
         },
         "ordinal": {
-          "type": [ "integer", "string" ]
+          "type": "integer",
+          "description": "Ordinal position of the group among other groups. This will folow the legacy order determined by known names of OEM first == 100, folowed by Windows = 200, etc... unless otherwise specified."
         },
         "condition": {
           "description": "Conditions are based on values available at runtime.  Conditions can be as simple as PenSupport==true or complex with nested parenthesis, logic operators and inequality.",
@@ -117,31 +121,35 @@
           ]
         },
         "ordinal": {
-          "description": "Ordering position of this section within its group.  'string' is supported but 'integer' is preferred",
-          "type": [ "integer", "string" ]
+          "description": "Ordering position of this section within its group.  This is optional and if not specified will appear in the order loaded.",
+          "type": "integer"
         },
         "groupIdentifier": {
-          "description": "Not localized unique identifier of the group for this section.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque.  Avoid whitespace and punctuation. If not specified it will inherit the group identifier of the object it is contained in.",
-          "type": "string"
+          "description": "Not localized unique identifier of the group for this section.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque. White space and punctuation are not permitted. This value is optioanl inside the section and if not specified, will inherit the group identifier of the group it is contained in.",
+          "type": "string",
+          "format": "regex",
+          "pattern": "^\\w*$"
         },
         "sectionIdentifier": {
-          "description": "Not localized unique identifier for this section.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque.  Avoid whitespace and punctuation.",
-          "type": "string"
+          "description": "Not localized unique identifier for this section.  Navigation to, or user impression events will use this value.  The name should be short, descriptive and uinque. White space and punctuation are not permitted. ",
+          "type": "string",
+          "format": "regex",
+          "pattern": "^\\w*$"
         },
         "anchorTitle": {
-          "description": "Localized text to be used in the secondary navigation UI.",
+          "description": "Localized text to be used in the secondary navigation UI. This is optional but must be spefified if anchorLink is true",
           "type": "string"
         },
         "anchorIcon": {
-          "description": "Local URI of an image to be used in the secondary navigation UI.",
+          "description": "Local URI of an image to be used in the secondary navigation UI. This is optional.",
           "type": "string"
         },
         "anchorGlyph": {
-          "description": "One of a fixed set of glyphs available for use in the secondary navigation UI.",
+          "description": "One of a fixed set of glyphs available for use in the secondary navigation UI. This is optional.",
           "type": "string"
         },
         "anchorLink": {
-          "description": "Indicates if this section will have a link in the secondary navigation UI.  This is optional.",
+          "description": "Indicates if this section will have a link in the secondary navigation UI. This is optional.",
           "type": "boolean"
         },
         "condition": {
@@ -464,7 +472,8 @@
         "20",
         "40",
         "60",
-        "80"
+        "80",
+        "100"
       ]
     },
     "picturePlacement": {
