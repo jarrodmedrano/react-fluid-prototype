@@ -1,0 +1,270 @@
+﻿{
+  "$schema": "Schema\\RDXSchema.json?reload",
+  "groupIdentifier": "office",
+  "brand": {
+    "logo": "office_assets/Office_Desktop_Logo.png",
+    "anchorTitle": "Surface Book",
+    "color": "#dc3c00",
+    "logoTab": "office_assets/Office_Desktop_Logo.png",
+    "selectedLogoTab": "office_assets/Office_Desktop_Logo.png"
+  },
+  "sections": [
+    {
+      "ordinal": "100",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "Office365",
+      "anchorLink": true,
+      "anchorTitle": "Office 365",
+      "layout": {
+        "type": "immersiveHero",
+        "alignY": "top",
+        "theme": "theme-light",
+        "headingBlock": {
+          "videoBlock": {
+            "ariaLabel": "Office 365",
+            "src": "img/vertical/Hero-pen.mp4"
+          },
+          "heading": "<b>Discover new features in <span style='color:#dc3c00'>Office 365</span></b>",
+          "button": {
+            "layout": "link",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_Morph_in_PowerPoint.pptx",
+            "text": "Learn more",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        }
+      }
+    },
+    {
+      "ordinal": "200",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "Research",
+      "anchorLink": true,
+      "anchorTitle": "New Features",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "picturePlacement": "second",
+        "headingBlock": {
+          "heading": "<b>Take the search out of research</b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_Researcher_in_Word.docx",
+            "text": "Try Researcher now in Word",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "New Features",
+          "pictures": [
+            {
+              "src": "office_assets/Consumer_BTS_2017_Researcher_Word-GIF.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "300",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "Quickstarter",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>Jumpstart presentations with <span style='color:#dc3c00'>QuickStarter</span></b>",
+          "subheading": "Ask a store associate for a demo."
+        },
+        "pictureBlock": {
+          "ariaLabel": "Quickstarter",
+          "pictures": [
+            {
+              "src": "office_assets/Office_QuickStarter_Left_align.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "400",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "Designer",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>Slides that shine with <span style='color:#dc3c00'>Designer</span></b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_Designer_in_PowerPoint.pptx",
+            "text": "Try now in Powerpoint",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "Designer",
+          "pictures": [
+            {
+              "src": "office_assets/Office_Designer_Left_Align.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "500",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "Maps",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>Map your data in seconds with <span style='color:#dc3c00'>Maps</span></b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_Maps_in_Excel.xlsx",
+            "text": "Try now in Excel",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "Maps",
+          "pictures": [
+            {
+              "src": "office_assets/Office_Maps_Left_align.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "600",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "InkEditor",
+      "anchorLink": true,
+      "anchorTitle": "Inking",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>No printing required with <span style='color:#dc3c00'>Ink Editor</span></b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_Ink_Editor_in_Word.docx",
+            "text": "Try now in Word",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "Ink Editor",
+          "pictures": [
+            {
+              "src": "office_assets/Office_Ink_Editor_Left_Align.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "700",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "MathAssistant",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>Problems solved with <span style='color:#dc3c00'>math assistant</span></b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Solve_and_graph_handwritten_equations_in_OneNote.one",
+            "text": "Try now in OneNote",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "Math Assistant",
+          "pictures": [
+            {
+              "src": "office_assets/Consumer_BTS_2017_Ink_Math_Assistant_OneNote-GIF.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "800",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "InkReplay",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>Watch an idea unfold with <span style='color:#dc3c00'>Ink Replay</span></b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_Ink_Replay_in_PowerPoint.pptx",
+            "text": "Try now in Powerpoint",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "Ink to Math",
+          "pictures": [
+            {
+              "src": "office_assets/31726_BTS_PPT_REPLAY_ALPHA.gif"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": "900",
+      "groupIdentifier": "office",
+      "sectionIdentifier": "DigitalRuler",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "<b>Set things straight with the built-in <span style='color:#dc3c00'>digital ruler</span></b>",
+          "button": {
+            "layout": "button",
+            "link": "media://rdx/url={documentslibrary}\\Learn_about_the_built-in_digital_ruler_in_PowerPoint.pptx",
+            "text": "Try now in Powerpoint",
+            "textColor": "white",
+            "backgroundColor": "#dc3c00"
+          }
+        },
+        "pictureBlock": {
+          "ariaLabel": "Digital Ruler",
+          "pictures": [
+            {
+              "src": "office_assets/Consumer_BTS_2017_Ruler_PowerPoint-GIF.gif"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

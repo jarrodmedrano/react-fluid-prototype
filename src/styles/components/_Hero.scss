@@ -160,6 +160,14 @@ video {
   top: 0;
   box-sizing: content-box;
   flex: 1;
+
+  &.content-animate {
+    flex: 1 25vh;
+  }
+
+  &.hero-media {
+    flex: 1 50vh;
+  }
 }
 
 .m-immersive-hero-item.f-align-top>div>div {

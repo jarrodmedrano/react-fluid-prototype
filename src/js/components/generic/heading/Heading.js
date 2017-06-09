@@ -10,15 +10,15 @@ import dataPropTypes, {headingPropTypes} from '../../../../data/dataProps';
 class Heading extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let {heading, subheading, paragraph, legalText, button, badge, alignX, alignY} = this.props.data;
-            let {iHero} = this.props || false;
+            let {heading, subheading, paragraph, legalText, button, badge, alignX} = this.props.data;
+            let {iHero, alignY} = this.props || false;
             let justifyClass = classNames(alignX ? `x-type-${alignX}` : '', alignY ? `x-type-${alignY}` : '');
             let picturePlacement = this.props.data.picturePlacement || 'first';
 
             return (
             <div>
                 {/* alignY this is for placement of foreground images, it comes from parent component not from data */}
-                {picturePlacement === 'first' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
+                {alignY !== 'top'  ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
                 <div className={`content-animate ${justifyClass}`}>
                     {picturePlacement === 'first' && !iHero ? renderMedia(this.props) : null}
                     {badge ? renderBadgeText(badge) : null }
@@ -30,7 +30,7 @@ class Heading extends React.Component {
                     {button && button.alignY !== 'bottom' ? <Button data={button} /> : null }
                     {legalText ? renderLegalText(legalText) : null }
                 </div>
-                {picturePlacement === 'second' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
+                {alignY === 'top' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
                 {button && button.alignY === 'bottom' ? <Button data={button} /> : null }
             </div>
             )
