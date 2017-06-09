@@ -161,12 +161,14 @@ video {
   box-sizing: content-box;
   flex: 1;
 
-  &.content-animate {
-    flex: 1 25vh;
-  }
+  @media only screen and (min-width: 768px) {
+    &.content-animate {
+      flex: 1 25vh;
+    }
 
-  &.hero-media {
-    flex: 1 50vh;
+    &.hero-media {
+      flex: 1 50vh;
+    }
   }
 }
 
