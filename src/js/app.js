@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, Redirect, IndexRedirect, useRouterHistory} from 'react-router'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {createHashHistory} from 'history';
 const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
 import MasterLayout from './components/structure/MasterLayout';
