@@ -194,8 +194,8 @@ a.mosaic-link:after {
   margin: 12px 0;
 }
 
-.c-mosaic-placement .c-group {
-  bottom: 24px;
+.c-mosaic-placement .bottom {
+  align-self: flex-end;
 }
 
 .c-mosaic-placement  {

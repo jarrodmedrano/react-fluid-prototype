@@ -13,7 +13,7 @@ class Button extends React.Component {
                 color: textColor,
                 background: backgroundColor
             };
-            let buttonClass = classNames(alignY ? `c-group` : null);
+            let buttonClass = classNames(alignY);
 
             return (
                 <div className={buttonClass}>
