@@ -288,11 +288,14 @@
             }
         }
     }
+    
+    picture {
+    	width: 100%;
+    }
 
     picture,
     .c-video {
         display: block;
-        //width: 100%;
         max-width: 100%;
     }
 

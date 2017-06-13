@@ -60,7 +60,7 @@ if(!window.RDX) {
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
-defaultVertical.groups.push(dummyIHero, officebts, dummyMosaic, oem.groups[0], inking.groups[0], dummyWindows);
+defaultVertical.groups.push(dummySurfaceGroup, windows, dummyIHero, officebts, dummyMosaic, inking.groups[0]);
 
 //data = inking;
     //data = dummySurfacePro;
