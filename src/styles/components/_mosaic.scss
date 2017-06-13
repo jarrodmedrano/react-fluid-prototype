@@ -220,27 +220,6 @@ a.mosaic-link:after {
   }
 }
 
-
-@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1084px) {
-
-  .fullscreen-mosaic {
-    height: auto !important;
-    max-height: inherit;
-  }
-
-  .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: auto !important;
-    max-height: inherit;
-  }
-
-  .scene-vertical.mosaic {
-    height: auto !important;
-    > div.m-mosaic {
-      height: auto !important;
-    }
-  }
-}
-
 @media only screen and (orientation: portrait) {
   .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
     height: auto !important;
