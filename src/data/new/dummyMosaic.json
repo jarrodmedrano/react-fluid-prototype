@@ -2007,7 +2007,7 @@
     {
       "groupIdentifier": "oem",
       "ordinal": "500",
-      "sectionIdentifier": "Mosaic",
+      "sectionIdentifier": "Accessories",
       "anchorLink": true,
       "anchorTitle": "Accessories",
       "layout": {
@@ -2192,9 +2192,9 @@
     {
       "groupIdentifier": "Mosaics Center Aligned",
       "ordinal": "500",
-      "sectionIdentifier": "Mosaic",
+      "sectionIdentifier": "Mosaic-Center",
       "anchorLink": true,
-      "anchorTitle": "Accessories",
+      "anchorTitle": "Mosaic-Center",
       "layout": {
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
@@ -2683,9 +2683,9 @@
     {
       "groupIdentifier": "Mosaics Left Aligned",
       "ordinal": "500",
-      "sectionIdentifier": "Mosaic",
+      "sectionIdentifier": "Mosaic-Left",
       "anchorLink": true,
-      "anchorTitle": "Accessories",
+      "anchorTitle": "Mosaic-Left",
       "layout": {
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
@@ -3181,9 +3181,9 @@
     {
       "groupIdentifier": "Mosaics Right Aligned",
       "ordinal": "500",
-      "sectionIdentifier": "Mosaic",
+      "sectionIdentifier": "Mosaic-Right",
       "anchorLink": true,
-      "anchorTitle": "Accessories",
+      "anchorTitle": "Mosaic-Right",
       "layout": {
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
@@ -3679,9 +3679,9 @@
     {
       "groupIdentifier": "Mosaics Vertically Aligned",
       "ordinal": "500",
-      "sectionIdentifier": "Mosaic",
+      "sectionIdentifier": "Mosaic-Vertical",
       "anchorLink": true,
-      "anchorTitle": "Accessories",
+      "anchorTitle": "Mosaic-Vertical",
       "layout": {
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
@@ -4178,9 +4178,9 @@
     {
       "groupIdentifier": "Mosaics Vertically Aligned Bottom",
       "ordinal": "500",
-      "sectionIdentifier": "Mosaic",
+      "sectionIdentifier": "Mosaic-Vertical-Bottom",
       "anchorLink": true,
-      "anchorTitle": "Accessories",
+      "anchorTitle": "Mosaic-Vertical-Bottom",
       "layout": {
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
