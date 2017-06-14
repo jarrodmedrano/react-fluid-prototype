@@ -9,38 +9,47 @@ import dataPropTypes, {tilePropTypes} from '../../../../../../data/dataProps';
 class MosaicTile extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
-            let { headingBlock, pictureBlock, hoverEffectColor, viewMask, theme, alignX, alignY, textColor, backgroundColor} = this.props.data;
+            const {headingBlock, pictureBlock, hoverEffectColor, viewMask, theme, alignX, alignY, textColor, backgroundColor} = this.props.data;
 
-            let tileClass = classNames('c-mosaic-placement c-placement f-height-large f-width-small',
+            const tileClass = classNames('c-mosaic-placement c-placement f-height-large f-width-small',
                 theme ? theme : '',
                 viewMask ? `f-mask-${viewMask}` : '',
                 alignX ? `x-type-${alignX}` : '',
                 alignY ? `f-y-${alignY}` : '',
             );
 
-            let tileStyle = {
+            const tileStyle = {
                 background: backgroundColor,
                 color: textColor
             };
 
-            let headingAlign = Object.assign(headingBlock, ...headingBlock, { alignX, alignY });
+            if(headingBlock) {
+                const {button} = headingBlock;
+                const headingAlign = Object.assign(headingBlock, ...headingBlock, { alignX, alignY });
 
-
-            if(headingBlock.button) {
-                return (
-                    <ButtonLink to={headingBlock.button.link} layout="mosaic">
-                        <section className={tileClass} style={tileStyle}>
-                            {hoverEffectColor ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: hoverEffectColor}} /> : null }
+                if(button) {
+                    const {link} = button;
+                    return (
+                        <ButtonLink to={link} layout="mosaic">
+                            <section className={tileClass} style={tileStyle}>
+                                {hoverEffectColor ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: hoverEffectColor}} /> : null }
+                                {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
+                                <Heading data={headingAlign} />
+                            </section>
+                        </ButtonLink>
+                    )
+                } else {
+                    return (
+                        <section className={tileClass}>
                             {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
-                            {headingBlock && (this.props.size !== 'small') && headingBlock.heading ? <Heading data={headingAlign} /> : null}
+                            <Heading data={headingAlign} />
                         </section>
-                    </ButtonLink>
-                )
+                    )
+                }
             } else {
                 return (
                     <section className={tileClass}>
                         {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
-                        {headingBlock && (this.props.size !== 'small') && headingBlock.heading ? <Heading data={headingAlign} /> : null}
                     </section>
                 )
             }

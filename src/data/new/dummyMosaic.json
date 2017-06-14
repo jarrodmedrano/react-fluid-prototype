@@ -2018,17 +2018,6 @@
           {
             "hoverEffectColor": "#000",
             "theme": "theme-dark",
-            "headingBlock": {
-              "heading": "Accessories",
-              "subheading": "The perfect complements to your Surface",
-              "button": {
-                "layout": "link",
-                "link": "http://www.microsoft.com",
-                "text": "Call to action",
-                "textColor": "black",
-                "backgroundColor": "white"
-              }
-            },
             "pictureBlock": {
               "pictures": [
                 {
@@ -4682,6 +4671,7 @@
       "anchorTitle": "2 Tile Themes",
       "layout": {
         "type": "mosaic",
+        "theme": "theme-dark",
         "tiles": [
           {
             "theme": "theme-dark",
