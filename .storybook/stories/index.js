@@ -340,6 +340,14 @@ storiesOf('Mosaic', module)
             </Wrapper>
             <StickyFooter data={data.oemGroup}/>
         </div>
+    ))
+    .add('Tile Themes', () => (
+        <div>
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.TileThemes}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ));
 
 // storiesOf('Tabs', module)

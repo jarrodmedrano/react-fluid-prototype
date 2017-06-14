@@ -12,7 +12,7 @@ class MosaicTile extends React.Component {
             let { headingBlock, pictureBlock, hoverEffectColor, viewMask, theme, alignX, alignY, textColor, backgroundColor} = this.props.data;
 
             let tileClass = classNames('c-mosaic-placement c-placement f-height-large f-width-small',
-                theme ? theme : 'theme-dark',
+                theme ? theme : '',
                 viewMask ? `f-mask-${viewMask}` : '',
                 alignX ? `x-type-${alignX}` : '',
                 alignY ? `f-y-${alignY}` : '',
