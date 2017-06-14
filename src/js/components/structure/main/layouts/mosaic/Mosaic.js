@@ -8,8 +8,10 @@ class Mosaic extends React.Component {
     render() {
         if(propsAreValid(this.props.data, this)) {
             return (
-                <div className="m-mosaic">
-                    <MosaicContainer data={this.props.data} />
+                <div>
+                    <div className="m-mosaic">
+                        <MosaicContainer data={this.props.data} />
+                    </div>
                 </div>
             )
         } return null

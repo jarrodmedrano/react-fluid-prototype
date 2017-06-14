@@ -32,14 +32,14 @@ class MosaicContainer extends React.Component {
                     {
                         return (
                             <div className={tileClass}>
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
                                     <MosaicTile data={tiles[0]} theme={theme} />
                                 </div>
                                 <div data-f-mosaic="f-vp1-whole f-vp4-half">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-whole f-height-medium">
+                                    <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-whole f-height-medium">
                                         <MosaicTile data={tiles[1]} theme={theme} />
                                     </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-whole f-height-medium">
+                                    <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-whole f-height-medium">
                                         <MosaicTile data={tiles[2]} theme={theme} />
                                     </div>
                                 </div>
@@ -50,17 +50,19 @@ class MosaicContainer extends React.Component {
                 case 4: {
                     return (
                         <div className={tileClass}>
-                            <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
-                                <MosaicTile data={tiles[0]} theme={theme} />
-                            </div>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-large">
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[0]} theme={theme} />
+                                </div>
                                 <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <MosaicTile data={tiles[1]} theme={theme} />
                                 </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
                                 <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <MosaicTile data={tiles[2]} theme={theme} />
                                 </div>
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-height-medium">
+                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <MosaicTile data={tiles[3]} theme={theme} />
                                 </div>
                             </div>
@@ -71,24 +73,20 @@ class MosaicContainer extends React.Component {
                     // Default layout for 5 tiles "mosaic-3"
                     return (
                         <div className={tileClass}>
-                            <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                            <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                 <MosaicTile data={tiles[0]} theme={theme} />
                             </div>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-whole f-height-medium">
-                                    <MosaicTile data={tiles[1]} theme={theme} />
-                                </div>
+                            <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <MosaicTile data={tiles[1]} theme={theme} />
+                            </div>
+                            <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <MosaicTile data={tiles[2]} theme={theme} />
                             </div>
                             <div data-f-mosaic="f-vp1-whole f-vp4-half">
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-whole f-height-medium">
-                                    <MosaicTile data={tiles[2]} theme={theme} />
-                                </div>
-                            </div>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <MosaicTile data={tiles[3]} theme={theme} />
                                 </div>
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                     <MosaicTile data={tiles[4]} theme={theme} />
                                 </div>
                             </div>
@@ -99,64 +97,60 @@ class MosaicContainer extends React.Component {
                     // Default layout for 6 tiles "mosaic-4"
                     return (
                         <div className={tileClass}>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                     <MosaicTile data={tiles[0]} theme={theme} />
                                 </div>
-                                <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                    <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                         <MosaicTile data={tiles[1]} theme={theme} />
                                     </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                         <MosaicTile data={tiles[2]} theme={theme} />
                                     </div>
                                 </div>
-                                <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                    <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                         <MosaicTile data={tiles[3]} theme={theme} />
                                     </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
                                         <MosaicTile data={tiles[4]} theme={theme} />
                                     </div>
                                 </div>
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
                                     <MosaicTile data={tiles[5]} theme={theme} />
                                 </div>
                             </div>
-                        </div>
                     )
                 }
                 case 7: {
                     // Default layout for 7 tiles "mosaic-3"
                     return (
                         <div className={tileClass}>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <MosaicTile data={tiles[0]} theme={theme} />
+                            <div className={theme} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
+                                <MosaicTile data={tiles[0]} theme={theme} />
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[1]} theme={theme} />
                                 </div>
-                                <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[1]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[2]} theme={theme} />
-                                    </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[2]} theme={theme} />
                                 </div>
-                                <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[3]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[4]} theme={theme} />
-                                    </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[3]} theme={theme} />
                                 </div>
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[5]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[6]} theme={theme} />
-                                    </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[4]} theme={theme} />
+                                </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[5]} theme={theme} />
+                                </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[6]} theme={theme} />
                                 </div>
                             </div>
                         </div>
@@ -166,38 +160,36 @@ class MosaicContainer extends React.Component {
                     // Default layout for 8 tiles "mosaic-5"
                     return (
                         <div className={tileClass}>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-whole f-height-large">
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[0]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[1]} theme={theme} />
-                                    </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[0]} theme={theme} />
                                 </div>
-                                <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[2]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[3]} theme={theme} />
-                                    </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[1]} theme={theme} />
                                 </div>
-                                <div data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[4]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[5]} theme={theme} />
-                                    </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[2]} theme={theme} />
                                 </div>
-                                <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp4-half f-height-medium">
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[6]} theme={theme} />
-                                    </div>
-                                    <div className={tileClass} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
-                                        <MosaicTile data={tiles[7]} theme={theme} />
-                                    </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[3]} theme={theme} />
+                                </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[4]} theme={theme} />
+                                </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[5]} theme={theme} />
+                                </div>
+                            </div>
+                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[6]} theme={theme} />
+                                </div>
+                                <div className={theme} data-f-mosaic="f-vp1-whole f-vp2-half f-height-medium">
+                                    <MosaicTile data={tiles[7]} theme={theme} />
                                 </div>
                             </div>
                         </div>

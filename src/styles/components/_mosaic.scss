@@ -5,16 +5,6 @@
 
 $tab-height: 45px;
 
-.c-mosaic {
-  width: 100vw;
-}
-
-.m-mosaic {
-  min-height: 0;
-  height: auto;
-  padding: 0;
-}
-
 .c-mosaic-placement {
   padding-bottom: 0;
 
@@ -48,7 +38,6 @@ $tab-height: 45px;
 
 .c-mosaic-placement > div > div {
   position: relative;
-  height: auto;
 
   picture img {
     left: calc(50%);
@@ -101,15 +90,8 @@ $tab-height: 45px;
   }
 }
 
-
 a.mosaic-link:after {
   display: none;
-}
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  .c-mosaic [data-f-mosaic~="f-vp3-quarter"] {
-    width: 25%;
-  }
 }
 
 .c-mosaic-placement > div.c-image-overlay {
@@ -151,39 +133,6 @@ a.mosaic-link:after {
   opacity: .2;
 }
 
-
-.c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
-  height: auto;
-}
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  .c-mosaic [data-f-mosaic~="f-height-medium"] {
-    height: calc(50vh - #{$tab-height / 2});
-  }
-
-  .c-mosaic [data-f-mosaic~="f-height-large"] {
-    height: calc(100vh - #{$tab-height});
-  }
-
-  .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: calc(25vh - #{$tab-height / 4});
-  }
-}
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  .fullscreen-mosaic {
-    flex-direction: row;
-    max-height: calc(100vh - 45px);
-  }
-}
-
-@media only screen and (max-height: 480px) and (orientation: landscape) {
-  .fullscreen-mosaic {
-    height: auto;
-  }
-}
-
-
 .c-mosaic-placement > picture img {
   display: none;
 }
@@ -220,14 +169,20 @@ a.mosaic-link:after {
   }
 }
 
-@media only screen and (orientation: portrait) {
-  .c-mosaic [data-f-mosaic~="f-height-large"], .c-mosaic [data-f-mosaic~="f-height-medium"], .c-mosaic [data-f-mosaic~="f-height-small"] {
-    height: auto !important;
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .c-mosaic [data-f-mosaic~="f-height-medium"] {
+    height: calc(50vh - #{$tab-height / 2});
   }
-}
 
-@media only screen and (max-height: 640px) {
-  .fullscreen-mosaic > .c-mosaic [data-f-mosaic~="f-height-large"] {
-    height: auto !important;
+  .c-mosaic [data-f-mosaic~="f-height-large"] {
+    height: calc(100vh - #{$tab-height});
+  }
+
+  .c-mosaic [data-f-mosaic~="f-height-small"] {
+    height: calc(25vh - #{$tab-height / 4});
+  }
+
+  .fullscreen-mosaic[data-f-mosaic~="f-height-medium"] {
+    height: calc(100vh - #{$tab-height / 2});
   }
 }

@@ -10,7 +10,7 @@
   },
   "sections": [
     {
-      "ordinal": 100,
+      "ordinal": 200,
       "groupIdentifier": "partner",
       "sectionIdentifier": "2TileDefault",
       "anchorLink": true,
@@ -100,7 +100,7 @@
       }
     },
     {
-      "ordinal": 200,
+      "ordinal": 300,
       "groupIdentifier": "partner",
       "sectionIdentifier": "3TileDefault",
       "anchorLink": true,
@@ -233,7 +233,7 @@
       }
     },
     {
-      "ordinal": 200,
+      "ordinal": 300,
       "groupIdentifier": "partner",
       "sectionIdentifier": "4TileDefault",
       "anchorLink": true,
@@ -407,11 +407,11 @@
       }
     },
     {
-      "ordinal": 400,
+      "ordinal": 500,
       "groupIdentifier": "partner",
       "sectionIdentifier": "5TileDefault",
       "anchorLink": true,
-      "anchorTitle": "5 Tile Defatult",
+      "anchorTitle": "5 Tile Default",
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
@@ -620,7 +620,7 @@
       }
     },
     {
-      "ordinal": 400,
+      "ordinal": 600,
       "groupIdentifier": "partner",
       "sectionIdentifier": "6TileDefault",
       "anchorLink": true,
@@ -873,7 +873,7 @@
       }
     },
     {
-      "ordinal": 300,
+      "ordinal": 700,
       "groupIdentifier": "partner",
       "sectionIdentifier": "7TileDefault",
       "anchorLink": true,
@@ -1166,7 +1166,7 @@
       }
     },
     {
-      "ordinal": 300,
+      "ordinal": 800,
       "groupIdentifier": "partner",
       "sectionIdentifier": "8TileDefault",
       "anchorLink": true,
@@ -1499,7 +1499,7 @@
       }
     },
     {
-      "ordinal": 300,
+      "ordinal": 1000,
       "groupIdentifier": "partner",
       "sectionIdentifier": "Too many tiles",
       "anchorLink": true,
@@ -1952,7 +1952,7 @@
       }
     },
     {
-      "ordinal": 300,
+      "ordinal": 1,
       "groupIdentifier": "partner",
       "sectionIdentifier": "Too few tiles",
       "anchorLink": true,
