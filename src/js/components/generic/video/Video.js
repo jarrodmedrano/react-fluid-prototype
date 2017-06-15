@@ -61,7 +61,7 @@ class Video extends React.Component {
             let {src} = this.props.data;
 
             return (
-                <div ref="videoWrapper" style={{width: this.state.elementWidth, overflow: 'hidden'}}>
+                <div ref="videoWrapper" style={{width: this.state.elementWidth -2}}>
                     <video className="f-video-player" preload="metadata" loop
                            aria-labelledby="" aria-describedby=""
                            ref="vidRef" muted={this.state.mute} style={{width: this.state.elementWidth}}>

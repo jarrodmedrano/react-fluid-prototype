@@ -183,6 +183,11 @@
         font-weight: $font-weight-bold;
     }
 
+    p {
+        @include apply-type(t5, false, true);
+        font-weight: $font-weight-semilight;
+    }
+
     .c-subheading {
         @include apply-type(t5, false, true);
         font-weight: $font-weight-semilight;
@@ -272,14 +277,14 @@
 
         &.f-width-small {
             .c-heading,
-            .c-subheading {
+            .c-subheading, p {
                 @include tile-padding(25%, $small: true);
             }
         }
 
         &.f-width-large {
             .c-heading,
-            .c-subheading {
+            .c-subheading, p {
                 @include tile-padding(25%, $small: false);
 
                 @media only screen and (max-width: $vp2-max) {
@@ -291,13 +296,13 @@
 
     &.f-height-medium {
         .c-heading,
-        .c-subheading {
+        .c-subheading, p {
             display: none; // Hide title and subtitle
         }
 
         &.f-width-large {
             .c-heading,
-            .c-subheading {
+            .c-subheading, p {
                 @include tile-padding(25%, $small: true);
             }
         }

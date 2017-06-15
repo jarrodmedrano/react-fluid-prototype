@@ -4839,6 +4839,81 @@
           }
         ]
       }
+    },
+    {
+      "ordinal": "600",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "Accessories",
+      "anchorLink": true,
+      "anchorTitle": "Accessories",
+      "layout": {
+        "type": "mosaic",
+        "theme": "theme-light",
+        "tiles": [
+          {
+            "headingBlock": {
+              "heading": "Make it your own.",
+              "paragraph": "Personalize surface Pro and express yourself with next-generation creative tools in a choice of rich colors."
+            }
+          },
+          {
+            "headingBlock": {
+              "button": {
+                "link": "https://www.microsoft.com/en-us/store/b/surfaceaccessories?icid=Cat_Surface-NavLink6-SurfacePro-Acc-052317-en-us"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Mavis_Four_850x425.png"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "button": {
+                "link": "https://www.microsoft.com/en-us/store/d/surface/920K9Q46V4BZ/?icid=Cat_SurfaceAccessory-Hero1-TypeCover-052317-en-us"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Cobalt_850x425.png"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "button": {
+                "link": "https://www.microsoft.com/en-us/surface/accessories/surface-pen?icid=MSCOMSearchTopResultSurfacePen"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/front-bl_hero_425x425.png"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "button": {
+                "link": "https://www.microsoft.com/en-us/store/d/Microsoft-Surface-Dock/8QRH2NPZ0S0P"
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/mosaic-ports.jpg"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   ]
 }
