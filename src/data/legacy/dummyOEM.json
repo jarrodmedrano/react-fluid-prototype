@@ -48,8 +48,8 @@
         "link": "http://www.acer.com"
       },
       "media": {
-        "blockType": "img",
-        "src": "img/oem_assets/P1-content.png"
+        "blockType": "video",
+        "src": "windows_assets/RDX_Manage_laptop_v2.mp4"
       },
       "groupIdentifier": "oem",
       "sectionIdentifier": "OEM section 2",

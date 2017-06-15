@@ -52,7 +52,7 @@ class LegacyFeature extends React.Component {
                         {media.blockType && media.blockType === 'video' ?
                             <div id="videoPlayer1" className="c-video">
                                     <Video active={this.props.active} data={media} myId={this.props.myId}/>
-                                <div className="f-video-cc-overlay" aria-hidden="true"></div>
+                                <div className="f-video-cc-overlay" aria-hidden="true" />
                             </div>
                             : null}
                         <div style={rtl ? {textAlign: 'right'} : null}>

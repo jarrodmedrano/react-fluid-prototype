@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Button from '../../../../generic/button/Button';
+import Video from '../../../../generic/video/Video';
 import Text from '../../../../generic/text/Text';
 import propsAreValid, {transform} from '../../../../../lib/util';
 import _ from 'lodash';
@@ -50,10 +51,20 @@ class LegacyKSP extends React.Component {
                 <div className="m-feature legacy-feature" data-grid="col-12"
                      style={templateStyle ? templateStyle : null}>
                     <div className={templateClass}>
-                        {media ? <picture className="feature-image">
-                                <source srcSet={media.src}/>
-                                <img srcSet={media.src} src={media.src} draggable="false"/>
-                            </picture> : null }
+                        {media.blockType && media.blockType === 'gif' ? <picture className="feature-image">
+                            <source srcSet={media.src}/>
+                            <img srcSet={media.src} src={media.src} draggable="false"/>
+                        </picture> : null }
+                        {media.blockType && media.blockType === 'img' ? <picture className="feature-image">
+                            <source srcSet={media.src}/>
+                            <img srcSet={media.src} src={media.src} draggable="false"/>
+                        </picture> : null }
+                        {media.blockType && media.blockType === 'video' ?
+                            <div id="videoPlayer1" className="c-video">
+                                <Video active={this.props.active} data={media} myId={this.props.myId}/>
+                                <div className="f-video-cc-overlay" aria-hidden="true" />
+                            </div>
+                            : null}
                         <div>
                             <div>
                                 {logo ? <img className="logo c-image" alt={header} src={logo}/> : null }

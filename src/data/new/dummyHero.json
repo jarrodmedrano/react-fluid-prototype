@@ -10,6 +10,32 @@
   },
   "sections": [
     {
+      "layout": "ksp_reversed",
+      "logo": "img/oem_assets/P1-logo.png",
+      "textSide": "left",
+      "header": "Ultimate flexibility",
+      "icon1": "img/oem_assets/P1-icon1.png",
+      "caption1": "Stylish design with a twist",
+      "text1": "With a wobble-free touch experience, thanks to Acer’s unique 360-degree, dual-torque hinge design – it explores in four different modes.",
+      "icon2": "img/oem_assets/P1-icon2.png",
+      "text2": "The need for speed",
+      "caption2": "Full USB 3.1 Type-C supports both power and ultra-fast data transfer in just one port at up to twice the speed of USB 3.0",
+      "legalText": "Specifications vary depending on model.",
+      "button": {
+        "blockType": "buttonExternal",
+        "text": "More info",
+        "link": "http://www.acer.com"
+      },
+      "media": {
+        "blockType": "video",
+        "src": "img/windows_assets/RDX_Manage_laptop_v2.mp4"
+      },
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "OEM section 2",
+      "ordinal": "200",
+      "style": "font-family: 'Segoe UI';"
+    },
+    {
       "ordinal": 100,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section1",
