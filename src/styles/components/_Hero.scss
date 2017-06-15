@@ -168,6 +168,11 @@ video {
 
     &.hero-media {
       flex: 1 50vh;
+
+      div {
+        height: 100%;
+        margin: 0 auto;
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import propsAreValid from '../../../lib/util';
+import { findDOMNode } from 'react-dom'
 
 class Video extends React.Component {
 
@@ -23,10 +24,20 @@ class Video extends React.Component {
 
     componentDidMount() {
         this._resetVideo();
+        this._getRect(this.refs.vidRef);
     }
 
     componentWillUnmount() {
         this._resetVideo();
+    }
+
+    _getRect(element) {
+        if(element && !this.state.elementWidth) {
+            setTimeout(() => {
+                let rect = findDOMNode(element).getBoundingClientRect();
+                this.setState({ elementWidth: Math.round(rect.width) });
+            }, 1000);
+        }
     }
 
     _handleVideo(play) {
@@ -50,12 +61,13 @@ class Video extends React.Component {
             let {src} = this.props.data;
 
             return (
-                //TODO: fix aria labels
-                <video className="f-video-player" preload="metadata" loop
-                       aria-labelledby="" aria-describedby=""
-                       ref="vidRef" muted={this.state.mute} >
-                    <source src={src ? src : null} type="video/mp4"/>
-                </video>
+                <div ref="videoWrapper" style={{width: this.state.elementWidth}}>
+                    <video className="f-video-player" preload="metadata" loop
+                           aria-labelledby="" aria-describedby=""
+                           ref="vidRef" muted={this.state.mute} style={{width: this.state.elementWidth}}>
+                        <source src={src ? src : null} type="video/mp4"/>
+                    </video>
+                </div>
             )
         }
         return null;
