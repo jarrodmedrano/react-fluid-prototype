@@ -3,6 +3,7 @@ import propsAreValid from '../../../lib/util';
 import dataPropTypes, {buttonPropTypes} from '../../../../data/dataProps';
 import classNames from 'classnames';
 import ButtonLink from '../link/ButtonLink';
+import Text from '../text/Text';
 
 class Button extends React.Component {
 
@@ -25,8 +26,8 @@ class Button extends React.Component {
                     return (
                         <div>
                             <a className="c-call-to-action c-glyph" aria-label={ariaLabel}
-                               style={this.props.style || btnStyle} children={text || buttonText}
-                               onClick={(e) => this._stopPropagation(e)}/>
+                               style={this.props.style || btnStyle}
+                               onClick={(e) => this._stopPropagation(e)}><Text data={text || buttonText} /></a>
                         </div>
                     )
                 }
