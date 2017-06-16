@@ -7,6 +7,13 @@ import propsAreValid from '../../../../../lib/util';
 import dataPropTypes, {tilePropTypes} from '../../../../../../data/dataProps';
 
 class MosaicTile extends React.Component {
+    shouldComponentUpdate(nextProps) {
+        if(this.props.data !== nextProps.data) {
+            return true;
+        }
+        return false;
+    }
+
     render() {
         if(propsAreValid(this.props.data, this)) {
             const {headingBlock, pictureBlock, hoverEffectColor, viewMask, theme, alignX, alignY, textColor, backgroundColor} = this.props.data;
@@ -34,7 +41,7 @@ class MosaicTile extends React.Component {
                             <section className={tileClass} style={tileStyle}>
                                 {hoverEffectColor ? <div className="c-image-overlay" aria-hidden="true" style={{backgroundColor: hoverEffectColor}} /> : null }
                                 {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
-                                <Heading data={headingAlign} />
+                                <Heading data={headingAlign} nobutton />
                             </section>
                         </ButtonLink>
                     )

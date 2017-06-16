@@ -2,7 +2,6 @@ import React from 'react';
 import sanitizeHtml from 'sanitize-html';
 import cssParser from 'css';
 import Scroll  from 'react-scroll';
-const scroller = Scroll.scroller;
 
 export function externalNavigate(target) {
     if(window.RDX && target.length > 0 && target !== null) {
@@ -11,7 +10,6 @@ export function externalNavigate(target) {
         window.open(target);
     } return null
 }
-
 
 export function internalNavigate(target, router) {
     if(target.length > 0 && target !== null && router) {
@@ -68,7 +66,7 @@ export const requestFrameThrottle = callback => {
     };
 
     const throttled = (...args) => {
-        if (requestId == null) {
+        if (requestId === null) {
             if(typeof requestAnimationFrame === 'undefined') return;
             requestId = requestAnimationFrame(later(args))
         }

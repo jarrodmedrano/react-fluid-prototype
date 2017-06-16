@@ -6,7 +6,6 @@ import containerPropTypes from '../../../../../../data/dataProps';
 import dataPropTypes from '../../../../../../data/dataProps';
 
 class MosaicContainer extends React.Component {
-
     shouldComponentUpdate(nextProps) {
         if(this.props.data !== nextProps.data) {
             return true;

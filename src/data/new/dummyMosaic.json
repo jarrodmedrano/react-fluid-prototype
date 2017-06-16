@@ -62,7 +62,7 @@
               "subheading": "-- mosaic subtitle 2 --",
               "button": {
                 "layout": "link",
-                "link": "http://www.microsoft.com",
+                "link": "media://video/url={videoslibrary}\\4k.mp4",
                 "text": "Call to action",
                 "textColor": "white"
               }

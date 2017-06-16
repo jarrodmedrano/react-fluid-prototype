@@ -5,6 +5,13 @@ import dataPropTypes, {mosaicPropTypes} from '../../../../../../data/dataProps';
 // import './test.scss!';
 
 class Mosaic extends React.Component {
+    shouldComponentUpdate(nextProps) {
+        if(this.props.data !== nextProps.data) {
+            return true;
+        }
+        return false;
+    }
+
     render() {
         if(propsAreValid(this.props.data, this)) {
             return (

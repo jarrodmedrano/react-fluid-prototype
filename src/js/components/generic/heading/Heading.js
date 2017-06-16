@@ -27,7 +27,7 @@ class Heading extends React.Component {
                     {renderSubHeading(subheading)}
                     {renderPText(paragraph)}
                     {picturePlacement === 'third' && !iHero ? renderMedia(this.props) : null}
-                    {button ? <Button data={button} /> : null }
+                    {!this.props.nobutton ? <Button data={button} /> : <Button data={button} nobutton /> }
                     {legalText ? renderLegalText(legalText) : null }
                 </div>
                 {alignY === 'top' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
