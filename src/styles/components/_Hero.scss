@@ -9,6 +9,10 @@ $tab-height: 45px;
   background: #000;
 }
 
+.m-hero-item.theme-light {
+  background-color: #FFF;
+}
+
 .c-hero.f-fullscreen {
   height: calc(100vh - #{$tab-height});
 
@@ -24,11 +28,11 @@ $tab-height: 45px;
     }
   }
 }
-
-video {
-  max-width: 100%;
-  height: auto;
-}
+//
+//video {
+//  max-width: 100%;
+//  height: auto;
+//}
 
 .m-card-item {
   div > .c-call-to-action {
@@ -74,144 +78,6 @@ video {
   }
 }
 
-.m-immersive-hero-item {
-  &.theme-light {
-    background: #fff;
-  }
-
-  > picture {
-    position: absolute;
-    top: 0;
-  }
-}
-
-
-.m-immersive-hero-item > div > div {
-  z-index: 1;
-}
-
-
-
-.scene-vertical.immersiveHero {
-  height: calc(100vh - 45px);
-
-  > div {
-    height: calc(100vh - 45px);
-  }
-
-  @media (orientation: portrait) {
-    height: auto;
-
-    > div {
-      height: auto;
-    }
-  }
-}
-
-.m-immersive-hero-item.f-align-top > div {
-  display: flex;
-  width: 100vw;
-  left: 0;
-  transform: none;
-  max-width: 100%;
-}
-
-.m-immersive-hero-item.f-align-top > div > div, .m-immersive-hero-item.f-align-bottom > div > div {
-  flex-direction: column;
-  top: 0;
-  width: 100vw;
-  transform: none;
-  left: 0;
-  max-width: 100%;
-  padding: 0 0;
-  overflow: hidden;
-
-  img.c-image, picture.c-image img {
-    display: inline;
-    max-height: 100%;
-  }
-
-  video {
-    max-height: 100%;
-  }
-}
-
-
-
-
-
-.m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 45px);
-  transform: none;
-  left: 0;
-
-  @media (orientation: portrait) {
-      height: auto;
-  }
-}
-
-.m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
-  position: relative;
-  transform: none;
-  left: 0;
-  top: 0;
-  box-sizing: content-box;
-  flex: 1;
-
-  @media only screen and (min-width: 768px) {
-    &.content-animate {
-      flex: 1 25vh;
-    }
-
-    &.hero-media {
-      flex: 1 50vh;
-
-      div {
-        height: 100%;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-    }
-  }
-}
-
-.m-immersive-hero-item.f-align-top>div>div {
-  &.content-animate {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-.m-immersive-hero-item.f-align-bottom>div>div {
-  &.content-animate {
-    order: 2;
-  }
-}
-
-.m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
-  position: relative;
-  height: auto;
-  left: 0;
-  transform: none;
-}
-
-.m-immersive-hero-item.f-align-bottom > div {
-  top: 0;
-}
-
-.m-immersive-hero-item.f-align-bottom > div > picture.c-image {
-  flex: 1;
-}
-
-@media only screen and (min-width: 768px) {
-  .m-immersive-hero-item.f-align-bottom > div > picture.c-image, .m-immersive-hero-item.f-align-top > div {
-    top: 0;
-  }
-}
-
 
 @media only screen and (min-width: 540px) {
   .m-image-intro.f-align-bottom > div {
@@ -222,15 +88,7 @@ video {
     top: 189px;
   }
 }
-.m-immersive-hero-item.f-align-bottom > div {
-  bottom: 189px;
-}
 
-.m-immersive-hero-item.f-align-top > div > picture.c-image img, .m-immersive-hero-item.f-align-bottom > div > picture.c-image img {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.m-immersive-hero-item > div > div p {
-  max-width: 100%;
+.m-hero-item video {
+  width: 100%;
 }

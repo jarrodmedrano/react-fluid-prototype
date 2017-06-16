@@ -10,30 +10,58 @@
   },
   "sections": [
     {
-      "layout": "ksp_reversed",
-      "logo": "img/oem_assets/P1-logo.png",
-      "textSide": "left",
-      "header": "Ultimate flexibility",
-      "icon1": "img/oem_assets/P1-icon1.png",
-      "caption1": "Stylish design with a twist",
-      "text1": "With a wobble-free touch experience, thanks to Acer’s unique 360-degree, dual-torque hinge design – it explores in four different modes.",
-      "icon2": "img/oem_assets/P1-icon2.png",
-      "text2": "The need for speed",
-      "caption2": "Full USB 3.1 Type-C supports both power and ultra-fast data transfer in just one port at up to twice the speed of USB 3.0",
-      "legalText": "Specifications vary depending on model.",
-      "button": {
-        "blockType": "buttonExternal",
-        "text": "More info",
-        "link": "http://www.acer.com"
-      },
-      "media": {
-        "blockType": "video",
-        "src": "img/windows_assets/RDX_Manage_laptop_v2.mp4"
-      },
-      "groupIdentifier": "oem",
-      "sectionIdentifier": "OEM section 2",
-      "ordinal": "200",
-      "style": "font-family: 'Segoe UI';"
+      "ordinal": 100,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section1",
+      "anchorLink": true,
+      "anchorTitle": "-- Right Center Dark --",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-dark",
+        "alignX": "right",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "alignX": "left",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/2F2F2F/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/2F2F2F/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/2F2F2F/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/2F2F2F/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/2F2F2F/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
     },
     {
       "ordinal": 100,
@@ -47,6 +75,7 @@
         "alignX": "right",
         "alignY": "center",
         "headingBlock": {
+          "alignX": "left",
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
           "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
@@ -412,6 +441,7 @@
         "alignX": "left",
         "alignY": "top",
         "headingBlock": {
+          "alignX": "left",
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
           "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
@@ -516,7 +546,7 @@
         "alignX": "right",
         "alignY": "center",
         "headingBlock": {
-          "heading": "-- Hero Heading --",
+          "heading": "-- Video BG --",
           "subheading": "-- Subheading --",
           "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
           "legalText": "<sup>1</sup>-- Legal---",
@@ -557,6 +587,34 @@
         },
         "videoBlock": {
           "src": "img/vertical/Hero-pen.mp4"
+        }
+      }
+    },
+    {
+      "ordinal": 100,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "Section1",
+      "anchorLink": true,
+      "anchorTitle": "-- Right Center Light --",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "right",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "alignX": "left",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          }
         }
       }
     }

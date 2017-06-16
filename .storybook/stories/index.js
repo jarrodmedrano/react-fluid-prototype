@@ -227,6 +227,11 @@ storiesOf('Hero', module)
         <Wrapper>
           <Hero data={data.VideoBG}/>
         </Wrapper>
+    ))
+    .add('Right Center Dark', () => (
+        <Wrapper>
+            <Hero data={data.RightCenterLight}/>
+        </Wrapper>
     ));
 
 storiesOf('Legacy', module)

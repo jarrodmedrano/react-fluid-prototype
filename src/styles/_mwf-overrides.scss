@@ -107,11 +107,6 @@ a.mosaic-link:after {
   }
 }
 
-
-
-@import 'ms-mwf/mwf/core/styles/config/environment';
-@import 'ms-mwf/mwf/core/styles/utilities/internationalization';
-
 .legacyFeature-video {
   position: absolute;
   top: 59px;
@@ -215,6 +210,27 @@ a.mosaic-link:after {
     .c-structured-list .f-column .f-row [data-grid=col-10] {
       padding-left: 0;
     }
+  }
+}
+
+.m-feature video, .c-feature video {
+
+  width: 100%;
+  height: auto;
+
+  @media all and (min-width: $vp2) {
+    width: 512px;
+    height: 288px;
+  }
+
+  @media all and (min-width: $vp3) {
+    width: 768px;
+    height: 432px;
+  }
+
+  @media all and (min-width: $vp5) {
+    width: 1024px;
+    height: 576px;
   }
 }
 

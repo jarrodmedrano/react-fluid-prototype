@@ -1311,7 +1311,8 @@ export const CenterBottomDark = dummyHero.sections[5].layout;
 export const LeftCenterDark = dummyHero.sections[6].layout;
 export const LeftTopDark = dummyHero.sections[7].layout;
 export const LeftBottomDark = dummyHero.sections[8].layout;
-export const VideoBG = dummyHero.sections[9].layout;
+export const VideoBG = dummyHero.sections[10].layout;
+export const RightCenterLight = dummyHero.sections[11].layout;
 
 import dummyIHero from '../../src/data/new/dummyIHero.json';
 

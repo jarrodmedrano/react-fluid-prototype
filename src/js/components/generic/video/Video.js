@@ -24,20 +24,10 @@ class Video extends React.Component {
 
     componentDidMount() {
         this._resetVideo();
-        this._getRect(this.refs.vidRef);
     }
 
     componentWillUnmount() {
         this._resetVideo();
-    }
-
-    _getRect(element) {
-        if(element && !this.state.elementWidth) {
-            setTimeout(() => {
-                let rect = findDOMNode(element).getBoundingClientRect();
-                this.setState({ elementWidth: Math.round(rect.width) });
-            }, 1000);
-        }
     }
 
     _handleVideo(play) {
@@ -61,13 +51,11 @@ class Video extends React.Component {
             let {src} = this.props.data;
 
             return (
-                <div ref="videoWrapper" style={{width: this.state.elementWidth -2}}>
-                    <video className="f-video-player" preload="metadata" loop
-                           aria-labelledby="" aria-describedby=""
-                           ref="vidRef" muted={this.state.mute} style={{width: this.state.elementWidth}}>
-                        <source src={src ? src : null} type="video/mp4"/>
-                    </video>
-                </div>
+                <video className="f-video-player" preload="metadata" loop
+                       aria-labelledby="" aria-describedby=""
+                       ref="vidRef" muted={this.state.mute} style={{width: this.state.elementWidth}}>
+                    <source src={src ? src : null} type="video/mp4"/>
+                </video>
             )
         }
         return null;
