@@ -73,7 +73,7 @@
         "type": "hero",
         "theme": "theme-dark",
         "alignX": "right",
-        "alignY": "center",
+        "alignY": "top",
         "headingBlock": {
           "alignX": "left",
           "heading": "-- Hero Heading --",
@@ -127,7 +127,7 @@
         "type": "hero",
         "theme": "theme-dark",
         "alignX": "right",
-        "alignY": "top",
+        "alignY": "bottom",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -591,7 +591,7 @@
       }
     },
     {
-      "ordinal": 100,
+      "ordinal": 1100,
       "groupIdentifier": "hero",
       "sectionIdentifier": "Section1",
       "anchorLink": true,
@@ -614,6 +614,120 @@
             "ariaLabel": "ariaLabel",
             "textColor": "white",
             "backgroundColor": "#0078D7"
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 1200,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "pictureHeading",
+      "anchorLink": true,
+      "anchorTitle": "-- Center Light Picture Heading--",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "center",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "alignX": "center",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/64x64/2F2F2F/171717",
+                "minWidth": "1200"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 1300,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "pictureHeading",
+      "anchorLink": true,
+      "anchorTitle": "-- Center Light Picture Heading Left--",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "left",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "alignX": "left",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/64x64/2F2F2F/171717",
+                "minWidth": "1200"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 1400,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "pictureHeading",
+      "anchorLink": true,
+      "anchorTitle": "-- Center Light Picture Heading Left--",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "right",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "alignX": "right",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/64x64/2F2F2F/171717",
+                "minWidth": "1200"
+              }
+            ]
           }
         }
       }

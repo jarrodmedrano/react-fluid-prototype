@@ -228,11 +228,27 @@ storiesOf('Hero', module)
           <Hero data={data.VideoBG}/>
         </Wrapper>
     ))
-    .add('Right Center Dark', () => (
+    .add('Right Center Light', () => (
         <Wrapper>
             <Hero data={data.RightCenterLight}/>
         </Wrapper>
+    ))
+    .add('Heading Picture', () => (
+        <Wrapper>
+            <Hero data={data.PictureHeading}/>
+        </Wrapper>
+    ))
+    .add('Heading Picture Left', () => (
+    <Wrapper>
+        <Hero data={data.PictureHeadingLeft}/>
+    </Wrapper>
+    ))
+    .add('Heading Picture Right', () => (
+        <Wrapper>
+            <Hero data={data.PictureHeadingRight}/>
+        </Wrapper>
     ));
+
 
 storiesOf('Legacy', module)
     .add('dataFeature', () => (

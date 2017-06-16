@@ -92,3 +92,28 @@ $tab-height: 45px;
 .m-hero-item video {
   width: 100%;
 }
+
+.m-hero-item > div > div, .c-hero > div > div {
+  img.c-image, picture.c-image img {
+    margin: 0 auto;
+  }
+
+  &.x-type-center {
+    img.c-image, picture.c-image img {
+      margin: 0 auto;
+    }
+  }
+
+  &.x-type-left {
+    img.c-image, picture.c-image img {
+      margin: 0;
+    }
+  }
+
+  &.x-type-right {
+    img.c-image, picture.c-image img {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

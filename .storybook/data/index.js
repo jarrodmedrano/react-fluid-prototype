@@ -1305,14 +1305,17 @@ import dummyHero from '../../src/data/new/dummyHero.json';
 export const RightCenterDark = dummyHero.sections[0].layout;
 export const RightTopDark = dummyHero.sections[1].layout;
 export const RightBottomDark = dummyHero.sections[2].layout;
-export const CenterCenterDark = dummyHero.sections[3].layout;
-export const CenterTopDark = dummyHero.sections[4].layout;
-export const CenterBottomDark = dummyHero.sections[5].layout;
-export const LeftCenterDark = dummyHero.sections[6].layout;
-export const LeftTopDark = dummyHero.sections[7].layout;
-export const LeftBottomDark = dummyHero.sections[8].layout;
+export const CenterCenterDark = dummyHero.sections[4].layout;
+export const CenterTopDark = dummyHero.sections[5].layout;
+export const CenterBottomDark = dummyHero.sections[6].layout;
+export const LeftCenterDark = dummyHero.sections[7].layout;
+export const LeftTopDark = dummyHero.sections[8].layout;
+export const LeftBottomDark = dummyHero.sections[9].layout;
 export const VideoBG = dummyHero.sections[10].layout;
 export const RightCenterLight = dummyHero.sections[11].layout;
+export const PictureHeading = dummyHero.sections[12].layout;
+export const PictureHeadingLeft = dummyHero.sections[13].layout;
+export const PictureHeadingRight  = dummyHero.sections[14].layout;
 
 import dummyIHero from '../../src/data/new/dummyIHero.json';
 
