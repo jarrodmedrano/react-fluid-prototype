@@ -66,7 +66,7 @@ export const requestFrameThrottle = callback => {
     };
 
     const throttled = (...args) => {
-        if (requestId === null) {
+        if (requestId == null) {
             if(typeof requestAnimationFrame === 'undefined') return;
             requestId = requestAnimationFrame(later(args))
         }
