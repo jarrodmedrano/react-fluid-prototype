@@ -53,7 +53,7 @@ class Video extends React.Component {
             return (
                 <video className="f-video-player" preload="metadata" loop
                        aria-labelledby="" aria-describedby=""
-                       ref="vidRef" muted={this.state.mute} style={{width: this.state.elementWidth}}>
+                       ref="vidRef" muted={this.state.mute}>
                     <source src={src ? src : null} type="video/mp4"/>
                 </video>
             )

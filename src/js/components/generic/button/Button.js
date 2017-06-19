@@ -1,7 +1,6 @@
 import React from 'react'
 import propsAreValid from '../../../lib/util';
 import dataPropTypes, {buttonPropTypes} from '../../../../data/dataProps';
-import classNames from 'classnames';
 import ButtonLink from '../link/ButtonLink';
 import Text from '../text/Text';
 
