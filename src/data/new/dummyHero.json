@@ -731,6 +731,45 @@
           }
         }
       }
+    },
+    {
+      "ordinal": 1400,
+      "groupIdentifier": "hero",
+      "sectionIdentifier": "pictureHeadingRTL",
+      "anchorLink": true,
+      "anchorTitle": "-- pictureHeadingRTL --",
+      "readingDirection": "rtl",
+      "layout": {
+        "type": "hero",
+        "theme": "theme-light",
+        "alignX": "right",
+        "alignY": "center",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+          "legalText": "<sup>1</sup>-- Legal---",
+          "alignX": "right",
+          "button": {
+            "layout": "button",
+            "link": "#/windows",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/64x64/2F2F2F/171717",
+                "minWidth": "1200"
+              }
+            ]
+          }
+        }
+      }
     }
   ]
 }

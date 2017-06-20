@@ -1316,6 +1316,7 @@ export const RightCenterLight = dummyHero.sections[11].layout;
 export const PictureHeading = dummyHero.sections[12].layout;
 export const PictureHeadingLeft = dummyHero.sections[13].layout;
 export const PictureHeadingRight  = dummyHero.sections[14].layout;
+export const PictureHeadingRTL = dummyHero.sections[15].layout;
 
 import dummyIHero from '../../src/data/new/dummyIHero.json';
 
@@ -1536,3 +1537,9 @@ export const PositionTilesTop = dummyMosaic.sections[13].layout;
 export const PositionTilesBottom = dummyMosaic.sections[14].layout;
 
 export const TileThemes = dummyMosaic.sections[15].layout;
+
+export const RTLMosaic = dummyMosaic.sections[16].layout;
+
+export const RTLMosaicRight = dummyMosaic.sections[17].layout;
+
+export const RTLMosaicLeft = dummyMosaic.sections[18].layout;

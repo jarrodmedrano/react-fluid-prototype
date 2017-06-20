@@ -11,6 +11,13 @@ class Button extends React.Component {
         return false;
     }
 
+    shouldComponentUpdate(nextProps) {
+        if(this.props.data !== nextProps.data) {
+            return true;
+        }
+        return false;
+    }
+
     render() {
         if (propsAreValid(this.props.data, this)) {
             let {text, link, toPage, ariaLabel, textColor, backgroundColor, buttonText, alignY} = this.props.data;

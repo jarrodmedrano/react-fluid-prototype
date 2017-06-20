@@ -141,3 +141,11 @@
         }
     }
 }
+
+[dir="rtl"] {
+    .c-mosaic {
+        [data-f-mosaic*="f-vp"] {
+            float: right;
+        }
+    }
+}

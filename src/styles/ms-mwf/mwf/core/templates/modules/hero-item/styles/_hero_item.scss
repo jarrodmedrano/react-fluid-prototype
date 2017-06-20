@@ -768,3 +768,22 @@ $hero-content-max: 2048px;
         clear: both;
     }
 }
+
+[dir="rtl"] {
+    .m-hero-item,
+    .c-hero {
+        &.f-x-right {
+            > div > div {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        &.f-x-left {
+            > div > div {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}

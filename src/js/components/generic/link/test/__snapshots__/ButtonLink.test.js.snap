@@ -43,21 +43,6 @@ exports[`Button Link functions Should have internal state false when linking ext
 />
 `;
 
-exports[`Button Link functions Should have internal state false when linking externally 2`] = `
-<a
-  blockType="buttonExternal"
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": "",
-    }
-  }
-  draggable="false"
-  href="/oem"
-  onClick={[Function]}
-  to="/oem"
-/>
-`;
-
 exports[`Button Link functions Should have internal state true when linking internally /oem 1`] = `
 <a
   dangerouslySetInnerHTML={

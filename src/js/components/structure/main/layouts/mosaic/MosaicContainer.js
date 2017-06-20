@@ -47,15 +47,15 @@ class MosaicContainer extends React.Component {
                 case 4: {
                     return (
                         <div className={tileClass}>
+                            {renderTile(tiles[0], vp1Wholevp4HalfLarge)}
                             <div data-f-mosaic="f-vp1-whole f-vp4-half">
-                                {renderTile(tiles[0], vp1Wholevp4HalfLarge)}
-                                {renderTile(tiles[1], vp1Wholevp4HalfLarge)}
-                            </div>
-                            <div data-f-mosaic="f-vp1-whole f-vp4-half">
-                                {renderTile(tiles[2], vp1Wholevp4HalfLarge)}
-                                {renderTile(tiles[3], vp1Wholevp4HalfLarge)}
+                                {renderTile(tiles[1], vp1Wholevp2HalfMedium)}
+                                {renderTile(tiles[2], vp1Wholevp2HalfMedium)}
+                                {renderTile(tiles[3], vp1Wholevp2WholeMedium)}
                             </div>
                         </div>
+
+
                     );
                 }
                 case 5: {

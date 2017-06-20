@@ -105,9 +105,7 @@ class Vertical extends React.Component {
         if(el) {
             //Check the rectangle of the dom node and fire a function if it's visible
             let rect = findDOMNode(el).getBoundingClientRect(),
-                rectHeight = rect.bottom,
-                rectHeightBuffer = rectHeight / 2,
-                rectTopBuffer = rect.top + rectHeightBuffer;
+                rectHeight = rect.bottom;
 
             if(rectHeight >= this.state.winTop && rectHeight <= this.state.winHeight) {
                 this._onEnterViewport(vertical);
@@ -132,7 +130,7 @@ class Vertical extends React.Component {
             if(myLayout && _.includes(acceptedLayouts, myLayout)) {
                 return (
                     <section id={sectionIdentifier} className={verticalClass} name={sectionIdentifier}
-                             dir={readingDirection ? readingDirection : null}>
+                             dir={readingDirection}>
                         <WayPoint wayPointRef={el => this.wayPointRef = el} active={this.state.active} debug={this.props.debug} />
                         {myLayout === 'hero' || myLayout === 'immersiveHero' || myLayout === 'fullscreen' || myLayout === 'card' || myLayout === 'facts' ?
                             <Hero data={layout}

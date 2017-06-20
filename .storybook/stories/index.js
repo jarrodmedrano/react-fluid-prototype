@@ -247,6 +247,11 @@ storiesOf('Hero', module)
         <Wrapper>
             <Hero data={data.PictureHeadingRight}/>
         </Wrapper>
+    ))
+    .add('Heading Picture RTL', () => (
+        <Wrapper>
+            <Hero data={data.PictureHeadingRTL}/>
+        </Wrapper>
     ));
 
 
@@ -366,6 +371,30 @@ storiesOf('Mosaic', module)
         <div>
             <Wrapper name="Section2" id="Section2">
                 <Mosaic data={data.TileThemes}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('RTL Mosaic', () => (
+        <div dir="rtl">
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.RTLMosaic} />
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('RTL Mosaic Right', () => (
+        <div dir="rtl">
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.RTLMosaicRight} />
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('RTL Mosaic Left', () => (
+        <div dir="rtl">
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.RTLMosaicLeft} />
             </Wrapper>
             <StickyFooter data={data.oemGroup}/>
         </div>

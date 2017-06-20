@@ -2,6 +2,15 @@
 // Component: Action trigger
 // ==========================================================================
 
+[dir='rtl'] {
+    button.c-action-trigger,
+    a.c-action-trigger {
+        &.c-glyph {
+
+        }
+    }
+}
+
 button.c-action-trigger,
 a.c-action-trigger {
     @include apply-type(t7);

@@ -186,3 +186,35 @@ a.mosaic-link:after {
     height: calc(100vh - #{$tab-height / 2});
   }
 }
+
+[dir="rtl"] {
+  .c-mosaic-placement  {
+    > div > div {
+      &.x-type-left {
+        text-align: right !important;
+
+        picture img {
+          right:  12.5%;
+          transform: none;
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+
+      &.x-type-right {
+        text-align: left !important;
+
+        picture {
+          transform: none;
+
+          img {
+            right: auto;
+            transform: none;
+            left: 12.5%;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}

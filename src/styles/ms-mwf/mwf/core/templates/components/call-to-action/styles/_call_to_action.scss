@@ -188,3 +188,13 @@ a.c-call-to-action {
         @include c-call-to-action-lightweight;
     }
 }
+
+[dir="rtl"] {
+    a.c-call-to-action {
+        &:after {
+            margin-left: 0;
+            margin-right: 4px;
+            content: $glyph-chevron-left;
+        }
+    }
+}
