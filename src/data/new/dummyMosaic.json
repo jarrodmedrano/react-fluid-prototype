@@ -6494,6 +6494,202 @@
           }
         ]
       }
+    },
+    {
+      "ordinal": "600",
+      "groupIdentifier": "oem",
+      "sectionIdentifier": "AccessoriesSurface",
+      "anchorLink": true,
+      "anchorTitle": "AccessoriesSurface",
+      "layout": {
+        "type": "mosaic",
+        "theme": "theme-light",
+        "tiles": [
+          {
+            "headingBlock": {
+              "heading": "Make it your own.",
+              "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "#0078D7",
+                "alignY": "bottom"
+              },
+              "picturePlacement": "third",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/200x200/2F2F2F/171717",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/100x100/2F2F2F/171717",
+                    "minWidth": "1400"
+                  },
+                  {
+                    "src": "http://placehold.it/50x50/2F2F2F/171717",
+                    "minWidth": "1084"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "headingBlock": {
+              "heading": "Make it your own.",
+              "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "#0078D7",
+                "alignY": "bottom"
+              },
+              "picturePlacement": "second",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/200x200/2F2F2F/171717",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/100x100/2F2F2F/171717",
+                    "minWidth": "1400"
+                  },
+                  {
+                    "src": "http://placehold.it/50x50/2F2F2F/171717",
+                    "minWidth": "1084"
+                  }
+                ]
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Mavis_Four_850x425.png"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "heading": "Make it your own.",
+              "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "#0078D7",
+                "alignY": "bottom"
+              },
+              "picturePlacement": "third",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/200x200/2F2F2F/171717",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/100x100/2F2F2F/171717",
+                    "minWidth": "1400"
+                  },
+                  {
+                    "src": "http://placehold.it/50x50/2F2F2F/171717",
+                    "minWidth": "1084"
+                  }
+                ]
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/Cobalt_850x425.png"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "heading": "Make it your own.",
+              "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "#0078D7",
+                "alignY": "bottom"
+              },
+              "picturePlacement": "first",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/200x200/2F2F2F/171717",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/100x100/2F2F2F/171717",
+                    "minWidth": "1400"
+                  },
+                  {
+                    "src": "http://placehold.it/50x50/2F2F2F/171717",
+                    "minWidth": "1084"
+                  }
+                ]
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/front-bl_hero_425x425.png"
+                }
+              ]
+            }
+          },
+          {
+            "headingBlock": {
+              "heading": "Make it your own.",
+              "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.* Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+              "button": {
+                "layout": "link",
+                "link": "http://www.microsoft.com",
+                "text": "Call to action",
+                "textColor": "white",
+                "backgroundColor": "#0078D7",
+                "alignY": "bottom"
+              },
+              "picturePlacement": "second",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/200x200/2F2F2F/171717",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/100x100/2F2F2F/171717",
+                    "minWidth": "1400"
+                  },
+                  {
+                    "src": "http://placehold.it/50x50/2F2F2F/171717",
+                    "minWidth": "1084"
+                  }
+                ]
+              }
+            },
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "img/oem_assets/mosaic-ports.jpg"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   ]
 }

@@ -195,6 +195,25 @@
   margin: 0 auto;
 }
 
-.m-immersive-hero-item > div > div p {
-  max-width: 100%;
+.m-immersive-hero-item > div > div {
+  @media only screen and (max-width: $vp1-max) {
+    .c-price,
+    .c-rating,
+    .c-paragraph {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $vp2-max) {
+    .c-paragraph {
+      @include apply-maxlines(2, p4);
+    }
+  }
+
+  .c-paragraph {
+    @include apply-type-component(p4);
+    @include apply-maxlines(2, p4, true);
+    text-align: center;
+    @include left-right-padding(5%);
+  }
 }

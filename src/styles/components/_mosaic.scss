@@ -12,6 +12,25 @@ $tab-height: 45px;
     position: relative;
   }
 
+  @media only screen and (max-width: $vp1-max) {
+    .c-price,
+    .c-rating,
+    .c-paragraph {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $vp2-max) {
+    .c-paragraph {
+      @include apply-maxlines(2, p4);
+    }
+  }
+
+  .c-paragraph {
+    @include apply-type-component(p4);
+    @include apply-maxlines(2, p4, true);
+  }
+
   &.f-y-top {
     > div > div {
       position: absolute;
@@ -44,8 +63,12 @@ $tab-height: 45px;
     transform: translateX(-50%);
     top: auto;
     position: relative;
-    max-height: 25vh;
+    max-height: 20vh;
     max-width: 50%;
+
+    @media screen and (max-width: $vp3-max) {
+      max-height: 10vh;
+    }
   }
 
   &.x-type-left {

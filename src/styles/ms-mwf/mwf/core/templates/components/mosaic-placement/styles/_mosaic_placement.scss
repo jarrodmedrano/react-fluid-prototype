@@ -277,18 +277,30 @@
 
         &.f-width-small {
             .c-heading,
-            .c-subheading, p {
+            .c-subheading {
                 @include tile-padding(25%, $small: true);
+            }
+
+            p {
+                padding: 12px 12.5% 19px;
             }
         }
 
         &.f-width-large {
             .c-heading,
-            .c-subheading, p {
+            .c-subheading {
                 @include tile-padding(25%, $small: false);
 
                 @media only screen and (max-width: $vp2-max) {
                     padding: 0 12.5% 19px;
+                }
+            }
+
+            p {
+                @include tile-padding(25%, $small: false);
+
+                @media only screen and (max-width: $vp2-max) {
+                    padding: 12px 12.5% 19px;
                 }
             }
         }
