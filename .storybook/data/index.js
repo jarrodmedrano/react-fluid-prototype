@@ -1543,3 +1543,5 @@ export const RTLMosaic = dummyMosaic.sections[16].layout;
 export const RTLMosaicRight = dummyMosaic.sections[17].layout;
 
 export const RTLMosaicLeft = dummyMosaic.sections[18].layout;
+
+export const RTLMosaicCenter = dummyMosaic.sections[19].layout;

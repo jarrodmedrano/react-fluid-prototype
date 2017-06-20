@@ -398,6 +398,14 @@ storiesOf('Mosaic', module)
             </Wrapper>
             <StickyFooter data={data.oemGroup}/>
         </div>
+    ))
+    .add('RTL Mosaic Center', () => (
+        <div dir="rtl">
+            <Wrapper name="Section2" id="Section2">
+                <Mosaic data={data.RTLMosaicCenter} />
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ));
 
 // storiesOf('Tabs', module)

@@ -54,8 +54,6 @@ class MosaicContainer extends React.Component {
                                 {renderTile(tiles[3], vp1Wholevp2WholeMedium)}
                             </div>
                         </div>
-
-
                     );
                 }
                 case 5: {

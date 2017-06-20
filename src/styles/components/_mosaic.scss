@@ -190,6 +190,12 @@ a.mosaic-link:after {
 [dir="rtl"] {
   .c-mosaic-placement  {
     > div > div {
+
+      picture img {
+        transform: translateX(50%);
+        left: calc(-50%);
+      }
+
       &.x-type-left {
         text-align: right !important;
 
