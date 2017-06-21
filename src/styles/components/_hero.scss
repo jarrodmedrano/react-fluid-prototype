@@ -134,12 +134,11 @@ $tab-height: 45px;
 }
 
 .m-immersive-hero-item {
-  > div.legal-text {
+  >div.legal-text {
     width: 88%;
     max-width: $hero-content-max;
     margin: 0 auto;
     @media only screen and (min-width: $vp3) {
-      @include left-right-padding(5%);
     }
   }
 
@@ -150,6 +149,7 @@ $tab-height: 45px;
         top: 50vh !important;
         bottom: auto !important;
         margin: 0 auto;
+        @include left-right-padding(5%);
       }
     }
   }
