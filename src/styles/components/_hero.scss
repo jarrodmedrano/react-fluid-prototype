@@ -113,18 +113,45 @@ $tab-height: 45px;
   }
 }
 
-.m-hero-item > div.legal-text {
-  z-index: map-get($z-index, neutral);
-  margin: 0 auto 60px;
-  overflow: hidden;
-  text-align: $left;
-  opacity: 0.5;
-  height: auto;
+.m-hero-item, .m-immersive-hero-item {
 
-  @media only screen and (min-width: $vp3) {
-    position: absolute;
-    top: auto;
-    bottom: 0;
+  > div.legal-text {
+    z-index: map-get($z-index, neutral);
+    overflow: hidden;
+    text-align: $left;
+    opacity: 0.5;
+    height: auto;
+
+    @media only screen and (min-width: $vp3) {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      margin: 0 auto 60px;
+    }
+  }
+
+
+}
+
+.m-immersive-hero-item {
+  > div.legal-text {
+    width: 88%;
+    max-width: $hero-content-max;
+    margin: 0 auto;
+    @media only screen and (min-width: $vp3) {
+      @include left-right-padding(5%);
+    }
+  }
+
+  &.f-align-bottom {
+    > div.legal-text {
+      @media only screen and (min-width: $vp3) {
+        position: absolute;
+        top: 50vh !important;
+        bottom: auto !important;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
