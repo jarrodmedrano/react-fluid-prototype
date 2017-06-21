@@ -12,7 +12,7 @@
     {
       "ordinal": 100,
       "groupIdentifier": "hero",
-      "sectionIdentifier": "Section1",
+      "sectionIdentifier": "RightCenterDark",
       "anchorLink": true,
       "anchorTitle": "-- Right Center Dark --",
       "layout": {
@@ -20,6 +20,7 @@
         "theme": "theme-dark",
         "alignX": "right",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -74,6 +75,7 @@
         "theme": "theme-dark",
         "alignX": "right",
         "alignY": "top",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "alignX": "left",
           "heading": "-- Hero Heading --",
@@ -128,6 +130,7 @@
         "theme": "theme-dark",
         "alignX": "right",
         "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -180,6 +183,7 @@
         "theme": "theme-dark",
         "alignX": "right",
         "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -232,6 +236,7 @@
         "theme": "theme-dark",
         "alignX": "center",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -284,6 +289,7 @@
         "theme": "theme-dark",
         "alignX": "center",
         "alignY": "top",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -336,6 +342,7 @@
         "theme": "theme-dark",
         "alignX": "center",
         "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -388,6 +395,7 @@
         "theme": "theme-dark",
         "alignX": "left",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -432,7 +440,7 @@
     {
       "ordinal": 800,
       "groupIdentifier": "hero",
-      "sectionIdentifier": "Section7",
+      "sectionIdentifier": "LeftTopDark",
       "anchorLink": true,
       "anchorTitle": "-- Left Top Dark --",
       "layout": {
@@ -440,6 +448,7 @@
         "theme": "theme-dark",
         "alignX": "left",
         "alignY": "top",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "alignX": "left",
           "heading": "-- Hero Heading --",
@@ -493,6 +502,7 @@
         "theme": "theme-dark",
         "alignX": "left",
         "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -545,6 +555,7 @@
         "theme": "theme-light",
         "alignX": "right",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Video BG --",
           "subheading": "-- Subheading --",
@@ -601,6 +612,7 @@
         "theme": "theme-light",
         "alignX": "right",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -629,6 +641,7 @@
         "theme": "theme-light",
         "alignX": "center",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -667,6 +680,7 @@
         "theme": "theme-light",
         "alignX": "left",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -705,6 +719,7 @@
         "theme": "theme-light",
         "alignX": "right",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -744,6 +759,7 @@
         "theme": "theme-light",
         "alignX": "right",
         "alignY": "center",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",

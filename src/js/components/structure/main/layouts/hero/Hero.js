@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Heading from '../../../../generic/heading/Heading';
 import Picture from '../../../../generic/picture/Picture';
 import Video from '../../../../generic/video/Video';
+import LegalText from '../../../../generic/legal/Legal';
 import propsAreValid from '../../../../../lib/util';
 import dataPropTypes, {heroPropTypes} from '../../../../../../data/dataProps';
 
@@ -33,6 +34,8 @@ class Hero extends React.Component {
                         {renderMedia(this.props)}
                         <div>
                             {renderHeading(this.props)}
+                            {renderLegal(this.props)}
+                            {renderLegal(this.props)}
                         </div>
                     </div>
                 )
@@ -41,6 +44,7 @@ class Hero extends React.Component {
                     <div className={heroClass}>
                         {renderMedia(this.props)}
                         {renderHeading(this.props, iHero)}
+                        {renderLegal(this.props)}
                     </div>
                 )
             }
@@ -48,6 +52,15 @@ class Hero extends React.Component {
         return null
     }
 }
+
+const renderLegal = (props) => {
+    const {legalText} = props.data;
+    if(legalText) {
+        return (
+            <LegalText data={legalText} />
+        )
+    }
+};
 
 const renderHeading = (props, iHero) => {
     const {headingBlock, alignY} = props.data;

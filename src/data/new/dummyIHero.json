@@ -19,6 +19,7 @@
         "type": "immersiveHero",
         "theme": "theme-dark",
         "alignY": "top",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "pictureBlock": {
             "altText": "AltText",
@@ -101,6 +102,7 @@
         "type": "immersiveHero",
         "theme": "theme-dark",
         "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -184,6 +186,7 @@
         "type": "immersiveHero",
         "theme": "theme-light",
         "alignY": "top",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -268,6 +271,7 @@
         "type": "immersiveHero",
         "theme": "theme-light",
         "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",

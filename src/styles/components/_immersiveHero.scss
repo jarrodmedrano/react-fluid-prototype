@@ -68,53 +68,18 @@
   //  max-height: 100%;
   //}
 
-
-  video {
-    width: 100%;
+  video, picture img {
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;
 
-    @media all and (min-width: $vp2) {
-      width: 512px;
-      height: 288px;
-    }
-
-    @media all and (min-width: $vp3) {
-      width: 768px;
-      height: 432px;
-    }
-
-    @media all and (min-width: $vp5) {
-      width: 1024px;
-      height: 576px;
-    }
-  }
-
-  picture img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-
-    @media all and (min-width: $vp2) {
-      max-height: 288px;
+    @media only screen and (min-width: 768px) {
       width: auto;
-    }
-
-    @media all and (min-width: $vp3) {
-      max-height: 432px;
-      width: auto;
-    }
-
-    @media all and (min-width: $vp5) {
-      max-height: 576px;
-      width: auto;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0 auto;
     }
   }
 }
-
-
-
-
 
 .m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
   position: relative;
@@ -138,10 +103,12 @@
 
   @media only screen and (min-width: 768px) {
     &.content-animate {
-      flex: 1;
+      flex: 1 25vh;
     }
 
     &.hero-media {
+      flex: 1 50vh;
+
       div {
         height: 100%;
         margin: 0 auto;

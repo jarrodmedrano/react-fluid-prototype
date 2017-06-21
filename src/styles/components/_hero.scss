@@ -112,3 +112,24 @@ $tab-height: 45px;
     }
   }
 }
+
+.m-hero-item > div.legal-text {
+  z-index: map-get($z-index, neutral);
+  margin: 0 auto 60px;
+  overflow: hidden;
+  text-align: $left;
+  opacity: 0.5;
+  height: auto;
+
+  @media only screen and (min-width: $vp3) {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+  }
+}
+
+[dir="rtl"] {
+  .legal-text {
+    text-align: right;
+  }
+}
