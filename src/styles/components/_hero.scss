@@ -89,8 +89,11 @@ $tab-height: 45px;
 }
 
 .m-hero-item > div > div, .c-hero > div > div {
-  img.c-image, picture.c-image img {
-    margin: 0 auto;
+
+  &.f-align-center {
+    img.c-image, picture.c-image img {
+      margin: 0 auto;
+    }
   }
 
   &.x-type-center {
@@ -114,7 +117,6 @@ $tab-height: 45px;
 }
 
 .m-hero-item, .m-immersive-hero-item {
-
   > div.legal-text {
     z-index: map-get($z-index, neutral);
     overflow: hidden;
@@ -125,16 +127,14 @@ $tab-height: 45px;
     @media only screen and (min-width: $vp3) {
       position: absolute;
       top: auto;
-      bottom: 0;
-      margin: 0 auto 60px;
+      bottom: 60px;
+      margin: 0 auto;
     }
   }
-
-
 }
 
 .m-immersive-hero-item {
-  >div.legal-text {
+  > div.legal-text {
     width: 88%;
     max-width: $hero-content-max;
     margin: 0 auto;
@@ -157,6 +157,36 @@ $tab-height: 45px;
 
 [dir="rtl"] {
   .legal-text {
-    text-align: right;
+    text-align: right !important;
+  }
+
+  .m-hero-item > div > div, .c-hero > div > div {
+    &.x-type-left {
+      text-align: right !important;
+    }
+
+    &.x-type-right {
+      text-align: left !important;
+
+      img {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+      }
+    }
+  }
+
+  .m-hero-item {
+    &.f-x-right {
+      > div > div {
+        left: 0;
+      }
+    }
+
+    &.f-x-left {
+      > div > div {
+        right: 0;
+        left: auto;
+      }
+    }
   }
 }

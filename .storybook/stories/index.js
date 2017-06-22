@@ -70,6 +70,16 @@ storiesOf('Heading', module)
         <Grid>
             <Heading data={data.headingBlockRight}/>
         </Grid>
+    ))
+    .add('RightRTL', () => (
+        <div dir="rtl">
+            <Heading data={data.headingBlockRightRTL}  />
+        </div>
+    ))
+    .add('LeftRTL', () => (
+        <div dir="rtl">
+            <Heading data={data.headingBlockLeftRTL} dir="rtl" />
+        </div>
     ));
 
 storiesOf('Button Link', module)
@@ -204,14 +214,20 @@ storiesOf('Hero', module)
         </Wrapper>
     ))
     .add('Immersive Hero Video Top', () => (
-        <Wrapper>
-            <Hero data={data.IHeroTopVideo}/>
-        </Wrapper>
+        <div>
+            <Wrapper>
+                <Hero data={data.IHeroTopVideo}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ))
     .add('Immersive Hero Video Bottom', () => (
-        <Wrapper>
-            <Hero data={data.IHeroBottomVideo}/>
-        </Wrapper>
+        <div>
+            <Wrapper>
+                <Hero data={data.IHeroBottomVideo}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
     ))
     .add('Fullscreen', () => (
         <Wrapper wrapperClass="fullscreen">
@@ -248,9 +264,24 @@ storiesOf('Hero', module)
             <Hero data={data.PictureHeadingRight}/>
         </Wrapper>
     ))
-    .add('Heading Picture RTL', () => (
+    .add('Heading Picture Right RTL', () => (
         <Wrapper>
             <Hero data={data.PictureHeadingRTL}/>
+        </Wrapper>
+    ))
+    .add('Heading Picture Left RTL', () => (
+        <Wrapper>
+            <Hero data={data.PictureHeadingLeftRTL} />
+        </Wrapper>
+    ))
+    .add('Heading Picture Text Right RTL', () => (
+        <Wrapper>
+            <Hero data={data.PictureHeadingTextRightRTL}/>
+        </Wrapper>
+    ))
+    .add('Heading Picture Left RTL', () => (
+        <Wrapper>
+            <Hero data={data.PictureHeadingTextLeftRTL} />
         </Wrapper>
     ));
 

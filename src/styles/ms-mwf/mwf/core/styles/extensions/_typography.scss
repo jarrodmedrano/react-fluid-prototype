@@ -9,3 +9,13 @@
 .x-type-left {
     text-align: $left !important;
 }
+
+[dir="rtl"] {
+    .x-type-right {
+        text-align: $left !important;
+    }
+
+    .x-type-left {
+        text-align: $right !important;
+    }
+}

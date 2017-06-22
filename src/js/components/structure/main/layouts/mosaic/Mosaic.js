@@ -1,5 +1,6 @@
 import React from 'react'
 import MosaicContainer from './MosaicContainer';
+import LegalText from '../../../../generic/legal/Legal';
 import propsAreValid from '../../../../../lib/util';
 import dataPropTypes, {mosaicPropTypes} from '../../../../../../data/dataProps';
 // import './test.scss!';
@@ -18,6 +19,7 @@ class Mosaic extends React.Component {
                 <div>
                     <div className="m-mosaic">
                         <MosaicContainer data={this.props.data} />
+                        <LegalText data={this.props.data.legal} />
                     </div>
                 </div>
             )

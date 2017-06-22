@@ -44,6 +44,36 @@ export const headingBlockRight = {
     }
 };
 
+export const headingBlockRightRTL = {
+    "heading": "-- Heading Example --",
+    "subheading": "-- Subheading --",
+    "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+    "alignX": "right",
+    "button": {
+        "layout": "button",
+        "link": "#/windows",
+        "text": "Call to action",
+        "ariaLabel": "ariaLabel",
+        "textColor": "white",
+        "backgroundColor": "#0078D7"
+    }
+};
+
+export const headingBlockLeftRTL = {
+    "heading": "-- Heading Example --",
+    "subheading": "-- Subheading --",
+    "paragraph": "-- Paragraph -- lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae convallis eros, nec iaculis nisi. Duis imperdiet elementum diam, eu tempor quam tempus sit amet. Suspendisse eu tortor quis odio faucibus tempus sed",
+    "alignX": "left",
+    "button": {
+        "layout": "button",
+        "link": "#/windows",
+        "text": "Call to action",
+        "ariaLabel": "ariaLabel",
+        "textColor": "white",
+        "backgroundColor": "#0078D7"
+    }
+};
+
 export const pictureBlock = {
     "altText": "AltText",
     "ariaLabel": "AriaLabel",
@@ -1317,6 +1347,9 @@ export const PictureHeading = dummyHero.sections[12].layout;
 export const PictureHeadingLeft = dummyHero.sections[13].layout;
 export const PictureHeadingRight  = dummyHero.sections[14].layout;
 export const PictureHeadingRTL = dummyHero.sections[15].layout;
+export const PictureHeadingLeftRTL = dummyHero.sections[16].layout;
+export const PictureHeadingTextRightRTL = dummyHero.sections[17].layout;
+export const PictureHeadingTextLeftRTL = dummyHero.sections[18].layout;
 
 import dummyIHero from '../../src/data/new/dummyIHero.json';
 
