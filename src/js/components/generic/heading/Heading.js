@@ -27,13 +27,24 @@ class Heading extends React.Component {
                     {renderSubHeading(subheading)}
                     {renderPText(paragraph)}
                     {picturePlacement === 'third' && !iHero ? renderMedia(this.props) : null}
-                    {!this.props.nobutton ? <Button data={button} /> : <Button data={button} nobutton /> }
+                    {button ? renderButton(this.props) : null}
                     {legalText ? renderLegalText(legalText) : null }
                 </div>
                 {alignY === 'top' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
             </div>
             )
         } return null
+    }
+}
+
+const renderButton = (props) => {
+    let {nobutton} = props;
+    let {button} = props.data;
+
+    if(props) {
+        return (
+            !nobutton ? <Button data={button} /> : <Button data={button} nobutton />
+        )
     }
 }
 

@@ -15,11 +15,13 @@ class Mosaic extends React.Component {
 
     render() {
         if(propsAreValid(this.props.data, this)) {
+            const {legalText} = this.props.data;
+
             return (
                 <div>
                     <div className="m-mosaic">
                         <MosaicContainer data={this.props.data} />
-                        <LegalText data={this.props.data.legal} />
+                        {legalText ? <LegalText data={legalText} /> : null}
                     </div>
                 </div>
             )

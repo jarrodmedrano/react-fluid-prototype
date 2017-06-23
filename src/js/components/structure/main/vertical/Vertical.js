@@ -125,7 +125,7 @@ class Vertical extends React.Component {
             let {layout, sectionIdentifier, groupIdentifier, readingDirection} = this.props.data;
             let {myId, deviceInfo, brandColor} = this.props;
             let myLayout = typeof layout === 'object' ? layout.type : layout;
-            let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate', 'threeColSpecs', 'facts'];
+            let acceptedLayouts = ['hero', 'immersiveHero', 'fullscreen', 'card', 'mosaic', 'compare', 'feature', 'featureCta', 'featureCTA', 'ksp', 'ksp_rs', 'ksp_reversed', 'centeredBackdropTemplate', 'threeColSpecs', 'facts'];
             let verticalClass = classNames('scene-vertical', groupIdentifier, sectionIdentifier, myLayout, active);
             if(myLayout && _.includes(acceptedLayouts, myLayout)) {
                 return (
@@ -152,12 +152,12 @@ class Vertical extends React.Component {
                                            brandColor={brandColor ? brandColor : null}
                                            active={this.state.active} myId={myId} /> : null
                         }
-                        {myLayout === 'featureCta' ?
+                        {myLayout === 'featureCta' || myLayout === 'featureCTA' ?
                             <LegacyFeature data={this.props.data}
                                            brandColor={brandColor ? brandColor : null}
                                            active={this.state.active} myId={myId} /> : null
                         }
-                        {myLayout === 'ksp' || myLayout == 'ksp_rs' || myLayout == 'ksp_reversed' ?
+                        {myLayout === 'ksp' || myLayout === 'ksp_rs' || myLayout === 'ksp_reversed' ?
                             <LegacyKSP data={this.props.data}
                                        brandColor={brandColor ? brandColor : null}
                                        active={this.state.active} myId={myId} /> : null

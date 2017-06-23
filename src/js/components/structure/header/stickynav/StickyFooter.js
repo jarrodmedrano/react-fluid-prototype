@@ -42,32 +42,57 @@ class StickyFooter extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps) {
+        if(this.props.orientation !== nextProps.orientation) {
+            return true
+        }
+        return false
+    }
+
+    componentWillUpdate(nextProps) {
+        if(nextProps.orientation === 'portrait') {
+            this.setState({
+                collapseLinks: true
+            })
+        } else {
+            this.setState({
+                collapseLinks: false
+            })
+        }
+    }
+
+    _renderAnchorLinks() {
+        return this.state.anchorLinks.map(function (result, id) {
+            //If There is an anchor link and there are more than or equal to 3 sections
+            if (result.anchorLink && this.props.data.sections.length >= 3) {
+                //If there are are less than or equal to 7 footer links render the links
+                if (id <= 6) {
+                    return (
+                        <ThisFooterLink result={result} key={id} />
+                    )
+                }
+            }
+        }, this)
+    }
+
+    _renderOverFlowLinks() {
+        return this.state.overflowLinks.length ?
+            <OverflowButton>
+                {this.state.overflowLinks.map(function (result, id) {
+                    return (
+                        <ThisFooterLink result={result} key={id}/>
+                    )
+                }, this)}
+            </OverflowButton>
+            : null
+    }
+
     render() {
         if (propsAreValid(this.props.data.sections, this)) {
             return (
                 <footer className="sticky-banner sticky-footer">
-                    {this.state.anchorLinks.map(function (result, id) {
-                        //If There is an anchor link and there are more than or equal to 3 sections
-                        if (result.anchorLink && this.props.data.sections.length >= 3) {
-                            //If there are are less than or equal to 7 footer links render the links
-                            if (id <= 6) {
-                                return (
-                                    <ThisFooterLink result={result} key={id} />
-                                )
-                            }
-                        }
-                    }, this)
-                    }
-                    {this.state.overflowLinks.length ?
-                        <OverflowButton>
-                            {this.state.overflowLinks.map(function (result, id) {
-                                return (
-                                    <ThisFooterLink result={result} key={id}/>
-                                )
-                            }, this)}
-                        </OverflowButton>
-                        : null
-                    }
+                    {this._renderAnchorLinks()}
+                    {this._renderOverFlowLinks()}
                 </footer>
             )
         }

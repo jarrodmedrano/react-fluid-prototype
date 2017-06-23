@@ -1,6 +1,7 @@
 // import dummyData from './hubRoot.json!';
 import dummyHero from './new/dummyHero.json!';
 import dummyMosaic from './new/dummyMosaic.json!';
+import dummyMosaicOne from './new/dummyMosaicOne.json!';
 import dummyAccMosaic from './new/dummyAccessoriesMosaic.json!';
 import dummyIHero from './new/dummyIHero.json!';
 import dummyCompare from './new/dummyCompare.json!';
@@ -60,7 +61,7 @@ if(!window.RDX) {
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
-defaultVertical.groups.push(dummyOffice, dummyHero, dummySurfaceGroup, windows, dummyIHero, officebts, dummyMosaic, inking.groups[0]);
+defaultVertical.groups.push(dummyOffice, dummyHero, dummySurfaceGroup, windows, dummyIHero, dummyMosaic, inking.groups[0]);
 
 //data = inking;
     //data = dummySurfacePro;

@@ -9,6 +9,8 @@ import Main from './main/Main';
 import _ from 'lodash';
 import keydown from 'react-keydown';
 
+const mediaQuerySmall = window.matchMedia('(max-width: 768px)');
+
 class VerticalPage extends React.Component {
     constructor(props) {
         super(props);
@@ -54,10 +56,10 @@ class VerticalPage extends React.Component {
         };
 
         this._getCurrentPage = this._getCurrentPage.bind(this);
+        this._handleMediaMatch = this._handleMediaMatch.bind(this);
     }
 
     componentWillMount() {
-
         //If there is an OEM group, find out if there's a compare section
         let findCompareModels = (oemGroup) => {
             _.find(oemGroup.sections, (result) =>  {
@@ -85,10 +87,28 @@ class VerticalPage extends React.Component {
 
         //Find out if there are legacy layouts in this page (or not)
         _.find(this.state.currentSections, (result) => {
-            if(_.includes(result.layout, 'feature', 'featureCta', 'ksp', 'centeredBackdropTemplate', 'threeColSpecs')) {
+            if(_.includes(result.layout, 'feature', 'featureCta', 'featureCTA', 'ksp', 'centeredBackdropTemplate', 'threeColSpecs')) {
                 return this.setState({legacyLayouts: true})
             }
         });
+    }
+
+    componentDidMount() {
+        mediaQuerySmall.addListener(_.debounce(this._handleMediaMatch, 1000, {trailing: true}));
+        this._handleMediaMatch(mediaQuerySmall);
+    }
+
+    componentWillUnmount() {
+        mediaQuerySmall.removeListener(this._handleMediaMatch);
+    }
+
+    //Find out if we are in portrait or landscape and create screenOrientation state
+    _handleMediaMatch(mq) {
+        if (mq.matches) {
+            this.setState({screenOrientation: 'portrait'});
+        } else {
+            this.setState({screenOrientation: 'landscape'});
+        }
     }
 
     //Keyboard Navigate to next group (Navigation Tabs)
@@ -158,10 +178,10 @@ class VerticalPage extends React.Component {
         if (propsAreValid(this.props.data, this)) {
             return (
                 <div>
-                    <Main data={this.props.data} {...this.props} legacyLayouts={this.state.legacyLayouts} />
+                    <Main data={this.props.data} {...this.props} legacyLayouts={this.state.legacyLayouts} orientation={this.state.screenOrientation} />
 
                     {this.state.oemGroup && this.state.compareModels ?
-                        <StickyBanner brand={this.state.oemGroup.brand ? this.state.oemGroup.brand : null} ratings={this.state.oemGroup.ratings ? this.state.oemGroup.ratings : null}>
+                        <StickyBanner brand={this.state.oemGroup.brand ? this.state.oemGroup.brand : null} ratings={this.state.oemGroup.ratings ? this.state.oemGroup.ratings : null} orientation={this.state.screenOrientation}>
                             <Price data={this.props.data.deviceInformation} />
 
                             {this.state.retailerGroup && this.state.retailerGroup.brand && this.state.retailerGroup.brand.button ?
