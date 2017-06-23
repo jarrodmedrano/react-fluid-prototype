@@ -247,3 +247,22 @@ a.mosaic-link:after {
     }
   }
 }
+
+.m-mosaic {
+  .legal-text {
+    z-index: map-get($z-index, neutral);
+    overflow: hidden;
+    text-align: $left;
+    opacity: 0.5;
+    height: auto;
+    position: absolute;
+    top: auto;
+    bottom: 60px;
+    margin: 0 auto;
+    @include left-right-padding(5%);
+  }
+}
+
+.legal {
+  opacity: 0.5;
+}

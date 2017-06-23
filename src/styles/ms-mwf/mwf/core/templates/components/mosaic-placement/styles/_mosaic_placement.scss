@@ -183,7 +183,7 @@
         font-weight: $font-weight-bold;
     }
 
-    p {
+    .c-paragraph {
         @include apply-type(t5, false, true);
         font-weight: $font-weight-semilight;
     }

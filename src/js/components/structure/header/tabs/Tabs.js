@@ -10,7 +10,6 @@ class Tabs extends React.Component {
         const rootRoute = Object.assign({}, props.routes[0]);
         const rootRouteChildren = rootRoute.childRoutes;
 
-
         this.state = {
             selected: false,
             rootRoute: rootRoute,

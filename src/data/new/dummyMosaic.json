@@ -18,6 +18,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "viewMask": "80",
@@ -25,7 +26,9 @@
             "headingBlock": {
               "heading": "-- mosaic title 1 --",
               "subheading": "-- mosaic subtitle 1 --",
-              "position": "top"
+              "position": "top",
+              "paragraph": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+              "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you."
             },
             "pictureBlock": {
               "pictures": [
@@ -108,6 +111,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -242,6 +246,7 @@
         "type": "mosaic",
         "theme": "theme-dark",
         "mosaicLayout": "mosaic-2",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -415,6 +420,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -628,6 +634,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -881,6 +888,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -1174,6 +1182,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -1507,6 +1516,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -1960,6 +1970,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -2014,6 +2025,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "hoverEffectColor": "#DDD",
@@ -2188,6 +2200,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -2679,6 +2692,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -3177,6 +3191,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -3675,6 +3690,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -4174,6 +4190,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -4672,6 +4689,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "theme": "theme-dark",
@@ -4850,6 +4868,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "viewMask": "80",
@@ -4942,6 +4961,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -5441,6 +5461,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -5940,6 +5961,7 @@
         "type": "mosaic",
         "mosaicLayout": "mosaic-2",
         "theme": "theme-dark",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "pattern": "A",
@@ -6429,6 +6451,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-light",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {
@@ -6504,6 +6527,7 @@
       "layout": {
         "type": "mosaic",
         "theme": "theme-light",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "tiles": [
           {
             "headingBlock": {

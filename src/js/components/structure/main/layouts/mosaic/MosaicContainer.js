@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import MosaicTile from './MosaicTile';
+import LegalText from '../../../../generic/legal/Legal';
 import propsAreValid from '../../../../../lib/util';
 import containerPropTypes from '../../../../../../data/dataProps';
 import dataPropTypes from '../../../../../../data/dataProps';
@@ -16,7 +17,7 @@ class MosaicContainer extends React.Component {
     render() {
         // TODO generate these layouts without all this markup
         if (propsAreValid(this.props.data, this)) {
-            let {tiles, theme} = this.props.data;
+            let {tiles, theme, legalText} = this.props.data;
 
             let tileClass = classNames(
                 theme ? theme : '',
@@ -28,6 +29,7 @@ class MosaicContainer extends React.Component {
                         <div className={tileClass}>
                             {renderTile(tiles[0], vp1Wholevp4HalfLarge)}
                             {renderTile(tiles[1], vp1Wholevp4HalfLarge)}
+                            {renderLegalText(legalText)}
                         </div>
                     );
                 }
@@ -40,6 +42,7 @@ class MosaicContainer extends React.Component {
                                     {renderTile(tiles[1], vp1Wholevp2WholeMedium)}
                                     {renderTile(tiles[2], vp1Wholevp2WholeMedium)}
                                 </div>
+                                {renderLegalText(legalText)}
                             </div>
                         )
                     }
@@ -53,6 +56,7 @@ class MosaicContainer extends React.Component {
                                 {renderTile(tiles[2], vp1Wholevp2HalfMedium)}
                                 {renderTile(tiles[3], vp1Wholevp2WholeMedium)}
                             </div>
+                            {renderLegalText(legalText)}
                         </div>
                     );
                 }
@@ -67,6 +71,7 @@ class MosaicContainer extends React.Component {
                                 {renderTile(tiles[3], vp1Wholevp2HalfMedium)}
                                 {renderTile(tiles[4], vp1Wholevp2HalfMedium)}
                             </div>
+                            {renderLegalText(legalText)}
                         </div>
                     )
                 }
@@ -84,6 +89,7 @@ class MosaicContainer extends React.Component {
                                 {renderTile(tiles[4], vp1Wholevp2HalfMedium)}
                             </div>
                             {renderTile(tiles[5], vp1Wholevp4HalfMedium)}
+                            {renderLegalText(legalText)}
                         </div>
                     )
                 }
@@ -104,6 +110,7 @@ class MosaicContainer extends React.Component {
                                 {renderTile(tiles[5], vp1Wholevp2HalfMedium)}
                                 {renderTile(tiles[6], vp1Wholevp2HalfMedium)}
                             </div>
+                            {renderLegalText(legalText)}
                         </div>
                     );
                 }
@@ -127,6 +134,7 @@ class MosaicContainer extends React.Component {
                                 {renderTile(tiles[6], vp1Wholevp2HalfMedium)}
                                 {renderTile(tiles[7], vp1Wholevp2HalfMedium)}
                             </div>
+                            {renderLegalText(legalText)}
                         </div>
                     );
                 }
@@ -153,6 +161,7 @@ class MosaicContainer extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                            {renderLegalText(legalText)}
                         </div>
                     );
                 }
@@ -170,6 +179,7 @@ class MosaicContainer extends React.Component {
                                     )
                                 }, this) }
                             </div>
+                            {renderLegalText(legalText)}
                         </div>
                     )
                 }
@@ -179,16 +189,19 @@ class MosaicContainer extends React.Component {
     }
 }
 
-
 const vp1Wholevp2HalfMedium = 'f-vp1-whole f-vp2-half f-height-medium';
-
 const vp1Wholevp4HalfMedium = 'f-vp1-whole f-vp4-half f-height-medium';
-
 const vp1Wholevp4HalfLarge = 'f-vp1-whole f-vp4-half f-height-large';
-
 const vp1Wholevp2WholeMedium = 'f-vp1-whole f-vp2-whole f-height-medium';
-
 const vp1HalfSmall = 'f-vp1-half f-height-small';
+
+const renderLegalText = (props) => {
+    if(props) {
+        return (
+            <LegalText data={props} />
+        )
+    }
+};
 
 const renderTile = (tileData, tileSize) => {
     let {theme} = tileData;

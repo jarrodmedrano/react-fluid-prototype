@@ -9,6 +9,7 @@
   },
   "sections":  [
     {
+      "sectionIdentifier": "inking",
       "pageName":  "Windows Inking",
       "layout":  "featureCta",
       "textSide":  "left",
