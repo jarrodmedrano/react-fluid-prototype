@@ -47,7 +47,7 @@ class MosaicTile extends React.Component {
                     )
                 } else {
                     return (
-                        <section className={tileClass}>
+                        <section className={tileClass} style={tileStyle}>
                             {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
                             <Heading data={headingAlign} />
                         </section>
@@ -55,7 +55,7 @@ class MosaicTile extends React.Component {
                 }
             } else {
                 return (
-                    <section className={tileClass}>
+                    <section className={tileClass} style={tileStyle}>
                         {pictureBlock ? <MosaicPicture data={pictureBlock} /> : null}
                     </section>
                 )
