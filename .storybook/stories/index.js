@@ -21,6 +21,7 @@ import LegacySpecs from '../../src/js/components/structure/main/layouts/legacy/l
 import Mosaic from '../../src/js/components/structure/main/layouts/mosaic/Mosaic';
 import VerticalPage from '../../src/js/components/structure/VerticalPage';
 import classNames from 'classnames';
+import dummyIHero from '../../src/data/new/dummyIHero.json';
 
 import '../../src/styles/fonts.scss';
 import '../../src/styles/main.scss';
@@ -156,6 +157,186 @@ storiesOf('Compare Chart', module)
         </Wrapper>
     ));
 
+storiesOf('Immersive Hero Bottom', module)
+    .add('Only Heading Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[5].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[6].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Paragraph Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[7].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Button Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[11].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[12].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button/Paragraph Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[13].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[18].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button/Paragraph Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[19].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Button Legal Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[23].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button Legal Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[24].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button/Paragraph Legal Bottom Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[25].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+
+storiesOf('Immersive Hero Top', module)
+    .add('Only Heading Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[8].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Paragraph Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[10].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading Button Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[14].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading Button Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[15].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading Paragraph Button Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[16].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Button Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[20].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[21].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button/Paragraph Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[22].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Paragraph/Button Legal Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[26].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Button Legal Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[27].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+    .add('Only Heading/Subheading/Paragraph/Button Legal Top Align', () => (
+        <div>
+            <Wrapper>
+                <Hero data={dummyIHero.sections[28].layout}/>
+            </Wrapper>
+            <StickyFooter data={data.oemGroup}/>
+        </div>
+    ))
+
 
 storiesOf('Hero', module)
     .add('Right Center Dark', () => (
@@ -202,32 +383,6 @@ storiesOf('Hero', module)
         <Wrapper>
             <Hero data={data.LeftBottomDark}/>
         </Wrapper>
-    ))
-    .add('Immersive Hero Top', () => (
-        <Wrapper>
-            <Hero data={data.IHeroTop}/>
-        </Wrapper>
-    ))
-    .add('Immersive Hero Bottom', () => (
-        <Wrapper>
-            <Hero data={data.IHeroBottom}/>
-        </Wrapper>
-    ))
-    .add('Immersive Hero Video Top', () => (
-        <div>
-            <Wrapper>
-                <Hero data={data.IHeroTopVideo}/>
-            </Wrapper>
-            <StickyFooter data={data.oemGroup}/>
-        </div>
-    ))
-    .add('Immersive Hero Video Bottom', () => (
-        <div>
-            <Wrapper>
-                <Hero data={data.IHeroBottomVideo}/>
-            </Wrapper>
-            <StickyFooter data={data.oemGroup}/>
-        </div>
     ))
     .add('Fullscreen', () => (
         <Wrapper wrapperClass="fullscreen">

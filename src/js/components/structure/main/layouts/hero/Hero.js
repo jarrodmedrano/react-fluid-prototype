@@ -35,7 +35,6 @@ class Hero extends React.Component {
                         <div>
                             {renderHeading(this.props)}
                             {renderLegal(this.props)}
-                            {renderLegal(this.props)}
                         </div>
                     </div>
                 )

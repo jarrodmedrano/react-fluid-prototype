@@ -10,7 +10,7 @@
   },
   "sections": [
     {
-      "ordinal": 100,
+      "ordinal": 0,
       "groupIdentifier": "immersiveHero",
       "sectionIdentifier": "Immersive Hero",
       "anchorLink": true,
@@ -21,6 +21,7 @@
         "alignY": "top",
         "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
         "headingBlock": {
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
           "pictureBlock": {
             "altText": "AltText",
             "ariaLabel": "AriaLabel",
@@ -93,7 +94,7 @@
       }
     },
     {
-      "ordinal": 200,
+      "ordinal": 1,
       "groupIdentifier": "immersiveHero",
       "sectionIdentifier": "Immersive Hero Bottom",
       "anchorLink": true,
@@ -108,6 +109,7 @@
           "subheading": "-- Subheading --",
           "picturePlacement": "second",
           "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
           "button": {
             "layout": "button",
             "link": "http://www.microsoft.com",
@@ -176,7 +178,7 @@
       }
     },
     {
-      "ordinal": 300,
+      "ordinal": 2,
       "groupIdentifier": "immersiveHero",
       "sectionIdentifier": "Immersive Hero Video",
       "anchorLink": true,
@@ -187,6 +189,179 @@
         "theme": "theme-light",
         "alignY": "top",
         "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.* Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 3,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "Immersive Hero Video Bottom",
+      "anchorLink": true,
+      "anchorTitle": "-- Center Bottom Dark Video --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.* Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 4,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingParagraph",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading Paragraph --",
+      "alignY": "top",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
@@ -262,21 +437,1910 @@
       }
     },
     {
-      "ordinal": 400,
+      "ordinal": 5,
       "groupIdentifier": "immersiveHero",
-      "sectionIdentifier": "Immersive Hero Video Bottom",
+      "sectionIdentifier": "HeadingNoButton",
       "anchorLink": true,
-      "anchorTitle": "-- Center Bottom Dark Video --",
+      "anchorTitle": "-- Heading No Button --",
       "layout": {
         "type": "immersiveHero",
         "theme": "theme-light",
         "alignY": "bottom",
-        "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 6,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingNoButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading No Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
         "headingBlock": {
           "heading": "-- Hero Heading --",
           "subheading": "-- Subheading --",
           "picturePlacement": "second",
-          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.* Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 7,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPNoButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P No Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "picturePlacement": "second",
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 8,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingNoButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading No Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 9,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingNoButtonReversed2",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading No Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 10,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPNoButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P No Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "picturePlacement": "second",
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 11,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 12,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 13,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 14,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 15,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingNoButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading No Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 16,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 17,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 18,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 19,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPButton",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P Button --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 20,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 21,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingNoButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading No Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 22,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 23,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingButtonLegal",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Button Legal --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 24,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingButtonLegal",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading Button Legal--",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 25,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPButtonLegal",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P Button Legal --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "bottom",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "picturePlacement": "second",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 26,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingButtonReversedLegal",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Button Reversed Legal --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "picturePlacement": "second",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 27,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingNoButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading No Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "picturePlacement": "second",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "button": {
+            "layout": "button",
+            "link": "http://www.microsoft.com",
+            "text": "Call to action",
+            "ariaLabel": "ariaLabel",
+            "textColor": "white",
+            "backgroundColor": "#0078D7"
+          },
+          "pictureBlock": {
+            "altText": "AltText",
+            "ariaLabel": "AriaLabel",
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/FFFFFF/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/FFFFFF/171717",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/FFFFFF/171717",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/FFFFFF/171717",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/FFFFFF/171717",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/FFFFFF/171717",
+                "minWidth": "0"
+              }
+            ]
+          },
+          "videoBlock": {
+            "src": "img/vertical/Hero-pen.mp4"
+          }
+        },
+        "pictureBlock": {
+          "altText": "AltText",
+          "ariaLabel": "AriaLabel",
+          "pictures": [
+            {
+              "src": "http://placehold.it/2842x1718/FFFFFF/171717",
+              "minWidth": "1200"
+            },
+            {
+              "src": "http://placehold.it/1200x725/FFFFFF/171717",
+              "minWidth": "992"
+            },
+            {
+              "src": "http://placehold.it/991x743/FFFFFF/171717",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/FFFFFF/171717",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/FFFFFF/171717",
+              "minWidth": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ordinal": 28,
+      "groupIdentifier": "immersiveHero",
+      "sectionIdentifier": "HeadingSubheadingPButtonReversed",
+      "anchorLink": true,
+      "anchorTitle": "-- Heading Subheading P Button Reversed --",
+      "layout": {
+        "type": "immersiveHero",
+        "theme": "theme-light",
+        "alignY": "top",
+        "headingBlock": {
+          "heading": "-- Hero Heading --",
+          "subheading": "-- Subheading --",
+          "paragraph": "Personalize Surface Pro and express yourself with next-generation tools in rich colors,3 including new Surface Arc Mouse,* Surface Pro Signature Type Cover,* and Surface Pen* — with real-time writing and tilt4 for shading — plus on-screen support for Surface Dial.*",
+          "legalText": "To create a more customized online experience, some of the ads you may receive on Microsoft websites and apps are tailored to your previous activities, searches and site visits. You're in control and here's where you can make the advertising choice that's right for you.",
+          "picturePlacement": "second",
           "button": {
             "layout": "button",
             "link": "http://www.microsoft.com",

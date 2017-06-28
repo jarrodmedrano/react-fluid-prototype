@@ -18,7 +18,11 @@ class Heading extends React.Component {
             return (
             <div>
                 {/* alignY this is for placement of foreground images, it comes from parent component not from data */}
-                {alignY !== 'top' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
+                {alignY !== 'top' && iHero ?
+                    <div className="hero-media">
+                        {renderMedia(this.props)}
+                    </div>
+                : null}
                 <div className={`content-animate ${justifyClass}`}>
                     {picturePlacement === 'first' && !iHero ? renderMedia(this.props) : null}
                     {badge ? renderBadgeText(badge) : null }
@@ -28,9 +32,15 @@ class Heading extends React.Component {
                     {renderPText(paragraph)}
                     {picturePlacement === 'third' && !iHero ? renderMedia(this.props) : null}
                     {button ? renderButton(this.props) : null}
-                    {legalText ? renderLegalText(legalText) : null }
+                    {legalText && !iHero ? renderLegalText(legalText) : null }
+                    {legalText && iHero && alignY !== 'top' ? renderLegalText(legalText) : null }
                 </div>
-                {alignY === 'top' && iHero ? <div className="hero-media">{renderMedia(this.props)}</div> : null}
+                {alignY === 'top' && iHero ?
+                    <div className="hero-media">
+                    {legalText && iHero ? renderLegalText(legalText) : null }
+                    {renderMedia(this.props)}
+                    </div>
+                : null}
             </div>
             )
         } return null
