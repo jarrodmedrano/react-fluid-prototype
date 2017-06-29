@@ -114,8 +114,10 @@
 
   .legal {
     @include left-right-padding(5%);
-    max-width: 50%;
-    margin: 0 auto 12px;
+    margin: 0 auto;
+    @media only screen and (min-width: $vp3) {
+      max-width: 50%;
+    }
   }
 
   @media only screen and (min-width: $vp2) {
@@ -140,7 +142,7 @@
   &.content-animate {
     order: 2;
 
-    h1:last-child, h2:last-child, p:last-child {
+    h1:last-child, h2:last-child, p.c-paragraph:last-child {
       padding-bottom: 50px;
     }
   }

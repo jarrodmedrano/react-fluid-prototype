@@ -60,7 +60,7 @@ const renderButton = (props) => {
 const renderLegalText = (props) => {
     if(props) {
         return (
-            <p className="c-paragraph-4 legal"><small><Text data={props}/></small></p>
+            <p className="c-caption-1 legal"><small><Text data={props}/></small></p>
         )
     }
 };
