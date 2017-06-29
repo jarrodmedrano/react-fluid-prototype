@@ -77,12 +77,17 @@
       max-height: 100%;
       max-width: 100%;
       margin: 0 auto;
+    }
+  }
+
+  picture img, picture {
+    @media only screen and (min-width: $vp2) {
       height: 100%;
     }
   }
 }
 
-.m-immersive-hero-item.f-align-top>div, .m-immersive-hero-item.f-align-bottom>div {
+.m-immersive-hero-item.f-align-top > div, .m-immersive-hero-item.f-align-bottom > div {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -95,7 +100,7 @@
   }
 }
 
-.m-immersive-hero-item.f-align-top>div>div, .m-immersive-hero-item.f-align-bottom>div>div {
+.m-immersive-hero-item.f-align-top > div > div, .m-immersive-hero-item.f-align-bottom > div > div {
   position: relative;
   transform: none;
   left: 0;
@@ -109,7 +114,8 @@
 
   .legal {
     @include left-right-padding(5%);
-    margin-bottom: 12px;
+    max-width: 50%;
+    margin: 0 auto 12px;
   }
 
   @media only screen and (min-width: $vp2) {
@@ -119,7 +125,7 @@
 
     &.hero-media {
       flex: 1 50vh;
-      display: flex;
+      //display: flex;
 
       div {
         height: 100%;
@@ -130,7 +136,7 @@
   }
 }
 
-.m-immersive-hero-item.f-align-bottom>div>div {
+.m-immersive-hero-item.f-align-bottom > div > div {
   &.content-animate {
     order: 2;
 
@@ -140,7 +146,7 @@
   }
 }
 
-.m-immersive-hero-item.f-align-top>div>picture.c-image img, .m-immersive-hero-item.f-align-bottom>div>picture.c-image img {
+.m-immersive-hero-item.f-align-top > div > picture.c-image img, .m-immersive-hero-item.f-align-bottom > div > picture.c-image img {
   position: relative;
   height: auto;
   left: 0;

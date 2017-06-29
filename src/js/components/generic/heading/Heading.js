@@ -32,12 +32,10 @@ class Heading extends React.Component {
                     {renderPText(paragraph)}
                     {picturePlacement === 'third' && !iHero ? renderMedia(this.props) : null}
                     {button ? renderButton(this.props) : null}
-                    {legalText && !iHero ? renderLegalText(legalText) : null }
-                    {legalText && iHero && alignY !== 'top' ? renderLegalText(legalText) : null }
+                    {legalText ? renderLegalText(legalText) : null }
                 </div>
                 {alignY === 'top' && iHero ?
                     <div className="hero-media">
-                    {legalText && iHero ? renderLegalText(legalText) : null }
                     {renderMedia(this.props)}
                     </div>
                 : null}
