@@ -68,15 +68,16 @@
   //  max-height: 100%;
   //}
 
-  video, picture img {
+  video, picture img, picture {
     max-width: 100%;
     height: auto;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $vp2) {
       width: auto;
       max-height: 100%;
       max-width: 100%;
       margin: 0 auto;
+      height: 100%;
     }
   }
 }
@@ -111,13 +112,14 @@
     margin-bottom: 12px;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: $vp2) {
     &.content-animate {
       flex: 1 25vh;
     }
 
     &.hero-media {
       flex: 1 50vh;
+      display: flex;
 
       div {
         height: 100%;

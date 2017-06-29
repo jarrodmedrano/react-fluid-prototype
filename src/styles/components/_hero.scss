@@ -120,7 +120,7 @@ $tab-height: 45px;
   > div.legal-text {
     z-index: map-get($z-index, neutral);
     overflow: hidden;
-    text-align: $left;
+    text-align: center;
     opacity: 0.5;
     height: auto;
 
@@ -156,9 +156,9 @@ $tab-height: 45px;
 }
 
 [dir="rtl"] {
-  .legal-text {
-    text-align: right !important;
-  }
+  //.legal-text {
+  //  text-align: right !important;
+  //}
 
   .m-hero-item > div > div, .c-hero > div > div {
     &.x-type-left {

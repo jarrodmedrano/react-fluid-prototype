@@ -99,7 +99,7 @@ $type-object-config: (
     h1: (
         base: (
             padding: 38px 0 6px,
-            font-weight: $font-weight-light,
+            font-weight: $font-weight-bold,
             letter-spacing:     -0.01em
         ),
         small: (
@@ -111,7 +111,7 @@ $type-object-config: (
     h2: (
         base: (
             padding: 37px 0 3px,
-            font-weight: $font-weight-light,
+            font-weight: $font-weight-bold,
             letter-spacing:     -0.01em
         ),
         small: (
@@ -123,7 +123,7 @@ $type-object-config: (
     h3: (
         base: (
             padding: 38px 0 2px,
-            font-weight: $font-weight-light
+            font-weight: $font-weight-bold
         ),
         type-ramp-mapping: t3,
         selectors: ".c-heading-3"
@@ -131,7 +131,7 @@ $type-object-config: (
     h4: (
         base: (
             padding: 36px 0 4px,
-            font-weight: $font-weight-semilight
+            font-weight: $font-weight-bold
         ),
         type-ramp-mapping: t4,
         selectors: ".c-heading-4"
@@ -139,7 +139,7 @@ $type-object-config: (
     h5: (
         base: (
             padding: 35px 0 5px,
-            font-weight: $font-weight-normal
+            font-weight: $font-weight-bold
         ),
         small: (
             padding: 37px 0 3px
