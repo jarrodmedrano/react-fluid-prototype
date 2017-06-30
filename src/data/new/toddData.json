@@ -1,0 +1,395 @@
+{
+  "$schema": "Schema\\RDXSchema.json?reload",
+  "groupIdentifier": "office",
+  "brand": {
+    "logo": "office_assets/Office_Desktop_Logo.png",
+    "anchorTitle": "Surface Book",
+    "color": "#dc3c00",
+    "logoTab": "office_assets/Office_Desktop_Logo.png",
+    "selectedLogoTab": "office_assets/Office_Desktop_Logo.png"
+  },
+  "sections": [
+    {
+      "ordinal": 100,
+      "sectionIdentifier": "SampleMosaic",
+      "anchorLink": true,
+      "anchorTitle": "Mosaic w/ Hover",
+      "layout": {
+        "type": "mosaic",
+        "theme": "theme-dark",
+        "tiles": [
+          {
+            "hoverEffectColor": "#999999",
+            "pictureBlock": {
+              "ariaLabel": "Large Tile",
+              "pictures": [
+                {
+                  "src": "http://placehold.it/2048x1152/",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "http://placehold.it/1778x1000/",
+                  "minWidth": "1400px"
+                },
+                {
+                  "src": "http://placehold.it/1399x787/",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "http://placehold.it/1083x609/",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "http://placehold.it/767x431/",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "http://placehold.it/539x303/",
+                  "minWidth": "0"
+                }
+              ]
+            },
+            "alignY": "bottom",
+            "viewMask": "80",
+            "headingBlock": {
+              "picturePlacement": "first",
+              "pictureBlock": {
+                "ariaLabel": "picture block in heading block",
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/2048x1152/",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/1778x1000/",
+                    "minWidth": "1400px"
+                  },
+                  {
+                    "src": "http://placehold.it/1399x787/",
+                    "minWidth": "1084"
+                  },
+                  {
+                    "src": "http://placehold.it/1083x609/",
+                    "minWidth": "768"
+                  },
+                  {
+                    "src": "http://placehold.it/767x431/",
+                    "minWidth": "540"
+                  },
+                  {
+                    "src": "http://placehold.it/539x303/",
+                    "minWidth": "0"
+                  }
+                ]
+              },
+              "heading": "Heading of Tile 1",
+              "subheading": "Subheading",
+              "paragraph": "Picture block in 1st position with image background and AlignY to bottom, viewMask=80",
+              "legalText": "Legal text can be added to a tile in Mosaic, but avoid if possible",
+              "button": {
+                "link": "http://www.windows.com",
+                "text": "Jump to web URL"
+              }
+            }
+          },
+          {
+            "backgroundColor": "#000000",
+            "hoverEffectColor": "#999999",
+            "alignY": "top",
+            "headingBlock": {
+              "heading": "Heading Tile 2",
+              "subheading": "Subheading",
+              "paragraph": "Picture block in 2nd position and alignY to top",
+              "picturePlacement": "second",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/2048x1152/",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/1778x1000/",
+                    "minWidth": "1400px"
+                  },
+                  {
+                    "src": "http://placehold.it/1399x787/",
+                    "minWidth": "1084"
+                  },
+                  {
+                    "src": "http://placehold.it/1083x609/",
+                    "minWidth": "768"
+                  },
+                  {
+                    "src": "http://placehold.it/767x431/",
+                    "minWidth": "540"
+                  },
+                  {
+                    "src": "http://placehold.it/539x303/",
+                    "minWidth": "0"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "backgroundColor": "#b5b5b5",
+            "hoverEffectColor": "#999999",
+            "alignY": "center",
+            "headingBlock": {
+              "heading": "Heading of Tile 3",
+              "subheading": "Subheading",
+              "paragraph": "Picture block in 3rd position and alignY to center",
+              "picturePlacement": "third",
+              "pictureBlock": {
+                "ariaLabel": "Small tile",
+                "pictures": [
+                  {
+                    "src": "sample_assets/Sample_icon_small.png"
+                  }
+                ]
+              },
+              "button": {
+                "ariaLabel": "Button to jump to hero",
+                "link": "/SampleImage#SampleHero",
+                "text": "Jump to Image Hero"
+              }
+            }
+          },
+          {
+            "hoverEffectColor": "#999999",
+            "pictureBlock": {
+              "pictures": [
+                {
+                  "src": "http://placehold.it/2048x1152/",
+                  "minWidth": "1779"
+                },
+                {
+                  "src": "http://placehold.it/1778x1000/",
+                  "minWidth": "1400px"
+                },
+                {
+                  "src": "http://placehold.it/1399x787/",
+                  "minWidth": "1084"
+                },
+                {
+                  "src": "http://placehold.it/1083x609/",
+                  "minWidth": "768"
+                },
+                {
+                  "src": "http://placehold.it/767x431/",
+                  "minWidth": "540"
+                },
+                {
+                  "src": "http://placehold.it/539x303/",
+                  "minWidth": "0"
+                }
+              ]
+            },
+            "alignY": "center",
+            "viewMask": "20",
+            "headingBlock": {
+              "picturePlacement": "first",
+              "pictureBlock": {
+                "pictures": [
+                  {
+                    "src": "http://placehold.it/2048x1152/",
+                    "minWidth": "1779"
+                  },
+                  {
+                    "src": "http://placehold.it/1778x1000/",
+                    "minWidth": "1400px"
+                  },
+                  {
+                    "src": "http://placehold.it/1399x787/",
+                    "minWidth": "1084"
+                  },
+                  {
+                    "src": "http://placehold.it/1083x609/",
+                    "minWidth": "768"
+                  },
+                  {
+                    "src": "http://placehold.it/767x431/",
+                    "minWidth": "540"
+                  },
+                  {
+                    "src": "http://placehold.it/539x303/",
+                    "minWidth": "0"
+                  }
+                ]
+              },
+              "heading": "Heading of Tile 4",
+              "subheading": "Subheading",
+              "paragraph": "Picture block in 1st position with image background and AlignY to center, viewMask=20",
+              "button": {
+                "link": "ms-windows-store://home",
+                "text": "Launch Store"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ordinal": 200,
+      "sectionIdentifier": "SampleImmersive",
+      "anchorLink": true,
+      "anchorTitle": "Image Immersive Hero",
+      "layout": {
+        "type": "immersiveHero",
+        "alignY": "top",
+        "theme": "theme-light",
+        "legalText": "Legal text can be added to the page layout",
+        "headingBlock": {
+          "heading": "Heading of Immersive Hero",
+          "subheading": "Subheading for Immersive Hero - optional",
+          "legalText": "Legal text can be added to the headingBlock",
+          "pictureBlock": {
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/",
+                "minWidth": "0"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 250,
+      "sectionIdentifier": "ConditionalImmersive",
+      "anchorLink": true,
+      "condition": "IsPenEnabled",
+      "anchorTitle": "Image Immersive Hero",
+      "layout": {
+        "type": "immersiveHero",
+        "alignY": "bottom",
+        "theme": "theme-light",
+        "legalText": "This page should only show if the device is Pen capable",
+        "headingBlock": {
+          "heading": "Immersive Hero",
+          "subheading": "This device is Pen capable",
+          "button": {
+            "link": "/SampleImage#SampleMosaic",
+            "text": "Back to home"
+          },
+          "pictureBlock": {
+            "pictures": [
+              {
+                "src": "http://placehold.it/2048x1152/",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/1778x1000/",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "http://placehold.it/1399x787/",
+                "minWidth": "1084"
+              },
+              {
+                "src": "http://placehold.it/1083x609/",
+                "minWidth": "768"
+              },
+              {
+                "src": "http://placehold.it/767x431/",
+                "minWidth": "540"
+              },
+              {
+                "src": "http://placehold.it/539x303/",
+                "minWidth": "0"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 300,
+      "sectionIdentifier": "SampleHero",
+      "anchorLink": true,
+      "anchorTitle": "Image Hero",
+      "layout": {
+        "type": "hero",
+        "alignX": "center",
+        "alignY": "top",
+        "theme": "theme-dark",
+        "legalText": "Legal text can be added to the page layout",
+        "pictureBlock": {
+          "pictures": [
+            {
+              "src": "http://placehold.it/2048x1152/",
+              "minWidth": "1779"
+            },
+            {
+              "src": "http://placehold.it/1778x1000/",
+              "minWidth": "1400px"
+            },
+            {
+              "src": "http://placehold.it/1399x787/",
+              "minWidth": "1084"
+            },
+            {
+              "src": "http://placehold.it/1083x609/",
+              "minWidth": "768"
+            },
+            {
+              "src": "http://placehold.it/767x431/",
+              "minWidth": "540"
+            },
+            {
+              "src": "http://placehold.it/539x303/",
+              "minWidth": "0"
+            }
+          ]
+        },
+        "headingBlock": {
+          "heading": "Heading of Hero",
+          "subheading": "Subheading for Hero - optional",
+          "paragraph": "Paragraph copy for Hero - Picture placement 2nd with no viewMask, theme set to dark. Ancient Egypt, a land of majesty and intrigue, is disappearing in a ruthless fight for power. Unveil dark secrets and forgotten myths as you go back to the one founding moment: The Origins of the Assassin’s Brotherhood.",
+          "legalText": "Legal text can be added to the heading block",
+          "button": {
+            "link": "/SampleImage#SampleMosaic",
+            "text": "Back to home"
+          },
+          "picturePlacement": "first",
+          "pictureBlock": {
+            "pictures": [
+              {
+                "src": "http://placehold.it/200x200/2F2F2F/171717",
+                "minWidth": "1779"
+              },
+              {
+                "src": "http://placehold.it/100x100/2F2F2F/171717",
+                "minWidth": "1400"
+              },
+              {
+                "src": "http://placehold.it/50x50/2F2F2F/171717",
+                "minWidth": "1084"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

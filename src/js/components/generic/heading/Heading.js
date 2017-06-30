@@ -12,7 +12,7 @@ class Heading extends React.Component {
         if(propsAreValid(this.props.data, this)) {
             let {heading, subheading, paragraph, legalText, button, badge, alignX} = this.props.data;
             let {iHero, alignY} = this.props || false;
-            let justifyClass = classNames(alignX ? `x-type-${alignX}` : '');
+            let justifyClass = classNames(alignX ? `x-type-${alignX}` : '', legalText ? 'has-legal-text' : '');
             let picturePlacement = this.props.data.picturePlacement || 'first';
 
             return (

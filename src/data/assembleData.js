@@ -26,6 +26,7 @@ import office from './surface/office.json!';
 import retailer from './surface/retailer.json!';
 import windows from './surface/windows.json!';
 import officebts from './partner/office-bts.json!';
+import toddData from './new/toddData.json!';
 //final RDX schema from Chuck
 import rdx from './rdx.json!';
 //dummyData.groups.push(dummyHero, dummyMosaic, dummyIHero, dummyFullScreen);
@@ -61,7 +62,7 @@ if(!window.RDX) {
 //defaultVertical.groups.push(dummyAccMosaic, dummyRetailer);
 //Sample retailer data
 //defaultVertical.groups.push(dummySurfaceGroup, dummyOffice, dummyRetailer, dummyWindows, dummyHero, dummyMosaic, dummyIHero);
-defaultVertical.groups.push(dummyOEM, dummyHero, windows, dummyIHero, dummyMosaic, inking.groups[0]);
+defaultVertical.groups.push(toddData, dummyIHero);
 
 //data = inking;
     //data = dummySurfacePro;

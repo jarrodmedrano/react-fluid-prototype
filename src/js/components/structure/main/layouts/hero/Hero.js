@@ -20,33 +20,20 @@ class Hero extends React.Component {
 
             const heroClass = classNames(
                 alignX ? `f-x-${alignX}` : '',
-                alignX ? `f-align-${alignX}` : '',
+                alignX && !iHero ? `f-align-${alignX}` : '',
                 alignY ? `f-y-${alignY}` : '',
-                alignY ? `f-align-${alignY}` : '',
+                alignY && iHero ? `f-align-${alignY}` : '',
                 theme ? theme : 'theme-light',
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item',
                 viewMask ? `f-mask-${viewMask}` : '');
 
-            if (type === 'card') {
-                const heroClassCard = classNames(heroClass, 'm-highlight-feature');
-                return (
-                    <div data-grid="col-12" className={heroClassCard}>
-                        {renderMedia(this.props)}
-                        <div>
-                            {renderHeading(this.props)}
-                            {renderLegal(this.props)}
-                        </div>
-                    </div>
-                )
-            } else {
-                return (
-                    <div className={heroClass}>
-                        {renderMedia(this.props)}
-                        {renderHeading(this.props, iHero)}
-                        {renderLegal(this.props)}
-                    </div>
-                )
-            }
+            return (
+                <div className={heroClass}>
+                    {renderMedia(this.props)}
+                    {renderHeading(this.props, iHero)}
+                    {renderLegal(this.props)}
+                </div>
+            )
         }
         return null
     }

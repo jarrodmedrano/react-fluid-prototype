@@ -25,6 +25,8 @@
 
 .m-immersive-hero-item > div > div {
   z-index: 1;
+
+
 }
 
 
@@ -85,6 +87,12 @@
       height: 100%;
     }
   }
+
+  &.has-legal-text {
+    > :first-child {
+      margin-top: auto;
+    }
+  }
 }
 
 .m-immersive-hero-item.f-align-top > div, .m-immersive-hero-item.f-align-bottom > div {
@@ -114,7 +122,7 @@
 
   .legal {
     @include left-right-padding(5%);
-    margin: 0 auto;
+    margin: auto auto 0;
     @media only screen and (min-width: $vp3) {
       max-width: 50%;
     }
