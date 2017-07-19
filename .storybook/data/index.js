@@ -1409,7 +1409,7 @@ export const dataCardHero = {
     }
 }
 
-import backdrop from '../../src/img/oem_assets/SP4_BTS.png';
+let backdrop = 'http://placehold.it/2048x1152/';
 
 export const dataLegacyBackdrop = {
     "layout": "centeredBackdropTemplate",
@@ -1436,10 +1436,10 @@ export const dataLegacyBackdrop = {
     "style": "font-family: 'Segoe UI';"
 }
 
-import P1Logo from '../../src/img/oem_assets/P1-logo.png';
-import P1Content from '../../src/img/oem_assets/P1-content.png';
-import P1Icon from '../../src/img/oem_assets/P1-icon1.png';
-import P2Icon from '../../src/img/oem_assets/P1-icon2.png';
+let P1Logo = 'http://placehold.it/50x50/';
+let P1Content = 'http://placehold.it/2048x1152/';
+let P1Icon = 'http://placehold.it/2048x1152/';
+let P2Icon = 'http://placehold.it/2048x1152/';
 
 export const dataKSP = {
     "layout": "ksp",
@@ -1468,8 +1468,8 @@ export const dataKSP = {
     "style": "font-family: 'Segoe UI';"
 };
 
-import P2Logo from '../../src/img/oem_assets/P2-logo.png';
-import P2Content from '../../src/img/oem_assets/P2-content.png';
+let P2Logo = 'http://placehold.it/50x50/';;
+let P2Content = 'http://placehold.it/2048x1152/';
 
 export const dataFeature = {
     "layout": "feature",
@@ -1488,12 +1488,12 @@ export const dataFeature = {
     "style": "font-family: 'Segoe UI';"
 };
 
-import P3logo from '../../src/img/oem_assets/P3-logo.png';
-import P3Content from '../../src/img/oem_assets/P3-content.png';
+let P3Logo = 'http://placehold.it/50x50/';;
+let P3Content = 'http://placehold.it/2048x1152/';
 
 export const dataFeatureCTA = {
     "layout": "featureCta",
-    "logo": P3logo,
+    "logo": P3Logo,
     "textSide": "left",
     "header": "Incredibly smart",
     "text1": "When switching modes, the audio channels automatically reverse",

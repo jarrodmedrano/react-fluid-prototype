@@ -80,6 +80,4 @@ class Tabs extends React.Component {
     }
 }
 
-Tabs.propTypes = dataPropTypes(verticalPagePropTypes);
-
 export default Tabs

@@ -15,6 +15,5 @@ class GenericListItem extends React.Component {
     }
 }
 
-GenericListItem.propTypes = listItemPropTypes;
 
 export default GenericListItem

@@ -243,6 +243,4 @@ class Main extends React.Component {
     }
 }
 
-Main.propTypes = dataPropTypes(MainPropTypes);
-
 export default Main

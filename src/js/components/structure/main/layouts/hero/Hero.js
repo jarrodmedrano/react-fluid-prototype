@@ -23,7 +23,7 @@ class Hero extends React.Component {
                 alignX && !iHero ? `f-align-${alignX}` : '',
                 alignY ? `f-y-${alignY}` : '',
                 alignY && iHero ? `f-align-${alignY}` : '',
-                theme ? theme : 'theme-light',
+                theme ? theme : 'theme-dark',
                 type === 'immersiveHero' ? `m-immersive-hero-item` : type ? `m-${type}-item` : 'm-hero-item',
                 viewMask ? `f-mask-${viewMask}` : '');
 

@@ -180,7 +180,4 @@ class Vertical extends React.Component {
         return null
     }
 }
-
-Vertical.propTypes = dataPropTypes(verticalPropTypes);
-
 export default Vertical

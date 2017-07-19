@@ -14,8 +14,4 @@ class MasterLayout extends React.Component {
     }
 }
 
-MasterLayout.propTypes = {
-    data: PropTypes.object.isRequired
-};
-
 export default MasterLayout

@@ -1,0 +1,134 @@
+{
+  "$schema": "Schema\\RDXSchema.json?reload",
+  "groupIdentifier": "windows",
+  "brand": {
+    "logo": "",
+    "logoTab": "",
+    "selectedLogoTab": "",
+    "color": "#3076BC",
+    "anchorTitle": "-- Immersive Hero --"
+  },
+  "sections": [
+    {
+      "ordinal": 200,
+      "sectionIdentifier": "SampleImmersive",
+      "anchorLink": true,
+      "anchorTitle": "Image Immersive Hero",
+      "anchorGlyph": "glyph-keyboard",
+      "layout": {
+        "type": "immersiveHero",
+        "alignY": "top",
+        "theme": "theme-light",
+        "legalText": "Legal text can be added to the page layout",
+        "headingBlock": {
+          "heading": "Heading of Immersive Hero",
+          "subheading": "Subheading for Immersive Hero - optional",
+          "pictureBlock": {
+            "pictures": [
+              {
+                "src": "img/vertical/hololens-169-ratio.png",
+                "minWidth": "1779"
+              },
+              {
+                "src": "img/vertical/hololens-169-ratio.png",
+                "minWidth": "1400px"
+              },
+              {
+                "src": "img/vertical/hololens-169-ratio.png",
+                "minWidth": "1084"
+              },
+              {
+                "src": "img/vertical/hololens-169-ratio.png",
+                "minWidth": "768"
+              },
+              {
+                "src": "img/vertical/hololens-169-ratio.png",
+                "minWidth": "540"
+              },
+              {
+                "src": "img/vertical/hololens-169-ratio.png",
+                "minWidth": "0"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 300,
+      "sectionIdentifier": "SampleHero",
+      "groupIdentifier": "office",
+      "anchorLink": true,
+      "anchorTitle": "Image Hero",
+      "anchorGlyph": "glyph-headphones",
+      "layout": {
+        "type": "hero",
+        "alignX": "left",
+        "alignY": "center",
+        "theme": "theme-light",
+        "legalText": "Legal text can be added to the page layout",
+        "pictureBlock": {
+          "pictures": [
+            {
+              "src": "img/vertical/hero-16-6-vp6-xbox.jpg",
+              "minWidth": "1779"
+            },
+            {
+              "src": "img/vertical/hero-16-6-vp6-xbox.jpg",
+              "minWidth": "1400px"
+            },
+            {
+              "src": "img/vertical/hero-16-6-vp6-xbox.jpg",
+              "minWidth": "1084"
+            },
+            {
+              "src": "img/vertical/hero-16-6-vp6-xbox.jpg",
+              "minWidth": "768"
+            },
+            {
+              "src": "img/vertical/hero-16-6-vp6-xbox.jpg",
+              "minWidth": "540"
+            },
+            {
+              "src": "img/vertical/hero-16-6-vp6-xbox.jpg",
+              "minWidth": "0"
+            }
+          ]
+        },
+        "headingBlock": {
+          "color": "#000000",
+          "heading": "Heading of Hero",
+          "subheading": "Subheading for Hero - optional",
+          "paragraph": "Paragraph copy for Hero - Picture placement 2nd with no viewMask, theme set to dark. Ancient Egypt, a land of majesty and intrigue, is disappearing in a ruthless fight for power. Unveil dark secrets and forgotten myths as you go back to the one founding moment: The Origins of the Assassin’s Brotherhood.",
+          "legalText": "Legal text can be added to the heading block",
+          "button": {
+            "link": "/SampleImage#SampleMosaic",
+            "text": "Back to home"
+          }
+        }
+      }
+    },
+    {
+      "ordinal": 200,
+      "sectionIdentifier": "SampleImmersive2",
+      "anchorLink": true,
+      "anchorTitle": "Surface Pen Video",
+      "anchorGlyph": "glyph-draw",
+      "layout": {
+        "type": "immersiveHero",
+        "alignY": "top",
+        "theme": "theme-light",
+        "legalText": "Legal text can be added to the page layout",
+        "headingBlock": {
+          "heading": "Heading of Immersive Hero",
+          "subheading": "Subheading for Immersive Hero - optional",
+          "media": {
+            "videoBlock": {
+              "src": "img/vertical/Hero-pen.mp4"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

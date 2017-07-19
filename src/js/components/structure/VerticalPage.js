@@ -194,7 +194,4 @@ class VerticalPage extends React.Component {
         }
     }
 }
-
-VerticalPage.propTypes = dataPropTypes(verticalPagePropTypes);
-
 export default VerticalPage
